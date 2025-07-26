@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import "./globals.css";
+import { useTranslation } from "react-i18next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,12 +19,13 @@ const geistMono = Geist_Mono({
 });
 
 
-export default function RootLayout({
+function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
+  const { i18n } = useTranslation();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang={i18n.language} className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased bg-black text-white">
         <AnimatePresence mode="wait">
           <motion.div
@@ -49,3 +51,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;
