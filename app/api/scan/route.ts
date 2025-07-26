@@ -10,7 +10,7 @@ function isValidFullUrl(url: string): boolean {
   }
 }
 
-export async function analyzePrivacyScore(
+async function analyzePrivacyScore(
   url: string
 ): Promise<{ score: number | null; result: string; judgement: string }> {
   const prompt = `
@@ -75,7 +75,7 @@ Nutze eine **nutzernah verständliche Sprache**, damit Laien die Risiken versteh
   const resultMatch = content.match(/BEWERTUNG:\s*(.+)/i);
   const result = resultMatch && typeof resultMatch[1] === "string" ? resultMatch[1].trim() : "Keine Bewertung gefunden.";
 
-  const lines: string[] = content.split("\n").map((line) => line.trim());
+  const lines: string[] = content.split("\n").map((line: string) => line.trim());
   const filtered = lines.filter(
     (line) =>
       line.startsWith("-") &&
