@@ -463,8 +463,8 @@ useEffect(() => {
       </AnimatePresence>
       {showMainContent && (
         <>
-          <nav className="fixed top-4 left-4 z-50 bg-zinc-900 bg-opacity-80 rounded-xl p-2">
-            <div className="flex space-x-4">
+          <nav className="fixed top-4 left-4 z-50 bg-zinc-900 bg-opacity-80 rounded-xl p-2 max-w-[90vw] overflow-x-auto">
+            <div className="flex space-x-4 whitespace-nowrap">
               {tools.map((tool) => (
                 <button
                   key={tool.id}
