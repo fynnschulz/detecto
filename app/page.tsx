@@ -467,7 +467,7 @@ useEffect(() => {
         <>
           {showLoginModal && (
             <div className="fixed inset-0 z-[1000] backdrop-blur-sm bg-black/10 flex items-center justify-center">
-              <div className="relative bg-zinc-900 text-white rounded-2xl shadow-xl p-4 w-[90%] max-w-xs border border-zinc-700 scale-90">
+              <div className="relative bg-zinc-900 text-white rounded-2xl shadow-xl p-4 w-[90%] max-w-sm border border-zinc-700 scale-90">
                 <button
                   onClick={() => setShowLoginModal(false)}
                   className="absolute top-3 right-3 text-gray-400 hover:text-white transition text-xl"
