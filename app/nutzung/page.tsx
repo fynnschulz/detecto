@@ -46,8 +46,9 @@ export default function TermsPage() {
 
         <h2 className="text-2xl font-semibold text-white mt-10 mb-4">3. Nutzungsvoraussetzungen</h2>
         <p className="mb-6">
-          Die Nutzung von Detecto setzt voraus, dass Sie volljährig und geschäftsfähig sind. Mit der Nutzung erkennen Sie an,
-          dass die Plattform keinen Ersatz für juristischen Rat bietet. Für Pro-Features oder bestimmte Funktionen kann ein Benutzerkonto erforderlich sein.
+          Die Nutzung von Detecto setzt voraus, dass du mindestens 18 Jahre alt und uneingeschränkt geschäftsfähig bist. Bestimmte Funktionen wie die Community, das Gerätetool, der VPN-Service oder spätere Pro-Features sind nur nach vorheriger Registrierung zugänglich.
+          Bei der Registrierung ist die Angabe personenbezogener Daten erforderlich, darunter Name, E-Mail-Adresse, ein Passwort sowie optional Anschrift und Land.
+          Nutzer sind verpflichtet, vollständige und wahrheitsgemäße Angaben zu machen.
         </p>
 
         <h2 className="text-2xl font-semibold text-white mt-10 mb-4">4. Nutzerverhalten</h2>
@@ -55,6 +56,10 @@ export default function TermsPage() {
           Sie verpflichten sich, keine rechtswidrigen, diskriminierenden, beleidigenden oder sicherheitsgefährdenden Inhalte über die Plattform zu verbreiten.
           Jeglicher Missbrauch – etwa durch automatisierte Abfragen, Hacking-Versuche oder Fälschung von Identitäten – ist untersagt.
           Der Betreiber behält sich das Recht vor, Nutzer bei Verstößen dauerhaft auszuschließen.
+        </p>
+        <p className="mb-6">
+          Bei Nutzung von Login-Funktionen über Drittanbieter (z. B. Google oder Apple) dürfen ausschließlich eigene, persönliche Zugangsdaten verwendet werden.
+          Mehrfachanmeldungen, gefälschte Identitäten oder automatisierte Registrierungen sind untersagt.
         </p>
 
         <h2 className="text-2xl font-semibold text-white mt-10 mb-4">5. Geistiges Eigentum</h2>
@@ -76,24 +81,34 @@ export default function TermsPage() {
           Datenverlust oder Systemstörungen übernommen werden. Wartungsarbeiten oder technische Probleme können den Zugriff zeitweise einschränken.
         </p>
 
-        <h2 className="text-2xl font-semibold text-white mt-10 mb-4">8. Datenschutz</h2>
+        <h2 className="text-2xl font-semibold text-white mt-10 mb-4">8. Registrierung und Benutzerkonten</h2>
+        <p className="mb-6">
+          Um erweiterte Funktionen nutzen zu können, ist die Erstellung eines kostenlosen Benutzerkontos erforderlich.
+          Nutzer haben die Möglichkeit, sich klassisch per E-Mail und Passwort oder über Drittanbieter (z. B. Google, Apple) zu registrieren. Die für die Registrierung erforderlichen Daten werden gemäß unserer Datenschutzerklärung verarbeitet.
+        </p>
+        <p className="mb-6">
+          Nutzer sind selbst verantwortlich für die Sicherheit ihrer Zugangsdaten. Bei Verdacht auf Missbrauch ist der Betreiber unverzüglich zu informieren.
+          Das Benutzerkonto kann jederzeit gekündigt werden; sämtliche zugehörige Daten werden im Rahmen der geltenden Datenschutzvorgaben gelöscht.
+        </p>
+
+        <h2 className="text-2xl font-semibold text-white mt-10 mb-4">9. Datenschutz</h2>
         <p className="mb-6">
           Der Schutz Ihrer Daten hat für uns oberste Priorität. Alle Informationen zum Umgang mit personenbezogenen Daten finden Sie in unserer
           <a href="/datenschutz" className="text-blue-400 hover:underline ml-1">Datenschutzerklärung</a>.
         </p>
 
-        <h2 className="text-2xl font-semibold text-white mt-10 mb-4">9. Änderungen der Bedingungen</h2>
+        <h2 className="text-2xl font-semibold text-white mt-10 mb-4">10. Änderungen der Bedingungen</h2>
         <p className="mb-6">
           Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern. Maßgeblich ist die jeweils bei Nutzung gültige Fassung.
           Über wesentliche Änderungen werden registrierte Nutzer rechtzeitig informiert.
         </p>
 
-        <h2 className="text-2xl font-semibold text-white mt-10 mb-4">10. Anwendbares Recht</h2>
+        <h2 className="text-2xl font-semibold text-white mt-10 mb-4">11. Anwendbares Recht</h2>
         <p className="mb-6">
           Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist, soweit gesetzlich zulässig, Saarlouis.
         </p>
 
-        <h2 className="text-2xl font-semibold text-white mt-10 mb-4">11. Kontakt</h2>
+        <h2 className="text-2xl font-semibold text-white mt-10 mb-4">12. Kontakt</h2>
         <p className="mb-6">
           Bei Fragen zu diesen Nutzungsbedingungen oder zur Nutzung der Plattform wenden Sie sich bitte an:
         </p>

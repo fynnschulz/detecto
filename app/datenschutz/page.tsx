@@ -41,6 +41,25 @@ export default function Datenschutz() {
         </div>
 
         <div>
+          <h2 className="text-2xl font-semibold">3a. Registrierung und Benutzerkonto</h2>
+          <p>
+            Wenn du ein Benutzerkonto bei Detecto erstellst, verarbeiten wir die von dir angegebenen personenbezogenen Daten,
+            insbesondere:
+          </p>
+          <ul className="list-disc list-inside ml-4">
+            <li>Name</li>
+            <li>E-Mail-Adresse</li>
+            <li>Passwort (verschlüsselt gespeichert, niemals im Klartext)</li>
+            <li>Optional: Adresse, Stadt, Postleitzahl, Land</li>
+          </ul>
+          <p>
+            Diese Daten werden ausschließlich zur Bereitstellung deines Kontos, zur Authentifizierung und zur Nutzung der
+            registrierungspflichtigen Funktionen (z. B. Community, VPN, erweiterte Scan-Funktionen) verarbeitet.
+            Eine Weitergabe an Dritte erfolgt nicht, außer wenn wir gesetzlich dazu verpflichtet sind.
+          </p>
+        </div>
+
+        <div>
           <h2 className="text-2xl font-semibold">4. Nutzung unserer Tools (Scan, Suche, Empfehlungen)</h2>
           <ul className="list-disc list-inside ml-4">
             <li>Es werden keine personenbezogenen Daten gespeichert.</li>
@@ -67,10 +86,29 @@ export default function Datenschutz() {
         </div>
 
         <div>
+          <h2 className="text-2xl font-semibold">4a. Login mit Drittanbietern (Google, Apple)</h2>
+          <p>
+            Wir bieten dir die Möglichkeit, dich über Google oder Apple bei Detecto anzumelden. Hierbei werden die zur
+            Authentifizierung notwendigen Daten (z. B. E-Mail-Adresse, Name) von dem jeweiligen Anbieter an uns übermittelt.
+            Die Anmeldung über Drittanbieter erfolgt nur mit deiner ausdrücklichen Einwilligung und unterliegt den
+            Datenschutzbestimmungen des jeweiligen Anbieters:
+          </p>
+          <ul className="list-disc list-inside ml-4">
+            <li><a href="https://policies.google.com/privacy" className="text-blue-400 underline">Google Privacy Policy</a></li>
+            <li><a href="https://www.apple.com/legal/privacy/" className="text-blue-400 underline">Apple Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
           <h2 className="text-2xl font-semibold">5. Cookies und Analyse-Tools</h2>
           <p>
             Detecto verwendet keine Cookies, außer technisch notwendige (z. B. zur Session-Steuerung in der App).<br />
             Wir setzen keine Tracking- oder Marketing-Tools wie Google Analytics ein.
+          </p>
+          <p>
+            Zusätzlich zu technisch notwendigen Cookies setzen wir Session-Cookies ein, um angemeldete Benutzer während
+            ihres Besuchs eingeloggt zu halten. Diese Cookies enthalten keine sensiblen Daten und werden automatisch gelöscht,
+            sobald du dich ausloggst oder den Browser schließt.
           </p>
         </div>
 
@@ -105,6 +143,15 @@ export default function Datenschutz() {
         </div>
 
         <div>
+          <h2 className="text-2xl font-semibold">8a. Speicherdauer und Löschung von Kontodaten</h2>
+          <p>
+            Deine Kontodaten werden solange gespeichert, wie dein Account aktiv ist. Du kannst dein Konto jederzeit löschen,
+            indem du uns unter <strong>support@detecto.app</strong> kontaktierst. Nach Löschung deines Kontos werden deine
+            personenbezogenen Daten innerhalb von 30 Tagen vollständig entfernt, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
+          </p>
+        </div>
+
+        <div>
           <h2 className="text-2xl font-semibold">9. Änderungen der Datenschutzerklärung</h2>
           <p>
             Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie an geänderte rechtliche Rahmenbedingungen oder neue Funktionen anzupassen.
@@ -112,7 +159,7 @@ export default function Datenschutz() {
           </p>
         </div>
 
-        <p className="text-sm text-gray-500">Stand: Juli 2025</p>
+        <p className="text-sm text-gray-500">Stand: August 2025</p>
       </section>
     </main>
   );
