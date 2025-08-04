@@ -27,6 +27,7 @@ export default function Home() {
   const [showAlternatives, setShowAlternatives] = useState(false);
   const [loadingAlternatives, setLoadingAlternatives] = useState(false);
   const [activeInfo, setActiveInfo] = useState("Scan");
+  const [showLoginModal, setShowLoginModal] = useState(true);
 
 const fetchAlternatives = async () => {
   try {
@@ -464,7 +465,47 @@ useEffect(() => {
       </AnimatePresence>
       {showMainContent && (
         <>
-          <AuthModal />
+          {showLoginModal && (
+            <div className="fixed inset-0 z-[1000] bg-black bg-opacity-60 flex items-center justify-center">
+              <div className="relative bg-zinc-900 text-white rounded-2xl shadow-xl p-8 w-[90%] max-w-md border border-zinc-700">
+                <button
+                  onClick={() => setShowLoginModal(false)}
+                  className="absolute top-3 right-3 text-gray-400 hover:text-white transition text-xl"
+                >
+                  ×
+                </button>
+                <h2 className="text-2xl font-bold mb-6 text-center">Anmelden bei DETECTO</h2>
+                <input
+                  type="email"
+                  placeholder="E-Mail"
+                  className="w-full p-3 mb-4 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <input
+                  type="password"
+                  placeholder="Passwort"
+                  className="w-full p-3 mb-4 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="w-full bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-2 rounded-md mb-4">
+                  Anmelden
+                </button>
+                <div className="flex items-center justify-center mb-4 text-gray-400">oder</div>
+                <div className="flex flex-col space-y-2">
+                  <button className="w-full bg-white text-black font-medium py-2 rounded-md hover:bg-gray-100 transition">
+                    Mit Google anmelden
+                  </button>
+                  <button className="w-full bg-white text-black font-medium py-2 rounded-md hover:bg-gray-100 transition">
+                    Mit Apple anmelden
+                  </button>
+                </div>
+                <div className="mt-6 text-center text-sm text-gray-400">
+                  Noch kein Account?{" "}
+                  <a href="/register" className="text-blue-400 hover:underline">
+                    Jetzt registrieren
+                  </a> 
+                </div>
+              </div>
+            </div>
+          )}
           <nav className="fixed top-4 left-4 z-50 bg-zinc-900 bg-opacity-80 rounded-xl p-2 max-w-[90vw] overflow-x-auto">
             <div className="flex space-x-4 whitespace-nowrap">
               {tools.map((tool) => (
