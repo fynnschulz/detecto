@@ -1,5 +1,6 @@
 
-"use client";
+ "use client";
+import AuthModal from "./components/AuthModal";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -463,6 +464,7 @@ useEffect(() => {
       </AnimatePresence>
       {showMainContent && (
         <>
+          <AuthModal />
           <nav className="fixed top-4 left-4 z-50 bg-zinc-900 bg-opacity-80 rounded-xl p-2 max-w-[90vw] overflow-x-auto">
             <div className="flex space-x-4 whitespace-nowrap">
               {tools.map((tool) => (
@@ -523,7 +525,7 @@ useEffect(() => {
 
             {activeTool === "scan" && (
               <>
-               <section className="w-full text-center px-6 mt-40">
+               <section className="w-full text-center px-6 mt-20">
                  <motion.div
                    initial={{ opacity: 0, y: 20 }}
                    whileInView={{ opacity: 1, y: 0 }}
