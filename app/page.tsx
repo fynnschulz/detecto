@@ -779,7 +779,8 @@ useEffect(() => {
                     <Link href="/ueber-uns" className="hover:underline">
                       Über uns
                     </Link>
-                    <Link href="/impressum" className="hover:underline">Impressum
+                    <Link href="/impressum" className="hover:underline">
+                      Impressum
                     </Link>
                   </div>
                   <div>© 2025 Detecto – Datenschutz neu gedacht.</div>
