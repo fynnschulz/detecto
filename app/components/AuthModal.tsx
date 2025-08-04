@@ -1,41 +1,34 @@
 "use client";
 
 import { useState } from "react";
+import LoginForm from "./LoginForm";
+import Link from "next/link";
 
-export default function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+export default function AuthModal() {
+  const [show, setShow] = useState(true);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Hier kommt später die Login-Logik rein
-    console.log("Login mit:", { email, password });
-  };
+  if (!show) return null;
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-      <input
-        type="email"
-        placeholder="E-Mail-Adresse"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="bg-zinc-800 text-white px-4 py-2 rounded-md focus:outline-none"
-        required
-      />
-      <input
-        type="password"
-        placeholder="Passwort"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        className="bg-zinc-800 text-white px-4 py-2 rounded-md focus:outline-none"
-        required
-      />
-      <button
-        type="submit"
-        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md transition"
-      >
-        Einloggen
-      </button>
-    </form>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+      <div className="bg-zinc-900 p-8 rounded-3xl shadow-2xl w-[90%] max-w-[400px] text-white border border-zinc-700">
+        <h2 className="text-2xl font-semibold mb-4 text-center">🔐 Anmelden bei DETECTO</h2>
+        <LoginForm />
+        <div className="text-sm mt-4 text-center">
+          Noch kein Account?{" "}
+          <Link href="/register" className="text-blue-400 underline">
+            Jetzt registrieren
+          </Link>
+        </div>
+        <div className="text-center mt-3">
+          <button
+            onClick={() => setShow(false)}
+            className="mt-2 text-sm text-gray-400 hover:text-white"
+          >
+            Oder ohne Login fortfahren
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
