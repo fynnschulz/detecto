@@ -20,6 +20,17 @@ export async function POST(req: NextRequest) {
   - HTTPS verwendet und erreichbar ist
   - zum eingegebenen Thema passt
 
+  Ergänze deine Bewertung außerdem um folgende technische Datenschutzaspekte:
+  - Cookies & Tracker: Werden möglichst wenige verwendet? Wird klar informiert?
+  - Drittanbieter-Tools: Wird auf Google, Meta, Hotjar usw. verzichtet?
+  - Security-Header: Sind moderne Sicherheitsheader wie CSP, X-Frame-Options etc. aktiv?
+  - SSL-Zertifikat: Wird HTTPS verwendet?
+  - Hosting-Standort: Wird in der EU gehostet?
+  - Technologien: Kommen datenschutzbedenkliche Dienste wie Google Fonts zum Einsatz?
+  - Formulare: Werden Daten sparsam und mit Datenschutzhinweis abgefragt?
+  - Cookie-Banner: Gibt es eine echte, funktionierende Einwilligung?
+  - IP-Tracking: Wird die IP-Adresse anonymisiert?
+
   Beachte außerdem folgende Bewertungsrichtlinien:
 
   1. Berücksichtige die Branche, aber verwende sie nicht als Rechtfertigung für schlechte Praktiken. Eine Seite innerhalb einer risikobehafteten Branche muss besonders positiv abweichen, um empfohlen zu werden.

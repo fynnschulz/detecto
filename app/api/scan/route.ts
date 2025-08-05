@@ -16,7 +16,20 @@ async function analyzePrivacyScore(
   const prompt = `
 Du bist ein Datenschutzexperte. Analysiere die Datenschutzpraktiken der folgenden Webseite: ${url}
 
-Gib eine Bewertung, die auf **Transparenz**, **Nutzerkontrolle** und dem **Zweck der Datennutzung** basiert – nicht nur darauf, ob überhaupt Daten erhoben werden.
+Gib eine Bewertung, die auf **Transparenz**, **Nutzerkontrolle**, dem **Zweck der Datennutzung** und den folgenden technischen Aspekten basiert:
+
+🔍 Analysiere zusätzlich (falls erkennbar):
+- Welche **Cookies und Tracker** werden gesetzt? (Name, Zweck, Drittanbieter)
+- Werden **Drittanbieter-Tools** geladen? (Google, Meta, Hotjar, etc.)
+- Fehlen wichtige **Security-Header**? (Content-Security-Policy, X-Frame-Options, Strict-Transport-Security)
+- Hat die Seite ein gültiges **SSL-Zertifikat** (https)?
+- In welchem **Land** wird die Seite gehostet (z. B. USA, EU)?
+- Werden externe **Technologien** wie Google Fonts ohne Consent nachgeladen?
+- Gibt es **Formulareingaben** ohne Zweckangabe oder Datenschutzinfo?
+- Existiert ein **Cookie-Banner** mit funktionierender Einwilligung?
+- Wird die **IP-Adresse** anonymisiert oder getrackt?
+
+Gib eine Bewertung, die auf diesen Punkten basiert – nicht nur darauf, ob überhaupt Daten erhoben werden.
 
 Am Anfang der Antwort soll eine Datenschutz-Sicherheitsbewertung in Prozent (1–100 %) stehen – z. B. „Datenschutz-Score: 82 %“. Diese Zahl soll möglichst realistisch und nachvollziehbar sein.
 
