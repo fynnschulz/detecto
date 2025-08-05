@@ -28,25 +28,15 @@ export async function POST(req: NextRequest) {
   // Domain aus URL extrahieren
   const domain = new URL(url).hostname.replace(/^www\./, "");
 
+  // GPT-Prompt zur Alternativen-Suche
   const prompt = `
+
 Du bist ein Datenschutzexperte. Eine Webseite mit der Domain "${domain}" wurde beim Datenschutz-Scan mit einem Wert unter 60 % bewertet.
 
 Bitte schlage 3 alternative Webseiten vor, die:
 - dem gleichen oder ähnlichen Zweck dienen wie "${domain}",
 - deutlich bessere Datenschutzpraktiken aufweisen,
 - vertrauenswürdig sind und echte, funktionierende URLs besitzen.
-
-Bei deiner Bewertung und Auswahl dieser Alternativen sollst du besonders auf folgende Punkte achten:
-
-- Cookies & Tracker: Werden möglichst wenige Cookies/Tracker verwendet? Werden Nutzer klar informiert?
-- Drittanbieter-Tools: Wird auf Google, Meta, Hotjar usw. verzichtet?
-- Security-Header: Hat die Seite moderne Sicherheitsheader wie CSP, X-Frame-Options, etc.?
-- SSL-Zertifikat: Ist HTTPS aktiv?
-- Hosting-Standort: Wird innerhalb der EU gehostet?
-- Technologien: Wird auf datenschutzbedenkliche Services wie Google Fonts verzichtet?
-- Formulare: Werden Daten sparsam und mit Datenschutzhinweis abgefragt?
-- Cookie-Banner: Gibt es eine echte, funktionierende Einwilligung?
-- IP-Tracking: Wird die IP-Adresse anonymisiert?
 
 Gib exakt dieses JSON zurück (ohne Vorwort, ohne Erklärung, ohne Markdown):
 
@@ -67,6 +57,11 @@ Gib exakt dieses JSON zurück (ohne Vorwort, ohne Erklärung, ohne Markdown):
     "description": "Kurze Erklärung mit Datenschutzbezug (max. 20 Wörter)"
   }
 ]
+
+Die Seiten sollen:
+- dem gleichen oder ähnlichen Zweck dienen wie ${domain}
+- klar bessere Datenschutzpraktiken aufweisen
+- funktionierende echte URLs haben
 `;
 
   try {
