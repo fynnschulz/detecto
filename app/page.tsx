@@ -506,15 +506,23 @@ useEffect(() => {
               </div>
             </div>
           )}
-          <nav className="fixed top-4 left-4 z-50 bg-zinc-900 bg-opacity-80 rounded-xl p-2 max-w-[90vw] overflow-x-auto">
-            <div className="flex space-x-4 whitespace-nowrap">
+          <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-zinc-900/80 backdrop-blur-md rounded-full px-6 py-2 shadow-[0_4px_20px_rgba(0,255,255,0.1)] border border-white/10">
+            <div className="flex space-x-3">
               {tools.map((tool) => (
                 <button
                   key={tool.id}
                   onClick={() => setActiveTool(tool.id)}
-                  className={`text-white px-4 py-2 rounded-md hover:bg-zinc-700 transition ${activeTool === tool.id ? "bg-blue-600" : ""}`}
+                  className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 backdrop-blur-md relative
+                    ${
+                      activeTool === tool.id
+                        ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
+                        : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
+                    }`}
                 >
-                  {tool.name}
+                  <span className="relative z-10">{tool.name}</span>
+                  {activeTool === tool.id && (
+                    <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
+                  )}
                 </button>
               ))}
             </div>
