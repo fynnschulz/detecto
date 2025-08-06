@@ -205,7 +205,7 @@ useEffect(() => {
       if (e.key === "Enter") handleScan();
     }}
     placeholder="Gib eine URL ein..."
-    className="pl-[80px] pr-4 py-2 w-full rounded-full bg-zinc-800 text-white text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+    className="pl-[80px] pr-4 py-2 w-full rounded-full bg-zinc-800 text-white text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition hover:ring-2 hover:ring-cyan-400 hover:ring-offset-0"
   />
 </div>
   {isLoading ? (
