@@ -115,6 +115,23 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Check: Existiert die Seite wirklich?
+  try {
+    const res = await fetch(url, { method: "HEAD", redirect: "follow" });
+    if (!res.ok) {
+      return NextResponse.json(
+        { error: `Diese Webseite antwortet nicht (Status ${res.status}).` },
+        { status: 400 }
+      );
+    }
+  } catch (err) {
+    console.error("Existenzprüfung fehlgeschlagen:", err);
+    return NextResponse.json(
+      { error: "Die Webseite konnte nicht gefunden oder erreicht werden." },
+      { status: 400 }
+    );
+  }
+
   if (!process.env.OPENAI_API_KEY) {
     return NextResponse.json({ error: "Kein API-Key gesetzt" }, { status: 500 });
   }
