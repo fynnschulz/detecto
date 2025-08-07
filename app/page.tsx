@@ -2,6 +2,7 @@
  "use client";
 import AuthModal from "./components/AuthModal";
 import { useEffect, useState } from "react";
+import { supabase } from "@/app/lib/supabaseClient";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -36,6 +37,17 @@ export default function Home() {
       setShowLoginModal(true);
       localStorage.setItem("loginModalSeen", "true");
     }
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(async () => {
+      const { data } = await supabase.auth.getSession();
+      if (data.session) {
+        setShowLoginModal(false);
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
 const fetchAlternatives = async () => {
