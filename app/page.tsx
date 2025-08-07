@@ -27,7 +27,16 @@ export default function Home() {
   const [showAlternatives, setShowAlternatives] = useState(false);
   const [loadingAlternatives, setLoadingAlternatives] = useState(false);
   const [activeInfo, setActiveInfo] = useState("Scan");
-  const [showLoginModal, setShowLoginModal] = useState(true);
+  // Login-Modal nur beim ersten Laden anzeigen
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
+  useEffect(() => {
+    const modalSeen = localStorage.getItem("loginModalSeen");
+    if (!modalSeen) {
+      setShowLoginModal(true);
+      localStorage.setItem("loginModalSeen", "true");
+    }
+  }, []);
 
 const fetchAlternatives = async () => {
   try {
@@ -476,12 +485,13 @@ useEffect(() => {
       </AnimatePresence>
       {showMainContent && (
         <>
+          {/* Login-Modal nur beim allerersten Laden anzeigen, kann dauerhaft ausgeblendet werden */}
           {showLoginModal && (
             <div className="fixed inset-0 z-[1000] backdrop-blur-sm bg-black/10 flex items-center justify-center">
               <div className="relative bg-zinc-900 text-white rounded-2xl shadow-xl p-4 w-[90%] max-w-sm border border-zinc-700 scale-90">
                 <button
                   onClick={() => setShowLoginModal(false)}
-                  className="absolute top-3 right-3 text-gray-400 hover:text-white transition text-xl"
+                  className="absolute top-4 right-4 text-white text-xl"
                 >
                   ×
                 </button>

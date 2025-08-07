@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import { supabase } from "@/app/lib/supabaseClient";
 
 export default function RegisterPage() {
   const [step, setStep] = useState(1);
@@ -32,15 +33,28 @@ export default function RegisterPage() {
     setStep((prev) => prev + 1);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.agreedToTerms) {
       alert("Bitte akzeptiere die Bedingungen.");
       return;
     }
-    // TODO: Registrierung an Backend senden
-    console.log("Registrierung:", formData);
-    alert("✅ Registrierung erfolgreich!");
+
+    const { data, error } = await supabase.auth.signUp({
+      email: formData.email,
+      password: formData.password,
+      options: {
+        data: {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+        },
+      },
+    });
+    if (error) {
+      alert("❌ Registrierung fehlgeschlagen: " + error.message);
+    } else {
+      alert("✅ Registrierung erfolgreich! Bitte bestätige deine E-Mail.");
+    }
   };
 
   const variants = {
