@@ -105,6 +105,7 @@ useEffect(() => {
       });
 
       const data: { result: string; score?: number; judgement?: string } = await response.json();
+      if (!response.ok) throw new Error("Scan fehlgeschlagen.");
       setJudgementText(data.judgement || "");
       setScore(typeof data.score === "number" ? data.score : null);
 
@@ -212,6 +213,12 @@ useEffect(() => {
     className="pl-[80px] pr-4 py-2 w-full rounded-full bg-zinc-800 text-white text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition hover:ring-2 hover:ring-cyan-400 hover:ring-offset-0"
   />
 </div>
+            {/* Fehlermeldung für Scan-Fehlschlag */}
+            {judgementText && score === null && (
+              <div className="bg-red-500 text-white p-4 rounded-lg mt-4 text-sm shadow-md">
+                {judgementText}
+              </div>
+            )}
   {isLoading ? (
     <div className="mt-4 flex justify-center">
       <svg
