@@ -145,6 +145,10 @@ useEffect(() => {
       setShowScale(true);
     } catch (error) {
       console.error("Fehler beim Scan:", error);
+      setScore(null);
+      setJudgementText("❌ Die eingegebene Website konnte nicht gefunden oder erreicht werden.");
+      setRiskLevel("medium");
+      setShowScale(false);
     } finally {
       setIsLoading(false);
       setScanCompleted(true);
@@ -550,9 +554,9 @@ useEffect(() => {
               )}
               
               <motion.h1
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1.4, ease: "easeOut" }}
                 className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500"
               >
                 {activeTool === "scan"
