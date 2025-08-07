@@ -215,24 +215,8 @@ useEffect(() => {
 </div>
             {/* Fehlermeldung für Scan-Fehlschlag */}
             {judgementText && score === null && (
-              <div className="relative bg-gradient-to-br from-red-600 via-red-500 to-red-700 text-white p-6 rounded-2xl mt-6 text-base shadow-[0_0_25px_rgba(255,0,0,0.3)] border border-red-400/50 transition-all duration-500">
-                <div className="absolute top-0 left-0 w-full h-full rounded-2xl bg-red-400 opacity-10 blur-2xl pointer-events-none" />
-                <div className="flex items-center space-x-3">
-                  <svg
-                    className="w-6 h-6 text-white animate-pulse"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.054 0 1.99-.816 2.072-1.867L21.94 4.867C22.026 3.812 21.09 3 20.035 3H3.965C2.91 3 1.974 3.812 2.06 4.867l1.01 12.266C3.144 19.184 4.08 20 5.134 20z"
-                    />
-                  </svg>
-                  <p className="text-white font-medium">{judgementText}</p>
-                </div>
+              <div className="mt-6 px-5 py-3 bg-red-500/10 border border-red-400/30 text-red-200 rounded-xl text-sm backdrop-blur-md shadow-md transition-all duration-300">
+                {judgementText}
               </div>
             )}
   {isLoading ? (
