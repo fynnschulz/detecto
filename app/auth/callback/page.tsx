@@ -1,30 +1,24 @@
 "use client";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
+import { createClient } from "@supabase/supabase-js";
 
-const supabase = createBrowserSupabaseClient();
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
 export default function CallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
     const handleSession = async () => {
-      // Tausche Auth-Code/Access-Token aus der URL in eine Session
-      const { data: exchanged, error: exchangeError } = await supabase.auth.exchangeCodeForSession(window.location.href);
+      const { data, error } = await supabase.auth.getSession();
 
-      if (exchangeError) {
-        console.error("exchangeCodeForSession error:", exchangeError);
-        router.replace("/login");
-        return;
-      }
-
-      // Session prüfen (sollte nun vorhanden sein)
-      const { data } = await supabase.auth.getSession();
       if (data?.session) {
-        router.replace("/");
+        router.push("/");
       } else {
-        router.replace("/login");
+        router.push("/login");
       }
     };
 

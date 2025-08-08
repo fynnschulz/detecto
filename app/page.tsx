@@ -3,13 +3,8 @@
 "use client";
 import AuthModal from "@/app/components/AuthModal.tsx";
 import { useEffect, useState } from "react";
-import { createClient } from "@supabase/supabase-js";
-import { useSession } from "@supabase/auth-helpers-react";
+import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,29 +35,37 @@ export default function Home() {
   const session = useSession();
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const supabase = useSupabaseClient();
+  const [authChecked, setAuthChecked] = useState(false);
 
-  // Initialisiere: Session-Status und Login-Modal Sichtbarkeit
+  // Initialisiere: Session-Status und Login-Modal Sichtbarkeit (warten bis Session geprüft wurde)
   useEffect(() => {
-    // Prüfe auf bestehende Session
+    let isMounted = true;
+
     supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session);
-      // Prüfe, ob das Modal angezeigt werden soll
+      if (!isMounted) return;
       const hideAuthModal = localStorage.getItem("hideAuthModal");
       if (!data.session && !hideAuthModal) {
         setShowLoginModal(true);
       }
+      setAuthChecked(true);
     });
-    // Auth-Listener für Login/Logout
+
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
+      if (!isMounted) return;
       if (session) {
         setShowLoginModal(false);
+        localStorage.setItem("hideAuthModal", "true");
+      } else {
+        localStorage.removeItem("hideAuthModal");
       }
     });
+
     return () => {
+      isMounted = false;
       listener?.subscription?.unsubscribe();
     };
-  }, []);
+  }, [supabase]);
 
 
 const fetchAlternatives = async () => {
@@ -513,7 +516,7 @@ useEffect(() => {
       {showMainContent && (
         <>
           {/* Login-Modal nur beim allerersten Laden anzeigen, kann dauerhaft ausgeblendet werden */}
-          {showLoginModal && (
+          {authChecked && !session && showLoginModal && (
             <div className="fixed inset-0 z-[1000] backdrop-blur-sm bg-black/10 flex items-center justify-center">
               <div className="relative bg-zinc-900 text-white rounded-2xl shadow-xl p-4 w-[90%] max-w-sm border border-zinc-700 scale-90">
                 <button
