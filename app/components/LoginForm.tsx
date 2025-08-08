@@ -2,17 +2,21 @@
 
 import { useState } from "react";
 import { supabase } from "../lib/supabaseClient";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setErrorMsg("");
+    setSuccessMsg("");
 
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -22,8 +26,9 @@ export default function LoginForm() {
     if (error) {
       setErrorMsg(error.message);
     } else {
+      setSuccessMsg("✅ Login erfolgreich!");
       localStorage.setItem("hideAuthModal", "true"); // Modal unterdrücken
-      window.location.reload(); // Seite neu laden
+      router.push("/");
     }
 
     setLoading(false);
@@ -49,6 +54,9 @@ export default function LoginForm() {
       />
       {errorMsg && (
         <div className="text-red-500 text-sm">{errorMsg}</div>
+      )}
+      {successMsg && (
+        <div className="text-green-500 text-sm">{successMsg}</div>
       )}
       <button
         type="submit"
