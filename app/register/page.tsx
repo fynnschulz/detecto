@@ -9,6 +9,7 @@ export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const router = useRouter();
   const [step, setStep] = useState(1);
   const [firstName, setFirstName] = useState("");
@@ -19,6 +20,7 @@ export default function RegisterPage() {
   const handleNextStep = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+    setSuccess("");
 
     if (step < 3) {
       setStep(step + 1);
@@ -42,7 +44,7 @@ export default function RegisterPage() {
     if (error) {
       setError("❌ Registrierung fehlgeschlagen: " + error.message);
     } else {
-      router.push("/");
+      setSuccess("✅ Bitte bestätige die dir gesendete E-Mail, um dein Konto zu aktivieren.");
     }
   };
 
@@ -73,6 +75,8 @@ export default function RegisterPage() {
           )}
 
           {error && <div className="bg-red-500/10 text-red-300 text-sm px-3 py-2 rounded-md border border-red-400/30">{error}</div>}
+
+          {success && <div className="bg-green-500/10 text-green-300 text-sm px-3 py-2 rounded-md border border-green-400/30">{success}</div>}
 
           <button type="submit" className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-md w-full transition">
             {step < 3 ? "Weiter" : "Registrieren"}
