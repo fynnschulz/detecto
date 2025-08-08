@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "../lib/supabaseClient";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
@@ -11,6 +11,8 @@ export default function LoginForm() {
   const [successMsg, setSuccessMsg] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  const supabase = useSupabaseClient();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
