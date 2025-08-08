@@ -9,33 +9,34 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
-export default function LoginPage() {
+export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
-    const { error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabase.auth.signUp({
       email,
       password,
     });
 
     if (error) {
-      setError("❌ Login fehlgeschlagen: " + error.message);
+      setError("❌ Registrierung fehlgeschlagen: " + error.message);
     } else {
-      router.push("/"); // Weiterleitung nach Login – Ziel ggf. anpassen
+      // Erfolgreich registriert → ggf. Weiterleitung oder Bestätigung anzeigen
+      router.push("/");
     }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-black/80 text-white px-4">
       <div className="bg-zinc-900 p-6 rounded-2xl shadow-xl w-full max-w-md border border-zinc-700">
-        <h2 className="text-2xl font-semibold mb-4 text-center">🔐 Login bei DETECTO</h2>
-        <form onSubmit={handleLogin} className="flex flex-col gap-4">
+        <h2 className="text-2xl font-semibold mb-4 text-center">🧾 Jetzt registrieren bei DETECTO</h2>
+        <form onSubmit={handleRegister} className="flex flex-col gap-4">
           <input
             type="email"
             placeholder="E-Mail"
@@ -59,15 +60,15 @@ export default function LoginPage() {
           )}
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md w-full transition"
+            className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-md w-full transition"
           >
-            Login
+            Registrieren
           </button>
         </form>
         <div className="text-sm mt-4 text-center text-gray-400">
-          Noch kein Konto?{" "}
-          <a href="/register" className="text-blue-400 underline">
-            Jetzt registrieren
+          Bereits ein Konto?{" "}
+          <a href="/login" className="text-blue-400 underline">
+            Zum Login
           </a>
         </div>
       </div>
