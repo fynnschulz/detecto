@@ -4,7 +4,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./globals.css";
 import { useTranslation } from "react-i18next";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
@@ -29,7 +29,8 @@ function RootLayout({
   const pathname = usePathname();
   const { i18n } = useTranslation();
   const [isMounted, setIsMounted] = useState(false);
-  const [supabaseClient] = useState(() => createBrowserSupabaseClient());
+  const supabaseClientRef = useRef(createBrowserSupabaseClient());
+  const supabaseClient = supabaseClientRef.current;
 
   useEffect(() => {
     setIsMounted(true);
@@ -38,20 +39,20 @@ function RootLayout({
   return (
     <html lang={i18n.language} className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased bg-black text-white">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={pathname}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="min-h-screen"
-          >
-            <SessionContextProvider supabaseClient={supabaseClient}>
+        <SessionContextProvider supabaseClient={supabaseClient}>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={pathname}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="min-h-screen"
+            >
               {isMounted && children}
-            </SessionContextProvider>
-          </motion.div>
-        </AnimatePresence>
+            </motion.div>
+          </AnimatePresence>
+        </SessionContextProvider>
       </body>
     </html>
   );
