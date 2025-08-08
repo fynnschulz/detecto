@@ -12,6 +12,13 @@ export default function CallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
+    // Wenn man über den Bestätigungslink kommt, unterdrücken wir einmalig das Auto-Login-Modal
+    try {
+      localStorage.setItem("skipLoginModalOnce", "1");
+    } catch (e) {
+      // ignore
+    }
+
     const handleSession = async () => {
       const { data, error } = await supabase.auth.getSession();
 

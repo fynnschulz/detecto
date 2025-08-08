@@ -45,8 +45,18 @@ export default function Home() {
     supabase.auth.getSession().then(({ data }) => {
       if (!isMounted) return;
       const hideAuthModal = localStorage.getItem("hideAuthModal");
-      if (!data.session && !hideAuthModal) {
-        setShowLoginModal(true);
+      const skipOnce = localStorage.getItem("skipLoginModalOnce");
+
+      if (!data.session) {
+        if (skipOnce) {
+          // Über E‑Mail-Link gekommen: Modal einmalig NICHT automatisch öffnen
+          // Flag nach kurzer Zeit wieder entfernen
+          setTimeout(() => {
+            try { localStorage.removeItem("skipLoginModalOnce"); } catch {}
+          }, 5000);
+        } else if (!hideAuthModal) {
+          setShowLoginModal(true);
+        }
       }
       setAuthChecked(true);
     });
@@ -55,7 +65,10 @@ export default function Home() {
       if (!isMounted) return;
       if (session) {
         setShowLoginModal(false);
-        localStorage.setItem("hideAuthModal", "true");
+        try {
+          localStorage.setItem("hideAuthModal", "true");
+          localStorage.removeItem("skipLoginModalOnce");
+        } catch {}
       } else {
         localStorage.removeItem("hideAuthModal");
       }
