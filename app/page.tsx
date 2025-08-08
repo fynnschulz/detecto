@@ -1,7 +1,7 @@
 
 // @ts-nocheck
 "use client";
-import AuthModal from "@/components/AuthModal.tsx";
+import AuthModal from "@/app/components/AuthModal.tsx";
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
