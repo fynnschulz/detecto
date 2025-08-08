@@ -20,19 +20,23 @@ export default function LoginForm() {
     setErrorMsg("");
     setSuccessMsg("");
 
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
 
+    console.log("🔐 signIn result:", { data, error });
+
     if (error) {
       setErrorMsg(error.message);
-    } else {
+    } else if (data?.session) {
       setSuccessMsg("✅ Login erfolgreich!");
       localStorage.setItem("hideAuthModal", "true"); // Modal unterdrücken
       setTimeout(() => {
         window.location.reload();
       }, 150);
+    } else {
+      setErrorMsg("Login fehlgeschlagen – keine Session erhalten.");
     }
 
     setLoading(false);

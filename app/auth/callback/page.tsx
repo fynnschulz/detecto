@@ -1,16 +1,34 @@
 "use client";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
+
+const supabase = createBrowserSupabaseClient();
 
 export default function CallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("/");
-    }, 3000); // 3 Sekunden
+    const handleSession = async () => {
+      // Tausche Auth-Code/Access-Token aus der URL in eine Session
+      const { data: exchanged, error: exchangeError } = await supabase.auth.exchangeCodeForSession(window.location.href);
 
-    return () => clearTimeout(timer);
+      if (exchangeError) {
+        console.error("exchangeCodeForSession error:", exchangeError);
+        router.replace("/login");
+        return;
+      }
+
+      // Session prüfen (sollte nun vorhanden sein)
+      const { data } = await supabase.auth.getSession();
+      if (data?.session) {
+        router.replace("/");
+      } else {
+        router.replace("/login");
+      }
+    };
+
+    handleSession();
   }, [router]);
 
   return (
@@ -25,7 +43,7 @@ export default function CallbackPage() {
         color: "white",
       }}
     >
-      ✅ Deine E-Mail wurde bestätigt! Du wirst weitergeleitet ...
+      ✅ Deine E-Mail wurde bestätigt! Anmeldung wird abgeschlossen ...
     </div>
   );
 }
