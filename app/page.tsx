@@ -539,38 +539,25 @@ useEffect(() => {
               </div>
             </div>
           )}
-          {/* Horizontale, scrollbar-fähige Tabs */}
-          <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-2xl">
-            <div className="w-full overflow-x-auto whitespace-nowrap flex gap-2 px-4 py-2 no-scrollbar bg-zinc-900/80 backdrop-blur-md rounded-full shadow-[0_4px_20px_rgba(0,255,255,0.1)] border border-white/10">
-              <button
-                className={`px-4 py-2 rounded text-white font-medium transition
-                  ${activeTool === "scan" ? "bg-blue-500" : "bg-zinc-800"}`}
-                onClick={() => setActiveTool("scan")}
-              >
-                Scan
-              </button>
-              <button
-                className={`px-4 py-2 rounded text-white font-medium transition
-                  ${activeTool === "search" ? "bg-blue-500" : "bg-zinc-800"}`}
-                onClick={() => setActiveTool("search")}
-              >
-                Suchmaschine
-              </button>
-              <button
-                className={`px-4 py-2 rounded text-white font-medium transition
-                  ${activeTool === "community" ? "bg-blue-500" : "bg-zinc-800"}`}
-                onClick={() => setActiveTool("community")}
-              >
-                Community
-              </button>
-              <button
-                className={`px-4 py-2 rounded text-white font-medium transition
-                  ${activeTool === "vpn" ? "bg-blue-500" : "bg-zinc-800"}`}
-                onClick={() => setActiveTool("vpn")}
-              >
-                VPN
-              </button>
-              {/* Weitere Tabs falls nötig */}
+          <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-zinc-900/80 backdrop-blur-md rounded-full px-6 py-2 shadow-[0_4px_20px_rgba(0,255,255,0.1)] border border-white/10">
+            <div className="flex space-x-3">
+              {tools.map((tool) => (
+                <button
+                  key={tool.id}
+                  onClick={() => setActiveTool(tool.id)}
+                  className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 backdrop-blur-md relative
+                    ${
+                      activeTool === tool.id
+                        ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
+                        : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
+                    }`}
+                >
+                  <span className="relative z-10">{tool.name}</span>
+                  {activeTool === tool.id && (
+                    <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
+                  )}
+                </button>
+              ))}
             </div>
           </nav>
 
