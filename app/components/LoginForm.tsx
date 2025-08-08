@@ -20,11 +20,10 @@ export default function LoginForm() {
     setErrorMsg("");
     setSuccessMsg("");
 
-    const { data, error } = await supabase.auth.signInWithPassword({
+    const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
-    console.log("🔐 signIn result:", { data, error });
 
     if (error) {
       setErrorMsg(error.message);
