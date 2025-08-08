@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/app/lib/supabaseClient";
+import { supabase } from "@/app/lib/supabaseclient";
 
 export default function ProtectedPage() {
   const [loading, setLoading] = useState(true);

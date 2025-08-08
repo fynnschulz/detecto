@@ -1,15 +1,32 @@
 "use client";
 
 import { useState } from "react";
+import { supabase } from "../lib/supabaseClient";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Hier kommt später die Login-Logik rein
-    console.log("Login mit:", { email, password });
+    setLoading(true);
+    setErrorMsg("");
+
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      setErrorMsg(error.message);
+    } else {
+      localStorage.setItem("hideAuthModal", "true"); // Modal unterdrücken
+      window.location.reload(); // Seite neu laden
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -30,11 +47,17 @@ export default function LoginForm() {
         className="bg-zinc-800 text-white px-4 py-2 rounded-md focus:outline-none"
         required
       />
+      {errorMsg && (
+        <div className="text-red-500 text-sm">{errorMsg}</div>
+      )}
       <button
         type="submit"
-        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-md transition"
+        disabled={loading}
+        className={`${
+          loading ? "bg-blue-400" : "bg-blue-500 hover:bg-blue-600"
+        } text-white font-semibold py-2 rounded-md transition`}
       >
-        Einloggen
+        {loading ? "Einloggen..." : "Einloggen"}
       </button>
     </form>
   );

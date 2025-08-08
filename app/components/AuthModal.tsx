@@ -1,11 +1,31 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { supabase } from "@/app/lib/supabaseClient";
 import LoginForm from "./LoginForm";
 import Link from "next/link";
 
 export default function AuthModal() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const hide = localStorage.getItem("hideAuthModal");
+    if (hide !== "true") {
+      setShow(true);
+    }
+
+    const checkSession = async () => {
+      const { data } = await supabase.auth.getSession();
+      if (data.session) {
+        setShow(false);
+        localStorage.setItem("hideAuthModal", "true");
+      }
+    };
+
+    const interval = setInterval(checkSession, 5000); // alle 5 Sekunden
+    return () => clearInterval(interval);
+  }, []);
 
   if (!show) return null;
 
@@ -22,7 +42,10 @@ export default function AuthModal() {
         </div>
         <div className="text-center mt-3">
           <button
-            onClick={() => setShow(false)}
+            onClick={() => {
+              setShow(false);
+              localStorage.setItem("hideAuthModal", "true");
+            }}
             className="mt-2 text-sm text-gray-400 hover:text-white"
           >
             Oder ohne Login fortfahren

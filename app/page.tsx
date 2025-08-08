@@ -2,7 +2,7 @@
  "use client";
 import AuthModal from "./components/AuthModal";
 import { useEffect, useState } from "react";
-import { supabase } from "@/app/lib/supabaseClient";
+import { supabase } from "@/app/lib/supabaseclient";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,27 +28,33 @@ export default function Home() {
   const [showAlternatives, setShowAlternatives] = useState(false);
   const [loadingAlternatives, setLoadingAlternatives] = useState(false);
   const [activeInfo, setActiveInfo] = useState("Scan");
-  // Login-Modal nur beim ersten Laden anzeigen
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [session, setSession] = useState<any>(null);
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
 
+  // Initialisiere: Session-Status und Login-Modal Sichtbarkeit
   useEffect(() => {
-    const modalSeen = localStorage.getItem("loginModalSeen");
-    if (!modalSeen) {
-      setShowLoginModal(true);
-      localStorage.setItem("loginModalSeen", "true");
-    }
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(async () => {
-      const { data } = await supabase.auth.getSession();
-      if (data.session) {
+    // Prüfe auf bestehende Session
+    supabase.auth.getSession().then(({ data }) => {
+      setSession(data.session);
+      // Prüfe, ob das Modal angezeigt werden soll
+      const hideAuthModal = localStorage.getItem("hideAuthModal");
+      if (!data.session && !hideAuthModal) {
+        setShowLoginModal(true);
+      }
+    });
+    // Auth-Listener für Login/Logout
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+      if (session) {
         setShowLoginModal(false);
       }
-    }, 5000);
-
-    return () => clearInterval(interval);
+    });
+    return () => {
+      listener?.subscription?.unsubscribe();
+    };
   }, []);
+
 
 const fetchAlternatives = async () => {
   try {
@@ -502,7 +508,10 @@ useEffect(() => {
             <div className="fixed inset-0 z-[1000] backdrop-blur-sm bg-black/10 flex items-center justify-center">
               <div className="relative bg-zinc-900 text-white rounded-2xl shadow-xl p-4 w-[90%] max-w-sm border border-zinc-700 scale-90">
                 <button
-                  onClick={() => setShowLoginModal(false)}
+                  onClick={() => {
+                    setShowLoginModal(false);
+                    localStorage.setItem("hideAuthModal", "true");
+                  }}
                   className="absolute top-4 right-4 text-white text-xl"
                 >
                   ×
@@ -539,14 +548,42 @@ useEffect(() => {
               </div>
             </div>
           )}
-          {/* Profil-Button oben rechts */}
-          <div className="absolute top-4 right-4 flex flex-col items-center group z-50">
-            <button className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors duration-200">
-              👤
-            </button>
-            <span className="text-sm text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              Profil
-            </span>
+          {/* Profil-Button oben rechts & Menü */}
+          <div className="absolute top-4 right-4 flex flex-col items-center z-50">
+            <div className="relative">
+              <button
+                className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors duration-200"
+                onClick={() => setShowProfileMenu((prev) => !prev)}
+              >
+                👤
+              </button>
+              <span className="text-sm text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Profil
+              </span>
+              {showProfileMenu && (
+                <div className="absolute right-0 mt-2 w-44 bg-zinc-900 border border-zinc-700 rounded-xl shadow-xl z-50">
+                  <div className="px-4 py-3 text-white text-sm border-b border-zinc-800">
+                    {session ? (
+                      <span>Eingeloggt</span>
+                    ) : (
+                      <span>Nicht eingeloggt</span>
+                    )}
+                  </div>
+                  {session && (
+                    <button
+                      className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-red-400 rounded-b-xl transition"
+                      onClick={async () => {
+                        await supabase.auth.signOut();
+                        localStorage.removeItem("hideAuthModal");
+                        window.location.reload();
+                      }}
+                    >
+                      Abmelden
+                    </button>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
 
           <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-zinc-900/80 backdrop-blur-md rounded-full px-6 py-2 shadow-[0_4px_20px_rgba(0,255,255,0.1)] border border-white/10">
