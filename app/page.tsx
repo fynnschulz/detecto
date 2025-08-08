@@ -539,6 +539,16 @@ useEffect(() => {
               </div>
             </div>
           )}
+          {/* Profil-Button oben rechts */}
+          <div className="absolute top-4 right-4 flex flex-col items-center group z-50">
+            <button className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors duration-200">
+              👤
+            </button>
+            <span className="text-sm text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Profil
+            </span>
+          </div>
+
           <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-zinc-900/80 backdrop-blur-md rounded-full px-6 py-2 shadow-[0_4px_20px_rgba(0,255,255,0.1)] border border-white/10">
             <div className="flex space-x-3">
               {tools.map((tool) => (
