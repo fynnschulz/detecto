@@ -28,7 +28,9 @@ export default function LoginForm() {
     } else {
       setSuccessMsg("✅ Login erfolgreich!");
       localStorage.setItem("hideAuthModal", "true"); // Modal unterdrücken
-      router.push("/");
+      setTimeout(() => {
+        window.location.reload();
+      }, 150);
     }
 
     setLoading(false);
