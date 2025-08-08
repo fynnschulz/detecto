@@ -4,6 +4,7 @@
 import AuthModal from "@/app/components/AuthModal.tsx";
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
+import { useSession } from "@supabase/auth-helpers-react";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -35,7 +36,8 @@ export default function Home() {
   const [loadingAlternatives, setLoadingAlternatives] = useState(false);
   const [activeInfo, setActiveInfo] = useState("Scan");
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const [session, setSession] = useState<any>(null);
+  // useSession von Supabase Auth Helpers
+  const session = useSession();
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
 
@@ -558,12 +560,18 @@ useEffect(() => {
           {/* Profil-Button oben rechts & Menü */}
           <div className="absolute top-4 right-4 flex flex-col items-center z-50">
             <div className="relative">
-              <button
-                className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors duration-200"
-                onClick={() => setShowProfileMenu((prev) => !prev)}
+              <div
+                className={`rounded-full p-2 transition border-2 ${
+                  session ? "border-blue-500" : "border-transparent"
+                }`}
               >
-                👤
-              </button>
+                <button
+                  className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors duration-200"
+                  onClick={() => setShowProfileMenu((prev) => !prev)}
+                >
+                  👤
+                </button>
+              </div>
               <span className="text-sm text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Profil
               </span>

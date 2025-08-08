@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import "./globals.css";
 import { useTranslation } from "react-i18next";
+import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
+import { SessionContextProvider } from "@supabase/auth-helpers-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +29,7 @@ function RootLayout({
   const pathname = usePathname();
   const { i18n } = useTranslation();
   const [isMounted, setIsMounted] = useState(false);
+  const [supabaseClient] = useState(() => createBrowserSupabaseClient());
 
   useEffect(() => {
     setIsMounted(true);
@@ -44,7 +47,9 @@ function RootLayout({
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="min-h-screen"
           >
-            {isMounted && children}
+            <SessionContextProvider supabaseClient={supabaseClient}>
+              {isMounted && children}
+            </SessionContextProvider>
           </motion.div>
         </AnimatePresence>
       </body>
