@@ -33,6 +33,7 @@ export default function Home() {
   const [showLoginModal, setShowLoginModal] = useState(false);
   // useSession von Supabase Auth Helpers
   const session = useSession();
+  const isLoggedIn = !!session;
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const supabase = useSupabaseClient();
@@ -578,7 +579,7 @@ useEffect(() => {
             <div className="relative">
               <div
                 className={`rounded-full p-2 transition border-2 ${
-                  session ? "border-blue-500" : "border-transparent"
+                  isLoggedIn ? "border-blue-500" : "border-transparent"
                 }`}
               >
                 <button
@@ -594,13 +595,13 @@ useEffect(() => {
               {showProfileMenu && (
                 <div className="absolute right-0 mt-2 w-44 bg-zinc-900 border border-zinc-700 rounded-xl shadow-xl z-50">
                   <div className="px-4 py-3 text-white text-sm border-b border-zinc-800">
-                    {session ? (
-                      <span>Eingeloggt</span>
+                    {authChecked ? (
+                      isLoggedIn ? <span>Eingeloggt</span> : <span>Nicht eingeloggt</span>
                     ) : (
-                      <span>Nicht eingeloggt</span>
+                      <span>Prüfe Status…</span>
                     )}
                   </div>
-                  {!session && (
+                  {!isLoggedIn && (
                     <button
                       className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-blue-400 rounded-b-xl transition"
                       onClick={() => {
@@ -611,7 +612,7 @@ useEffect(() => {
                       Einloggen
                     </button>
                   )}
-                  {session && (
+                  {isLoggedIn && (
                     <button
                       className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-red-400 rounded-b-xl transition"
                       onClick={async () => {

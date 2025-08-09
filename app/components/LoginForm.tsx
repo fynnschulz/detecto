@@ -31,10 +31,16 @@ export default function LoginForm() {
       setErrorMsg(error.message);
     } else if (data?.session) {
       setSuccessMsg("✅ Login erfolgreich!");
-      localStorage.setItem("hideAuthModal", "true"); // Modal unterdrücken
-      setTimeout(() => {
-        window.location.reload();
-      }, 150);
+      try {
+        localStorage.setItem("hideAuthModal", "true");
+      } catch {}
+
+      // Falls AuthModal sichtbar ist, es schließen (globale Event-Variante)
+      window.dispatchEvent(new CustomEvent("auth:closeModal"));
+
+      // Session sollte jetzt sofort im Provider ankommen → kein Reload nötig
+      // Falls du dennoch neu laden willst, kommentiere die nächste Zeile aus
+      // window.location.reload();
     } else {
       setErrorMsg("Login fehlgeschlagen – keine Session erhalten.");
     }
