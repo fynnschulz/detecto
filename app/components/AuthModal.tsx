@@ -30,6 +30,12 @@ export default function AuthModal() {
     };
     window.addEventListener("auth:closeModal", closeHandler);
 
+    const openHandler = () => {
+      setShow(true);
+      try { localStorage.removeItem("hideAuthModal"); } catch {}
+    };
+    window.addEventListener("auth:openModal", openHandler);
+
     // Initial session check
     supabase.auth.getSession().then(({ data }) => {
       if (!isMounted) return;
@@ -55,6 +61,7 @@ export default function AuthModal() {
     return () => {
       isMounted = false;
       subscription?.subscription?.unsubscribe?.();
+      window.removeEventListener("auth:openModal", openHandler);
       window.removeEventListener("auth:closeModal", closeHandler);
     };
   }, [supabase]);

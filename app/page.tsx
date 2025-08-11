@@ -561,7 +561,7 @@ useEffect(() => {
                     <button
                       className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-blue-400 rounded-b-xl transition"
                       onClick={() => {
-                        setShowAuthModal(true);
+                        window.dispatchEvent(new CustomEvent("auth:openModal"));
                         setShowProfileMenu(false);
                       }}
                     >
