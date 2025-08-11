@@ -530,87 +530,76 @@ useEffect(() => {
       {showMainContent && (
         <>
           {/* Login-Modal entfernt, AuthModal wird weiterhin gerendert */}
-          {/* Profil-Button oben rechts & Menü */}
-          <div className="absolute top-4 right-4 flex flex-col items-center z-50">
-            <div className="relative">
-              <div
-                className={`rounded-full p-2 transition border-2 ${
-                  isLoggedIn ? "border-blue-500" : "border-transparent"
-                }`}
-              >
-                <button
-                  className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors duration-200"
-                  onClick={() => setShowProfileMenu((prev) => !prev)}
-                >
-                  👤
-                </button>
-              </div>
-              <span className="text-sm text-white mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Profil
-              </span>
-              {showProfileMenu && (
-                <div className="absolute right-0 mt-2 w-44 bg-zinc-900 border border-zinc-700 rounded-xl shadow-xl z-50">
-                  <div className="px-4 py-3 text-white text-sm border-b border-zinc-800">
-                    {authChecked ? (
-                      isLoggedIn ? <span>Eingeloggt</span> : <span>Nicht eingeloggt</span>
-                    ) : (
-                      <span>Prüfe Status…</span>
+          <nav className="fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] bg-zinc-900/80 backdrop-blur-md border-b border-white/10">
+            <div className="px-3 py-2 overflow-x-auto whitespace-nowrap [-webkit-overflow-scrolling:touch] [scrollbar-width:none]" style={{ msOverflowStyle: 'none' }}>
+              <div className="inline-flex items-center gap-2 min-w-max">
+                {tools.map((tool) => (
+                  <button
+                    key={tool.id}
+                    onClick={() => setActiveTool(tool.id)}
+                    className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative
+                      ${
+                        activeTool === tool.id
+                          ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
+                          : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
+                      }`}
+                  >
+                    <span className="relative z-10">{tool.name}</span>
+                    {activeTool === tool.id && (
+                      <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
                     )}
+                  </button>
+                ))}
+
+                {/* Avatar als letztes Element im scrollbaren Strip */}
+                <div className="relative inline-flex ml-1">
+                  <div className={`rounded-full p-0.5 transition border-2 ${isLoggedIn ? "border-blue-500" : "border-transparent"}`}>
+                    <button
+                      className="w-9 h-9 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors duration-200"
+                      onClick={() => setShowProfileMenu((prev) => !prev)}
+                      aria-label="Profil"
+                    >
+                      👤
+                    </button>
                   </div>
-                  {!isLoggedIn && (
-                    <button
-                      className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-blue-400 rounded-b-xl transition"
-                      onClick={() => {
-                        window.dispatchEvent(new CustomEvent("auth:openModal"));
-                        setShowProfileMenu(false);
-                      }}
-                    >
-                      Einloggen
-                    </button>
-                  )}
-                  {isLoggedIn && (
-                    <button
-                      className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-red-400 rounded-b-xl transition"
-                      onClick={async () => {
-                        // Vorbeugend schließen, damit es vor dem Reload nicht erneut aufpoppt
-                        setShowAuthModal(false);
-                        setShowProfileMenu(false);
-
-                        await supabase.auth.signOut();
-
-                        // Nach dem Reload darf das Auto-Modal wieder erscheinen
-                        try { localStorage.removeItem("hideAuthModal"); } catch {}
-
-                        window.location.reload();
-                      }}
-                    >
-                      Abmelden
-                    </button>
+                  {showProfileMenu && (
+                    <div className="absolute right-0 mt-2 w-44 bg-zinc-900 border border-zinc-700 rounded-xl shadow-xl z-50">
+                      <div className="px-4 py-3 text-white text-sm border-b border-zinc-800">
+                        {authChecked ? (
+                          isLoggedIn ? <span>Eingeloggt</span> : <span>Nicht eingeloggt</span>
+                        ) : (
+                          <span>Prüfe Status…</span>
+                        )}
+                      </div>
+                      {!isLoggedIn && (
+                        <button
+                          className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-blue-400 transition"
+                          onClick={() => {
+                            window.dispatchEvent(new CustomEvent("auth:openModal"));
+                            setShowProfileMenu(false);
+                          }}
+                        >
+                          Einloggen
+                        </button>
+                      )}
+                      {isLoggedIn && (
+                        <button
+                          className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-red-400 transition"
+                          onClick={async () => {
+                            setShowAuthModal(false);
+                            setShowProfileMenu(false);
+                            await supabase.auth.signOut();
+                            try { localStorage.removeItem("hideAuthModal"); } catch {}
+                            window.location.reload();
+                          }}
+                        >
+                          Abmelden
+                        </button>
+                      )}
+                    </div>
                   )}
                 </div>
-              )}
-            </div>
-          </div>
-
-          <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-zinc-900/80 backdrop-blur-md rounded-full px-6 py-2 shadow-[0_4px_20px_rgba(0,255,255,0.1)] border border-white/10">
-            <div className="flex space-x-3">
-              {tools.map((tool) => (
-                <button
-                  key={tool.id}
-                  onClick={() => setActiveTool(tool.id)}
-                  className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 backdrop-blur-md relative
-                    ${
-                      activeTool === tool.id
-                        ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
-                        : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
-                    }`}
-                >
-                  <span className="relative z-10">{tool.name}</span>
-                  {activeTool === tool.id && (
-                    <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
-                  )}
-                </button>
-              ))}
+              </div>
             </div>
           </nav>
 

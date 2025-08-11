@@ -14,12 +14,6 @@ export default function AuthModal() {
   const supabase = useSupabaseClient();
 
   useEffect(() => {
-    // Respect previously chosen "hideAuthModal"
-    const hide = localStorage.getItem("hideAuthModal");
-    if (hide !== "true") {
-      setShow(true);
-    }
-
     let isMounted = true;
 
     const closeHandler = () => {
@@ -42,6 +36,12 @@ export default function AuthModal() {
       if (data.session) {
         setShow(false);
         localStorage.setItem("hideAuthModal", "true");
+      } else {
+        // Only show modal on load if user is not logged in and it hasn't been hidden
+        const hide = localStorage.getItem("hideAuthModal");
+        if (hide !== "true") {
+          setShow(true);
+        }
       }
     });
 
