@@ -530,9 +530,9 @@ useEffect(() => {
       {showMainContent && (
         <>
           {/* Login-Modal entfernt, AuthModal wird weiterhin gerendert */}
-          <nav className="fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] bg-zinc-900/80 backdrop-blur-md border-b border-white/10">
-            <div className="px-3 py-2 overflow-x-auto whitespace-nowrap [-webkit-overflow-scrolling:touch] [scrollbar-width:none]" style={{ msOverflowStyle: 'none' }}>
-              <div className="inline-flex items-center gap-2 min-w-max">
+          <nav className="fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] md:pt-4 bg-zinc-900/80 md:bg-transparent backdrop-blur-md md:backdrop-blur-0 border-b border-white/10 md:border-0">
+            <div className="px-3 py-2 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:flex md:justify-center" style={{ msOverflowStyle: 'none' }}>
+              <div className="inline-flex md:flex items-center gap-2 min-w-max md:min-w-0">
                 {tools.map((tool) => (
                   <button
                     key={tool.id}
