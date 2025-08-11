@@ -30,7 +30,7 @@ export default function Home() {
   const [showAlternatives, setShowAlternatives] = useState(false);
   const [loadingAlternatives, setLoadingAlternatives] = useState(false);
   const [activeInfo, setActiveInfo] = useState("Scan");
-  const [showLoginModal, setShowLoginModal] = useState(false);
+  // const [showLoginModal, setShowLoginModal] = useState(false);
   // useSession von Supabase Auth Helpers
   const session = useSession();
   const isLoggedIn = !!session;
@@ -56,7 +56,7 @@ export default function Home() {
             try { localStorage.removeItem("skipLoginModalOnce"); } catch {}
           }, 5000);
         } else if (!hideAuthModal) {
-          setShowLoginModal(true);
+          setShowAuthModal(true);
         }
       }
       setAuthChecked(true);
@@ -65,7 +65,7 @@ export default function Home() {
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       if (!isMounted) return;
       if (session) {
-        setShowLoginModal(false);
+        setShowAuthModal(false);
         try {
           localStorage.setItem("hideAuthModal", "true");
           localStorage.removeItem("skipLoginModalOnce");
@@ -529,51 +529,7 @@ useEffect(() => {
       </AnimatePresence>
       {showMainContent && (
         <>
-          {/* Login-Modal nur beim allerersten Laden anzeigen, kann dauerhaft ausgeblendet werden */}
-          {authChecked && !session && showLoginModal && (
-            <div className="fixed inset-0 z-[1000] backdrop-blur-sm bg-black/10 flex items-center justify-center">
-              <div className="relative bg-zinc-900 text-white rounded-2xl shadow-xl p-4 w-[90%] max-w-sm border border-zinc-700 scale-90">
-                <button
-                  onClick={() => {
-                    setShowLoginModal(false);
-                    localStorage.setItem("hideAuthModal", "true");
-                  }}
-                  className="absolute top-4 right-4 text-white text-xl"
-                >
-                  ×
-                </button>
-                <h2 className="text-2xl font-bold mb-6 text-center">Anmelden bei DETECTO</h2>
-                <input
-                  type="email"
-                  placeholder="E-Mail"
-                  className="w-full p-3 mb-4 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <input
-                  type="password"
-                  placeholder="Passwort"
-                  className="w-full p-3 mb-4 rounded-md bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button className="w-full bg-blue-600 hover:bg-blue-700 transition text-white font-semibold py-2 rounded-md mb-4">
-                  Anmelden
-                </button>
-                <div className="flex items-center justify-center mb-4 text-gray-400">oder</div>
-                <div className="flex flex-col space-y-2">
-                  <button className="w-full bg-white text-black font-medium py-2 rounded-md hover:bg-gray-100 transition">
-                    Mit Google anmelden
-                  </button>
-                  <button className="w-full bg-white text-black font-medium py-2 rounded-md hover:bg-gray-100 transition">
-                    Mit Apple anmelden
-                  </button>
-                </div>
-                <div className="mt-6 text-center text-sm text-gray-400">
-                  Noch kein Account?{" "}
-                  <a href="/register" className="text-blue-400 hover:underline">
-                    Jetzt registrieren
-                  </a> 
-                </div>
-              </div>
-            </div>
-          )}
+          {/* Login-Modal entfernt, AuthModal wird weiterhin gerendert */}
           {/* Profil-Button oben rechts & Menü */}
           <div className="absolute top-4 right-4 flex flex-col items-center z-50">
             <div className="relative">
@@ -605,7 +561,7 @@ useEffect(() => {
                     <button
                       className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-blue-400 rounded-b-xl transition"
                       onClick={() => {
-                        setShowLoginModal(true);
+                        setShowAuthModal(true);
                         setShowProfileMenu(false);
                       }}
                     >
@@ -617,7 +573,7 @@ useEffect(() => {
                       className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-red-400 rounded-b-xl transition"
                       onClick={async () => {
                         // Vorbeugend schließen, damit es vor dem Reload nicht erneut aufpoppt
-                        setShowLoginModal(false);
+                        setShowAuthModal(false);
                         setShowProfileMenu(false);
 
                         await supabase.auth.signOut();
