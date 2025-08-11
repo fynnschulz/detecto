@@ -81,12 +81,7 @@ export default function AuthModal() {
           {authMode === "login" ? (
             <>
               Noch kein Account?{" "}
-              <button
-                className="text-blue-400 underline"
-                onClick={() => setAuthMode("register")}
-              >
-                Jetzt registrieren
-              </button>
+              <Link href="/register" className="text-blue-400 underline">Jetzt registrieren</Link>
             </>
           ) : (
             <>
