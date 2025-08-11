@@ -563,41 +563,111 @@ useEffect(() => {
                     </button>
                   </div>
                   {showProfileMenu && (
-                    <div className="absolute right-0 mt-2 w-44 bg-zinc-900 border border-zinc-700 rounded-xl shadow-xl z-50">
-                      <div className="px-4 py-3 text-white text-sm border-b border-zinc-800">
-                        {authChecked ? (
-                          isLoggedIn ? <span>Eingeloggt</span> : <span>Nicht eingeloggt</span>
-                        ) : (
-                          <span>Prüfe Status…</span>
-                        )}
-                      </div>
-                      {!isLoggedIn && (
-                        <button
-                          className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-blue-400 transition"
-                          onClick={() => {
-                            window.dispatchEvent(new CustomEvent("auth:openModal"));
-                            setShowProfileMenu(false);
-                          }}
-                        >
-                          Einloggen
-                        </button>
-                      )}
-                      {isLoggedIn && (
-                        <button
-                          className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-red-400 transition"
-                          onClick={async () => {
-                            setShowAuthModal(false);
-                            setShowProfileMenu(false);
-                            await supabase.auth.signOut();
-                            try { localStorage.removeItem("hideAuthModal"); } catch {}
-                            window.location.reload();
-                          }}
-                        >
-                          Abmelden
-                        </button>
-                      )}
-                    </div>
-                  )}
+  <div className="absolute right-0 mt-2 w-80 bg-zinc-900/95 border border-zinc-800 rounded-2xl shadow-2xl backdrop-blur-xl z-50 overflow-hidden divide-y divide-zinc-800 relative">
+    {/* Subtle light strip for premium feel */}
+    <div className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-[140%] h-24 bg-gradient-to-b from-cyan-400/10 via-cyan-300/5 to-transparent blur-2xl" />
+
+    {/* Header: Avatar + Name + E-Mail */}
+    <div className="flex items-center gap-3 px-4 py-4">
+      <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center ring-1 ring-white/10 shadow-inner">👤</div>
+      <div className="min-w-0">
+        <div className="text-white font-semibold truncate">
+          {session?.user?.user_metadata?.full_name || session?.user?.user_metadata?.name || (session?.user?.email ? session.user.email.split("@")[0] : "Gast")}
+        </div>
+        <div className="text-gray-400 text-xs truncate">{session?.user?.email || (authChecked ? "" : "Prüfe Status…")}</div>
+      </div>
+    </div>
+
+    {/* Links */}
+    <div className="py-1">
+      <Link href="/account" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative">
+        <span className="mr-3">⚙️</span>
+        <span>Einstellungen</span>
+        <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+        <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+      </Link>
+      <Link href="/hilfe" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative">
+        <span className="mr-3">❓</span>
+        <span>Hilfe & Ressourcen</span>
+        <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+        <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+      </Link>
+      <Link href="/news" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative">
+        <span className="mr-3">📰</span>
+        <span>Neuigkeiten</span>
+        <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+        <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+      </Link>
+      <Link href="/billing" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative">
+        <span className="mr-3">💳</span>
+        <span>Abos & Tarife</span>
+        <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+        <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+      </Link>
+      <Link href="/purchases" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative">
+        <span className="mr-3">🧾</span>
+        <span>Bisherige Einkäufe</span>
+        <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+        <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+      </Link>
+    </div>
+
+    {/* Footer: Auth-Aktionen + Close */}
+    <div className="py-1 relative">
+      {!isLoggedIn ? (
+        <div className="flex">
+          <button
+            className="group flex-1 text-left px-4 py-3 hover:bg-zinc-800/70 text-blue-400 transition relative"
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent("auth:openModal"));
+              setShowProfileMenu(false);
+            }}
+          >
+            <span className="mr-2">🔐</span>
+            Einloggen
+            <span className="ml-2 opacity-40 group-hover:opacity-80 transition">›</span>
+            <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+          </button>
+          <Link
+            href="/register"
+            className="group flex-1 px-4 py-3 text-blue-400 hover:bg-zinc-800/70 transition text-center relative"
+            onClick={() => setShowProfileMenu(false)}
+          >
+            <span className="mr-2">✍️</span>
+            Registrieren
+            <span className="ml-2 opacity-40 group-hover:opacity-80 transition">›</span>
+            <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+          </Link>
+        </div>
+      ) : (
+        <button
+          className="group w-full text-left px-4 py-3 hover:bg-zinc-800/70 text-red-400 transition relative"
+          onClick={async () => {
+            setShowAuthModal(false);
+            setShowProfileMenu(false);
+            await supabase.auth.signOut();
+            try { localStorage.removeItem("hideAuthModal"); } catch {}
+            window.location.reload();
+          }}
+        >
+          <span className="mr-2">🚪</span>
+          Abmelden
+          <span className="ml-2 opacity-40 group-hover:opacity-80 transition">›</span>
+          <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+        </button>
+      )}
+
+      {/* Close X in bottom-right corner */}
+      <button
+        aria-label="Schließen"
+        className="absolute -bottom-2 -right-2 w-7 h-7 rounded-full bg-zinc-800 border border-zinc-700 shadow-lg flex items-center justify-center text-zinc-300 hover:bg-zinc-700 hover:text-white hover:shadow-cyan-500/20 transition"
+        onClick={() => setShowProfileMenu(false)}
+      >
+        ×
+      </button>
+    </div>
+  </div>
+)}
                 </div>
               </div>
             </div>
