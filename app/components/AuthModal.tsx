@@ -47,8 +47,8 @@ export default function AuthModal() {
         localStorage.setItem("hideAuthModal", "true");
       }
       if (event === "SIGNED_OUT") {
-        localStorage.removeItem("hideAuthModal");
-        setShow(true);
+        localStorage.removeItem("hideAuthModal"); // Modal jetzt NICHT sofort öffnen – Reload übernimmt Autostart
+        setShow(false);
       }
     });
 

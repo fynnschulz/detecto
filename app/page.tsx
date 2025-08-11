@@ -616,8 +616,15 @@ useEffect(() => {
                     <button
                       className="w-full text-left px-4 py-3 hover:bg-zinc-800 text-red-400 rounded-b-xl transition"
                       onClick={async () => {
+                        // Vorbeugend schließen, damit es vor dem Reload nicht erneut aufpoppt
+                        setShowLoginModal(false);
+                        setShowProfileMenu(false);
+
                         await supabase.auth.signOut();
-                        localStorage.removeItem("hideAuthModal");
+
+                        // Nach dem Reload darf das Auto-Modal wieder erscheinen
+                        try { localStorage.removeItem("hideAuthModal"); } catch {}
+
                         window.location.reload();
                       }}
                     >
