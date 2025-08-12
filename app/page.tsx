@@ -31,7 +31,6 @@ export default function Home() {
   const [showAlternatives, setShowAlternatives] = useState(false);
   const [loadingAlternatives, setLoadingAlternatives] = useState(false);
   const [activeInfo, setActiveInfo] = useState("Scan");
-  const [introDone, setIntroDone] = useState(false);
   // const [showLoginModal, setShowLoginModal] = useState(false);
   // useSession von Supabase Auth Helpers
   const session = useSession();
@@ -124,13 +123,6 @@ useEffect(() => {
     const timer = setTimeout(() => setShowMainContent(true), 1000);
     return () => clearTimeout(timer);
   }, []);
-
-  useEffect(() => {
-    if (!showMainContent) return;
-    // wait longer than the intro overlay exit (delay 0.5 + duration 0.5)
-    const t = setTimeout(() => setIntroDone(true), 700);
-    return () => clearTimeout(t);
-  }, [showMainContent]);
 
   const tools: { name: string; id: string }[] = [
     { name: "Scan", id: "scan" },
@@ -515,24 +507,6 @@ useEffect(() => {
     }
   };
 
-  const heroContainer = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.08, delayChildren: 0.12 }
-    }
-  };
-
-  const heroItem = {
-    hidden: { opacity: 0, y: 24, filter: "blur(6px)" },
-    show: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: { duration: 0.7, ease: "easeOut" }
-    }
-  };
-
   return (
     <div className="bg-gradient-to-b from-gray-800 via-[#111] to-black text-white w-full min-h-screen overflow-x-hidden font-sans relative">
       <AnimatePresence>
@@ -604,37 +578,27 @@ useEffect(() => {
                 />
               )}
               
-              <AnimatePresence mode="wait">
-                {introDone && (
-                  <motion.div
-                    key="hero"
-                    initial="hidden"
-                    animate="show"
-                    exit="hidden"
-                    variants={heroContainer}
-                  >
-                    <motion.h1
-                      variants={heroItem}
-                      className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500"
-                    >
-                      {activeTool === "scan"
-                        ? "Datenschutz. Klar. Verständlich."
-                        : "Finde Tools, denen du vertrauen kannst."}
-                    </motion.h1>
-                    <motion.p
-                      variants={heroItem}
-                      className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10"
-                    >
-                      {activeTool === "scan"
-                        ? "Scanne jede Website und entdecke ihre Datenschutzrisiken – mit einem Klick."
-                        : "Gib konkrete Stichworte oder Wünsche ein – z. B. „Webseite für günstige Kleidung“ oder „sicherer Passwort-Manager“. Unsere KI schlägt dir passende, datenschutzfreundliche Tools vor."}
-                    </motion.p>
-                    <motion.div variants={heroItem}>
-                      {renderToolContent()}
-                    </motion.div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <motion.h1
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.4, ease: "easeOut" }}
+                className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500"
+              >
+                {activeTool === "scan"
+                  ? "Datenschutz. Klar. Verständlich."
+                  : "Finde Tools, denen du vertrauen kannst."}
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2 }}
+                className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10"
+              >
+                {activeTool === "scan"
+                  ? "Scanne jede Website und entdecke ihre Datenschutzrisiken – mit einem Klick."
+                  : "Gib konkrete Stichworte oder Wünsche ein – z. B. „Webseite für günstige Kleidung“ oder „sicherer Passwort-Manager“. Unsere KI schlägt dir passende, datenschutzfreundliche Tools vor."}
+              </motion.p>
+              {renderToolContent()}
             </section>
 
             {activeTool === "scan" && (
