@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FloatingInfoBox from "./components/FloatingInfoBox";
 import FeatureRotator from "./components/FeatureRotator";
+import { useUsername } from "@/app/lib/useUsername";
 
 export default function Home() {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -38,6 +39,7 @@ export default function Home() {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const supabase = useSupabaseClient();
   const [authChecked, setAuthChecked] = useState(false);
+  const username = useUsername();
 
   // Initialisiere: Session-Status und Login-Modal Sichtbarkeit (warten bis Session geprüft wurde)
   useEffect(() => {
@@ -848,7 +850,7 @@ useEffect(() => {
                     <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center ring-1 ring-white/10 shadow-inner">👤</div>
                     <div className="min-w-0">
                       <div className="text-white font-semibold truncate">
-                        {session?.user?.user_metadata?.full_name || session?.user?.user_metadata?.name || (session?.user?.email ? session.user.email.split("@")[0] : "Gast")}
+                        {username || session?.user?.user_metadata?.full_name || session?.user?.user_metadata?.name || (session?.user?.email ? session.user.email.split("@")[0] : "Gast")}
                       </div>
                       <div className="text-gray-400 text-xs truncate">{session?.user?.email || (authChecked ? "" : "Prüfe Status…")}</div>
                     </div>
