@@ -648,32 +648,32 @@ useEffect(() => {
                             <div className="bg-gradient-to-br from-zinc-900/90 via-zinc-800/90 to-black/90 p-6 rounded-2xl shadow-[0_0_40px_rgba(0,255,255,0.09)] text-white max-w-2xl mx-auto space-y-6 transition-all duration-500 border border-zinc-700 backdrop-blur-md">
                               <h3 className="text-2xl font-bold text-center text-white mb-4">🔍 Scan-Funktion Schritt für Schritt</h3>
 
-                              <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
-                                <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">🌐</div>
+              <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
+                <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-14 h-14 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">🌐</div>
                                 <div>
                                   <p className="text-white font-semibold">Schritt 1: URL eingeben</p>
                                   <p className="text-gray-300 text-sm">Tippe oder füge die Webadresse ein, die du scannen möchtest.</p>
                                 </div>
                               </div>
 
-                              <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
-                                <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">⚙️</div>
+              <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
+                <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-14 h-14 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">⚙️</div>
                                 <div>
                                   <p className="text-white font-semibold">Schritt 2: Scan starten</p>
                                   <p className="text-gray-300 text-sm">Unsere KI analysiert die Datenschutzlage in Sekunden.</p>
                                 </div>
                               </div>
 
-                              <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
-                                <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">📊</div>
+              <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
+                <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-14 h-14 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">📊</div>
                                 <div>
                                   <p className="text-white font-semibold">Schritt 3: Ergebnis prüfen</p>
                                   <p className="text-gray-300 text-sm">Erhalte einen Datenschutz-Score und detaillierte Einschätzung.</p>
                                 </div>
                               </div>
 
-                              <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
-                                <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">✅</div>
+              <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
+                <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-14 h-14 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">✅</div>
                                 <div>
                                   <p className="text-white font-semibold">Schritt 4: Alternativen finden</p>
                                   <p className="text-gray-300 text-sm">Wenn nötig, werden dir sicherere Webseiten vorgeschlagen.</p>
@@ -827,7 +827,11 @@ useEffect(() => {
           <div className="fixed left-4 md:left-6 bottom-[calc(env(safe-area-inset-bottom,0px)+24px)] z-50">
             <div className="relative">
               <button
-                className="w-12 h-12 rounded-full bg-zinc-800 border border-zinc-700 shadow-lg flex items-center justify-center text-zinc-200 hover:bg-zinc-700 hover:shadow-cyan-500/20 transition"
+                className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition
+  ${isLoggedIn
+    ? "bg-blue-600 text-white hover:bg-blue-500 shadow-blue-500/30"
+    : "bg-zinc-800 border border-zinc-700 text-zinc-200 hover:bg-zinc-700 hover:shadow-cyan-500/20"}
+`}
                 onClick={() => setShowProfileMenu((prev) => !prev)}
                 aria-label="Profil"
               >
