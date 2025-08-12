@@ -31,6 +31,7 @@ export default function Home() {
   const [showAlternatives, setShowAlternatives] = useState(false);
   const [loadingAlternatives, setLoadingAlternatives] = useState(false);
   const [activeInfo, setActiveInfo] = useState("Scan");
+  const [heroVisible, setHeroVisible] = useState(false);
   // const [showLoginModal, setShowLoginModal] = useState(false);
   // useSession von Supabase Auth Helpers
   const session = useSession();
@@ -123,6 +124,12 @@ useEffect(() => {
     const timer = setTimeout(() => setShowMainContent(true), 1000);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (!showMainContent) return;
+    const t = setTimeout(() => setHeroVisible(true), 180);
+    return () => clearTimeout(t);
+  }, [showMainContent]);
 
   const tools: { name: string; id: string }[] = [
     { name: "Scan", id: "scan" },
@@ -577,28 +584,43 @@ useEffect(() => {
                   }}
                 />
               )}
-              
-              <motion.h1
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.4, ease: "easeOut" }}
-                className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500"
-              >
-                {activeTool === "scan"
-                  ? "Datenschutz. Klar. Verständlich."
-                  : "Finde Tools, denen du vertrauen kannst."}
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2 }}
-                className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10"
-              >
-                {activeTool === "scan"
-                  ? "Scanne jede Website und entdecke ihre Datenschutzrisiken – mit einem Klick."
-                  : "Gib konkrete Stichworte oder Wünsche ein – z. B. „Webseite für günstige Kleidung“ oder „sicherer Passwort-Manager“. Unsere KI schlägt dir passende, datenschutzfreundliche Tools vor."}
-              </motion.p>
-              {renderToolContent()}
+
+              <AnimatePresence mode="wait">
+                {heroVisible && (
+                  <>
+                    <motion.h1
+                      initial={{ opacity: 0, y: 60 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 20 }}
+                      transition={{ duration: 1.0, ease: "easeOut", delay: 0.05 }}
+                      className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500"
+                    >
+                      {activeTool === "scan"
+                        ? "Datenschutz. Klar. Verständlich."
+                        : "Finde Tools, denen du vertrauen kannst."}
+                    </motion.h1>
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.9, delay: 0.15 }}
+                      className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10"
+                    >
+                      {activeTool === "scan"
+                        ? "Scanne jede Website und entdecke ihre Datenschutzrisiken – mit einem Klick."
+                        : "Gib konkrete Stichworte oder Wünsche ein – z. B. „Webseite für günstige Kleidung“ oder „sicherer Passwort-Manager“. Unsere KI schlägt dir passende, datenschutzfreundliche Tools vor."}
+                    </motion.p>
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.6, delay: 0.25 }}
+                    >
+                      {renderToolContent()}
+                    </motion.div>
+                  </>
+                )}
+              </AnimatePresence>
             </section>
 
             {activeTool === "scan" && (
