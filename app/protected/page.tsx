@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -17,25 +15,16 @@ export default function ProtectedPage() {
 
   useEffect(() => {
     const checkSession = async () => {
-      const { data, error } = await supabase.auth.getSession();
+      const { data } = await supabase.auth.getSession();
       const session = data?.session;
 
-      if (!session || !session.user || !(session as any).created_at) {
+      if (!session || !session.user) {
         await supabase.auth.signOut();
         router.push("/login");
         return;
       }
 
-      const sessionCreatedTime = new Date((session as any).created_at).getTime();
-      const now = Date.now();
-      const FOUR_HOURS = 4 * 60 * 60 * 1000;
-
-      if (now - sessionCreatedTime > FOUR_HOURS) {
-        await supabase.auth.signOut();
-        router.push("/login");
-      } else {
-        setLoading(false);
-      }
+      setLoading(false);
     };
 
     checkSession();
