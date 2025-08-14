@@ -584,9 +584,7 @@ useEffect(() => {
                 transition={{ duration: 1.4, ease: "easeOut" }}
                 className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500"
               >
-                {activeTool === "scan"
-                  ? "Datenschutz. Klar. Verständlich."
-                  : "Finde Tools, denen du vertrauen kannst."}
+                Dein persönlicher KI‑Bodyguard
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -594,10 +592,27 @@ useEffect(() => {
                 transition={{ duration: 1.2 }}
                 className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10"
               >
-                {activeTool === "scan"
-                  ? "Scanne jede Website und entdecke ihre Datenschutzrisiken – mit einem Klick."
-                  : "Gib konkrete Stichworte oder Wünsche ein – z. B. „Webseite für günstige Kleidung“ oder „sicherer Passwort-Manager“. Unsere KI schlägt dir passende, datenschutzfreundliche Tools vor."}
+                Detecto schützt dich proaktiv vor Phishing, Datenhändlern, unsicheren Einstellungen und riskanten Webseiten – mit klaren Erklärungen und 1‑Klick‑Fixes. Der Quick‑Scan bleibt als Funktion erhalten, steht aber nicht mehr im Mittelpunkt.
               </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2, delay: 0.1 }}
+                className="mt-8 flex flex-col sm:flex-row gap-3 z-10"
+              >
+                <Link
+                  href="/guardian"
+                  className="px-6 py-3 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow"
+                >
+                  Zum Guardian
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="px-6 py-3 rounded-full border border-white/20 text-white font-semibold text-base hover:bg-white/10 transition"
+                >
+                  Alle Tools ansehen
+                </Link>
+              </motion.div>
               {renderToolContent()}
             </section>
 
