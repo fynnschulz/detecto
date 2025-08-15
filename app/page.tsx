@@ -316,23 +316,29 @@ useEffect(() => {
               >
                 Detecto schützt dich proaktiv vor Phishing, Datenlecks und riskanten Webseiten. Erkenne Bedrohungen in Echtzeit, erhalte klare Erklärungen sowie sichere Alternativen – datensparsam und praxisnah.
               </motion.p>
-              {/* Guardian Claim + Mehr lesen */}
+              {/* Guardian Claim + Mehr lesen (enhanced) */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.05 }}
                 className="mt-6 z-10"
               >
-                <p className="text-lg md:text-xl font-semibold text-white">
+                <p className="text-[1.25rem] md:text-[1.35rem] font-semibold text-white [text-shadow:0_0_12px_rgba(34,211,238,.15),0_2px_10px_rgba(0,0,0,.25)]">
                   <span className="font-bold">Detecto Guardian</span> – Dein unsichtbarer Schild im Netz.
                 </p>
                 <button
                   type="button"
                   onClick={() => setShowGuardianMore((v) => !v)}
-                  className="mt-2 text-sm text-gray-300 underline hover:text-white"
+                  className="mt-2 text-sm text-gray-300 underline hover:text-white inline-flex items-center gap-1"
                   aria-expanded={showGuardianMore}
                 >
                   {showGuardianMore ? "weniger anzeigen" : "mehr lesen…"}
+                  <span
+                    aria-hidden
+                    className={`inline-block transition-transform duration-300 ${showGuardianMore ? "rotate-90" : "rotate-0"}`}
+                  >
+                    ➜
+                  </span>
                 </button>
                 <AnimatePresence initial={false}>
                   {showGuardianMore && (
@@ -344,13 +350,17 @@ useEffect(() => {
                       transition={{ duration: 0.35, ease: "easeOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="mt-3 text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
-                        <p>
-                          Der Guardian ist Detectos KI-gestütztes Schutzsystem, das Bedrohungen in Echtzeit erkennt, analysiert und neutralisiert – bevor sie Schaden anrichten können.
-                        </p>
-                        <p className="mt-3">
-                          Diese neuartige Sicherheitsarchitektur setzt neue Maßstäbe im digitalen Selbstschutz: Mit Multi-Kanal-Erkennung, Darknet-Scans und kontinuierlicher Verhaltensanalyse schützt er dich vor Phishing, Datenlecks und gezielten Angriffen – automatisch, unsichtbar und kompromisslos effektiv.
-                        </p>
+                      <div className="relative mt-3 text-base md:text-lg text-gray-300 max-w-2xl mx-auto rounded-xl bg-white/0">
+                        {/* Gradient-Leiste links als dezentem Akzent */}
+                        <div className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-cyan-400/60 via-blue-400/50 to-transparent rounded-full" />
+                        <div className="pl-4">
+                          <p>
+                            Der Guardian ist Detectos KI-gestütztes Schutzsystem, das Bedrohungen in Echtzeit erkennt, analysiert und neutralisiert – bevor sie Schaden anrichten können.
+                          </p>
+                          <p className="mt-3">
+                            Diese neuartige Sicherheitsarchitektur setzt neue Maßstäbe im digitalen Selbstschutz: Mit Multi-Kanal-Erkennung, Darknet-Scans und kontinuierlicher Verhaltensanalyse schützt er dich vor Phishing, Datenlecks und gezielten Angriffen – automatisch, unsichtbar und kompromisslos effektiv.
+                          </p>
+                        </div>
                       </div>
                     </motion.div>
                   )}
