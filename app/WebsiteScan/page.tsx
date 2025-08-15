@@ -373,68 +373,73 @@ export default function WebsiteScanPage() {
           </motion.div>
         </div>
       </section>
-    {/* Floating Plus Button (like Hero) - only when info panel is closed */}
-    {!showInfo && (
-      <button
-        aria-label="Info öffnen"
-        onClick={() => setShowInfo(true)}
-        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 h-14 w-14 md:h-16 md:w-16 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
-      >
-        <span className="relative text-white text-3xl leading-none select-none">+</span>
-      </button>
-    )}
-
-    {/* Unified Expanding Info Panel */}
-    {showInfo && (
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 12 }}
-        transition={{ duration: 0.25 }}
-        className={`fixed right-6 md:right-8 top-1/2 -translate-y-1/2 z-50 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 overflow-y-auto overscroll-contain transition-[max-height] duration-300 ease-out ${
-          infoExpanded ? 'max-h-[70vh]' : 'max-h-44'
-        } relative pb-14`}
-        style={{ WebkitOverflowScrolling: 'touch' }}
-      >
-        <h3 className="text-white font-semibold text-lg mb-2">Was macht der Website‑Scan?</h3>
-        {!infoExpanded ? (
-          <>
-            <p className="text-sm leading-relaxed text-gray-300">
-              Der Scan bewertet eine URL anhand technischer und textlicher Signale (Tracker, Third‑Parties, Policy‑Qualität) und liefert einen kompakten Score mit Kurzurteil.
-            </p>
-            <button
-              onClick={() => setInfoExpanded(true)}
-              className="mt-3 text-sm underline text-gray-300 hover:text-white"
-            >
-              Mehr lesen
-            </button>
-          </>
+      {/* Info Panel Anchor (bottom-right, relative to +) */}
+      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50">
+        {!showInfo ? (
+          // External + button (only when closed)
+          <button
+            aria-label="Info öffnen"
+            onClick={() => setShowInfo(true)}
+            className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
+          >
+            <span className="relative text-white text-3xl leading-none select-none">+</span>
+          </button>
         ) : (
-          <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-300">
-            <p>
-              Der Website‑Scan verarbeitet die eingegebene URL in einer mehrstufigen Pipeline: (1) Normalisierung &amp; DNS/SSL‑Check, (2) Abruf der Seite über einen Headless‑Client, (3) statische Analyse von HTML/CSS/JS (Tracker‑Signaturen, Third‑Party‑Requests, potentielle Fingerprinting‑Patterns), (4) Extraktion relevanter Texte wie Datenschutzerklärung, Cookie‑Banner und Einwilligungsdialoge, (5) policy‑aware NLP‑Analyse zur Erkennung von Datenflüssen, Rechtsgrundlagen, Speicherfristen und Weitergaben.
-            </p>
-            <p>
-              Aus diesen Signalen wird ein <strong>Score</strong> berechnet. Jedes Merkmal erhält ein Gewicht (z. B. Anzahl Third‑Parties, Klarheit der Rechtsgrundlage, Opt‑out‑Möglichkeiten, Transportverschlüsselung, Telemetrie/Tracking). Der Score wird in eine 0–100‑Skala gemappt; Schwellen (&lt;40 kritisch, 40–64 erhöht, ≥65 solide) steuern Marker‑ und Hintergrund‑Feedback.
-            </p>
-            <p>
-              Das <strong>Kurzurteil</strong> fasst die wichtigsten Befunde zusammen (z. B. „viele Drittanbieter‑Tracker“, „unklare Rechtsgrundlage“, „fehlende Granularität der Einwilligung“). Liegt der Score unter dem Grenzwert, können <strong>Alternativen</strong> vorgeschlagen werden. Diese werden kontextuell ermittelt (thematisch ähnliche Seiten) und priorisieren Anbieter mit weniger Third‑Party‑Abhängigkeiten, klaren Policies und guter Transport‑/At‑Rest‑Verschlüsselung.
-            </p>
-            <p>
-              Datenschutz‑Prinzipien: <strong>Datensparsamkeit</strong> (nur die zur Bewertung nötigen Artefakte), <strong>Transparenz</strong> (begründete Erläuterungen), <strong>Reproduzierbarkeit</strong> (deterministische Regeln + Modelle) und <strong>Sicherheit</strong> (scoped Fetch, isolierte Umgebung, keine Speicherung personenbezogener Inhalte ohne Einwilligung).
-            </p>
+          // Panel grows upward from the same anchor; panel holds its own close +
+          <div className="relative">
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 12 }}
+              transition={{ duration: 0.25 }}
+              className={`absolute bottom-0 right-0 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 overflow-y-auto overscroll-contain transition-[max-height] duration-300 ease-out ${
+                infoExpanded ? 'max-h-[70vh]' : 'max-h-44'
+              }`}
+              style={{ WebkitOverflowScrolling: 'touch' }}
+            >
+              <h3 className="text-white font-semibold text-lg mb-2">Was macht der Website‑Scan?</h3>
+
+              {!infoExpanded ? (
+                <>
+                  <p className="text-sm leading-relaxed text-gray-300">
+                    Der Scan bewertet eine URL anhand technischer und textlicher Signale (Tracker, Third‑Parties, Policy‑Qualität) und liefert einen kompakten Score mit Kurzurteil.
+                  </p>
+                  <button
+                    onClick={() => setInfoExpanded(true)}
+                    className="mt-3 text-sm underline text-gray-300 hover:text-white"
+                  >
+                    Mehr lesen
+                  </button>
+                </>
+              ) : (
+                <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-300 pr-1">
+                  <p>
+                    Der Website‑Scan verarbeitet die eingegebene URL in einer mehrstufigen Pipeline: (1) Normalisierung &amp; DNS/SSL‑Check, (2) Abruf der Seite über einen Headless‑Client, (3) statische Analyse von HTML/CSS/JS (Tracker‑Signaturen, Third‑Party‑Requests, potentielle Fingerprinting‑Patterns), (4) Extraktion relevanter Texte wie Datenschutzerklärung, Cookie‑Banner und Einwilligungsdialoge, (5) policy‑aware NLP‑Analyse zur Erkennung von Datenflüssen, Rechtsgrundlagen, Speicherfristen und Weitergaben.
+                  </p>
+                  <p>
+                    Aus diesen Signalen wird ein <strong>Score</strong> berechnet. Jedes Merkmal erhält ein Gewicht (z. B. Anzahl Third‑Parties, Klarheit der Rechtsgrundlage, Opt‑out‑Möglichkeiten, Transportverschlüsselung, Telemetrie/Tracking). Der Score wird in eine 0–100‑Skala gemappt; Schwellen (&lt;40 kritisch, 40–64 erhöht, ≥65 solide) steuern Marker‑ und Hintergrund‑Feedback.
+                  </p>
+                  <p>
+                    Das <strong>Kurzurteil</strong> fasst die wichtigsten Befunde zusammen (z. B. „viele Drittanbieter‑Tracker“, „unklare Rechtsgrundlage“, „fehlende Granularität der Einwilligung“). Liegt der Score unter dem Grenzwert, können <strong>Alternativen</strong> vorgeschlagen werden. Diese werden kontextuell ermittelt (thematisch ähnliche Seiten) und priorisieren Anbieter mit weniger Third‑Party‑Abhängigkeiten, klaren Policies und guter Transport‑/At‑Rest‑Verschlüsselung.
+                  </p>
+                  <p>
+                    Datenschutz‑Prinzipien: <strong>Datensparsamkeit</strong> (nur die zur Bewertung nötigen Artefakte), <strong>Transparenz</strong> (begründete Erläuterungen), <strong>Reproduzierbarkeit</strong> (deterministische Regeln + Modelle) und <strong>Sicherheit</strong> (scoped Fetch, isolierte Umgebung, keine Speicherung personenbezogener Inhalte ohne Einwilligung).
+                  </p>
+                </div>
+              )}
+
+              {/* Internal close (+) button inside the panel */}
+              <button
+                aria-label="Info schließen"
+                onClick={() => { setInfoExpanded(false); setShowInfo(false); }}
+                className="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_6px_18px_rgba(0,0,0,0.45)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
+              >
+                <span className="text-white text-2xl leading-none select-none">+</span>
+              </button>
+            </motion.div>
           </div>
         )}
-        {/* Internal close (+) button inside the panel */}
-        <button
-          aria-label="Info schließen"
-          onClick={() => { setInfoExpanded(false); setShowInfo(false); }}
-          className="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_6px_18px_rgba(0,0,0,0.45)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
-        >
-          <span className="text-white text-2xl leading-none select-none">+</span>
-        </button>
-      </motion.div>
-    )}
+      </div>
     </main>
   );
 }
