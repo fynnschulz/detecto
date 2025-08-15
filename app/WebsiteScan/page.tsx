@@ -374,7 +374,7 @@ export default function WebsiteScanPage() {
         </div>
       </section>
       {/* Info Panel Anchor (bottom-right, relative to +) */}
-      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50">
+      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 relative">
         {showInfo && (
           <motion.div
             initial={{ opacity: 0, y: 12 }}
