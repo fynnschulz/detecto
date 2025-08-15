@@ -185,7 +185,7 @@ export default function SearchPage() {
         <aside
           className={
             `fixed right-5 bottom-24 z-50 bg-zinc-900/95 backdrop-blur rounded-2xl border border-zinc-700/70 shadow-2xl transition-[width,height,opacity,transform] duration-300 overflow-hidden` +
-            (infoExpanded ? " w-[90vw] max-w-[480px] h-[72vh] translate-y-0" : " w-[86vw] max-w-[420px] h-[220px] translate-y-0")
+            (infoExpanded ? " w-[90vw] max-w-[480px] h-[72vh] translate-y-0" : " w-[86vw] max-w-[420px] h-[260px] translate-y-0")
           }
           role="dialog"
           aria-modal="true"
@@ -198,7 +198,7 @@ export default function SearchPage() {
           <div className="px-5 pb-4 text-sm text-zinc-300 leading-relaxed h-[calc(100%-64px)] overflow-y-auto">
             {/* Kompakte Vorschau */}
             {!infoExpanded && (
-              <div className="overflow-visible">
+              <div className="overflow-visible h-full">
                 <p className="mb-6">
                   Unsere KI‑gestützte Suchmaschine führt eine semantische Query‑Analyse, Quellensuche und
                   mehrstufige Risiko‑/Privacy‑Bewertung durch. Ergebnisse werden nach Datenschutz‑Score,
