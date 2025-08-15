@@ -375,30 +375,21 @@ export default function WebsiteScanPage() {
       </section>
       {/* Info Panel Anchor (bottom-right, relative to +) */}
       <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50">
-        {!showInfo ? (
-          // External + button (only when closed)
-          <button
-            aria-label="Info öffnen"
-            onClick={() => setShowInfo(true)}
-            className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
+        {showInfo && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 12 }}
+            transition={{ duration: 0.25 }}
+            className={`absolute bottom-full right-0 mb-3 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 transition-[max-height] duration-300 ease-out ${
+              infoExpanded ? 'max-h-[70vh]' : 'max-h-44'
+            } relative`}
           >
-            <span className="relative text-white text-3xl leading-none select-none">+</span>
-          </button>
-        ) : (
-          // Panel grows upward from the same anchor; panel holds its own close +
-          <div className="relative">
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 12 }}
-              transition={{ duration: 0.25 }}
-              className={`absolute bottom-0 right-0 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 overflow-y-auto overscroll-contain transition-[max-height] duration-300 ease-out ${
-                infoExpanded ? 'max-h-[70vh]' : 'max-h-44'
-              }`}
+            <div
+              className={`overflow-y-auto overscroll-contain pr-1 ${infoExpanded ? 'max-h-[60vh]' : 'max-h-28'}`}
               style={{ WebkitOverflowScrolling: 'touch' }}
             >
               <h3 className="text-white font-semibold text-lg mb-2">Was macht der Website‑Scan?</h3>
-
               {!infoExpanded ? (
                 <>
                   <p className="text-sm leading-relaxed text-gray-300">
@@ -427,18 +418,24 @@ export default function WebsiteScanPage() {
                   </p>
                 </div>
               )}
-
-              {/* Internal close (+) button inside the panel */}
-              <button
-                aria-label="Info schließen"
-                onClick={() => { setInfoExpanded(false); setShowInfo(false); }}
-                className="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_6px_18px_rgba(0,0,0,0.45)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
-              >
-                <span className="text-white text-2xl leading-none select-none">+</span>
-              </button>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         )}
+
+        <button
+          aria-label={showInfo ? 'Info schließen' : 'Info öffnen'}
+          onClick={() => {
+            if (showInfo) {
+              setInfoExpanded(false);
+              setShowInfo(false);
+            } else {
+              setShowInfo(true);
+            }
+          }}
+          className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
+        >
+          <span className="relative text-white text-3xl leading-none select-none">{showInfo ? '×' : '+'}</span>
+        </button>
       </div>
     </main>
   );
