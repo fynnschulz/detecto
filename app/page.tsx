@@ -8,6 +8,7 @@ import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import FloatingInfoBox from "./components/FloatingInfoBox";
 import FeatureRotator from "./components/FeatureRotator";
 import { useUsername } from "@/app/lib/useUsername";
@@ -38,6 +39,13 @@ export default function Home() {
   const supabase = useSupabaseClient();
   const [authChecked, setAuthChecked] = useState(false);
   const username = useUsername();
+  const pathname = usePathname();
+  const navItems = [
+    { label: "Website-Scan", href: "/WebsiteScan" },
+    { label: "Suchmaschine", href: "/search" },
+    { label: "Community", href: "/community" },
+    { label: "VPN", href: "/vpn" },
+  ];
 
   // Initialisiere: Session-Status und Login-Modal Sichtbarkeit (warten bis Session geprüft wurde)
   useEffect(() => {
@@ -242,34 +250,27 @@ useEffect(() => {
           <nav className="fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] md:pt-4 bg-transparent backdrop-blur-0 border-0">
             <div className="px-3 py-2 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:flex md:justify-center" style={{ msOverflowStyle: 'none' }}>
               <div className="inline-flex md:flex items-center gap-2 min-w-max md:min-w-0">
-                <Link
-                  href="/WebsiteScan"
-                  className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white`}
-                >
-                  <span className="relative z-10">Website-Scan</span>
-                  <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
-                </Link>
-                <Link
-                  href="/search"
-                  className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white`}
-                >
-                  <span className="relative z-10">Suchmaschine</span>
-                  <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
-                </Link>
-                <Link
-                  href="/community"
-                  className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white`}
-                >
-                  <span className="relative z-10">Community</span>
-                  <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
-                </Link>
-                <Link
-                  href="/vpn"
-                  className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white`}
-                >
-                  <span className="relative z-10">VPN</span>
-                  <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
-                </Link>
+                {navItems.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative 
+          ${
+            isActive
+              ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
+              : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
+          }`}
+                      aria-current={isActive ? "page" : undefined}
+                    >
+                      <span className="relative z-10">{item.label}</span>
+                      {isActive && (
+                        <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
+                      )}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </nav>
