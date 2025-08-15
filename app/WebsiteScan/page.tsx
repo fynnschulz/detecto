@@ -35,7 +35,6 @@ export default function WebsiteScanPage() {
       setAlternativeSites([]);
       setJudgementText("");
 
-      // Call the same API your Hero-Page used
       const res = await fetch("/api/scan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -50,10 +49,37 @@ export default function WebsiteScanPage() {
       }
 
       const data = await res.json();
-      // Expecting: { score: number, judgementText?: string }
-      const nextScore = typeof data?.score === "number" ? data.score : null;
+
+      // Score robust aus unterschiedlichen möglichen Feldern lesen
+      const nextScore =
+        typeof data?.score === "number"
+          ? data.score
+          : typeof data?.privacyScore === "number"
+          ? data.privacyScore
+          : null;
+
+      // Urteil aus mehreren möglichen Feldern zusammenbauen
+      const fromArray = (arr?: unknown) =>
+        Array.isArray(arr)
+          ? arr
+              .filter((x) => typeof x === "string" && x.trim().length > 0)
+              .join(" • ")
+          : "";
+
+      const verdictRaw =
+        data?.judgementText ??
+        data?.judgement ??
+        data?.verdict ??
+        data?.analysis ??
+        data?.explanation ??
+        fromArray(data?.reasons);
+
       setScore(nextScore);
-      setJudgementText(data?.judgementText || "");
+      setJudgementText(
+        typeof verdictRaw === "string" && verdictRaw.trim().length > 0
+          ? verdictRaw
+          : ""
+      );
       setShowScale(true);
     } catch (err) {
       setScore(null);
@@ -66,18 +92,57 @@ export default function WebsiteScanPage() {
   const fetchAlternatives = async () => {
     try {
       setLoadingAlternatives(true);
-      const res = await fetch("/api/alternatives", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: inputUrl }),
-      });
-      if (!res.ok) {
-        setAlternativeSites([]);
-        return setLoadingAlternatives(false);
+
+      const tryFetch = async (path: string, body: any) => {
+        try {
+          const r = await fetch(path, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+          });
+          if (!r.ok) return null;
+          const d = await r.json();
+          // Tolerant verschiedene Feldnamen abbilden
+          const arr = Array.isArray(d?.alternatives)
+            ? d.alternatives
+            : Array.isArray(d?.results)
+            ? d.results
+            : null;
+          return Array.isArray(arr) ? arr : null;
+        } catch {
+          return null;
+        }
+      };
+
+      // 1) Primär: /api/alternatives
+      let list = await tryFetch("/api/alternatives", { url: inputUrl });
+
+      // 2) Falls vorhanden: /api/get-alternatives
+      if (!list) {
+        list = await tryFetch("/api/get-alternatives", { url: inputUrl });
       }
-      const data = await res.json();
-      const list: AltSite[] = Array.isArray(data?.alternatives) ? data.alternatives : [];
-      setAlternativeSites(list);
+
+      // 3) Fallback: /api/smart-search mit Hostname-basierter Query
+      if (!list) {
+        const hostname = (() => {
+          try {
+            return new URL(inputUrl).hostname;
+          } catch {
+            return inputUrl;
+          }
+        })();
+        list = await tryFetch("/api/smart-search", {
+          query: `alternativen zu ${hostname}`,
+        });
+      }
+
+      const normalized = (list || []).map((x: any) => ({
+        name: x?.name ?? x?.title ?? x?.domain ?? x?.url ?? "Unbenannt",
+        url: x?.url ?? x?.link ?? "#",
+        description: x?.description ?? x?.summary ?? "",
+      }));
+
+      setAlternativeSites(normalized);
       setShowAlternatives(true);
     } finally {
       setLoadingAlternatives(false);
