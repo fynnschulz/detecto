@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // Optional: type for alternative sites
 type AltSite = { name: string; url: string; description?: string };
@@ -21,6 +23,14 @@ export default function WebsiteScanPage() {
   // Info panel state
   const [showInfo, setShowInfo] = useState<boolean>(false);
   const [infoExpanded, setInfoExpanded] = useState<boolean>(false);
+
+  const pathname = usePathname();
+  const navItems = [
+    { label: "Website-Scan", href: "/WebsiteScan" },
+    { label: "Suchmaschine", href: "/search" },
+    { label: "Community", href: "/community" },
+    { label: "VPN", href: "/vpn" },
+  ];
 
   // Dynamische Hintergrundfarbe je nach Score (rot/orange/grün)
   const glowRGBA = (() => {
@@ -154,7 +164,40 @@ export default function WebsiteScanPage() {
   };
 
   return (
-    <main className="relative min-h-[100svh] w-full overflow-hidden pt-[88px]">
+    <>
+      {/* Topbar 1:1 aus Hero/Search */}
+      <nav className="fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] md:pt-4 bg-transparent backdrop-blur-0 border-0">
+        <div
+          className="px-3 py-2 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:flex md:justify-center"
+          style={{ msOverflowStyle: 'none' }}
+        >
+          <div className="inline-flex md:flex items-center gap-2 min-w-max md:min-w-0">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative 
+          ${
+            isActive
+              ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
+              : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
+          }`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  <span className="relative z-10">{item.label}</span>
+                  {isActive && (
+                    <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </nav>
+
+      <main className="relative min-h-[100svh] w-full overflow-hidden pt-[88px]">
       {/* Hintergrund wie Hero mit Score-Glow */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(75%_60%_at_50%_0%,rgba(59,130,246,0.25),rgba(0,0,0,0)_60%)]"></div>
@@ -422,6 +465,7 @@ export default function WebsiteScanPage() {
           </div>
         </aside>
       )}
-    </main>
+      </main>
+    </>
   );
 }
