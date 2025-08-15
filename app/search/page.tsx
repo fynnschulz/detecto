@@ -184,8 +184,8 @@ export default function SearchPage() {
       {showInfo && (
         <aside
           className={
-            `fixed right-5 bottom-24 md:bottom-8 md:top-20 z-50 bg-zinc-900/95 backdrop-blur rounded-2xl border border-zinc-700/70 shadow-2xl transition-[width,height,opacity] duration-300 overflow-hidden ` +
-            (infoExpanded ? "w-[90vw] max-w-[480px] h-[70vh]" : "w-[86vw] max-w-[420px] h-[220px]")
+            `fixed right-5 bottom-24 z-50 bg-zinc-900/95 backdrop-blur rounded-2xl border border-zinc-700/70 shadow-2xl transition-[width,height,opacity,transform] duration-300 overflow-hidden` +
+            (infoExpanded ? " w-[90vw] max-w-[480px] h-[72vh] translate-y-0" : " w-[86vw] max-w-[420px] h-[220px] translate-y-0")
           }
           role="dialog"
           aria-modal="true"
@@ -193,20 +193,13 @@ export default function SearchPage() {
         >
           <div className="flex items-start justify-between gap-4 p-5">
             <h3 className="text-white text-lg md:text-xl font-semibold">Wie die Detecto‑Suchmaschine funktioniert</h3>
-            <button
-              aria-label="Infobox schließen"
-              onClick={() => { setShowInfo(false); setInfoExpanded(false); }}
-              className="shrink-0 rounded-full border border-zinc-700/70 text-zinc-300 hover:text-white hover:border-cyan-400/70 px-2 py-1"
-            >
-              ✕
-            </button>
           </div>
 
           <div className="px-5 pb-4 text-sm text-zinc-300 leading-relaxed h-[calc(100%-64px)] overflow-y-auto">
             {/* Kompakte Vorschau */}
             {!infoExpanded && (
-              <>
-                <p className="mb-3">
+              <div className="overflow-visible">
+                <p className="mb-6">
                   Unsere KI‑gestützte Suchmaschine führt eine semantische Query‑Analyse, Quellensuche und
                   mehrstufige Risiko‑/Privacy‑Bewertung durch. Ergebnisse werden nach Datenschutz‑Score,
                   Relevanz und Vertrauenssignalen gerankt.
@@ -217,7 +210,7 @@ export default function SearchPage() {
                 >
                   Mehr lesen…
                 </button>
-              </>
+              </div>
             )}
 
             {/* Ausgeklappte, scrollbare Vollansicht */}
