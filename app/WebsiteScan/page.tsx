@@ -180,7 +180,7 @@ export default function WebsiteScanPage() {
       </div>
 
       <section className="relative z-10 flex items-center justify-center min-h-[calc(100svh-88px)] px-6">
-        <div className="w-full max-w-3xl flex flex-col items-center">
+        <div className="w-full max-w-3xl flex flex-col items-center transform-gpu -translate-y-8 md:-translate-y-12">
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}

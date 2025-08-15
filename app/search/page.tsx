@@ -61,7 +61,7 @@ export default function SearchPage() {
       </div>
 
       <section className="relative z-10 flex items-center justify-center min-h-[calc(100svh-88px)] px-6">
-        <div className="w-full max-w-3xl flex flex-col items-center">
+        <div className="w-full max-w-3xl flex flex-col items-center transform-gpu -translate-y-8 md:-translate-y-12">
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -160,6 +160,127 @@ export default function SearchPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Floating Info: Suchmaschine – technischer Überblick */}
+      <div className="fixed right-5 bottom-5 z-50">
+        {/* Toggle-Symbol */}
+        <button
+          aria-label={showInfo ? "Infobox schließen" : "Infobox öffnen"}
+          onClick={() => {
+            if (showInfo) {
+              setShowInfo(false);
+              setInfoExpanded(false);
+            } else {
+              setShowInfo(true);
+            }
+          }}
+          className="h-12 w-12 rounded-full bg-zinc-800 text-white shadow-xl border border-zinc-700/70 hover:border-cyan-400/70 hover:scale-105 transition-all duration-300 flex items-center justify-center"
+        >
+          <span className="text-xl font-bold select-none">i</span>
+        </button>
+      </div>
+
+      {/* Seiten-Infobox (rechts) */}
+      {showInfo && (
+        <aside
+          className={
+            `fixed right-5 bottom-24 md:bottom-8 md:top-20 z-50 bg-zinc-900/95 backdrop-blur rounded-2xl border border-zinc-700/70 shadow-2xl transition-[width,height,opacity] duration-300 overflow-hidden ` +
+            (infoExpanded ? "w-[90vw] max-w-[480px] h-[70vh]" : "w-[86vw] max-w-[420px] h-[220px]")
+          }
+          role="dialog"
+          aria-modal="true"
+          aria-label="Technische Erklärung der Suchmaschine"
+        >
+          <div className="flex items-start justify-between gap-4 p-5">
+            <h3 className="text-white text-lg md:text-xl font-semibold">Wie die Detecto‑Suchmaschine funktioniert</h3>
+            <button
+              aria-label="Infobox schließen"
+              onClick={() => { setShowInfo(false); setInfoExpanded(false); }}
+              className="shrink-0 rounded-full border border-zinc-700/70 text-zinc-300 hover:text-white hover:border-cyan-400/70 px-2 py-1"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div className="px-5 pb-4 text-sm text-zinc-300 leading-relaxed h-[calc(100%-64px)] overflow-y-auto">
+            {/* Kompakte Vorschau */}
+            {!infoExpanded && (
+              <>
+                <p className="mb-3">
+                  Unsere KI‑gestützte Suchmaschine führt eine semantische Query‑Analyse, Quellensuche und
+                  mehrstufige Risiko‑/Privacy‑Bewertung durch. Ergebnisse werden nach Datenschutz‑Score,
+                  Relevanz und Vertrauenssignalen gerankt.
+                </p>
+                <button
+                  onClick={() => setInfoExpanded(true)}
+                  className="text-cyan-400 hover:underline font-medium"
+                >
+                  Mehr lesen…
+                </button>
+              </>
+            )}
+
+            {/* Ausgeklappte, scrollbare Vollansicht */}
+            {infoExpanded && (
+              <div className="space-y-4 pr-1">
+                <p>
+                  <strong>Architektur.</strong> Client‑Eingaben werden an <code className="font-mono">/api/smart-search</code>
+                  gesendet. Der Service orchestriert eine Pipeline aus (1) Intent‑/Entity‑Erkennung,
+                  (2) Kategorie‑Mapping, (3) Quellenermittlung, (4) Abruf & Extraktion, (5) Privacy‑Scoring,
+                  (6) Ranking & Deduplication und (7) Antwortformatierung.
+                </p>
+                <ol className="list-decimal ml-5 space-y-2">
+                  <li>
+                    <strong>Query‑Parsing & Intent.</strong> Tokenisierung, Normalisierung, Synonym‑Expansion und
+                    Klassifikation (z. B. „Anbieter‑Suche“, „Informationsseite“, „Vergleich“). Entitäten werden per
+                    NER extrahiert (Marke, Produktklasse, Zweck, Region).
+                  </li>
+                  <li>
+                    <strong>Kategorie‑Mapping.</strong> Abgleich mit einer kontrollierten Taxonomie (privacy‑relevante
+                    Domänen wie Finanzen, Gesundheit, E‑Commerce). Optional wird ein Embedding‑Index zur semantischen
+                    Näheabfrage genutzt.
+                  </li>
+                  <li>
+                    <strong>Quellenermittlung.</strong> Es werden kuratierte Whitelists, offene Verzeichnisse sowie
+                    Suchoperatoren verwendet. Kandidaten‑URLs werden gegen Blocklisten und Heuristiken geprüft
+                    (z. B. Typosquatting, Look‑alikes, übermäßige Tracker‑Muster).
+                  </li>
+                  <li>
+                    <strong>Abruf & Extraktion.</strong> HTML wird mit Headless‑Fetch geholt; relevante Segmente
+                    (Policy‑Links, Consent‑Layer, Skript‑Tags) werden geparst. Ressourcen werden nicht ausgeführt;
+                    stattdessen statisch analysiert, um Tracking‑Artefakte zu erkennen.
+                  </li>
+                  <li>
+                    <strong>Privacy‑Scoring.</strong> Features wie Anzahl/Art von Trackern, Drittland‑Transfers,
+                    Datenminimierung, Zweckbindung, Rechtsgrundlagen, Opt‑out‑Verfügbarkeit und TLS/HSTS werden zu
+                    einem Score aggregiert. Modelle gewichten Evidenz und Vertrauenssignale (z. B. Zertifizierungen,
+                    Audit‑Hinweise).
+                  </li>
+                  <li>
+                    <strong>Ranking & Dedup.</strong> Ergebnisse werden nach (a) Datenschutz‑Score, (b) inhaltlicher
+                    Relevanz und (c) Quellenvertrauen sortiert. Near‑Duplicates werden per URL‑Normierung und
+                    Shingling entfernt.
+                  </li>
+                  <li>
+                    <strong>Antwortformat.</strong> Rückgabe als JSON‑Liste <code className="font-mono">[{`{ name, url, description }`}]</code> –
+                    exakt so, wie sie auf der Suchseite angezeigt wird.
+                  </li>
+                </ol>
+                <p>
+                  <strong>Sicherheitsnetze.</strong> Domain‑Sanitizing, Rate‑Limits, Timeout‑Guards und Content‑Safety
+                  verhindern Missbrauch und verringern Halluzinationen. Alle Kandidaten durchlaufen eine
+                  Vertrauensprüfung, bevor sie dem Nutzer erscheinen.
+                </p>
+                <p>
+                  <strong>Grenzen.</strong> Live‑Web ändert sich ständig; Bewertungen sind Momentaufnahmen.
+                  Einige Seiten blocken Headless‑Zugriffe; in solchen Fällen wird konservativ bewertet oder
+                  die Quelle verworfen.
+                </p>
+              </div>
+            )}
+          </div>
+        </aside>
+      )}
     </main>
   );
 }
