@@ -9,6 +9,8 @@ export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
+  const [infoExpanded, setInfoExpanded] = useState(false);
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return;
@@ -158,6 +160,63 @@ export default function SearchPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Floating Plus Button */}
+      <button
+        onClick={() => {
+          if (infoExpanded) {
+            setInfoExpanded(false);
+            setTimeout(() => setShowInfo(false), 200);
+          } else if (showInfo) {
+            setShowInfo(false);
+          } else {
+            setShowInfo(true);
+          }
+        }}
+        className={`fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg transition-all duration-300 ${
+          showInfo ? "bg-green-600 hover:bg-green-500" : "bg-zinc-800 hover:bg-zinc-700"
+        }`}
+      >
+        +
+      </button>
+      {/* Compact Info Panel */}
+      {showInfo && !infoExpanded && (
+        <div className="fixed bottom-20 right-6 w-80 bg-black/80 backdrop-blur-md text-white p-4 rounded-xl shadow-xl border border-zinc-700 z-50">
+          <h3 className="text-lg font-semibold mb-2">Über die Suchmaschine</h3>
+          <p className="text-sm leading-relaxed text-gray-300">
+            Unsere KI-gestützte Suche findet datenschutzfreundliche Webseiten nach Thema, Kategorie oder Zweck – kuratiert und bewertet durch Detecto.
+          </p>
+          <button
+            onClick={() => setInfoExpanded(true)}
+            className="mt-2 text-sm text-blue-400 hover:underline"
+          >
+            Mehr lesen
+          </button>
+        </div>
+      )}
+      {/* Expanded Info Modal */}
+      {showInfo && infoExpanded && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative bg-zinc-900 p-6 rounded-xl max-w-2xl w-full mx-4 shadow-2xl border border-zinc-700">
+            <h3 className="text-2xl font-bold mb-4 text-white">Wie die Detecto-Suchmaschine funktioniert</h3>
+            <div className="mt-3 space-y-4 text-sm md:text-base leading-relaxed text-gray-300">
+              <p>
+                Die Detecto-Suchmaschine nutzt eine mehrstufige Pipeline: (1) Verarbeitung der Suchanfrage mit linguistischer Analyse, (2) KI-gestützte Abfrage relevanter, thematisch passender Quellen, (3) Filterung nach Datenschutzkriterien (Tracker, Third-Parties, Policy-Qualität), (4) Bewertung der Kandidaten nach denselben strengen Maßstäben wie beim Website-Scan.
+              </p>
+              <p>
+                Ergebnisse werden als kuratierte Liste ausgegeben, wobei jede Seite ein sicheres Profil aufweist. Die Sortierung priorisiert Anbieter mit klaren Datenschutzerklärungen, geringen Third-Party-Abhängigkeiten, SSL/TLS-Verschlüsselung und transparenter Datenverarbeitung.
+              </p>
+              <p>
+                Die Suchmaschine ist darauf optimiert, schnell und praxisnah umsetzbare, sichere Alternativen zu gängigen Angeboten zu finden – egal ob für E-Commerce, Kommunikation oder Informationssuche.
+              </p>
+              <p>
+                Datenschutzprinzipien: <strong>Datensparsamkeit</strong> (nur notwendige Anfrage- und Bewertungsdaten), <strong>Transparenz</strong> (Begründung der Platzierung), <strong>Reproduzierbarkeit</strong> (deterministische Bewertungslogik) und <strong>Sicherheit</strong> (isolierte Verarbeitung, keine unnötige Speicherung).
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

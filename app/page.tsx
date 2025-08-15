@@ -300,15 +300,24 @@ useEffect(() => {
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.4, ease: "easeOut" }}
-                className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500"
+                className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500 relative leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.35),0_0_24px_rgba(59,130,246,0.15)]"
               >
-                Dein persönlicher KI‑Bodyguard
+                <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
+                  De
+                  <span className="relative inline-block align-baseline">
+                    i
+                    {/* Glühender Punkt über dem i, dezent pulsierend */}
+                    <span className="pointer-events-none absolute -top-3 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-cyan-300/90 shadow-[0_0_10px_rgba(34,211,238,0.8)] blur-[0.5px] animate-pulse"></span>
+                  </span>
+                  n persönlicher KI‑Bodyguard
+                </span>
               </motion.h1>
+              <div className="mx-auto mt-3 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]" />
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2 }}
-                className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10"
+                className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]"
               >
                 Detecto schützt dich proaktiv vor Phishing, Datenlecks und riskanten Webseiten. Erkenne Bedrohungen in Echtzeit, erhalte klare Erklärungen sowie sichere Alternativen – datensparsam und praxisnah.
               </motion.p>
