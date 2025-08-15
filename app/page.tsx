@@ -303,13 +303,7 @@ useEffect(() => {
                 className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500 relative leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.35),0_0_24px_rgba(59,130,246,0.15)]"
               >
                 <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
-                  De
-                  <span className="relative inline-block align-baseline">
-                    i
-                    {/* Glühender Punkt über dem i, dezent pulsierend */}
-                    <span className="pointer-events-none absolute -top-3 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-cyan-300/90 shadow-[0_0_10px_rgba(34,211,238,0.8)] blur-[0.5px] animate-pulse"></span>
-                  </span>
-                  n persönlicher KI‑Bodyguard
+                  Dein persönlicher KI‑Bodyguard
                 </span>
               </motion.h1>
               <div className="mx-auto mt-3 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]" />

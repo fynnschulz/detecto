@@ -161,44 +161,53 @@ export default function SearchPage() {
         </div>
       </section>
 
-      {/* Floating Plus Button */}
+      {/* Floating Plus Button (unten rechts, wie Website-Scan) */}
       <button
+        aria-label={showInfo ? "Info schließen" : "Info öffnen"}
         onClick={() => {
-          if (infoExpanded) {
+          if (showInfo && infoExpanded) {
             setInfoExpanded(false);
-            setTimeout(() => setShowInfo(false), 200);
+            setTimeout(() => setShowInfo(false), 120);
           } else if (showInfo) {
             setShowInfo(false);
           } else {
             setShowInfo(true);
           }
         }}
-        className={`fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-lg transition-all duration-300 ${
-          showInfo ? "bg-green-600 hover:bg-green-500" : "bg-zinc-800 hover:bg-zinc-700"
-        }`}
+        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 h-14 w-14 md:h-16 md:w-16 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
       >
-        +
+        <span className="relative text-white text-3xl leading-none select-none">{showInfo ? "×" : "+"}</span>
       </button>
       {/* Compact Info Panel */}
       {showInfo && !infoExpanded && (
-        <div className="fixed bottom-20 right-6 w-80 bg-black/80 backdrop-blur-md text-white p-4 rounded-xl shadow-xl border border-zinc-700 z-50">
-          <h3 className="text-lg font-semibold mb-2">Über die Suchmaschine</h3>
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 12 }}
+          transition={{ duration: 0.25 }}
+          className="fixed right-6 md:right-8 top-1/2 -translate-y-1/2 z-50 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 max-h-[70vh] overflow-y-auto overscroll-contain"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
+          <h3 className="text-lg font-semibold mb-2 text-white">Über die Suchmaschine</h3>
           <p className="text-sm leading-relaxed text-gray-300">
             Unsere KI-gestützte Suche findet datenschutzfreundliche Webseiten nach Thema, Kategorie oder Zweck – kuratiert und bewertet durch Detecto.
           </p>
           <button
             onClick={() => setInfoExpanded(true)}
-            className="mt-2 text-sm text-blue-400 hover:underline"
+            className="mt-3 text-sm underline text-gray-300 hover:text-white"
           >
             Mehr lesen
           </button>
-        </div>
+        </motion.div>
       )}
       {/* Expanded Info Modal */}
       {showInfo && infoExpanded && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
           <div className="absolute inset-0 bg-black/50" />
-          <div className="relative bg-zinc-900 p-6 rounded-xl max-w-2xl w-full mx-4 shadow-2xl border border-zinc-700">
+          <div
+            className="relative bg-zinc-900/90 backdrop-blur-xl p-6 md:p-8 rounded-3xl max-w-2xl w-full mx-4 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.7),0_0_40px_rgba(34,211,238,0.08)] border border-zinc-700/60 max-h-[80vh] overflow-y-auto overscroll-contain text-gray-200"
+            style={{ WebkitOverflowScrolling: "touch" }}
+          >
             <h3 className="text-2xl font-bold mb-4 text-white">Wie die Detecto-Suchmaschine funktioniert</h3>
             <div className="mt-3 space-y-4 text-sm md:text-base leading-relaxed text-gray-300">
               <p>

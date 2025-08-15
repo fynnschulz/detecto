@@ -388,7 +388,6 @@ export default function WebsiteScanPage() {
       }}
       className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 h-14 w-14 md:h-16 md:w-16 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
     >
-      <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-md" />
       <span className="relative text-white text-3xl leading-none select-none">{showInfo ? "×" : "+"}</span>
     </button>
 
@@ -399,7 +398,8 @@ export default function WebsiteScanPage() {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 12 }}
         transition={{ duration: 0.25 }}
-        className="fixed right-6 md:right-8 bottom-24 md:bottom-28 z-50 max-w-sm md:max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200"
+        className="fixed right-6 md:right-8 top-1/2 -translate-y-1/2 z-50 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 max-h-[70vh] overflow-y-auto overscroll-contain"
+        style={{ WebkitOverflowScrolling: "touch" }}
       >
         <h3 className="text-white font-semibold text-lg mb-2">Was macht der Website‑Scan?</h3>
         <p className="text-sm leading-relaxed text-gray-300">
@@ -433,7 +433,8 @@ export default function WebsiteScanPage() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 24, opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="relative z-10 w-full md:max-w-2xl mx-4 md:mx-0 rounded-3xl border border-zinc-700/60 bg-zinc-900/90 backdrop-blur-xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.7),0_0_40px_rgba(34,211,238,0.08)] p-6 md:p-8 text-gray-200"
+          className="relative z-10 w-full md:max-w-2xl mx-4 md:mx-0 rounded-3xl border border-zinc-700/60 bg-zinc-900/90 backdrop-blur-xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.7),0_0_40px_rgba(34,211,238,0.08)] p-6 md:p-8 text-gray-200 max-h-[80vh] overflow-y-auto overscroll-contain"
+          style={{ WebkitOverflowScrolling: "touch" }}
         >
           <div className="flex items-start justify-between gap-4">
             <h3 className="text-xl md:text-2xl font-bold text-white">So arbeitet der Website‑Scan</h3>
