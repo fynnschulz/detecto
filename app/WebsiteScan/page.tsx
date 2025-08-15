@@ -373,21 +373,16 @@ export default function WebsiteScanPage() {
           </motion.div>
         </div>
       </section>
-    {/* Floating Plus Button (like Hero) */}
-    <button
-      aria-label={showInfo ? "Info schließen" : "Info öffnen"}
-      onClick={() => {
-        if (showInfo) {
-          setInfoExpanded(false);
-          setShowInfo(false);
-        } else {
-          setShowInfo(true);
-        }
-      }}
-      className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 h-14 w-14 md:h-16 md:w-16 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
-    >
-      <span className="relative text-white text-3xl leading-none select-none">{showInfo ? "×" : "+"}</span>
-    </button>
+    {/* Floating Plus Button (like Hero) - only when info panel is closed */}
+    {!showInfo && (
+      <button
+        aria-label="Info öffnen"
+        onClick={() => setShowInfo(true)}
+        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 h-14 w-14 md:h-16 md:w-16 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
+      >
+        <span className="relative text-white text-3xl leading-none select-none">+</span>
+      </button>
+    )}
 
     {/* Unified Expanding Info Panel */}
     {showInfo && (
@@ -398,7 +393,7 @@ export default function WebsiteScanPage() {
         transition={{ duration: 0.25 }}
         className={`fixed right-6 md:right-8 top-1/2 -translate-y-1/2 z-50 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 overflow-y-auto overscroll-contain transition-[max-height] duration-300 ease-out ${
           infoExpanded ? 'max-h-[70vh]' : 'max-h-44'
-        }`}
+        } relative pb-14`}
         style={{ WebkitOverflowScrolling: 'touch' }}
       >
         <h3 className="text-white font-semibold text-lg mb-2">Was macht der Website‑Scan?</h3>
@@ -430,6 +425,14 @@ export default function WebsiteScanPage() {
             </p>
           </div>
         )}
+        {/* Internal close (+) button inside the panel */}
+        <button
+          aria-label="Info schließen"
+          onClick={() => { setInfoExpanded(false); setShowInfo(false); }}
+          className="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_6px_18px_rgba(0,0,0,0.45)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
+        >
+          <span className="text-white text-2xl leading-none select-none">+</span>
+        </button>
       </motion.div>
     )}
     </main>
