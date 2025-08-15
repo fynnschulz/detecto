@@ -165,10 +165,8 @@ export default function SearchPage() {
       <button
         aria-label={showInfo ? "Info schließen" : "Info öffnen"}
         onClick={() => {
-          if (showInfo && infoExpanded) {
+          if (showInfo) {
             setInfoExpanded(false);
-            setTimeout(() => setShowInfo(false), 120);
-          } else if (showInfo) {
             setShowInfo(false);
           } else {
             setShowInfo(true);
@@ -178,38 +176,32 @@ export default function SearchPage() {
       >
         <span className="relative text-white text-3xl leading-none select-none">{showInfo ? "×" : "+"}</span>
       </button>
-      {/* Compact Info Panel */}
-      {showInfo && !infoExpanded && (
+      {showInfo && (
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 12 }}
           transition={{ duration: 0.25 }}
-          className="fixed right-6 md:right-8 top-1/2 -translate-y-1/2 z-50 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 max-h-[70vh] overflow-y-auto overscroll-contain"
-          style={{ WebkitOverflowScrolling: "touch" }}
+          className={`fixed right-6 md:right-8 bottom-24 md:bottom-28 z-50 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 overflow-y-auto overscroll-contain transition-[max-height] duration-300 ease-out ${
+            infoExpanded ? 'max-h-[70vh]' : 'max-h-44'
+          }`}
+          style={{ WebkitOverflowScrolling: 'touch' }}
         >
           <h3 className="text-lg font-semibold mb-2 text-white">Über die Suchmaschine</h3>
-          <p className="text-sm leading-relaxed text-gray-300">
-            Unsere KI-gestützte Suche findet datenschutzfreundliche Webseiten nach Thema, Kategorie oder Zweck – kuratiert und bewertet durch Detecto.
-          </p>
-          <button
-            onClick={() => setInfoExpanded(true)}
-            className="mt-3 text-sm underline text-gray-300 hover:text-white"
-          >
-            Mehr lesen
-          </button>
-        </motion.div>
-      )}
-      {/* Expanded Info Modal */}
-      {showInfo && infoExpanded && (
-        <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center">
-          <div className="absolute inset-0 bg-black/50" />
-          <div
-            className="relative bg-zinc-900/90 backdrop-blur-xl p-6 md:p-8 rounded-3xl max-w-2xl w-full mx-4 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.7),0_0_40px_rgba(34,211,238,0.08)] border border-zinc-700/60 max-h-[80vh] overflow-y-auto overscroll-contain text-gray-200"
-            style={{ WebkitOverflowScrolling: "touch" }}
-          >
-            <h3 className="text-2xl font-bold mb-4 text-white">Wie die Detecto-Suchmaschine funktioniert</h3>
-            <div className="mt-3 space-y-4 text-sm md:text-base leading-relaxed text-gray-300">
+          {!infoExpanded ? (
+            <>
+              <p className="text-sm leading-relaxed text-gray-300">
+                Unsere KI-gestützte Suche findet datenschutzfreundliche Webseiten nach Thema, Kategorie oder Zweck – kuratiert und bewertet durch Detecto.
+              </p>
+              <button
+                onClick={() => setInfoExpanded(true)}
+                className="mt-3 text-sm underline text-gray-300 hover:text-white"
+              >
+                Mehr lesen
+              </button>
+            </>
+          ) : (
+            <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-300">
               <p>
                 Die Detecto-Suchmaschine nutzt eine mehrstufige Pipeline: (1) Verarbeitung der Suchanfrage mit linguistischer Analyse, (2) KI-gestützte Abfrage relevanter, thematisch passender Quellen, (3) Filterung nach Datenschutzkriterien (Tracker, Third-Parties, Policy-Qualität), (4) Bewertung der Kandidaten nach denselben strengen Maßstäben wie beim Website-Scan.
               </p>
@@ -223,8 +215,8 @@ export default function SearchPage() {
                 Datenschutzprinzipien: <strong>Datensparsamkeit</strong> (nur notwendige Anfrage- und Bewertungsdaten), <strong>Transparenz</strong> (Begründung der Platzierung), <strong>Reproduzierbarkeit</strong> (deterministische Bewertungslogik) und <strong>Sicherheit</strong> (isolierte Verarbeitung, keine unnötige Speicherung).
               </p>
             </div>
-          </div>
-        </div>
+          )}
+        </motion.div>
       )}
     </main>
   );
