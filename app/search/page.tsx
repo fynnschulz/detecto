@@ -162,14 +162,14 @@ export default function SearchPage() {
       </section>
 
       {/* Info Panel Anchor (bottom-right, relative to +) */}
-      <div className="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 relative">
+      <div className="fixed right-6 bottom-6 md:right-8 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:transform z-50 relative">
         {showInfo && (
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 12 }}
             transition={{ duration: 0.25 }}
-            className={`absolute bottom-full right-0 mb-3 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 transition-[max-height] duration-300 ease-out ${
+            className={`absolute bottom-full right-0 mb-3 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-0 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 transition-[max-height] duration-300 ease-out ${
               infoExpanded ? 'max-h-[70vh]' : 'max-h-44'
             } relative`}
           >
