@@ -30,6 +30,7 @@ export default function Home() {
   const [showAlternatives, setShowAlternatives] = useState(false);
   const [loadingAlternatives, setLoadingAlternatives] = useState(false);
   const [activeInfo, setActiveInfo] = useState("Scan");
+  const [showGuardianMore, setShowGuardianMore] = useState(false);
   // const [showLoginModal, setShowLoginModal] = useState(false);
   // useSession von Supabase Auth Helpers
   const session = useSession();
@@ -315,23 +316,57 @@ useEffect(() => {
               >
                 Detecto schützt dich proaktiv vor Phishing, Datenlecks und riskanten Webseiten. Erkenne Bedrohungen in Echtzeit, erhalte klare Erklärungen sowie sichere Alternativen – datensparsam und praxisnah.
               </motion.p>
+              {/* Guardian Claim + Mehr lesen */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.05 }}
+                className="mt-6 z-10"
+              >
+                <p className="text-lg md:text-xl font-semibold text-white">
+                  <span className="font-bold">Detecto Guardian</span> – Dein unsichtbarer Schild im Netz.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setShowGuardianMore((v) => !v)}
+                  className="mt-2 text-sm text-gray-300 underline hover:text-white"
+                  aria-expanded={showGuardianMore}
+                >
+                  {showGuardianMore ? "weniger anzeigen" : "mehr lesen…"}
+                </button>
+                <AnimatePresence initial={false}>
+                  {showGuardianMore && (
+                    <motion.div
+                      key="guardian-more"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.35, ease: "easeOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-3 text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+                        <p>
+                          Der Guardian ist Detectos KI-gestütztes Schutzsystem, das Bedrohungen in Echtzeit erkennt, analysiert und neutralisiert – bevor sie Schaden anrichten können.
+                        </p>
+                        <p className="mt-3">
+                          Diese neuartige Sicherheitsarchitektur setzt neue Maßstäbe im digitalen Selbstschutz: Mit Multi-Kanal-Erkennung, Darknet-Scans und kontinuierlicher Verhaltensanalyse schützt er dich vor Phishing, Datenlecks und gezielten Angriffen – automatisch, unsichtbar und kompromisslos effektiv.
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1.2, delay: 0.1 }}
-                className="mt-8 flex flex-col sm:flex-row gap-3 z-10"
+                className="mt-8 flex justify-center z-10"
               >
                 <Link
                   href="/guardian"
-                  className="px-6 py-3 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow"
+                  className="px-7 py-3.5 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow"
                 >
                   Zum Guardian
-                </Link>
-                <Link
-                  href="/dashboard"
-                  className="px-6 py-3 rounded-full border border-white/20 text-white font-semibold text-base hover:bg-white/10 transition"
-                >
-                  Alle Tools ansehen
                 </Link>
               </motion.div>
               {renderToolContent()}
