@@ -217,57 +217,7 @@ export default function SearchPage() {
             {infoExpanded && (
               <div className="space-y-4 pr-1">
                 <p>
-                  <strong>Architektur.</strong> Client‑Eingaben werden an <code className="font-mono">/api/smart-search</code>
-                  gesendet. Der Service orchestriert eine Pipeline aus (1) Intent‑/Entity‑Erkennung,
-                  (2) Kategorie‑Mapping, (3) Quellenermittlung, (4) Abruf & Extraktion, (5) Privacy‑Scoring,
-                  (6) Ranking & Deduplication und (7) Antwortformatierung.
-                </p>
-                <ol className="list-decimal ml-5 space-y-2">
-                  <li>
-                    <strong>Query‑Parsing & Intent.</strong> Tokenisierung, Normalisierung, Synonym‑Expansion und
-                    Klassifikation (z. B. „Anbieter‑Suche“, „Informationsseite“, „Vergleich“). Entitäten werden per
-                    NER extrahiert (Marke, Produktklasse, Zweck, Region).
-                  </li>
-                  <li>
-                    <strong>Kategorie‑Mapping.</strong> Abgleich mit einer kontrollierten Taxonomie (privacy‑relevante
-                    Domänen wie Finanzen, Gesundheit, E‑Commerce). Optional wird ein Embedding‑Index zur semantischen
-                    Näheabfrage genutzt.
-                  </li>
-                  <li>
-                    <strong>Quellenermittlung.</strong> Es werden kuratierte Whitelists, offene Verzeichnisse sowie
-                    Suchoperatoren verwendet. Kandidaten‑URLs werden gegen Blocklisten und Heuristiken geprüft
-                    (z. B. Typosquatting, Look‑alikes, übermäßige Tracker‑Muster).
-                  </li>
-                  <li>
-                    <strong>Abruf & Extraktion.</strong> HTML wird mit Headless‑Fetch geholt; relevante Segmente
-                    (Policy‑Links, Consent‑Layer, Skript‑Tags) werden geparst. Ressourcen werden nicht ausgeführt;
-                    stattdessen statisch analysiert, um Tracking‑Artefakte zu erkennen.
-                  </li>
-                  <li>
-                    <strong>Privacy‑Scoring.</strong> Features wie Anzahl/Art von Trackern, Drittland‑Transfers,
-                    Datenminimierung, Zweckbindung, Rechtsgrundlagen, Opt‑out‑Verfügbarkeit und TLS/HSTS werden zu
-                    einem Score aggregiert. Modelle gewichten Evidenz und Vertrauenssignale (z. B. Zertifizierungen,
-                    Audit‑Hinweise).
-                  </li>
-                  <li>
-                    <strong>Ranking & Dedup.</strong> Ergebnisse werden nach (a) Datenschutz‑Score, (b) inhaltlicher
-                    Relevanz und (c) Quellenvertrauen sortiert. Near‑Duplicates werden per URL‑Normierung und
-                    Shingling entfernt.
-                  </li>
-                  <li>
-                    <strong>Antwortformat.</strong> Rückgabe als JSON‑Liste <code className="font-mono">[{`{ name, url, description }`}]</code> –
-                    exakt so, wie sie auf der Suchseite angezeigt wird.
-                  </li>
-                </ol>
-                <p>
-                  <strong>Sicherheitsnetze.</strong> Domain‑Sanitizing, Rate‑Limits, Timeout‑Guards und Content‑Safety
-                  verhindern Missbrauch und verringern Halluzinationen. Alle Kandidaten durchlaufen eine
-                  Vertrauensprüfung, bevor sie dem Nutzer erscheinen.
-                </p>
-                <p>
-                  <strong>Grenzen.</strong> Live‑Web ändert sich ständig; Bewertungen sind Momentaufnahmen.
-                  Einige Seiten blocken Headless‑Zugriffe; in solchen Fällen wird konservativ bewertet oder
-                  die Quelle verworfen.
+                  Das Suchmaschinen-Modul reagiert gezielt auf eingegebene Schlüsselwörter, um relevante und datenschutzfreundliche Webseiten zu identifizieren. Dabei werden komplexe Algorithmen eingesetzt, die semantische Zusammenhänge erkennen und passende Inhalte aus einer kuratierten Datenbasis extrahieren. Ziel ist es, Nutzern präzise und vertrauenswürdige Ergebnisse zu liefern, die den hohen Anforderungen an Datenschutz und Sicherheit entsprechen. Die Technologie hinter der Suchmaschine kombiniert moderne Analyseverfahren mit sorgfältiger Quellenbewertung, um eine effiziente und sichere Suche zu gewährleisten.
                 </p>
               </div>
             )}

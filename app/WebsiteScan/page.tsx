@@ -361,6 +361,67 @@ export default function WebsiteScanPage() {
           </motion.div>
         </div>
       </section>
+      {/* Floating Info: Website‑Scan – technischer Überblick */}
+      <div className="fixed right-5 bottom-5 z-50">
+        <button
+          aria-label={showInfo ? "Infobox schließen" : "Infobox öffnen"}
+          onClick={() => {
+            if (showInfo) {
+              setShowInfo(false);
+              setInfoExpanded(false);
+            } else {
+              setShowInfo(true);
+            }
+          }}
+          className="h-12 w-12 rounded-full bg-zinc-800 text-white shadow-xl border border-zinc-700/70 hover:border-cyan-400/70 hover:scale-105 transition-all duration-300 flex items-center justify-center"
+        >
+          <span className="text-xl font-bold select-none">i</span>
+        </button>
+      </div>
+
+      {/* Seiten-Infobox (rechts) – Website‑Scan */}
+      {showInfo && (
+        <aside
+          className={
+            `fixed right-5 bottom-24 z-50 bg-zinc-900/95 backdrop-blur rounded-2xl border border-zinc-700/70 shadow-2xl transition-[width,height,opacity,transform] duration-300 overflow-hidden` +
+            (infoExpanded ? " w-[90vw] max-w-[480px] h-[72vh] translate-y-0" : " w-[86vw] max-w-[420px] h-[260px] translate-y-0")
+          }
+          role="dialog"
+          aria-modal="true"
+          aria-label="Technische Erklärung des Website‑Scans"
+        >
+          <div className="flex items-start justify-between gap-4 p-5">
+            <h3 className="text-white text-lg md:text-xl font-semibold">Wie der Detecto‑Website‑Scan funktioniert</h3>
+          </div>
+
+          <div className="px-5 pb-4 text-sm text-zinc-300 leading-relaxed h-[calc(100%-64px)] overflow-y-auto">
+            {/* Kompakte Vorschau */}
+            {!infoExpanded && (
+              <div className="overflow-visible h-full">
+                <p className="mb-6">
+                  Der Website‑Scan extrahiert Policies, Skripte und Meta‑Daten, analysiert Tracker‑Muster
+                  sowie Rechtsgrundlagen und aggregiert daraus einen Datenschutz‑Score mit Begründung.
+                </p>
+                <button
+                  onClick={() => setInfoExpanded(true)}
+                  className="text-cyan-400 hover:underline font-medium"
+                >
+                  Mehr lesen…
+                </button>
+              </div>
+            )}
+
+            {/* Ausgeklappte, scrollbare Vollansicht */}
+            {infoExpanded && (
+              <div className="space-y-4 pr-1">
+                <p>
+                  Der Website‑Scan analysiert die von dir eingegebene Ziel‑URL automatisiert und bewertet sie im Hinblick auf Datenschutz und Risiko. Dazu werden die Seite abgerufen, strukturierte und unstrukturierte Inhalte wie Datenschutzhinweise, Impressum, Meta‑Tags sowie Verweise auf externe Ressourcen ausgewertet und eingebettete Skripte statisch untersucht. Muster für Tracking, Fingerprinting, Werbe‑ und Analysezwecke sowie mögliche Datenübermittlungen an Dritte werden erkannt und mit rechtlich relevanten Aspekten wie Rechtsgrundlagen, Einwilligungslogik, Datenminimierung, Zweckbindung, Aufbewahrung und Kontaktangaben abgeglichen. Aus den ermittelten Merkmalen wird ein gewichteter Score (0–100) gebildet und eine begründete Einschätzung generiert, die die wichtigsten Befunde verständlich zusammenfasst. Der Scan arbeitet konservativ, führt keine aktiven Interaktionen mit der Seite aus und respektiert Timeouts sowie Block‑/Allow‑Lists; dynamische Inhalte, Paywalls oder stark skriptgetriebene Oberflächen können die statische Analyse begrenzen, weshalb das Ergebnis eine Momentaufnahme darstellt und keine Rechtsberatung ersetzt.
+                </p>
+              </div>
+            )}
+          </div>
+        </aside>
+      )}
     </main>
   );
 }
