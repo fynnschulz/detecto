@@ -161,52 +161,53 @@ export default function SearchPage() {
         </div>
       </section>
 
-      {/* Info Panel Anchor (bottom-right, relative to +) */}
-      <div className="fixed right-6 bottom-6 md:right-8 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:transform z-50 relative">
-        {showInfo && (
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 12 }}
-            transition={{ duration: 0.25 }}
-            className={`absolute bottom-full right-0 mb-3 md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-0 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 transition-[max-height] duration-300 ease-out ${
-              infoExpanded ? 'max-h-[70vh]' : 'max-h-44'
-            } relative`}
-          >
-            <div className={`overflow-y-auto overscroll-contain pr-1 ${infoExpanded ? 'max-h-[60vh]' : 'max-h-28'}`} style={{ WebkitOverflowScrolling: 'touch' }}>
-              <h3 className="text-lg font-semibold mb-2 text-white">Über die Suchmaschine</h3>
-              {!infoExpanded ? (
-                <>
-                  <p className="text-sm leading-relaxed text-gray-300">
-                    Unsere KI-gestützte Suche findet datenschutzfreundliche Webseiten nach Thema, Kategorie oder Zweck – kuratiert und bewertet durch Detecto.
-                  </p>
-                  <button
-                    onClick={() => setInfoExpanded(true)}
-                    className="mt-3 text-sm underline text-gray-300 hover:text-white"
-                  >
-                    Mehr lesen
-                  </button>
-                </>
-              ) : (
-                <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-300 pr-1">
-                  <p>
-                    Die Detecto-Suchmaschine nutzt eine mehrstufige Pipeline: (1) Verarbeitung der Suchanfrage mit linguistischer Analyse, (2) KI-gestützte Abfrage relevanter, thematisch passender Quellen, (3) Filterung nach Datenschutzkriterien (Tracker, Third-Parties, Policy-Qualität), (4) Bewertung der Kandidaten nach denselben strengen Maßstäben wie beim Website-Scan.
-                  </p>
-                  <p>
-                    Ergebnisse werden als kuratierte Liste ausgegeben, wobei jede Seite ein sicheres Profil aufweist. Die Sortierung priorisiert Anbieter mit klaren Datenschutzerklärungen, geringen Third-Party-Abhängigkeiten, SSL/TLS-Verschlüsselung und transparenter Datenverarbeitung.
-                  </p>
-                  <p>
-                    Die Suchmaschine ist darauf optimiert, schnell und praxisnah umsetzbare, sichere Alternativen zu gängigen Angeboten zu finden – egal ob für E-Commerce, Kommunikation oder Informationssuche.
-                  </p>
-                  <p>
-                    Datenschutzprinzipien: <strong>Datensparsamkeit</strong> (nur notwendige Anfrage- und Bewertungsdaten), <strong>Transparenz</strong> (Begründung der Platzierung), <strong>Reproduzierbarkeit</strong> (deterministische Bewertungslogik) und <strong>Sicherheit</strong> (isolierte Verarbeitung, keine unnötige Speicherung).
-                  </p>
-                </div>
-              )}
-            </div>
-          </motion.div>
-        )}
+      {/* Info Panel (fixed mid-right like on screenshot) */}
+      {showInfo && (
+        <motion.div
+          initial={{ opacity: 0, x: 16 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 16 }}
+          transition={{ duration: 0.25 }}
+          className={`fixed right-6 md:right-8 bottom-24 md:bottom-auto md:top-1/2 md:-translate-y-1/2 z-50 w-[86vw] max-w-md p-5 rounded-2xl border border-zinc-700/60 bg-zinc-900/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.45)] text-gray-200 transition-[max-height] duration-300 ease-out ${
+            infoExpanded ? 'max-h-[70vh]' : 'max-h-44'
+          }`}
+        >
+          <div className={`overflow-y-auto overscroll-contain pr-1 ${infoExpanded ? 'max-h-[60vh]' : 'max-h-28'}`} style={{ WebkitOverflowScrolling: 'touch' }}>
+            <h3 className="text-lg font-semibold mb-2 text-white">Über die Suchmaschine</h3>
+            {!infoExpanded ? (
+              <>
+                <p className="text-sm leading-relaxed text-gray-300">
+                  Unsere KI-gestützte Suche findet datenschutzfreundliche Webseiten nach Thema, Kategorie oder Zweck – kuratiert und bewertet durch Detecto.
+                </p>
+                <button
+                  onClick={() => setInfoExpanded(true)}
+                  className="mt-3 text-sm underline text-gray-300 hover:text-white"
+                >
+                  Mehr lesen
+                </button>
+              </>
+            ) : (
+              <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-300 pr-1">
+                <p>
+                  Die Detecto-Suchmaschine nutzt eine mehrstufige Pipeline: (1) Verarbeitung der Suchanfrage mit linguistischer Analyse, (2) KI-gestützte Abfrage relevanter, thematisch passender Quellen, (3) Filterung nach Datenschutzkriterien (Tracker, Third-Parties, Policy-Qualität), (4) Bewertung der Kandidaten nach denselben strengen Maßstäben wie beim Website-Scan.
+                </p>
+                <p>
+                  Ergebnisse werden als kuratierte Liste ausgegeben, wobei jede Seite ein sicheres Profil aufweist. Die Sortierung priorisiert Anbieter mit klaren Datenschutzerklärungen, geringen Third-Party-Abhängigkeiten, SSL/TLS-Verschlüsselung und transparenter Datenverarbeitung.
+                </p>
+                <p>
+                  Die Suchmaschine ist darauf optimiert, schnell und praxisnah umsetzbare, sichere Alternativen zu gängigen Angeboten zu finden – egal ob für E-Commerce, Kommunikation oder Informationssuche.
+                </p>
+                <p>
+                  Datenschutzprinzipien: <strong>Datensparsamkeit</strong> (nur notwendige Anfrage- und Bewertungsdaten), <strong>Transparenz</strong> (Begründung der Platzierung), <strong>Reproduzierbarkeit</strong> (deterministische Bewertungslogik) und <strong>Sicherheit</strong> (isolierte Verarbeitung, keine unnötige Speicherung).
+                </p>
+              </div>
+            )}
+          </div>
+        </motion.div>
+      )}
 
+      {/* + Button (fixed bottom-right) */}
+      <div className="fixed right-6 bottom-6 md:right-8 md:bottom-8 z-50">
         <button
           aria-label="Info öffnen"
           onClick={() => {
