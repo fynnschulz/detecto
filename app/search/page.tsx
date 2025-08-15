@@ -219,7 +219,7 @@ export default function SearchPage() {
           }}
           className="h-14 w-14 md:h-16 md:w-16 rounded-full bg-zinc-900/80 backdrop-blur border border-zinc-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center hover:scale-105 transition-transform duration-200"
         >
-          <span className="relative text-white text-3xl leading-none select-none">{showInfo ? "×" : "+"}</span>
+          <span className="relative text-white text-3xl leading-none select-none">+</span>
         </button>
       </div>
     </main>
