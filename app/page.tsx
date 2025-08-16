@@ -639,7 +639,7 @@ useEffect(() => {
 
                   {/* Links */}
                   <div className="py-1">
-                    <Link href="/account" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative">
+                    <Link href="/einstellungen" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative">
                       <span className="mr-3">⚙️</span>
                       <span>Einstellungen</span>
                       <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
