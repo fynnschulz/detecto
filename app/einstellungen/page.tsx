@@ -345,11 +345,35 @@ export default function EinstellungenPage() {
               <Card>
                 <SectionTitle title="Datenschutz" desc="Daten einsehen & Account-Löschung" />
                 <DataPreview loader={loadDataPreview} />
-                <div className="mt-6 rounded-xl border border-red-500/30 bg-red-500/5 p-4">
-                  <div className="font-medium text-red-200 mb-2">Danger Zone</div>
-                  <div className="flex flex-wrap items-center gap-3">
-                    <Button variant="danger" onClick={requestDeletionFlag}>Account-Löschung anfragen</Button>
-                    <p className="text-sm text-white/70">Wir markieren deine Löschanfrage. Der finale Hard-Delete erfolgt im Backend.</p>
+                <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <div className="font-medium text-white mb-1">Konto endgültig löschen</div>
+                      <p className="text-sm text-white/60">Entfernt dein Konto und alle Daten unwiderruflich.</p>
+                    </div>
+                    <Button
+                      className="!bg-red-600 hover:!bg-red-700 text-white ring-1 ring-red-500/30"
+                      onClick={async () => {
+                        const { data: { user } } = await supabase.auth.getUser();
+                        if (!user) return;
+                        if (!confirm("Bist du sicher, dass du dein Konto unwiderruflich löschen willst?")) return;
+                        const res = await fetch("/api/delete-account", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ userId: user.id }),
+                        });
+                        if (res.ok) {
+                          alert("Dein Konto wurde gelöscht.");
+                          router.replace("/");
+                        } else {
+                          const err = await res.json();
+                          alert("Fehler beim Löschen: " + err.error);
+                        }
+                      }}
+                    >
+                      <span aria-hidden>🗑️</span>
+                      <span>Konto löschen</span>
+                    </Button>
                   </div>
                 </div>
               </Card>
@@ -361,38 +385,6 @@ export default function EinstellungenPage() {
               </Card>
             )}
           </div>
-        </div>
-        {/* Danger Zone (global, unterhalb aller Tabs/Sektionen) */}
-        <div className="mt-10 border-t border-red-600 pt-6">
-          <h2 className="text-red-500 font-semibold text-lg mb-2">Danger Zone</h2>
-          <p className="text-sm text-gray-400 mb-4">
-            Wenn du dein Konto löschst, werden alle deine Daten dauerhaft entfernt. Dies kann nicht rückgängig gemacht werden.
-          </p>
-          <Button
-            className="bg-red-600 hover:bg-red-700 text-white"
-            onClick={async () => {
-              const { data: { user } } = await supabase.auth.getUser();
-              if (!user) return;
-
-              if (!confirm("Bist du sicher, dass du dein Konto unwiderruflich löschen willst?")) return;
-
-              const res = await fetch("/api/delete-account", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ userId: user.id }),
-              });
-
-              if (res.ok) {
-                alert("Dein Konto wurde gelöscht.");
-                router.replace("/");
-              } else {
-                const err = await res.json();
-                alert("Fehler beim Löschen: " + err.error);
-              }
-            }}
-          >
-            Konto endgültig löschen
-          </Button>
         </div>
       </div>
     </div>
