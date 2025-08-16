@@ -468,4 +468,4 @@ function DataPreview({ loader }: { loader: () => Promise<string> }) {
       )}
     </div>
   );
-}
+};
