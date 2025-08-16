@@ -76,6 +76,7 @@ export default function EinstellungenPage() {
   const [saving, startSaving] = useTransition();
   const [msg, setMsg] = useState<string>("");
   const [err, setErr] = useState<string>("");
+  const [showToast, setShowToast] = useState(false);
 
   const [userId, setUserId] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -127,52 +128,44 @@ export default function EinstellungenPage() {
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) return router.replace("/login");
 
-        // Full payload (includes optional columns if they exist)
-        const fullPayload: Record<string, any> = {
-          id: user.id,
+        // Build payload
+        const payload: Record<string, any> = {
           display_name: (displayName || user.email?.split("@")[0] || "").slice(0, 80),
           locale,
           marketing_opt_in: marketingOptIn,
           theme,
         };
-        if (avatarUrl) fullPayload.avatar_url = avatarUrl;
+        if (avatarUrl) payload.avatar_url = avatarUrl;
 
-        // Attempt 1: upsert with full payload
-        let { error: up1 } = await supabase.from("profiles").upsert(fullPayload, { onConflict: "id" });
+        // Check if row exists
+        const { data: existing } = await supabase.from("profiles").select("id").eq("id", user.id).maybeSingle();
 
-        // If the schema doesn't have some columns (e.g., theme/updated_at), retry with minimal payload
-        if (up1 && String(up1.message || up1.code || "").includes("column") ) {
-          const minimal: Record<string, any> = {
-            id: user.id,
-            display_name: fullPayload.display_name,
-            locale: fullPayload.locale,
-            marketing_opt_in: fullPayload.marketing_opt_in,
-          };
-          if (avatarUrl) minimal.avatar_url = avatarUrl;
-          const { error: up2 } = await supabase.from("profiles").upsert(minimal, { onConflict: "id" });
-          up1 = up2 || null as any;
-        }
-
-        // If RLS blocks insert (new row), try update (row might already exist)
-        if (up1 && /row-level security|RLS|not allowed/i.test(up1.message || "")) {
-          const { error: upd } = await supabase.from("profiles").update(fullPayload).eq("id", user.id);
+        if (existing?.id) {
+          // Update path
+          const { error: upd } = await supabase.from("profiles").update(payload).eq("id", user.id);
           if (upd) throw upd;
-        } else if (up1) {
-          // Some other error that persisted after minimal retry
-          throw up1;
+        } else {
+          // Insert minimal
+          const minimal: Record<string, any> = { id: user.id, ...payload };
+          const { error: ins } = await supabase.from("profiles").insert(minimal);
+          if (ins) throw ins;
         }
 
         setMsg("Gespeichert ✔");
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 2800);
+        router.refresh();
       } catch (e: any) {
-        // Show a concise, helpful message
         const raw = e?.message || e?.code || "";
         if (/row-level security|RLS/i.test(raw)) {
-          setErr("Speichern fehlgeschlagen: RLS-Policy blockiert. Erlaube Insert/Update für eigene ID in Supabase.");
+          setErr("Speichern fehlgeschlagen: RLS-Policy blockiert. Erlaube Update/Insert für eigene ID in Supabase.");
         } else if (/column .* does not exist/i.test(raw)) {
           setErr("Speichern teilweise fehlgeschlagen: Bitte fehlende Spalten in `profiles` anlegen (z.B. `theme`).");
         } else {
           setErr("Speichern fehlgeschlagen.");
         }
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 3000);
       }
     });
   }
@@ -200,6 +193,7 @@ export default function EinstellungenPage() {
       const { data } = supabase.storage.from("avatars").getPublicUrl(path);
       const url = data.publicUrl;
       setAvatarUrl(url); // optimistic preview
+      router.refresh();
 
       // persist URL to profile; if RLS blocks insert, try update
       let { error: up1 } = await supabase.from("profiles").upsert({ id: userId, avatar_url: url });
@@ -255,6 +249,11 @@ export default function EinstellungenPage() {
   return (
     <div className="relative min-h-[calc(100vh-4rem)]">
       <HeroBackdrop />
+      {(msg || err) && showToast && (
+        <div className={`fixed left-1/2 top-6 z-50 -translate-x-1/2 rounded-xl px-4 py-2 text-sm shadow-lg backdrop-blur-xl border ${err ? "bg-red-500/15 border-red-400/30 text-red-100" : "bg-white/10 border-white/20 text-white"}`}>
+          {err || msg}
+        </div>
+      )}
 
       <div className="mx-auto max-w-6xl px-6 py-10">
         <header className="mb-6 flex items-center justify-between">
@@ -288,11 +287,6 @@ export default function EinstellungenPage() {
 
           {/* Content */}
           <div className="space-y-6">
-            {(msg || err) && (
-              <Card>
-                <div className={`text-sm ${err ? "text-red-200" : "text-white/90"}`}>{err || msg}</div>
-              </Card>
-            )}
 
             {/* Profil */}
             {tab === "profil" && (
