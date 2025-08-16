@@ -81,7 +81,7 @@ export default function EinstellungenPage() {
   const [userId, setUserId] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
-  const [displayName, setDisplayName] = useState("");
+  const [username, setUsername] = useState("");
   const [locale, setLocale] = useState("de");
   const [avatarUrl, setAvatarUrl] = useState("");
   const [marketingOptIn, setMarketingOptIn] = useState(false);
@@ -101,10 +101,10 @@ export default function EinstellungenPage() {
         setUserEmail(user.email || "");
         const { data: p } = await supabase
           .from("profiles")
-          .select("display_name, avatar_url, locale, marketing_opt_in, theme")
+          .select("username, avatar_url, locale, marketing_opt_in, theme")
           .eq("id", user.id)
           .maybeSingle();
-        setDisplayName(p?.display_name || user.email?.split("@")[0] || "");
+        setUsername(p?.username || user.email?.split("@")[0] || "");
         setAvatarUrl(p?.avatar_url || "");
         setLocale(p?.locale || "de");
         setMarketingOptIn(!!p?.marketing_opt_in);
@@ -128,44 +128,52 @@ export default function EinstellungenPage() {
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) return router.replace("/login");
 
-        // Build payload
+        // Payload für Tabelle
         const payload: Record<string, any> = {
-          display_name: (displayName || user.email?.split("@")[0] || "").slice(0, 80),
+          username: (username || user.email?.split("@")[0] || "").slice(0, 80),
           locale,
           marketing_opt_in: marketingOptIn,
           theme,
         };
         if (avatarUrl) payload.avatar_url = avatarUrl;
 
-        // Check if row exists
+        // Existenz prüfen
         const { data: existing } = await supabase.from("profiles").select("id").eq("id", user.id).maybeSingle();
 
         if (existing?.id) {
-          // Update path
           const { error: upd } = await supabase.from("profiles").update(payload).eq("id", user.id);
           if (upd) throw upd;
         } else {
-          // Insert minimal
-          const minimal: Record<string, any> = { id: user.id, ...payload };
-          const { error: ins } = await supabase.from("profiles").insert(minimal);
+          const { error: ins } = await supabase.from("profiles").insert({ id: user.id, ...payload });
           if (ins) throw ins;
         }
 
+        // ✨ Zusätzlich: auth.user Metadaten aktualisieren (für Header/Profile-Menü)
+        const { error: metaErr } = await supabase.auth.updateUser({
+          data: {
+            username: payload.username,
+            avatar_url: payload.avatar_url || null,
+            locale: payload.locale,
+            marketing_opt_in: payload.marketing_opt_in,
+            theme: payload.theme,
+          },
+        });
+        if (metaErr) console.warn("auth.updateUser error", metaErr);
+
         setMsg("Gespeichert ✔");
         setShowToast(true);
-        setTimeout(() => setShowToast(false), 2800);
+        setTimeout(() => setShowToast(false), 2200);
         router.refresh();
       } catch (e: any) {
         const raw = e?.message || e?.code || "";
+        console.error("Save failed:", e);
         if (/row-level security|RLS/i.test(raw)) {
-          setErr("Speichern fehlgeschlagen: RLS-Policy blockiert. Erlaube Update/Insert für eigene ID in Supabase.");
-        } else if (/column .* does not exist/i.test(raw)) {
-          setErr("Speichern teilweise fehlgeschlagen: Bitte fehlende Spalten in `profiles` anlegen (z.B. `theme`).");
+          setErr("Speichern fehlgeschlagen: RLS-Policy blockiert (profiles). Bitte Insert/Update für eigene ID erlauben.");
         } else {
-          setErr("Speichern fehlgeschlagen.");
+          setErr(`Speichern fehlgeschlagen: ${raw || "Unbekannter Fehler"}`);
         }
         setShowToast(true);
-        setTimeout(() => setShowToast(false), 3000);
+        setTimeout(() => setShowToast(false), 3200);
       }
     });
   }
@@ -192,8 +200,8 @@ export default function EinstellungenPage() {
 
       const { data } = supabase.storage.from("avatars").getPublicUrl(path);
       const url = data.publicUrl;
-      setAvatarUrl(url); // optimistic preview
-      router.refresh();
+      const cacheBusted = `${url}?t=${Date.now()}`;
+      setAvatarUrl(cacheBusted); // sofort in der UI
 
       // persist URL to profile; if RLS blocks insert, try update
       let { error: up1 } = await supabase.from("profiles").upsert({ id: userId, avatar_url: url });
@@ -206,6 +214,9 @@ export default function EinstellungenPage() {
       } else if (up1) {
         throw up1;
       }
+
+      await supabase.auth.updateUser({ data: { avatar_url: url } });
+      router.refresh();
 
       setMsg("Avatar aktualisiert ✔");
     } catch (e) {
@@ -266,7 +277,7 @@ export default function EinstellungenPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[240px,1fr] gap-6">
           {/* Sidebar */}
-          <nav className="lg:sticky lg:top-24 h-max rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-2">
+          <nav className="h-max rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-2">
             {([
               { id: "profil", label: "Profil", icon: "👤" },
               { id: "sicherheit", label: "Sicherheit", icon: "🔒" },
@@ -293,11 +304,11 @@ export default function EinstellungenPage() {
               <Card>
                 <SectionTitle title="Profil" desc="Name, Sprache, Avatar & Opt-ins" />
                 <form onSubmit={handleSave}>
-                  <FieldRow label="Anzeigename">
+                  <FieldRow label="Nutzername">
                     <input
                       className="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white/20"
-                      value={displayName}
-                      onChange={(e) => setDisplayName(e.target.value)}
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
                       placeholder="Dein Name"
                     />
                   </FieldRow>
@@ -343,7 +354,7 @@ export default function EinstellungenPage() {
 
                   <div className="mt-4 flex gap-3">
                     <Button variant="primary" disabled={saving} type="submit">Speichern</Button>
-                    <Button variant="outline" type="button" onClick={() => { setDisplayName(""); setAvatarUrl(""); setMarketingOptIn(false); setLocale("de"); }}>Zurücksetzen</Button>
+                    <Button variant="outline" type="button" onClick={() => { setUsername(""); setAvatarUrl(""); setMarketingOptIn(false); setLocale("de"); }}>Zurücksetzen</Button>
                   </div>
                 </form>
               </Card>
