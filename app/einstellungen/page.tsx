@@ -3,7 +3,8 @@
 "use client";
 
 // app/einstellungen/page.tsx — Detecto Settings (Client Component, redesigned)
-import { useEffect, useRef, useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
+import type { ReactNode, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 
@@ -19,7 +20,7 @@ function HeroBackdrop() {
 }
 
 // ---------------- Small UI atoms
-function Card({ children }: { children: React.ReactNode }) {
+function Card({ children }: { children: ReactNode }) {
   return <div className="rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6">{children}</div>;
 }
 function SectionTitle({ title, desc }: { title: string; desc?: string }) {
@@ -30,7 +31,7 @@ function SectionTitle({ title, desc }: { title: string; desc?: string }) {
     </div>
   );
 }
-function FieldRow({ label, children, hint }: { label: string; children: React.ReactNode; hint?: string }) {
+function FieldRow({ label, children, hint }: { label: string; children: ReactNode; hint?: string }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-3 py-3">
       <div className="text-sm text-white/80">{label}</div>
@@ -68,9 +69,7 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean
 // ---------------- Page
 export default function EinstellungenPage() {
   const supabase = createClientComponentClient();
-  const router = useRouter();
-
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const router = useRouter()
 
   const [loading, setLoading] = useState(true);
   const [saving, startSaving] = useTransition();
@@ -82,8 +81,7 @@ export default function EinstellungenPage() {
   const [userEmail, setUserEmail] = useState("");
 
   const [username, setUsername] = useState("");
-  const [locale, setLocale] = useState("de");
-  const [avatarUrl, setAvatarUrl] = useState("");
+  const [locale, setLocale] = useState("de")
   const [marketingOptIn, setMarketingOptIn] = useState(false);
   const [theme, setTheme] = useState<"system" | "dark" | "light">("dark");
 
@@ -101,14 +99,14 @@ export default function EinstellungenPage() {
         setUserEmail(user.email || "");
         const { data: p } = await supabase
           .from("profiles")
-          .select("username, avatar_url, locale, marketing_opt_in, theme")
+          .select("username, locale, marketing_opt_in, theme")
           .eq("id", user.id)
           .maybeSingle();
-        setUsername(p?.username || user.email?.split("@")[0] || "");
-        setAvatarUrl(p?.avatar_url || "");
+        setUsername(p?.username || user.email?.split("@")[0] || "")
         setLocale(p?.locale || "de");
         setMarketingOptIn(!!p?.marketing_opt_in);
-        setTheme((p?.theme as any) || "dark");
+        const t = p?.theme as string | undefined;
+        setTheme(t === "system" || t === "dark" || t === "light" ? t : "dark");
       } catch (e) {
         setErr("Fehler beim Laden der Einstellungen.");
       } finally {
@@ -119,11 +117,11 @@ export default function EinstellungenPage() {
   }, [supabase, router]);
 
   // Save profile
-  function handleSave(e?: React.FormEvent) {
+  function handleSave(e?: FormEvent) {
     e?.preventDefault();
     setMsg("");
     setErr("");
-    startSaving(async () => {
+    startSaving(() => { (async () => {
       try {
         const { data: { user } } = await supabase.auth.getUser();
         if (!user) return router.replace("/login");
@@ -134,8 +132,7 @@ export default function EinstellungenPage() {
           locale,
           marketing_opt_in: marketingOptIn,
           theme,
-        };
-        if (avatarUrl) payload.avatar_url = avatarUrl;
+        }
 
         // Existenz prüfen
         const { data: existing } = await supabase.from("profiles").select("id").eq("id", user.id).maybeSingle();
@@ -152,7 +149,6 @@ export default function EinstellungenPage() {
         const { error: metaErr } = await supabase.auth.updateUser({
           data: {
             username: payload.username,
-            avatar_url: payload.avatar_url || null,
             locale: payload.locale,
             marketing_opt_in: payload.marketing_opt_in,
             theme: payload.theme,
@@ -175,54 +171,9 @@ export default function EinstellungenPage() {
         setShowToast(true);
         setTimeout(() => setShowToast(false), 3200);
       }
-    });
+    })(); });
   }
 
-  // Avatar upload
-  async function onAvatarChange(file?: File | null) {
-    setMsg(""); setErr("");
-    if (!file) return;
-
-    // ✅ Clientseitiges Limit: 20 MB
-    const MAX_BYTES = 20 * 1024 * 1024;
-    if (file.size > MAX_BYTES) {
-      setErr("Die Datei ist größer als 20 MB. Bitte wähle ein kleineres Bild oder komprimiere es.");
-      return;
-    }
-
-    try {
-      const safe = file.name.replace(/[^a-zA-Z0-9_.-]/g, "_");
-      const path = `avatars/${userId}/${Date.now()}_${safe}`;
-      const { error: upErr } = await supabase.storage
-        .from("avatars")
-        .upload(path, file, { upsert: true, cacheControl: "3600" });
-      if (upErr) throw upErr;
-
-      const { data } = supabase.storage.from("avatars").getPublicUrl(path);
-      const url = data.publicUrl;
-      const cacheBusted = `${url}?t=${Date.now()}`;
-      setAvatarUrl(cacheBusted); // sofort in der UI
-
-      // persist URL to profile; if RLS blocks insert, try update
-      let { error: up1 } = await supabase.from("profiles").upsert({ id: userId, avatar_url: url });
-      if (up1 && /row-level security|RLS|not allowed/i.test(up1.message || "")) {
-        const { error: upd } = await supabase
-          .from("profiles")
-          .update({ avatar_url: url })
-          .eq("id", userId);
-        if (upd) throw upd;
-      } else if (up1) {
-        throw up1;
-      }
-
-      await supabase.auth.updateUser({ data: { avatar_url: url } });
-      router.refresh();
-
-      setMsg("Avatar aktualisiert ✔");
-    } catch (e) {
-      setErr("Avatar konnte nicht gespeichert werden.");
-    }
-  }
 
   // Password reset
   async function sendPasswordReset() {
@@ -330,31 +281,15 @@ export default function EinstellungenPage() {
 
                   <FieldRow label="Produkt-News">
                     <div className="flex items-center gap-3">
-                      <Toggle checked={marketingOptIn} onChange={setMarketingOptIn} />
+                      <Toggle checked={marketingOptIn} onChange={(v) => setMarketingOptIn(v)} />
                       <span className="text-sm text-white/70">Newsletter & Produkt-Updates</span>
                     </div>
-                  </FieldRow>
+                  </FieldRow>;
 
-                  <FieldRow label="Avatar" hint="PNG/JPG, bis 20 MB">
-                    <div className="flex items-center gap-4">
-                      <div className="h-20 w-20 rounded-full overflow-hidden ring-1 ring-white/15 bg-white/5 flex items-center justify-center">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        {avatarUrl ? <img alt="Avatar" src={avatarUrl} className="h-full w-full object-cover" /> : <span className="text-2xl">👤</span>}
-                      </div>
-                      <input
-                        ref={fileInputRef}
-                        type="file"
-                        accept="image/*"
-                        className="hidden"
-                        onChange={(e) => onAvatarChange(e.target.files?.[0])}
-                      />
-                      <Button variant="muted" type="button" onClick={() => fileInputRef.current?.click()}>Avatar hochladen</Button>
-                    </div>
-                  </FieldRow>
 
                   <div className="mt-4 flex gap-3">
                     <Button variant="primary" disabled={saving} type="submit">Speichern</Button>
-                    <Button variant="outline" type="button" onClick={() => { setUsername(""); setAvatarUrl(""); setMarketingOptIn(false); setLocale("de"); }}>Zurücksetzen</Button>
+                    <Button variant="outline" type="button" onClick={() => { setUsername(""); setMarketingOptIn(false); setLocale("de"); }}>Zurücksetzen</Button>
                   </div>
                 </form>
               </Card>
@@ -392,7 +327,7 @@ export default function EinstellungenPage() {
                     <div className="font-medium">Newsletter & Updates</div>
                     <p className="text-sm text-white/60">Produkt-News, Tipps & Sicherheitshinweise</p>
                   </div>
-                  <Toggle checked={marketingOptIn} onChange={setMarketingOptIn} />
+                  <Toggle checked={marketingOptIn} onChange={(v) => setMarketingOptIn(v)} />
                 </div>
                 <div className="mt-4 flex gap-3">
                   <Button variant="muted" onClick={handleSave}>Einstellungen speichern</Button>
@@ -409,7 +344,7 @@ export default function EinstellungenPage() {
                   {["system", "dark", "light"].map((t) => (
                     <button
                       key={t}
-                      onClick={() => setTheme(t as any)}
+                      onClick={() => setTheme(t as "system" | "dark" | "light")}
                       className={`rounded-xl border px-3 py-3 text-sm ${theme === t ? "border-white/80 bg-white/10" : "border-white/10 hover:border-white/20"}`}
                     >
                       {t === "system" ? "System" : t === "dark" ? "Dunkel" : "Hell"}
@@ -473,4 +408,4 @@ function DataPreview({ loader }: { loader: () => Promise<string> }) {
       )}
     </div>
   );
-};
+}
