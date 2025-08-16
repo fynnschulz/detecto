@@ -205,7 +205,6 @@ export default function EinstellungenPage() {
             <h1 className="text-2xl font-semibold">Kein Nutzer eingeloggt</h1>
             <p className="text-white/70 mt-2">Bitte melde dich an, um deine Einstellungen zu verwalten.</p>
             <div className="mt-6 flex items-center justify-center gap-3">
-              <a href="/login" className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm bg-white text-black hover:opacity-90">Zum Login</a>
               <a href="/" className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm border border-white/15 text-white hover:bg-white/5">Zur Startseite</a>
             </div>
           </div>

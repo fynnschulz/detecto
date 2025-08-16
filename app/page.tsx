@@ -41,6 +41,10 @@ export default function Home() {
   const [authChecked, setAuthChecked] = useState(false);
   const username = useUsername();
   const pathname = usePathname();
+  const displayName =
+    (session?.user?.user_metadata as any)?.username ||
+    username ||
+    (session?.user?.email ? session.user.email.split("@")[0] : "Gast");
   const navItems = [
     { label: "Website-Scan", href: "/WebsiteScan" },
     { label: "Suchmaschine", href: "/search" },
@@ -631,7 +635,7 @@ useEffect(() => {
                     <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center ring-1 ring-white/10 shadow-inner">👤</div>
                     <div className="min-w-0">
                       <div className="text-white font-semibold truncate">
-                        {username || session?.user?.user_metadata?.full_name || session?.user?.user_metadata?.name || (session?.user?.email ? session.user.email.split("@")[0] : "Gast")}
+                        {displayName}
                       </div>
                       <div className="text-gray-400 text-xs truncate">{session?.user?.email || (authChecked ? "" : "Prüfe Status…")}</div>
                     </div>
