@@ -71,6 +71,7 @@ export default function EinstellungenPage() {
   const [msg, setMsg] = useState("");
   const [err, setErr] = useState("");
   const [showToast, setShowToast] = useState(false);
+  const [notLoggedIn, setNotLoggedIn] = useState(false);
 
   const [userEmail, setUserEmail] = useState("");
 
@@ -88,7 +89,10 @@ export default function EinstellungenPage() {
     (async () => {
       try {
         const { data: { user } } = await supabase.auth.getUser();
-        if (!user) { router.replace("/login"); return; }
+        if (!user) {
+          if (mounted) { setNotLoggedIn(true); setLoading(false); }
+          return;
+        }
         if (!mounted) return;
 
         setUserEmail(user.email || "");
@@ -192,6 +196,23 @@ export default function EinstellungenPage() {
   }
 
   // ---------- UI
+  if (notLoggedIn) {
+    return (
+      <div className="relative min-h-[calc(100vh-4rem)]">
+        <HeroBackdrop />
+        <div className="mx-auto max-w-2xl px-6 py-24 text-center">
+          <div className="rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-8">
+            <h1 className="text-2xl font-semibold">Kein Nutzer eingeloggt</h1>
+            <p className="text-white/70 mt-2">Bitte melde dich an, um deine Einstellungen zu verwalten.</p>
+            <div className="mt-6 flex items-center justify-center gap-3">
+              <a href="/login" className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm bg-white text-black hover:opacity-90">Zum Login</a>
+              <a href="/" className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm border border-white/15 text-white hover:bg-white/5">Zur Startseite</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="relative min-h-[calc(100vh-4rem)]">
       <HeroBackdrop />
