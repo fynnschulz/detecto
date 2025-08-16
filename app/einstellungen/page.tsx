@@ -1,14 +1,11 @@
-
-
+// app/einstellungen/page.tsx — Detecto Settings (Client Component, avatar-free)
 "use client";
-
-// app/einstellungen/page.tsx — Detecto Settings (Client Component, redesigned)
 import { useEffect, useState, useTransition } from "react";
 import type { ReactNode, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 
-// ---------------- Background (local hero-style)
+// ---------- Backdrop (matches hero)
 function HeroBackdrop() {
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
@@ -19,7 +16,7 @@ function HeroBackdrop() {
   );
 }
 
-// ---------------- Small UI atoms
+// ---------- Tiny UI atoms
 function Card({ children }: { children: ReactNode }) {
   return <div className="rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl p-6">{children}</div>;
 }
@@ -59,55 +56,50 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean
       className={`relative inline-flex h-6 w-11 items-center rounded-full transition ${checked ? "bg-white" : "bg-white/20"}`}
       aria-pressed={checked}
     >
-      <span
-        className={`inline-block h-5 w-5 transform rounded-full bg-black transition ${checked ? "translate-x-5" : "translate-x-1"}`}
-      />
+      <span className={`inline-block h-5 w-5 transform rounded-full bg-black transition ${checked ? "translate-x-5" : "translate-x-1"}`} />
     </button>
   );
 }
 
-// ---------------- Page
+// ---------- Page
 export default function EinstellungenPage() {
   const supabase = createClientComponentClient();
-  const router = useRouter()
+  const router = useRouter();
 
   const [loading, setLoading] = useState(true);
   const [saving, startSaving] = useTransition();
-  const [msg, setMsg] = useState<string>("");
-  const [err, setErr] = useState<string>("");
+  const [msg, setMsg] = useState("");
+  const [err, setErr] = useState("");
   const [showToast, setShowToast] = useState(false);
 
-  const [userId, setUserId] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
+  // Preferences (all stored in auth.user.user_metadata; profiles.username optional best-effort)
   const [username, setUsername] = useState("");
-  const [locale, setLocale] = useState("de")
+  const [locale, setLocale] = useState("de");
   const [marketingOptIn, setMarketingOptIn] = useState(false);
   const [theme, setTheme] = useState<"system" | "dark" | "light">("dark");
 
   const [tab, setTab] = useState<"profil" | "sicherheit" | "benachrichtigungen" | "darstellung" | "datenschutz">("profil");
 
-  // Load session + profile
+  // Load session & existing metadata
   useEffect(() => {
     let mounted = true;
     (async () => {
       try {
         const { data: { user } } = await supabase.auth.getUser();
-        if (!user) return router.replace("/login");
+        if (!user) { router.replace("/login"); return; }
         if (!mounted) return;
-        setUserId(user.id);
+
         setUserEmail(user.email || "");
-        const { data: p } = await supabase
-          .from("profiles")
-          .select("username, locale, marketing_opt_in, theme")
-          .eq("id", user.id)
-          .maybeSingle();
-        setUsername(p?.username || user.email?.split("@")[0] || "")
-        setLocale(p?.locale || "de");
-        setMarketingOptIn(!!p?.marketing_opt_in);
-        const t = p?.theme as string | undefined;
+        // Read from auth metadata first
+        const meta = (user.user_metadata || {}) as any;
+        setUsername(meta.username || user.email?.split("@")[0] || "");
+        setLocale(meta.locale || "de");
+        setMarketingOptIn(!!meta.marketing_opt_in);
+        const t = meta.theme as string | undefined;
         setTheme(t === "system" || t === "dark" || t === "light" ? t : "dark");
-      } catch (e) {
+      } catch {
         setErr("Fehler beim Laden der Einstellungen.");
       } finally {
         if (mounted) setLoading(false);
@@ -116,7 +108,7 @@ export default function EinstellungenPage() {
     return () => { mounted = false; };
   }, [supabase, router]);
 
-  // Save profile
+  // Save (metadata-first; profiles.username best-effort, no crash if column missing)
   function handleSave(e?: FormEvent) {
     e?.preventDefault();
     setMsg("");
@@ -124,56 +116,46 @@ export default function EinstellungenPage() {
     startSaving(() => { (async () => {
       try {
         const { data: { user } } = await supabase.auth.getUser();
-        if (!user) return router.replace("/login");
+        if (!user) { router.replace("/login"); return; }
 
-        // Payload für Tabelle
-        const payload: Record<string, any> = {
-          username: (username || user.email?.split("@")[0] || "").slice(0, 80),
-          locale,
-          marketing_opt_in: marketingOptIn,
-          theme,
-        }
-
-        // Existenz prüfen
-        const { data: existing } = await supabase.from("profiles").select("id").eq("id", user.id).maybeSingle();
-
-        if (existing?.id) {
-          const { error: upd } = await supabase.from("profiles").update(payload).eq("id", user.id);
-          if (upd) throw upd;
-        } else {
-          const { error: ins } = await supabase.from("profiles").insert({ id: user.id, ...payload });
-          if (ins) throw ins;
-        }
-
-        // ✨ Zusätzlich: auth.user Metadaten aktualisieren (für Header/Profile-Menü)
+        // 1) Write to auth metadata (single source of truth for UI)
         const { error: metaErr } = await supabase.auth.updateUser({
           data: {
-            username: payload.username,
-            locale: payload.locale,
-            marketing_opt_in: payload.marketing_opt_in,
-            theme: payload.theme,
+            username: (username || user.email?.split("@")[0] || "").slice(0, 80),
+            locale,
+            marketing_opt_in: marketingOptIn,
+            theme,
           },
         });
-        if (metaErr) console.warn("auth.updateUser error", metaErr);
+        if (metaErr) throw metaErr;
+
+        // 2) Best-effort: also reflect username in profiles.username (ignore schema errors)
+        try {
+          const { data: existing } = await supabase
+            .from("profiles")
+            .select("id")
+            .eq("id", user.id)
+            .maybeSingle();
+          if (existing?.id) {
+            await supabase.from("profiles").update({ username }).eq("id", user.id);
+          } else {
+            await supabase.from("profiles").insert({ id: user.id, username });
+          }
+        } catch (_) {
+          // Ignore if table/column doesn't exist or RLS blocks; metadata remains source of truth
+        }
 
         setMsg("Gespeichert ✔");
         setShowToast(true);
-        setTimeout(() => setShowToast(false), 2200);
+        setTimeout(() => setShowToast(false), 1800);
         router.refresh();
       } catch (e: any) {
-        const raw = e?.message || e?.code || "";
-        console.error("Save failed:", e);
-        if (/row-level security|RLS/i.test(raw)) {
-          setErr("Speichern fehlgeschlagen: RLS-Policy blockiert (profiles). Bitte Insert/Update für eigene ID erlauben.");
-        } else {
-          setErr(`Speichern fehlgeschlagen: ${raw || "Unbekannter Fehler"}`);
-        }
+        setErr(`Speichern fehlgeschlagen: ${e?.message || e?.code || "Unbekannter Fehler"}`);
         setShowToast(true);
-        setTimeout(() => setShowToast(false), 3200);
+        setTimeout(() => setShowToast(false), 2600);
       }
     })(); });
   }
-
 
   // Password reset
   async function sendPasswordReset() {
@@ -184,30 +166,32 @@ export default function EinstellungenPage() {
     setMsg("Passwort-Reset-Link gesendet");
   }
 
-  // Data preview
+  // Data preview (optional)
   async function loadDataPreview() {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return "";
     const out: Record<string, any> = {};
-    const { data: p } = await supabase.from("profiles").select("*").eq("id", user.id).maybeSingle();
-    out.profile = p || null;
-    const { data: purchases } = await supabase.from("purchases").select("*").eq("user_id", user.id).order("created_at", { ascending: false });
-    out.purchases = purchases || [];
-    const { data: subs } = await supabase.from("subscriptions").select("*").eq("user_id", user.id);
-    out.subscriptions = subs || [];
+    try {
+      const { data: p } = await supabase.from("profiles").select("*").eq("id", user.id).maybeSingle();
+      out.profile = p || null;
+    } catch { out.profile = "(profiles nicht verfügbar)"; }
     return JSON.stringify(out, null, 2);
   }
 
-  // Deletion flag
+  // Delete flag (optional)
   async function requestDeletionFlag() {
     setMsg(""); setErr("");
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return;
-    await supabase.from("profiles").update({ deletion_requested: true, updated_at: new Date().toISOString() } as any).eq("id", user.id);
-    setMsg("Löschanfrage markiert");
+    try {
+      await supabase.from("profiles").update({ deletion_requested: true }).eq("id", user.id);
+      setMsg("Löschanfrage markiert");
+    } catch {
+      setErr("Konnte Löschanfrage nicht markieren (profiles nicht verfügbar)");
+    }
   }
 
-  // --------------- UI Layout
+  // ---------- UI
   return (
     <div className="relative min-h-[calc(100vh-4rem)]">
       <HeroBackdrop />
@@ -249,18 +233,17 @@ export default function EinstellungenPage() {
 
           {/* Content */}
           <div className="space-y-6">
-
             {/* Profil */}
             {tab === "profil" && (
               <Card>
-                <SectionTitle title="Profil" desc="Name, Sprache, Avatar & Opt-ins" />
+                <SectionTitle title="Profil" desc="Nutzername, Sprache & Opt-ins" />
                 <form onSubmit={handleSave}>
                   <FieldRow label="Nutzername">
                     <input
                       className="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white/20"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
-                      placeholder="Dein Name"
+                      placeholder="Dein Nutzername"
                     />
                   </FieldRow>
 
@@ -284,8 +267,7 @@ export default function EinstellungenPage() {
                       <Toggle checked={marketingOptIn} onChange={(v) => setMarketingOptIn(v)} />
                       <span className="text-sm text-white/70">Newsletter & Produkt-Updates</span>
                     </div>
-                  </FieldRow>;
-
+                  </FieldRow>
 
                   <div className="mt-4 flex gap-3">
                     <Button variant="primary" disabled={saving} type="submit">Speichern</Button>
@@ -373,7 +355,6 @@ export default function EinstellungenPage() {
               </Card>
             )}
 
-            {/* Skeleton during first load to reduce flicker */}
             {loading && (
               <Card>
                 <div className="h-24 w-full animate-pulse rounded-xl bg-white/5" />
@@ -386,7 +367,7 @@ export default function EinstellungenPage() {
   );
 }
 
-// -------- Data Preview
+// ---------- Data Preview (optional)
 function DataPreview({ loader }: { loader: () => Promise<string> }) {
   const [open, setOpen] = useState(false);
   const [json, setJson] = useState<string>("");
