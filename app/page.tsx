@@ -11,6 +11,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import FloatingInfoBox from "./components/FloatingInfoBox";
 import FeatureRotator from "./components/FeatureRotator";
+import { useUsername } from "@/app/lib/useUsername";
 
 export default function Home() {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -38,39 +39,7 @@ export default function Home() {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const supabase = useSupabaseClient();
   const [authChecked, setAuthChecked] = useState(false);
-  const [usernameDisplay, setUsernameDisplay] = useState<string>("");
-  const [avatarFromMeta, setAvatarFromMeta] = useState<string>("");
-  useEffect(() => {
-    let mounted = true;
-    (async () => {
-      try {
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!mounted) return;
-        if (!user) {
-          setUsernameDisplay("");
-          setAvatarFromMeta("");
-          return;
-        }
-        let u = (user.user_metadata as any)?.username as string | undefined;
-        const avatarMeta = (user.user_metadata as any)?.avatar_url as string | undefined;
-        if (!u) {
-          const { data: p } = await supabase
-            .from("profiles")
-            .select("username, avatar_url")
-            .eq("id", user.id)
-            .maybeSingle();
-          u = p?.username || (user.email ? user.email.split("@")[0] : "");
-          if (!avatarMeta && p?.avatar_url) setAvatarFromMeta(p.avatar_url);
-        } else {
-          if (avatarMeta) setAvatarFromMeta(avatarMeta);
-        }
-        setUsernameDisplay(u || "");
-      } catch {
-        // no-op
-      }
-    })();
-    return () => { mounted = false; };
-  }, [supabase, authChecked]);
+  const username = useUsername();
   const pathname = usePathname();
   const navItems = [
     { label: "Website-Scan", href: "/WebsiteScan" },
@@ -338,10 +307,7 @@ useEffect(() => {
                   Dein persönlicher KI‑Bodyguard
                 </span>
               </motion.h1>
-              <div className="mx-auto mt-3 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]" />
-              {isLoggedIn && (
-                <p className="mt-3 text-base md:text-lg text-gray-300 z-10">Hallo, {usernameDisplay || (session?.user?.email ? session.user.email.split("@")[0] : "Nutzer")}!</p>
-              )}
+              <div className="mx-auto mt-3 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"></div>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -652,12 +618,7 @@ useEffect(() => {
                 onClick={() => setShowProfileMenu((prev) => !prev)}
                 aria-label="Profil"
               >
-                {avatarFromMeta ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={avatarFromMeta} alt="Avatar" className="w-full h-full object-cover rounded-full" />
-                ) : (
-                  <span>👤</span>
-                )}
+                👤
               </button>
 
               {showProfileMenu && (
@@ -667,17 +628,10 @@ useEffect(() => {
 
                   {/* Header */}
                   <div className="flex items-center gap-3 px-4 py-4">
-                    <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center ring-1 ring-white/10 shadow-inner overflow-hidden">
-                      {avatarFromMeta ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={avatarFromMeta} alt="Avatar" className="w-full h-full object-cover" />
-                      ) : (
-                        <span>👤</span>
-                      )}
-                    </div>
+                    <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center ring-1 ring-white/10 shadow-inner">👤</div>
                     <div className="min-w-0">
                       <div className="text-white font-semibold truncate">
-                        {usernameDisplay || session?.user?.user_metadata?.full_name || session?.user?.user_metadata?.name || (session?.user?.email ? session.user.email.split("@")[0] : "Gast")}
+                        {username || session?.user?.user_metadata?.full_name || session?.user?.user_metadata?.name || (session?.user?.email ? session.user.email.split("@")[0] : "Gast")}
                       </div>
                       <div className="text-gray-400 text-xs truncate">{session?.user?.email || (authChecked ? "" : "Prüfe Status…")}</div>
                     </div>
