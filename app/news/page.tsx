@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import type { ReactNode } from "react";
 
@@ -21,15 +21,17 @@ const scaleIn = (delay = 0): Variants => ({
 });
 
 function Glow({ className = "" }: { className?: string }) {
+  const prefersReduced = useReducedMotion();
   return (
     <motion.div
       aria-hidden
-      className={`pointer-events-none absolute rounded-full blur-3xl opacity-30 ${className}`}
-      animate={{
-        y: [0, -10, 0, 10, 0],
-        x: [0, 6, 0, -6, 0],
+      className={`pointer-events-none absolute rounded-full blur-2xl opacity-25 ${className}`}
+      style={{ willChange: "transform" }}
+      animate={prefersReduced ? undefined : {
+        y: [0, -6, 0, 6, 0],
+        x: [0, 4, 0, -4, 0],
       }}
-      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      transition={prefersReduced ? undefined : { duration: 14, repeat: Infinity, ease: "easeInOut" }}
     />
   );
 }
@@ -69,10 +71,10 @@ function Accordion({ title, children }: { title: string; children: ReactNode }) 
         {open && (
           <motion.div
             key="content"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.28, ease: "easeOut" }}
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
             className="px-5 pb-5 text-white/80 text-sm md:text-base leading-relaxed"
           >
             {children}
@@ -88,8 +90,8 @@ export default function GuardianNewsPage() {
     <div className="relative min-h-screen overflow-x-clip bg-gradient-to-b from-[#0b0d10] via-[#070708] to-black text-white">
       {/* Backdrop like hero */}
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -top-40 -left-48 h-[48rem] w-[48rem] rounded-full blur-3xl opacity-25 bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600" />
-        <div className="absolute -bottom-48 -right-40 h-[48rem] w-[48rem] rounded-full blur-3xl opacity-20 bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-400" />
+        <div className="absolute -top-40 -left-48 h-[44rem] w-[44rem] rounded-full blur-2xl opacity-20 bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600" />
+        <div className="absolute -bottom-48 -right-40 h-[44rem] w-[44rem] rounded-full blur-2xl opacity-15 bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-400" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0)_60%)]" />
 
         <Glow className="-top-24 left-16 h-64 w-64 bg-cyan-500/40" />
@@ -132,13 +134,13 @@ export default function GuardianNewsPage() {
             className="mx-auto mt-6 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: [0, 1, 0.6, 1] }}
-            transition={{ duration: 2.2, repeat: Infinity }}
+            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
           />
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
             <Pill>Live-Erkennung</Pill>
-            <Pill>Datensparsam</Pill>
-            <Pill>Erklärt verständlich</Pill>
+            <Pill>Dein KI Bodyguard</Pill>
+            <Pill>Benutzerfreundlich</Pill>
             <Pill>Made for Humans</Pill>
           </div>
         </Container>
@@ -156,10 +158,14 @@ export default function GuardianNewsPage() {
                 emoji: "🛡️",
               },
               {
-                title: "Datenleck-Radar",
-                lead: "Durchsucht Darknet & Open Web auf Hinweise zu deinen Daten.",
-                points: ["Fundberichte im Dashboard", "Schritte zur Behebung", "Einfacher Opt-out-Generator"],
-                emoji: "🕵️‍♂️",
+                title: "Benutzerfreundlich & aktiv",
+                lead: "Guardian nimmt dir Arbeit ab: blockiert Absender, meldet Phishing und räumt Postfächer auf – wo möglich automatisiert.",
+                points: [
+                  "Ein-Klick-Blockieren & Spam-Filter",
+                  "Phishing-Absender automatisch sperren",
+                  "Geführte Melde- & Opt-out-Flows",
+                ],
+                emoji: "🤖",
               },
               {
                 title: "Klare Entscheidungen",
@@ -174,8 +180,8 @@ export default function GuardianNewsPage() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.3 }}
-                whileHover={{ y: -4 }}
-                className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl shadow-[0_0_0_0_rgba(0,0,0,0.0)] hover:shadow-[0_8px_32px_rgba(0,255,255,0.08)] transition"
+                whileHover={{ scale: 1.01 }}
+                className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl shadow-[0_0_0_0_rgba(0,0,0,0.0)] hover:shadow-[0_6px_20px_rgba(0,255,255,0.06)] transition"
               >
                 <div className="text-4xl" aria-hidden>{f.emoji}</div>
                 <h3 className="mt-2 text-2xl md:text-3xl font-extrabold">{f.title}</h3>
@@ -249,9 +255,9 @@ export default function GuardianNewsPage() {
           >
             <div aria-hidden className="relative">
               <motion.div
-                className="pointer-events-none absolute -inset-10 mx-auto h-[18rem] w-[18rem] rounded-full bg-gradient-to-tr from-cyan-400/20 via-white/10 to-fuchsia-400/20 blur-3xl"
+                className="pointer-events-none absolute -inset-10 mx-auto h-[18rem] w-[18rem] rounded-full bg-gradient-to-tr from-cyan-400/20 via-white/10 to-fuchsia-400/20 blur-2xl"
                 animate={{ rotate: [0, 15, 0, -15, 0] }}
-                transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
               />
             </div>
             <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">Bereit, dich schützen zu lassen?</h3>
