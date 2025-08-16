@@ -322,14 +322,14 @@ export default function EinstellungenPage() {
             {tab === "darstellung" && (
               <Card>
                 <SectionTitle title="Darstellung" desc="Theme & Look" />
-                <div className="grid grid-cols-3 gap-3 max-w-md">
-                  {["system", "dark", "light"].map((t) => (
+                <div className="grid grid-cols-2 gap-3 max-w-md">
+                  {["dark", "light"].map((t) => (
                     <button
                       key={t}
-                      onClick={() => setTheme(t as "system" | "dark" | "light")}
+                      onClick={() => setTheme(t as "dark" | "light")}
                       className={`rounded-xl border px-3 py-3 text-sm ${theme === t ? "border-white/80 bg-white/10" : "border-white/10 hover:border-white/20"}`}
                     >
-                      {t === "system" ? "System" : t === "dark" ? "Dunkel" : "Hell"}
+                      {t === "dark" ? "Dunkel" : "Hell"}
                     </button>
                   ))}
                 </div>
@@ -345,6 +345,16 @@ export default function EinstellungenPage() {
               <Card>
                 <SectionTitle title="Datenschutz" desc="Daten einsehen & Account-Löschung" />
                 <DataPreview loader={loadDataPreview} />
+                <div className="mt-4 text-xs text-white/70">
+                  Hinweise: Siehe unsere{" "}
+                  <a href="/datenschutz" className="underline underline-offset-2 hover:text-white">Datenschutz</a>,
+                  {" "}
+                  <a href="/nutzungsbedingungen" className="underline underline-offset-2 hover:text-white">Nutzungsbedingungen</a>
+                  {" "}
+                  und
+                  {" "}
+                  <a href="/rechtliches" className="underline underline-offset-2 hover:text-white">Rechtliches</a>.
+                </div>
                 <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -407,7 +417,7 @@ function DataPreview({ loader }: { loader: () => Promise<string> }) {
 
   return (
     <div>
-      <Button variant="muted" onClick={() => setOpen(v => !v)}>{open ? "Daten ausblenden" : "Meine Daten anzeigen (V1)"}</Button>
+      <Button variant="muted" onClick={() => setOpen(v => !v)}>{open ? "Daten ausblenden" : "Meine Daten anzeigen"}</Button>
       {open && (
         <pre className="mt-3 max-h-80 overflow-auto rounded-xl bg-white/5 p-3 text-xs border border-white/10 whitespace-pre-wrap">{loading ? "Laden…" : json || "Keine Daten gefunden."}</pre>
       )}
