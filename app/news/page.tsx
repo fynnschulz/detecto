@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { Variants } from "framer-motion";
@@ -88,6 +88,32 @@ function Accordion({ title, children }: { title: string; children: ReactNode }) 
 export default function GuardianNewsPage() {
   const prefersReduced = useReducedMotion();
 
+  // Disable expensive animations on very first load and defer heavy decoration
+  const [firstVisit, setFirstVisit] = useState(true);
+  const [decorReady, setDecorReady] = useState(false);
+
+  useEffect(() => {
+    try {
+      const seen = sessionStorage.getItem("newsVisited");
+      if (seen) {
+        setFirstVisit(false);
+      } else {
+        sessionStorage.setItem("newsVisited", "1");
+        setFirstVisit(true);
+      }
+    } catch {
+      // if sessionStorage is unavailable, stay conservative
+      setFirstVisit(true);
+    }
+
+    // Defer decorative/background work until the browser is idle
+    if (typeof (window as any).requestIdleCallback === "function") {
+      (window as any).requestIdleCallback(() => setDecorReady(true), { timeout: 1200 });
+    } else {
+      setTimeout(() => setDecorReady(true), 600);
+    }
+  }, []);
+
   return (
     <div className="relative min-h-screen overflow-x-clip bg-gradient-to-b from-[#0b0d10] via-[#070708] to-black text-white">
       {/* Backdrop like hero */}
@@ -96,13 +122,17 @@ export default function GuardianNewsPage() {
         <div className="absolute -bottom-48 -right-40 h-[44rem] w-[44rem] rounded-full blur-2xl opacity-15 bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-400" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0)_60%)]" />
 
-        <Glow className="-top-24 left-16 h-64 w-64 bg-cyan-500/40" />
-        <Glow className="bottom-32 right-24 h-72 w-72 bg-fuchsia-500/30" />
-        <Glow className="top-1/3 right-1/3 h-56 w-56 bg-indigo-500/25" />
+        {decorReady && (
+          <>
+            <Glow className="-top-24 left-16 h-64 w-64 bg-cyan-500/40" />
+            <Glow className="bottom-32 right-24 h-72 w-72 bg-fuchsia-500/30" />
+            <Glow className="top-1/3 right-1/3 h-56 w-56 bg-indigo-500/25" />
+          </>
+        )}
       </div>
 
       {/* HERO */}
-      <motion.header initial="hidden" animate="show" variants={fadeIn()} className="pt-24 md:pt-32 pb-16 text-center transform-gpu">
+      <motion.header initial={firstVisit ? false : "hidden"} animate={firstVisit ? undefined : "show"} variants={firstVisit ? undefined : fadeIn()} className="pt-24 md:pt-32 pb-16 text-center transform-gpu">
         <Container>
           <motion.h1 variants={riseIn(0)} className="text-5xl md:text-7xl font-extrabold leading-[1.1] [text-shadow:0_1px_8px_rgba(0,0,0,0.35)] transform-gpu" style={{ willChange: "transform" }}>
             <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
@@ -134,9 +164,9 @@ export default function GuardianNewsPage() {
 
           <motion.div
             className="mx-auto mt-6 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px] transform-gpu"
-            initial={prefersReduced ? { opacity: 1 } : { opacity: 0 }}
-            animate={prefersReduced ? { opacity: 1 } : { opacity: [0, 1, 0.6, 1] }}
-            transition={prefersReduced ? undefined : { duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+            initial={firstVisit ? false : prefersReduced ? { opacity: 1 } : { opacity: 0 }}
+            animate={firstVisit ? undefined : prefersReduced ? { opacity: 1 } : { opacity: [0, 1, 0.6, 1] }}
+            transition={firstVisit ? undefined : prefersReduced ? undefined : { duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
             style={{ willChange: "opacity, transform" }}
           />
 
@@ -150,9 +180,9 @@ export default function GuardianNewsPage() {
       </motion.header>
 
       {/* BIG FEATURES */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16" style={{ contentVisibility: "auto", containIntrinsicSize: "900px" }}>
         <Container>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3" style={{ contentVisibility: "auto", containIntrinsicSize: "1200px" }}>
             {[
               {
                 title: "Echtzeit-Erkennung",
@@ -202,7 +232,7 @@ export default function GuardianNewsPage() {
       </section>
 
       {/* HOW IT WORKS + WHY BEST (accordions) */}
-      <section className="py-8 md:py-12">
+      <section className="py-8 md:py-12" style={{ contentVisibility: "auto", containIntrinsicSize: "1000px" }}>
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-4">
@@ -248,7 +278,7 @@ export default function GuardianNewsPage() {
       </section>
 
       {/* CALL TO ACTION LARGE */}
-      <section className="py-16 md:py-24 text-center">
+      <section className="py-16 md:py-24 text-center" style={{ contentVisibility: "auto", containIntrinsicSize: "800px" }}>
         <Container>
           <motion.div
             variants={scaleIn(0.1)}
@@ -261,8 +291,8 @@ export default function GuardianNewsPage() {
             <div aria-hidden className="relative">
               <motion.div
                 className="pointer-events-none absolute -inset-10 mx-auto h-[18rem] w-[18rem] rounded-full bg-gradient-to-tr from-cyan-400/20 via-white/10 to-fuchsia-400/20 blur-2xl transform-gpu"
-                animate={prefersReduced ? undefined : { rotate: [0, 15, 0, -15, 0] }}
-                transition={prefersReduced ? undefined : { duration: 22, repeat: Infinity, ease: "easeInOut" }}
+                animate={firstVisit ? undefined : (prefersReduced ? undefined : { rotate: [0, 15, 0, -15, 0] })}
+                transition={firstVisit ? undefined : (prefersReduced ? undefined : { duration: 22, repeat: Infinity, ease: "easeInOut" })}
                 style={{ willChange: "transform" }}
               />
             </div>
