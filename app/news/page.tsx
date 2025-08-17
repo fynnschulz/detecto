@@ -91,6 +91,9 @@ export default function GuardianNewsPage() {
   // Disable expensive animations on very first load and defer heavy decoration
   const [firstVisit, setFirstVisit] = useState(true);
   const [decorReady, setDecorReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [hasScrolledOnce, setHasScrolledOnce] = useState(false);
+  const firstMobileVisit = firstVisit && isMobile;
 
   useEffect(() => {
     try {
@@ -112,17 +115,32 @@ export default function GuardianNewsPage() {
     } else {
       setTimeout(() => setDecorReady(true), 600);
     }
+
+    // detect coarse pointer/mobile
+    try {
+      const coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+      setIsMobile(!!coarse);
+    } catch {
+      setIsMobile(false);
+    }
+
+    // mark first user scroll (used to delay heavy effects on first mobile visit)
+    const onScrollOnce = () => {
+      setHasScrolledOnce(true);
+      window.removeEventListener('scroll', onScrollOnce, { passive: true } as any);
+    };
+    window.addEventListener('scroll', onScrollOnce, { passive: true } as any);
   }, []);
 
   return (
     <div className="relative min-h-screen overflow-x-clip bg-gradient-to-b from-[#0b0d10] via-[#070708] to-black text-white">
       {/* Backdrop like hero */}
       <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -top-40 -left-48 h-[44rem] w-[44rem] rounded-full blur-2xl opacity-20 bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600" />
-        <div className="absolute -bottom-48 -right-40 h-[44rem] w-[44rem] rounded-full blur-2xl opacity-15 bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-400" />
+        <div className={`absolute -top-40 -left-48 h-[44rem] w-[44rem] rounded-full ${firstMobileVisit ? 'blur-md opacity-15' : 'blur-2xl opacity-20'} bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600`} />
+        <div className={`absolute -bottom-48 -right-40 h-[44rem] w-[44rem] rounded-full ${firstMobileVisit ? 'blur-md opacity-12' : 'blur-2xl opacity-15'} bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-400`} />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0)_60%)]" />
 
-        {decorReady && (
+        {((!firstMobileVisit && decorReady) || (firstMobileVisit && decorReady && hasScrolledOnce)) && (
           <>
             <Glow className="-top-24 left-16 h-64 w-64 bg-cyan-500/40" />
             <Glow className="bottom-32 right-24 h-72 w-72 bg-fuchsia-500/30" />
@@ -147,7 +165,7 @@ export default function GuardianNewsPage() {
             Erklärungen und pragmatischen Empfehlungen.
           </motion.p>
 
-          <motion.div variants={fadeIn(0.2)} className="mt-8 flex flex-col sm:flex-row justify-center gap-4 transform-gpu" style={{ willChange: "transform" }}>
+          <motion.div variants={fadeIn(0.2)} className="mt-8 flex flex-col sm:flex-row justify-center gap-4 transform-gpu" style={{ willChange: 'transform', contain: 'layout paint size' }}>
             <Link
               href="/guardian"
               className="px-8 py-4 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow"
@@ -214,7 +232,7 @@ export default function GuardianNewsPage() {
                 whileInView="show"
                 viewport={{ once: true, amount: 0.3 }}
                 whileHover={prefersReduced ? undefined : { scale: 1.01 }}
-                className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl shadow-[0_0_0_0_rgba(0,0,0,0.0)] hover:shadow-[0_6px_20px_rgba(0,255,255,0.06)] transition transform-gpu"
+                className={`rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 ${firstMobileVisit ? 'backdrop-blur' : 'backdrop-blur-xl'} shadow-[0_0_0_0_rgba(0,0,0,0.0)] hover:shadow-[0_6px_20px_rgba(0,255,255,0.06)] transition transform-gpu`}
                 style={{ willChange: "transform" }}
               >
                 <div className="text-4xl" aria-hidden>{f.emoji}</div>
@@ -285,7 +303,7 @@ export default function GuardianNewsPage() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="rounded-3xl border border-white/10 bg-white/[0.05] p-8 md:p-12 backdrop-blur-xl transform-gpu"
+            className={`rounded-3xl border border-white/10 bg-white/[0.05] p-8 md:p-12 ${firstMobileVisit ? 'backdrop-blur' : 'backdrop-blur-xl'} transform-gpu`}
             style={{ willChange: "transform" }}
           >
             <div aria-hidden className="relative">
