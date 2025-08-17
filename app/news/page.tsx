@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import type { ReactNode } from "react";
+
+const LESS_MOTION = true;
 
 // --- Animation helpers
 const fadeIn = (delay = 0): Variants => ({
@@ -51,6 +53,8 @@ function Pill({ children }: { children: ReactNode }) {
 
 function Accordion({ title, children }: { title: string; children: ReactNode }) {
   const [open, setOpen] = useState(false);
+  const prefers = useReducedMotion();
+  const reduce = prefers || LESS_MOTION;
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.04] overflow-hidden">
       <button
@@ -59,111 +63,75 @@ function Accordion({ title, children }: { title: string; children: ReactNode }) 
         aria-expanded={open}
       >
         <span className="font-semibold text-white text-lg md:text-xl">{title}</span>
-        <motion.span
-          className="text-white/70 text-xl"
-          animate={{ rotate: open ? 90 : 0 }}
-          transition={{ duration: 0.25 }}
-        >
-          +
-        </motion.span>
-      </button>
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="content"
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.98 }}
-            transition={{ duration: 0.18, ease: "easeOut" }}
-            className="px-5 pb-5 text-white/80 text-sm md:text-base leading-relaxed"
+        {reduce ? (
+          <span className="text-white/70 text-xl">+</span>
+        ) : (
+          <motion.span
+            className="text-white/70 text-xl"
+            animate={{ rotate: open ? 90 : 0 }}
+            transition={{ duration: 0.25 }}
           >
-            {children}
-          </motion.div>
+            +
+          </motion.span>
         )}
-      </AnimatePresence>
+      </button>
+      {reduce ? (
+        open && (
+          <div className="px-5 pb-5 text-white/80 text-sm md:text-base leading-relaxed">
+            {children}
+          </div>
+        )
+      ) : (
+        <AnimatePresence initial={false}>
+          {open && (
+            <motion.div
+              key="content"
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.98 }}
+              transition={{ duration: 0.18, ease: "easeOut" }}
+              className="px-5 pb-5 text-white/80 text-sm md:text-base leading-relaxed"
+            >
+              {children}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
     </div>
   );
 }
 
 export default function GuardianNewsPage() {
   const prefersReduced = useReducedMotion();
-
-  // Disable expensive animations on very first load and defer heavy decoration
-  const [firstVisit, setFirstVisit] = useState(true);
-  const [decorReady, setDecorReady] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const [hasScrolledOnce, setHasScrolledOnce] = useState(false);
-  const firstMobileVisit = firstVisit && isMobile;
-
-  useEffect(() => {
-    try {
-      const seen = sessionStorage.getItem("newsVisited");
-      if (seen) {
-        setFirstVisit(false);
-      } else {
-        sessionStorage.setItem("newsVisited", "1");
-        setFirstVisit(true);
-      }
-    } catch {
-      // if sessionStorage is unavailable, stay conservative
-      setFirstVisit(true);
-    }
-
-    // Defer decorative/background work until the browser is idle
-    if (typeof (window as any).requestIdleCallback === "function") {
-      (window as any).requestIdleCallback(() => setDecorReady(true), { timeout: 1200 });
-    } else {
-      setTimeout(() => setDecorReady(true), 600);
-    }
-
-    // detect coarse pointer/mobile
-    try {
-      const coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
-      setIsMobile(!!coarse);
-    } catch {
-      setIsMobile(false);
-    }
-
-    // mark first user scroll (used to delay heavy effects on first mobile visit)
-    const onScrollOnce = () => {
-      setHasScrolledOnce(true);
-      window.removeEventListener('scroll', onScrollOnce as any);
-    };
-    window.addEventListener('scroll', onScrollOnce, { passive: true } as any);
-    return () => {
-      window.removeEventListener('scroll', onScrollOnce as any);
-    };
-  }, []);
+  const reduce = prefersReduced || LESS_MOTION;
 
   return (
     <div className="relative min-h-screen overflow-x-clip bg-gradient-to-b from-[#0b0d10] via-[#070708] to-black text-white">
       {/* Backdrop like hero */}
-      <div aria-hidden className={`pointer-events-none ${firstMobileVisit ? 'absolute' : 'fixed'} inset-0 -z-10`}>
-        <div className={`absolute -top-40 -left-48 h-[44rem] w-[44rem] rounded-full ${
-          firstMobileVisit
-            ? (hasScrolledOnce ? 'blur-md opacity-15' : 'blur-0 opacity-15')
-            : 'blur-2xl opacity-20'
-        } bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600`} />
-        <div className={`absolute -bottom-48 -right-40 h-[44rem] w-[44rem] rounded-full ${
-          firstMobileVisit
-            ? (hasScrolledOnce ? 'blur-md opacity-12' : 'blur-0 opacity-12')
-            : 'blur-2xl opacity-15'
-        } bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-400`} />
-        <div className={`absolute inset-0 ${firstMobileVisit && !hasScrolledOnce ? 'opacity-70' : 'opacity-100'} bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0)_60%)]`} />
+      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
+        <div className="absolute -top-40 -left-48 h-[44rem] w-[44rem] rounded-full blur-2xl opacity-20 bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600" />
+        <div className="absolute -bottom-48 -right-40 h-[44rem] w-[44rem] rounded-full blur-2xl opacity-15 bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-400" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0)_60%)]" />
 
-        {((!firstMobileVisit && decorReady) || (firstMobileVisit && decorReady && hasScrolledOnce)) && (
-          <>
-            <Glow className="-top-24 left-16 h-64 w-64 bg-cyan-500/40" />
-            <Glow className="bottom-32 right-24 h-72 w-72 bg-fuchsia-500/30" />
-            <Glow className="top-1/3 right-1/3 h-56 w-56 bg-indigo-500/25" />
-          </>
-        )}
+        <Glow className="-top-24 left-16 h-64 w-64 bg-cyan-500/40" />
+        <Glow className="bottom-32 right-24 h-72 w-72 bg-fuchsia-500/30" />
+        <Glow className="top-1/3 right-1/3 h-56 w-56 bg-indigo-500/25" />
       </div>
 
       {/* HERO */}
-      <motion.header initial={firstVisit ? false : "hidden"} animate={firstVisit ? undefined : "show"} variants={firstVisit ? undefined : fadeIn()} className="pt-24 md:pt-32 pb-16 text-center transform-gpu">
+      <motion.header
+        initial={reduce ? undefined : "hidden"}
+        animate={reduce ? undefined : "show"}
+        variants={reduce ? undefined : fadeIn()}
+        className="pt-24 md:pt-32 pb-16 text-center"
+      >
         <Container>
-          <motion.h1 variants={riseIn(0)} className="text-5xl md:text-7xl font-extrabold leading-[1.1] [text-shadow:0_1px_8px_rgba(0,0,0,0.35)] transform-gpu" style={{ willChange: "transform" }}>
+          <motion.h1
+            variants={reduce ? undefined : riseIn(0)}
+            initial={reduce ? undefined : "hidden"}
+            animate={reduce ? undefined : "show"}
+            className="text-5xl md:text-7xl font-extrabold leading-[1.1] [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]"
+          >
             <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
               GUARDIAN
             </span>
@@ -171,12 +139,22 @@ export default function GuardianNewsPage() {
             <span>Dein unsichtbarer Schild im Netz.</span>
           </motion.h1>
 
-          <motion.p variants={fadeIn(0.1)} className="mx-auto mt-5 max-w-3xl text-lg md:text-2xl text-white/80 transform-gpu" style={{ willChange: "transform" }}>
+          <motion.p
+            variants={reduce ? undefined : fadeIn(0.1)}
+            initial={reduce ? undefined : "hidden"}
+            animate={reduce ? undefined : "show"}
+            className="mx-auto mt-5 max-w-3xl text-lg md:text-2xl text-white/80"
+          >
             Plakativer Schutz vor Phishing, Betrug, Datenlecks und dubiosen Angeboten – in Echtzeit, mit klaren
             Erklärungen und pragmatischen Empfehlungen.
           </motion.p>
 
-          <motion.div variants={fadeIn(0.2)} className="mt-8 flex flex-col sm:flex-row justify-center gap-4 transform-gpu" style={{ willChange: 'transform', contain: 'layout paint size' }}>
+          <motion.div
+            variants={reduce ? undefined : fadeIn(0.2)}
+            initial={reduce ? undefined : "hidden"}
+            animate={reduce ? undefined : "show"}
+            className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
+          >
             <Link
               href="/guardian"
               className="px-8 py-4 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow"
@@ -192,11 +170,10 @@ export default function GuardianNewsPage() {
           </motion.div>
 
           <motion.div
-            className="mx-auto mt-6 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px] transform-gpu"
-            initial={firstVisit ? false : prefersReduced ? { opacity: 1 } : { opacity: 0 }}
-            animate={firstVisit ? undefined : prefersReduced ? { opacity: 1 } : { opacity: [0, 1, 0.6, 1] }}
-            transition={firstVisit ? undefined : prefersReduced ? undefined : { duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-            style={{ willChange: "opacity, transform" }}
+            className="mx-auto mt-6 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"
+            initial={reduce ? undefined : { opacity: 0 }}
+            animate={reduce ? undefined : { opacity: [0, 1, 0.6, 1] }}
+            transition={reduce ? undefined : { duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
           />
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
@@ -209,9 +186,9 @@ export default function GuardianNewsPage() {
       </motion.header>
 
       {/* BIG FEATURES */}
-      <section className="py-12 md:py-16" style={{ contentVisibility: "auto", containIntrinsicSize: "900px" }}>
+      <section className="py-12 md:py-16">
         <Container>
-          <div className="grid gap-6 md:grid-cols-3" style={{ contentVisibility: "auto", containIntrinsicSize: "1200px" }}>
+          <div className="grid gap-6 md:grid-cols-3">
             {[
               {
                 title: "Echtzeit-Erkennung",
@@ -238,13 +215,12 @@ export default function GuardianNewsPage() {
             ].map((f) => (
               <motion.div
                 key={f.title}
-                variants={scaleIn(0.05)}
-                initial="hidden"
-                whileInView="show"
+                variants={reduce ? undefined : scaleIn(0.05)}
+                initial={reduce ? undefined : "hidden"}
+                whileInView={reduce ? undefined : "show"}
+                whileHover={undefined}
                 viewport={{ once: true, amount: 0.3 }}
-                whileHover={prefersReduced ? undefined : { scale: 1.01 }}
-                className={`rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 ${firstMobileVisit ? (hasScrolledOnce ? 'backdrop-blur' : 'backdrop-blur-0') : 'backdrop-blur-xl'} shadow-[0_0_0_0_rgba(0,0,0,0.0)] hover:shadow-[0_6px_20px_rgba(0,255,255,0.06)] transition transform-gpu`}
-                style={{ willChange: "transform" }}
+                className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl shadow-[0_0_0_0_rgba(0,0,0,0.0)] hover:shadow-[0_6px_20px_rgba(0,255,255,0.06)] transition"
               >
                 <div className="text-4xl" aria-hidden>{f.emoji}</div>
                 <h3 className="mt-2 text-2xl md:text-3xl font-extrabold">{f.title}</h3>
@@ -261,23 +237,23 @@ export default function GuardianNewsPage() {
       </section>
 
       {/* HOW IT WORKS + WHY BEST (accordions) */}
-      <section className="py-8 md:py-12" style={{ contentVisibility: "auto", containIntrinsicSize: "1000px" }}>
+      <section className="py-8 md:py-12">
         <Container>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-extrabold">Wie GUARDIAN funktioniert</h2>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
                 <Accordion title="1) Erkennen – live & lokal">
                   GUARDIAN prüft Webseiten, Links und Inhalte beim Öffnen auf bekannte Betrugsmuster, manipulierte UI,
                   dubiose Zahlungswege und Warnsignale. Schlank, schnell, datensparsam.
                 </Accordion>
               </motion.div>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
                 <Accordion title="2) Verstehen – klare Erklärungen">
                   Statt kryptischer Codes erhältst du verständliche Hinweise: Was ist auffällig, warum ist es riskant, welche Daten würden betroffen sein?
                 </Accordion>
               </motion.div>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
                 <Accordion title="3) Handeln – sofort & sicher">
                   Blockieren, ignorieren oder sichere Alternative öffnen: GUARDIAN gibt dir konkrete, klickbare Optionen – inkl. seriösen Empfehlungen.
                 </Accordion>
@@ -286,17 +262,17 @@ export default function GuardianNewsPage() {
 
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-extrabold">Warum GUARDIAN das Beste ist</h2>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
                 <Accordion title="Ernsthafte Erkennung statt reiner Blacklists">
                   Blacklists sind immer zu spät. GUARDIAN kombiniert Mustererkennung, Heuristiken und Kontextsignale – und warnt, bevor Schaden entsteht.
                 </Accordion>
               </motion.div>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
                 <Accordion title="Datensparsam, respektvoll, transparent">
                   Wir sammeln nicht deine Welt. Hinweise werden lokal bewertet, sensible Daten bleiben bei dir. Nur notwendige Checks verlassen dein Gerät.
                 </Accordion>
               </motion.div>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
                 <Accordion title="Erklärungen statt Panik">
                   Warnungen sind handlungsorientiert: kurz, klar und mit Lösungsvorschlag. So triffst du informierte Entscheidungen – ohne Angst-Marketing.
                 </Accordion>
@@ -307,36 +283,34 @@ export default function GuardianNewsPage() {
       </section>
 
       {/* CALL TO ACTION LARGE */}
-      <section className="py-16 md:py-24 text-center" style={{ contentVisibility: "auto", containIntrinsicSize: "800px" }}>
+      <section className="py-16 md:py-24 text-center">
         <Container>
           <motion.div
-            variants={scaleIn(0.1)}
-            initial="hidden"
-            whileInView="show"
+            variants={reduce ? undefined : scaleIn(0.1)}
+            initial={reduce ? undefined : "hidden"}
+            whileInView={reduce ? undefined : "show"}
             viewport={{ once: true, amount: 0.3 }}
-            className={`rounded-3xl border border-white/10 bg-white/[0.05] p-8 md:p-12 ${firstMobileVisit ? (hasScrolledOnce ? 'backdrop-blur' : 'backdrop-blur-0') : 'backdrop-blur-xl'} transform-gpu`}
-            style={{ willChange: "transform" }}
+            className="rounded-3xl border border-white/10 bg-white/[0.05] p-8 md:p-12 backdrop-blur-xl"
           >
             <div aria-hidden className="relative">
               <motion.div
-                className="pointer-events-none absolute -inset-10 mx-auto h-[18rem] w-[18rem] rounded-full bg-gradient-to-tr from-cyan-400/20 via-white/10 to-fuchsia-400/20 blur-2xl transform-gpu"
-                animate={firstVisit ? undefined : (prefersReduced ? undefined : { rotate: [0, 15, 0, -15, 0] })}
-                transition={firstVisit ? undefined : (prefersReduced ? undefined : { duration: 22, repeat: Infinity, ease: "easeInOut" })}
-                style={{ willChange: "transform" }}
+                className="pointer-events-none absolute -inset-10 mx-auto h-[18rem] w-[18rem] rounded-full bg-gradient-to-tr from-cyan-400/20 via-white/10 to-fuchsia-400/20 blur-2xl"
+                animate={{ rotate: [0, 15, 0, -15, 0] }}
+                transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
               />
             </div>
             <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">Bereit, dich schützen zu lassen?</h3>
             <p className="mt-4 text-lg md:text-2xl text-white/80 max-w-3xl mx-auto">
               Aktiviere GUARDIAN und erhalte Schutz in Echtzeit – mit verständlichen Erklärungen und sicheren Alternativen.
             </p>
-            <motion.div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center transform-gpu" style={{ willChange: "transform" }} initial={prefersReduced ? false : { opacity: 0, y: 8 }} animate={prefersReduced ? undefined : { opacity: 1, y: 0 }} transition={prefersReduced ? undefined : { duration: 0.4, ease: "easeOut" }}>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/guardian" className="px-8 py-4 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow">
                 Guardian aktivieren
               </Link>
               <Link href="/einstellungen" className="px-8 py-4 rounded-full border border-white/20 text-white hover:bg-white/10 transition">
                 Einstellungen öffnen
               </Link>
-            </motion.div>
+            </div>
           </motion.div>
         </Container>
       </section>
