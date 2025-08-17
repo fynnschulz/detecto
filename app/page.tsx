@@ -5,41 +5,13 @@ import AuthModal from "@/app/components/AuthModal.tsx";
 import { useEffect, useState } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import type { Variants } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import FloatingInfoBox from "./components/FloatingInfoBox";
 import FeatureRotator from "./components/FeatureRotator";
 import { useUsername } from "@/app/lib/useUsername";
-
-// --- Lightweight animation helpers (perf-friendly)
-const fadeIn = (delay = 0): Variants => ({
-  hidden: { opacity: 0, y: 14 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut", delay } },
-});
-const riseIn = (delay = 0): Variants => ({
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay } },
-});
-const scaleIn = (delay = 0): Variants => ({
-  hidden: { opacity: 0, scale: 0.98 },
-  show: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut", delay } },
-});
-
-function Glow({ className = "" }: { className?: string }) {
-  const prefersReduced = useReducedMotion();
-  return (
-    <motion.div
-      aria-hidden
-      className={`pointer-events-none absolute rounded-full blur-2xl ${className}`}
-      style={{ willChange: "transform" }}
-      animate={prefersReduced ? undefined : { y: [0, -6, 0, 6, 0], x: [0, 4, 0, -4, 0] }}
-      transition={prefersReduced ? undefined : { duration: 14, repeat: Infinity, ease: "easeInOut" }}
-    />
-  );
-}
 
 export default function Home() {
   const [showMainContent, setShowMainContent] = useState(false);
@@ -257,14 +229,6 @@ useEffect(() => {
 
   return (
     <div className="bg-gradient-to-b from-gray-800 via-[#111] to-black text-white w-full min-h-screen overflow-x-hidden font-sans relative">
-      {/* Soft animated backdrop */}
-      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -top-40 -left-48 h-[42rem] w-[42rem] rounded-full blur-2xl opacity-20 bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600" />
-        <div className="absolute -bottom-48 -right-40 h-[40rem] w-[40rem] rounded-full blur-2xl opacity-15 bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-400" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0)_60%)]" />
-        <Glow className="-top-24 left-16 h-64 w-64 bg-cyan-400/30" />
-        <Glow className="bottom-28 right-24 h-72 w-72 bg-fuchsia-400/25" />
-      </div>
       <AnimatePresence>
         {!showMainContent && (
           <motion.div
@@ -338,25 +302,20 @@ useEffect(() => {
               )}
               
               <motion.h1
-                variants={riseIn(0)}
-                initial="hidden"
-                animate="show"
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.4, ease: "easeOut" }}
                 className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500 relative leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.35),0_0_24px_rgba(59,130,246,0.15)]"
               >
                 <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
                   Dein persönlicher KI‑Bodyguard
                 </span>
               </motion.h1>
-              <motion.div
-                className="mx-auto mt-3 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1, 0.7, 1] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              />
+              <div className="mx-auto mt-3 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"></div>
               <motion.p
-                variants={fadeIn(0.05)}
-                initial="hidden"
-                animate="show"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.2 }}
                 className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]"
               >
                 Detecto schützt dich proaktiv vor Phishing, Datenlecks und riskanten Webseiten. Erkenne Bedrohungen in Echtzeit, erhalte klare Erklärungen sowie sichere Alternativen – datensparsam und praxisnah.
@@ -419,7 +378,7 @@ useEffect(() => {
               >
                 <Link
                   href="/guardian"
-                  className="px-7 py-3.5 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow hover:shadow-[0_12px_40px_rgba(34,211,238,0.25)]"
+                  className="px-7 py-3.5 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow"
                 >
                   Zum Guardian
                 </Link>
@@ -591,7 +550,10 @@ useEffect(() => {
                       </div>
                     </motion.div>
                     <motion.div
-                      variants={scaleIn(0.08)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.3 }}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.8 }}
+                      viewport={{ once: true }}
                       className="relative h-96 w-full rounded-3xl overflow-hidden shadow-2xl"
                     >
                       <Image
