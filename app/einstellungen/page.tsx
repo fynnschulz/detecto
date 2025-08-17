@@ -74,6 +74,7 @@ export default function EinstellungenPage() {
   const [notLoggedIn, setNotLoggedIn] = useState(false);
 
   const [userEmail, setUserEmail] = useState("");
+  const [detectoId, setDetectoId] = useState<string>("");
 
   // Preferences (all stored in auth.user.user_metadata; profiles.username optional best-effort)
   const [username, setUsername] = useState("");
@@ -96,6 +97,17 @@ export default function EinstellungenPage() {
         if (!mounted) return;
 
         setUserEmail(user.email || "");
+        // Fetch Detecto-ID from profiles
+        try {
+          const { data: p } = await supabase
+            .from("profiles")
+            .select("detecto_id")
+            .eq("id", user.id)
+            .maybeSingle();
+          if (mounted) setDetectoId(p?.detecto_id || "");
+        } catch {
+          if (mounted) setDetectoId("");
+        }
         // Read from auth metadata first
         const meta = (user.user_metadata || {}) as any;
         setUsername(meta.username || user.email?.split("@")[0] || "");
@@ -280,6 +292,13 @@ export default function EinstellungenPage() {
 
                   <FieldRow label="E-Mail">
                     <input disabled value={userEmail} className="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 opacity-70" />
+                  </FieldRow>
+                  <FieldRow label="Detecto-ID">
+                    <input
+                      disabled
+                      value={detectoId || "ID wird erstellt…"}
+                      className="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 opacity-70 text-white/70"
+                    />
                   </FieldRow>
 
                   <FieldRow label="Produkt-News">

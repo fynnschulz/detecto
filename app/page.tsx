@@ -40,6 +40,7 @@ export default function Home() {
   const supabase = useSupabaseClient();
   const [authChecked, setAuthChecked] = useState(false);
   const username = useUsername();
+  const [detectoId, setDetectoId] = useState<string | null>(null);
   const pathname = usePathname();
   const displayName =
     (session?.user?.user_metadata as any)?.username ||
@@ -93,6 +94,29 @@ export default function Home() {
       listener?.subscription?.unsubscribe();
     };
   }, [supabase]);
+
+  // Fetch Detecto-ID for logged-in user
+  useEffect(() => {
+    let cancelled = false;
+    async function loadDetectoId() {
+      if (!session?.user?.id) { setDetectoId(null); return; }
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('detecto_id')
+        .eq('id', session.user.id)
+        .single();
+      if (!cancelled) {
+        if (error) {
+          console.error('Detecto-ID laden fehlgeschlagen:', error.message);
+          setDetectoId(null);
+        } else {
+          setDetectoId(data?.detecto_id ?? null);
+        }
+      }
+    }
+    loadDetectoId();
+    return () => { cancelled = true; };
+  }, [session, supabase]);
 
 
 const fetchAlternatives = async () => {
@@ -637,6 +661,11 @@ useEffect(() => {
                       <div className="text-white font-semibold truncate">
                         {displayName}
                       </div>
+                      {isLoggedIn && (
+                        <div className="text-gray-400 text-xs truncate">
+                          {detectoId ? `ID: ${detectoId}` : (authChecked ? 'ID wird erstellt…' : 'Prüfe Status…')}
+                        </div>
+                      )}
                       <div className="text-gray-400 text-xs truncate">{session?.user?.email || (authChecked ? "" : "Prüfe Status…")}</div>
                     </div>
                   </div>
