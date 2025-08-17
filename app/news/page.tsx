@@ -86,6 +86,8 @@ function Accordion({ title, children }: { title: string; children: ReactNode }) 
 }
 
 export default function GuardianNewsPage() {
+  const prefersReduced = useReducedMotion();
+
   return (
     <div className="relative min-h-screen overflow-x-clip bg-gradient-to-b from-[#0b0d10] via-[#070708] to-black text-white">
       {/* Backdrop like hero */}
@@ -100,9 +102,9 @@ export default function GuardianNewsPage() {
       </div>
 
       {/* HERO */}
-      <motion.header initial="hidden" animate="show" variants={fadeIn()} className="pt-24 md:pt-32 pb-16 text-center">
+      <motion.header initial="hidden" animate="show" variants={fadeIn()} className="pt-24 md:pt-32 pb-16 text-center transform-gpu">
         <Container>
-          <motion.h1 variants={riseIn(0)} className="text-5xl md:text-7xl font-extrabold leading-[1.1] [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]">
+          <motion.h1 variants={riseIn(0)} className="text-5xl md:text-7xl font-extrabold leading-[1.1] [text-shadow:0_1px_8px_rgba(0,0,0,0.35)] transform-gpu" style={{ willChange: "transform" }}>
             <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
               GUARDIAN
             </span>
@@ -110,12 +112,12 @@ export default function GuardianNewsPage() {
             <span>Dein unsichtbarer Schild im Netz.</span>
           </motion.h1>
 
-          <motion.p variants={fadeIn(0.1)} className="mx-auto mt-5 max-w-3xl text-lg md:text-2xl text-white/80">
+          <motion.p variants={fadeIn(0.1)} className="mx-auto mt-5 max-w-3xl text-lg md:text-2xl text-white/80 transform-gpu" style={{ willChange: "transform" }}>
             Plakativer Schutz vor Phishing, Betrug, Datenlecks und dubiosen Angeboten – in Echtzeit, mit klaren
             Erklärungen und pragmatischen Empfehlungen.
           </motion.p>
 
-          <motion.div variants={fadeIn(0.2)} className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <motion.div variants={fadeIn(0.2)} className="mt-8 flex flex-col sm:flex-row justify-center gap-4 transform-gpu" style={{ willChange: "transform" }}>
             <Link
               href="/guardian"
               className="px-8 py-4 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow"
@@ -131,10 +133,11 @@ export default function GuardianNewsPage() {
           </motion.div>
 
           <motion.div
-            className="mx-auto mt-6 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: [0, 1, 0.6, 1] }}
-            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+            className="mx-auto mt-6 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px] transform-gpu"
+            initial={prefersReduced ? { opacity: 1 } : { opacity: 0 }}
+            animate={prefersReduced ? { opacity: 1 } : { opacity: [0, 1, 0.6, 1] }}
+            transition={prefersReduced ? undefined : { duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+            style={{ willChange: "opacity, transform" }}
           />
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
@@ -180,8 +183,9 @@ export default function GuardianNewsPage() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.3 }}
-                whileHover={{ scale: 1.01 }}
-                className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl shadow-[0_0_0_0_rgba(0,0,0,0.0)] hover:shadow-[0_6px_20px_rgba(0,255,255,0.06)] transition"
+                whileHover={prefersReduced ? undefined : { scale: 1.01 }}
+                className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl shadow-[0_0_0_0_rgba(0,0,0,0.0)] hover:shadow-[0_6px_20px_rgba(0,255,255,0.06)] transition transform-gpu"
+                style={{ willChange: "transform" }}
               >
                 <div className="text-4xl" aria-hidden>{f.emoji}</div>
                 <h3 className="mt-2 text-2xl md:text-3xl font-extrabold">{f.title}</h3>
@@ -203,18 +207,18 @@ export default function GuardianNewsPage() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-extrabold">Wie GUARDIAN funktioniert</h2>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
                 <Accordion title="1) Erkennen – live & lokal">
                   GUARDIAN prüft Webseiten, Links und Inhalte beim Öffnen auf bekannte Betrugsmuster, manipulierte UI,
                   dubiose Zahlungswege und Warnsignale. Schlank, schnell, datensparsam.
                 </Accordion>
               </motion.div>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
                 <Accordion title="2) Verstehen – klare Erklärungen">
                   Statt kryptischer Codes erhältst du verständliche Hinweise: Was ist auffällig, warum ist es riskant, welche Daten würden betroffen sein?
                 </Accordion>
               </motion.div>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
                 <Accordion title="3) Handeln – sofort & sicher">
                   Blockieren, ignorieren oder sichere Alternative öffnen: GUARDIAN gibt dir konkrete, klickbare Optionen – inkl. seriösen Empfehlungen.
                 </Accordion>
@@ -223,17 +227,17 @@ export default function GuardianNewsPage() {
 
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-extrabold">Warum GUARDIAN das Beste ist</h2>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
                 <Accordion title="Ernsthafte Erkennung statt reiner Blacklists">
                   Blacklists sind immer zu spät. GUARDIAN kombiniert Mustererkennung, Heuristiken und Kontextsignale – und warnt, bevor Schaden entsteht.
                 </Accordion>
               </motion.div>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
                 <Accordion title="Datensparsam, respektvoll, transparent">
                   Wir sammeln nicht deine Welt. Hinweise werden lokal bewertet, sensible Daten bleiben bei dir. Nur notwendige Checks verlassen dein Gerät.
                 </Accordion>
               </motion.div>
-              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }}>
+              <motion.div variants={fadeIn(0.05)} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.2 }} className="transform-gpu" style={{ willChange: "transform" }}>
                 <Accordion title="Erklärungen statt Panik">
                   Warnungen sind handlungsorientiert: kurz, klar und mit Lösungsvorschlag. So triffst du informierte Entscheidungen – ohne Angst-Marketing.
                 </Accordion>
@@ -251,27 +255,29 @@ export default function GuardianNewsPage() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="rounded-3xl border border-white/10 bg-white/[0.05] p-8 md:p-12 backdrop-blur-xl"
+            className="rounded-3xl border border-white/10 bg-white/[0.05] p-8 md:p-12 backdrop-blur-xl transform-gpu"
+            style={{ willChange: "transform" }}
           >
             <div aria-hidden className="relative">
               <motion.div
-                className="pointer-events-none absolute -inset-10 mx-auto h-[18rem] w-[18rem] rounded-full bg-gradient-to-tr from-cyan-400/20 via-white/10 to-fuchsia-400/20 blur-2xl"
-                animate={{ rotate: [0, 15, 0, -15, 0] }}
-                transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+                className="pointer-events-none absolute -inset-10 mx-auto h-[18rem] w-[18rem] rounded-full bg-gradient-to-tr from-cyan-400/20 via-white/10 to-fuchsia-400/20 blur-2xl transform-gpu"
+                animate={prefersReduced ? undefined : { rotate: [0, 15, 0, -15, 0] }}
+                transition={prefersReduced ? undefined : { duration: 22, repeat: Infinity, ease: "easeInOut" }}
+                style={{ willChange: "transform" }}
               />
             </div>
             <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">Bereit, dich schützen zu lassen?</h3>
             <p className="mt-4 text-lg md:text-2xl text-white/80 max-w-3xl mx-auto">
               Aktiviere GUARDIAN und erhalte Schutz in Echtzeit – mit verständlichen Erklärungen und sicheren Alternativen.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center transform-gpu" style={{ willChange: "transform" }} initial={prefersReduced ? false : { opacity: 0, y: 8 }} animate={prefersReduced ? undefined : { opacity: 1, y: 0 }} transition={prefersReduced ? undefined : { duration: 0.4, ease: "easeOut" }}>
               <Link href="/guardian" className="px-8 py-4 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow">
                 Guardian aktivieren
               </Link>
               <Link href="/einstellungen" className="px-8 py-4 rounded-full border border-white/20 text-white hover:bg-white/10 transition">
                 Einstellungen öffnen
               </Link>
-            </div>
+            </motion.div>
           </motion.div>
         </Container>
       </section>
