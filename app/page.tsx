@@ -41,6 +41,7 @@ export default function Home() {
   const [authChecked, setAuthChecked] = useState(false);
   const username = useUsername();
   const pathname = usePathname();
+  const [audience, setAudience] = useState<"personal" | "business">("personal");
   const displayName =
     (session?.user?.user_metadata as any)?.username ||
     username ||
@@ -277,6 +278,20 @@ useEffect(() => {
                   );
                 })}
               </div>
+              <div className="absolute top-2 right-4 flex items-center gap-2">
+                <button
+                  onClick={() => setAudience("personal")}
+                  className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "personal" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
+                >
+                  Personal
+                </button>
+                <button
+                  onClick={() => setAudience("business")}
+                  className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "business" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
+                >
+                  Business
+                </button>
+              </div>
             </div>
           </nav>
 
@@ -301,25 +316,51 @@ useEffect(() => {
                 />
               )}
               
-              <motion.h1
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.4, ease: "easeOut" }}
-                className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500 relative leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.35),0_0_24px_rgba(59,130,246,0.15)]"
-              >
-                <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
-                  Dein persönlicher KI‑Bodyguard
-                </span>
-              </motion.h1>
-              <div className="mx-auto mt-3 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"></div>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2 }}
-                className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]"
-              >
-                Detecto schützt dich proaktiv vor Phishing, Datenlecks und riskanten Webseiten. Erkenne Bedrohungen in Echtzeit, erhalte klare Erklärungen sowie sichere Alternativen – datensparsam und praxisnah.
-              </motion.p>
+              {audience === "personal" ? (
+                <>
+                  <motion.h1
+                    initial={{ opacity: 0, y: 60 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.4, ease: "easeOut" }}
+                    className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500 relative leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.35),0_0_24px_rgba(59,130,246,0.15)]"
+                  >
+                    <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
+                      Dein persönlicher KI‑Bodyguard
+                    </span>
+                  </motion.h1>
+                  <div className="mx-auto mt-3 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"></div>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2 }}
+                    className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]"
+                  >
+                    Detecto schützt dich vor intransparenten Cookies, Datenmissbrauch und riskanten Webseiten – mit datenschutzfreundlicher Analyse, verständlichen Erklärungen und klaren Handlungsempfehlungen. Unser Fokus: zeitgemäßer Datenschutz & digitale Sicherheit, KI‑gestützt und für alle verständlich.
+                  </motion.p>
+                </>
+              ) : (
+                <>
+                  <motion.h1
+                    initial={{ opacity: 0, y: 60 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.4, ease: "easeOut" }}
+                    className="text-5xl md:text-7xl font-extrabold z-10 group-hover:tracking-wide transition-all duration-500 relative leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.35),0_0_24px_rgba(59,130,246,0.15)]"
+                  >
+                    <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
+                      Euer digitaler Sicherheitsbegleiter
+                    </span>
+                  </motion.h1>
+                  <div className="mx-auto mt-3 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"></div>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2 }}
+                    className="text-xl md:text-2xl text-gray-300 max-w-2xl mt-6 z-10 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]"
+                  >
+                    Detecto simuliert realistische Angriffsflächen, erkennt Schwachstellen in Web‑Apps, Netzwerken und APIs und liefert sofort verständliche Fix‑Anleitungen – speziell für mittelständische Unternehmen.
+                  </motion.p>
+                </>
+              )}
               {/* Guardian Claim + Mehr lesen (enhanced) */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -328,7 +369,7 @@ useEffect(() => {
                 className="mt-6 z-10"
               >
                 <p className="text-[1.25rem] md:text-[1.35rem] font-semibold text-white [text-shadow:0_0_12px_rgba(34,211,238,.15),0_2px_10px_rgba(0,0,0,.25)]">
-                  <span className="font-bold">Detecto Guardian</span> – Dein unsichtbarer Schild im Netz.
+                  <span className="font-bold">Detecto</span> – Dein persönlicher digitaler Bodyguard (KI‑gestützt).
                 </p>
                 <button
                   type="button"
@@ -359,10 +400,10 @@ useEffect(() => {
                         <div className="absolute left-0 top-0 h-full w-[3px] bg-gradient-to-b from-cyan-400/60 via-blue-400/50 to-transparent rounded-full" />
                         <div className="pl-4">
                           <p>
-                            Der Guardian ist Detectos KI-gestütztes Schutzsystem, das Bedrohungen in Echtzeit erkennt, analysiert und neutralisiert – bevor sie Schaden anrichten können.
+                            Detecto ist ein KI‑gestütztes Sicherheitssystem, das Bedrohungen frühzeitig erkennt, bewertet und in klare, umsetzbare Schritte übersetzt – bevor Schäden entstehen.
                           </p>
                           <p className="mt-3">
-                            Diese neuartige Sicherheitsarchitektur setzt neue Maßstäbe im digitalen Selbstschutz: Mit Multi-Kanal-Erkennung, Darknet-Scans und kontinuierlicher Verhaltensanalyse schützt er dich vor Phishing, Datenlecks und gezielten Angriffen – automatisch, unsichtbar und kompromisslos effektiv.
+                            Mit praxisnahen Prüfungen (z. B. Phishing‑ und Betrugsindikatoren), Risikoanalyse, datensparsamer Verarbeitung und seriösen Alternativen hilft dir Detecto, souveräne Entscheidungen zu treffen – transparent, nutzerfreundlich und ohne Fachchinesisch.
                           </p>
                         </div>
                       </div>
@@ -370,19 +411,7 @@ useEffect(() => {
                   )}
                 </AnimatePresence>
               </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.2, delay: 0.1 }}
-                className="mt-8 flex justify-center z-10"
-              >
-                <Link
-                  href="/guardian"
-                  className="px-7 py-3.5 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow"
-                >
-                  Zum Guardian
-                </Link>
-              </motion.div>
+              {/* Guardian button removed as requested */}
               {renderToolContent()}
             </section>
 
