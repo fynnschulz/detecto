@@ -2,7 +2,7 @@
 // @ts-nocheck
 "use client";
 import AuthModal from "@/app/components/AuthModal.tsx";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -42,6 +42,33 @@ export default function Home() {
   const username = useUsername();
   const pathname = usePathname();
   const [audience, setAudience] = useState<"personal" | "business">("personal");
+  const [showBusinessBanner, setShowBusinessBanner] = useState(false);
+  const prevAudienceRef = useRef(audience);
+  const [isModeTransition, setIsModeTransition] = useState(false);
+  const [pendingAudience, setPendingAudience] = useState<"personal" | "business" | null>(null);
+
+  const handleSelectAudience = (next: "personal" | "business") => {
+    if (next === audience) return;
+    // Play a short transition BEFORE switching, especially when going to business
+    setIsModeTransition(true);
+    setPendingAudience(next);
+    setTimeout(() => {
+      setAudience(next);
+      setIsModeTransition(false);
+      setPendingAudience(null);
+    }, 650);
+  };
+  useEffect(() => {
+    let timer: any;
+    if (prevAudienceRef.current === "personal" && audience === "business") {
+      setShowBusinessBanner(true);
+      timer = setTimeout(() => setShowBusinessBanner(false), 3000);
+    }
+    prevAudienceRef.current = audience;
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [audience]);
   const displayName =
     (session?.user?.user_metadata as any)?.username ||
     username ||
@@ -253,47 +280,120 @@ useEffect(() => {
       {showMainContent && (
         <>
           {/* Login-Modal entfernt, AuthModal wird weiterhin gerendert */}
-          <nav className="fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] md:pt-4 bg-transparent backdrop-blur-0 border-0">
-            <div className="px-3 py-2 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:flex md:justify-center" style={{ msOverflowStyle: 'none' }}>
-              <div className="inline-flex md:flex items-center gap-2 min-w-max md:min-w-0">
-                {navItems.map((item) => {
-                  const isActive = pathname === item.href;
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative 
-          ${
-            isActive
-              ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
-              : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
-          }`}
-                      aria-current={isActive ? "page" : undefined}
-                    >
-                      <span className="relative z-10">{item.label}</span>
-                      {isActive && (
-                        <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
-                      )}
-                    </Link>
-                  );
-                })}
+          {audience === "personal" && (
+            <nav className="fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] md:pt-4 bg-transparent backdrop-blur-0 border-0">
+              <div className="px-3 py-2 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:flex md:justify-center" style={{ msOverflowStyle: 'none' }}>
+                <div className="inline-flex md:flex items-center gap-2 min-w-max md:min-w-0">
+                  {navItems.map((item) => {
+                    const isActive = pathname === item.href;
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative 
+            ${
+              isActive
+                ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
+                : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
+            }`}
+                        aria-current={isActive ? "page" : undefined}
+                      >
+                        <span className="relative z-10">{item.label}</span>
+                        {isActive && (
+                          <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse"></span>
+                        )}
+                      </Link>
+                    );
+                  })}
+                </div>
+                <div className="absolute top-10 right-4">
+                  <div className="relative w-44 h-10 rounded-full border border-zinc-700 bg-zinc-900/70 backdrop-blur px-1 py-1 shadow-lg">      
+                    {/* Sliding thumb */}
+                    <motion.div
+                      layout
+                      className="absolute top-1 left-1 h-8 w-1/2 rounded-full bg-white text-black shadow-xl"
+                      animate={{ x: audience === "business" ? "100%" : "0%" }}
+                      transition={{ type: "spring", stiffness: 450, damping: 32 }}
+                    />
+                    <div className="relative z-10 grid grid-cols-2 h-full text-sm font-semibold">
+                      <button
+                        type="button"
+                        role="tab"
+                        className={`rounded-full flex items-center justify-center ${audience === "personal" ? "text-black" : "text-gray-300"}`}
+                        onClick={() => handleSelectAudience("personal")}
+                      >
+                        Personal
+                      </button>
+                      <button
+                        type="button"
+                        role="tab"
+                        className={`rounded-full flex items-center justify-center ${audience === "business" ? "text-black" : "text-gray-300"}`}
+                        onClick={() => handleSelectAudience("business")}
+                      >
+                        Business
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="absolute top-2 right-4 flex items-center gap-2">
-                <button
-                  onClick={() => setAudience("personal")}
-                  className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "personal" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
+            </nav>
+          )}
+
+          <AnimatePresence>
+            {audience === "business" && showBusinessBanner && (
+              <motion.div
+                initial={{ opacity: 0, y: -12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.25 }}
+                className="fixed left-1/2 top-4 -translate-x-1/2 z-[60]"
+              >
+                <div className="px-4 py-2 rounded-full bg-zinc-900/90 border border-zinc-700 shadow-xl backdrop-blur-md text-sm font-semibold text-white">
+                  detecto for businesses
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <AnimatePresence>
+            {isModeTransition && (
+              <motion.div
+                key="mode-transition"
+                className="fixed inset-0 z-[65] pointer-events-none"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.65, ease: "easeInOut" }}
+              >
+                {/* Soft gradient wash */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-600/15 to-purple-600/10" />
+                {/* Center pulse */}
+                <motion.div
+                  initial={{ scale: 0.95, opacity: 0.6 }}
+                  animate={{ scale: 1.02, opacity: 1 }}
+                  exit={{ scale: 1.06, opacity: 0 }}
+                  transition={{ duration: 0.65 }}
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
                 >
-                  Personal
-                </button>
-                <button
-                  onClick={() => setAudience("business")}
-                  className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "business" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
-                >
-                  Business
-                </button>
-              </div>
-            </div>
-          </nav>
+                  <div className="h-36 w-36 rounded-full bg-white/8 blur-3xl" />
+                </motion.div>
+                {/* Top/bottom light sweeps */}
+                <motion.div
+                  initial={{ y: -80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 80, opacity: 0 }}
+                  transition={{ duration: 0.65 }}
+                  className="absolute left-0 right-0 top-0 h-24 bg-gradient-to-b from-white/10 to-transparent"
+                />
+                <motion.div
+                  initial={{ y: 80, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -80, opacity: 0 }}
+                  transition={{ duration: 0.65 }}
+                  className="absolute left-0 right-0 bottom-0 h-24 bg-gradient-to-t from-white/10 to-transparent"
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           <main className="space-y-40">
             <section className="relative min-h-screen flex flex-col items-center justify-start px-6 pt-40 text-center overflow-visible group bg-gradient-to-b from-gray-800 via-[#111] to-black">
@@ -654,7 +754,7 @@ useEffect(() => {
                       >
                         <h2 className="text-5xl font-bold text-white mb-4">Warum AttackSim?</h2>
                         <p className="text-lg text-gray-300 max-w-4xl mx-auto">
-                          AttackSim bringt Enterprise-Sicherheitsstandards in den Mittelstand: Automatisierte, realistische Simulationen – leicht verständlich und sofort umsetzbar.
+                          AttackSim macht moderne Sicherheit für Teams jeder Größe zugänglich – mit automatisierten, realistischen Simulationen, verständlich erklärt und sofort umsetzbar.
                         </p>
                       </motion.div>
                     </section>
@@ -671,8 +771,10 @@ useEffect(() => {
                           whileInView={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.6, delay: i * 0.1 }}
                           viewport={{ once: true }}
-                          className="rounded-2xl border border-zinc-700 bg-zinc-900/60 p-6 shadow-lg"
+                          className="relative overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-900/70 p-6 shadow-xl"
                         >
+                          <div aria-hidden className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10" />
+                          <div aria-hidden className="absolute -top-12 -right-12 h-36 w-36 rounded-full bg-cyan-400/15 blur-3xl" />
                           <h3 className="text-xl font-bold text-white">{f.title}</h3>
                           <p className="text-gray-300 mt-2">{f.desc}</p>
                         </motion.div>
@@ -694,8 +796,10 @@ useEffect(() => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: i * 0.1 }}
                             viewport={{ once: true }}
-                            className="rounded-xl border border-zinc-700 bg-zinc-900/70 p-5 text-left"
+                            className="relative overflow-hidden rounded-xl border border-zinc-700 bg-zinc-900/70 p-5 text-left shadow-xl"
                           >
+                            <div aria-hidden className="pointer-events-none absolute -inset-px rounded-xl bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10" />
+                            <div aria-hidden className="absolute -bottom-12 -left-12 h-32 w-32 rounded-full bg-blue-400/15 blur-3xl" />
                             <div className="text-sm text-cyan-300">Schritt {s.n}</div>
                             <div className="text-xl font-semibold text-white">{s.t}</div>
                             <div className="text-gray-300 mt-2">{s.d}</div>
