@@ -306,34 +306,19 @@ useEffect(() => {
                     );
                   })}
                 </div>
-                <div className="absolute top-10 right-4">
-                  <div className="relative w-44 h-10 rounded-full border border-zinc-700 bg-zinc-900/70 backdrop-blur px-1 py-1 shadow-lg">      
-                    {/* Sliding thumb */}
-                    <motion.div
-                      layout
-                      className="absolute top-1 left-1 h-8 w-1/2 rounded-full bg-white text-black shadow-xl"
-                      animate={{ x: audience === "business" ? "100%" : "0%" }}
-                      transition={{ type: "spring", stiffness: 450, damping: 32 }}
-                    />
-                    <div className="relative z-10 grid grid-cols-2 h-full text-sm font-semibold">
-                      <button
-                        type="button"
-                        role="tab"
-                        className={`rounded-full flex items-center justify-center ${audience === "personal" ? "text-black" : "text-gray-300"}`}
-                        onClick={() => handleSelectAudience("personal")}
-                      >
-                        Personal
-                      </button>
-                      <button
-                        type="button"
-                        role="tab"
-                        className={`rounded-full flex items-center justify-center ${audience === "business" ? "text-black" : "text-gray-300"}`}
-                        onClick={() => handleSelectAudience("business")}
-                      >
-                        Business
-                      </button>
-                    </div>
-                  </div>
+                <div className="absolute top-10 right-4 flex items-center gap-2">
+                  <button
+                    onClick={() => handleSelectAudience("personal")}
+                    className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "personal" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
+                  >
+                    Personal
+                  </button>
+                  <button
+                    onClick={() => handleSelectAudience("business")}
+                    className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "business" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
+                  >
+                    Business
+                  </button>
                 </div>
               </div>
             </nav>
