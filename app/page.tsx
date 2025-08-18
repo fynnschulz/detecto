@@ -306,23 +306,27 @@ useEffect(() => {
                     );
                   })}
                 </div>
-                <div className="absolute top-10 right-4 flex items-center gap-2">
-                  <button
-                    onClick={() => handleSelectAudience("personal")}
-                    className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "personal" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
-                  >
-                    Personal
-                  </button>
-                  <button
-                    onClick={() => handleSelectAudience("business")}
-                    className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "business" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
-                  >
-                    Business
-                  </button>
-                </div>
               </div>
             </nav>
           )}
+
+          {/* Global audience switch - always visible */}
+          <div className="fixed z-[70] left-1/2 -translate-x-1/2 top-[calc(max(env(safe-area-inset-top),0px)+72px)] md:left-auto md:translate-x-0 md:right-4 md:top-6">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => handleSelectAudience("personal")}
+                className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "personal" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
+              >
+                Personal
+              </button>
+              <button
+                onClick={() => handleSelectAudience("business")}
+                className={`px-3 py-1 rounded-full text-xs md:text-sm ${audience === "business" ? "bg-blue-600 text-white" : "bg-zinc-700 text-gray-300"}`}
+              >
+                Business
+              </button>
+            </div>
+          </div>
 
           <AnimatePresence>
             {audience === "business" && showBusinessBanner && (
