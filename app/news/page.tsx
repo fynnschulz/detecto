@@ -1,183 +1,196 @@
-"use client";
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
-import type { Variants } from "framer-motion";
-import type { ReactNode } from "react";
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.8 } },
+};
 
-const LESS_MOTION = true;
-
-// --- Animation helpers
-const fadeIn = (delay = 0): Variants => ({
-  hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut", delay } },
-});
-const riseIn = (delay = 0): Variants => ({
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut", delay } },
-});
-const scaleIn = (delay = 0): Variants => ({
-  hidden: { opacity: 0, scale: 0.96 },
-  show: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut", delay } },
-});
-
-function Glow({ className = "" }: { className?: string }) {
-  const prefersReduced = useReducedMotion();
-  return (
-    <motion.div
-      aria-hidden
-      className={`pointer-events-none absolute rounded-full blur-2xl opacity-25 ${className}`}
-      style={{ willChange: "transform" }}
-      animate={prefersReduced ? undefined : {
-        y: [0, -6, 0, 6, 0],
-        x: [0, 4, 0, -4, 0],
-      }}
-      transition={prefersReduced ? undefined : { duration: 14, repeat: Infinity, ease: "easeInOut" }}
-    />
-  );
-}
-
-// --- Small helpers
-function Container({ children }: { children: ReactNode }) {
-  return <div className="mx-auto max-w-7xl px-6 md:px-8">{children}</div>;
-}
+const scaleIn = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: { scale: 1, opacity: 1, transition: { duration: 0.8 } },
+};
 
 export default function NewsPage() {
-  const prefersReduced = useReducedMotion();
-  const reduce = prefersReduced || LESS_MOTION;
+  const currentYear = new Date().getFullYear();
 
   return (
-    <div className="relative min-h-screen overflow-x-clip bg-gradient-to-b from-[#0b0d10] via-[#070708] to-black text-white">
-      {/* Background */}
-      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -top-40 -left-48 h-[44rem] w-[44rem] rounded-full blur-2xl opacity-20 bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600" />
-        <div className="absolute -bottom-48 -right-40 h-[44rem] w-[44rem] rounded-full blur-2xl opacity-15 bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-400" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0)_60%)]" />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white flex flex-col">
+      {/* Hero Section */}
+      <section className="relative flex flex-col items-center justify-center text-center py-24 px-6 bg-gradient-to-br from-purple-900 via-indigo-900 to-black overflow-hidden">
+        {/* Glow Elements */}
+        <div className="absolute top-10 left-1/4 w-72 h-72 bg-purple-700 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-10 right-1/4 w-72 h-72 bg-indigo-700 rounded-full filter blur-3xl opacity-30 animate-pulse animation-delay-2000"></div>
 
-        <Glow className="-top-24 left-16 h-64 w-64 bg-cyan-500/40" />
-        <Glow className="bottom-32 right-24 h-72 w-72 bg-fuchsia-500/30" />
-        <Glow className="top-1/3 right-1/3 h-56 w-56 bg-indigo-500/25" />
-      </div>
+        <motion.h1
+          className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-pink-500 via-yellow-400 to-red-500 bg-clip-text text-transparent drop-shadow-lg relative"
+          variants={fadeIn}
+          initial="hidden"
+          animate="visible"
+        >
+          Neu bei Detecto
+          <span className="absolute inset-0 bg-gradient-to-r from-white via-white to-white opacity-20 animate-shine pointer-events-none"></span>
+        </motion.h1>
+        <motion.p
+          className="mt-6 max-w-xl text-lg md:text-xl text-gray-300"
+          variants={fadeIn}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.4 }}
+        >
+          Leak-Check &amp; AttackSim – die neuesten Tools für deine digitale Sicherheit.
+        </motion.p>
+        <motion.div
+          className="mt-10 flex flex-col sm:flex-row gap-6"
+          variants={fadeIn}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 0.6 }}
+        >
+          <Link href="/leak-check" passHref>
+            <a className="px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-400 rounded-full text-black font-semibold shadow-lg hover:brightness-110 transition">
+              Leak-Check starten
+            </a>
+          </Link>
+          <Link href="/attacksim" passHref>
+            <a className="px-6 py-3 border border-white rounded-full text-white font-semibold hover:bg-white hover:text-black transition">
+              AttackSim kennenlernen
+            </a>
+          </Link>
+        </motion.div>
+      </section>
 
-      {/* HERO */}
-      <motion.header
-        initial={reduce ? undefined : "hidden"}
-        animate={reduce ? undefined : "show"}
-        variants={reduce ? undefined : fadeIn()}
-        className="pt-24 md:pt-32 pb-16 text-center"
-      >
-        <Container>
-          <motion.h1
-            variants={reduce ? undefined : riseIn(0)}
-            initial={reduce ? undefined : "hidden"}
-            animate={reduce ? undefined : "show"}
-            className="relative overflow-hidden text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(0,255,255,0.3)]"
+      {/* Tools Section */}
+      <section className="py-20 px-6 bg-gray-900 flex justify-center">
+        <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Leak-Check Card */}
+          <motion.div
+            className="bg-gradient-to-br from-purple-800 via-indigo-800 to-indigo-900 rounded-xl p-8 shadow-glow hover:shadow-glow-hover transition cursor-pointer flex flex-col items-center text-center"
+            variants={scaleIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
           >
-            <span className="relative inline-block">
-              Neu bei Detecto
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[shine_3s_linear_infinite] bg-[length:200%_100%]" />
-            </span>
-          </motion.h1>
-
-          <motion.p
-            variants={reduce ? undefined : fadeIn(0.1)}
-            initial={reduce ? undefined : "hidden"}
-            animate={reduce ? undefined : "show"}
-            className="mx-auto mt-5 max-w-3xl text-lg md:text-2xl text-white/80"
-          >
-            Unsere neuesten Sicherheits-Tools – entwickelt, um dich und dein Unternehmen auf das nächste Level zu bringen.
-          </motion.p>
-        </Container>
-      </motion.header>
-
-      {/* TOOL SECTIONS */}
-      <section className="py-12 md:py-16">
-        <Container>
-          <div className="grid gap-12 md:grid-cols-2">
-            {/* Leak-Check */}
-            <motion.div
-              variants={reduce ? undefined : fadeIn(0.05)}
-              initial={reduce ? undefined : "hidden"}
-              animate={reduce ? undefined : "show"}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 md:p-12 backdrop-blur-xl shadow-lg flex flex-col justify-between"
-            >
-              <div>
-                <div className="text-5xl mb-4" aria-hidden>🔍</div>
-                <h2 className="text-3xl font-extrabold mb-3">Leak-Check – Finde deine Daten im Netz, bevor es Angreifer tun</h2>
-                <p className="text-white/80 mb-6">
-                  Erhalte sofortige Benachrichtigungen, wenn deine Daten kompromittiert werden. Schütze deine Identität und deine Unternehmensdaten proaktiv.
-                </p>
-              </div>
-              <Link
-                href="/leak-check"
-                className="inline-block px-8 py-3 rounded-full bg-cyan-500 text-black font-semibold text-lg hover:bg-cyan-600 transition text-center"
-              >
+            <div className="text-6xl mb-5 bg-gradient-to-r from-pink-500 via-yellow-400 to-red-500 rounded-full w-20 h-20 flex items-center justify-center shadow-glow-icon">
+              🔍
+            </div>
+            <h3 className="text-3xl font-bold mb-3">Leak-Check</h3>
+            <p className="text-gray-300 mb-6">
+              Finde deine Daten im Netz, bevor es Angreifer tun.
+            </p>
+            <Link href="/leak-check" passHref>
+              <a className="px-5 py-2 bg-pink-500 rounded-full font-semibold text-black hover:brightness-110 transition">
                 Leak-Check starten
-              </Link>
-            </motion.div>
+              </a>
+            </Link>
+          </motion.div>
 
-            {/* AttackSim */}
-            <motion.div
-              variants={reduce ? undefined : fadeIn(0.1)}
-              initial={reduce ? undefined : "hidden"}
-              animate={reduce ? undefined : "show"}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 md:p-12 backdrop-blur-xl shadow-lg flex flex-col justify-between"
-            >
-              <div>
-                <div className="text-5xl mb-4" aria-hidden>⚡</div>
-                <h2 className="text-3xl font-extrabold mb-3">AttackSim – Realistische Angriffsszenarien für dein Unternehmen</h2>
-                <p className="text-white/80 mb-6">
-                  Simuliere gezielte Cyberangriffe und schule dein Team im Umgang mit Bedrohungen – für eine sichere und widerstandsfähige Infrastruktur.
-                </p>
-              </div>
-              <Link
-                href="/attacksim"
-                className="inline-block px-8 py-3 rounded-full bg-fuchsia-500 text-black font-semibold text-lg hover:bg-fuchsia-600 transition text-center"
-              >
+          {/* AttackSim Card */}
+          <motion.div
+            className="bg-gradient-to-br from-purple-800 via-indigo-800 to-indigo-900 rounded-xl p-8 shadow-glow hover:shadow-glow-hover transition cursor-pointer flex flex-col items-center text-center"
+            variants={scaleIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <div className="text-6xl mb-5 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 rounded-full w-20 h-20 flex items-center justify-center shadow-glow-icon">
+              ⚡
+            </div>
+            <h3 className="text-3xl font-bold mb-3">AttackSim</h3>
+            <p className="text-gray-300 mb-6">
+              Realistische Angriffsszenarien für dein Unternehmen.
+            </p>
+            <Link href="/attacksim" passHref>
+              <a className="px-5 py-2 bg-yellow-400 rounded-full font-semibold text-black hover:brightness-110 transition">
                 AttackSim kennenlernen
-              </Link>
-            </motion.div>
-          </div>
-        </Container>
+              </a>
+            </Link>
+          </motion.div>
+        </div>
       </section>
 
-      {/* Detecto in Aktion */}
-      <section className="py-12 md:py-16">
-        <Container>
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-10 text-center">Detecto in Aktion</h2>
-          <div className="grid gap-10 md:grid-cols-2">
-            {/* Leak-Check Card */}
-            <motion.div
-              variants={reduce ? undefined : scaleIn(0.05)}
-              initial={reduce ? undefined : "hidden"}
-              animate={reduce ? undefined : "show"}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl shadow-lg flex flex-col"
-            >
-              <div className="bg-gray-700 rounded-lg h-48 md:h-56 mb-6" aria-label="Leak-Check Screenshot Placeholder" />
-              <ul className="text-white/80 space-y-2 list-disc list-inside text-lg font-medium">
-                <li>Treffer sofort sichtbar</li>
-                <li>Opt-out-Generator</li>
-              </ul>
-            </motion.div>
+      {/* Detecto in Aktion Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-gray-800 via-gray-900 to-black flex flex-col items-center">
+        <motion.h2
+          className="text-4xl font-extrabold mb-12 text-center"
+          variants={fadeIn}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Detecto in Aktion
+        </motion.h2>
+        <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Leak-Check Showcase */}
+          <motion.div
+            className="bg-gray-800 rounded-xl p-6 shadow-glow"
+            variants={scaleIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="bg-gray-700 rounded-md h-48 flex items-center justify-center text-gray-400 font-semibold mb-6 select-none">
+              Screenshot Leak-Check
+            </div>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Treffer sofort sichtbar</li>
+              <li>Opt-out-Generator</li>
+            </ul>
+          </motion.div>
 
-            {/* AttackSim Card */}
-            <motion.div
-              variants={reduce ? undefined : scaleIn(0.1)}
-              initial={reduce ? undefined : "hidden"}
-              animate={reduce ? undefined : "show"}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl shadow-lg flex flex-col"
-            >
-              <div className="bg-gray-700 rounded-lg h-48 md:h-56 mb-6" aria-label="AttackSim Screenshot Placeholder" />
-              <ul className="text-white/80 space-y-2 list-disc list-inside text-lg font-medium">
-                <li>Realistische Simulation</li>
-                <li>Fix-Anleitungen</li>
-              </ul>
-            </motion.div>
-          </div>
-        </Container>
+          {/* AttackSim Showcase */}
+          <motion.div
+            className="bg-gray-800 rounded-xl p-6 shadow-glow"
+            variants={scaleIn}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <div className="bg-gray-700 rounded-md h-48 flex items-center justify-center text-gray-400 font-semibold mb-6 select-none">
+              Screenshot AttackSim
+            </div>
+            <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <li>Realistische Simulation</li>
+              <li>Fix-Anleitungen</li>
+            </ul>
+          </motion.div>
+        </div>
       </section>
 
-      <footer className="pb-12 text-center text-xs text-white/50">© {new Date().getFullYear()} Detecto</footer>
+      {/* Footer */}
+      <footer className="py-6 bg-gray-900 text-center text-white text-opacity-50">
+        © {currentYear} Detecto
+      </footer>
+
+      <style jsx>{`
+        .shadow-glow {
+          box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+        }
+        .shadow-glow-hover:hover {
+          box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+        }
+        .shadow-glow-icon {
+          filter: drop-shadow(0 0 6px rgba(255, 192, 203, 0.7));
+        }
+        .animate-shine {
+          animation: shine 3s infinite;
+          background-size: 200% 100%;
+        }
+        @keyframes shine {
+          0% {
+            background-position: -100% 0;
+          }
+          100% {
+            background-position: 200% 0;
+          }
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+      `}</style>
     </div>
   );
 }
