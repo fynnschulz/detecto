@@ -2,6 +2,17 @@ import { NextRequest, NextResponse } from "next/server";
 
 // --- Utilities -------------------------------------------------------------
 
+// Strip HTML tags to get readable text
+function htmlToText(html: string): string {
+  return html
+    .replace(/&nbsp;/g, " ")
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 // Validate full URLs (must include protocol)
 function isValidFullUrl(url: string): boolean {
   try {
@@ -36,6 +47,7 @@ function extractHtmlSignals(html: string, baseUrl: URL) {
     cookieBannerLikely: false,
     trackersLikely: [] as string[],
     hasPrivacyLink: false,
+    policyLinks: [] as string[],
   };
 
   // crude parsing via regex to avoid heavy deps on serverless
@@ -65,6 +77,15 @@ function extractHtmlSignals(html: string, baseUrl: URL) {
     if (href.startsWith("mailto:")) signals.mailtoLinks += 1;
     if (href.startsWith("tel:")) signals.telLinks += 1;
     if (/datenschutz|privacy|privacy-policy|impressum/i.test(href)) signals.hasPrivacyLink = true;
+    if (/(datenschutz|privacy|privacy-policy|impressum|terms|agb|cookies?|cookie-policy|legal|rechtliches|bedingungen)/i.test(href)) {
+      try {
+        const u = new URL(href, baseUrl);
+        // Avoid mailto/tel
+        if (u.protocol.startsWith("http")) {
+          signals.policyLinks.push(u.toString());
+        }
+      } catch {}
+    }
   }
 
   // scripts
@@ -104,116 +125,154 @@ function extractHtmlSignals(html: string, baseUrl: URL) {
   return signals;
 }
 
-// --- Policy extraction helpers --------------------------------------------------
-function htmlToPlainText(html: string) {
-  // remove scripts/styles
-  html = html.replace(/<script[\s\S]*?<\/script>/gi, "");
-  html = html.replace(/<style[\s\S]*?<\/style>/gi, "");
-  // replace breaks/paras with newlines
-  html = html.replace(/<(br|p|div|li|h[1-6]|section|article)[^>]*>/gi, "\n$&");
-  // strip tags
-  const text = html.replace(/<[^>]+>/g, " ");
-  return text
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function findPolicyLinks(html: string, baseUrl: URL) {
-  const POLICY_KEYWORDS = [
-    { key: "privacy", rx: /(datenschutz|privacy|data\s*protection|privacypolicy)/i },
-    { key: "terms", rx: /(agb|bedingungen|terms|nutzungsbedingungen|terms\s*of\s*service)/i },
-    { key: "imprint", rx: /(impressum|imprint|legal\s*notice)/i },
-    { key: "cookies", rx: /(cookies?|cookie\s*policy|cookie\s*hinweis)/i },
-    { key: "legal", rx: /(rechtlich|legal|disclaimer|haftungsausschluss)/i },
-  ];
-
-  const anchors = Array.from(html.matchAll(/<a[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi));
-  const results: Record<string, string[]> = { privacy: [], terms: [], imprint: [], cookies: [], legal: [] };
-
-  for (const a of anchors) {
-    const href = a[1];
-    const text = (a[2] || "").toLowerCase();
-    for (const k of POLICY_KEYWORDS) {
-      if (k.rx.test(text) || k.rx.test(href)) {
-        try {
-          const u = new URL(href, baseUrl);
-          if (u.protocol.startsWith("http")) {
-            const list = results[k.key as keyof typeof results] as string[];
-            if (!list.includes(u.toString())) list.push(u.toString());
-          }
-        } catch {}
-      }
-    }
+// Prioritize same-origin policy links first, then others; keep unique and cap
+function prioritizePolicyLinks(links: string[], baseHost: string, cap = 5): string[] {
+  const seen = new Set<string>();
+  const same: string[] = [];
+  const other: string[] = [];
+  for (const l of links) {
+    try {
+      const u = new URL(l);
+      if (seen.has(u.toString())) continue;
+      seen.add(u.toString());
+      if (u.hostname === baseHost) same.push(u.toString());
+      else other.push(u.toString());
+    } catch {}
   }
-  return results;
+  return [...same, ...other].slice(0, cap);
 }
 
-async function fetchTextWithTimeout(url: string, ms = 8000): Promise<string> {
-  const controller = new AbortController();
-  const t = setTimeout(() => controller.abort(), ms);
+// Fetch text with timeout
+async function fetchText(url: string, timeoutMs = 8000): Promise<string | null> {
   try {
-    const res = await fetch(url, { headers: { Accept: "text/html,text/plain" }, signal: controller.signal, redirect: "follow" });
-    clearTimeout(t);
-    if (!res.ok) return "";
-    const ct = res.headers.get("content-type") || "";
-    const raw = await res.text();
-    if (/text\/plain/i.test(ct)) return raw.slice(0, 200_000);
-    return htmlToPlainText(raw).slice(0, 200_000);
+    const controller = new AbortController();
+    const to = setTimeout(() => controller.abort(), timeoutMs);
+    const res = await fetch(url, { method: "GET", redirect: "follow", signal: controller.signal, headers: { "User-Agent": "Detecto/1.0 (+https://detecto.example)", Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" } });
+    clearTimeout(to);
+    if (!res.ok) return null;
+    const text = await res.text();
+    return text.slice(0, 400_000);
   } catch {
-    clearTimeout(t);
-    return "";
+    return null;
   }
+}
+
+// Extract quick, low-cost policy signals from plain text
+function extractPolicySignals(txt: string) {
+  const lower = txt.toLowerCase();
+  const find = (rx: RegExp) => rx.test(lower);
+  const excerpt = (rx: RegExp) => {
+    const m = lower.match(rx);
+    if (!m) return null;
+    const i = m.index ?? 0;
+    const start = Math.max(0, i - 140);
+    const end = Math.min(lower.length, i + 260);
+    return txt.slice(start, end).trim();
+  };
+
+  const signals = {
+    mentionsGDPR: find(/dsgvo|gdpr|general data protection/i),
+    legalBasis: find(/rechtsgrundlage|legal basis|art\.?\s*6\s*abs\.?\s*1/i),
+    dataSubjectRights: find(/auskunft|löschung|berichtigung|einschränkung|widerspruch|data subject rights|erasure|rectification/i),
+    dpoContact: find(/datenschutzbeauftragte|data protection officer|dpo|datenschutz@|privacy@/i),
+    processorsListLikely: find(/auftragsverarbeiter|processors?|sub-?processors?|dienstleister/i),
+    retentionMentioned: find(/speicherdauer|aufbewahrung|retention/i),
+    thirdCountryTransfers: find(/drittland|third[-\s]?country|usa|vereinbarte standardvertragsklauseln|standard contractual clauses/i),
+    cookiesMentioned: find(/cookies?|cookiebot|consent/i),
+    analyticsVendors: {
+      google: find(/google analytics|gtag|ga4|google tag manager/i),
+      meta: find(/facebook|meta|pixel/i),
+      hotjar: find(/hotjar/i),
+      matomo: find(/matomo/i),
+      hubspot: find(/hubspot/i),
+      linkedin: find(/linkedin|insight tag/i),
+    },
+    contactPresent: find(/kontakt|impressum|contact/i),
+    addressPresent: find(/\b\d{4,5}\s+[a-zäöüß\- ]+|straße|str\./i),
+    sampleExcerpts: {
+      legalBasis: excerpt(/rechtsgrundlage|legal basis|art\.?\s*6\s*abs\.?\s*1/i),
+      rights: excerpt(/auskunft|löschung|erasure|rectification|widerspruch/i),
+      dpo: excerpt(/datenschutzbeauftragte|data protection officer|dpo|datenschutz@|privacy@/i),
+      transfers: excerpt(/drittland|third[-\s]?country|standard contractual clauses/i),
+    },
+  };
+  return signals;
+}
+
+// Collect policy evidence by fetching likely policy pages and summarizing signals
+async function collectPolicyEvidence(baseUrl: URL, candidateLinks: string[]) {
+  const prioritized = prioritizePolicyLinks(candidateLinks, baseUrl.hostname, 5);
+  const results: Array<{ url: string; textPreview: string; signals: any }> = [];
+  for (const link of prioritized) {
+    const html = await fetchText(link, 8000);
+    if (!html) continue;
+    const text = htmlToText(html);
+    const signals = extractPolicySignals(text);
+    results.push({
+      url: link,
+      textPreview: text.slice(0, 1200),
+      signals,
+    });
+  }
+  return { candidates: prioritized, pages: results };
 }
 
 // Compose a richer prompt including observed evidence and a fairer rubric
-function buildPrompt(url: string, evidence: any, headMeta: any) {
+function buildPrompt(url: string, evidence: any, headMeta: any, policyEvidence: any) {
   return `
-Du bist ein unabhängiger Datenschutz- **und** Risiko-Analyst. Analysiere die Webseite: ${url}
-
-Ziel: Eine **faire, kontextbezogene** Bewertung, die **Datenschutzqualität** und **Gefährdungspotenzial** (Risiko für Nutzer) berücksichtigt. Kleine, schlichte Seiten (z. B. reine Kontakt-/Info-Seiten ohne Tracking) sollen **nicht übermäßig streng** bewertet werden.
-
-DIR VORLIEGENDE BELEGE (aus einem technischen Schnell-Scan):
-EVIDENCE_JSON:
-${JSON.stringify({ headMeta, evidence }, null, 2)}
-
-Bitte nutze diese Hinweise **aktiv** (prüfe Plausibilität, identifiziere Lücken), statt nur Vermutungen anzustellen.
-
-Bewertungslogik (bitte genau befolgen):
-1) **Zweck & Angriffsfläche** klassifizieren: { \n  Art: (Broschüre/Kontakt, Blog, Community, Shop, SaaS/App, Login-Bereich, Behörde/Klinik/Finanzen, Sonstiges), \n  Datenarten: (keine, Kontakt, Login, Zahlungsdaten, Gesundheits-/Finanzdaten, Trackingprofile), \n  Third-Party-Footprint: gering/mittel/hoch }
-2) **Privatsphäre-Qualität (Datenschutz)** gewichten nach: Datenminimierung, Transparenz (Privacy-Link vorhanden?), Nutzerkontrolle (Consent), Drittanbieter-Nutzung, Security-Header (CSP/HSTS/XFO), HTTPS.
-3) **Gefährdungsgrad (Risiko)** einschätzen: Wie **wahrscheinlich** und **schadensreich** wären Missbrauch/Tracking/Phishing für einen durchschnittlichen Nutzer? Kleine statische Visitenkarten-Seiten mit nur Kontaktformular und wenigen Drittanbietern bekommen **Bonus** (mildernde Gewichtung) – solange transparent.
-4) **Realismus**: Branchenübliches ist kein Freifahrtschein, aber fehle keine Enterprise-Header, wenn die Seite nur minimal Daten verarbeitet und sonst solide ist.
-
-Gib **genau** dieses Format (ohne Markdown, ohne Vorwort):
----
-Datenschutz-Score: <Zahl 1–100>%
-BEWERTUNG: <"kritisch"|"mittelmäßig"|"gut"|"sehr gut">
-GEFÄHRDUNG: <"niedrig"|"mittel"|"hoch">  // basiert auf der realistischen Gefahr für Nutzer
-GRÜNDE:
-- <konkreter, beleggestützter Grund 1>
-- <konkreter, beleggestützter Grund 2>
-- <…>
-HINWEISE:
-- <lästige, aber geringe Risiken>
-- <schnelle Verbesserungen (max. 3 Bulletpoints)>
----
-
-Wichtige Regeln:
-- Nenne konkrete Evidenz (z. B. "CSP fehlt", "externe Skripte: gtm, hotjar", "Kontaktformular mit E-Mail, keine Passwörter").
-- Keine vagen Phrasen. Vermeide Spekulationen, wenn die Evidenz fehlt.
-- **Nicht** kleinliche Abwertung, wenn nur eine einfache Kontaktseite ohne Tracking vorliegt.
-- Hohe Risiken nur bei sensiblen Daten, aggressivem Tracking oder täuschenden Mustern.
-`;
+  Du bist ein unabhängiger Datenschutz- **und** Risiko-Analyst. Analysiere die Webseite: ${url}
+  
+  Ziel: Eine **faire, kontextbezogene** Bewertung, die **Datenschutzqualität**, **Gefährdungspotenzial** und **Policy-Konformität** (DSGVO/GDPR) berücksichtigt. Kleine, schlichte Seiten (z. B. reine Kontakt-/Info-Seiten ohne Tracking) sollen **nicht übermäßig streng** bewertet werden.
+  
+  DIR VORLIEGENDE BELEGE (aus einem technischen Schnell-Scan):
+  EVIDENCE_JSON:
+  ${JSON.stringify({ headMeta, evidence, policyEvidence }, null, 2)}
+  
+  Bitte nutze diese Hinweise **aktiv** (prüfe Plausibilität, identifiziere Lücken), statt nur Vermutungen anzustellen.
+  
+  Bewertungslogik (bitte genau befolgen):
+  1) **Zweck & Angriffsfläche** klassifizieren: { 
+     Art: (Broschüre/Kontakt, Blog, Community, Shop, SaaS/App, Login-Bereich, Behörde/Klinik/Finanzen, Sonstiges),
+     Datenarten: (keine, Kontakt, Login, Zahlungsdaten, Gesundheits-/Finanzdaten, Trackingprofile),
+     Third-Party-Footprint: gering/mittel/hoch
+  }
+  2) **Privatsphäre-Qualität (Datenschutz)** gewichten nach: Datenminimierung, Transparenz (Privacy-/Impressum-/Cookie-Infos vorhanden und verständlich?), Nutzerkontrolle (Consent), Drittanbieter-Nutzung, Security-Header (CSP/HSTS/XFO), HTTPS.
+  3) **Gefährdungsgrad (Risiko)** einschätzen: Wie **wahrscheinlich** und **schadensreich** wären Missbrauch/Tracking/Phishing für einen durchschnittlichen Nutzer? Kleine statische Visitenkarten-Seiten mit nur Kontaktformular und wenigen Drittanbietern bekommen **Bonus** (mildernde Gewichtung) – solange transparent.
+  4) **Policy-Prüfung (DSGVO/GDPR)**: Identifiziere **konkrete Lücken oder mögliche Verstöße** in den Policy-Seiten (Privacy/Datenschutz, Cookies, AGB/Terms, Impressum/Legal). Nenne Artikel/Paragrafen, **falls ableitbar**, und belege sie mit kurzen Zitaten/Indizien (z. B. fehlende Rechtsgrundlage, kein Hinweis auf Betroffenenrechte, kein DPO-Kontakt, unzulässige Drittlandübermittlung ohne geeignete Garantien, fehlerhafte/zwanghafte Cookie-Einwilligung, fehlende Widerrufsmöglichkeit etc.). Wenn unklar: als **„Indizien, unsicher“** kennzeichnen.
+  5) **Realismus**: Branchenübliches ist kein Freifahrtschein, aber fehle keine Enterprise-Header, wenn die Seite nur minimal Daten verarbeitet und sonst solide ist.
+  
+  Gib **genau** dieses Format (ohne Markdown, ohne Vorwort):
+  ---
+  Datenschutz-Score: <Zahl 1–100>%
+  BEWERTUNG: <"kritisch"|"mittelmäßig"|"gut"|"sehr gut">
+  GEFÄHRDUNG: <"niedrig"|"mittel"|"hoch">  // basiert auf der realistischen Gefahr für Nutzer
+  GRÜNDE:
+  - <konkreter, beleggestützter Grund 1>
+  - <konkreter, beleggestützter Grund 2>
+  - <…>
+  VERSTÖSSE/LÜCKEN (Policy):
+  - <möglicher DSGVO-Verstoß oder Lücke | Relevante Norm (z. B. Art. 6, 12–14, 30, 32, 44–49 DSGVO) | kurzer Beleg/Zitat | Einschätzung: "klar" / "Indizien, unsicher" | Auswirkung: niedrig/mittel/hoch>
+  - <… oder „keine konkreten Verstöße identifizierbar“>
+  HINWEISE:
+  - <lästige, aber geringe Risiken>
+  - <schnelle Verbesserungen (max. 3 Bulletpoints)>
+  ---
+  
+  Wichtige Regeln:
+  - Nenne konkrete Evidenz (z. B. "CSP fehlt", "externe Skripte: gtm, hotjar", "Kontaktformular mit E-Mail, keine Passwörter", "Policy nennt keine Rechtsgrundlagen").
+  - Keine vagen Phrasen. Vermeide Spekulationen; wenn etwas nicht belegt ist, markiere es als **„Indizien, unsicher“**.
+  - **Nicht** kleinliche Abwertung, wenn nur eine einfache Kontaktseite ohne Tracking vorliegt.
+  - Hohe Risiken nur bei sensiblen Daten, aggressivem Tracking oder täuschenden Mustern.
+  `;
 }
 
 async function analyzePrivacyScore(
   url: string,
   evidence: any,
-  headMeta: any
+  headMeta: any,
+  policyEvidence: any
 ): Promise<{ score: number | null; result: string; judgement: string }> {
-  const prompt = buildPrompt(url, evidence, headMeta);
+  const prompt = buildPrompt(url, evidence, headMeta, policyEvidence);
 
   const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
@@ -251,56 +310,6 @@ async function analyzePrivacyScore(
     : "Keine detaillierte Begründung verfügbar.";
 
   return { score, result, judgement };
-}
-
-async function summarizePolicies(
-  siteUrl: string,
-  policyTexts: Record<string, string>
-): Promise<{ summary: string }> {
-  const sections = Object.entries(policyTexts)
-    .filter(([_, v]) => v && v.trim().length > 0)
-    .map(([k, v]) => `### ${k.toUpperCase()}\n${v}`)
-    .join("\n\n");
-
-  const prompt = `Du bist ein Assistent, der Rechtstexte für Laien zusammenfasst. Fasse die wichtigsten Punkte aus den folgenden Texten der Website ${siteUrl} in **einfacher, klarer Sprache** zusammen. Nutze kurze Sätze, maximal 8 Bulletpoints je Abschnitt, keine Juristensprache. Wenn Abschnitte fehlen, sag das kurz.
-
-Gib **genau** dieses Format zurück (ohne Markdown-Formatierung, ohne Einleitung):
----
-ZUSAMMENFASSUNG:
-- <wichtigster Punkt 1>
-- <wichtigster Punkt 2>
-- ...
-DETAILS:
-PRIVACY/DATENSCHUTZ:
-- <Bullet>
-NUTZUNGSBEDINGUNGEN/AGB:
-- <Bullet>
-IMPRINT/IMPRESSUM:
-- <Bullet>
-COOKIES:
-- <Bullet>
-RECHTLICH/DISCLAIMER:
-- <Bullet>
-HINWEIS: <kurzer Hinweis, falls Seiten fehlen oder unklar sind>
----
-
-QUELLTEXTE:\n${sections || "(keine Texte gefunden)"}`;
-
-  const res = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4-turbo",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0,
-    }),
-  });
-  const data = await res.json();
-  const content = data.choices?.[0]?.message?.content || "Keine Zusammenfassung verfügbar.";
-  return { summary: content.trim() };
 }
 
 export async function POST(req: NextRequest) {
@@ -374,39 +383,21 @@ export async function POST(req: NextRequest) {
     // ignore – model will work with headMeta only
   }
 
-  // --- Policy discovery & summarization ----------------------------------------
-  const base = new URL(url);
-  const policyLinks = html ? findPolicyLinks(html, base) : { privacy: [], terms: [], imprint: [], cookies: [], legal: [] };
-
-  // pick at most one URL per category to limit latency
-  const pick = (arr: string[]) => (arr && arr.length ? arr[0] : "");
-  const selected = {
-    privacy: pick(policyLinks.privacy),
-    terms: pick(policyLinks.terms),
-    imprint: pick(policyLinks.imprint),
-    cookies: pick(policyLinks.cookies),
-    legal: pick(policyLinks.legal),
-  };
-
-  const policyTexts: Record<string, string> = {};
-  for (const [k, u] of Object.entries(selected)) {
-    if (u) {
-      policyTexts[k] = await fetchTextWithTimeout(u);
+  // --- Policy pages: discover and fetch for deeper analysis ----------------------
+  let policyEvidence: any = { candidates: [], pages: [] };
+  try {
+    if (html && evidence.policyLinks && evidence.policyLinks.length) {
+      const base = new URL(url);
+      policyEvidence = await collectPolicyEvidence(base, evidence.policyLinks);
     }
-  }
-
-  let summary: string | null = null;
-  let summarySources: Record<string, string> = {};
-  if (Object.values(policyTexts).some((t) => t && t.length > 0)) {
-    const s = await summarizePolicies(url, policyTexts);
-    summary = s.summary;
-    summarySources = Object.fromEntries(Object.entries(selected).filter(([_, v]) => !!v));
+  } catch {
+    // non-fatal
   }
 
   if (!process.env.OPENAI_API_KEY) {
     return NextResponse.json({ error: "Kein API-Key gesetzt" }, { status: 500 });
   }
 
-  const { score, result, judgement } = await analyzePrivacyScore(url, evidence, headMeta);
-  return NextResponse.json({ result, judgement, score, summary, summarySources });
+  const { score, result, judgement } = await analyzePrivacyScore(url, evidence, headMeta, policyEvidence);
+  return NextResponse.json({ result, judgement, score, policy: policyEvidence });
 }
