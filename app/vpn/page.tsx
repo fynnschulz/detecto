@@ -16,15 +16,15 @@ export default function VPNPage() {
       <div className="beam beam-2" />
 
       <section className="container">
-        <div className="badge">Detecto Feature</div>
-        <h1 className="title">
+        <div className="badge mx-auto text-center">Detecto Feature</div>
+        <h1 className="title text-center">
           Detecto VPN <span className="title-fade">– powered by NordVPN</span>
         </h1>
-        <p className="lead">
+        <p className="lead text-center mx-auto">
           Sichere dein WLAN, verhindere Tracking und verschlüssele deinen gesamten Datenverkehr. Die Verbindung und Abrechnung laufen direkt über NordVPN – du profitierst von der einfachen Detecto‑Integration.
         </p>
 
-        <div className="cta-row">
+        <div className="flex justify-center gap-4">
           <a
             href={affiliateUrl}
             target="_blank"
@@ -35,7 +35,7 @@ export default function VPNPage() {
           </a>
         </div>
 
-        <div className="disclaimer">
+        <div className="disclaimer text-center mx-auto">
           Hinweis: Dies ist eine <strong>NordVPN‑Integration</strong>. Detecto speichert keine Inhalte deiner
           Verbindung. Für die VPN‑Leistung und die No‑Logs‑Richtlinie ist NordVPN verantwortlich.
         </div>
@@ -65,7 +65,7 @@ export default function VPNPage() {
       </section>
 
       <section id="how" className="container narrow how">
-        <h2 className="h2">So startest du in 60 Sekunden</h2>
+        <h2 className="h2 text-center">So startest du in 60 Sekunden</h2>
         <ol className="steps">
           <li>
             <span className="step">1</span>
@@ -92,7 +92,7 @@ export default function VPNPage() {
       </section>
 
       <section className="container faq">
-        <h2 className="h2">Häufige Fragen</h2>
+        <h2 className="h2 text-center">Häufige Fragen</h2>
         <div className="faq-grid">
           <FAQ
             q="Ist das ein echtes Detecto‑VPN?"
