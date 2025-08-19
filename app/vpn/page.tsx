@@ -198,30 +198,7 @@ export default function VPNPage() {
           font-weight: 900;
           letter-spacing: -0.02em;
           text-align: center;
-          /* Light effects (no animation) */
-          background: linear-gradient(135deg, #eaf2ff 10%, #b7c8ff 35%, #c3b3ff 65%, #eaf2ff 90%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          text-shadow:
-            0 0 0px rgba(255,255,255,0),
-            0 1px 12px rgba(120, 150, 255, 0.25),
-            0 2px 26px rgba(139, 92, 246, 0.22),
-            0 6px 48px rgba(56, 189, 248, 0.18);
-          position: relative;
-        }
-        .title::after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: -10px;
-          width: min(220px, 40%);
-          height: 6px;
-          border-radius: 999px;
-          background: radial-gradient(60% 100% at 50% 50%, rgba(139,92,246,0.6), rgba(56,189,248,0.25) 70%, transparent 80%);
-          filter: blur(8px);
-          opacity: 0.9;
+          color: white;
         }
         .title-fade {
           font-weight: 800;
