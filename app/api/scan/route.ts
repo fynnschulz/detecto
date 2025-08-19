@@ -104,6 +104,69 @@ function extractHtmlSignals(html: string, baseUrl: URL) {
   return signals;
 }
 
+// --- Policy extraction helpers --------------------------------------------------
+function htmlToPlainText(html: string) {
+  // remove scripts/styles
+  html = html.replace(/<script[\s\S]*?<\/script>/gi, "");
+  html = html.replace(/<style[\s\S]*?<\/style>/gi, "");
+  // replace breaks/paras with newlines
+  html = html.replace(/<(br|p|div|li|h[1-6]|section|article)[^>]*>/gi, "\n$&");
+  // strip tags
+  const text = html.replace(/<[^>]+>/g, " ");
+  return text
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function findPolicyLinks(html: string, baseUrl: URL) {
+  const POLICY_KEYWORDS = [
+    { key: "privacy", rx: /(datenschutz|privacy|data\s*protection|privacypolicy)/i },
+    { key: "terms", rx: /(agb|bedingungen|terms|nutzungsbedingungen|terms\s*of\s*service)/i },
+    { key: "imprint", rx: /(impressum|imprint|legal\s*notice)/i },
+    { key: "cookies", rx: /(cookies?|cookie\s*policy|cookie\s*hinweis)/i },
+    { key: "legal", rx: /(rechtlich|legal|disclaimer|haftungsausschluss)/i },
+  ];
+
+  const anchors = Array.from(html.matchAll(/<a[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi));
+  const results: Record<string, string[]> = { privacy: [], terms: [], imprint: [], cookies: [], legal: [] };
+
+  for (const a of anchors) {
+    const href = a[1];
+    const text = (a[2] || "").toLowerCase();
+    for (const k of POLICY_KEYWORDS) {
+      if (k.rx.test(text) || k.rx.test(href)) {
+        try {
+          const u = new URL(href, baseUrl);
+          if (u.protocol.startsWith("http")) {
+            const list = results[k.key as keyof typeof results] as string[];
+            if (!list.includes(u.toString())) list.push(u.toString());
+          }
+        } catch {}
+      }
+    }
+  }
+  return results;
+}
+
+async function fetchTextWithTimeout(url: string, ms = 8000): Promise<string> {
+  const controller = new AbortController();
+  const t = setTimeout(() => controller.abort(), ms);
+  try {
+    const res = await fetch(url, { headers: { Accept: "text/html,text/plain" }, signal: controller.signal, redirect: "follow" });
+    clearTimeout(t);
+    if (!res.ok) return "";
+    const ct = res.headers.get("content-type") || "";
+    const raw = await res.text();
+    if (/text\/plain/i.test(ct)) return raw.slice(0, 200_000);
+    return htmlToPlainText(raw).slice(0, 200_000);
+  } catch {
+    clearTimeout(t);
+    return "";
+  }
+}
+
 // Compose a richer prompt including observed evidence and a fairer rubric
 function buildPrompt(url: string, evidence: any, headMeta: any) {
   return `
@@ -190,6 +253,56 @@ async function analyzePrivacyScore(
   return { score, result, judgement };
 }
 
+async function summarizePolicies(
+  siteUrl: string,
+  policyTexts: Record<string, string>
+): Promise<{ summary: string }> {
+  const sections = Object.entries(policyTexts)
+    .filter(([_, v]) => v && v.trim().length > 0)
+    .map(([k, v]) => `### ${k.toUpperCase()}\n${v}`)
+    .join("\n\n");
+
+  const prompt = `Du bist ein Assistent, der Rechtstexte für Laien zusammenfasst. Fasse die wichtigsten Punkte aus den folgenden Texten der Website ${siteUrl} in **einfacher, klarer Sprache** zusammen. Nutze kurze Sätze, maximal 8 Bulletpoints je Abschnitt, keine Juristensprache. Wenn Abschnitte fehlen, sag das kurz.
+
+Gib **genau** dieses Format zurück (ohne Markdown-Formatierung, ohne Einleitung):
+---
+ZUSAMMENFASSUNG:
+- <wichtigster Punkt 1>
+- <wichtigster Punkt 2>
+- ...
+DETAILS:
+PRIVACY/DATENSCHUTZ:
+- <Bullet>
+NUTZUNGSBEDINGUNGEN/AGB:
+- <Bullet>
+IMPRINT/IMPRESSUM:
+- <Bullet>
+COOKIES:
+- <Bullet>
+RECHTLICH/DISCLAIMER:
+- <Bullet>
+HINWEIS: <kurzer Hinweis, falls Seiten fehlen oder unklar sind>
+---
+
+QUELLTEXTE:\n${sections || "(keine Texte gefunden)"}`;
+
+  const res = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: "gpt-4-turbo",
+      messages: [{ role: "user", content: prompt }],
+      temperature: 0,
+    }),
+  });
+  const data = await res.json();
+  const content = data.choices?.[0]?.message?.content || "Keine Zusammenfassung verfügbar.";
+  return { summary: content.trim() };
+}
+
 export async function POST(req: NextRequest) {
   const body = await req.json();
   const { url } = body;
@@ -261,10 +374,39 @@ export async function POST(req: NextRequest) {
     // ignore – model will work with headMeta only
   }
 
+  // --- Policy discovery & summarization ----------------------------------------
+  const base = new URL(url);
+  const policyLinks = html ? findPolicyLinks(html, base) : { privacy: [], terms: [], imprint: [], cookies: [], legal: [] };
+
+  // pick at most one URL per category to limit latency
+  const pick = (arr: string[]) => (arr && arr.length ? arr[0] : "");
+  const selected = {
+    privacy: pick(policyLinks.privacy),
+    terms: pick(policyLinks.terms),
+    imprint: pick(policyLinks.imprint),
+    cookies: pick(policyLinks.cookies),
+    legal: pick(policyLinks.legal),
+  };
+
+  const policyTexts: Record<string, string> = {};
+  for (const [k, u] of Object.entries(selected)) {
+    if (u) {
+      policyTexts[k] = await fetchTextWithTimeout(u);
+    }
+  }
+
+  let summary: string | null = null;
+  let summarySources: Record<string, string> = {};
+  if (Object.values(policyTexts).some((t) => t && t.length > 0)) {
+    const s = await summarizePolicies(url, policyTexts);
+    summary = s.summary;
+    summarySources = Object.fromEntries(Object.entries(selected).filter(([_, v]) => !!v));
+  }
+
   if (!process.env.OPENAI_API_KEY) {
     return NextResponse.json({ error: "Kein API-Key gesetzt" }, { status: 500 });
   }
 
   const { score, result, judgement } = await analyzePrivacyScore(url, evidence, headMeta);
-  return NextResponse.json({ result, judgement, score });
+  return NextResponse.json({ result, judgement, score, summary, summarySources });
 }
