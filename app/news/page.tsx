@@ -23,23 +23,21 @@ export default function NewsPage() {
     },
     {
       date: "15. Aug 2025",
-      title: "Dashboard-Kacheln",
-      desc:
-        "Platzhalter für Gesamtscore, Tool-Shortcuts & letzte Scans. Schlanke Navigation in Arbeit.",
-      tag: "UI",
+      title: "VPN",
+      desc: "Sicher verbinden, Tracking umgehen, Region wechseln. Integration in Detecto im Aufbau.",
+      tag: "VPN",
     },
     {
       date: "07. Aug 2025",
-      title: "Accounts per Supabase",
-      desc:
-        "Login/Registrierung, persistente Sessions, Auto-Logout nach Inaktivität.",
-      tag: "Accounts",
+      title: "Community",
+      desc: "Anonyme Erfahrungsberichte, Bewertungen und Hinweise – datenschutzfreundlich eingebunden.",
+      tag: "Community",
     },
     {
       date: "24. Jul 2025",
-      title: "Webversion live",
-      desc: "Detecto läuft in der Cloud. Iterative Releases folgen.",
-      tag: "Launch",
+      title: "Scan & Suchmaschine",
+      desc: "Website‑Scan mit Datenschutz‑Score und KI‑Suchmaschine mit präzisen, sicheren Treffern.",
+      tag: "Tools",
     },
   ];
 
@@ -99,7 +97,7 @@ export default function NewsPage() {
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
                 <span className="rounded-full bg-cyan-500/15 text-cyan-300 px-3 py-1 text-xs border border-cyan-400/30">
-                  Preview
+                  Vorschau
                 </span>
                 <span className="rounded-full bg-white/5 text-gray-300 px-3 py-1 text-xs border border-zinc-700">
                   Business
@@ -161,7 +159,7 @@ export default function NewsPage() {
               <div className="flex items-center justify-between gap-4">
                 <h4 className="text-2xl font-bold">AttackSim</h4>
                 <span className="text-xs px-2 py-1 rounded-full border border-cyan-400/30 bg-cyan-500/10 text-cyan-300">
-                  Preview
+                  Vorschau
                 </span>
               </div>
               <p className="mt-3 text-gray-300">
