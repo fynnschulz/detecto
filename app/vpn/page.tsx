@@ -179,7 +179,9 @@ export default function VPNPage() {
         .container.narrow { max-width: 900px; }
 
         .badge {
-          display: inline-block;
+          display: block;
+          text-align: center;
+          margin: 0 auto;
           padding: 6px 12px;
           border-radius: 999px;
           font-size: 12px;
@@ -293,8 +295,16 @@ export default function VPNPage() {
           padding: 14px 16px;
           backdrop-filter: blur(10px);
         }
-        .faq-item summary { cursor: pointer; font-weight: 700; }
-        .faq-item p { margin: 8px 0 0; color: #cfd3e6; }
+        .faq-item summary {
+          cursor: pointer;
+          font-weight: 700;
+          text-align: center;
+        }
+        .faq-item p {
+          margin: 8px 0 0;
+          color: #cfd3e6;
+          text-align: center;
+        }
       `}</style>
     </main>
   );
