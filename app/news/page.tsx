@@ -110,15 +110,29 @@ export default function NewsPage() {
                 </Link>
               </div>
             </div>
-            <div className="relative mx-auto md:mx-0 h-40 w-full max-w-sm">
-              <Image
-                src="/news-attacksim.png"
-                alt="AttackSim Preview"
-                fill
-                className="object-contain opacity-90"
-                priority
-              />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative mx-auto md:mx-0 w-full max-w-md"
+            >
+              {/* Soft glow behind the image */}
+              <div aria-hidden className="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-cyan-400/15 via-blue-500/10 to-purple-500/10 blur-2xl" />
+
+              <div className="relative h-48 w-full rounded-2xl border border-zinc-700/70 bg-gradient-to-b from-zinc-900/60 to-black/60 shadow-2xl overflow-hidden">
+                <Image
+                  src="/attacksim.png"
+                  alt="AttackSim Vorschau"
+                  fill
+                  className="object-cover opacity-95"
+                  priority
+                />
+
+                {/* subtle top light */}
+                <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/10 to-transparent" />
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </section>
