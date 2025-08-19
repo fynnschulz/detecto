@@ -33,9 +33,6 @@ export default function VPNPage() {
           >
             Jetzt aktivieren
           </a>
-          <a href="#how" className="btn btn-ghost">
-            So funktioniert’s
-          </a>
         </div>
 
         <div className="disclaimer">
