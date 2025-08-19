@@ -1,6 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Hilfsfunktion zum Validieren vollständiger URLs
+/**
+ * Improved privacy scan route
+ * - Deterministic signal analysis (no LLM) for scoring
+ * - LLM only for concise explanations based on hard evidence
+ * - Preserves existing response fields: score (0–100 % = Datenschutz-Score), result, judgement
+ * - Adds rich fields: risk_score, confidence, findings, timing_ms, finalUrl
+ */
+
+// --- Utilities --------------------------------------------------------------
+
+// Validate full URL (http/https)
 function isValidFullUrl(url: string): boolean {
   try {
     const parsed = new URL(url);
@@ -10,61 +20,167 @@ function isValidFullUrl(url: string): boolean {
   }
 }
 
-async function analyzePrivacyScore(
-  url: string
-): Promise<{ score: number | null; result: string; judgement: string }> {
-  const prompt = `
-Du bist ein Datenschutzexperte. Analysiere die Datenschutzpraktiken der folgenden Webseite: ${url}
+// Timeout-capable fetch
+async function fetchWithTimeout(resource: string, options: RequestInit & { timeoutMs?: number } = {}) {
+  const { timeoutMs = 7000, ...rest } = options;
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const res = await fetch(resource, { ...(rest as RequestInit), signal: controller.signal, redirect: "follow" });
+    return res;
+  } finally {
+    clearTimeout(id);
+  }
+}
 
-Gib eine Bewertung, die auf **Transparenz**, **Nutzerkontrolle**, dem **Zweck der Datennutzung** und den folgenden technischen Aspekten basiert:
+// Fetch HTML + headers (GET)
+async function fetchPage(url: string) {
+  const res = await fetchWithTimeout(url, { method: "GET", timeoutMs: 8000 });
+  const html = await res.text();
+  const headers: Record<string, string> = {};
+  res.headers.forEach((v, k) => (headers[k.toLowerCase()] = v));
+  return { html, headers, finalUrl: res.url, ok: res.ok, status: res.status };
+}
 
-🔍 Analysiere zusätzlich (falls erkennbar):
-- Welche **Cookies und Tracker** werden gesetzt? (Name, Zweck, Drittanbieter)
-- Werden **Drittanbieter-Tools** geladen? (Google, Meta, Hotjar, etc.)
-- Fehlen wichtige **Security-Header**? (Content-Security-Policy, X-Frame-Options, Strict-Transport-Security)
-- Hat die Seite ein gültiges **SSL-Zertifikat** (https)?
-- In welchem **Land** wird die Seite gehostet (z. B. USA, EU)?
-- Werden externe **Technologien** wie Google Fonts ohne Consent nachgeladen?
-- Gibt es **Formulareingaben** ohne Zweckangabe oder Datenschutzinfo?
-- Existiert ein **Cookie-Banner** mit funktionierender Einwilligung?
-- Wird die **IP-Adresse** anonymisiert oder getrackt?
+// --- Signal extraction (no external deps) ----------------------------------
 
-Gib eine Bewertung, die auf diesen Punkten basiert – nicht nur darauf, ob überhaupt Daten erhoben werden.
+type ScanSignals = {
+  https: boolean;
+  headers: Record<string, string | undefined>;
+  thirdPartyRequests: number;
+  trackerHits: string[];
+  hasImpressumLink: boolean;
+  hasDatenschutzLink: boolean;
+  overlayLikely: boolean;
+  sensitiveForms: boolean;
+};
 
-Am Anfang der Antwort soll eine Datenschutz-Sicherheitsbewertung in Prozent (1–100 %) stehen – z. B. „Datenschutz-Score: 82 %“. Diese Zahl soll möglichst realistisch und nachvollziehbar sein.
+function extractSignals(inputUrl: string, html: string, headers: Record<string, string | undefined>): ScanSignals {
+  const url = new URL(inputUrl);
+  const domain = url.hostname.replace(/^www\./, "");
+  const htmlLower = html.toLowerCase();
 
-⚠️ Hinweis: Diese Domain ist **nicht automatisch mit großen Marken wie z. B. PayPal, Amazon oder Google gleichzusetzen**. Es kann sich um eine **kritische oder nachgeahmte Seite** handeln.
+  // Links
+  const linkHrefRegex = /<a[^>]+href=["']([^"']+)["'][^>]*>/gi;
+  const links: string[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = linkHrefRegex.exec(htmlLower))) links.push(m[1]);
+  const hasImpressum = links.some((h) => h.includes("impressum"));
+  const hasPrivacy = links.some((h) => h.includes("datenschutz") || h.includes("privacy"));
 
-Gib exakt dieses JSON zurück (ohne Vorwort, ohne Erklärung, ohne Markdown):
+  // Resources (script/img/link/iframe)
+  const srcHrefRegex = /<(script|img|link|iframe)[^>]+(?:src|href)=["']([^"']+)["'][^>]*>/gi;
+  const thirdPartyHosts = new Set<string>();
+  while ((m = srcHrefRegex.exec(html))) {
+    const ref = m[2];
+    try {
+      const u = new URL(ref, url);
+      const host = u.hostname.replace(/^www\./, "");
+      if (host !== domain) thirdPartyHosts.add(host);
+    } catch {
+      // ignore invalid URLs
+    }
+  }
 
-Einordnung:
-- 90–100 % = sehr sicher
-- 70–89 % = gut
-- 45–69 % = mittelmäßig
-- unter 45 % = kritisch
+  // Trackers — keyword heuristics
+  const trackerPatterns = [
+    "gtag(",
+    "ga(",
+    "googletagmanager.com",
+    "google-analytics",
+    "facebook.net",
+    "fbq(",
+    "tiktok",
+    "ttq",
+    "hotjar",
+    "adservice.google",
+    "doubleclick.net",
+    "bing.com/tag.js",
+    "clarity",
+    "pixel",
+  ];
+  const trackerHits = trackerPatterns.filter((p) => htmlLower.includes(p.toLowerCase()));
 
-### Hinweise zur Bewertung:
-1. **Berücksichtige die Branche**, aber:
-   - Verwende sie **nicht als Rechtfertigung** für schlechte Praktiken.
-   - Schlechte Praktiken bleiben schlecht – **auch wenn sie branchenüblich** sind.
-   - Eine Seite innerhalb einer risikobehafteten Branche muss **besonders positiv abweichen**, um besser bewertet zu werden.
-2. **Rot (kritisch)**: bei intransparenter oder aggressiver Datennutzung (z. B. kein Opt-out, keine Angabe zu Drittanbietern, weitreichendes Tracking).
-3. **Orange (mittelmäßig)**: wenn es Licht und Schatten gibt – z. B. Transparenz vorhanden, aber Kontrolle eingeschränkt oder zu viele unnötige Daten.
-4. **Grün (gut oder sehr gut)**: wenn der Nutzer klar informiert wird, Daten sparsam erhoben und kontrollierbar sind – **auch innerhalb kritischer Branchen** möglich, wenn herausragend gut.
-5. **Bewerte realistisch** im Vergleich zum heutigen Internet-Standard. Idealbedingungen sind selten – aber grobe Mängel bleiben gravierend.
-6. Achte darauf, dass **keine leeren, vagen oder irrelevanten Stichpunkte entstehen.** Jeder Grund muss klar, verständlich und konkret sein.
+  // Cookie/Consent overlays
+  const overlayLikely = /cookie|consent|overlay|modal/.test(htmlLower) && (htmlLower.match(/cookie|consent/g)?.length || 0) > 2;
 
-Antwortformat:
----
-Datenschutz-Score: <Zahl>%
-BEWERTUNG: <z. B. „kritisch“, „mittelmäßig“, „gut“, „sehr gut“>
-GRÜNDE:
-- <Grund 1>
-- <Grund 2>
-- …
----
-Nutze eine **nutzernah verständliche Sprache**, damit Laien die Risiken verstehen.
-`;
+  // Sensitive forms (very rough)
+  const sensitiveForms = /<form[\s\S]*?(password|iban|credit|cardnumber|konto)/i.test(htmlLower);
+
+  return {
+    https: url.protocol === "https:",
+    headers,
+    thirdPartyRequests: thirdPartyHosts.size,
+    trackerHits,
+    hasImpressumLink: hasImpressum,
+    hasDatenschutzLink: hasPrivacy,
+    overlayLikely,
+    sensitiveForms,
+  };
+}
+
+// --- Scoring (deterministic) -----------------------------------------------
+
+type Evidence = {
+  id: string;
+  label: string;
+  severity: "low" | "med" | "high";
+  value: number | string | boolean;
+  details?: string;
+};
+
+function computeRisk(signals: ScanSignals) {
+  let score = 0; // risk score 0–100 (higher = worse)
+  const ev: Evidence[] = [];
+
+  if (!signals.https) {
+    score += 8;
+    ev.push({ id: "no_https", label: "Kein HTTPS", severity: "high", value: false });
+  }
+
+  const secHeaders = ["content-security-policy", "strict-transport-security", "x-frame-options", "referrer-policy"];
+  let missing = 0;
+  for (const h of secHeaders) if (!signals.headers[h]) missing++;
+  if (missing > 0) {
+    score += 3 * missing;
+    ev.push({ id: "missing_headers", label: `Fehlende Security-Header (${missing})`, severity: missing >= 3 ? "high" : "med", value: missing });
+  }
+
+  if (signals.thirdPartyRequests > 20) score += 15; else if (signals.thirdPartyRequests > 10) score += 8;
+  ev.push({ id: "third_party_requests", label: "Drittanbieter-Requests", severity: signals.thirdPartyRequests > 20 ? "high" : signals.thirdPartyRequests > 10 ? "med" : "low", value: signals.thirdPartyRequests, details: ">10 erhöht, >20 hoch" });
+
+  if (signals.trackerHits.length) {
+    const add = Math.min(16, signals.trackerHits.length * 4);
+    score += add;
+    ev.push({ id: "trackers", label: "Tracker-Muster erkannt", severity: add >= 12 ? "high" : "med", value: signals.trackerHits.length, details: signals.trackerHits.join(", ") });
+  }
+
+  if (!signals.hasImpressumLink) { score += 8; ev.push({ id: "no_impressum", label: "Kein Impressum verlinkt", severity: "med", value: false }); }
+  if (!signals.hasDatenschutzLink) { score += 8; ev.push({ id: "no_privacy", label: "Keine Datenschutzerklärung verlinkt", severity: "med", value: false }); }
+
+  if (signals.overlayLikely) { score += 5; ev.push({ id: "overlay", label: "Aufdringliches Cookie-Overlay", severity: "low", value: true }); }
+  if (signals.sensitiveForms) { score += 10; ev.push({ id: "sensitive_forms", label: "Sensible Formulare potenziell unsicher", severity: "high", value: true }); }
+
+  const clamped = Math.max(0, Math.min(100, score));
+  return { risk_score: clamped, evidence: ev };
+}
+
+// Map Datenschutz-Score to label
+function mapResultLabel(scorePercent: number): string {
+  if (scorePercent >= 90) return "sehr gut";
+  if (scorePercent >= 70) return "gut";
+  if (scorePercent >= 45) return "mittelmäßig";
+  return "kritisch";
+}
+
+// --- LLM explanation (optional, concise) -----------------------------------
+
+async function explainWithLLM({ url, risk_score, evidence }: { url: string; risk_score: number; evidence: Evidence[] }) {
+  if (!process.env.OPENAI_API_KEY) return { summary_md: "", rationale_md: "" };
+
+  const sys = `Du bist ein sachlicher Sicherheitsprüfer.\n- Erfinde keine Fakten.\n- Nutze NUR die gelieferten Evidence-Items.\n- Antworte kurz, klar, in Deutsch, Markdown erlaubt.\n- Gib zuerst 1–2 Sätze Zusammenfassung, dann eine knappe Bullet-Liste.`;
+
+  const user = { url, risk_score, evidence: evidence.map((e) => ({ id: e.id, label: e.label, severity: e.severity, value: e.value, details: e.details })) };
 
   const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
@@ -73,69 +189,77 @@ Nutze eine **nutzernah verständliche Sprache**, damit Laien die Risiken versteh
       Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
     },
     body: JSON.stringify({
-      model: "gpt-4-turbo",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0,
+      model: "gpt-4o-mini",
+      temperature: 0.2,
+      messages: [
+        { role: "system", content: sys },
+        { role: "user", content: JSON.stringify(user) },
+      ],
     }),
   });
 
-  const openaiData = await openaiRes.json();
-  const content = openaiData.choices?.[0]?.message?.content || "Keine Antwort von GPT.";
-
-  const scoreMatch = content.match(/Datenschutz-Score:\s*(\d{1,3})\s*%/i);
-  const score = scoreMatch ? parseInt(scoreMatch[1]) : null;
-
-  const resultMatch = content.match(/BEWERTUNG:\s*(.+)/i);
-  const result = resultMatch && typeof resultMatch[1] === "string" ? resultMatch[1].trim() : "Keine Bewertung gefunden.";
-
-  const lines: string[] = content.split("\n").map((line: string) => line.trim());
-  const filtered = lines.filter(
-    (line) =>
-      line.startsWith("-") &&
-      !line.includes("BEWERTUNG") &&
-      line.length > 3 &&
-      !["--", "- -", "-"].includes(line)
-  );
-  const uniqueJudgements = [...new Set(filtered.map((line: string) => line.slice(1).trim()))];
-  const judgement = uniqueJudgements.length
-    ? "• " + uniqueJudgements.join("\n• ")
-    : "Keine detaillierte Begründung verfügbar.";
-
-  return { score, result, judgement };
+  const data = await openaiRes.json();
+  const text: string = data?.choices?.[0]?.message?.content || "";
+  const [firstLine, ...rest] = text.split("\n");
+  return { summary_md: (firstLine || "").trim(), rationale_md: rest.join("\n").trim() };
 }
 
+// --- Route handler ----------------------------------------------------------
+
 export async function POST(req: NextRequest) {
-  const body = await req.json();
-  const { url } = body;
+  const body = await req.json().catch(() => ({}));
+  const { url } = body as { url?: string };
 
   if (!url || typeof url !== "string" || !isValidFullUrl(url)) {
-    return NextResponse.json<{ error: string }>(
+    return NextResponse.json(
       { error: "Ungültige oder unvollständige URL (z. B. https://example.com)" },
       { status: 400 }
     );
   }
 
-  // Check: Existiert die Seite wirklich?
+  // Lightweight existence check with timeout
   try {
-    const res = await fetch(url, { method: "HEAD", redirect: "follow" });
-    if (!res.ok) {
-      return NextResponse.json(
-        { error: `Diese Webseite antwortet nicht (Status ${res.status}).` },
-        { status: 400 }
-      );
+    const head = await fetchWithTimeout(url, { method: "HEAD", timeoutMs: 5000 });
+    if (!head.ok) {
+      return NextResponse.json({ error: `Diese Webseite antwortet nicht (Status ${head.status}).` }, { status: 400 });
     }
   } catch (err) {
     console.error("Existenzprüfung fehlgeschlagen:", err);
-    return NextResponse.json(
-      { error: "Die Webseite konnte nicht gefunden oder erreicht werden." },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: "Die Webseite konnte nicht gefunden oder erreicht werden." }, { status: 400 });
   }
 
-  if (!process.env.OPENAI_API_KEY) {
-    return NextResponse.json({ error: "Kein API-Key gesetzt" }, { status: 500 });
+  const t0 = Date.now();
+
+  // Fetch & analyze deterministically
+  const page = await fetchPage(url);
+  if (!page.ok) {
+    return NextResponse.json({ error: `Abruf fehlgeschlagen (Status ${page.status}).` }, { status: 400 });
   }
 
-  const { score, result, judgement } = await analyzePrivacyScore(url);
-  return NextResponse.json({ result, judgement, score });
+  const signals = extractSignals(page.finalUrl, page.html.slice(0, 150_000), page.headers);
+  const { risk_score, evidence } = computeRisk(signals);
+
+  // Convert to Datenschutz-Score (higher = better) to preserve compatibility
+  const datenschutzScore = Math.max(0, 100 - risk_score);
+  const resultLabel = mapResultLabel(datenschutzScore);
+
+  // Optional concise explanation (LLM only on evidence)
+  const explain = await explainWithLLM({ url: page.finalUrl, risk_score, evidence });
+
+  const timing_ms = Date.now() - t0;
+  const response = {
+    // Old fields (compatibility)
+    score: datenschutzScore,
+    result: resultLabel,
+    judgement: explain.summary_md ? `${explain.summary_md}\n${explain.rationale_md}` : "",
+    // New rich fields
+    version: "1.1.0",
+    finalUrl: page.finalUrl,
+    risk_score,
+    confidence: Math.max(0.4, 1 - Math.min(1, evidence.length / 20)),
+    findings: evidence,
+    timing_ms,
+  };
+
+  return NextResponse.json(response);
 }
