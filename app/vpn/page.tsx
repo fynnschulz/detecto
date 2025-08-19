@@ -1,6 +1,7 @@
 // app/vpn/page.tsx
+// app/vpn/page.tsx
+'use client';
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Detecto VPN – Sicher surfen (Partner-Integration)',
