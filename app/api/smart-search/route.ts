@@ -13,55 +13,36 @@ export async function POST(req: NextRequest) {
   }
 
   const prompt = `
-  Du bist ein Datenschutz-Experte. Eine Webseite darf nur empfohlen werden, wenn sie:
-
-  - sicher im Umgang mit Daten ist
-  - keine übermäßigen Tracker oder aggressive Werbung verwendet
-  - HTTPS verwendet und erreichbar ist
-  - zum eingegebenen Thema passt
-
-  Ergänze deine Bewertung außerdem um folgende technische Datenschutzaspekte:
-  - Cookies & Tracker: Werden möglichst wenige verwendet? Wird klar informiert?
-  - Drittanbieter-Tools: Wird auf Google, Meta, Hotjar usw. verzichtet?
-  - Security-Header: Sind moderne Sicherheitsheader wie CSP, X-Frame-Options etc. aktiv?
-  - SSL-Zertifikat: Wird HTTPS verwendet?
-  - Hosting-Standort: Wird in der EU gehostet?
-  - Technologien: Kommen datenschutzbedenkliche Dienste wie Google Fonts zum Einsatz?
-  - Formulare: Werden Daten sparsam und mit Datenschutzhinweis abgefragt?
-  - Cookie-Banner: Gibt es eine echte, funktionierende Einwilligung?
-  - IP-Tracking: Wird die IP-Adresse anonymisiert?
-
-  Beachte außerdem folgende Bewertungsrichtlinien:
-
-  1. Berücksichtige die Branche, aber verwende sie nicht als Rechtfertigung für schlechte Praktiken. Eine Seite innerhalb einer risikobehafteten Branche muss besonders positiv abweichen, um empfohlen zu werden.
-  2. Rot (kritisch): Intransparente oder aggressive Datennutzung (z. B. kein Opt-out, keine Angabe zu Drittanbietern, weitreichendes Tracking) → solche Seiten dürfen nicht vorgeschlagen werden.
-  3. Orange (mittelmäßig): Wenn es Licht und Schatten gibt – z. B. Transparenz vorhanden, aber Kontrolle eingeschränkt oder zu viele unnötige Daten. Diese Seiten dürfen nur vorgeschlagen werden, wenn sie sehr nah an Grün liegen.
-  4. Grün (gut oder sehr gut): Der Nutzer wird klar informiert, Daten werden sparsam erhoben und sind kontrollierbar – solche Seiten dürfen bevorzugt vorgeschlagen werden.
-  5. Bewerte realistisch im Vergleich zum heutigen Internet-Standard. Idealbedingungen sind selten – aber grobe Mängel bleiben gravierend.
-  6. Es dürfen nur Seiten vorgeschlagen werden, die mit einer Datenschutzbewertung von mindestens 65 % (grüner Bereich oder sehr nahe daran) eingestuft würden.
-  7. Gib nur dann Webseiten aus, wenn sie diese Kriterien sicher erfüllen.
-
-  Gib exakt dieses JSON zurück (ohne Vorwort, ohne Erklärung, ohne Markdown):
-
+  Du bist ein Datenschutz- und Sicherheitsprüfer. Liefere nur Webseiten, die **thematisch exakt** zur Suchanfrage passen **und** beim Detecto-Scan gemäß identischer Kriterien mindestens **65 %** erreichen würden.
+  
+  **Identische Kriterien zum Scan-Tool (unbedingt beachten):**
+  - Datenschutzqualität (Datenminimierung, Transparenz, Nutzerkontrolle/Consent)
+  - Drittanbieter-/Tracker-Fußabdruck (Google/Meta/Hotjar/Hubspot/LinkedIn/Matomo etc.)
+  - Security-Basics (HTTPS, moderne Header wie CSP/HSTS/XFO sofern sinnvoll)
+  - Cookie-Banner: echte Einwilligung, keine Zwangs-Opt-in-Dark Patterns
+  - Policy-/DSGVO-Prüfung: Privacy/Datenschutz, Cookies, AGB/Terms, Impressum/Legal werden berücksichtigt; erkennbare Lücken/Verstöße (z. B. fehlende Rechtsgrundlagen, keine Betroffenenrechte, kein DPO, unklare Drittlandtransfers) würden die Bewertung unter 65 % drücken
+  - Realismus: einfache Info-/Kontaktseiten werden nicht überhart bewertet, sofern transparent und sparsam
+  
+  **Strenge Themenrelevanz (Präzision):**
+  - Interpretiere die Suchanfrage als Schlagwort-AND-Filtern. Alle Kernbegriffe der Anfrage müssen semantisch erfüllt sein.
+  - Schlage **keine** Seiten vor, die nur vage passen oder nur Teilaspekte behandeln.
+  
+  **Ausgaberegeln:**
+  - Gib **0 bis 3** Ergebnisse zurück (niemals auf 3 auffüllen, wenn weniger passen).
+  - Wenn **keine** Seite die Kriterien erfüllt, gib **eine leere JSON-Liste** [] zurück.
+  - Jedes Ergebnis muss die Kriterien (inkl. DSGVO/Policy-Check) voraussichtlich **≥ 65 %** erfüllen.
+  - Beschreibung: kurz und präzise, warum **thematisch passend** und **datenschutztechnisch solide** (max. 220 Zeichen).
+  
+  Gib **exakt** dieses JSON zurück (ohne Vorwort/Erklärung/Markdown):
   [
     {
       "name": "Webseitenname",
       "url": "https://...",
       "description": "Warum diese Seite sicher und thematisch passend ist"
-    },
-    {
-      "name": "...",
-      "url": "https://...",
-      "description": "..."
-    },
-    {
-      "name": "...",
-      "url": "https://...",
-      "description": "..."
     }
   ]
-
-  Thema: ${query}
+  
+  Suchanfrage: ${query}
   `;
 
   try {
@@ -98,7 +79,72 @@ export async function POST(req: NextRequest) {
       console.error("Fehler beim Parsen der JSON-Antwort von GPT:", parseError);
     }
 
-    return NextResponse.json({ alternatives });
+    // --- Präzisions-Filter & Score-Validierung über Scan-API ----------------------
+    const tokens = (query || "")
+      .toLowerCase()
+      .split(/[^a-z0-9äöüß\-+]+/i)
+      .filter(t => t && t.length > 1);
+    
+    // Dedupliziere nach Hostname und filtere nach AND-Match der Tokens
+    const seenHosts = new Set<string>();
+    const origin = req.nextUrl?.origin || "";
+    const scanEndpoint = origin ? origin + "/api/scan" : "/api/scan";
+    
+    async function getScanScore(u: string, timeoutMs = 12000): Promise<number | null> {
+      try {
+        const controller = new AbortController();
+        const to = setTimeout(() => controller.abort(), timeoutMs);
+        const res = await fetch(scanEndpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url: u }),
+          signal: controller.signal,
+        });
+        clearTimeout(to);
+        if (!res.ok) return null;
+        const data = await res.json();
+        const score = typeof data?.score === "number" ? data.score : null;
+        return score;
+      } catch {
+        return null;
+      }
+    }
+    
+    // Normalisiere Kandidaten-Struktur
+    const normalized = Array.isArray(alternatives) ? alternatives.map((item: any) => ({
+      name: String(item?.name || "").trim(),
+      url: String(item?.url || "").trim(),
+      description: String(item?.description || "").trim(),
+    })) : [];
+    
+    // Präzise Schlagwortprüfung (AND über name+description+url)
+    function matchesAllTokens(item: {name: string; url: string; description: string}) {
+      const hay = (item.name + " " + item.description + " " + item.url).toLowerCase();
+      return tokens.every(tok => hay.includes(tok));
+    }
+    
+    // Filter, dedupe, limit und Scan-Validierung (≥65)
+    const filtered = [];
+    for (const item of normalized) {
+      if (!item.url || !item.name) continue;
+      if (!matchesAllTokens(item)) continue;
+      try {
+        const host = new URL(item.url).hostname.replace(/^www\./, "");
+        if (seenHosts.has(host)) continue;
+        seenHosts.add(host);
+      } catch {
+        continue;
+      }
+      // Score validieren
+      const score = await getScanScore(item.url);
+      if (score !== null && score >= 65) {
+        filtered.push(item);
+      }
+      if (filtered.length >= 3) break; // Max 3 Ergebnisse
+    }
+    
+    // Wenn keine passenden Seiten, leeres Array zurückgeben (keine Auffüllung)
+    return NextResponse.json({ alternatives: filtered });
   } catch (error) {
     console.error("Fehler bei smart-search:", error);
     return NextResponse.json({ error: "Fehler beim Verarbeiten der Anfrage." }, { status: 500 });
