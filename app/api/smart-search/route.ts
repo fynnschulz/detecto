@@ -80,17 +80,36 @@ export async function POST(req: NextRequest) {
     }
 
     // --- Präzisions-Filter & Score-Validierung über Scan-API ----------------------
-    const tokens = (query || "")
-      .toLowerCase()
-      .split(/[^a-z0-9äöüß\-+]+/i)
-      .filter(t => t && t.length > 1);
-    
+    // Tokenisierung mit Stopwords (de/en) und Mindestlänge
+    const stopwords = new Set([
+      "und","oder","the","and","for","für","mit","ohne","ein","eine","einer","eines","einem","einen","zu","zum","zur","von","im","in","auf","an",
+      "bei","am","der","die","das","den","des","dem","it","is","are","of","to","on","at","by","about","über","etc","et","als","wie","was","ist",
+      "www","http","https","de","en","com"
+    ]);
+    function normalize(s: string) {
+      return s
+        .toLowerCase()
+        .replace(/ä/g,"ae").replace(/ö/g,"oe").replace(/ü/g,"ue").replace(/ß/g,"ss");
+    }
+    const rawTokens = normalize(query || "")
+      .split(/[^a-z0-9\-+]+/i)
+      .map(t => t.trim())
+      .filter(Boolean);
+    const tokens = rawTokens.filter(t => {
+      if (stopwords.has(t)) return false;
+      if (/^\d+$/.test(t)) return true; // Zahlen zulassen
+      return t.length >= 3;
+    });
+
     // Dedupliziere nach Hostname und filtere nach AND-Match der Tokens
     const seenHosts = new Set<string>();
     const origin = req.nextUrl?.origin || "";
     const scanEndpoint = origin ? origin + "/api/scan" : "/api/scan";
-    
+
+    const scanCache = new Map<string, number | null>();
+
     async function getScanScore(u: string, timeoutMs = 12000): Promise<number | null> {
+      if (scanCache.has(u)) return scanCache.get(u)!;
       try {
         const controller = new AbortController();
         const to = setTimeout(() => controller.abort(), timeoutMs);
@@ -101,49 +120,98 @@ export async function POST(req: NextRequest) {
           signal: controller.signal,
         });
         clearTimeout(to);
-        if (!res.ok) return null;
+        if (!res.ok) {
+          scanCache.set(u, null);
+          return null;
+        }
         const data = await res.json();
         const score = typeof data?.score === "number" ? data.score : null;
+        scanCache.set(u, score);
         return score;
       } catch {
+        scanCache.set(u, null);
         return null;
       }
     }
-    
+
     // Normalisiere Kandidaten-Struktur
     const normalized = Array.isArray(alternatives) ? alternatives.map((item: any) => ({
       name: String(item?.name || "").trim(),
       url: String(item?.url || "").trim(),
       description: String(item?.description || "").trim(),
     })) : [];
-    
-    // Präzise Schlagwortprüfung (AND über name+description+url)
-    function matchesAllTokens(item: {name: string; url: string; description: string}) {
-      const hay = (item.name + " " + item.description + " " + item.url).toLowerCase();
-      return tokens.every(tok => hay.includes(tok));
+
+    // Scoring-basierte Schlagwortprüfung (über name+description+url+Hostname)
+    function matchScore(item: {name: string; url: string; description: string}) {
+      const hay = normalize(item.name + " " + item.description + " " + item.url);
+      let host = "";
+      try { host = normalize(new URL(item.url).hostname.replace(/^www\./,"")); } catch {}
+      const hayFull = hay + " " + host + " " + host.replace(/\./g," ");
+      let score = 0;
+      for (const tok of tokens) {
+        if (!tok) continue;
+        if (hayFull.includes(tok)) score += 1;
+      }
+      return score;
     }
-    
+
     // Filter, dedupe, limit und Scan-Validierung (≥65)
-    const filtered = [];
-    for (const item of normalized) {
-      if (!item.url || !item.name) continue;
-      if (!matchesAllTokens(item)) continue;
-      try {
-        const host = new URL(item.url).hostname.replace(/^www\./, "");
-        if (seenHosts.has(host)) continue;
-        seenHosts.add(host);
-      } catch {
-        continue;
+    async function filterAndValidate(candidates: any[]) {
+      const results: any[] = [];
+      for (const item of candidates) {
+        if (!item.url || !item.name) continue;
+        // Host-Dedupe
+        let host = "";
+        try {
+          host = new URL(item.url).hostname.replace(/^www\./, "");
+          if (seenHosts.has(host)) continue;
+        } catch { continue; }
+        // Score-basierte Tokenprüfung
+        const nTok = tokens.length;
+        const score = matchScore(item);
+        // Benötigte Treffer: alle bei wenigen Tokens, sonst 60% Rundung auf
+        const needed = nTok <= 2 ? nTok : Math.ceil(nTok * 0.6);
+        if (nTok > 0 && score < needed) continue;
+        // Scan validieren
+        const scanScore = await getScanScore(item.url);
+        if (scanScore !== null && scanScore >= 65) {
+          seenHosts.add(host);
+          results.push(item);
+        }
+        if (results.length >= 3) break;
       }
-      // Score validieren
-      const score = await getScanScore(item.url);
-      if (score !== null && score >= 65) {
-        filtered.push(item);
-      }
-      if (filtered.length >= 3) break; // Max 3 Ergebnisse
+      return results;
     }
     
-    // Wenn keine passenden Seiten, leeres Array zurückgeben (keine Auffüllung)
+    // Pass 1: strenger Modus
+    let filtered = await filterAndValidate(normalized);
+    
+    // Pass 2 (Fallback): wenn nichts gefunden, reduziere Anforderung auf mind. 1 Token-Treffer
+    if (filtered.length === 0 && tokens.length > 0) {
+      async function filterRelaxed(candidates: any[]) {
+        const results: any[] = [];
+        for (const item of candidates) {
+          if (!item.url || !item.name) continue;
+          let host = "";
+          try {
+            host = new URL(item.url).hostname.replace(/^www\./, "");
+            if (seenHosts.has(host)) continue;
+          } catch { continue; }
+          const score = matchScore(item);
+          if (score < 1) continue; // Mind. ein Token muss matchen
+          const scanScore = await getScanScore(item.url);
+          if (scanScore !== null && scanScore >= 65) {
+            seenHosts.add(host);
+            results.push(item);
+          }
+          if (results.length >= 3) break;
+        }
+        return results;
+      }
+      filtered = await filterRelaxed(normalized);
+    }
+    
+    // Wenn weiterhin keine passenden Seiten, leeres Array (keine Auffüllung)
     return NextResponse.json({ alternatives: filtered });
   } catch (error) {
     console.error("Fehler bei smart-search:", error);
