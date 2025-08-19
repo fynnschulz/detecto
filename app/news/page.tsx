@@ -120,13 +120,13 @@ export default function NewsPage() {
               {/* Soft glow behind the image */}
               <div aria-hidden className="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-cyan-400/15 via-blue-500/10 to-purple-500/10 blur-2xl" />
 
-              <div className="relative max-w-md mx-auto overflow-hidden rounded-tr-xl rounded-bl-xl bg-gradient-to-r from-transparent via-transparent to-neutral-900 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+              <div className="relative w-[280px] h-[160px] mx-auto overflow-hidden rounded-tl-xl rounded-tr-xl rounded-bl-xl bg-gradient-to-r from-transparent via-transparent to-neutral-900 shadow-lg">
                 <Image
                   src="/attacksim.png"
                   alt="AttackSim Vorschau"
-                  width={600}
-                  height={350}
-                  className="object-cover"
+                  width={280}
+                  height={160}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </motion.div>
