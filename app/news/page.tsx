@@ -191,6 +191,47 @@ export default function NewsPage() {
               </div>
             </motion.div>
 
+            {/* VPN Card */}
+            <motion.div
+              {...fadeUp(0.12)}
+              className="relative overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-900/70 p-6 shadow-xl"
+            >
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-purple-500/10 via-cyan-400/10 to-blue-400/10"
+              />
+              <div
+                aria-hidden
+                className="absolute -top-12 -right-12 h-36 w-36 rounded-full bg-purple-500/15 blur-3xl"
+              />
+
+              <div className="flex items-center justify-between gap-4">
+                <h4 className="text-2xl font-bold">VPN (NordVPN)</h4>
+              </div>
+              <p className="mt-3 text-gray-300">
+                Sicher verbinden, Tracking umgehen, Region wechseln – jetzt mit NordVPN-Integration.
+              </p>
+              <ul className="mt-4 space-y-2 text-gray-300 text-sm">
+                <li>• Anonymes Surfen & Schutz in unsicheren Netzwerken</li>
+                <li>• Zugriff auf Inhalte weltweit</li>
+                <li>• Integration mit Detecto für mehr Privatsphäre</li>
+              </ul>
+              <div className="mt-5 flex gap-3">
+                <Link
+                  href="https://go.nordvpn.net/aff_c?offer_id=XXX&aff_id=YYY"
+                  className="px-4 py-2 rounded-full bg-white text-black font-semibold hover:bg-white/90 transition"
+                >
+                  NordVPN sichern
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="px-4 py-2 rounded-full bg-zinc-800/70 border border-zinc-600 text-white font-semibold hover:bg-zinc-700/70 transition"
+                >
+                  Zum Dashboard
+                </Link>
+              </div>
+            </motion.div>
+
             {/* Leak Check Card */}
             <motion.div
               {...fadeUp(0.09)}
