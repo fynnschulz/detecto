@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -48,15 +49,11 @@ export default function NewsPage() {
           animate="visible"
           transition={{ delay: 0.6 }}
         >
-          <Link href="/leak-check" passHref>
-            <a className="px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-400 rounded-full text-black font-semibold shadow-lg hover:brightness-110 transition">
-              Leak-Check starten
-            </a>
+          <Link href="/leak-check" className="px-6 py-3 bg-gradient-to-r from-pink-500 to-yellow-400 rounded-full text-black font-semibold shadow-lg hover:brightness-110 transition">
+            Leak-Check starten
           </Link>
-          <Link href="/attacksim" passHref>
-            <a className="px-6 py-3 border border-white rounded-full text-white font-semibold hover:bg-white hover:text-black transition">
-              AttackSim kennenlernen
-            </a>
+          <Link href="/attacksim" className="px-6 py-3 border border-white rounded-full text-white font-semibold hover:bg-white hover:text-black transition">
+            AttackSim kennenlernen
           </Link>
         </motion.div>
       </section>
@@ -79,10 +76,8 @@ export default function NewsPage() {
             <p className="text-gray-300 mb-6">
               Finde deine Daten im Netz, bevor es Angreifer tun.
             </p>
-            <Link href="/leak-check" passHref>
-              <a className="px-5 py-2 bg-pink-500 rounded-full font-semibold text-black hover:brightness-110 transition">
-                Leak-Check starten
-              </a>
+            <Link href="/leak-check" className="px-5 py-2 bg-pink-500 rounded-full font-semibold text-black hover:brightness-110 transition">
+              Leak-Check starten
             </Link>
           </motion.div>
 
@@ -102,10 +97,8 @@ export default function NewsPage() {
             <p className="text-gray-300 mb-6">
               Realistische Angriffsszenarien für dein Unternehmen.
             </p>
-            <Link href="/attacksim" passHref>
-              <a className="px-5 py-2 bg-yellow-400 rounded-full font-semibold text-black hover:brightness-110 transition">
-                AttackSim kennenlernen
-              </a>
+            <Link href="/attacksim" className="px-5 py-2 bg-yellow-400 rounded-full font-semibold text-black hover:brightness-110 transition">
+              AttackSim kennenlernen
             </Link>
           </motion.div>
         </div>
