@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
   **Strenge Themenrelevanz (Präzision):**
   - Interpretiere die Suchanfrage als Schlagwort-AND-Filtern. Alle Kernbegriffe der Anfrage müssen semantisch erfüllt sein.
   - Schlage **keine** Seiten vor, die nur vage passen oder nur Teilaspekte behandeln.
+  - Falls du **keine Live-Websuche** machen kannst: Nutze dein vorhandenes Wissen und gib die **besten dir bekannten** seriösen Quellen aus, sofern sie die Kriterien voraussichtlich erfüllen. Nur wenn wirklich nichts passt, gib eine **leere Liste** zurück.
   
   **Ausgaberegeln:**
   - Gib **0 bis 3** Ergebnisse zurück (niemals auf 3 auffüllen, wenn weniger passen).
@@ -46,6 +47,8 @@ export async function POST(req: NextRequest) {
   `;
 
   try {
+    const oaController = new AbortController();
+    const oaTimeout = setTimeout(() => oaController.abort(), 15000);
     const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -53,11 +56,21 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4-turbo",
+        model: "gpt-4o-mini",
         messages: [{ role: "user", content: prompt }],
-        temperature: 0,
+        temperature: 0.3,
       }),
+      signal: oaController.signal,
+    }).catch((e) => {
+      console.error("OpenAI fetch error:", e);
+      throw e;
     });
+    clearTimeout(oaTimeout);
+    if (!openaiRes.ok) {
+      const errText = await openaiRes.text().catch(() => "");
+      console.error("OpenAI response not ok:", openaiRes.status, errText);
+      return NextResponse.json({ error: "LLM-Antwort fehlgeschlagen", status: openaiRes.status }, { status: 502 });
+    }
 
     const data = await openaiRes.json();
     const content = data.choices?.[0]?.message?.content || "";
@@ -72,6 +85,7 @@ export async function POST(req: NextRequest) {
       console.log("Als JSON extrahiert:", jsonString);
       try {
         alternatives = JSON.parse(jsonString);
+        console.log("Kandidaten vor Server-Filtern:", alternatives);
       } catch (parseError) {
         console.error("Fehler beim Parsen der JSON-Antwort von GPT:", parseError);
       }
