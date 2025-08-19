@@ -114,6 +114,7 @@ export default function Home() {
       } else {
         localStorage.removeItem("hideAuthModal");
       }
+      setAuthChecked(true);
     });
 
     return () => {
@@ -943,7 +944,6 @@ useEffect(() => {
                           setShowProfileMenu(false);
                           await supabase.auth.signOut();
                           try { localStorage.removeItem("hideAuthModal"); } catch {}
-                          window.location.reload();
                         }}
                       >
                         <span className="mr-2">🚪</span>
