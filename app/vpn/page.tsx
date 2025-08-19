@@ -1,17 +1,10 @@
 // app/vpn/page.tsx
-// app/vpn/page.tsx
 'use client';
 import React from 'react';
 
-export const metadata = {
-  title: 'Detecto VPN – Sicher surfen (Partner-Integration)',
-  description:
-    'Detecto VPN: Schütze deine Verbindung mit unserem Partner-VPN. Schönes UI mit Lichteffekten, klaren Vorteilen und einfacher Aktivierung über Affiliate-Link.',
-};
 
 export default function VPNPage() {
   const affiliateUrl = process.env.NEXT_PUBLIC_VPN_AFFILIATE_URL || '#';
-  const partnerName = process.env.NEXT_PUBLIC_VPN_PARTNER_NAME || 'unserem Partner‑VPN';
 
   return (
     <main className="vpn-root">
@@ -25,11 +18,10 @@ export default function VPNPage() {
       <section className="container">
         <div className="badge">Detecto Feature</div>
         <h1 className="title">
-          Detecto VPN <span className="title-fade">– powered by {partnerName}</span>
+          Detecto VPN <span className="title-fade">– powered by NordVPN</span>
         </h1>
         <p className="lead">
-          Sichere dein WLAN, verhindere Tracking und verschlüssele deinen gesamten Datenverkehr. Die Verbindung
-          und Abrechnung laufen direkt über unseren Partner – du profitierst von der einfachen Detecto‑Integration.
+          Sichere dein WLAN, verhindere Tracking und verschlüssele deinen gesamten Datenverkehr. Die Verbindung und Abrechnung laufen direkt über NordVPN – du profitierst von der einfachen Detecto‑Integration.
         </p>
 
         <div className="cta-row">
@@ -47,8 +39,8 @@ export default function VPNPage() {
         </div>
 
         <div className="disclaimer">
-          Hinweis: Dies ist eine <strong>Partner‑Integration</strong>. Detecto speichert keine Inhalte deiner
-          Verbindung. Für die VPN‑Leistung und die No‑Logs‑Richtlinie ist der Partner-Anbieter verantwortlich.
+          Hinweis: Dies ist eine <strong>NordVPN‑Integration</strong>. Detecto speichert keine Inhalte deiner
+          Verbindung. Für die VPN‑Leistung und die No‑Logs‑Richtlinie ist NordVPN verantwortlich.
         </div>
 
         <div className="cards">
@@ -107,7 +99,7 @@ export default function VPNPage() {
         <div className="faq-grid">
           <FAQ
             q="Ist das ein echtes Detecto‑VPN?"
-            a="Es handelt sich um eine geprüfte Partner‑Integration, die wir sauber in Detecto einbetten. Kauf, Technik und Verbindungsdaten laufen direkt beim VPN‑Anbieter."
+            a="Es handelt sich um eine geprüfte NordVPN‑Integration, die wir sauber in Detecto einbetten. Kauf, Technik und Verbindungsdaten laufen direkt bei NordVPN."
           />
           <FAQ
             q="Speichert Detecto meine Daten?"
@@ -115,11 +107,11 @@ export default function VPNPage() {
           />
           <FAQ
             q="Gibt es ein Probeabo?"
-            a="Viele Partner bieten rabattierte Einstiegsangebote an. Details siehst du nach Klick auf „Jetzt aktivieren“."
+            a="NordVPN bietet oft rabattierte Einstiegsangebote an. Details siehst du nach Klick auf „Jetzt aktivieren“."
           />
           <FAQ
             q="Brauche ich das für jedes Gerät?"
-            a="Du kannst die App auf mehreren Geräten nutzen – die genaue Anzahl hängt vom gewählten Partner‑Paket ab."
+            a="Du kannst die App auf mehreren Geräten nutzen – die genaue Anzahl hängt vom gewählten NordVPN‑Paket ab."
           />
         </div>
       </section>
