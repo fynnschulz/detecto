@@ -9,17 +9,17 @@ export default function NewsPage() {
   const updates = [
     {
       date: "19. Aug 2025",
-      title: "AttackSim – Technische Vorschau",
+      title: "AttackSim",
       desc:
         "Simulator für Web-Apps, APIs & Netzwerke. Realistische Angriffspfade, priorisierte Funde, klare Fix-Guides.",
-      tag: "Preview",
+      tag: "Angriffssimulation",
     },
     {
       date: "18. Aug 2025",
-      title: "Leak-/Daten-Check – Beta",
+      title: "Leak-/Daten-Check",
       desc:
         "Suche nach exponierten E-Mails, Usernames & IDs im Open Web & Darknet. Treffer mit Risiko-Einstufung.",
-      tag: "Beta",
+      tag: "Datencheck",
     },
     {
       date: "15. Aug 2025",
@@ -30,7 +30,7 @@ export default function NewsPage() {
     {
       date: "07. Aug 2025",
       title: "Community",
-      desc: "Anonyme Erfahrungsberichte, Bewertungen und Hinweise – datenschutzfreundlich eingebunden.",
+      desc: "Erfahrungsberichte, Bewertungen und Hinweise – datenschutzfreundlich eingebunden.",
       tag: "Community",
     },
     {
@@ -95,14 +95,6 @@ export default function NewsPage() {
                 und Netzwerke. Ergebnisse werden in klare, nachvollziehbare
                 Aufgabenpakete übersetzt – inklusive Verifizierungs-Checks.
               </p>
-              <div className="mt-4 flex flex-wrap gap-3">
-                <span className="rounded-full bg-cyan-500/15 text-cyan-300 px-3 py-1 text-xs border border-cyan-400/30">
-                  Vorschau
-                </span>
-                <span className="rounded-full bg-white/5 text-gray-300 px-3 py-1 text-xs border border-zinc-700">
-                  Business
-                </span>
-              </div>
               <div className="mt-5 flex flex-wrap gap-3">
                 <Link
                   href="/AttackSim"
@@ -158,9 +150,6 @@ export default function NewsPage() {
 
               <div className="flex items-center justify-between gap-4">
                 <h4 className="text-2xl font-bold">AttackSim</h4>
-                <span className="text-xs px-2 py-1 rounded-full border border-cyan-400/30 bg-cyan-500/10 text-cyan-300">
-                  Vorschau
-                </span>
               </div>
               <p className="mt-3 text-gray-300">
                 Simulation realistischer Angriffswege, Priorisierung nach Impact
@@ -168,7 +157,7 @@ export default function NewsPage() {
               </p>
               <ul className="mt-4 space-y-2 text-gray-300 text-sm">
                 <li>• Scope: Domains, Subdomains, APIs, Netzsegmente</li>
-                <li>• Ausgabe: Kontext, Schweregrad, Tasks</li>
+                <li>• Ausgabe: Kontext, Schweregrad, Vorgehensweise</li>
                 <li>• Checks: Bestätigung nach Behebung</li>
               </ul>
               <div className="mt-5 flex gap-3">
@@ -203,9 +192,6 @@ export default function NewsPage() {
 
               <div className="flex items-center justify-between gap-4">
                 <h4 className="text-2xl font-bold">Leak-/Daten-Check</h4>
-                <span className="text-xs px-2 py-1 rounded-full border border-emerald-400/30 bg-emerald-500/10 text-emerald-300">
-                  Beta
-                </span>
               </div>
               <p className="mt-3 text-gray-300">
                 Suche nach exponierten E-Mails, Usernames & IDs im Open Web und
