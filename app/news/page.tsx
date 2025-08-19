@@ -1,265 +1,323 @@
+// @ts-nocheck
 "use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
-import type { Variants } from "framer-motion";
 
-/** ====== Motion helpers (Detecto style) ====== */
-const LESS_MOTION = false;
-const riseIn = (delay = 0): Variants => ({
-  hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
-  show: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.6, ease: "easeOut", delay },
-  },
-});
-const fadeIn = (delay = 0): Variants => ({
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.6, ease: "easeOut", delay } },
-});
-const scaleIn = (delay = 0): Variants => ({
-  hidden: { opacity: 0, scale: 0.96 },
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.5, ease: "easeOut", delay },
-  },
-});
-
-/** ====== Layout helpers ====== */
-function Container({ children }: { children: React.ReactNode }) {
-  return <div className="mx-auto max-w-7xl px-6 md:px-8">{children}</div>;
-}
-
-/** ====== SVG Emblems (clean, brandy) ====== */
-function IconLeak() {
-  return (
-    <svg viewBox="0 0 48 48" className="h-12 w-12" aria-hidden>
-      <defs>
-        <linearGradient id="lc" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#22d3ee" />
-          <stop offset="50%" stopColor="#a78bfa" />
-          <stop offset="100%" stopColor="#fb7185" />
-        </linearGradient>
-      </defs>
-      <circle cx="20" cy="20" r="12" fill="none" stroke="url(#lc)" strokeWidth="3" />
-      <line x1="28" y1="28" x2="42" y2="42" stroke="url(#lc)" strokeWidth="3" strokeLinecap="round" />
-    </svg>
-  );
-}
-function IconAttack() {
-  return (
-    <svg viewBox="0 0 48 48" className="h-12 w-12" aria-hidden>
-      <defs>
-        <linearGradient id="as" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#fb7185" />
-          <stop offset="60%" stopColor="#a78bfa" />
-          <stop offset="100%" stopColor="#22d3ee" />
-        </linearGradient>
-      </defs>
-      <path d="M24 4 L30 22 L18 22 Z" fill="url(#as)" />
-      <rect x="10" y="26" width="28" height="4" rx="2" fill="url(#as)" />
-    </svg>
-  );
-}
-
-/** ====== Page ====== */
 export default function NewsPage() {
-  const prefers = useReducedMotion();
-  const reduce = prefers || LESS_MOTION;
-  const year = new Date().getFullYear();
+  const updates = [
+    {
+      date: "19. Aug 2025",
+      title: "AttackSim – Technische Vorschau",
+      desc:
+        "Simulator für Web-Apps, APIs & Netzwerke. Realistische Angriffspfade, priorisierte Funde, klare Fix-Guides.",
+      tag: "Preview",
+    },
+    {
+      date: "18. Aug 2025",
+      title: "Leak-/Daten-Check – Beta",
+      desc:
+        "Suche nach exponierten E-Mails, Usernames & IDs im Open Web & Darknet. Treffer mit Risiko-Einstufung.",
+      tag: "Beta",
+    },
+    {
+      date: "15. Aug 2025",
+      title: "Dashboard-Kacheln",
+      desc:
+        "Platzhalter für Gesamtscore, Tool-Shortcuts & letzte Scans. Schlanke Navigation in Arbeit.",
+      tag: "UI",
+    },
+    {
+      date: "07. Aug 2025",
+      title: "Accounts per Supabase",
+      desc:
+        "Login/Registrierung, persistente Sessions, Auto-Logout nach Inaktivität.",
+      tag: "Accounts",
+    },
+    {
+      date: "24. Jul 2025",
+      title: "Webversion live",
+      desc: "Detecto läuft in der Cloud. Iterative Releases folgen.",
+      tag: "Launch",
+    },
+  ];
+
+  const fadeUp = (delay = 0) => ({
+    initial: { opacity: 0, y: 24 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.7, ease: "easeOut", delay },
+  });
 
   return (
-    <div className="relative min-h-screen overflow-x-clip bg-gradient-to-b from-[#090a0f] via-[#0a0b12] to-[#06070a] text-white">
-      {/* Ambient background glows */}
-      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10">
-        <div className="absolute -top-40 -left-48 h-[44rem] w-[44rem] rounded-full blur-3xl opacity-25 bg-gradient-to-tr from-cyan-500 via-sky-400 to-indigo-600" />
-        <div className="absolute -bottom-56 -right-40 h-[44rem] w-[44rem] rounded-full blur-3xl opacity-20 bg-gradient-to-tr from-fuchsia-500 via-rose-400 to-orange-300" />
-      </div>
-
+    <div className="min-h-screen w-full bg-gradient-to-b from-gray-800 via-[#111] to-black text-white overflow-x-hidden">
       {/* HERO */}
-      <motion.header className="pt-20 md:pt-28">
-        <Container>
-          <div className="relative">
-            {/* soft ring */}
-            <div aria-hidden className="pointer-events-none absolute -inset-x-10 -top-20 mx-auto h-[18rem] w-[18rem] rounded-full bg-gradient-to-tr from-cyan-400/15 via-white/5 to-fuchsia-400/15 blur-2xl" />
-          </div>
-
-          <motion.h1
-            variants={reduce ? undefined : riseIn(0)}
-            initial={reduce ? undefined : "hidden"}
-            animate={reduce ? undefined : "show"}
-            className="relative overflow-hidden text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 bg-clip-text text-transparent drop-shadow-[0_0_18px_rgba(34,211,238,0.28)] text-center"
-          >
-            <span className="relative inline-block">
-              Neu bei Detecto
-              {/* Shine sweep */}
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shine_3.2s_linear_infinite] bg-[length:200%_100%]" />
+      <section className="relative flex min-h-[78vh] items-center justify-center px-6 pt-28 text-center">
+        <motion.div {...fadeUp(0)} className="relative z-10 max-w-3xl">
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.35),0_0_24px_rgba(59,130,246,0.15)]">
+            <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
+              Neuigkeiten · Detecto
             </span>
-          </motion.h1>
+          </h1>
+          <p className="mt-5 text-xl md:text-2xl text-gray-300 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]">
+            Releases, Meilensteine und Previews – kompakt und übersichtlich.
+          </p>
+          <div className="mx-auto mt-6 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]" />
+        </motion.div>
 
-          <motion.p
-            variants={reduce ? undefined : fadeIn(0.15)}
-            initial={reduce ? undefined : "hidden"}
-            animate={reduce ? undefined : "show"}
-            className="mx-auto mt-4 max-w-3xl text-center text-lg md:text-2xl text-white/80"
-          >
-            Leak‑Check &amp; AttackSim – unsere neuesten Tools für elegante, wirksame digitale Sicherheit.
+        {/* Subtile Lichter */}
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          initial={{ opacity: 0.35 }}
+          animate={{ opacity: [0.35, 0.55, 0.35] }}
+          transition={{ duration: 10, repeat: Infinity }}
+        >
+          <div className="absolute -top-24 left-[20%] h-80 w-80 rounded-full blur-3xl bg-cyan-500/20" />
+          <div className="absolute top-24 right-[18%] h-96 w-96 rounded-full blur-3xl bg-blue-500/20" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-56 w-56 rounded-full blur-2xl bg-purple-500/15" />
+        </motion.div>
+      </section>
+
+      {/* FEATURED BLOCK: AttackSim */}
+      <section className="relative px-6">
+        <motion.div
+          {...fadeUp(0.05)}
+          className="mx-auto max-w-6xl rounded-3xl border border-zinc-800 bg-gradient-to-br from-zinc-900/80 via-zinc-900/60 to-black/70 p-6 md:p-8 shadow-[0_0_40px_rgba(0,255,255,0.08)] backdrop-blur-md"
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <div className="text-sm text-cyan-300">Neu & glänzend</div>
+              <h2 className="text-3xl md:text-4xl font-extrabold mt-1">
+                Detecto AttackSim
+              </h2>
+              <p className="mt-2 text-gray-300 max-w-2xl">
+                KI-gestützte Simulation realer Angriffspfade für Web-Apps, APIs
+                und Netzwerke. Ergebnisse werden in klare, nachvollziehbare
+                Aufgabenpakete übersetzt – inklusive Verifizierungs-Checks.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <span className="rounded-full bg-cyan-500/15 text-cyan-300 px-3 py-1 text-xs border border-cyan-400/30">
+                  Preview
+                </span>
+                <span className="rounded-full bg-white/5 text-gray-300 px-3 py-1 text-xs border border-zinc-700">
+                  Business
+                </span>
+              </div>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link
+                  href="/AttackSim"
+                  className="px-5 py-2 rounded-full bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition"
+                >
+                  AttackSim öffnen
+                </Link>
+                <Link
+                  href="/kontakt"
+                  className="px-5 py-2 rounded-full bg-transparent border border-gray-600 text-white font-semibold hover:bg-zinc-800 transition"
+                >
+                  Demo anfragen
+                </Link>
+              </div>
+            </div>
+            <div className="relative mx-auto md:mx-0 h-40 w-full max-w-sm">
+              <Image
+                src="/news-attacksim.png"
+                alt="AttackSim Preview"
+                fill
+                className="object-contain opacity-90"
+                priority
+              />
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* TOOL-KACHELN */}
+      <section className="mt-24 px-6">
+        <div className="mx-auto max-w-6xl">
+          <motion.h3 {...fadeUp(0)} className="text-4xl font-bold text-white text-center">
+            Aktuelle Detecto-Module
+          </motion.h3>
+          <motion.p {...fadeUp(0.03)} className="mt-3 text-center text-gray-400 max-w-2xl mx-auto">
+            Knackig erklärt – sofort nutzbar.
           </motion.p>
 
-          <motion.div
-            variants={reduce ? undefined : fadeIn(0.25)}
-            initial={reduce ? undefined : "hidden"}
-            animate={reduce ? undefined : "show"}
-            className="mt-8 flex flex-col sm:flex-row justify-center gap-4"
-          >
-            <Link
-              href="/leak-check"
-              className="px-7 py-3 rounded-full bg-white text-black font-semibold text-base hover:bg-white/90 transition shadow"
-            >
-              Leak‑Check starten
-            </Link>
-            <Link
-              href="/attacksim"
-              className="px-7 py-3 rounded-full border border-white/20 text-white hover:bg-white/10 transition"
-            >
-              AttackSim kennenlernen
-            </Link>
-          </motion.div>
-
-          <motion.div
-            className="mx-auto mt-8 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]"
-            initial={reduce ? undefined : { opacity: 0 }}
-            animate={reduce ? undefined : { opacity: [0, 1, 0.6, 1] }}
-            transition={reduce ? undefined : { duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </Container>
-      </motion.header>
-
-      {/* TOOLS */}
-      <section className="py-12 md:py-16">
-        <Container>
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* Leak-Check */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* AttackSim Card */}
             <motion.div
-              variants={reduce ? undefined : scaleIn(0.05)}
-              initial={reduce ? undefined : "hidden"}
-              whileInView={reduce ? undefined : "show"}
-              viewport={{ once: true, amount: 0.35 }}
-              className="group relative rounded-3xl border border-white/10 bg-white/[0.05] p-8 md:p-10 backdrop-blur-xl shadow-[0_0_0_0_rgba(0,0,0,0.0)] hover:shadow-[0_8px_32px_rgba(34,211,238,0.15)] transition"
+              {...fadeUp(0.06)}
+              className="relative overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-900/70 p-6 shadow-xl"
             >
-              <div className="flex items-start gap-5">
-                <div className="rounded-2xl bg-white/[0.06] p-3 ring-1 ring-white/10">
-                  <IconLeak />
-                </div>
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-extrabold">Leak‑Check</h2>
-                  <p className="mt-2 text-white/75">
-                    Finde exponierte Daten im Open Web &amp; Darknet – inkl. konkreten Opt‑out‑Anleitungen.
-                  </p>
-                  <div className="mt-6">
-                    <Link
-                      href="/leak-check"
-                      className="inline-flex items-center rounded-full bg-cyan-400 px-5 py-2 text-black font-semibold hover:bg-cyan-300 transition"
-                    >
-                      Leak‑Check starten
-                    </Link>
-                  </div>
-                </div>
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10"
+              />
+              <div
+                aria-hidden
+                className="absolute -top-12 -right-12 h-36 w-36 rounded-full bg-cyan-400/15 blur-3xl"
+              />
+
+              <div className="flex items-center justify-between gap-4">
+                <h4 className="text-2xl font-bold">AttackSim</h4>
+                <span className="text-xs px-2 py-1 rounded-full border border-cyan-400/30 bg-cyan-500/10 text-cyan-300">
+                  Preview
+                </span>
               </div>
-              {/* subtle gradient ring on hover */}
-              <div aria-hidden className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 group-hover:opacity-100 transition bg-gradient-to-r from-cyan-400/20 via-transparent to-fuchsia-400/20" />
+              <p className="mt-3 text-gray-300">
+                Simulation realistischer Angriffswege, Priorisierung nach Impact
+                & Exploitbarkeit, reproduzierbare Schritte, Verifizierung nach Fix.
+              </p>
+              <ul className="mt-4 space-y-2 text-gray-300 text-sm">
+                <li>• Scope: Domains, Subdomains, APIs, Netzsegmente</li>
+                <li>• Ausgabe: Kontext, Schweregrad, Tasks</li>
+                <li>• Checks: Bestätigung nach Behebung</li>
+              </ul>
+              <div className="mt-5 flex gap-3">
+                <Link
+                  href="/AttackSim"
+                  className="px-4 py-2 rounded-full bg-white text-black font-semibold hover:bg-white/90 transition"
+                >
+                  Tool öffnen
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="px-4 py-2 rounded-full bg-zinc-800/70 border border-zinc-600 text-white font-semibold hover:bg-zinc-700/70 transition"
+                >
+                  Zum Dashboard
+                </Link>
+              </div>
             </motion.div>
 
-            {/* AttackSim */}
+            {/* Leak Check Card */}
             <motion.div
-              variants={reduce ? undefined : scaleIn(0.1)}
-              initial={reduce ? undefined : "hidden"}
-              whileInView={reduce ? undefined : "show"}
-              viewport={{ once: true, amount: 0.35 }}
-              className="group relative rounded-3xl border border-white/10 bg-white/[0.05] p-8 md:p-10 backdrop-blur-xl hover:shadow-[0_8px_32px_rgba(244,114,182,0.14)] transition"
+              {...fadeUp(0.09)}
+              className="relative overflow-hidden rounded-2xl border border-zinc-700 bg-zinc-900/70 p-6 shadow-xl"
             >
-              <div className="flex items-start gap-5">
-                <div className="rounded-2xl bg-white/[0.06] p-3 ring-1 ring-white/10">
-                  <IconAttack />
-                </div>
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-extrabold">AttackSim</h2>
-                  <p className="mt-2 text-white/75">
-                    Simuliert realistische Angriffe, erklärt Risiken verständlich und liefert klare Fix‑Anleitungen.
-                  </p>
-                  <div className="mt-6">
-                    <Link
-                      href="/attacksim"
-                      className="inline-flex items-center rounded-full bg-fuchsia-400 px-5 py-2 text-black font-semibold hover:bg-fuchsia-300 transition"
-                    >
-                      AttackSim kennenlernen
-                    </Link>
-                  </div>
-                </div>
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-blue-400/10"
+              />
+              <div
+                aria-hidden
+                className="absolute -top-12 -right-12 h-36 w-36 rounded-full bg-emerald-400/15 blur-3xl"
+              />
+
+              <div className="flex items-center justify-between gap-4">
+                <h4 className="text-2xl font-bold">Leak-/Daten-Check</h4>
+                <span className="text-xs px-2 py-1 rounded-full border border-emerald-400/30 bg-emerald-500/10 text-emerald-300">
+                  Beta
+                </span>
               </div>
-              <div aria-hidden className="pointer-events-none absolute -inset-px rounded-3xl opacity-0 group-hover:opacity-100 transition bg-gradient-to-r from-fuchsia-400/20 via-transparent to-cyan-400/20" />
+              <p className="mt-3 text-gray-300">
+                Suche nach exponierten E-Mails, Usernames & IDs im Open Web und
+                Darknet – inklusive Risiko-Einstufung, Zeitstempel und
+                Schritt-für-Schritt-Hilfen zum Entfernen.
+              </p>
+              <ul className="mt-4 space-y-2 text-gray-300 text-sm">
+                <li>• Quellen: Leaksammlungen, Paste-Sites, Foren</li>
+                <li>• Ergebnis: Trefferliste mit Kontext & Timestamp</li>
+                <li>• Unterstützung: Opt-out-Vorlagen & Generator</li>
+              </ul>
+              <div className="mt-5 flex gap-3">
+                <Link
+                  href="/leakcheck"
+                  className="px-4 py-2 rounded-full bg-white text-black font-semibold hover:bg-white/90 transition"
+                >
+                  Tool öffnen
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="px-4 py-2 rounded-full bg-zinc-800/70 border border-zinc-600 text-white font-semibold hover:bg-zinc-700/70 transition"
+                >
+                  Zum Dashboard
+                </Link>
+              </div>
             </motion.div>
           </div>
-        </Container>
+        </div>
       </section>
 
-      {/* SHOWCASE */}
-      <section className="py-12 md:py-16">
-        <Container>
-          <h3 className="text-center text-3xl md:text-4xl font-extrabold">Detecto in Aktion</h3>
-          <div className="mt-8 grid gap-8 md:grid-cols-2">
-            {/* Leak showcase */}
-            <motion.div
-              variants={reduce ? undefined : fadeIn(0.05)}
-              initial={reduce ? undefined : "hidden"}
-              whileInView={reduce ? undefined : "show"}
-              viewport={{ once: true, amount: 0.3 }}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl"
-            >
-              <div className="relative mb-5 h-52 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-800 ring-1 ring-white/10 overflow-hidden">
-                <div aria-hidden className="absolute -inset-8 bg-[radial-gradient(ellipse_at_top_left,rgba(34,211,238,0.22),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(236,72,153,0.22),transparent_45%)]" />
-                <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-white/10 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white/10 to-transparent" />
-              </div>
-              <ul className="space-y-2 text-white/80">
-                <li className="flex gap-2"><span>•</span><span>Treffer sofort sichtbar</span></li>
-                <li className="flex gap-2"><span>•</span><span>Opt‑out‑Generator</span></li>
-              </ul>
-            </motion.div>
+      {/* CHANGELOG / TIMELINE */}
+      <section className="mt-28 px-6">
+        <div className="mx-auto max-w-5xl">
+          <motion.h3 {...fadeUp(0)} className="text-3xl md:text-4xl font-bold text-white text-center">
+            Changelog & Meilensteine
+          </motion.h3>
+          <motion.p {...fadeUp(0.03)} className="mt-3 text-center text-gray-400 max-w-2xl mx-auto">
+            Fortschritt, transparent und nachvollziehbar.
+          </motion.p>
 
-            {/* Attack showcase */}
-            <motion.div
-              variants={reduce ? undefined : fadeIn(0.1)}
-              initial={reduce ? undefined : "hidden"}
-              whileInView={reduce ? undefined : "show"}
-              viewport={{ once: true, amount: 0.3 }}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8 backdrop-blur-xl"
-            >
-              <div className="relative mb-5 h-52 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-800 ring-1 ring-white/10 overflow-hidden">
-                <div aria-hidden className="absolute -inset-8 bg-[radial-gradient(ellipse_at_top_left,rgba(236,72,153,0.22),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(34,211,238,0.22),transparent_45%)]" />
-                <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-white/10 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-white/10 to-transparent" />
-              </div>
-              <ul className="space-y-2 text-white/80">
-                <li className="flex gap-2"><span>•</span><span>Realistische Simulation</span></li>
-                <li className="flex gap-2"><span>•</span><span>Fix‑Anleitungen</span></li>
-              </ul>
-            </motion.div>
+          <div className="mt-12 relative">
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400/40 via-zinc-700 to-transparent" />
+            <ul className="space-y-10">
+              {updates.map((u, i) => (
+                <motion.li
+                  key={u.title}
+                  {...fadeUp(0.03 * i)}
+                  className="relative md:grid md:grid-cols-2 md:gap-10 items-start"
+                >
+                  <div className="hidden md:block" />
+                  <div className="relative md:col-start-1 md:col-end-3">
+                    <div className="md:absolute md:left-1/2 md:-translate-x-1/2 md:top-2 h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_18px_rgba(34,211,238,0.8)]" />
+                    <div
+                      className={`mt-0 md:max-w-[48%] ${
+                        i % 2 === 0 ? "md:mr-auto md:pr-6" : "md:ml-auto md:pl-6"
+                      }`}
+                    >
+                      <div className="rounded-2xl border border-zinc-700 bg-zinc-900/70 p-5 backdrop-blur-md shadow-xl">
+                        <div className="flex items-center gap-3">
+                          <span className="text-xs text-gray-400">{u.date}</span>
+                          <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full border border-cyan-400/30 text-cyan-300 bg-cyan-500/10">
+                            {u.tag}
+                          </span>
+                        </div>
+                        <h4 className="mt-2 text-xl font-semibold text-white">{u.title}</h4>
+                        <p className="mt-2 text-gray-300">{u.desc}</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.li>
+              ))}
+            </ul>
           </div>
-        </Container>
+        </div>
       </section>
 
-      <footer className="pb-12 text-center text-xs text-white/50">© {year} Detecto</footer>
+      {/* CTA */}
+      <section className="mt-28 px-6 pb-24">
+        <motion.div
+          {...fadeUp(0)}
+          className="mx-auto max-w-5xl rounded-3xl border border-zinc-800 bg-gradient-to-br from-zinc-900/80 via-zinc-900/60 to-black/70 p-8 text-center shadow-[0_0_40px_rgba(0,255,255,0.08)]"
+        >
+          <h3 className="text-3xl font-bold">News abonnieren</h3>
+          <p className="mt-3 text-gray-300">Updates direkt ins Postfach.</p>
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+            <input
+              type="email"
+              placeholder="E-Mail-Adresse"
+              className="w-full sm:w-96 px-4 py-3 rounded-full bg-zinc-900/80 border border-zinc-700 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+            />
+            <button className="px-6 py-3 rounded-full bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition">
+              Abonnieren
+            </button>
+          </div>
+          <div className="mt-4 text-xs text-gray-500">Keine Werbung. Abmeldung jederzeit möglich.</div>
+        </motion.div>
+      </section>
 
-      {/* Page-scoped styles for shine keyframes */}
-      <style jsx>{`
-        @keyframes shine {
-          0% { background-position: -100% 0; }
-          100% { background-position: 200% 0; }
-        }
-      `}</style>
+      {/* FOOTER */}
+      <footer className="text-center text-sm text-gray-600 py-12 space-y-2 bg-black/40">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-400">
+          <Link href="/datenschutz" className="hover:underline">Datenschutz</Link>
+          <Link href="/cookies" className="hover:underline">Cookies</Link>
+          <Link href="/nutzung" className="hover:underline">Nutzungsbedingungen</Link>
+          <Link href="/rechtliches" className="hover:underline">Rechtliches</Link>
+          <Link href="/ueber-uns" className="hover:underline">Über uns</Link>
+          <Link href="/impressum" className="hover:underline">Impressum</Link>
+        </div>
+        <div>© 2025 Detecto – Datenschutz neu gedacht.</div>
+      </footer>
     </div>
   );
 }
