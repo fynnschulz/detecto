@@ -24,14 +24,12 @@ export default function VPNPage() {
         </p>
 
         <div className="flex justify-center gap-4">
-          <a
-            href={affiliateUrl}
-            target="_blank"
-            rel="nofollow sponsored noopener noreferrer"
+          <button
+            onClick={() => window.open(affiliateUrl, "_blank", "noopener,noreferrer")}
             className="btn btn-primary"
           >
             Jetzt aktivieren
-          </a>
+          </button>
         </div>
 
         <div className="disclaimer text-center mx-auto">
