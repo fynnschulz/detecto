@@ -16,7 +16,6 @@ export default function VPNPage() {
       <div className="beam beam-2" />
 
       <section className="container">
-        <div className="badge">Detecto Feature</div>
         <h1 className="title text-center">
           Detecto VPN <span className="title-fade">– powered by NordVPN</span>
         </h1>
@@ -178,17 +177,6 @@ export default function VPNPage() {
         }
         .container.narrow { max-width: 900px; }
 
-        .badge {
-          display: inline-block;
-          padding: 6px 12px;
-          border-radius: 999px;
-          font-size: 12px;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          background: rgba(255, 255, 255, 0.06);
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          backdrop-filter: blur(8px);
-        }
         .title {
           margin: 16px 0 12px;
           font-size: clamp(32px, 5.6vw, 60px);
