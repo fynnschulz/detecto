@@ -28,6 +28,8 @@ export default function RegisterPage() {
       return;
     }
 
+    const displayName = [firstName, lastName].filter(Boolean).join(" ").trim();
+
     const { error } = await supabase.auth.signUp({
       email,
       password,
@@ -38,6 +40,7 @@ export default function RegisterPage() {
           street,
           postalCode,
           username,
+          name: displayName,
         },
         emailRedirectTo: `${location.origin}/auth/callback`,
       },
@@ -183,10 +186,6 @@ export default function RegisterPage() {
             </button>
           </form>
 
-          <div className="mt-5 flex items-center justify-between text-xs text-zinc-400">
-            <span>Bereits ein Konto?</span>
-            <a href="/login" className="font-medium text-blue-400 hover:text-blue-300 underline-offset-2 hover:underline">Zum Login</a>
-          </div>
         </div>
       </div>
     </div>

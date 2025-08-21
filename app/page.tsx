@@ -872,6 +872,11 @@ useEffect(() => {
                         {displayName}
                       </div>
                       <div className="text-gray-400 text-xs truncate">{session?.user?.email || (authChecked ? "" : "Prüfe Status…")}</div>
+                      {session?.user?.id && (
+                        <p className="text-sm text-gray-400 mt-1">
+                          ID: {session.user.id}
+                        </p>
+                      )}
                     </div>
                   </div>
 

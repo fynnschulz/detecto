@@ -31,6 +31,24 @@ export default function LoginForm() {
       setErrorMsg(error.message);
     } else if (data?.session) {
       setSuccessMsg("✅ Login erfolgreich!");
+
+      // Fetch the logged-in user and log their ID
+      const { data: { user } } = await supabase.auth.getUser();
+      console.log("👤 user.id:", user?.id);
+
+      // Optional: Profil laden
+      const { data: profile, error: pErr } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user?.id)
+        .single();
+
+      if (pErr) {
+        console.warn("Profil konnte nicht geladen werden:", pErr.message);
+      } else {
+        console.log("📄 Profil:", profile);
+      }
+
       try {
         localStorage.setItem("hideAuthModal", "true");
       } catch {}

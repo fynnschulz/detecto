@@ -74,6 +74,7 @@ export default function EinstellungenPage() {
   const [notLoggedIn, setNotLoggedIn] = useState(false);
 
   const [userEmail, setUserEmail] = useState("");
+  const [userId, setUserId] = useState("");
 
   // Preferences (all stored in auth.user.user_metadata; profiles.username optional best-effort)
   const [username, setUsername] = useState("");
@@ -96,6 +97,7 @@ export default function EinstellungenPage() {
         if (!mounted) return;
 
         setUserEmail(user.email || "");
+        setUserId(user.id || "");
         // Read from auth metadata first
         const meta = (user.user_metadata || {}) as any;
         setUsername(meta.username || user.email?.split("@")[0] || "");
@@ -280,6 +282,9 @@ export default function EinstellungenPage() {
 
                   <FieldRow label="E-Mail">
                     <input disabled value={userEmail} className="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 opacity-70" />
+                  </FieldRow>
+                  <FieldRow label="User-ID">
+                    <input disabled value={userId} className="w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 opacity-70 text-xs" />
                   </FieldRow>
 
                   <FieldRow label="Produkt-News">
