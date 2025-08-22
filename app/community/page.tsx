@@ -190,7 +190,7 @@ function StarRow({ value }: { value: number }) {
 
 function SkeletonCard() {
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/5 p-4 animate-pulse">
+    <div className="w-full max-w-2xl mx-auto rounded-2xl border border-white/10 bg-white/5 p-4 animate-pulse">
       <div className="flex items-center gap-3">
         <div className="h-5 w-5 rounded-sm bg-white/10" />
         <div className="h-4 w-32 rounded bg-white/10" />
@@ -223,12 +223,12 @@ function PostCard({ post }: { post: Post }) {
       initial={{ opacity: 0, y: 8, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -8, scale: 0.98 }}
-      className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4 hover:from-white/[0.10] hover:to-white/[0.04] transition shadow-[0_0_0_1px_rgba(255,255,255,0.03)]"
+      className="w-full max-w-2xl mx-auto rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.03] p-5 hover:from-white/[0.12] hover:to-white/[0.06] transition shadow-[0_0_0_1px_rgba(255,255,255,0.04)] backdrop-blur-sm"
     >
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <Favicon domain={post.domain} />
-          <span className="font-medium px-2 py-0.5 rounded-md bg-white/5 border border-white/10">
+          <span className="font-medium px-2 py-0.5 rounded-md bg-white/10 border border-white/10 shadow-inner">
             {post.domain}
           </span>
         </div>
@@ -242,7 +242,7 @@ function PostCard({ post }: { post: Post }) {
       </div>
 
       <div className="mt-2">
-        <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[11px]">
+        <span className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-2 py-0.5 text-[11px] shadow-inner">
           {CATEGORY_LABELS[getPostCategory(post)] ?? CATEGORY_LABELS.other}
         </span>
       </div>
@@ -363,7 +363,7 @@ function CreatePostModal({
             <div
               role="dialog"
               aria-modal="true"
-              className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.04] p-6 shadow-2xl"
+              className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.10] to-white/[0.05] p-6 shadow-2xl backdrop-blur"
             >
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-semibold">Neuen Beitrag erstellen</h2>
@@ -384,7 +384,7 @@ function CreatePostModal({
                     placeholder="z. B. https://www.shop.de/produkt"
                     value={domainInput}
                     onChange={(e) => setDomainInput(e.target.value)}
-                    className="w-full rounded-xl border border-white/10 bg-transparent px-3 py-2 outline-none focus:border-white/30"
+                    className="mt-1 w-full rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-white/30 backdrop-blur"
                   />
                   {domain && (
                     <p className="text-xs opacity-70 mt-1">
@@ -400,7 +400,7 @@ function CreatePostModal({
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                     rows={6}
-                    className="w-full rounded-xl border border-white/10 bg-transparent px-3 py-2 outline-none focus:border-white/30"
+                    className="mt-1 w-full rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-white/30 backdrop-blur"
                   />
                   <p className="text-xs opacity-60 mt-1">
                     {content.trim().length} / 20 Zeichen min.
@@ -542,131 +542,140 @@ export default function CommunityPage() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-10">
-      {/* Header */}
-      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.10] to-white/[0.04] p-6">
-        <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-white/20 blur-3xl opacity-20" />
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 relative">
-          <div>
-            <h1 className="text-3xl font-semibold tracking-tight">Community</h1>
-            <p className="mt-1 opacity-80">
-              Teile deine Erfahrungen zu Webseiten &amp; Services. Hilf anderen, Risiken besser einzuschätzen.
-            </p>
-          </div>
+    <div className="relative">
+      {/* Background layers (hero-style) */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(99,102,241,0.18),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_10%_20%,rgba(16,185,129,0.12),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_90%_80%,rgba(236,72,153,0.10),transparent)]" />
+      </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-            {/* Sortierung */}
-            <div className="flex items-center gap-2">
-              <label className="text-xs opacity-70">Sortieren</label>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as 'newest' | 'oldest' | 'best')}
-                className="rounded-xl border border-white/10 bg-black/20 px-3 py-2 outline-none focus:border-white/30"
-              >
-                <option value="newest">Neueste</option>
-                <option value="best">Beste Bewertung</option>
-                <option value="oldest">Älteste</option>
-              </select>
+      <div className="mx-auto w-full max-w-6xl px-6 py-10">
+        {/* Header */}
+        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.12] to-white/[0.05] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.04)] backdrop-blur">
+          <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-white/20 blur-3xl opacity-20" />
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 relative">
+            <div>
+              <h1 className="text-3xl font-semibold tracking-tight">Community</h1>
+              <p className="mt-1 opacity-80">
+                Teile deine Erfahrungen zu Webseiten &amp; Services. Hilf anderen, Risiken besser einzuschätzen.
+              </p>
             </div>
 
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+              {/* Sortierung */}
+              <div className="flex items-center gap-2">
+                <label className="text-xs opacity-70">Sortieren</label>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as 'newest' | 'oldest' | 'best')}
+                  className="rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-white/30 backdrop-blur"
+                >
+                  <option value="newest">Neueste</option>
+                  <option value="best">Beste Bewertung</option>
+                  <option value="oldest">Älteste</option>
+                </select>
+              </div>
+
+              <button
+                onClick={() => setOpen(true)}
+                className="rounded-xl border border-white/20 bg-white/10 px-4 py-2 hover:bg-white/20"
+              >
+                ＋ Beitrag erstellen
+              </button>
+            </div>
+          </div>
+
+          {/* Kategorie-Pills */}
+          <div className="mt-4 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
             <button
-              onClick={() => setOpen(true)}
-              className="rounded-xl border border-white/20 bg-white/10 px-4 py-2 hover:bg-white/20"
+              onClick={() => setSelectedCategory('' as any)}
+              className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-sm transition ${!selectedCategory ? 'border-white/50 bg-white/20 shadow-inner' : 'border-white/10 hover:bg-white/10'}`}
             >
-              ＋ Beitrag erstellen
+              Alle
             </button>
-          </div>
-        </div>
-
-        {/* Kategorie-Pills */}
-        <div className="mt-4 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
-          <button
-            onClick={() => setSelectedCategory('' as any)}
-            className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-sm ${!selectedCategory ? 'border-white/40 bg-white/15' : 'border-white/10 hover:bg-white/10'}`}
-          >
-            Alle
-          </button>
-          {(Object.keys(CATEGORY_LABELS) as CategoryKey[]).map((k) => (
-            <button
-              key={k}
-              onClick={() => setSelectedCategory(k)}
-              className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-sm ${selectedCategory === k ? 'border-white/40 bg-white/15' : 'border-white/10 hover:bg-white/10'}`}
-            >
-              {CATEGORY_LABELS[k]}
-            </button>
-          ))}
-        </div>
-
-        {/* Text/Domain Filter */}
-        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-          <div className="col-span-1">
-            <label className="text-xs opacity-70">Suche (Domain oder Text)</label>
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="z. B. shop.de oder „Abo abgezockt“"
-              className="mt-1 w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 outline-none focus:border-white/30"
-            />
-          </div>
-          <div className="col-span-1">
-            <label className="text-xs opacity-70">Exakte Domain</label>
-            <input
-              type="text"
-              value={onlyDomain}
-              onChange={(e) => setOnlyDomain(e.target.value)}
-              placeholder="example.com"
-              className="mt-1 w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 outline-none focus:border-white/30"
-            />
-            {onlyDomain && (
-              <p className="mt-1 text-[11px] opacity-60">
-                Gefiltert nach: <span className="font-medium">{normalizeDomain(onlyDomain)}</span>
-              </p>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="mt-6">
-        {loading && (
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <SkeletonCard key={i} />
+            {(Object.keys(CATEGORY_LABELS) as CategoryKey[]).map((k) => (
+              <button
+                key={k}
+                onClick={() => setSelectedCategory(k)}
+                className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-sm transition ${selectedCategory === k ? 'border-white/50 bg-white/20 shadow-inner' : 'border-white/10 hover:bg-white/10'}`}
+              >
+                {CATEGORY_LABELS[k]}
+              </button>
             ))}
           </div>
-        )}
 
-        {!loading && error && (
-          <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-4 text-sm">
-            {error}
+          {/* Text/Domain Filter */}
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <div className="col-span-1">
+              <label className="text-xs opacity-70">Suche (Domain oder Text)</label>
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="z. B. shop.de oder „Abo abgezockt“"
+                className="mt-1 w-full rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-white/30 backdrop-blur"
+              />
+            </div>
+            <div className="col-span-1">
+              <label className="text-xs opacity-70">Exakte Domain</label>
+              <input
+                type="text"
+                value={onlyDomain}
+                onChange={(e) => setOnlyDomain(e.target.value)}
+                placeholder="example.com"
+                className="mt-1 w-full rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-white/30 backdrop-blur"
+              />
+              {onlyDomain && (
+                <p className="mt-1 text-[11px] opacity-60">
+                  Gefiltert nach: <span className="font-medium">{normalizeDomain(onlyDomain)}</span>
+                </p>
+              )}
+            </div>
           </div>
-        )}
+        </div>
 
-        {!loading && !error && filtered.length === 0 && (
-          <EmptyState onOpen={() => setOpen(true)} />
-        )}
-
-        {!loading && !error && filtered.length > 0 && (
-          <motion.div
-            layout
-            className="grid grid-cols-1 gap-4 md:grid-cols-2"
-          >
-            <AnimatePresence>
-              {filtered.map((p) => (
-                <PostCard key={p.id} post={p} />
+        {/* Content */}
+        <div className="mt-6">
+          {loading && (
+            <div className="grid grid-cols-1 gap-5 place-items-center">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <SkeletonCard key={i} />
               ))}
-            </AnimatePresence>
-          </motion.div>
-        )}
-      </div>
+            </div>
+          )}
 
-      {/* Modal */}
-      <CreatePostModal
-        open={open}
-        onClose={() => setOpen(false)}
-        onCreated={refresh}
-      />
+          {!loading && error && (
+            <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-4 text-sm">
+              {error}
+            </div>
+          )}
+
+          {!loading && !error && filtered.length === 0 && (
+            <EmptyState onOpen={() => setOpen(true)} />
+          )}
+
+          {!loading && !error && filtered.length > 0 && (
+            <motion.div
+              layout
+              className="grid grid-cols-1 gap-5 place-items-center"
+            >
+              <AnimatePresence>
+                {filtered.map((p) => (
+                  <PostCard key={p.id} post={p} />
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          )}
+        </div>
+
+        {/* Modal */}
+        <CreatePostModal
+          open={open}
+          onClose={() => setOpen(false)}
+          onCreated={refresh}
+        />
+      </div>
     </div>
   );
 }
