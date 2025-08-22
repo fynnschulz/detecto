@@ -40,7 +40,9 @@ function RootLayout({
   return (
     <html lang={i18n.language} className={`${geistSans.variable} ${geistMono.variable}`}>
       <Head>
-        <link rel="icon" href="/logo-intro.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
       </Head>
       <body className="antialiased bg-black text-white">
         <SessionContextProvider supabaseClient={supabaseClient}>
