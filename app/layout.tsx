@@ -2,7 +2,6 @@
 "use client";
 
 import { Geist, Geist_Mono } from "next/font/google";
-import Head from "next/head";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
@@ -39,11 +38,6 @@ function RootLayout({
 
   return (
     <html lang={i18n.language} className={`${geistSans.variable} ${geistMono.variable}`}>
-      <Head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
-      </Head>
       <body className="antialiased bg-black text-white">
         <SessionContextProvider supabaseClient={supabaseClient}>
           <AnimatePresence mode="wait">
