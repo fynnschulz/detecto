@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -25,20 +23,40 @@ export default function PasswortResetPage() {
       setError(null);
       setMessage(null);
 
-      // Wenn ein Code vorhanden ist, Session herstellen
       if (code) {
+        // Variante 1: Supabase liefert ?code=...
         const { error } = await supabase.auth.exchangeCodeForSession(code);
         if (error) {
-          setError(
-            "Der Link ist ungültig oder abgelaufen. Bitte fordere einen neuen Zurücksetzungslink an."
-          );
+          setError("Der Link ist ungültig oder abgelaufen. Bitte fordere einen neuen Zurücksetzungslink an.");
         }
       } else {
-        // Kein Code: Informativ, trotzdem Formular anzeigen
-        setMessage(
-          "Kein Reset-Code gefunden. Du kannst es trotzdem versuchen, wenn du bereits eingeloggt bist."
-        );
+        // Variante 2: Supabase liefert Tokens im URL-Hash (#access_token=...&refresh_token=...&type=recovery)
+        const hash = typeof window !== "undefined" ? window.location.hash : "";
+        if (hash && hash.includes("access_token") && hash.includes("refresh_token")) {
+          const params = new URLSearchParams(hash.replace(/^#/, ""));
+          const access_token = params.get("access_token");
+          const refresh_token = params.get("refresh_token");
+          const type = params.get("type");
+
+          if (type === "recovery" && access_token && refresh_token) {
+            const { error } = await supabase.auth.setSession({ access_token, refresh_token });
+            if (error) {
+              setError("Konnte die Sitzung nicht herstellen. Bitte fordere einen neuen Reset-Link an.");
+            } else {
+              // optional: Hash aus der URL entfernen, damit er nicht stört
+              try {
+                window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+              } catch {}
+            }
+          } else {
+            setError("Dein Reset-Link ist ungültig oder unvollständig. Bitte fordere im Login-Fenster einen neuen Link an.");
+          }
+        } else {
+          // Weder code noch Hash-Token: nüchterne Meldung statt generischem Hinweis
+          setError("Es wurde kein gültiger Reset-Code gefunden. Öffne den Link direkt aus der E-Mail oder fordere einen neuen Link an.");
+        }
       }
+
       setIsExchanging(false);
     };
     run();
