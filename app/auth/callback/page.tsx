@@ -12,39 +12,20 @@ export default function CallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
+    // Wenn man über den Bestätigungslink kommt, unterdrücken wir einmalig das Auto-Login-Modal
     try {
       localStorage.setItem("skipLoginModalOnce", "1");
-    } catch {}
+    } catch (e) {
+      // ignore
+    }
 
     const handleSession = async () => {
-      // Token aus dem Hash auslesen
-      const hash = window.location.hash.substring(1);
-      const params = new URLSearchParams(hash);
+      const { data, error } = await supabase.auth.getSession();
 
-      const access_token = params.get("access_token");
-      const refresh_token = params.get("refresh_token");
-
-      if (access_token && refresh_token) {
-        const { error } = await supabase.auth.setSession({
-          access_token,
-          refresh_token,
-        });
-
-        if (error) {
-          console.error("Fehler beim Setzen der Session:", error);
-          router.push("/login");
-          return;
-        }
-
+      if (data?.session) {
         router.push("/");
       } else {
-        // Falls kein Token im Hash, normale Session prüfen
-        const { data } = await supabase.auth.getSession();
-        if (data?.session) {
-          router.push("/");
-        } else {
-          router.push("/login");
-        }
+        router.push("/login");
       }
     };
 
