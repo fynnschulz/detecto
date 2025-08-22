@@ -89,9 +89,12 @@ type Post = {
   rating_seriositaet: number;
   rating_transparenz: number;
   rating_kundenerfahrung: number;
-  category: CategoryKey;
+  category?: CategoryKey; // optional for backward-compat
   created_at: string;
 };
+function getPostCategory(p: { domain: string; category?: CategoryKey }): CategoryKey {
+  return (p.category as CategoryKey) ?? categorizeDomain(p.domain);
+}
 
 function classNames(...cls: (string | false | null | undefined)[]) {
   return cls.filter(Boolean).join(' ');
@@ -220,12 +223,14 @@ function PostCard({ post }: { post: Post }) {
       initial={{ opacity: 0, y: 8, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: -8, scale: 0.98 }}
-      className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.03] p-4 hover:from-white/[0.08] transition"
+      className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4 hover:from-white/[0.10] hover:to-white/[0.04] transition shadow-[0_0_0_1px_rgba(255,255,255,0.03)]"
     >
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <Favicon domain={post.domain} />
-          <span className="font-medium">{post.domain}</span>
+          <span className="font-medium px-2 py-0.5 rounded-md bg-white/5 border border-white/10">
+            {post.domain}
+          </span>
         </div>
         <span className="text-xs opacity-60">
           {new Date(post.created_at).toLocaleString(undefined, {
@@ -236,8 +241,10 @@ function PostCard({ post }: { post: Post }) {
         </span>
       </div>
 
-      <div className="mt-2 text-[11px] opacity-70">
-        {CATEGORY_LABELS[post.category] ?? CATEGORY_LABELS.other}
+      <div className="mt-2">
+        <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[11px]">
+          {CATEGORY_LABELS[getPostCategory(post)] ?? CATEGORY_LABELS.other}
+        </span>
       </div>
 
       <div className="mt-2">
@@ -293,17 +300,35 @@ function CreatePostModal({
       }
 
       const category = categorizeDomain(domain);
-      const { error } = await supabase.from('community_posts').insert({
-        user_id: user.id,
-        domain,
-        content: content.trim(),
-        rating_seriositaet: serio,
-        rating_transparenz: transp,
-        rating_kundenerfahrung: kunde,
-        category,
-      });
-
-      if (error) throw error;
+      let insertError = null;
+      try {
+        const { error } = await supabase.from('community_posts').insert({
+          user_id: user.id,
+          domain,
+          content: content.trim(),
+          rating_seriositaet: serio,
+          rating_transparenz: transp,
+          rating_kundenerfahrung: kunde,
+          category,
+        });
+        insertError = error;
+      } catch (e: any) {
+        insertError = e;
+      }
+      if (insertError && (insertError.code === '42703' || String(insertError.message || insertError).toLowerCase().includes('column') && String(insertError.message || insertError).toLowerCase().includes('category'))) {
+        // Fallback: insert without category (temporary)
+        const { error: e2 } = await supabase.from('community_posts').insert({
+          user_id: user.id,
+          domain,
+          content: content.trim(),
+          rating_seriositaet: serio,
+          rating_transparenz: transp,
+          rating_kundenerfahrung: kunde,
+        });
+        if (e2) throw e2;
+      } else if (insertError) {
+        throw insertError;
+      }
 
       onCreated();
       onClose();
@@ -434,19 +459,33 @@ export default function CommunityPage() {
     async function load() {
       setLoading(true);
       setError(null);
+      let data: any = null;
+      let error: any = null;
       try {
-        const { data, error } = await supabase
+        const resp = await supabase
           .from('community_posts')
           .select('id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, category, created_at')
           .order('created_at', { ascending: false });
-
-        if (error) throw error;
-        if (active) setPosts(data as Post[]);
+        data = resp.data;
+        error = resp.error;
       } catch (e: any) {
-        if (active) setError(e.message ?? 'Fehler beim Laden der Beiträge.');
-      } finally {
-        if (active) setLoading(false);
+        error = e;
       }
+      if (error && (error.code === '42703' || String(error.message || error).toLowerCase().includes('column') && String(error.message || error).toLowerCase().includes('category'))) {
+        const resp2 = await supabase
+          .from('community_posts')
+          .select('id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
+          .order('created_at', { ascending: false });
+        data = resp2.data;
+        // no need to set error here
+        error = null;
+      }
+      if (error) {
+        if (active) setError(error.message ?? 'Fehler beim Laden der Beiträge.');
+      } else {
+        if (active) setPosts(data as Post[]);
+      }
+      if (active) setLoading(false);
     }
     load();
     // Optional: Realtime (kann später ergänzt werden)
@@ -462,7 +501,7 @@ export default function CommunityPage() {
         p.domain.toLowerCase().includes(q) ||
         p.content.toLowerCase().includes(q);
       const matchesDomain = !d || p.domain === d;
-      const matchesCategory = !selectedCategory || p.category === selectedCategory;
+      const matchesCategory = !selectedCategory || getPostCategory(p) === selectedCategory;
       return matchesQuery && matchesDomain && matchesCategory;
     });
 
@@ -477,96 +516,114 @@ export default function CommunityPage() {
   }, [posts, query, onlyDomain, selectedCategory, sortBy]);
 
   const refresh = async () => {
+    let data: any = null;
+    let error: any = null;
     try {
-      const { data, error } = await supabase
+      const resp = await supabase
         .from('community_posts')
         .select('id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, category, created_at')
         .order('created_at', { ascending: false });
-      if (error) throw error;
-      setPosts(data as Post[]);
-    } catch (e) {
-      // noop
+      data = resp.data;
+      error = resp.error;
+    } catch (e: any) {
+      error = e;
     }
+    if (error && (error.code === '42703' || String(error.message || error).toLowerCase().includes('column') && String(error.message || error).toLowerCase().includes('category'))) {
+      const resp2 = await supabase
+        .from('community_posts')
+        .select('id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
+        .order('created_at', { ascending: false });
+      data = resp2.data;
+      // no need to set error here
+      error = null;
+    }
+    if (!error) setPosts(data as Post[]);
+    // else noop
   };
 
   return (
-    <div className="mx-auto w-full max-w-5xl px-5 py-8">
+    <div className="mx-auto w-full max-w-6xl px-6 py-10">
       {/* Header */}
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h1 className="text-3xl font-semibold tracking-tight">Community</h1>
-          <p className="mt-1 opacity-70">
-            Teile deine Erfahrungen zu Webseiten &amp; Services. Hilf anderen, Risiken besser einzuschätzen.
-          </p>
-        </div>
-
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-          {/* Kategorien */}
-          <div className="flex items-center gap-2">
-            <label className="text-xs opacity-70">Kategorien</label>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value as CategoryKey | '')}
-              className="rounded-xl border border-white/10 bg-transparent px-3 py-2 outline-none focus:border-white/30"
-            >
-              <option value="">Alle</option>
-              {(Object.keys(CATEGORY_LABELS) as CategoryKey[]).map((k) => (
-                <option key={k} value={k}>
-                  {CATEGORY_LABELS[k]}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Sortierung */}
-          <div className="flex items-center gap-2">
-            <label className="text-xs opacity-70">Sortieren</label>
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as 'newest' | 'oldest' | 'best')}
-              className="rounded-xl border border-white/10 bg-transparent px-3 py-2 outline-none focus:border-white/30"
-            >
-              <option value="newest">Neueste</option>
-              <option value="best">Beste Bewertung</option>
-              <option value="oldest">Älteste</option>
-            </select>
-          </div>
-
-          <button
-            onClick={() => setOpen(true)}
-            className="rounded-xl border border-white/20 bg-white/10 px-4 py-2 hover:bg-white/20"
-          >
-            ＋ Beitrag erstellen
-          </button>
-        </div>
-      </div>
-
-      {/* Filters (Text + Domain) */}
-      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <div className="col-span-1">
-          <label className="text-xs opacity-70">Suche (Domain oder Text)</label>
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="z. B. shop.de oder „Abo abgezockt“"
-            className="mt-1 w-full rounded-xl border border-white/10 bg-transparent px-3 py-2 outline-none focus:border-white/30"
-          />
-        </div>
-        <div className="col-span-1">
-          <label className="text-xs opacity-70">Exakte Domain</label>
-          <input
-            type="text"
-            value={onlyDomain}
-            onChange={(e) => setOnlyDomain(e.target.value)}
-            placeholder="example.com"
-            className="mt-1 w-full rounded-xl border border-white/10 bg-transparent px-3 py-2 outline-none focus:border-white/30"
-          />
-          {onlyDomain && (
-            <p className="mt-1 text-[11px] opacity-60">
-              Gefiltert nach: <span className="font-medium">{normalizeDomain(onlyDomain)}</span>
+      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.10] to-white/[0.04] p-6">
+        <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-white/20 blur-3xl opacity-20" />
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 relative">
+          <div>
+            <h1 className="text-3xl font-semibold tracking-tight">Community</h1>
+            <p className="mt-1 opacity-80">
+              Teile deine Erfahrungen zu Webseiten &amp; Services. Hilf anderen, Risiken besser einzuschätzen.
             </p>
-          )}
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+            {/* Sortierung */}
+            <div className="flex items-center gap-2">
+              <label className="text-xs opacity-70">Sortieren</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as 'newest' | 'oldest' | 'best')}
+                className="rounded-xl border border-white/10 bg-black/20 px-3 py-2 outline-none focus:border-white/30"
+              >
+                <option value="newest">Neueste</option>
+                <option value="best">Beste Bewertung</option>
+                <option value="oldest">Älteste</option>
+              </select>
+            </div>
+
+            <button
+              onClick={() => setOpen(true)}
+              className="rounded-xl border border-white/20 bg-white/10 px-4 py-2 hover:bg-white/20"
+            >
+              ＋ Beitrag erstellen
+            </button>
+          </div>
+        </div>
+
+        {/* Kategorie-Pills */}
+        <div className="mt-4 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
+          <button
+            onClick={() => setSelectedCategory('' as any)}
+            className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-sm ${!selectedCategory ? 'border-white/40 bg-white/15' : 'border-white/10 hover:bg-white/10'}`}
+          >
+            Alle
+          </button>
+          {(Object.keys(CATEGORY_LABELS) as CategoryKey[]).map((k) => (
+            <button
+              key={k}
+              onClick={() => setSelectedCategory(k)}
+              className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-sm ${selectedCategory === k ? 'border-white/40 bg-white/15' : 'border-white/10 hover:bg-white/10'}`}
+            >
+              {CATEGORY_LABELS[k]}
+            </button>
+          ))}
+        </div>
+
+        {/* Text/Domain Filter */}
+        <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="col-span-1">
+            <label className="text-xs opacity-70">Suche (Domain oder Text)</label>
+            <input
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="z. B. shop.de oder „Abo abgezockt“"
+              className="mt-1 w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 outline-none focus:border-white/30"
+            />
+          </div>
+          <div className="col-span-1">
+            <label className="text-xs opacity-70">Exakte Domain</label>
+            <input
+              type="text"
+              value={onlyDomain}
+              onChange={(e) => setOnlyDomain(e.target.value)}
+              placeholder="example.com"
+              className="mt-1 w-full rounded-xl border border-white/10 bg-black/20 px-3 py-2 outline-none focus:border-white/30"
+            />
+            {onlyDomain && (
+              <p className="mt-1 text-[11px] opacity-60">
+                Gefiltert nach: <span className="font-medium">{normalizeDomain(onlyDomain)}</span>
+              </p>
+            )}
+          </div>
         </div>
       </div>
 
