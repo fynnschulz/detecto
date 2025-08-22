@@ -66,6 +66,29 @@ export default function LoginForm() {
     setLoading(false);
   };
 
+  // Passwort-Reset Handler
+  const handlePasswordReset = async () => {
+    setErrorMsg("");
+    setSuccessMsg("");
+    if (!email) {
+      setErrorMsg("Bitte gib zuerst deine E-Mail-Adresse ein.");
+      return;
+    }
+    try {
+      const origin = typeof window !== "undefined" ? window.location.origin : "";
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${origin}/auth/passwort-reset`,
+      });
+      if (error) {
+        setErrorMsg(error.message || "Fehler beim Senden der Reset-E-Mail.");
+        return;
+      }
+      setSuccessMsg("Wenn die E-Mail existiert, wurde ein Link zum Zurücksetzen gesendet.");
+    } catch (e: any) {
+      setErrorMsg("Unerwarteter Fehler. Bitte später erneut versuchen.");
+    }
+  };
+
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       <input
@@ -98,6 +121,13 @@ export default function LoginForm() {
         } text-white font-semibold py-2 rounded-md transition`}
       >
         {loading ? "Einloggen..." : "Einloggen"}
+      </button>
+      <button
+        type="button"
+        onClick={handlePasswordReset}
+        className="text-blue-400 underline text-sm mt-1"
+      >
+        Passwort vergessen?
       </button>
     </form>
   );
