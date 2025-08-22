@@ -1,92 +1,141 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { useRouter, useSearchParams } from "next/navigation";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+
+/**
+ * Passwort-Zurücksetzen-Seite (Next.js App Router)
+ *
+ * Unterstützt beide Supabase-Flows:
+ * 1) PKCE / Code-Flow → /passwort-reset?code=...
+ *    → supabase.auth.exchangeCodeForSession(code)
+ * 2) Impliziter Hash-Flow → /passwort-reset#access_token=...&refresh_token=...&type=recovery
+ *    → supabase.auth.setSession({ access_token, refresh_token })
+ *
+ * Danach: supabase.auth.updateUser({ password })
+ */
+
+function assertEnv(name: string, value: string | undefined): string {
+  if (!value) throw new Error(`Fehlende Umgebungsvariable: ${name}`);
+  return value;
+}
 
 export default function PasswortResetPage() {
-  const supabase = createClientComponentClient();
-  const searchParams = useSearchParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
 
-  const [isExchanging, setIsExchanging] = useState(true);
+  const supabase: SupabaseClient = useMemo(
+    () =>
+      createClient(
+        assertEnv("NEXT_PUBLIC_SUPABASE_URL", process.env.NEXT_PUBLIC_SUPABASE_URL),
+        assertEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY", process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY),
+        {
+          auth: {
+            persistSession: true,
+            autoRefreshToken: true,
+          },
+        }
+      ),
+    []
+  );
+
+  const [isHydrated, setIsHydrated] = useState(false);
+  const [sessionReady, setSessionReady] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [info, setInfo] = useState<string | null>(null);
+  const [successMsg, setSuccessMsg] = useState<string | null>(null);
+
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
-  const [message, setMessage] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [submitting, setSubmitting] = useState(false);
-  const [status, setStatus] = useState<"checking" | "ready" | "error">("checking");
-  const [errorDetail, setErrorDetail] = useState<string | null>(null);
+  const [showPw, setShowPw] = useState(false);
 
+  // Parse tokens from URL hash (implicit flow)
+  function parseHashTokens(): { access_token?: string; refresh_token?: string; type?: string } {
+    if (typeof window === "undefined") return {};
+    const hash = window.location.hash?.startsWith("#") ? window.location.hash.slice(1) : window.location.hash;
+    const params = new URLSearchParams(hash);
+    const access_token = params.get("access_token") ?? undefined;
+    const refresh_token = params.get("refresh_token") ?? undefined;
+    const type = params.get("type") ?? undefined;
+    return { access_token, refresh_token, type };
+  }
+
+  // Establish a session from either `code` (PKCE) or hash tokens (implicit)
   useEffect(() => {
-    const run = async () => {
-      setIsExchanging(true);
-      setError(null);
-      setMessage(null);
-      setStatus("checking");
-      setErrorDetail(null);
+    setIsHydrated(true);
 
-      // 1) Fehler aus Query (?error, ?error_code, ?error_description)
-      const urlError = searchParams.get("error");
-      const urlErrorCode = searchParams.get("error_code");
-      const urlErrorDesc = searchParams.get("error_description");
-      if (urlError) {
-        const msg = urlErrorDesc || `Fehler: ${urlErrorCode || urlError}`;
-        setError(msg);
-        setErrorDetail(msg);
-        setStatus("error");
-        setIsExchanging(false);
-        return;
-      }
+    async function bootstrap() {
+      try {
+        setError(null);
+        setInfo("Prüfe Auth-Link …");
 
-      // 2) PKCE-Code (?code=...)
-      const code = searchParams.get("code");
-      if (code) {
-        const { error } = await supabase.auth.exchangeCodeForSession(code);
-        if (!error) {
-          setStatus("ready");
-          setIsExchanging(false);
+        const code = searchParams?.get("code");
+        if (code) {
+          // PKCE-Flow
+          const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+          if (error) throw error;
+          if (!data.session) throw new Error("Keine Session vom Auth-Code erhalten.");
+
+          // URL aufräumen (code entfernen)
+          if (typeof window !== "undefined") {
+            const url = new URL(window.location.href);
+            url.searchParams.delete("code");
+            window.history.replaceState({}, "", url.toString());
+          }
+
+          setSessionReady(true);
+          setInfo("Verbindung hergestellt. Du kannst jetzt ein neues Passwort setzen.");
           return;
         }
-        // Falls fehlgeschlagen, versuchen wir Hash-Variante
-      }
 
-      // 3) Hash-Variante (#access_token=...&refresh_token=...&type=recovery)
-      const hash = typeof window !== "undefined" ? window.location.hash : "";
-      if (hash && hash.includes("access_token") && hash.includes("refresh_token")) {
-        const params = new URLSearchParams(hash.replace(/^#/, ""));
-        const access_token = params.get("access_token");
-        const refresh_token = params.get("refresh_token");
-        const type = params.get("type");
+        // Impliziter Hash-Flow (type=recovery)
+        const { access_token, refresh_token, type } = parseHashTokens();
         if (type === "recovery" && access_token && refresh_token) {
           const { error } = await supabase.auth.setSession({ access_token, refresh_token });
-          if (!error) {
-            try {
-              window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
-            } catch {}
-            setStatus("ready");
-            setIsExchanging(false);
-            return;
+          if (error) throw error;
+
+          // Hash entfernen
+          if (typeof window !== "undefined") {
+            window.history.replaceState({}, "", window.location.pathname + window.location.search);
           }
+
+          setSessionReady(true);
+          setInfo("Verbindung hergestellt. Du kannst jetzt ein neues Passwort setzen.");
+          return;
         }
+
+        // Falls bereits eine gültige Session existiert
+        const { data } = await supabase.auth.getSession();
+        if (data.session) {
+          setSessionReady(true);
+          setInfo("Session erkannt. Du kannst dein Passwort jetzt ändern.");
+          return;
+        }
+
+        setSessionReady(false);
+        setError(
+          "Kein gültiger Wiederherstellungs‑Token gefunden. Öffne den Link aus der E‑Mail erneut oder fordere eine neue E‑Mail an."
+        );
+      } catch (e: any) {
+        setSessionReady(false);
+        setError(e?.message ?? "Unbekannter Fehler beim Verifizieren des Links.");
+      } finally {
+        setInfo(null);
       }
+    }
 
-      // 4) Keine gültige Session
-      setError("Kein gültiger Reset-Link gefunden. Öffne den Link direkt aus der E-Mail oder fordere einen neuen Link an.");
-      setErrorDetail("missing_code_or_tokens");
-      setStatus("error");
-      setIsExchanging(false);
-    };
-    run();
+    bootstrap();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchParams]);
+  }, [supabase, searchParams]);
 
-  const onSubmit = async (e: React.FormEvent) => {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
-    setMessage(null);
 
-    if (password.length < 8) {
+    // Basic Validierung
+    if (!password || password.length < 8) {
       setError("Das Passwort muss mindestens 8 Zeichen lang sein.");
       return;
     }
@@ -95,127 +144,122 @@ export default function PasswortResetPage() {
       return;
     }
 
-    setSubmitting(true);
+    setBusy(true);
+    try {
+      const { data, error } = await supabase.auth.updateUser({ password });
+      if (error) throw error;
 
-    // Session prüfen – ohne Session schlägt updateUser fehl
-    const { data: { session } } = await supabase.auth.getSession();
-    if (!session) {
-      setSubmitting(false);
-      setError("Keine aktive Sitzung. Bitte den Link aus der E-Mail erneut öffnen.");
-      return;
+      setSuccessMsg("Passwort erfolgreich aktualisiert. Du kannst dich jetzt mit dem neuen Passwort anmelden.");
+
+      // Optional: zur Login-Seite schicken (nach kurzer Wartezeit)
+      setTimeout(() => {
+        try {
+          router.push("/auth/login");
+        } catch {}
+      }, 1200);
+    } catch (e: any) {
+      if (e?.message?.toLowerCase?.().includes("session")) {
+        setError(
+          "Auth‑Session fehlt oder ist abgelaufen. Öffne den Link aus der E‑Mail erneut oder fordere eine neue E‑Mail an."
+        );
+      } else if (e?.message?.toLowerCase?.().includes("token")) {
+        setError("Ungültiger oder abgelaufener Token. Bitte fordere eine neue Passwort‑Reset‑E‑Mail an.");
+      } else {
+        setError(e?.message ?? "Fehler beim Aktualisieren des Passworts.");
+      }
+    } finally {
+      setBusy(false);
     }
+  }
 
-    const { error } = await supabase.auth.updateUser({ password });
-    setSubmitting(false);
-
-    if (error) {
-      setError("Konnte das Passwort nicht ändern. Bitte erneut versuchen.");
-      return;
-    }
-
-    setMessage("Passwort aktualisiert! Du wirst gleich weitergeleitet…");
-    setTimeout(() => router.push("/"), 1500);
-  };
+  if (!isHydrated) return null; // vermeidet Mismatch beim SSR
 
   return (
-    <div className="min-h-[100dvh] bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.25),transparent_60%),radial-gradient(ellipse_at_bottom,rgba(16,185,129,0.2),transparent_60%)] text-white">
-      <div className="mx-auto flex max-w-md flex-col items-center px-6 py-16">
-        {/* Logo/Marke */}
-        <div className="mb-6 flex items-center gap-2 opacity-90">
-          <div className="h-3 w-3 animate-pulse rounded-full bg-emerald-400" />
-          <span className="text-sm tracking-widest text-emerald-300/90">DETECTO</span>
+    <main className="mx-auto my-16 max-w-md rounded-lg border border-neutral-800 bg-neutral-900 p-6 text-neutral-100 shadow-lg">
+      <h1 className="mb-2 text-2xl font-semibold">Passwort zurücksetzen</h1>
+      <p className="mb-6 text-sm text-neutral-400">
+        Setze hier dein neues Passwort. Dieser Link ist zeitlich begrenzt und funktioniert nur einmal.
+      </p>
+
+      {/* Info / Fehler-Ausgabe für Screenreader */}
+      <div aria-live="polite" className="sr-only">
+        {error ? `Fehler: ${error}` : successMsg ? successMsg : info ? info : ""}
+      </div>
+
+      {info && (
+        <div className="mb-4 rounded-md border border-neutral-700 bg-neutral-800 p-3 text-sm text-neutral-200">{info}</div>
+      )}
+
+      {error && (
+        <div className="mb-4 rounded-md border border-red-800 bg-red-900/40 p-3 text-sm text-red-200">{error}</div>
+      )}
+
+      {successMsg && (
+        <div className="mb-4 rounded-md border border-emerald-800 bg-emerald-900/40 p-3 text-sm text-emerald-200">
+          {successMsg}
         </div>
+      )}
 
-        {/* Card */}
-        <div className="w-full rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-md">
-          <h1 className="mb-1 text-xl font-semibold">Neues Passwort festlegen</h1>
-          <p className="mb-6 text-sm text-white/70">
-            Setze dein Passwort sicher zurück. Der Link aus deiner E-Mail öffnet diese Seite automatisch.
-          </p>
-
-          {isExchanging || status === "checking" ? (
-            <div className="rounded-md border border-white/10 bg-white/5 p-3 text-sm text-white/80">
-              Bitte warten… wir prüfen deinen Link.
-            </div>
-          ) : status === "error" || error ? (
-            <div className="space-y-3">
-              {error && (
-                <div className="rounded-md border border-red-400/30 bg-red-400/10 p-3 text-sm text-red-200">
-                  {error}
-                </div>
-              )}
-              {message && (
-                <div className="rounded-md border border-emerald-400/30 bg-emerald-400/10 p-3 text-sm text-emerald-200">
-                  {message}
-                </div>
-              )}
-            </div>
-          ) : (
-            <form onSubmit={onSubmit} className="space-y-4">
-              {message && (
-                <div className="rounded-md border border-emerald-400/30 bg-emerald-400/10 p-3 text-sm text-emerald-200">
-                  {message}
-                </div>
-              )}
-              {error && (
-                <div className="rounded-md border border-red-400/30 bg-red-400/10 p-3 text-sm text-red-200">
-                  {error}
-                </div>
-              )}
-
-              <div className="space-y-2">
-                <label className="text-sm text-white/80">Neues Passwort</label>
-                <input
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  minLength={8}
-                  required
-                  className="w-full rounded-lg border border-white/10 bg-black/40 px-3 py-2 outline-none ring-0 placeholder-white/40"
-                  placeholder="••••••••"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm text-white/80">Passwort bestätigen</label>
-                <input
-                  type="password"
-                  value={confirm}
-                  onChange={(e) => setConfirm(e.target.value)}
-                  minLength={8}
-                  required
-                  className="w-full rounded-lg border border-white/10 bg-black/40 px-3 py-2 outline-none ring-0 placeholder-white/40"
-                  placeholder="••••••••"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={submitting}
-                className="mt-2 w-full rounded-xl bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/20 disabled:opacity-50"
-              >
-                {submitting ? "Speichere…" : "Passwort speichern"}
-              </button>
-            </form>
-          )}
-
-          <div className="mt-6 flex items-center justify-between text-xs text-white/60">
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label htmlFor="password" className="mb-1 block text-sm">
+            Neues Passwort
+          </label>
+          <div className="relative">
+            <input
+              id="password"
+              name="password"
+              type={showPw ? "text" : "password"}
+              autoComplete="new-password"
+              required
+              minLength={8}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full rounded-md border border-neutral-700 bg-neutral-950 px-3 py-2 outline-none focus:border-neutral-400"
+              placeholder="Mindestens 8 Zeichen"
+              aria-invalid={Boolean(error)}
+            />
             <button
-              onClick={() => router.push("/")}
-              className="underline-offset-2 hover:underline"
               type="button"
+              className="absolute inset-y-0 right-2 my-auto rounded px-2 text-xs text-neutral-300 hover:text-white"
+              onClick={() => setShowPw((s) => !s)}
+              aria-label={showPw ? "Passwort verbergen" : "Passwort anzeigen"}
             >
-              Zurück zur Startseite
+              {showPw ? "Verbergen" : "Anzeigen"}
             </button>
-            <span className="opacity-70">Sicher durch KI · Detecto</span>
           </div>
         </div>
 
-        {/* kleine Fußzeile */}
-        <div className="mt-6 text-center text-[11px] text-white/50">
-          Probleme mit dem Link? Fordere im Login-Fenster einen neuen Reset-Link an.
+        <div>
+          <label htmlFor="confirm" className="mb-1 block text-sm">
+            Passwort bestätigen
+          </label>
+          <input
+            id="confirm"
+            name="confirm"
+            type={showPw ? "text" : "password"}
+            autoComplete="new-password"
+            required
+            minLength={8}
+            value={confirm}
+            onChange={(e) => setConfirm(e.target.value)}
+            className="w-full rounded-md border border-neutral-700 bg-neutral-950 px-3 py-2 outline-none focus:border-neutral-400"
+            placeholder="Wiederhole dein Passwort"
+          />
         </div>
-      </div>
-    </div>
+
+        <button
+          type="submit"
+          disabled={!sessionReady || busy}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/20 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {busy ? "Speichere …" : sessionReady ? "Passwort speichern" : "Warte auf Bestätigung …"}
+        </button>
+
+        <p className="mt-2 text-center text-xs text-neutral-400">
+          Probleme? <a className="underline hover:text-neutral-200" href="/auth/forgot-password">Neue E‑Mail anfordern</a>
+        </p>
+      </form>
+    </main>
   );
 }
