@@ -12,36 +12,33 @@ export default function CallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const run = async () => {
-      try {
-        // Modal dauerhaft (4h) unterdrücken
-        document.cookie = "suppress_login=1; path=/; max-age=" + 60 * 60 * 4;
+    const handleSession = async () => {
+      const hashParams = new URLSearchParams(window.location.hash.substring(1));
+      const access_token = hashParams.get("access_token");
+      const refresh_token = hashParams.get("refresh_token");
 
-        const url = new URL(window.location.href);
-        const code = url.searchParams.get("code");
+      if (access_token && refresh_token) {
+        const { data, error } = await supabase.auth.setSession({
+          access_token,
+          refresh_token,
+        });
 
-        if (!code) {
-          router.push("/login");
+        if (!error && data?.session) {
+          try {
+            localStorage.setItem("skip @app/components/LoginForm", "1");
+          } catch (e) {
+            // ignore
+          }
+          router.push("/");
           return;
         }
-
-        const { error } = await supabase.auth.exchangeCodeForSession(code);
-
-        if (error) {
-          console.error("Session-Error:", error);
-          router.push("/login");
-          return;
-        }
-
-        // Erfolgreich eingeloggt
-        router.push("/");
-      } catch (e) {
-        console.error(e);
-        router.push("/login");
       }
+
+      // fallback
+      router.push("/login");
     };
 
-    run();
+    handleSession();
   }, [router]);
 
   return (
