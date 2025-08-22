@@ -2,6 +2,7 @@
 "use client";
 
 import { Geist, Geist_Mono } from "next/font/google";
+import Head from "next/head";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
@@ -38,6 +39,9 @@ function RootLayout({
 
   return (
     <html lang={i18n.language} className={`${geistSans.variable} ${geistMono.variable}`}>
+      <Head>
+        <link rel="icon" href="/logo-intro.png" />
+      </Head>
       <body className="antialiased bg-black text-white">
         <SessionContextProvider supabaseClient={supabaseClient}>
           <AnimatePresence mode="wait">
