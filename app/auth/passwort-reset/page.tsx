@@ -8,7 +8,6 @@ export default function PasswortResetPage() {
   const supabase = createClientComponentClient();
   const searchParams = useSearchParams();
   const router = useRouter();
-  const code = searchParams.get("code");
 
   const [isExchanging, setIsExchanging] = useState(true);
   const [password, setPassword] = useState("");
@@ -16,52 +15,71 @@ export default function PasswortResetPage() {
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState<"checking" | "ready" | "error">("checking");
+  const [errorDetail, setErrorDetail] = useState<string | null>(null);
 
   useEffect(() => {
     const run = async () => {
       setIsExchanging(true);
       setError(null);
       setMessage(null);
+      setStatus("checking");
+      setErrorDetail(null);
 
+      // 1) Fehler aus Query (?error, ?error_code, ?error_description)
+      const urlError = searchParams.get("error");
+      const urlErrorCode = searchParams.get("error_code");
+      const urlErrorDesc = searchParams.get("error_description");
+      if (urlError) {
+        const msg = urlErrorDesc || `Fehler: ${urlErrorCode || urlError}`;
+        setError(msg);
+        setErrorDetail(msg);
+        setStatus("error");
+        setIsExchanging(false);
+        return;
+      }
+
+      // 2) PKCE-Code (?code=...)
+      const code = searchParams.get("code");
       if (code) {
-        // Variante 1: Supabase liefert ?code=...
         const { error } = await supabase.auth.exchangeCodeForSession(code);
-        if (error) {
-          setError("Der Link ist ungültig oder abgelaufen. Bitte fordere einen neuen Zurücksetzungslink an.");
+        if (!error) {
+          setStatus("ready");
+          setIsExchanging(false);
+          return;
         }
-      } else {
-        // Variante 2: Supabase liefert Tokens im URL-Hash (#access_token=...&refresh_token=...&type=recovery)
-        const hash = typeof window !== "undefined" ? window.location.hash : "";
-        if (hash && hash.includes("access_token") && hash.includes("refresh_token")) {
-          const params = new URLSearchParams(hash.replace(/^#/, ""));
-          const access_token = params.get("access_token");
-          const refresh_token = params.get("refresh_token");
-          const type = params.get("type");
+        // Falls fehlgeschlagen, versuchen wir Hash-Variante
+      }
 
-          if (type === "recovery" && access_token && refresh_token) {
-            const { error } = await supabase.auth.setSession({ access_token, refresh_token });
-            if (error) {
-              setError("Konnte die Sitzung nicht herstellen. Bitte fordere einen neuen Reset-Link an.");
-            } else {
-              // optional: Hash aus der URL entfernen, damit er nicht stört
-              try {
-                window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
-              } catch {}
-            }
-          } else {
-            setError("Dein Reset-Link ist ungültig oder unvollständig. Bitte fordere im Login-Fenster einen neuen Link an.");
+      // 3) Hash-Variante (#access_token=...&refresh_token=...&type=recovery)
+      const hash = typeof window !== "undefined" ? window.location.hash : "";
+      if (hash && hash.includes("access_token") && hash.includes("refresh_token")) {
+        const params = new URLSearchParams(hash.replace(/^#/, ""));
+        const access_token = params.get("access_token");
+        const refresh_token = params.get("refresh_token");
+        const type = params.get("type");
+        if (type === "recovery" && access_token && refresh_token) {
+          const { error } = await supabase.auth.setSession({ access_token, refresh_token });
+          if (!error) {
+            try {
+              window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+            } catch {}
+            setStatus("ready");
+            setIsExchanging(false);
+            return;
           }
-        } else {
-          // Weder code noch Hash-Token: nüchterne Meldung statt generischem Hinweis
-          setError("Es wurde kein gültiger Reset-Code gefunden. Öffne den Link direkt aus der E-Mail oder fordere einen neuen Link an.");
         }
       }
 
+      // 4) Keine gültige Session
+      setError("Kein gültiger Reset-Link gefunden. Öffne den Link direkt aus der E-Mail oder fordere einen neuen Link an.");
+      setErrorDetail("missing_code_or_tokens");
+      setStatus("error");
       setIsExchanging(false);
     };
     run();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [code]);
+  }, [searchParams]);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,6 +96,15 @@ export default function PasswortResetPage() {
     }
 
     setSubmitting(true);
+
+    // Session prüfen – ohne Session schlägt updateUser fehl
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session) {
+      setSubmitting(false);
+      setError("Keine aktive Sitzung. Bitte den Link aus der E-Mail erneut öffnen.");
+      return;
+    }
+
     const { error } = await supabase.auth.updateUser({ password });
     setSubmitting(false);
 
@@ -106,9 +133,22 @@ export default function PasswortResetPage() {
             Setze dein Passwort sicher zurück. Der Link aus deiner E-Mail öffnet diese Seite automatisch.
           </p>
 
-          {isExchanging ? (
+          {isExchanging || status === "checking" ? (
             <div className="rounded-md border border-white/10 bg-white/5 p-3 text-sm text-white/80">
               Bitte warten… wir prüfen deinen Link.
+            </div>
+          ) : status === "error" || error ? (
+            <div className="space-y-3">
+              {error && (
+                <div className="rounded-md border border-red-400/30 bg-red-400/10 p-3 text-sm text-red-200">
+                  {error}
+                </div>
+              )}
+              {message && (
+                <div className="rounded-md border border-emerald-400/30 bg-emerald-400/10 p-3 text-sm text-emerald-200">
+                  {message}
+                </div>
+              )}
             </div>
           ) : (
             <form onSubmit={onSubmit} className="space-y-4">
