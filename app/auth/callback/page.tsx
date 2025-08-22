@@ -12,24 +12,36 @@ export default function CallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Wenn man über den Bestätigungslink kommt, unterdrücken wir einmalig das Auto-Login-Modal
-    try {
-      localStorage.setItem("skipLoginModalOnce", "1");
-    } catch (e) {
-      // ignore
-    }
+    const run = async () => {
+      try {
+        // Modal dauerhaft (4h) unterdrücken
+        document.cookie = "suppress_login=1; path=/; max-age=" + 60 * 60 * 4;
 
-    const handleSession = async () => {
-      const { data, error } = await supabase.auth.getSession();
+        const url = new URL(window.location.href);
+        const code = url.searchParams.get("code");
 
-      if (data?.session) {
+        if (!code) {
+          router.push("/login");
+          return;
+        }
+
+        const { error } = await supabase.auth.exchangeCodeForSession(code);
+
+        if (error) {
+          console.error("Session-Error:", error);
+          router.push("/login");
+          return;
+        }
+
+        // Erfolgreich eingeloggt
         router.push("/");
-      } else {
+      } catch (e) {
+        console.error(e);
         router.push("/login");
       }
     };
 
-    handleSession();
+    run();
   }, [router]);
 
   return (
