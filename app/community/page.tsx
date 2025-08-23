@@ -360,48 +360,52 @@ function CreatePostModal({
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) {
         setErr('Bitte zuerst einloggen, um einen Beitrag zu posten.');
-        setLoading(false);
         return;
       }
 
       const category = categorizeDomain(domain);
-      let insertError = null;
-      try {
-        const { error } = await supabase.from('community_posts').insert({
-          user_id: user.id,
-          domain,
-          content: content.trim(),
-          rating_seriositaet: serio,
-          rating_transparenz: transp,
-          rating_kundenerfahrung: kunde,
-          category,
-        });
-        insertError = error;
-      } catch (e: any) {
-        insertError = e;
-      }
-      if (insertError && (insertError.code === '42703' || String(insertError.message || insertError).toLowerCase().includes('column') && String(insertError.message || insertError).toLowerCase().includes('category'))) {
-        // Fallback: insert without category (temporary)
-        const { error: e2 } = await supabase.from('community_posts').insert({
-          user_id: user.id,
-          domain,
-          content: content.trim(),
-          rating_seriositaet: serio,
-          rating_transparenz: transp,
-          rating_kundenerfahrung: kunde,
-        });
-        if (e2) throw e2;
-      } else if (insertError) {
-        throw insertError;
+
+      const { error: insertError } = await supabase.from('community_posts').insert({
+        user_id: user.id,
+        domain,
+        content: content.trim(),
+        rating_seriositaet: serio,
+        rating_transparenz: transp,
+        rating_kundenerfahrung: kunde,
+        category,
+      });
+
+      if (insertError) {
+        // Fallback wenn Spalte fehlt
+        if (
+          insertError.code === '42703' ||
+          (String(insertError.message || '').toLowerCase().includes('column') &&
+            String(insertError.message || '').toLowerCase().includes('category'))
+        ) {
+          const { error: e2 } = await supabase.from('community_posts').insert({
+            user_id: user.id,
+            domain,
+            content: content.trim(),
+            rating_seriositaet: serio,
+            rating_transparenz: transp,
+            rating_kundenerfahrung: kunde,
+          });
+          if (e2) throw e2;
+        } else {
+          throw insertError;
+        }
       }
 
       onCreated();
       onClose();
-      // reset
+      // reset form
       setDomainInput('');
       setContent('');
-      setSerio(3); setTransp(3); setKunde(3);
+      setSerio(3);
+      setTransp(3);
+      setKunde(3);
     } catch (e: any) {
+      console.error("Insert error", e);
       setErr(e.message ?? 'Unbekannter Fehler beim Speichern.');
     } finally {
       setLoading(false);
