@@ -1,8 +1,12 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, useRef } from 'react';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import AuthModal from '@/app/components/AuthModal';
+const TypedAuthModal = AuthModal as any;
+import { useUsername } from '@/app/lib/useUsername';
 
 // --- Category helpers ---
 type CategoryKey =
@@ -83,6 +87,7 @@ function categorizeDomain(domain: string): CategoryKey {
 
 type Post = {
   id: string;
+  user_id: string;
   domain: string;
   content: string;
   avg_rating: number;
@@ -216,7 +221,27 @@ function EmptyState({ onOpen }: { onOpen: () => void }) {
   );
 }
 
-function PostCard({ post }: { post: Post }) {
+function PostCard({
+  post,
+  currentUserId,
+  onDelete,
+  authorName,
+}: {
+  post: Post;
+  currentUserId: string | null;
+  onDelete: (id: string) => void;
+  authorName: string;
+}) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    function onDocClick(e: MouseEvent) {
+      if (!menuRef.current) return;
+      if (!menuRef.current.contains(e.target as Node)) setMenuOpen(false);
+    }
+    if (menuOpen) document.addEventListener('mousedown', onDocClick);
+    return () => document.removeEventListener('mousedown', onDocClick);
+  }, [menuOpen]);
   return (
     <motion.div
       layout
@@ -226,19 +251,59 @@ function PostCard({ post }: { post: Post }) {
       className="w-full max-w-2xl mx-auto rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.03] p-5 hover:from-white/[0.12] hover:to-white/[0.06] transition shadow-[0_0_0_1px_rgba(255,255,255,0.04)] backdrop-blur-sm"
     >
       <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <Favicon domain={post.domain} />
           <span className="font-medium px-2 py-0.5 rounded-md bg-white/10 border border-white/10 shadow-inner">
             {post.domain}
           </span>
+          <span className="text-xs opacity-70">
+            • von <span className="font-medium">{authorName || `user-${post.user_id.slice(0,6)}`}</span>
+            &nbsp;(<code className="opacity-80">{post.user_id.slice(0, 8)}</code>)
+          </span>
         </div>
-        <span className="text-xs opacity-60">
-          {new Date(post.created_at).toLocaleString(undefined, {
-            year: 'numeric',
-            month: 'short',
-            day: '2-digit',
-          })}
-        </span>
+
+        <div className="flex items-center gap-2">
+          <span className="text-xs opacity-60">
+            {new Date(post.created_at).toLocaleString(undefined, {
+              year: 'numeric',
+              month: 'short',
+              day: '2-digit',
+            })}
+          </span>
+
+          {currentUserId && post.user_id === currentUserId && (
+            <div className="relative" ref={menuRef}>
+              <button
+                onClick={() => setMenuOpen(v => !v)}
+                title="Mehr"
+                className="rounded-md border border-white/10 hover:bg-white/10 px-2 py-1 text-sm"
+                aria-haspopup="menu"
+                aria-expanded={menuOpen}
+              >
+                ⋮
+              </button>
+              <AnimatePresence>
+                {menuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -6, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -6, scale: 0.98 }}
+                    className="absolute right-0 mt-2 w-36 rounded-xl border border-white/10 bg-white/10 backdrop-blur shadow-lg overflow-hidden z-10"
+                    role="menu"
+                  >
+                    <button
+                      onClick={() => { setMenuOpen(false); onDelete(post.id); }}
+                      className="w-full text-left px-3 py-2 text-sm text-red-300 hover:bg-red-500/10"
+                      role="menuitem"
+                    >
+                      Löschen
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="mt-2">
@@ -454,6 +519,22 @@ export default function CommunityPage() {
   const [selectedCategory, setSelectedCategory] = useState<CategoryKey | ''>('');
   const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'best'>('newest');
 
+  // Current user id (for own post actions)
+  const [currentUserId, setCurrentUserId] = useState<string | null>(null);
+  const [authorNames, setAuthorNames] = useState<Record<string, string>>({});
+
+  // Floating profile (hero-like)
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [authChecked, setAuthChecked] = useState(false);
+  const [sessionUser, setSessionUser] = useState<any>(null);
+  const usernameHook = useUsername();
+  const isLoggedIn = !!sessionUser;
+  const displayName =
+    (sessionUser?.user_metadata as any)?.username ||
+    usernameHook ||
+    (sessionUser?.email ? sessionUser.email.split("@")[0] : "Gast");
+
   useEffect(() => {
     let active = true;
     async function load() {
@@ -464,7 +545,7 @@ export default function CommunityPage() {
       try {
         const resp = await supabase
           .from('community_posts')
-          .select('id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, category, created_at')
+          .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, category, created_at')
           .order('created_at', { ascending: false });
         data = resp.data;
         error = resp.error;
@@ -474,7 +555,7 @@ export default function CommunityPage() {
       if (error && (error.code === '42703' || String(error.message || error).toLowerCase().includes('column') && String(error.message || error).toLowerCase().includes('category'))) {
         const resp2 = await supabase
           .from('community_posts')
-          .select('id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
+          .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
           .order('created_at', { ascending: false });
         data = resp2.data;
         // no need to set error here
@@ -483,13 +564,91 @@ export default function CommunityPage() {
       if (error) {
         if (active) setError(error.message ?? 'Fehler beim Laden der Beiträge.');
       } else {
-        if (active) setPosts(data as Post[]);
+        const loaded = (data as Post[]) || [];
+        if (active) setPosts(loaded);
+
+        // try to load author display names from a 'profiles' table, fallback to masked user id
+        try {
+          const ids = Array.from(new Set(loaded.map(p => p.user_id))).filter(Boolean);
+          if (ids.length) {
+            const { data: profs, error: perr } = await supabase
+              .from('profiles')
+              .select('id, username, display_name, name')
+              .in('id', ids);
+            if (!perr && profs) {
+              const map: Record<string, string> = {};
+              for (const pr of profs as any[]) {
+                map[pr.id] = pr.display_name || pr.username || pr.name || '';
+              }
+              // fill fallbacks for any missing
+              for (const id of ids) {
+                if (!map[id]) map[id] = `user-${id.slice(0, 6)}`;
+              }
+              if (active) setAuthorNames(map);
+            } else {
+              // fallback: mask all user ids
+              const map: Record<string, string> = {};
+              for (const id of ids) map[id] = `user-${id.slice(0, 6)}`;
+              if (active) setAuthorNames(map);
+            }
+          }
+        } catch {
+          // silent fallback
+          const ids = Array.from(new Set(((data as Post[]) || []).map(p => p.user_id))).filter(Boolean);
+          const map: Record<string, string> = {};
+          for (const id of ids) map[id] = `user-${id.slice(0, 6)}`;
+          if (active) setAuthorNames(map);
+        }
       }
       if (active) setLoading(false);
     }
+    // Load current user id for own post actions
+    supabase.auth.getUser().then(({ data }) => {
+      setCurrentUserId(data?.user?.id ?? null);
+    });
     load();
     // Optional: Realtime (kann später ergänzt werden)
     return () => { active = false; };
+  }, [supabase]);
+
+  useEffect(() => {
+    let isMounted = true;
+    supabase.auth.getSession().then(({ data }) => {
+      if (!isMounted) return;
+      setSessionUser(data.session?.user ?? null);
+      const hideAuthModal = typeof window !== 'undefined' ? localStorage.getItem("hideAuthModal") : null;
+      const skipOnce = typeof window !== 'undefined' ? localStorage.getItem("skipLoginModalOnce") : null;
+
+      if (!data.session) {
+        if (skipOnce) {
+          setTimeout(() => {
+            try { localStorage.removeItem("skipLoginModalOnce"); } catch {}
+          }, 5000);
+        } else if (!hideAuthModal) {
+          setShowAuthModal(true);
+        }
+      }
+      setAuthChecked(true);
+    });
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!isMounted) return;
+      if (session) {
+        setShowAuthModal(false);
+        setSessionUser(session.user);
+        try {
+          localStorage.setItem("hideAuthModal", "true");
+          localStorage.removeItem("skipLoginModalOnce");
+        } catch {}
+      } else {
+        setSessionUser(null);
+        try { localStorage.removeItem("hideAuthModal"); } catch {}
+      }
+      setAuthChecked(true);
+    });
+    return () => {
+      isMounted = false;
+      listener?.subscription?.unsubscribe();
+    };
   }, [supabase]);
 
   const filtered = useMemo(() => {
@@ -521,7 +680,7 @@ export default function CommunityPage() {
     try {
       const resp = await supabase
         .from('community_posts')
-        .select('id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, category, created_at')
+        .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, category, created_at')
         .order('created_at', { ascending: false });
       data = resp.data;
       error = resp.error;
@@ -531,14 +690,43 @@ export default function CommunityPage() {
     if (error && (error.code === '42703' || String(error.message || error).toLowerCase().includes('column') && String(error.message || error).toLowerCase().includes('category'))) {
       const resp2 = await supabase
         .from('community_posts')
-        .select('id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
+        .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
         .order('created_at', { ascending: false });
       data = resp2.data;
       // no need to set error here
       error = null;
     }
-    if (!error) setPosts(data as Post[]);
+    if (!error) {
+      const loaded = (data as Post[]) || [];
+      setPosts(loaded);
+      try {
+        const ids = Array.from(new Set(loaded.map(p => p.user_id))).filter(Boolean);
+        if (ids.length) {
+          const { data: profs, error: perr } = await supabase
+            .from('profiles')
+            .select('id, username, display_name, name')
+            .in('id', ids);
+          const map: Record<string, string> = {};
+          if (!perr && profs) {
+            for (const pr of profs as any[]) {
+              map[pr.id] = pr.display_name || pr.username || pr.name || '';
+            }
+          }
+          for (const id of ids) if (!map[id]) map[id] = `user-${id.slice(0, 6)}`;
+          setAuthorNames(map);
+        }
+      } catch {
+        // ignore
+      }
+    }
     // else noop
+  };
+
+  // Handler for deleting a post (stub, implement as needed)
+  const handleDelete = async (id: string) => {
+    // Optionally: Add confirmation here
+    await supabase.from('community_posts').delete().eq('id', id);
+    refresh();
   };
 
   return (
@@ -662,7 +850,13 @@ export default function CommunityPage() {
             >
               <AnimatePresence>
                 {filtered.map((p) => (
-                  <PostCard key={p.id} post={p} />
+                  <PostCard
+                    key={p.id}
+                    post={p}
+                    currentUserId={currentUserId}
+                    onDelete={handleDelete}
+                    authorName={authorNames[p.user_id] || `user-${p.user_id.slice(0,6)}`}
+                  />
                 ))}
               </AnimatePresence>
             </motion.div>
@@ -675,6 +869,129 @@ export default function CommunityPage() {
           onClose={() => setOpen(false)}
           onCreated={refresh}
         />
+        {/* Floating Profile Button bottom-left */}
+        <div className="fixed left-4 md:left-6 bottom-[calc(env(safe-area-inset-bottom,0px)+24px)] z-50">
+          <div className="relative">
+            <button
+              className={`w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition
+${isLoggedIn
+  ? "bg-blue-600 text-white hover:bg-blue-500 shadow-blue-500/30"
+  : "bg-zinc-800 border border-zinc-700 text-zinc-200 hover:bg-zinc-700 hover:shadow-cyan-500/20"}
+`}
+              onClick={() => setShowProfileMenu((prev) => !prev)}
+              aria-label="Profil"
+            >
+              👤
+            </button>
+
+            {showProfileMenu && (
+              <div className="absolute left-0 bottom-14 w-80 bg-zinc-900/95 border border-zinc-800 rounded-2xl shadow-2xl backdrop-blur-xl overflow-hidden divide-y divide-zinc-800">
+                {/* Soft top glow */}
+                <div className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-[140%] h-24 bg-gradient-to-b from-cyan-400/10 via-cyan-300/5 to-transparent blur-2xl" />
+
+                {/* Header */}
+                <div className="flex items-center gap-3 px-4 py-4">
+                  <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center ring-1 ring-white/10 shadow-inner">👤</div>
+                  <div className="min-w-0">
+                    <div className="text-white font-semibold truncate">
+                      {displayName}
+                    </div>
+                    <div className="text-gray-400 text-xs truncate">{sessionUser?.email || (authChecked ? "" : "Prüfe Status…")}</div>
+                    {sessionUser?.id && (
+                      <p className="text-sm text-gray-400 mt-1">
+                        ID: {sessionUser.id}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Links */}
+                <div className="py-1">
+                  <Link href="/einstellungen" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative" onClick={() => setShowProfileMenu(false)}>
+                    <span className="mr-3">⚙️</span>
+                    <span>Einstellungen</span>
+                    <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+                    <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+                  </Link>
+                  <Link href="/hilfe" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative" onClick={() => setShowProfileMenu(false)}>
+                    <span className="mr-3">❓</span>
+                    <span>Hilfe & Ressourcen</span>
+                    <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+                    <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+                  </Link>
+                  <Link href="/news" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative" onClick={() => setShowProfileMenu(false)}>
+                    <span className="mr-3">📰</span>
+                    <span>Neuigkeiten</span>
+                    <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+                    <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+                  </Link>
+                  <Link href="/billing" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative" onClick={() => setShowProfileMenu(false)}>
+                    <span className="mr-3">💳</span>
+                    <span>Abos & Tarife</span>
+                    <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+                    <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+                  </Link>
+                  <Link href="/purchases" className="group flex items-center px-4 py-3 text-sm text-gray-200 hover:bg-zinc-800/70 transition relative" onClick={() => setShowProfileMenu(false)}>
+                    <span className="mr-3">🧾</span>
+                    <span>Bisherige Einkäufe</span>
+                    <span className="ml-auto opacity-40 group-hover:opacity-80 transition">›</span>
+                    <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+                  </Link>
+                </div>
+
+                {/* Footer */}
+                <div className="py-1">
+                  {!isLoggedIn ? (
+                    <div className="flex">
+                      <button
+                        className="group flex-1 text-left px-4 py-3 hover:bg-zinc-800/70 text-blue-400 transition relative"
+                        onClick={() => {
+                          if (typeof window !== 'undefined') {
+                            window.dispatchEvent(new CustomEvent("auth:openModal"));
+                          }
+                          setShowProfileMenu(false);
+                        }}
+                      >
+                        <span className="mr-2">🔐</span>
+                        Einloggen
+                        <span className="ml-2 opacity-40 group-hover:opacity-80 transition">›</span>
+                        <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+                      </button>
+                      <Link
+                        href="/register"
+                        className="group flex-1 px-4 py-3 text-blue-400 hover:bg-zinc-800/70 transition text-center relative"
+                        onClick={() => setShowProfileMenu(false)}
+                      >
+                        <span className="mr-2">✍️</span>
+                        Registrieren
+                        <span className="ml-2 opacity-40 group-hover:opacity-80 transition">›</span>
+                        <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+                      </Link>
+                    </div>
+                  ) : (
+                    <button
+                      className="group w-full text-left px-4 py-3 hover:bg-zinc-800/70 text-red-400 transition relative"
+                      onClick={async () => {
+                        setShowAuthModal(false);
+                        setShowProfileMenu(false);
+                        await supabase.auth.signOut();
+                        try { localStorage.removeItem("hideAuthModal"); } catch {}
+                      }}
+                    >
+                      <span className="mr-2">🚪</span>
+                      Abmelden
+                      <span className="ml-2 opacity-40 group-hover:opacity-80 transition">›</span>
+                      <span className="pointer-events-none absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/5 transition"></span>
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Auth modal */}
+        <TypedAuthModal show={showAuthModal} setShow={setShowAuthModal} />
       </div>
     </div>
   );
