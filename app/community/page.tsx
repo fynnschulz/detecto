@@ -541,33 +541,48 @@ export default function CommunityPage() {
       setLoading(true);
       setError(null);
       let data: any = null;
-      let error: any = null;
+      let errObj: any = null;
       try {
+        // Primary select with explicit columns
         const resp = await supabase
           .from('community_posts')
           .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, category, created_at')
           .order('created_at', { ascending: false });
         data = resp.data;
-        error = resp.error;
-      } catch (e: any) {
-        error = e;
-      }
-      if (error && (error.code === '42703' || String(error.message || error).toLowerCase().includes('column') && String(error.message || error).toLowerCase().includes('category'))) {
-        const resp2 = await supabase
-          .from('community_posts')
-          .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
-          .order('created_at', { ascending: false });
-        data = resp2.data;
-        // no need to set error here
-        error = null;
-      }
-      if (error) {
-        if (active) setError(error.message ?? 'Fehler beim Laden der Beiträge.');
-      } else {
+        errObj = resp.error;
+
+        // Fallback if category column is missing
+        if (errObj && (errObj.code === '42703' || String(errObj.message || errObj).toLowerCase().includes('column') && String(errObj.message || errObj).toLowerCase().includes('category'))) {
+          const resp2 = await supabase
+            .from('community_posts')
+            .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
+            .order('created_at', { ascending: false });
+          data = resp2.data;
+          errObj = resp2.error;
+        }
+
+        // Ultimate fallback: select * (in case of unexpected column schema)
+        if (errObj) {
+          const resp3 = await supabase
+            .from('community_posts')
+            .select('*')
+            .order('created_at', { ascending: false });
+          if (!resp3.error) {
+            data = resp3.data;
+            errObj = null;
+          }
+        }
+
+        if (errObj) {
+          if (active) setError(errObj.message ?? 'Fehler beim Laden der Beiträge.');
+          if (active) setPosts([]);
+          return;
+        }
+
         const loaded = (data as Post[]) || [];
         if (active) setPosts(loaded);
 
-        // try to load author display names from a 'profiles' table, fallback to masked user id
+        // Load author names (best-effort)
         try {
           const ids = Array.from(new Set(loaded.map(p => p.user_id))).filter(Boolean);
           if (ids.length) {
@@ -575,32 +590,24 @@ export default function CommunityPage() {
               .from('profiles')
               .select('id, username, display_name, name')
               .in('id', ids);
+            const map: Record<string, string> = {};
             if (!perr && profs) {
-              const map: Record<string, string> = {};
               for (const pr of profs as any[]) {
                 map[pr.id] = pr.display_name || pr.username || pr.name || '';
               }
-              // fill fallbacks for any missing
-              for (const id of ids) {
-                if (!map[id]) map[id] = `user-${id.slice(0, 6)}`;
-              }
-              if (active) setAuthorNames(map);
-            } else {
-              // fallback: mask all user ids
-              const map: Record<string, string> = {};
-              for (const id of ids) map[id] = `user-${id.slice(0, 6)}`;
-              if (active) setAuthorNames(map);
             }
+            for (const id of ids) if (!map[id]) map[id] = `user-${id.slice(0, 6)}`;
+            if (active) setAuthorNames(map);
           }
         } catch {
-          // silent fallback
-          const ids = Array.from(new Set(((data as Post[]) || []).map(p => p.user_id))).filter(Boolean);
-          const map: Record<string, string> = {};
-          for (const id of ids) map[id] = `user-${id.slice(0, 6)}`;
-          if (active) setAuthorNames(map);
+          // ignore profile errors
         }
+      } catch (e: any) {
+        if (active) setError(e?.message || 'Unbekannter Fehler beim Laden.');
+        if (active) setPosts([]);
+      } finally {
+        if (active) setLoading(false);
       }
-      if (active) setLoading(false);
     }
     // Load current user id for own post actions
     supabase.auth.getUser().then(({ data }) => {
@@ -675,6 +682,7 @@ export default function CommunityPage() {
   }, [posts, query, onlyDomain, selectedCategory, sortBy]);
 
   const refresh = async () => {
+    setLoading(true);
     let data: any = null;
     let error: any = null;
     try {
@@ -696,7 +704,19 @@ export default function CommunityPage() {
       // no need to set error here
       error = null;
     }
+    // Ultimate fallback: select * (in case of unexpected column schema)
+    if (error) {
+      const resp3 = await supabase
+        .from('community_posts')
+        .select('*')
+        .order('created_at', { ascending: false });
+      if (!resp3.error) {
+        data = resp3.data;
+        error = null;
+      }
+    }
     if (!error) {
+      setError(null);
       const loaded = (data as Post[]) || [];
       setPosts(loaded);
       try {
@@ -720,6 +740,7 @@ export default function CommunityPage() {
       }
     }
     // else noop
+    setLoading(false);
   };
 
   // Handler for deleting a post (stub, implement as needed)
