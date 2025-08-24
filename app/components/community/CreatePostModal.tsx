@@ -65,7 +65,7 @@ function Favicon({ domain }: { domain: string }) {
     <img
       src={url}
       alt=""
-      className="h-5 w-5 rounded-sm opacity-90 drop-shadow-[0_2px_8px_rgba(255,255,255,0.25)]"
+      className="h-5 w-5 rounded-sm opacity-90 ring-1 ring-white/20 drop-shadow-[0_2px_8px_rgba(255,255,255,0.25)]"
       loading="lazy"
       decoding="async"
     />
@@ -110,8 +110,10 @@ function StarInput({
             type="button"
             aria-label={`${label}: ${n} Sterne`}
             onClick={() => onChange(n)}
-            className={`w-8 h-8 rounded-md border flex items-center justify-center transition ${
-              n <= value ? 'bg-amber-400/80 text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]' : 'hover:bg-amber-400/20'
+            className={`w-8 h-8 rounded-md border border-white/15 flex items-center justify-center transition transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/20 ${
+              n <= value
+                ? 'bg-amber-400/90 text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.6),0_6px_20px_rgba(255,193,7,0.35)]'
+                : 'hover:bg-amber-400/25 hover:border-amber-300/40'
             }`}
           >
             ★
@@ -219,7 +221,7 @@ export default function CreatePostModal({
       {open && (
         <>
           <motion.div
-            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-40 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.12),transparent_60%)] bg-black/70 backdrop-blur-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -235,16 +237,16 @@ export default function CreatePostModal({
             <div
               role="dialog"
               aria-modal="true"
-              className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.10] to-white/[0.05] p-6 shadow-2xl backdrop-blur"
+              className="relative overflow-hidden rounded-3xl border border-white/15 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.06))] p-6 shadow-[0_10px_40px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-xl ring-1 ring-white/10"
             >
               {/* decorative sheen */}
-              <div aria-hidden className="pointer-events-none absolute -top-14 left-1/2 -translate-x-1/2 h-24 w-[140%] bg-gradient-to-b from-white/10 to-transparent blur-2xl" />
+              <div aria-hidden className="pointer-events-none absolute -top-14 left-1/2 -translate-x-1/2 h-28 w-[160%] bg-gradient-to-b from-white/15 to-transparent blur-3xl" />
 
               <div className="flex items-center justify-between">
-                <h2 className="text-xl font-semibold">Neuen Beitrag erstellen</h2>
+                <h2 className="text-2xl font-semibold tracking-tight drop-shadow">Neuen Beitrag erstellen</h2>
                 <button
                   onClick={onClose}
-                  className="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10"
+                  className="rounded-lg border border-white/10 px-3 py-1.5 hover:bg-white/15 active:scale-95 transition shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]"
                   aria-label="Modal schließen"
                 >
                   ✕
@@ -253,7 +255,7 @@ export default function CreatePostModal({
 
               <form onSubmit={handleSubmit} className="mt-4 space-y-4">
                 <div>
-                  <label className="block text-sm mb-1">Domain (Titel)</label>
+                  <label className="block text-sm mb-1 opacity-80">Domain (Titel)</label>
                   <div className="flex items-center gap-2">
                     {domain && <Favicon domain={domain} />}
                     <input
@@ -261,49 +263,49 @@ export default function CreatePostModal({
                       placeholder="z. B. https://www.shop.de/produkt"
                       value={domainInput}
                       onChange={(e) => setDomainInput(e.target.value)}
-                      className="mt-1 w-full rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-white/30 backdrop-blur"
+                      className="mt-1 w-full rounded-xl border border-white/20 bg-white/10/50 px-3 py-2 outline-none focus:border-white/40 focus:ring-4 focus:ring-white/10 backdrop-blur-md placeholder:opacity-60 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] transition"
                     />
                   </div>
                   {domain && (
-                    <p className="text-xs opacity-70 mt-1">
+                    <p className="text-xs opacity-80 mt-1">
                       Wird gespeichert als: <span className="font-medium">{domain}</span>
                     </p>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-sm mb-1">Deine Erfahrung</label>
+                  <label className="block text-sm mb-1 opacity-80">Deine Erfahrung</label>
                   <textarea
                     placeholder="Beschreibe kurz und sachlich, was passiert ist…"
                     value={content}
                     onChange={(e) => setContent(e.target.value)}
                     rows={6}
-                    className="mt-1 w-full rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-white/30 backdrop-blur"
+                    className="mt-1 w-full rounded-xl border border-white/20 bg-white/10/50 px-3 py-2 outline-none focus:border-white/40 focus:ring-4 focus:ring-white/10 backdrop-blur-md placeholder:opacity-60 shadow-[inset_0_1px_0_rgba(255,255,255,0.25)] transition"
                   />
-                  <p className="text-xs opacity-60 mt-1">{content.trim().length} / 20 Zeichen min.</p>
+                  <p className="text-xs opacity-70 mt-1">{content.trim().length} / 20 Zeichen min.</p>
                 </div>
 
-                <div className="rounded-2xl border border-white/10 p-3">
+                <div className="rounded-2xl border border-white/15 p-3 bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]">
                   <p className="text-sm font-medium mb-2">Bewertung (1–5 Sterne)</p>
                   <StarInput label="Seriösität" value={serio} onChange={setSerio} />
                   <StarInput label="Transparenz" value={transp} onChange={setTransp} />
                   <StarInput label="Kundenerfahrung" value={kunde} onChange={setKunde} />
                 </div>
 
-                {err && <div className="text-sm text-red-400">{err}</div>}
+                {err && <div className="text-sm text-red-300 bg-red-500/10 border border-red-400/20 rounded-lg px-3 py-2">{err}</div>}
 
                 <div className="flex items-center justify-end gap-3 pt-2">
                   <button
                     type="button"
                     onClick={onClose}
-                    className="rounded-xl border border-white/10 px-4 py-2 hover:bg-white/10"
+                    className="rounded-xl border border-white/15 px-4 py-2 hover:bg-white/10 active:scale-95 transition shadow-[inset_0_1px_0_rgba(255,255,255,0.25)]"
                   >
                     Abbrechen
                   </button>
                   <button
                     type="submit"
                     disabled={loading}
-                    className="rounded-xl border border-white/20 bg-white/10 px-4 py-2 hover:bg-white/20 disabled:opacity-50"
+                    className="rounded-xl border border-white/20 bg-gradient-to-r from-amber-400 to-rose-400 text-black font-medium px-4 py-2 hover:brightness-110 active:scale-95 transition shadow-[0_8px_30px_rgba(255,179,71,0.35)] disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {loading ? 'Speichern…' : 'Beitrag posten'}
                   </button>
