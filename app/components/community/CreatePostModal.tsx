@@ -21,20 +21,46 @@ export type CategoryKey =
   | 'utilities'
   | 'other';
 
+const rx = (alts: string[]) =>
+  new RegExp(`(?:^|[.-])(?:${alts.join('|')})(?:$|[.-])`);
+
 const DOMAIN_CATEGORY_RULES: Array<{ test: RegExp; cat: CategoryKey }> = [
-  { test: /(amazon|amazon\.[a-z]{2,}|amzn)/, cat: 'marketplace' },
-  { test: /(ebay|kleinanzeigen|etsy|aliexpress|zalando|otto|shein|temu)/, cat: 'onlineshop' },
-  { test: /(sparkasse|volksbank|n26|revolut|wise|comdirect|dkb|ing-diba|ing\.de|ing\.com|paypal)/, cat: 'bank_finance' },
-  { test: /(facebook|fb\.com|instagram|tiktok|snapchat|twitter|x\.com|linkedin|pinterest|reddit|discord)/, cat: 'social_media' },
-  { test: /(netflix|amazonvideo|primevideo|disney|hulu|paramount|wowtv|wow\.tv|sky|spotify|applemusic|music\.apple|youtube|youtubemusic)/, cat: 'streaming' },
-  { test: /(steam|epicgames|playstation|xbox|nintendo|riotgames|blizzard|origin|ea\.com)/, cat: 'gaming' },
-  { test: /(gmail|googlemail|outlook|hotmail|live\.com|gmx|web\.de|yahoo)/, cat: 'email_provider' },
-  { test: /(dropbox|drive\.google|onedrive|icloud|box\.com|mega\.nz)/, cat: 'cloud_storage' },
-  { test: /(booking|airbnb|expedia|skyscanner|ryanair|lufthansa|bahn|deutschebahn|flixbus|uber|bolt)/, cat: 'travel' },
-  { test: /(lieferando|doordash|ubereats|wolt|deliveroo|gorillas|flink)/, cat: 'food_delivery' },
-  { test: /(nytimes|washingtonpost|guardian|spiegel|zeit|welt|faz|bbc|cnn|tagesschau)/, cat: 'news_media' },
-  { test: /(doctolib|teleclinic|ada\.com|myfitnesspal|fitbit|withings)/, cat: 'healthcare' },
-  { test: /(github|gitlab|bitbucket|notion|slack|trello|asana|figma|canva)/, cat: 'utilities' },
+  // MARKTPLATZ / SHOPS
+  { test: rx(['amazon', 'amzn']), cat: 'marketplace' },
+  { test: rx(['ebay', 'kleinanzeigen', 'etsy', 'zalando', 'otto', 'shein', 'temu']), cat: 'onlineshop' },
+
+  // BANK/FINANCE
+  { test: rx(['sparkasse', 'volksbank', 'n26', 'revolut', 'wise', 'comdirect', 'dkb', 'ing', 'paypal']), cat: 'bank_finance' },
+
+  // SOCIAL
+  { test: rx(['facebook', 'fb', 'instagram', 'tiktok', 'snapchat', 'twitter', 'x', 'linkedin', 'pinterest', 'reddit', 'discord']), cat: 'social_media' },
+
+  // STREAMING/MUSIC
+  { test: rx(['netflix', 'primevideo', 'amazonvideo', 'disney', 'hulu', 'paramount', 'wowtv', 'wow', 'sky', 'spotify', 'applemusic', 'music.apple', 'youtube', 'youtubemusic']), cat: 'streaming' },
+
+  // GAMING
+  { test: rx(['steam', 'epicgames', 'playstation', 'xbox', 'nintendo', 'riotgames', 'blizzard', 'origin', 'ea']), cat: 'gaming' },
+
+  // E-MAIL
+  { test: rx(['gmail', 'googlemail', 'outlook', 'hotmail', 'live', 'gmx', 'web', 'yahoo']), cat: 'email_provider' },
+
+  // CLOUD
+  { test: rx(['dropbox', 'drive.google', 'onedrive', 'icloud', 'box', 'mega']), cat: 'cloud_storage' },
+
+  // TRAVEL
+  { test: rx(['booking', 'airbnb', 'expedia', 'skyscanner', 'ryanair', 'lufthansa', 'bahn', 'deutschebahn', 'flixbus', 'uber', 'bolt']), cat: 'travel' },
+
+  // FOOD
+  { test: rx(['lieferando', 'doordash', 'ubereats', 'wolt', 'deliveroo', 'gorillas', 'flink']), cat: 'food_delivery' },
+
+  // NEWS/MEDIA
+  { test: rx(['nytimes', 'washingtonpost', 'guardian', 'spiegel', 'zeit', 'welt', 'faz', 'bbc', 'cnn', 'tagesschau']), cat: 'news_media' },
+
+  // HEALTH
+  { test: rx(['doctolib', 'teleclinic', 'ada', 'myfitnesspal', 'fitbit', 'withings']), cat: 'healthcare' },
+
+  // UTILITIES / BIZ-TOOLS
+  { test: rx(['github', 'gitlab', 'bitbucket', 'notion', 'slack', 'trello', 'asana', 'figma', 'canva']), cat: 'utilities' },
 ];
 
 function categorizeDomain(domain: string): CategoryKey {
@@ -49,12 +75,37 @@ function categorizeDomain(domain: string): CategoryKey {
 function normalizeDomain(input: string) {
   if (!input) return '';
   let s = input.trim().toLowerCase();
-  s = s.replace(/^https?:\/\//, '');
-  const slash = s.indexOf('/');
-  if (slash !== -1) s = s.slice(0, slash);
-  s = s.split('?')[0].split('#')[0];
-  s = s.replace(/^www\./, '');
-  return s;
+  // first token if user pasted with spaces
+  s = s.split(/\s+/)[0];
+
+  // Try URL parsing; fallback to manual
+  try {
+    if (!/^https?:\/\//.test(s)) s = 'http://' + s;
+    const u = new URL(s);
+    s = u.hostname || s;
+  } catch {
+    s = s.replace(/^https?:\/\//, '').split('/')[0];
+  }
+
+  // strip www. and port
+  s = s.replace(/^www\./, '').replace(/:\d+$/, '');
+
+  // eTLD+1 heuristic for common public suffixes
+  const parts = s.split('.').filter(Boolean);
+  if (parts.length <= 2) return parts.join('.');
+
+  const specialSuffixes = new Set([
+    'co.uk', 'com.au', 'co.jp', 'com.br', 'com.ar', 'com.mx',
+    'com.tr', 'co.in', 'co.za', 'com.sg', 'com.cn'
+  ]);
+
+  const last2 = parts.slice(-2).join('.');
+  const last3 = parts.slice(-3).join('.');
+
+  if (specialSuffixes.has(last2) && parts.length >= 3) {
+    return parts.slice(-3).join('.');
+  }
+  return parts.slice(-2).join('.');
 }
 
 // ---- Tiny UI helpers (local only to the modal) ----
@@ -116,7 +167,21 @@ function StarInput({
                 : 'hover:bg-amber-400/25 hover:border-amber-300/40'
             }`}
           >
-            ★
+            <svg
+              width={18}
+              height={18}
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              className={n <= value ? 'fill-current' : 'fill-none'}
+            >
+              <path
+                d="M12 17.3l-5.3 3 1.4-5.9-4.5-3.9 6-.5L12 4l2.4 6 6 .5-4.5 3.9 1.4 5.9z"
+                stroke="currentColor"
+                strokeWidth={1.5}
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+            </svg>
           </button>
         ))}
       </div>
