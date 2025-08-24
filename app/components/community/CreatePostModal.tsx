@@ -154,17 +154,17 @@ function StarInput({
   return (
     <div className="flex items-center justify-between py-2">
       <span className="text-sm opacity-90">{label}</span>
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-2">
         {[1, 2, 3, 4, 5].map((n) => (
           <button
             key={n}
             type="button"
             aria-label={`${label}: ${n} Sterne`}
             onClick={() => onChange(n)}
-            className={`w-8 h-8 rounded-md border border-white/15 flex items-center justify-center transition transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/20 ${
+            className={`p-2 rounded-full transition transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/20 ${
               n <= value
-                ? 'bg-amber-400/90 text-black shadow-[inset_0_1px_0_rgba(255,255,255,0.6),0_6px_20px_rgba(255,193,7,0.35)]'
-                : 'hover:bg-amber-400/25 hover:border-amber-300/40'
+                ? 'text-amber-400 hover:text-amber-300'
+                : 'text-white/70 hover:text-white'
             }`}
           >
             <svg
@@ -172,7 +172,7 @@ function StarInput({
               height={18}
               viewBox="0 0 24 24"
               aria-hidden="true"
-              className={n <= value ? 'fill-current' : 'fill-none'}
+              className={n <= value ? 'fill-current drop-shadow-[0_4px_12px_rgba(255,193,7,0.35)]' : 'fill-none'}
             >
               <path
                 d="M12 17.3l-5.3 3 1.4-5.9-4.5-3.9 6-.5L12 4l2.4 6 6 .5-4.5 3.9 1.4 5.9z"
