@@ -22,7 +22,7 @@ export async function GET() {
   try {
     const { data, error } = await supabase
       .from('community_posts')
-      .select('id,title,content,category,created_at,author_id,author_name')
+      .select('id,content,created_at')
       .order('created_at', { ascending: false })
       .limit(200);
 
@@ -34,16 +34,11 @@ export async function GET() {
     // Minimal validation and coercion for each post
     const posts = Array.isArray(data)
       ? data.filter((p) =>
-          typeof p?.id === 'string' &&
-          typeof p?.title === 'string'
+          typeof p?.id === 'string'
         ).map((p) => ({
           id: p.id,
-          title: p.title,
           content: typeof p.content === 'string' ? p.content : '',
-          category: typeof p.category === 'string' ? p.category : 'general',
           created_at: p.created_at,
-          author_id: typeof p.author_id === 'string' || p.author_id === null ? p.author_id : null,
-          author_name: typeof p.author_name === 'string' || p.author_name === null ? p.author_name : null,
         }))
       : [];
 
