@@ -1,5 +1,3 @@
-
-
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
@@ -87,7 +85,10 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Insert failed' }, { status: 500 });
     }
 
-    return NextResponse.json(data, { status: 201 });
+    return NextResponse.json(
+      { success: true, post: Array.isArray(data) ? data[0] : data },
+      { status: 201 }
+    );
   } catch (err) {
     console.error('Unexpected error inserting community post:', err);
     return NextResponse.json({ error: 'Insert failed' }, { status: 500 });
