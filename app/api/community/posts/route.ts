@@ -52,6 +52,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const {
+      user_id,
       content,
       domain,
       avg_rating,
@@ -60,6 +61,11 @@ export async function POST(req: Request) {
       rating_kundenerfahrung,
     } = body || {};
 
+    // Validate: user_id must be present and a string
+    if (typeof user_id !== 'string' || !user_id.trim()) {
+      return NextResponse.json({ error: 'user_id is required' }, { status: 400 });
+    }
+
     // Validate: content must be present and a string
     if (typeof content !== 'string' || !content.trim()) {
       return NextResponse.json({ error: 'Content is required and must be a string.' }, { status: 400 });
@@ -67,6 +73,7 @@ export async function POST(req: Request) {
 
     // Optional fields: if not provided or not the right type, set to null
     const post = {
+      user_id,
       content,
       domain: typeof domain === 'string' ? domain : null,
       avg_rating: typeof avg_rating === 'number' ? avg_rating : null,
@@ -85,10 +92,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Insert failed' }, { status: 500 });
     }
 
-    return NextResponse.json(
-      { success: true, post: Array.isArray(data) ? data[0] : data },
-      { status: 201 }
-    );
+    return NextResponse.json({ success: true, post: data }, { status: 201 });
   } catch (err) {
     console.error('Unexpected error inserting community post:', err);
     return NextResponse.json({ error: 'Insert failed' }, { status: 500 });
