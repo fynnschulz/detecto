@@ -12,6 +12,7 @@ import PostCard from '@/app/components/community/PostCard';
 import EmptyState from '@/app/components/community/EmptyState';
 import CreatePostModal from '@/app/components/community/CreatePostModal';
 import { CATEGORY_LABELS, getPostCategory, normalizeDomain, type CategoryKey } from '@/app/lib/community';
+import { useAuth } from "@/app/providers";
 
 // Local fallback type (ensure this matches your DB schema)
 export type Post = {
@@ -62,6 +63,7 @@ export default function CommunityPage() {
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [authChecked, setAuthChecked] = useState(false);
   const [sessionUser, setSessionUser] = useState<any>(null);
+  const { isAuthReady, session } = useAuth();
   const usernameHook = useUsername();
   const isLoggedIn = !!sessionUser;
   const displayName =
@@ -71,6 +73,7 @@ export default function CommunityPage() {
 
   useEffect(() => {
     let active = true;
+    if (!isAuthReady) return;
     async function load() {
       setLoading(true);
       setError(null);
@@ -150,47 +153,35 @@ export default function CommunityPage() {
     load();
     // Optional: Realtime (kann später ergänzt werden)
     return () => { active = false; };
-  }, []);
+  }, [isAuthReady]);
 
   useEffect(() => {
-    let isMounted = true;
-    supabase.auth.getSession().then(({ data }) => {
-      if (!isMounted) return;
-      setSessionUser(data.session?.user ?? null);
-      const hideAuthModal = typeof window !== 'undefined' ? localStorage.getItem("hideAuthModal") : null;
-      const skipOnce = typeof window !== 'undefined' ? localStorage.getItem("skipLoginModalOnce") : null;
+    // Mirror provider auth state locally for UI logic
+    setSessionUser(session?.user ?? null);
 
-      if (!data.session) {
-        if (skipOnce) {
-          setTimeout(() => {
-            try { localStorage.removeItem("skipLoginModalOnce"); } catch {}
-          }, 5000);
-        } else if (!hideAuthModal) {
-          setShowAuthModal(true);
-        }
+    if (!isAuthReady) return;
+
+    const hideAuthModal = typeof window !== 'undefined' ? localStorage.getItem("hideAuthModal") : null;
+    const skipOnce = typeof window !== 'undefined' ? localStorage.getItem("skipLoginModalOnce") : null;
+
+    if (!session) {
+      if (skipOnce) {
+        setTimeout(() => {
+          try { localStorage.removeItem("skipLoginModalOnce"); } catch {}
+        }, 5000);
+      } else if (!hideAuthModal) {
+        setShowAuthModal(true);
       }
-      setAuthChecked(true);
-    });
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (!isMounted) return;
-      if (session) {
-        setShowAuthModal(false);
-        setSessionUser(session.user);
-        try {
-          localStorage.setItem("hideAuthModal", "true");
-          localStorage.removeItem("skipLoginModalOnce");
-        } catch {}
-      } else {
-        setSessionUser(null);
-        try { localStorage.removeItem("hideAuthModal"); } catch {}
-      }
-      setAuthChecked(true);
-    });
-    return () => {
-      isMounted = false;
-      listener?.subscription?.unsubscribe();
-    };
-  }, []);
+    } else {
+      setShowAuthModal(false);
+      try {
+        localStorage.setItem("hideAuthModal", "true");
+        localStorage.removeItem("skipLoginModalOnce");
+      } catch {}
+    }
+
+    setAuthChecked(true);
+  }, [isAuthReady, session]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
