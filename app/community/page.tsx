@@ -291,8 +291,10 @@ export default function CommunityPage() {
           <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-white/20 blur-3xl opacity-20" />
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 relative">
             <div>
-              <h1 className="text-3xl font-semibold tracking-tight">Community</h1>
-              <p className="mt-1 opacity-80">
+              <h1 className="text-4xl md:text-5xl font-semibold leading-tight tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-white/90 to-white/60 drop-shadow-[0_1px_1px_rgba(0,0,0,0.25)]">
+                Community
+              </h1>
+              <p className="mt-2 text-sm md:text-base opacity-80 max-w-2xl">
                 Teile deine Erfahrungen zu Webseiten &amp; Services. Hilf anderen, Risiken besser einzuschätzen.
               </p>
             </div>
