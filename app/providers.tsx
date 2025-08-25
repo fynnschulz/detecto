@@ -38,11 +38,18 @@ export default function Providers({
   // Reconcile session on mount and subscribe to auth changes
   useEffect(() => {
     let alive = true;
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (!alive) return;
-      setSession(session ?? null);
-      setIsAuthReady(true);
-    });
+    console.debug("SUPABASE_URL", process.env.NEXT_PUBLIC_SUPABASE_URL);
+    console.debug("Anon key present?", !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+    supabase.auth.getSession()
+      .then(({ data: { session } }) => {
+        if (!alive) return;
+        setSession(session ?? null);
+        setIsAuthReady(true);
+      })
+      .catch((err) => {
+        console.error("Error while fetching session:", err);
+        setIsAuthReady(true);
+      });
     const { data: sub } = supabase.auth.onAuthStateChange((_evt, s) => setSession(s ?? null));
     return () => {
       alive = false;

@@ -5,7 +5,7 @@
 "use client";
 
 import { createBrowserClient } from "@supabase/ssr";
-import type { SupabaseClient } from "@supabase/supabase-js";
+import { type SupabaseClient } from "@supabase/supabase-js";
 
 let _client: SupabaseClient | null = null;
 
@@ -14,7 +14,12 @@ let _client: SupabaseClient | null = null;
  * Uses persistent session storage and auto token refresh under the hood.
  */
 export function getSupabaseClient(): SupabaseClient {
-  if (_client) return _client;
+  if (_client) {
+    console.debug("Reusing existing Supabase client");
+    return _client;
+  }
+  console.debug("Creating Supabase client with URL:", process.env.NEXT_PUBLIC_SUPABASE_URL);
+  console.debug("Anon key present?", !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
   _client = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
