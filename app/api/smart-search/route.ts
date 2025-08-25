@@ -53,9 +53,8 @@ export async function POST(req: NextRequest) {
   - Formuliere das abschließende Urteil bitte **kurz und einfach verständlich**, ohne Fachchinesisch. Maximal wenige Sätze, klare Alltagssprache.
 
   Sprachstil für das **Urteil** (nur der Schlussabsatz):
-  - Schreibe 2–3 kurze Sätze in Alltagssprache (Niveau B1). Max. 300 Zeichen.
+  - Schreibe 5-10 kurze Sätze in Alltagssprache (Niveau B1). Max. 300 Zeichen.
   - **Vermeide Fachbegriffe** wie: DSGVO, Auftragsverarbeitung, berechtigtes Interesse, personenbezogene Daten, Drittlandtransfer, Profiling, Third-Party, Retention, Consent-Banner, Security-Header, HSTS, CSP.
-  - Verwende stattdessen einfache Wörter: "Regeln zum Datenschutz", "Dienstleister", "eigene Zwecke des Anbieters", "deine Daten", "Übertragung ins Ausland", "Profilbildung", "andere Anbieter", "Speicherdauer", "Zustimmung/Abmelden", "Sicherheits-Einstellungen", "sichere Verbindung".
   - Wenn ein Fachwort unbedingt nötig ist, setze **eine** kurze Erklärung in Klammern dahinter, z. B. "Profilbildung (es wird ein Nutzungsprofil erstellt)".
   - Keine Schachtelsätze, keine Passivketten, kein Behördendeutsch.
 
