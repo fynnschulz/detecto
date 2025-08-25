@@ -45,6 +45,20 @@ export async function POST(req: NextRequest) {
   - HTTPS erreichbar
   - thematisch passend zur Suchanfrage
 
+  Wichtige Regeln:
+  - Nenne konkrete Evidenz (z. B. "CSP fehlt", "externe Skripte: gtm, hotjar", "Kontaktformular mit E-Mail, keine Passwörter", "Policy nennt keine Rechtsgrundlagen").
+  - Keine vagen Phrasen. Vermeide Spekulationen; wenn etwas nicht belegt ist, markiere es als **„Indizien, unsicher“**.
+  - **Nicht** kleinliche Abwertung, wenn nur eine einfache Kontaktseite ohne Tracking vorliegt.
+  - Hohe Risiken nur bei sensiblen Daten, aggressivem Tracking oder täuschenden Mustern.
+  - Formuliere das abschließende Urteil bitte **kurz und einfach verständlich**, ohne Fachchinesisch. Maximal wenige Sätze, klare Alltagssprache.
+
+  Sprachstil für das **Urteil** (nur der Schlussabsatz):
+  - Schreibe 2–3 kurze Sätze in Alltagssprache (Niveau B1). Max. 300 Zeichen.
+  - **Vermeide Fachbegriffe** wie: DSGVO, Auftragsverarbeitung, berechtigtes Interesse, personenbezogene Daten, Drittlandtransfer, Profiling, Third-Party, Retention, Consent-Banner, Security-Header, HSTS, CSP.
+  - Verwende stattdessen einfache Wörter: "Regeln zum Datenschutz", "Dienstleister", "eigene Zwecke des Anbieters", "deine Daten", "Übertragung ins Ausland", "Profilbildung", "andere Anbieter", "Speicherdauer", "Zustimmung/Abmelden", "Sicherheits-Einstellungen", "sichere Verbindung".
+  - Wenn ein Fachwort unbedingt nötig ist, setze **eine** kurze Erklärung in Klammern dahinter, z. B. "Profilbildung (es wird ein Nutzungsprofil erstellt)".
+  - Keine Schachtelsätze, keine Passivketten, kein Behördendeutsch.
+
   Gib exakt dieses JSON zurück (ohne Vorwort, ohne Erklärung, ohne Markdown):
 
   [
