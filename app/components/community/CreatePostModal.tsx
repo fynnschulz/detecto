@@ -234,34 +234,23 @@ export default function CreatePostModal({
 
       const category = categorizeDomain(domain);
 
-      const { error: insertError } = await supabase.from('community_posts').insert({
-        user_id: user.id,
-        domain,
-        content: content.trim(),
-        rating_seriositaet: serio,
-        rating_transparenz: transp,
-        rating_kundenerfahrung: kunde,
-        category,
+      const res = await fetch("/api/community/posts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          user_id: user.id,
+          domain,
+          content: content.trim(),
+          rating_seriositaet: serio,
+          rating_transparenz: transp,
+          rating_kundenerfahrung: kunde,
+          category,
+        }),
       });
 
-      if (insertError) {
-        if (
-          insertError.code === '42703' ||
-          (String(insertError.message || '').toLowerCase().includes('column') &&
-            String(insertError.message || '').toLowerCase().includes('category'))
-        ) {
-          const { error: e2 } = await supabase.from('community_posts').insert({
-            user_id: user.id,
-            domain,
-            content: content.trim(),
-            rating_seriositaet: serio,
-            rating_transparenz: transp,
-            rating_kundenerfahrung: kunde,
-          });
-          if (e2) throw e2;
-        } else {
-          throw insertError;
-        }
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.error || "Insert failed");
       }
 
       onCreated();
