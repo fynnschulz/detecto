@@ -14,6 +14,7 @@ import EmptyState from '@/app/components/community/EmptyState';
 import CreatePostModal from '@/app/components/community/CreatePostModal';
 import { CATEGORY_LABELS, getPostCategory, normalizeDomain, type CategoryKey } from '@/app/lib/community';
 import { useAuth } from "@/app/providers";
+import { getCommunityPosts as fetchCommunityPosts, type Post as ApiPost } from '@/app/lib/community';
 
 // Local fallback type (ensure this matches your DB schema)
 export type Post = {
@@ -75,84 +76,69 @@ export default function CommunityPage() {
   useEffect(() => {
     let active = true;
     if (!isAuthReady) return;
+
     async function load() {
       setLoading(true);
       setError(null);
-      let data: any = null;
-      let errObj: any = null;
+
+      let loaded: ApiPost[] = [];
       try {
-        // Primary select with explicit columns
-        const resp = await supabase
-          .from('community_posts')
-          .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, category, created_at')
-          .order('created_at', { ascending: false });
-        data = resp.data;
-        errObj = resp.error;
-
-        // Fallback if category column is missing
-        if (errObj && (errObj.code === '42703' || String(errObj.message || errObj).toLowerCase().includes('column') && String(errObj.message || errObj).toLowerCase().includes('category'))) {
-          const resp2 = await supabase
-            .from('community_posts')
-            .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
-            .order('created_at', { ascending: false });
-          data = resp2.data;
-          errObj = resp2.error;
-        }
-
-        // Ultimate fallback: select * (in case of unexpected column schema)
-        if (errObj) {
-          const resp3 = await supabase
-            .from('community_posts')
-            .select('*')
-            .order('created_at', { ascending: false });
-          if (!resp3.error) {
-            data = resp3.data;
-            errObj = null;
-          }
-        }
-
-        if (errObj) {
-          if (active) setError(errObj.message ?? 'Fehler beim Laden der Beiträge.');
-          if (active) setPosts([]);
-          return;
-        }
-
-        const loaded = (data as Post[]) || [];
-        if (active) setPosts(loaded);
-
-        // Load author names (best-effort)
-        try {
-          const ids = Array.from(new Set(loaded.map(p => p.user_id))).filter(Boolean);
-          if (ids.length) {
-            const { data: profs, error: perr } = await supabase
-              .from('profiles')
-              .select('id, username, display_name, name')
-              .in('id', ids);
-            const map: Record<string, string> = {};
-            if (!perr && profs) {
-              for (const pr of profs as any[]) {
-                map[pr.id] = pr.display_name || pr.username || pr.name || '';
-              }
-            }
-            for (const id of ids) if (!map[id]) map[id] = `user-${id.slice(0, 6)}`;
-            if (active) setAuthorNames(map);
-          }
-        } catch {
-          // ignore profile errors
-        }
+        loaded = await fetchCommunityPosts();
       } catch (e: any) {
-        if (active) setError(e?.message || 'Unbekannter Fehler beim Laden.');
-        if (active) setPosts([]);
-      } finally {
-        if (active) setLoading(false);
+        if (active) {
+          setError(e?.message || 'Fehler beim Laden der Beiträge.');
+          setPosts([]);
+          setLoading(false);
+        }
+        return;
       }
+
+      // Map API posts → local Post shape
+      const mapped: Post[] = (loaded || []).map((p: any) => ({
+        id: String(p.id),
+        user_id: String(p.user_id || p.author_id || ''),
+        domain: typeof p.domain === 'string' ? p.domain : '',
+        content: typeof p.content === 'string' ? p.content : '',
+        avg_rating: typeof p.avg_rating === 'number' ? p.avg_rating : 0,
+        rating_seriositaet: typeof p.rating_seriositaet === 'number' ? p.rating_seriositaet : 0,
+        rating_transparenz: typeof p.rating_transparenz === 'number' ? p.rating_transparenz : 0,
+        rating_kundenerfahrung: typeof p.rating_kundenerfahrung === 'number' ? p.rating_kundenerfahrung : 0,
+        category: (p as any).category as CategoryKey | undefined,
+        created_at: typeof p.created_at === 'string' ? p.created_at : new Date().toISOString(),
+      }));
+
+      if (active) setPosts(mapped);
+
+      // Best-effort: Autoren-Namen aus profiles laden
+      try {
+        const ids = Array.from(new Set(mapped.map(p => p.user_id))).filter(Boolean);
+        if (ids.length) {
+          const { data: profs, error: perr } = await supabase
+            .from('profiles')
+            .select('id, username, display_name, name')
+            .in('id', ids);
+          const map: Record<string, string> = {};
+          if (!perr && profs) {
+            for (const pr of profs as any[]) {
+              map[pr.id] = pr.display_name || pr.username || pr.name || '';
+            }
+          }
+          for (const id of ids) if (!map[id]) map[id] = `user-${String(id).slice(0, 6)}`;
+          if (active) setAuthorNames(map);
+        }
+      } catch {
+        // ignore profile errors
+      }
+
+      if (active) setLoading(false);
     }
+
     // Load current user id for own post actions
     supabase.auth.getUser().then(({ data }) => {
       setCurrentUserId(data?.user?.id ?? null);
     });
+
     load();
-    // Optional: Realtime (kann später ergänzt werden)
     return () => { active = false; };
   }, [isAuthReady]);
 
@@ -209,44 +195,26 @@ export default function CommunityPage() {
 
   const refresh = async () => {
     setLoading(true);
-    let data: any = null;
-    let error: any = null;
+    setError(null);
     try {
-      const resp = await supabase
-        .from('community_posts')
-        .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, category, created_at')
-        .order('created_at', { ascending: false });
-      data = resp.data;
-      error = resp.error;
-    } catch (e: any) {
-      error = e;
-    }
-    if (error && (error.code === '42703' || String(error.message || error).toLowerCase().includes('column') && String(error.message || error).toLowerCase().includes('category'))) {
-      const resp2 = await supabase
-        .from('community_posts')
-        .select('id, user_id, domain, content, avg_rating, rating_seriositaet, rating_transparenz, rating_kundenerfahrung, created_at')
-        .order('created_at', { ascending: false });
-      data = resp2.data;
-      // no need to set error here
-      error = null;
-    }
-    // Ultimate fallback: select * (in case of unexpected column schema)
-    if (error) {
-      const resp3 = await supabase
-        .from('community_posts')
-        .select('*')
-        .order('created_at', { ascending: false });
-      if (!resp3.error) {
-        data = resp3.data;
-        error = null;
-      }
-    }
-    if (!error) {
-      setError(null);
-      const loaded = (data as Post[]) || [];
-      setPosts(loaded);
+      const loaded = await fetchCommunityPosts();
+      const mapped: Post[] = (loaded || []).map((p: any) => ({
+        id: String(p.id),
+        user_id: String(p.user_id || p.author_id || ''),
+        domain: typeof p.domain === 'string' ? p.domain : '',
+        content: typeof p.content === 'string' ? p.content : '',
+        avg_rating: typeof p.avg_rating === 'number' ? p.avg_rating : 0,
+        rating_seriositaet: typeof p.rating_seriositaet === 'number' ? p.rating_seriositaet : 0,
+        rating_transparenz: typeof p.rating_transparenz === 'number' ? p.rating_transparenz : 0,
+        rating_kundenerfahrung: typeof p.rating_kundenerfahrung === 'number' ? p.rating_kundenerfahrung : 0,
+        category: (p as any).category as CategoryKey | undefined,
+        created_at: typeof p.created_at === 'string' ? p.created_at : new Date().toISOString(),
+      }));
+      setPosts(mapped);
+
+      // refresh author names
       try {
-        const ids = Array.from(new Set(loaded.map(p => p.user_id))).filter(Boolean);
+        const ids = Array.from(new Set(mapped.map(p => p.user_id))).filter(Boolean);
         if (ids.length) {
           const { data: profs, error: perr } = await supabase
             .from('profiles')
@@ -258,14 +226,13 @@ export default function CommunityPage() {
               map[pr.id] = pr.display_name || pr.username || pr.name || '';
             }
           }
-          for (const id of ids) if (!map[id]) map[id] = `user-${id.slice(0, 6)}`;
+          for (const id of ids) if (!map[id]) map[id] = `user-${String(id).slice(0, 6)}`;
           setAuthorNames(map);
         }
-      } catch {
-        // ignore
-      }
+      } catch {}
+    } catch (e: any) {
+      setError(e?.message || 'Fehler beim Laden der Beiträge.');
     }
-    // else noop
     setLoading(false);
   };
 

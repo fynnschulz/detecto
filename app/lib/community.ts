@@ -73,3 +73,115 @@ export function normalizeDomain(input: string) {
   s = s.replace(/^www\./, '');
   return s;
 }
+/**
+ * Type representing a community post.
+ */
+export type Post = {
+  id: string;
+  title: string;
+  content?: string;
+  category?: CategoryKey | string;
+  created_at: string;
+  author_id?: string | null;
+  author_name?: string | null;
+};
+
+/**
+ * Internal helper to robustly fetch with timeout and retries.
+ * Always sets cache: 'no-store'.
+ * @param url The URL to fetch.
+ * @param opts Fetch options, with optional timeoutMs and retries.
+ * @returns The fetch Response.
+ */
+async function robustFetch(
+  url: string,
+  opts: RequestInit & { timeoutMs?: number; retries?: number } = {}
+): Promise<Response> {
+  const {
+    timeoutMs = 8000,
+    retries = 2,
+    ...fetchOpts
+  } = opts;
+  let attempt = 0;
+  let lastError: any = null;
+  for (; attempt <= retries; ++attempt) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const resp = await fetch(url, {
+        ...fetchOpts,
+        cache: 'no-store',
+        signal: controller.signal,
+      });
+      clearTimeout(timeout);
+      if (!resp.ok) {
+        lastError = new Error(`HTTP error: ${resp.status}`);
+        // Only retry on network errors, not on HTTP error? Let's retry on all failures.
+      } else {
+        return resp;
+      }
+    } catch (err) {
+      lastError = err;
+    } finally {
+      clearTimeout(timeout);
+    }
+    // Backoff before retrying, except after last attempt
+    if (attempt < retries) {
+      const backoffMs = 400 * (attempt + 1);
+      await new Promise((res) => setTimeout(res, backoffMs));
+    }
+  }
+  throw lastError ?? new Error('robustFetch failed');
+}
+
+/**
+ * Fetches community posts from the API and returns validated Post objects.
+ * Accepts both { posts: [...] } and [...] response shapes.
+ * Skips invalid items, coerces fields, and defaults missing values.
+ * @returns Promise<Post[]>
+ */
+export async function getCommunityPosts(): Promise<Post[]> {
+  const resp = await robustFetch('/api/community/posts', { timeoutMs: 10000, retries: 3 });
+  let data: unknown;
+  try {
+    data = await resp.json();
+  } catch {
+    return [];
+  }
+  let arr: any[] = [];
+  if (Array.isArray(data)) {
+    arr = data;
+  } else if (data && typeof data === 'object' && Array.isArray((data as any).posts)) {
+    arr = (data as any).posts;
+  }
+  const posts: Post[] = [];
+  for (const item of arr) {
+    if (!item || typeof item !== 'object') continue;
+    const id = typeof item.id === 'string' ? item.id : undefined;
+    const title = typeof item.title === 'string' ? item.title : undefined;
+    if (!id || !title) continue;
+    posts.push({
+      id,
+      title,
+      content: typeof item.content === 'string' ? item.content : '',
+      category:
+        typeof item.category === 'string'
+          ? item.category
+          : 'other',
+      created_at: typeof item.created_at === 'string' ? item.created_at : '',
+      author_id:
+        typeof item.author_id === 'string'
+          ? item.author_id
+          : item.author_id === null
+          ? null
+          : undefined,
+      author_name:
+        typeof item.author_name === 'string'
+          ? item.author_name
+          : item.author_name === null
+          ? null
+          : undefined,
+    });
+  }
+  return posts;
+}
