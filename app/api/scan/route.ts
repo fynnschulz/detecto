@@ -263,6 +263,7 @@ function buildPrompt(url: string, evidence: any, headMeta: any, policyEvidence: 
   - Keine vagen Phrasen. Vermeide Spekulationen; wenn etwas nicht belegt ist, markiere es als **„Indizien, unsicher“**.
   - **Nicht** kleinliche Abwertung, wenn nur eine einfache Kontaktseite ohne Tracking vorliegt.
   - Hohe Risiken nur bei sensiblen Daten, aggressivem Tracking oder täuschenden Mustern.
+  - Formuliere das abschließende Urteil bitte **kurz und einfach verständlich**, ohne Fachchinesisch. Maximal wenige Sätze, klare Alltagssprache.
   `;
 }
 
