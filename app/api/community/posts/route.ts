@@ -55,7 +55,6 @@ export async function POST(req: Request) {
       user_id,
       content,
       domain,
-      avg_rating,
       rating_seriositaet,
       rating_transparenz,
       rating_kundenerfahrung,
@@ -76,10 +75,9 @@ export async function POST(req: Request) {
       user_id,
       content,
       domain: typeof domain === 'string' ? domain : null,
-      avg_rating: typeof avg_rating === 'number' ? avg_rating : null,
-      rating_seriositaet: typeof rating_seriositaet === 'number' ? rating_seriositaet : null,
-      rating_transparenz: typeof rating_transparenz === 'number' ? rating_transparenz : null,
-      rating_kundenerfahrung: typeof rating_kundenerfahrung === 'number' ? rating_kundenerfahrung : null,
+      rating_seriositaet: typeof rating_seriositaet === 'number' ? Math.round(rating_seriositaet) : null,
+      rating_transparenz: typeof rating_transparenz === 'number' ? Math.round(rating_transparenz) : null,
+      rating_kundenerfahrung: typeof rating_kundenerfahrung === 'number' ? Math.round(rating_kundenerfahrung) : null,
     };
 
     const { data, error } = await supabase
