@@ -3,11 +3,11 @@
 // app/providers.tsx
 "use client";
 
-import { useEffect, useMemo, useRef, useState, createContext, useContext } from "react";
+import { useEffect, useMemo, useState, createContext, useContext } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Session } from "@supabase/supabase-js";
-import { getSupabaseClient } from "@/app/lib/supabaseClient";
+import { supabase } from "@/app/lib/supabaseClient";
 
 /**
  * Lightweight Auth context to expose `session` + `isAuthReady` across the app
@@ -21,18 +21,9 @@ import { getSupabaseClient } from "@/app/lib/supabaseClient";
   return ctx;
  }
 
-export default function Providers({
-  children,
-  initialSession,
-}: {
-  children: React.ReactNode;
-  initialSession: Session | null;
-}) {
+export default function Providers({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const supabaseRef = useRef(getSupabaseClient());
-  const supabase = supabaseRef.current;
-
-  const [session, setSession] = useState<Session | null>(initialSession);
+  const [session, setSession] = useState<Session | null>(null);
   const [isAuthReady, setIsAuthReady] = useState(false);
 
   // Reconcile session on mount and subscribe to auth changes
@@ -55,7 +46,7 @@ export default function Providers({
       alive = false;
       sub.subscription.unsubscribe();
     };
-  }, [supabase]);
+  }, []);
 
   // Optional: prevent hydration warnings by deferring animated tree until mounted
   const [mounted, setMounted] = useState(false);

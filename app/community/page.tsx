@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useMemo, useState } from 'react';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { supabase } from '@/app/lib/supabaseClient';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import AuthModal from '@/app/components/AuthModal';
@@ -42,7 +42,6 @@ function SkeletonCard() {
 }
 
 export default function CommunityPage() {
-  const supabase = createClientComponentClient();
   const [posts, setPosts] = useState<Post[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -151,7 +150,7 @@ export default function CommunityPage() {
     load();
     // Optional: Realtime (kann später ergänzt werden)
     return () => { active = false; };
-  }, [supabase]);
+  }, []);
 
   useEffect(() => {
     let isMounted = true;
@@ -191,7 +190,7 @@ export default function CommunityPage() {
       isMounted = false;
       listener?.subscription?.unsubscribe();
     };
-  }, [supabase]);
+  }, []);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();

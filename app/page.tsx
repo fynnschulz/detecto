@@ -3,7 +3,9 @@
 "use client";
 import AuthModal from "@/app/components/AuthModal.tsx";
 import { useEffect, useState, useRef } from "react";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+
+import { supabase } from "@/app/lib/supabaseClient";
+import { useAuth } from "@/app/providers";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -33,11 +35,10 @@ export default function Home() {
   const [showGuardianMore, setShowGuardianMore] = useState(false);
   // const [showLoginModal, setShowLoginModal] = useState(false);
   // useSession von Supabase Auth Helpers
-  const session = useSession();
+  const { session, isAuthReady } = useAuth();
   const isLoggedIn = !!session;
   const [showProfileMenu, setShowProfileMenu] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
-  const supabase = useSupabaseClient();
   const [authChecked, setAuthChecked] = useState(false);
   const username = useUsername();
   const pathname = usePathname();
@@ -121,7 +122,7 @@ export default function Home() {
       isMounted = false;
       listener?.subscription?.unsubscribe();
     };
-  }, [supabase]);
+  }, []);
 
 
 const fetchAlternatives = async () => {

@@ -2,7 +2,6 @@
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import Providers from "@/app/providers";
-import { createClient } from "@/app/lib/supabaseServer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,16 +13,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  // Server-side Supabase: read session from cookies to avoid auth flash
-  const supabase = await createClient();
-  const { data: { session } } = await supabase.auth.getSession();
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased bg-black text-white">
-        {/* Providers is a client component that restores animations and sets up the browser Supabase client */}
-        <Providers initialSession={session}>{children}</Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

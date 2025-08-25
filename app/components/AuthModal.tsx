@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { supabase } from "@/app/lib/supabaseClient";
 import LoginForm from "./LoginForm";
 import RegisterForm from "@/app/register/page";
 import Link from "next/link";
@@ -11,7 +11,6 @@ export default function AuthModal() {
   const [show, setShow] = useState(false);
   const [authMode, setAuthMode] = useState<"login" | "register">("login");
 
-  const supabase = useSupabaseClient();
 
   useEffect(() => {
     let isMounted = true;
@@ -64,7 +63,7 @@ export default function AuthModal() {
       window.removeEventListener("auth:openModal", openHandler);
       window.removeEventListener("auth:closeModal", closeHandler);
     };
-  }, [supabase]);
+  }, []);
 
   if (!show) return null;
 

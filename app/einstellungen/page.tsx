@@ -3,7 +3,7 @@
 import { useEffect, useState, useTransition } from "react";
 import type { ReactNode, FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { supabase } from "@/app/lib/supabaseClient";
 
 // ---------- Backdrop (matches hero)
 function HeroBackdrop() {
@@ -63,7 +63,6 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean
 
 // ---------- Page
 export default function EinstellungenPage() {
-  const supabase = createClientComponentClient();
   const router = useRouter();
 
   const [loading, setLoading] = useState(true);
@@ -112,7 +111,7 @@ export default function EinstellungenPage() {
       }
     })();
     return () => { mounted = false; };
-  }, [supabase, router]);
+  }, []);
 
   // Save (metadata-first; profiles.username best-effort, no crash if column missing)
   function handleSave(e?: FormEvent) {

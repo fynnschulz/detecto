@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { supabase } from '@/app/lib/supabaseClient';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // ---- Types & category helpers (local + minimal, preserve behavior) ----
@@ -199,7 +199,6 @@ export default function CreatePostModal({
   onClose: () => void;
   onCreated: () => void;
 }) {
-  const supabase = createClientComponentClient();
 
   const [domainInput, setDomainInput] = useState('');
   const domain = useMemo(() => normalizeDomain(domainInput), [domainInput]);
