@@ -13,6 +13,7 @@ export default function SearchPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
   const [infoExpanded, setInfoExpanded] = useState(false);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const pathname = usePathname();
   const navItems = [
@@ -23,8 +24,13 @@ export default function SearchPage() {
   ];
 
   const handleSearch = async () => {
-    if (!searchQuery.trim()) return;
+    if (!searchQuery.trim()) {
+      setHasSearched(false);
+      setSearchResults([]);
+      return;
+    }
 
+    setHasSearched(true);
     setIsLoading(true);
 
     try {
@@ -129,7 +135,14 @@ export default function SearchPage() {
             <input
               type="text"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                const v = e.target.value;
+                setSearchQuery(v);
+                if (v.trim().length === 0) {
+                  setHasSearched(false);
+                  setSearchResults([]);
+                }
+              }}
               onKeyDown={(e) => {
                 if (e.key === "Enter") handleSearch();
               }}
@@ -173,7 +186,7 @@ export default function SearchPage() {
 
             {/* Ergebnisse */}
             <div className="mt-8 space-y-6">
-              {searchQuery.length > 0 && searchResults.length === 0 && !isLoading && (
+              {hasSearched && !isLoading && searchResults.length === 0 && (
                 <p className="text-gray-400 text-center">Keine passenden Webseiten gefunden.</p>
               )}
               {searchResults.map((result, index) => (
