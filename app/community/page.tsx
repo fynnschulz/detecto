@@ -1,4 +1,5 @@
 'use client';
+// no-op change for deploy
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { supabase } from '@/app/lib/supabaseClient';
