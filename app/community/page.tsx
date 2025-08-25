@@ -9,7 +9,9 @@ import AuthModal from '@/app/components/AuthModal';
 const TypedAuthModal = AuthModal as any;
 import { useUsername } from '@/app/lib/useUsername';
 
-import PostCard from '@/app/components/community/PostCard';
+import * as PostCardModule from '@/app/components/community/PostCard';
+type PostCardComponent = React.ComponentType<any>;
+const PostCard = ((PostCardModule as any).default ?? (PostCardModule as any).PostCard) as PostCardComponent;
 import EmptyState from '@/app/components/community/EmptyState';
 import CreatePostModal from '@/app/components/community/CreatePostModal';
 import { CATEGORY_LABELS, getPostCategory, normalizeDomain, type CategoryKey } from '@/app/lib/community';
