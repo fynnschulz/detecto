@@ -4,6 +4,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { supabase } from '@/app/lib/supabaseClient';
+import { useAuth } from '@/app/providers';
 
 // --- Types & category helpers (extracted 1:1, preserving behavior) ---
 export type CategoryKey =
@@ -154,6 +156,10 @@ export default function PostCard({
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
 
+  const { session, isAuthReady } = useAuth();
+  const [liked, setLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState<number | null>(null);
+
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
       if (!menuRef.current) return;
@@ -162,6 +168,40 @@ export default function PostCard({
     if (menuOpen) document.addEventListener('mousedown', onDocClick);
     return () => document.removeEventListener('mousedown', onDocClick);
   }, [menuOpen]);
+
+  useEffect(() => {
+    if (!isAuthReady) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const { count } = await supabase
+          .from('post_likes')
+          .select('*', { count: 'exact', head: true })
+          .eq('post_id', post.id);
+        if (!cancelled) setLikeCount(typeof count === 'number' ? count : null);
+      } catch (e) {
+        // Table evtl. noch nicht vorhanden – Feature leise deaktivieren
+        if (!cancelled) setLikeCount(null);
+      }
+
+      try {
+        if (session?.user?.id) {
+          const { data: mine } = await supabase
+            .from('post_likes')
+            .select('user_id')
+            .eq('post_id', post.id)
+            .eq('user_id', session.user.id)
+            .maybeSingle();
+          if (!cancelled) setLiked(!!mine);
+        } else {
+          if (!cancelled) setLiked(false);
+        }
+      } catch {}
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [isAuthReady, post.id, session?.user?.id]);
 
   return (
     <motion.div
@@ -247,7 +287,139 @@ export default function PostCard({
         <StarRow value={Number(post.avg_rating ?? 0)} />
       </div>
 
-      <p className="mt-3 text-sm opacity-90 line-clamp-4">{post.content}</p>
+  <p className="mt-3 text-sm opacity-90 line-clamp-4">{post.content}</p>
+
+  {/* Actions: Like + Kommentare-Link */}
+  <div className="mt-4 flex items-center gap-3">
+    <button
+      onClick={async () => {
+        if (!session) return alert('Bitte einloggen, um zu liken.');
+        try {
+          // Toggle like
+          const { data: mine } = await supabase
+            .from('post_likes')
+            .select('user_id')
+            .eq('post_id', post.id)
+            .eq('user_id', session.user.id)
+            .maybeSingle();
+
+          if (mine) {
+            await supabase
+              .from('post_likes')
+              .delete()
+              .eq('post_id', post.id)
+              .eq('user_id', session.user.id);
+            setLiked(false);
+            setLikeCount((c) => (typeof c === 'number' ? Math.max(0, c - 1) : c));
+          } else {
+            await supabase
+              .from('post_likes')
+              .insert({ post_id: post.id, user_id: session.user.id });
+            setLiked(true);
+            setLikeCount((c) => (typeof c === 'number' ? c + 1 : c));
+          }
+        } catch (e) {
+          // leise scheitern, falls Tabelle noch fehlt
+        }
+      }}
+      className={`rounded-md border px-3 py-1.5 text-sm transition ${liked ? 'border-transparent text-white bg-gradient-to-r from-indigo-600/70 to-fuchsia-600/70' : 'border-zinc-700 hover:bg-zinc-800'}`}
+    >
+      {liked ? '♥ Geliked' : '♡ Like'}{typeof likeCount === 'number' ? ` (${likeCount})` : ''}
+    </button>
+
+    <a href={`#comments-${post.id}`} className="text-sm opacity-80 hover:opacity-100">Kommentare</a>
+  </div>
+
+  {/* Inline-Kommentare */}
+  <div id={`comments-${post.id}`} className="mt-4">
+    <CommentsInline postId={post.id} />
+  </div>
     </motion.div>
+  );
+}
+
+function CommentsInline({ postId }: { postId: string }) {
+  const { session, isAuthReady } = useAuth();
+  const [items, setItems] = useState<Array<{ id: string; content: string; created_at: string }>>([]);
+  const [text, setText] = useState('');
+  const [loading, setLoading] = useState(true);
+  const [posting, setPosting] = useState(false);
+
+  async function load() {
+    setLoading(true);
+    try {
+      const { data } = await supabase
+        .from('comments')
+        .select('id, content, created_at')
+        .eq('post_id', postId)
+        .order('created_at', { ascending: true });
+      setItems(data ?? []);
+    } catch (e) {
+      // Tabelle evtl. noch nicht vorhanden → still bleiben
+      setItems([]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    if (!isAuthReady) return;
+    load();
+  }, [isAuthReady, postId]);
+
+  async function submit() {
+    if (!session) return alert('Bitte einloggen, um zu kommentieren.');
+    const value = text.trim();
+    if (!value) return;
+    setPosting(true);
+    try {
+      await supabase.from('comments').insert({ post_id: postId, user_id: session.user.id, content: value });
+      setText('');
+      await load();
+    } catch (e) {
+      // still
+    } finally {
+      setPosting(false);
+    }
+  }
+
+  return (
+    <div className="space-y-3">
+      <div className="rounded-2xl border border-white/10 bg-[#0b1220] p-3">
+        <textarea
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder={session ? 'Schreib einen Kommentar…' : 'Bitte einloggen, um zu kommentieren'}
+          className="w-full rounded-xl border border-white/10 bg-zinc-900 px-3 py-2 outline-none focus:border-indigo-400/60 min-h-[70px]"
+          disabled={!session}
+        />
+        <div className="mt-2 flex items-center gap-2">
+          <button
+            onClick={submit}
+            disabled={!session || posting || !text.trim()}
+            className="ml-auto rounded-lg border border-white/10 bg-gradient-to-r from-indigo-500 via-violet-500 to-fuchsia-500 text-white px-4 py-1.5 disabled:opacity-60 hover:from-indigo-400 hover:via-violet-400 hover:to-fuchsia-400"
+          >
+            Kommentieren
+          </button>
+        </div>
+      </div>
+
+      {loading ? (
+        <div className="text-sm opacity-70">Kommentare werden geladen…</div>
+      ) : items.length === 0 ? (
+        <div className="text-sm opacity-70">Keine Kommentare bisher.</div>
+      ) : (
+        <ul className="space-y-2">
+          {items.map((c) => (
+            <li key={c.id} className="rounded-xl border border-zinc-800 bg-zinc-900 p-3">
+              <div className="text-xs opacity-70 mb-1">
+                {new Date(c.created_at).toLocaleString(undefined, { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' })}
+              </div>
+              <div className="text-sm whitespace-pre-wrap">{c.content}</div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
