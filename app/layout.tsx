@@ -1,14 +1,8 @@
 // app/layout.tsx
-"use client";
-
-import { Geist, Geist_Mono } from "next/font/google";
-import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
 import "./globals.css";
-import { useTranslation } from "react-i18next";
-import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
-import { SessionContextProvider } from "@supabase/auth-helpers-react";
+import { Geist, Geist_Mono } from "next/font/google";
+import Providers from "@/app/providers";
+import { createClient } from "@/app/lib/supbaseServer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,42 +14,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
-function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const pathname = usePathname();
-  const { i18n } = useTranslation();
-  const [isMounted, setIsMounted] = useState(false);
-  const supabaseClientRef = useRef(createBrowserSupabaseClient());
-  const supabaseClient = supabaseClientRef.current;
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Server-side Supabase: read session from cookies to avoid auth flash
+  const supabase = await createClient();
+  const { data: { session } } = await supabase.auth.getSession();
 
   return (
-    <html lang={i18n.language} className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased bg-black text-white">
-        <SessionContextProvider supabaseClient={supabaseClient}>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={pathname}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="min-h-screen"
-            >
-              {isMounted && children}
-            </motion.div>
-          </AnimatePresence>
-        </SessionContextProvider>
+        {/* Providers is a client component that restores animations and sets up the browser Supabase client */}
+        <Providers initialSession={session}>{children}</Providers>
       </body>
     </html>
   );
 }
-
-export default RootLayout;

@@ -1,8 +1,26 @@
+// app/lib/supabaseClient.ts
+// Client-side Supabase instance for Next.js App Router, using @supabase/ssr
+// Marks this module as client-only so it isn't imported during SSR.
 
+"use client";
 
-import { createClient } from '@supabase/supabase-js';
+import { createBrowserClient } from "@supabase/ssr";
+import type { SupabaseClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+let _client: SupabaseClient | null = null;
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+/**
+ * Returns a singleton Supabase browser client.
+ * Uses persistent session storage and auto token refresh under the hood.
+ */
+export function getSupabaseClient(): SupabaseClient {
+  if (_client) return _client;
+  _client = createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
+  return _client;
+}
+
+// Keep backward compatibility for existing imports: `import { supabase } from ".../supabaseClient"`
+export const supabase: SupabaseClient = getSupabaseClient();
