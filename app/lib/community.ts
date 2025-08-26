@@ -1,5 +1,3 @@
-
-
 // Shared community helpers
 export type CategoryKey =
   | 'onlineshop'
@@ -78,12 +76,13 @@ export function normalizeDomain(input: string) {
  */
 export type Post = {
   id: string;
-  title: string;
-  content?: string;
-  category?: CategoryKey | string;
+  user_id: string;
+  domain: string;
+  content: string;
+  rating_seriositaet: number;
+  rating_transparenz: number;
+  rating_kundenerfahrung: number;
   created_at: string;
-  author_id?: string | null;
-  author_name?: string | null;
 };
 
 /**
@@ -157,30 +156,22 @@ export async function getCommunityPosts(): Promise<Post[]> {
   const posts: Post[] = [];
   for (const item of arr) {
     if (!item || typeof item !== 'object') continue;
-    const id = typeof item.id === 'string' ? item.id : undefined;
-    const title = typeof item.title === 'string' ? item.title : undefined;
-    if (!id || !title) continue;
+    const id = typeof (item as any).id === 'string' ? (item as any).id : undefined;
+    if (!id) continue;
+
+    const user_id = typeof (item as any).user_id === 'string' ? (item as any).user_id : '';
+    const domain = typeof (item as any).domain === 'string' ? (item as any).domain : '';
+    const content = typeof (item as any).content === 'string' ? (item as any).content : '';
+
     posts.push({
       id,
-      title,
-      content: typeof item.content === 'string' ? item.content : '',
-      category:
-        typeof item.category === 'string'
-          ? item.category
-          : 'other',
-      created_at: typeof item.created_at === 'string' ? item.created_at : '',
-      author_id:
-        typeof item.author_id === 'string'
-          ? item.author_id
-          : item.author_id === null
-          ? null
-          : undefined,
-      author_name:
-        typeof item.author_name === 'string'
-          ? item.author_name
-          : item.author_name === null
-          ? null
-          : undefined,
+      user_id,
+      domain,
+      content,
+      rating_seriositaet: typeof (item as any).rating_seriositaet === 'number' ? (item as any).rating_seriositaet : 0,
+      rating_transparenz: typeof (item as any).rating_transparenz === 'number' ? (item as any).rating_transparenz : 0,
+      rating_kundenerfahrung: typeof (item as any).rating_kundenerfahrung === 'number' ? (item as any).rating_kundenerfahrung : 0,
+      created_at: typeof (item as any).created_at === 'string' ? (item as any).created_at : '',
     });
   }
   return posts;

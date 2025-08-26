@@ -197,7 +197,7 @@ export default function CreatePostModal({
 }: {
   open: boolean;
   onClose: () => void;
-  onCreated: () => void;
+  onCreated?: () => void;
 }) {
 
   const [domainInput, setDomainInput] = useState('');
@@ -229,10 +229,9 @@ export default function CreatePostModal({
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) {
         setErr('Bitte zuerst einloggen, um einen Beitrag zu posten.');
+        setLoading(false);
         return;
       }
-
-      const category = categorizeDomain(domain);
 
       const res = await fetch("/api/community/posts", {
         method: "POST",
@@ -244,16 +243,18 @@ export default function CreatePostModal({
           rating_seriositaet: serio,
           rating_transparenz: transp,
           rating_kundenerfahrung: kunde,
-          category,
         }),
       });
 
+      const json = await res.json().catch(() => null);
       if (!res.ok) {
-        const errData = await res.json().catch(() => ({}));
-        throw new Error(errData.error || "Insert failed");
+        throw new Error((json && (json.error || json.message)) || 'Insert failed');
+      }
+      if (!json || !json.post || !json.post.id) {
+        throw new Error('Insert ok, aber keine Post-Daten erhalten');
       }
 
-      onCreated();
+      onCreated?.();
       onClose();
       // reset form
       setDomainInput('');

@@ -20,7 +20,7 @@ export async function GET() {
   try {
     const { data, error } = await supabase
       .from('community_posts')
-      .select('id,content,created_at')
+      .select('id,user_id,content,domain,rating_seriositaet,rating_transparenz,rating_kundenerfahrung,created_at')
       .order('created_at', { ascending: false })
       .limit(200);
 
@@ -29,13 +29,16 @@ export async function GET() {
       return NextResponse.json({ error: 'Fetch failed' }, { status: 500 });
     }
 
-    // Minimal validation and coercion for each post
+    // Return all relevant fields for each post
     const posts = Array.isArray(data)
-      ? data.filter((p) =>
-          typeof p?.id === 'string'
-        ).map((p) => ({
+      ? data.map((p: any) => ({
           id: p.id,
+          user_id: p.user_id,
           content: typeof p.content === 'string' ? p.content : '',
+          domain: typeof p.domain === 'string' ? p.domain : '',
+          rating_seriositaet: typeof p.rating_seriositaet === 'number' ? p.rating_seriositaet : 0,
+          rating_transparenz: typeof p.rating_transparenz === 'number' ? p.rating_transparenz : 0,
+          rating_kundenerfahrung: typeof p.rating_kundenerfahrung === 'number' ? p.rating_kundenerfahrung : 0,
           created_at: p.created_at,
         }))
       : [];

@@ -1,39 +1,55 @@
-import { NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+'use client'
 
-const supabase = createClient(
-  process.env.SUPABASE_URL ?? '',
-  process.env.SUPABASE_SERVICE_ROLE_KEY ?? '',
-);
+import React from 'react'
 
-export async function GET() {
-  const { data, error } = await supabase
-    .from('posts')
-    .select(
-      'id,user_id,content,domain,avg_rating,rating_seriositaet,rating_transparenz,rating_kundenerfahrung,created_at',
-    )
-    .order('created_at', { ascending: false })
-    .limit(50);
-
-  if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
-  }
-
-  const posts = (data ?? []).map((p) => ({
-    id: p.id,
-    user_id: typeof p.user_id === 'string' ? p.user_id : '',
-    domain: typeof p.domain === 'string' ? p.domain : '',
-    avg_rating: typeof p.avg_rating === 'number' ? p.avg_rating : 0,
-    rating_seriositaet: typeof p.rating_seriositaet === 'number' ? p.rating_seriositaet : 0,
-    rating_transparenz: typeof p.rating_transparenz === 'number' ? p.rating_transparenz : 0,
-    rating_kundenerfahrung: typeof p.rating_kundenerfahrung === 'number' ? p.rating_kundenerfahrung : 0,
-    content: p.content,
-    created_at: p.created_at,
-  }));
-
-  return NextResponse.json(posts);
+export type CommunityPost = {
+  id: string
+  user_id: string
+  domain: string
+  content: string
+  rating_seriositaet: number
+  rating_transparenz: number
+  rating_kundenerfahrung: number
+  created_at: string
 }
 
-export async function POST(request: Request) {
-  // existing POST handler logic remains unchanged
+function avgRating(p: CommunityPost) {
+  const vals = [p.rating_seriositaet, p.rating_transparenz, p.rating_kundenerfahrung]
+    .map((n) => (typeof n === 'number' ? n : 0))
+    .filter((n) => Number.isFinite(n))
+  if (!vals.length) return 0
+  const s = vals.reduce((a, b) => a + b, 0)
+  return Math.round((s / vals.length) * 10) / 10
+}
+
+function Favicon({ domain }: { domain: string }) {
+  const url = `https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(domain || '')}`
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src={url} alt="" className="h-5 w-5 rounded-sm opacity-90" loading="lazy" decoding="async" />
+}
+
+export default function PostCard({ post }: { post: CommunityPost }) {
+  const a = avgRating(post)
+  return (
+    <article className="rounded-xl border p-4 hover:shadow-sm transition bg-white/60 dark:bg-neutral-900/60">
+      <header className="flex items-center gap-2 mb-2">
+        <Favicon domain={post.domain} />
+        <div className="text-sm font-medium truncate">{post.domain || 'Unbekannte Domain'}</div>
+        <div className="ml-auto text-xs opacity-60">
+          {new Date(post.created_at).toLocaleString()}
+        </div>
+      </header>
+
+      <p className="text-sm leading-relaxed whitespace-pre-wrap">{post.content}</p>
+
+      <footer className="mt-3 flex items-center gap-3 text-xs opacity-80">
+        <span>Ø Bewertung: {a}</span>
+        <span>•</span>
+        <span>S: {post.rating_seriositaet ?? 0}</span>
+        <span>T: {post.rating_transparenz ?? 0}</span>
+        <span>K: {post.rating_kundenerfahrung ?? 0}</span>
+        <span className="ml-auto">User: {post.user_id?.slice(0, 8) || '—'}</span>
+      </footer>
+    </article>
+  )
 }
