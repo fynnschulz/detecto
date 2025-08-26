@@ -250,8 +250,13 @@ export default function CreatePostModal({
       if (!res.ok) {
         throw new Error((json && (json.error || json.message)) || 'Insert failed');
       }
-      if (!json || !json.post || !json.post.id) {
+      if (!json || (!json.post && !json.data)) {
         throw new Error('Insert ok, aber keine Post-Daten erhalten');
+      }
+
+      const newPost = json.post || json.data;
+      if (!newPost.id) {
+        throw new Error('Insert ok, aber keine Post-ID erhalten');
       }
 
       onCreated?.();
