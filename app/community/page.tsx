@@ -262,11 +262,12 @@ export default function CommunityPage() {
     });
 
     if (sortBy === 'newest') {
-      arr = arr.sort((a, b) => +new Date(b.created_at) - +new Date(a.created_at));
+      arr = [...arr].sort((a, b) => +new Date(b.created_at) - +new Date(a.created_at));
     } else if (sortBy === 'oldest') {
-      arr = arr.sort((a, b) => +new Date(a.created_at) - +new Date(b.created_at));
+      arr = [...arr].sort((a, b) => +new Date(a.created_at) - +new Date(b.created_at));
     } else if (sortBy === 'best') {
-      arr = arr.sort((a, b) => Number(b.avg_rating ?? 0) - Number(a.avg_rating ?? 0));
+      const toNum = (v: any) => (typeof v === 'number' ? v : Number.parseFloat(String(v ?? 0)) || 0);
+      arr = [...arr].sort((a, b) => toNum(b.avg_rating) - toNum(a.avg_rating));
     }
     return arr;
   }, [posts, query, onlyDomain, selectedCategory, sortBy]);
