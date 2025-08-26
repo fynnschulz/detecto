@@ -31,20 +31,39 @@ function Favicon({ domain }: { domain: string }) {
 export default function PostCard({ post }: { post: CommunityPost }) {
   const a = avgRating(post)
   return (
-    <article className="w-full max-w-2xl mx-auto rounded-2xl border border-white/10 p-4 bg-gradient-to-br from-sky-500/10 via-blue-500/10 to-indigo-500/10 dark:from-sky-900/30 dark:via-blue-900/30 dark:to-indigo-900/30 backdrop-blur-md hover:shadow-lg hover:shadow-sky-500/5 transition">
-      <header className="flex items-center gap-2 mb-2">
+    <article className="w-full max-w-3xl mx-auto rounded-2xl border border-white/10 p-4 bg-gradient-to-b from-neutral-800/70 via-neutral-800/50 to-neutral-900/70 backdrop-blur-md shadow-[0_10px_30px_-15px_rgba(0,0,0,0.6)] hover:shadow-[0_12px_36px_-12px_rgba(0,0,0,0.7)] transition">
+      <header className="flex items-center gap-2 mb-3">
         <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/10 text-[13px] leading-none text-white/90">
           <Favicon domain={post.domain} />
           <span className="font-medium truncate">{post.domain || 'Unbekannte Domain'}</span>
         </div>
         <div className="ml-auto text-xs px-2 py-1 rounded-md bg-white/5 text-white/70">
-          {new Date(post.created_at).toLocaleString()}
+          {new Date(post.created_at).toLocaleDateString(undefined, { day: '2-digit', month: 'short', year: 'numeric' })}
         </div>
       </header>
 
-      <p className="text-sm leading-relaxed whitespace-pre-wrap text-white/90">{post.content}</p>
+      {/* Kategorie-Badge (falls vorhanden) */}
+      {Boolean((post as any).category) && (
+        <div className="mb-2">
+          <span className="inline-flex items-center text-xs px-2 py-1 rounded-md bg-white/10 text-white/80">{(post as any).category}</span>
+        </div>
+      )}
 
-      <footer className="mt-3 flex items-center gap-3 text-xs text-white/70">
+      {/* Sterne-Bewertung */}
+      <div className="flex items-center gap-2 mb-2">
+        <div className="flex items-center" aria-label={`Bewertung ${a} von 5`}>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i < Math.round(a) ? 'fill-yellow-400' : 'fill-transparent'} stroke-yellow-400`}>
+              <path d="M10 2.5l2.472 4.91 5.418.787-3.92 3.823.925 5.395L10 14.9l-4.895 2.515.925-5.395L2.11 8.197l5.418-.787L10 2.5z"/>
+            </svg>
+          ))}
+        </div>
+        <span className="text-xs text-white/70">({a.toFixed(2)})</span>
+      </div>
+
+      <p className="text-base leading-relaxed whitespace-pre-wrap text-white/90">{post.content}</p>
+
+      <footer className="mt-4 flex items-center gap-3 text-sm text-white/70">
         <span className="px-2 py-1 rounded-md bg-white/5">Ø Bewertung: {a}</span>
         <span>•</span>
         <span>S: {post.rating_seriositaet ?? 0}</span>
