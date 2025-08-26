@@ -132,6 +132,7 @@ export default function CommunityPage() {
   const [open, setOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<CategoryKey | ''>('');
   const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'best'>('newest');
+  const [showAll, setShowAll] = useState(false);
 
   // Current user id (for own post actions)
   const [currentUserId, setCurrentUserId] = useState<string | null>(null);
@@ -269,6 +270,10 @@ export default function CommunityPage() {
     }
     return arr;
   }, [posts, query, onlyDomain, selectedCategory, sortBy]);
+
+  useEffect(() => {
+    setShowAll(false);
+  }, [selectedCategory, query, onlyDomain]);
 
   const refresh = async () => {
     setLoading(true);
@@ -442,7 +447,7 @@ export default function CommunityPage() {
               className="grid grid-cols-1 gap-5 place-items-center"
             >
               <AnimatePresence>
-                {filtered.map((p) => {
+                {(showAll ? filtered : filtered.slice(0, 6)).map((p) => {
                   const normalizedPost = {
                     ...p,
                     // Ensure avg_rating is a number for components that expect a number
@@ -463,6 +468,16 @@ export default function CommunityPage() {
                 })}
               </AnimatePresence>
             </motion.div>
+          )}
+          {(!loading && !error && filtered.length > 6 && !showAll) && (
+            <div className="mt-4 flex justify-center">
+              <button
+                onClick={() => setShowAll(true)}
+                className="rounded-xl border border-white/20 bg-white/10 px-5 py-2.5 hover:bg-white/20 transition"
+              >
+                Mehr laden
+              </button>
+            </div>
           )}
         </div>
 

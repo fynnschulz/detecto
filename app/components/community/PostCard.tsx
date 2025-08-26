@@ -31,24 +31,26 @@ function Favicon({ domain }: { domain: string }) {
 export default function PostCard({ post }: { post: CommunityPost }) {
   const a = avgRating(post)
   return (
-    <article className="rounded-xl border p-4 hover:shadow-sm transition bg-white/60 dark:bg-neutral-900/60">
+    <article className="rounded-2xl border border-white/10 p-4 bg-gradient-to-br from-sky-500/10 via-blue-500/10 to-indigo-500/10 dark:from-sky-900/30 dark:via-blue-900/30 dark:to-indigo-900/30 backdrop-blur-md hover:shadow-lg hover:shadow-sky-500/5 transition">
       <header className="flex items-center gap-2 mb-2">
-        <Favicon domain={post.domain} />
-        <div className="text-sm font-medium truncate">{post.domain || 'Unbekannte Domain'}</div>
-        <div className="ml-auto text-xs opacity-60">
+        <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/10 text-[13px] leading-none text-white/90">
+          <Favicon domain={post.domain} />
+          <span className="font-medium truncate">{post.domain || 'Unbekannte Domain'}</span>
+        </div>
+        <div className="ml-auto text-xs px-2 py-1 rounded-md bg-white/5 text-white/70">
           {new Date(post.created_at).toLocaleString()}
         </div>
       </header>
 
-      <p className="text-sm leading-relaxed whitespace-pre-wrap">{post.content}</p>
+      <p className="text-sm leading-relaxed whitespace-pre-wrap text-white/90">{post.content}</p>
 
-      <footer className="mt-3 flex items-center gap-3 text-xs opacity-80">
-        <span>Ø Bewertung: {a}</span>
+      <footer className="mt-3 flex items-center gap-3 text-xs text-white/70">
+        <span className="px-2 py-1 rounded-md bg-white/5">Ø Bewertung: {a}</span>
         <span>•</span>
         <span>S: {post.rating_seriositaet ?? 0}</span>
         <span>T: {post.rating_transparenz ?? 0}</span>
         <span>K: {post.rating_kundenerfahrung ?? 0}</span>
-        <span className="ml-auto">User: {post.user_id?.slice(0, 8) || '—'}</span>
+        <span className="ml-auto px-2 py-1 rounded-md bg-white/5">User: {post.user_id?.slice(0, 8) || '—'}</span>
       </footer>
     </article>
   )
