@@ -31,7 +31,7 @@ function Favicon({ domain }: { domain: string }) {
 export default function PostCard({ post }: { post: CommunityPost }) {
   const a = avgRating(post)
   return (
-    <article className="rounded-2xl border border-white/10 p-4 bg-gradient-to-br from-sky-500/10 via-blue-500/10 to-indigo-500/10 dark:from-sky-900/30 dark:via-blue-900/30 dark:to-indigo-900/30 backdrop-blur-md hover:shadow-lg hover:shadow-sky-500/5 transition">
+    <article className="w-full max-w-2xl mx-auto rounded-2xl border border-white/10 p-4 bg-gradient-to-br from-sky-500/10 via-blue-500/10 to-indigo-500/10 dark:from-sky-900/30 dark:via-blue-900/30 dark:to-indigo-900/30 backdrop-blur-md hover:shadow-lg hover:shadow-sky-500/5 transition">
       <header className="flex items-center gap-2 mb-2">
         <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/10 text-[13px] leading-none text-white/90">
           <Favicon domain={post.domain} />
