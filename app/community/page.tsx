@@ -18,7 +18,7 @@ import { useAuth } from "@/app/providers";
 import { getCommunityPosts as fetchCommunityPosts, type Post as ApiPost } from '@/app/lib/community';
 
 // --- Local category utilities (kept in sync with PostCard) ---
-export type CategoryKey =
+type CategoryKey =
   | 'onlineshop'
   | 'bank_finance'
   | 'social_media'
@@ -34,7 +34,7 @@ export type CategoryKey =
   | 'utilities'
   | 'other';
 
-export const CATEGORY_LABELS: Record<CategoryKey, string> = {
+const CATEGORY_LABELS: Record<CategoryKey, string> = {
   onlineshop: 'Onlineshops',
   bank_finance: 'Banken & Finanzen',
   social_media: 'Social Media',
@@ -76,11 +76,11 @@ function categorizeDomain(domain: string): CategoryKey {
   return 'other';
 }
 
-export function getPostCategory(p: { domain: string; category?: CategoryKey }): CategoryKey {
+function getPostCategory(p: { domain: string; category?: CategoryKey }): CategoryKey {
   return (p.category as CategoryKey) ?? categorizeDomain(p.domain);
 }
 
-export function normalizeDomain(input: string): string {
+function normalizeDomain(input: string): string {
   let s = (input || '').trim().toLowerCase();
   if (!s) return '';
   try {
@@ -94,7 +94,7 @@ export function normalizeDomain(input: string): string {
 }
 
 // Local fallback type (ensure this matches your DB schema)
-export type Post = {
+type Post = {
   id: string;
   user_id: string;
   domain: string;
