@@ -248,6 +248,19 @@ export default function CommunityPage() {
     setAuthChecked(true);
   }, [isAuthReady, session]);
 
+  function scoreOf(p: Post): number {
+    const num = (v: any) => (typeof v === 'number' ? v : Number.parseFloat(String(v ?? '')));
+    const vals = [num(p.avg_rating), num(p.rating_seriositaet), num(p.rating_transparenz), num(p.rating_kundenerfahrung)]
+      .map(v => (Number.isFinite(v) ? v : 0))
+      .filter(v => v > 0);
+    if (vals.length === 0) return 0;
+    // If avg_rating is present and > 0, prefer it; otherwise average the sub-ratings
+    const ar = num(p.avg_rating);
+    if (Number.isFinite(ar) && ar > 0) return ar;
+    const sum = vals.reduce((a, b) => a + b, 0);
+    return sum / vals.length;
+  }
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     const d = normalizeDomain(onlyDomain);
@@ -266,8 +279,7 @@ export default function CommunityPage() {
     } else if (sortBy === 'oldest') {
       arr = [...arr].sort((a, b) => +new Date(a.created_at) - +new Date(b.created_at));
     } else if (sortBy === 'best') {
-      const toNum = (v: any) => (typeof v === 'number' ? v : Number.parseFloat(String(v ?? 0)) || 0);
-      arr = [...arr].sort((a, b) => toNum(b.avg_rating) - toNum(a.avg_rating));
+      arr = [...arr].sort((a, b) => scoreOf(b) - scoreOf(a));
     }
     return arr;
   }, [posts, query, onlyDomain, selectedCategory, sortBy]);
