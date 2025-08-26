@@ -85,15 +85,16 @@ export async function POST(req: Request) {
 
     const { data, error } = await supabase
       .from('community_posts')
-      .insert([post])
-      .select();
+      .insert(post) // direktes Objekt statt Array
+      .select('id,user_id,content,domain,rating_seriositaet,rating_transparenz,rating_kundenerfahrung,created_at')
+      .single();
 
     if (error) {
       console.error('Supabase insert error:', error);
       return NextResponse.json({ error: 'Insert failed' }, { status: 500 });
     }
 
-    return NextResponse.json({ success: true, post: data }, { status: 201 });
+    return NextResponse.json({ post: data }, { status: 201 });
   } catch (err) {
     console.error('Unexpected error inserting community post:', err);
     return NextResponse.json({ error: 'Insert failed' }, { status: 500 });
