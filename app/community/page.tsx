@@ -329,9 +329,9 @@ export default function CommunityPage() {
     <div className="relative">
       {/* Background layers (hero-style) */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(99,102,241,0.18),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_10%_20%,rgba(16,185,129,0.12),transparent)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_90%_80%,rgba(236,72,153,0.10),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(59,130,246,0.18),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_10%_20%,rgba(2,132,199,0.12),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_90%_80%,rgba(37,99,235,0.10),transparent)]" />
       </div>
 
       <div className="mx-auto w-full max-w-6xl px-6 py-10">
