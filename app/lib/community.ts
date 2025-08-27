@@ -1,4 +1,6 @@
 // Shared community helpers
+import { supabase } from '@/app/lib/supabaseClient';
+
 export type CategoryKey =
   | 'onlineshop'
   | 'bank_finance'
@@ -175,4 +177,66 @@ export async function getCommunityPosts(): Promise<Post[]> {
     });
   }
   return posts;
+}
+
+// --- Comments & Likes ---
+export type Comment = {
+  id: string;
+  post_id: string;
+  user_id: string;
+  content: string;
+  created_at: string;
+  author_name?: string;
+};
+
+export async function getComments(postId: string): Promise<Comment[]> {
+  const { data, error } = await supabase
+    .from('community_comments')
+    .select('id, post_id, user_id, content, created_at, profiles:profiles!inner(id, display_name, username, name)')
+    .eq('post_id', postId)
+    .order('created_at', { ascending: false });
+  if (error) throw error;
+  return (data || []).map((c: any) => ({
+    id: c.id,
+    post_id: c.post_id,
+    user_id: c.user_id,
+    content: c.content,
+    created_at: c.created_at,
+    author_name: c.profiles?.display_name || c.profiles?.username || c.profiles?.name || 'User',
+  }));
+}
+
+export async function addComment(postId: string, content: string) {
+  const user = (await supabase.auth.getUser()).data.user;
+  if (!user) throw new Error('Nicht eingeloggt');
+  const { error } = await supabase.from('community_comments').insert({
+    post_id: postId, user_id: user.id, content
+  });
+  if (error) throw error;
+}
+
+export async function getLikesCount(postId: string): Promise<{ count: number, likedByMe: boolean }> {
+  const user = (await supabase.auth.getUser()).data.user;
+  const [{ data: cData }, { data: mine }] = await Promise.all([
+    supabase.from('community_likes').select('post_id', { count: 'exact', head: true }).eq('post_id', postId),
+    user ? supabase.from('community_likes').select('post_id').eq('post_id', postId).eq('user_id', user.id).limit(1) : Promise.resolve({ data: [] as any[] })
+  ]);
+  return { count: (cData as any)?.length ?? (cData as any)?.count ?? 0, likedByMe: !!(mine && mine.length) };
+}
+
+export async function toggleLike(postId: string) {
+  const user = (await supabase.auth.getUser()).data.user;
+  if (!user) throw new Error('Nicht eingeloggt');
+  const { data: existing } = await supabase
+    .from('community_likes')
+    .select('post_id').eq('post_id', postId).eq('user_id', user.id).limit(1);
+  if (existing && existing.length) {
+    const { error } = await supabase.from('community_likes').delete().eq('post_id', postId).eq('user_id', user.id);
+    if (error) throw error;
+    return { liked: false };
+  } else {
+    const { error } = await supabase.from('community_likes').insert({ post_id: postId, user_id: user.id });
+    if (error) throw error;
+    return { liked: true };
+  }
 }

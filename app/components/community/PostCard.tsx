@@ -1,6 +1,7 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getComments, addComment, getLikesCount, toggleLike, type Comment } from '@/app/lib/community'
 
 export type CommunityPost = {
   id: string
@@ -30,6 +31,53 @@ function Favicon({ domain }: { domain: string }) {
 
 export default function PostCard({ post }: { post: CommunityPost }) {
   const a = avgRating(post)
+
+  const [likes, setLikes] = useState(0)
+  const [liked, setLiked] = useState(false)
+  const [comments, setComments] = useState<Comment[]>([])
+  const [showComments, setShowComments] = useState(false)
+  const [newComment, setNewComment] = useState('')
+  const [busy, setBusy] = useState(false)
+
+  async function refreshMeta() {
+    const l = await getLikesCount(post.id)
+    setLikes(l.count)
+    setLiked(l.likedByMe)
+    const c = await getComments(post.id)
+    setComments(c)
+  }
+
+  useEffect(() => {
+    refreshMeta()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [post.id])
+
+  async function handleToggleLike() {
+    setBusy(true)
+    try {
+      const res = await toggleLike(post.id)
+      setLiked(res.liked)
+      const upd = await getLikesCount(post.id)
+      setLikes(upd.count)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function handleAddComment() {
+    const text = newComment.trim()
+    if (!text) return
+    setBusy(true)
+    try {
+      await addComment(post.id, text)
+      setNewComment('')
+      const c = await getComments(post.id)
+      setComments(c)
+    } finally {
+      setBusy(false)
+    }
+  }
+
   return (
     <article className="w-full max-w-3xl mx-auto rounded-2xl border border-white/10 p-4 bg-gradient-to-b from-neutral-800/70 via-neutral-800/50 to-neutral-900/70 backdrop-blur-md shadow-[0_10px_30px_-15px_rgba(0,0,0,0.6)] hover:shadow-[0_12px_36px_-12px_rgba(0,0,0,0.7)] transition">
       <header className="flex items-center gap-2 mb-3">
@@ -63,13 +111,81 @@ export default function PostCard({ post }: { post: CommunityPost }) {
 
       <p className="text-base leading-relaxed whitespace-pre-wrap text-white/90">{post.content}</p>
 
-      <footer className="mt-4 flex items-center gap-3 text-sm text-white/70">
-        <span className="px-2 py-1 rounded-md bg-white/5">Ø Bewertung: {a}</span>
-        <span>•</span>
-        <span>S: {post.rating_seriositaet ?? 0}</span>
-        <span>T: {post.rating_transparenz ?? 0}</span>
-        <span>K: {post.rating_kundenerfahrung ?? 0}</span>
-        <span className="ml-auto px-2 py-1 rounded-md bg-white/5">User: {post.user_id?.slice(0, 8) || '—'}</span>
+      <footer className="mt-4 text-sm text-white/70">
+        <div className="flex items-center gap-3">
+          <span className="px-2 py-1 rounded-md bg-white/5">Ø Bewertung: {a}</span>
+          <span>•</span>
+          <span>S: {post.rating_seriositaet ?? 0}</span>
+          <span>T: {post.rating_transparenz ?? 0}</span>
+          <span>K: {post.rating_kundenerfahrung ?? 0}</span>
+
+          {/* Like-Button */}
+          <button
+            onClick={handleToggleLike}
+            disabled={busy}
+            className={`ml-1 inline-flex items-center gap-1 px-2 py-1 rounded-md border transition ${liked ? 'border-blue-400 bg-blue-500/20' : 'border-white/10 bg-white/5 hover:bg-white/10'}`}
+            aria-pressed={liked}
+            aria-label="Gefällt mir"
+            title="Gefällt mir"
+          >
+            {/* Herz-Icon */}
+            <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+              <path d="M12 21s-6.716-4.27-9.192-6.747C.91 12.355.91 8.99 3.05 6.85c2.14-2.14 5.505-2.14 7.646 0L12 8.154l1.304-1.304c2.14-2.14 5.506-2.14 7.646 0 2.14 2.14 2.14 5.505 0 7.646C18.716 16.73 12 21 12 21z"/>
+            </svg>
+            <span className="text-xs">{likes}</span>
+          </button>
+
+          {/* Comment-Button */}
+          <button
+            onClick={() => setShowComments((v) => !v)}
+            className="inline-flex items-center gap-1 px-2 py-1 rounded-md border border-white/10 bg-white/5 hover:bg-white/10 transition"
+            aria-expanded={showComments}
+            aria-controls={`comments-${post.id}`}
+            title="Kommentare anzeigen"
+          >
+            {/* Sprechblasen-Icon */}
+            <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+              <path d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+            </svg>
+            <span className="text-xs">{comments.length}</span>
+          </button>
+
+          <span className="ml-auto px-2 py-1 rounded-md bg-white/5">User: {post.user_id?.slice(0, 8) || '—'}</span>
+        </div>
+
+        {/* Kommentar-Sektion */}
+        {showComments && (
+          <div id={`comments-${post.id}`} className="mt-3 space-y-3">
+            {/* Eingabezeile */}
+            <div className="flex gap-2">
+              <input
+                value={newComment}
+                onChange={(e) => setNewComment(e.target.value)}
+                placeholder="Kommentar schreiben…"
+                className="flex-1 rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-white/30"
+              />
+              <button
+                onClick={handleAddComment}
+                disabled={busy || !newComment.trim()}
+                className="rounded-xl border border-white/20 bg-white/10 px-4 py-2 hover:bg-white/20"
+              >
+                Senden
+              </button>
+            </div>
+            {/* Liste */}
+            <div className="space-y-2">
+              {comments.map((c) => (
+                <div key={c.id} className="rounded-xl border border-white/10 bg-white/5 p-3">
+                  <div className="text-xs opacity-60 mb-1">{c.author_name ?? 'User'} · {new Date(c.created_at).toLocaleString()}</div>
+                  <div className="text-sm whitespace-pre-wrap">{c.content}</div>
+                </div>
+              ))}
+              {!comments.length && (
+                <div className="text-xs opacity-60">Noch keine Kommentare. Sei der Erste!</div>
+              )}
+            </div>
+          </div>
+        )}
       </footer>
     </article>
   )
