@@ -192,7 +192,7 @@ export type Comment = {
 export async function getComments(postId: string): Promise<Comment[]> {
   const { data, error } = await supabase
     .from('community_comments')
-    .select('id, post_id, user_id, content, created_at, profiles:profiles!inner(id, display_name, username, name)')
+    .select('id, post_id, user_id, content, created_at')
     .eq('post_id', postId)
     .order('created_at', { ascending: false });
   if (error) throw error;
@@ -202,7 +202,7 @@ export async function getComments(postId: string): Promise<Comment[]> {
     user_id: c.user_id,
     content: c.content,
     created_at: c.created_at,
-    author_name: c.profiles?.display_name || c.profiles?.username || c.profiles?.name || 'User',
+    author_name: 'User',
   }));
 }
 
