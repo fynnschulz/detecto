@@ -262,13 +262,15 @@ export default function CommunityPage() {
   }
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = query.trim();
     const d = normalizeDomain(onlyDomain);
+    // Hilfsfunktion: Regex sicher escapen
+    const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    // Für exakte Wort- oder Phrasensuche (Wortgrenzen, case-insensitive)
+    const queryRegex = q ? new RegExp(`\\b${escapeRegExp(q)}\\b`, 'i') : null;
     let arr = (posts ?? []).filter((p) => {
-      const matchesQuery =
-        !q ||
-        p.domain.toLowerCase().includes(q) ||
-        p.content.toLowerCase().includes(q);
+      // Suche nur im Content nach exaktem Wortlaut (case-insensitive, Wortgrenzen)
+      const matchesQuery = !q || (queryRegex ? queryRegex.test(p.content) : true);
       const matchesDomain = !d || p.domain === d;
       const matchesCategory = !selectedCategory || getPostCategory(p) === selectedCategory;
       return matchesQuery && matchesDomain && matchesCategory;
@@ -407,7 +409,7 @@ export default function CommunityPage() {
           {/* Text/Domain Filter */}
           <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
             <div className="col-span-1">
-              <label className="text-xs opacity-70">Suche (Domain oder Text)</label>
+              <label className="text-xs opacity-70">suche konkreten Wortlaut</label>
               <input
                 type="text"
                 value={query}
