@@ -255,16 +255,7 @@ function buildPrompt(url: string, evidence: any, headMeta: any, policyEvidence: 
   - <… oder „keine konkreten Verstöße identifizierbar“>
   HINWEISE:
   - <lästige, aber geringe Risiken>
-  - <schnelle Verbesserungen (max. 3 Bulletpoints)>
-  ---
-  
-  Wichtige Regeln:
-  - Nenne konkrete Evidenz (z. B. "CSP fehlt", "externe Skripte: gtm, hotjar", "Kontaktformular mit E-Mail, keine Passwörter", "Policy nennt keine Rechtsgrundlagen").
-  - Keine vagen Phrasen. Vermeide Spekulationen; wenn etwas nicht belegt ist, markiere es als **„Indizien, unsicher“**.
-  - **Nicht** kleinliche Abwertung, wenn nur eine einfache Kontaktseite ohne Tracking vorliegt.
-  - Hohe Risiken nur bei sensiblen Daten, aggressivem Tracking oder täuschenden Mustern.
-  - Formuliere das abschließende Urteil bitte **kurz und einfach verständlich**, ohne Fachchinesisch. Maximal wenige Sätze, klare Alltagssprache.
-  `;
+  - <Bitte nutze nicht zu viel Fachbegriffe und Fachsprache. Es soll für 95% der Nutzer egal welchen Alters gut verständlich und einfach erklärt sein. erkläre den nutzern was gut und was schlecht an der eingegebenen Website ist. Erkläre es in Stichpunkten... keine langen Sätze.> `;
 }
 
 async function analyzePrivacyScore(
