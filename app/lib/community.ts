@@ -215,27 +215,53 @@ export async function addComment(postId: string, content: string) {
   if (error) throw error;
 }
 
-export async function getLikesCount(postId: string): Promise<{ count: number, likedByMe: boolean }> {
+export async function getLikesCount(postId: string): Promise<{ count: number; likedByMe: boolean }> {
   const user = (await supabase.auth.getUser()).data.user;
-  const [{ data: cData }, { data: mine }] = await Promise.all([
-    supabase.from('community_likes').select('post_id', { count: 'exact', head: true }).eq('post_id', postId),
-    user ? supabase.from('community_likes').select('post_id').eq('post_id', postId).eq('user_id', user.id).limit(1) : Promise.resolve({ data: [] as any[] })
+
+  const [allResp, mineResp] = await Promise.all([
+    supabase
+      .from('community_likes')
+      .select('post_id', { count: 'exact', head: true })
+      .eq('post_id', postId),
+    user
+      ? supabase
+          .from('community_likes')
+          .select('post_id')
+          .eq('post_id', postId)
+          .eq('user_id', user.id)
+          .maybeSingle()
+      : Promise.resolve({ data: null } as any),
   ]);
-  return { count: (cData as any)?.length ?? (cData as any)?.count ?? 0, likedByMe: !!(mine && mine.length) };
+
+  const total = (allResp as any)?.count ?? 0;
+  const likedByMe = Boolean((mineResp as any)?.data);
+  return { count: total, likedByMe };
 }
 
 export async function toggleLike(postId: string) {
   const user = (await supabase.auth.getUser()).data.user;
   if (!user) throw new Error('Nicht eingeloggt');
-  const { data: existing } = await supabase
+
+  const { data: existing, error: selErr } = await supabase
     .from('community_likes')
-    .select('post_id').eq('post_id', postId).eq('user_id', user.id).limit(1);
-  if (existing && existing.length) {
-    const { error } = await supabase.from('community_likes').delete().eq('post_id', postId).eq('user_id', user.id);
+    .select('post_id')
+    .eq('post_id', postId)
+    .eq('user_id', user.id)
+    .maybeSingle();
+  if (selErr && selErr.code !== 'PGRST116') throw selErr; // ignore "No rows" code
+
+  if (existing) {
+    const { error } = await supabase
+      .from('community_likes')
+      .delete()
+      .eq('post_id', postId)
+      .eq('user_id', user.id);
     if (error) throw error;
     return { liked: false };
   } else {
-    const { error } = await supabase.from('community_likes').insert({ post_id: postId, user_id: user.id });
+    const { error } = await supabase
+      .from('community_likes')
+      .insert({ post_id: postId, user_id: user.id });
     if (error) throw error;
     return { liked: true };
   }

@@ -59,6 +59,13 @@ export default function PostCard({ post }: { post: CommunityPost }) {
       setLiked(res.liked)
       const upd = await getLikesCount(post.id)
       setLikes(upd.count)
+    } catch (err: any) {
+      if (err.message?.includes('Nicht eingeloggt')) {
+        alert('Bitte melde dich an, um Beiträge zu liken.')
+      } else {
+        console.error('Fehler beim Liken:', err)
+        alert('Fehler beim Liken')
+      }
     } finally {
       setBusy(false)
     }
@@ -73,6 +80,13 @@ export default function PostCard({ post }: { post: CommunityPost }) {
       setNewComment('')
       const c = await getComments(post.id)
       setComments(c)
+    } catch (err: any) {
+      if (err.message?.includes('Nicht eingeloggt')) {
+        alert('Bitte melde dich an, um zu kommentieren.')
+      } else {
+        console.error('Fehler beim Kommentieren:', err)
+        alert('Fehler beim Kommentieren')
+      }
     } finally {
       setBusy(false)
     }
