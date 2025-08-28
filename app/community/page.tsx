@@ -154,7 +154,6 @@ export default function CommunityPage() {
 
   useEffect(() => {
     let active = true;
-    if (!isAuthReady) return;
 
     async function load() {
       setLoading(true);
@@ -194,12 +193,12 @@ export default function CommunityPage() {
         if (ids.length) {
           const { data: profs, error: perr } = await supabase
             .from('profiles')
-            .select('id, username, display_name, name')
+            .select('id, username, display_name')
             .in('id', ids);
           const map: Record<string, string> = {};
           if (!perr && profs) {
             for (const pr of profs as any[]) {
-              map[pr.id] = pr.display_name || pr.username || pr.name || '';
+              map[pr.id] = pr.username || pr.display_name || '';
             }
           }
           for (const id of ids) if (!map[id]) map[id] = `user-${String(id).slice(0, 6)}`;
@@ -235,7 +234,7 @@ export default function CommunityPage() {
 
     load();
     return () => { active = false; };
-  }, [isAuthReady]);
+  }, []);
 
   useEffect(() => {
     // Mirror provider auth state locally for UI logic
@@ -334,12 +333,12 @@ export default function CommunityPage() {
         if (ids.length) {
           const { data: profs, error: perr } = await supabase
             .from('profiles')
-            .select('id, username, display_name, name')
+            .select('id, username, display_name')
             .in('id', ids);
           const map: Record<string, string> = {};
           if (!perr && profs) {
             for (const pr of profs as any[]) {
-              map[pr.id] = pr.display_name || pr.username || pr.name || '';
+              map[pr.id] = pr.username || pr.display_name || '';
             }
           }
           for (const id of ids) if (!map[id]) map[id] = `user-${String(id).slice(0, 6)}`;

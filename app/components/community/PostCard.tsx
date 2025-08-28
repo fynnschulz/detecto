@@ -49,15 +49,23 @@ export default function PostCard({ post }: { post: CommunityPost }) {
   const [newComment, setNewComment] = useState('')
   const [busy, setBusy] = useState(false)
   const [authorName, setAuthorName] = useState<string | null>(null)
+  const [metaLoading, setMetaLoading] = useState(true)
   const [showDomainMenu, setShowDomainMenu] = useState(false)
   const domainMenuRef = useRef<HTMLDivElement | null>(null)
 
   async function refreshMeta() {
-    const l = await getLikesCount(post.id)
-    setLikes(l.count)
-    setLiked(l.likedByMe)
-    const c = await getComments(post.id)
-    setComments(c)
+    setMetaLoading(true)
+    try {
+      const [l, c] = await Promise.all([
+        getLikesCount(post.id),
+        getComments(post.id),
+      ])
+      setLikes(l.count)
+      setLiked(l.likedByMe)
+      setComments(c)
+    } finally {
+      setMetaLoading(false)
+    }
   }
 
   useEffect(() => {
@@ -210,11 +218,17 @@ export default function PostCard({ post }: { post: CommunityPost }) {
 
       <footer className="mt-4 text-sm text-white/70">
         <div className="flex items-center gap-3">
-          <span className="px-2 py-1 rounded-md bg-white/5">Ø Bewertung: {a}</span>
-          <span>•</span>
-          <span>S: {post.rating_seriositaet ?? 0}</span>
-          <span>T: {post.rating_transparenz ?? 0}</span>
-          <span>K: {post.rating_kundenerfahrung ?? 0}</span>
+          {metaLoading ? (
+            <div className="h-5 w-44 rounded-md bg-white/10 animate-pulse" />
+          ) : (
+            <>
+              <span className="px-2 py-1 rounded-md bg-white/5">Ø Bewertung: {a}</span>
+              <span>•</span>
+              <span>S: {post.rating_seriositaet ?? 0}</span>
+              <span>T: {post.rating_transparenz ?? 0}</span>
+              <span>K: {post.rating_kundenerfahrung ?? 0}</span>
+            </>
+          )}
 
           {/* Like-Button */}
           <button
