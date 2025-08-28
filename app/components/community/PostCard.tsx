@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { getComments, addComment, getLikesCount, toggleLike, type Comment } from '@/app/lib/community'
+import { supabase } from '@/app/lib/supabaseClient'
 
 export type CommunityPost = {
   id: string
@@ -38,6 +39,7 @@ export default function PostCard({ post }: { post: CommunityPost }) {
   const [showComments, setShowComments] = useState(false)
   const [newComment, setNewComment] = useState('')
   const [busy, setBusy] = useState(false)
+  const [authorName, setAuthorName] = useState<string | null>(null)
 
   async function refreshMeta() {
     const l = await getLikesCount(post.id)
@@ -51,6 +53,28 @@ export default function PostCard({ post }: { post: CommunityPost }) {
     refreshMeta()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [post.id])
+
+  useEffect(() => {
+    let canceled = false
+    async function loadAuthor() {
+      if (!post?.user_id) return
+      const { data, error } = await supabase
+        .from('profiles')
+        .select('display_name, username, name')
+        .eq('id', post.user_id)
+        .maybeSingle()
+      if (!canceled) {
+        if (error) {
+          console.warn('Profilname konnte nicht geladen werden:', error)
+          setAuthorName(null)
+        } else {
+          setAuthorName(data?.display_name || data?.username || data?.name || null)
+        }
+      }
+    }
+    loadAuthor()
+    return () => { canceled = true }
+  }, [post?.user_id])
 
   async function handleToggleLike() {
     setBusy(true)
@@ -164,7 +188,9 @@ export default function PostCard({ post }: { post: CommunityPost }) {
             <span className="text-xs">{comments.length}</span>
           </button>
 
-          <span className="ml-auto px-2 py-1 rounded-md bg-white/5">User: {post.user_id?.slice(0, 8) || '—'}</span>
+          <span className="ml-auto px-2 py-1 rounded-md bg-white/5">
+            User: {authorName ?? 'User'} · {post.user_id?.slice(0, 8) || '—'}
+          </span>
         </div>
 
         {/* Kommentar-Sektion */}
