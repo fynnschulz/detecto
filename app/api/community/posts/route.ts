@@ -1,3 +1,4 @@
+import { checkPostAllowed } from '@/app/lib/moderation';
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
@@ -62,6 +63,15 @@ export async function POST(req: Request) {
       rating_transparenz,
       rating_kundenerfahrung,
     } = body || {};
+
+    // Moderation: verbotene Ausdrücke blockieren
+    const chk = checkPostAllowed(content ?? '');
+    if (!chk.ok) {
+      return NextResponse.json(
+        { error: `Verbotener Ausdruck gefunden: ${chk.hit}` },
+        { status: 400 }
+      );
+    }
 
     // Validate: user_id must be present and a string
     if (typeof user_id !== 'string' || !user_id.trim()) {

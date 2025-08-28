@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState } from 'react';
 import { supabase } from '@/app/lib/supabaseClient';
+import { checkPostAllowed } from '@/app/lib/moderation';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // ---- Types & category helpers (local + minimal, preserve behavior) ----
@@ -221,6 +222,13 @@ export default function CreatePostModal({
     }
     if (!content || content.trim().length < 20) {
       setErr('Bitte beschreibe deine Erfahrung (mindestens 20 Zeichen).');
+      return;
+    }
+
+    // Moderation: verbotene Ausdrücke bereits clientseitig blockieren
+    const chk = checkPostAllowed(content.trim());
+    if (!chk.ok) {
+      setErr(`Dieser Ausdruck ist nicht erlaubt: „${chk.hit}“`);
       return;
     }
 
