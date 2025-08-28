@@ -25,6 +25,14 @@ export default function WebsiteScanPage() {
   const [infoExpanded, setInfoExpanded] = useState<boolean>(false);
   const searchParams = useSearchParams();
 
+  const toDomain = (u: string) => {
+    try {
+      return new URL(u).hostname.replace(/^www\./, '');
+    } catch {
+      return u.replace(/^https?:\/\/(www\.)?/i, '').split('/')[0];
+    }
+  };
+
   useEffect(() => {
     const q = searchParams.get('domain');
     if (!q) return;
@@ -313,6 +321,50 @@ export default function WebsiteScanPage() {
               <div className="text-4xl font-semibold text-white text-center mt-4">
                 Datenschutz-Score: {score}%
               </div>
+            )}
+
+            {score !== null && (
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45 }}
+                className="mt-5 flex justify-center"
+              >
+                <Link
+                  href={`/community?domain=${encodeURIComponent(toDomain(inputUrl))}`}
+                  className="group relative inline-flex items-center gap-2 rounded-full px-6 py-3 text-white font-medium overflow-hidden focus:outline-none focus:ring-2 focus:ring-cyan-400/60 shadow-[0_0_24px_rgba(0,200,255,0.15)] hover:shadow-[0_0_36px_rgba(0,200,255,0.28)] transition-transform duration-300 will-change-transform hover:scale-[1.03]"
+                  aria-label="Zur Community – Beiträge zur gescannten Domain anzeigen"
+                >
+                  <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 opacity-90 transition-opacity duration-300" />
+                  <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-cyan-500/35 via-blue-500/35 to-indigo-500/35 opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                  <svg
+                    className="relative z-10 h-5 w-5 opacity-95"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M21 15a4 4 0 0 1-4 4H8l-5 3 1.5-4.5A4 4 0 0 1 4 15V7a4 4 0 0 1 4-4h9a4 4 0 0 1 4 4v8z" />
+                  </svg>
+                  <span className="relative z-10">Zur Community</span>
+                  <svg
+                    className="relative z-10 h-5 w-5 translate-x-0 transition-transform duration-300 group-hover:translate-x-0.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </Link>
+              </motion.div>
             )}
 
             {showScale && (

@@ -6,6 +6,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { supabase } from '@/app/lib/supabaseClient';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import AuthModal from '@/app/components/AuthModal';
 const TypedAuthModal = AuthModal as any;
 import { useUsername } from '@/app/lib/useUsername';
@@ -133,6 +134,15 @@ export default function CommunityPage() {
   const [selectedCategory, setSelectedCategory] = useState<CategoryKey | ''>('');
   const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'best' | 'likes'>('newest');
   const [showAll, setShowAll] = useState(false);
+
+  // Domain aus URL-Query übernehmen (z. B. /community?domain=amazon.de)
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const d = searchParams.get('domain');
+    if (d) {
+      setOnlyDomain(normalizeDomain(d));
+    }
+  }, [searchParams]);
 
   // Current user id (for own post actions)
   const [currentUserId, setCurrentUserId] = useState<string | null>(null);
