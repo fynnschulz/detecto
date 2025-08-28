@@ -27,7 +27,20 @@ export default function RegisterPage() {
       return;
     }
 
+    const trimmedUsername = username.trim();
+
     const displayName = [firstName, lastName].filter(Boolean).join(" ").trim();
+
+    // Prüfe, ob der Nutzername bereits vergeben ist
+    const { data: taken } = await supabase
+      .from('profiles')
+      .select('id')
+      .eq('username', trimmedUsername)
+      .maybeSingle();
+    if (taken) {
+      setError('Dieser Nutzername ist bereits vergeben.');
+      return;
+    }
 
     const { error } = await supabase.auth.signUp({
       email,
@@ -38,7 +51,7 @@ export default function RegisterPage() {
           lastName,
           street,
           postalCode,
-          username,
+          username: trimmedUsername,
           name: displayName,
         },
         emailRedirectTo: `${location.origin}/auth/callback`,

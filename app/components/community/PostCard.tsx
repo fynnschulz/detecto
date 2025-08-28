@@ -60,7 +60,7 @@ export default function PostCard({ post }: { post: CommunityPost }) {
       if (!post?.user_id) return
       const { data, error } = await supabase
         .from('profiles')
-        .select('display_name, username, name')
+        .select('display_name, username')
         .eq('id', post.user_id)
         .maybeSingle()
       if (!canceled) {
@@ -68,7 +68,7 @@ export default function PostCard({ post }: { post: CommunityPost }) {
           console.warn('Profilname konnte nicht geladen werden:', error)
           setAuthorName(null)
         } else {
-          setAuthorName(data?.display_name || data?.username || data?.name || null)
+          setAuthorName(data?.username || data?.display_name || null)
         }
       }
     }
