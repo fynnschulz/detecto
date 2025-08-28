@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
+import Link from 'next/link'
 import { getComments, addComment, getLikesCount, toggleLike, type Comment } from '@/app/lib/community'
 import { supabase } from '@/app/lib/supabaseClient'
 
@@ -30,6 +31,14 @@ function Favicon({ domain }: { domain: string }) {
   return <img src={url} alt="" className="h-5 w-5 rounded-sm opacity-90" loading="lazy" decoding="async" />
 }
 
+function normDomain(d: string) {
+  const s = (d || '').trim().toLowerCase();
+  try {
+    const u = new URL(s.startsWith('http') ? s : `https://${s}`);
+    return u.hostname.replace(/^www\./, '');
+  } catch { return s.replace(/^www\./, ''); }
+}
+
 export default function PostCard({ post }: { post: CommunityPost }) {
   const a = avgRating(post)
 
@@ -40,6 +49,8 @@ export default function PostCard({ post }: { post: CommunityPost }) {
   const [newComment, setNewComment] = useState('')
   const [busy, setBusy] = useState(false)
   const [authorName, setAuthorName] = useState<string | null>(null)
+  const [showDomainMenu, setShowDomainMenu] = useState(false)
+  const domainMenuRef = useRef<HTMLDivElement | null>(null)
 
   async function refreshMeta() {
     const l = await getLikesCount(post.id)
@@ -53,6 +64,16 @@ export default function PostCard({ post }: { post: CommunityPost }) {
     refreshMeta()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [post.id])
+
+  useEffect(() => {
+    function onDocClick(e: MouseEvent) {
+      if (!showDomainMenu) return
+      const el = domainMenuRef.current
+      if (el && !el.contains(e.target as Node)) setShowDomainMenu(false)
+    }
+    document.addEventListener('mousedown', onDocClick)
+    return () => document.removeEventListener('mousedown', onDocClick)
+  }, [showDomainMenu])
 
   useEffect(() => {
     let canceled = false
@@ -119,9 +140,47 @@ export default function PostCard({ post }: { post: CommunityPost }) {
   return (
     <article className="w-full max-w-3xl mx-auto rounded-2xl border border-white/10 p-4 bg-gradient-to-b from-neutral-800/70 via-neutral-800/50 to-neutral-900/70 backdrop-blur-md shadow-[0_10px_30px_-15px_rgba(0,0,0,0.6)] hover:shadow-[0_12px_36px_-12px_rgba(0,0,0,0.7)] transition">
       <header className="flex items-center gap-2 mb-3">
-        <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/10 text-[13px] leading-none text-white/90">
-          <Favicon domain={post.domain} />
-          <span className="font-medium truncate">{post.domain || 'Unbekannte Domain'}</span>
+        <div className="relative" ref={domainMenuRef}>
+          <button
+            type="button"
+            onClick={() => setShowDomainMenu(v => !v)}
+            className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/10 text-[13px] leading-none text-white/90 border border-white/10 hover:bg-white/20"
+            aria-haspopup="menu"
+            aria-expanded={showDomainMenu}
+            title="Aktionen zur Domain"
+          >
+            <Favicon domain={post.domain} />
+            <span className="font-medium truncate">{normDomain(post.domain) || 'Unbekannte Domain'}</span>
+            <svg width="14" height="14" viewBox="0 0 20 20" aria-hidden className="opacity-70">
+              <path d="M5 8l5 5 5-5" fill="currentColor"/>
+            </svg>
+          </button>
+
+          {showDomainMenu && (
+            <div
+              role="menu"
+              className="absolute z-20 mt-2 w-44 rounded-xl border border-white/10 bg-zinc-900/95 backdrop-blur p-1 shadow-2xl"
+            >
+              <a
+                href={`https://${normDomain(post.domain)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full rounded-lg px-3 py-2 text-sm hover:bg-white/10"
+                role="menuitem"
+                onClick={() => setShowDomainMenu(false)}
+              >
+                Zur Website
+              </a>
+              <Link
+                href={`/WebsiteScan?domain=${encodeURIComponent(normDomain(post.domain))}`}
+                className="block w-full rounded-lg px-3 py-2 text-sm hover:bg-white/10"
+                role="menuitem"
+                onClick={() => setShowDomainMenu(false)}
+              >
+                Zum Scan
+              </Link>
+            </div>
+          )}
         </div>
         <div className="ml-auto text-xs px-2 py-1 rounded-md bg-white/5 text-white/70">
           {new Date(post.created_at).toLocaleDateString(undefined, { day: '2-digit', month: 'short', year: 'numeric' })}

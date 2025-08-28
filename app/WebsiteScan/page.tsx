@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 // Optional: type for alternative sites
 type AltSite = { name: string; url: string; description?: string };
 
-export default function WebsiteScanPage() {
+export default function WebsiteScanPage({ searchParams }: { searchParams: { domain?: string } }) {
   const [inputUrl, setInputUrl] = useState<string>("https://");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [score, setScore] = useState<number | null>(null);
@@ -23,6 +23,17 @@ export default function WebsiteScanPage() {
   // Info panel state
   const [showInfo, setShowInfo] = useState<boolean>(false);
   const [infoExpanded, setInfoExpanded] = useState<boolean>(false);
+
+  useEffect(() => {
+    const q = searchParams?.domain;
+    if (!q) return;
+    // Normalisieren: Protokoll und führendes www. entfernen
+    const cleaned = String(q)
+      .trim()
+      .replace(/^https?:\/\//i, '')
+      .replace(/^www\./i, '');
+    setInputUrl(`https://${cleaned}`);
+  }, [searchParams?.domain]);
 
   const pathname = usePathname();
   const navItems = [

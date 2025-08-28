@@ -131,12 +131,13 @@ export default function CommunityPage() {
 
   const [open, setOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<CategoryKey | ''>('');
-  const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'best'>('newest');
+  const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'best' | 'likes'>('newest');
   const [showAll, setShowAll] = useState(false);
 
   // Current user id (for own post actions)
   const [currentUserId, setCurrentUserId] = useState<string | null>(null);
   const [authorNames, setAuthorNames] = useState<Record<string, string>>({});
+  const [likeCounts, setLikeCounts] = useState<Record<string, number>>({});
 
   // Floating profile (hero-like)
   const [showProfileMenu, setShowProfileMenu] = useState(false);
@@ -207,6 +208,22 @@ export default function CommunityPage() {
       } catch {
         // ignore profile errors
       }
+
+      // Like-Zähler für die sichtbaren Posts sammeln
+      try {
+        const likeIds = mapped.map(p => p.id);
+        if (likeIds.length) {
+          const { data: likesRows } = await supabase
+            .from('community_likes')
+            .select('post_id')
+            .in('post_id', likeIds);
+          const lmap: Record<string, number> = {};
+          for (const r of (likesRows as any[]) || []) {
+            lmap[r.post_id] = (lmap[r.post_id] || 0) + 1;
+          }
+          if (active) setLikeCounts(lmap);
+        }
+      } catch {}
 
       if (active) setLoading(false);
     }
@@ -282,9 +299,11 @@ export default function CommunityPage() {
       arr = [...arr].sort((a, b) => +new Date(a.created_at) - +new Date(b.created_at));
     } else if (sortBy === 'best') {
       arr = [...arr].sort((a, b) => scoreOf(b) - scoreOf(a));
+    } else if (sortBy === 'likes') {
+      arr = [...arr].sort((a, b) => (likeCounts[b.id] || 0) - (likeCounts[a.id] || 0));
     }
     return arr;
-  }, [posts, query, onlyDomain, selectedCategory, sortBy]);
+  }, [posts, query, onlyDomain, selectedCategory, sortBy, likeCounts]);
 
   useEffect(() => {
     setShowAll(false);
@@ -325,6 +344,22 @@ export default function CommunityPage() {
           }
           for (const id of ids) if (!map[id]) map[id] = `user-${String(id).slice(0, 6)}`;
           setAuthorNames(map);
+        }
+      } catch {}
+
+      // Like-Zähler aktualisieren
+      try {
+        const likeIds = mapped.map(p => p.id);
+        if (likeIds.length) {
+          const { data: likesRows } = await supabase
+            .from('community_likes')
+            .select('post_id')
+            .in('post_id', likeIds);
+          const lmap: Record<string, number> = {};
+          for (const r of (likesRows as any[]) || []) {
+            lmap[r.post_id] = (lmap[r.post_id] || 0) + 1;
+          }
+          setLikeCounts(lmap);
         }
       } catch {}
     } catch (e: any) {
@@ -369,11 +404,12 @@ export default function CommunityPage() {
                 <label className="text-xs opacity-70">Sortieren</label>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as 'newest' | 'oldest' | 'best')}
+                  onChange={(e) => setSortBy(e.target.value as 'newest' | 'oldest' | 'best' | 'likes')}
                   className="rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-white/30 backdrop-blur"
                 >
                   <option value="newest">Neueste</option>
                   <option value="best">Beste Bewertung</option>
+                  <option value="likes">Like‑Anzahl</option>
                   <option value="oldest">Älteste</option>
                 </select>
               </div>
