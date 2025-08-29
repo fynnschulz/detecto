@@ -1,8 +1,56 @@
+import { htmlToText } from "html-to-text";
 import { NextRequest, NextResponse } from "next/server";
+
+function getBaseUrl() {
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return "http://localhost:3000";
+}
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
   const { query } = body;
+
+  const baseUrl = getBaseUrl();
+  const osintRes = await fetch(`${baseUrl}/api/osint/search`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ extraQueries: [query] }),
+    cache: "no-store",
+  });
+  let webHits: any[] = [];
+  if (osintRes.ok) {
+    try {
+      const data = await osintRes.json();
+      webHits = Array.isArray(data?.hits) ? data.hits.slice(0, 20) : [];
+    } catch {
+      webHits = [];
+    }
+  }
+
+  // HTML fetching and parsing if query looks like a URL
+  let htmlText = "";
+  if (
+    typeof query === "string" &&
+    (
+      query.startsWith("http://") ||
+      query.startsWith("https://") ||
+      (query.includes(".") && !query.includes(" "))
+    )
+  ) {
+    try {
+      const res = await fetch(query, { method: "GET" });
+      if (res.ok) {
+        const html = await res.text();
+        htmlText = htmlToText(html, { wordwrap: false, selectors: [{ selector: 'script', format: 'skip' }, { selector: 'style', format: 'skip' }] }).slice(0, 3000);
+      }
+    } catch (e) {
+      htmlText = "";
+    }
+  }
 
   if (!query || typeof query !== "string" || query.length < 2) {
     return NextResponse.json({ error: "Ungültige oder zu kurze Anfrage." }, { status: 400 });
@@ -55,7 +103,7 @@ export async function POST(req: NextRequest) {
   Sprachstil für das **Urteil** (nur der Schlussabsatz):
   - Schreibe 5-10 kurze Sätze in Alltagssprache (Niveau B1). Max. 300 Zeichen.
   - **Vermeide Fachbegriffe** wie: DSGVO, Auftragsverarbeitung, berechtigtes Interesse, personenbezogene Daten, Drittlandtransfer, Profiling, Third-Party, Retention, Consent-Banner, Security-Header, HSTS, CSP.
-  - Wenn ein Fachwort unbedingt nötig ist, setze **eine** kurze Erklärung in Klammern dahinter, z. B. "Profilbildung (es wird ein Nutzungsprofil erstellt)".
+  - Wenn ein Fachwort unbedingt nötig ist, setze **eine** kurze Erklärung in Klammerndahinter, z. B. "Profilbildung (es wird ein Nutzungsprofil erstellt)".
   - Keine Schachtelsätze, keine Passivketten, kein Behördendeutsch.
 
   Gib exakt dieses JSON zurück (ohne Vorwort, ohne Erklärung, ohne Markdown):
@@ -79,6 +127,8 @@ export async function POST(req: NextRequest) {
   ]
 
   Thema: ${query}
+  RawHits: ${JSON.stringify(webHits)}
+  HTML_SNIPPET: ${htmlText}
   `;
 
   try {
@@ -100,19 +150,28 @@ export async function POST(req: NextRequest) {
     console.log("GPT-Response:", content);
 
     let alternatives: any[] = [];
-
     try {
-      const firstBrace = content.indexOf("[");
-      const lastBrace = content.lastIndexOf("]");
-      const jsonString = content.slice(firstBrace, lastBrace + 1);
-      console.log("Als JSON extrahiert:", jsonString);
-      try {
-        alternatives = JSON.parse(jsonString);
-      } catch (parseError) {
-        console.error("Fehler beim Parsen der JSON-Antwort von GPT:", parseError);
+      // Versuch 1: direkter JSON-Parse (falls Modell sauber JSON liefert)
+      const direct = JSON.parse(content);
+      if (Array.isArray(direct)) {
+        alternatives = direct;
+      } else if (Array.isArray(direct?.items)) {
+        alternatives = direct.items;
+      } else if (Array.isArray(direct?.alternatives)) {
+        alternatives = direct.alternatives;
       }
-    } catch (parseError) {
-      console.error("Fehler beim Parsen der JSON-Antwort von GPT:", parseError);
+    } catch {
+      // Versuch 2: Fallback – Array aus dem Text ausschneiden
+      try {
+        const first = content.indexOf('[');
+        const last = content.lastIndexOf(']');
+        if (first !== -1 && last !== -1 && last > first) {
+          const jsonString = content.slice(first, last + 1);
+          alternatives = JSON.parse(jsonString);
+        }
+      } catch (e) {
+        console.error('JSON-Fallback-Parse fehlgeschlagen:', e);
+      }
     }
 
     return NextResponse.json({ alternatives });

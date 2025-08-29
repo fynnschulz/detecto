@@ -78,6 +78,7 @@ export default function Home() {
     { label: "Website-Scan", href: "/WebsiteScan" },
     { label: "Suchmaschine", href: "/search" },
     { label: "Community", href: "/community" },
+    { label: "Datencheck", href: "/leak-check" },
     { label: "VPN", href: "/vpn" },
   ];
 
@@ -568,7 +569,7 @@ useEffect(() => {
                           <div className="flex flex-col justify-center h-full">
                             <h3 className="text-4xl font-bold text-white text-center mb-8">UNSERE TOOLS</h3>
                             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                              {["Scan", "Suchmaschine", "Community", "VPN"].map((tool) => (
+                              {["Scan", "Suchmaschine", "Community", "Datencheck", "VPN"].map((tool) => (
                                 <button
                                   key={tool}
                                   onClick={() => setActiveInfo(tool)}
@@ -616,6 +617,7 @@ useEffect(() => {
                                       <p className="text-gray-300 text-sm">Wenn nötig, werden dir sicherere Webseiten vorgeschlagen.</p>
                                     </div>
                                   </div>
+                                  <p className="mt-2 text-center text-gray-300 text-sm">Direkt verbunden mit der Community – sieh dir Posts zur Website an oder teile eigene Erfahrungen.</p>
                                 </div>
                               )}
                               {activeInfo === "Suchmaschine" && (
@@ -658,7 +660,7 @@ useEffect(() => {
                                     <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">✍️</div>
                                     <div>
                                       <p className="text-white font-semibold">Schritt 2: Eigene Meinung teilen</p>
-                                      <p className="text-gray-300 text-sm">Bald kannst du selbst Bewertungen und Tipps abgeben.</p>
+                                      <p className="text-gray-300 text-sm">Teile eigene Erfahrungen, gib Bewertungen ab, like & kommentiere Beiträge – alles öffentlich sichtbar.</p>
                                     </div>
                                   </div>
                                   <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
@@ -666,6 +668,40 @@ useEffect(() => {
                                     <div>
                                       <p className="text-white font-semibold">Schritt 3: Datenschutz bleibt gewahrt</p>
                                       <p className="text-gray-300 text-sm">Alle Beiträge sind anonymisiert und sicher gespeichert.</p>
+                                    </div>
+                                  </div>
+                                  <p className="mt-2 text-center text-gray-300 text-sm">Verknüpft mit der Scan‑Funktion – Domains lassen sich direkt scannen oder Ergebnisse teilen.</p>
+                                </div>
+                              )}
+                              {activeInfo === "Datencheck" && (
+                                <div className="bg-gradient-to-br from-zinc-900/90 via-zinc-800/90 to-black/90 p-6 rounded-2xl shadow-[0_0_40px_rgba(0,255,255,0.09)] text-white max-w-2xl mx-auto space-y-6 transition-all duration-500 border border-zinc-700 backdrop-blur-md">
+                                  <h3 className="text-2xl font-bold text-center text-white mb-4">🧭 Datencheck Schritt für Schritt</h3>
+                                  <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
+                                    <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">📧</div>
+                                    <div>
+                                      <p className="text-white font-semibold">Schritt 1: Daten eingeben</p>
+                                      <p className="text-gray-300 text-sm">E‑Mail (Pflicht), optional Nutzername & Telefonnummer.</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
+                                    <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">🔎</div>
+                                    <div>
+                                      <p className="text-white font-semibold">Schritt 2: Prüfen</p>
+                                      <p className="text-gray-300 text-sm">KI sucht in bekannten Leaks & öffentlichen Quellen nach Treffern.</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
+                                    <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">📋</div>
+                                    <div>
+                                      <p className="text-white font-semibold">Schritt 3: Ergebnis & Ampel</p>
+                                      <p className="text-gray-300 text-sm">Klare Liste mit Quellen, Datum, betroffenen Daten & Risiko‑Ampel.</p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">
+                                    <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">🛡️</div>
+                                    <div>
+                                      <p className="text-white font-semibold">Schritt 4: Maßnahmen</p>
+                                      <p className="text-gray-300 text-sm">Konkrete Tipps: Passwörter ändern, 2FA, Opt‑out für Datenbroker u. v. m.</p>
                                     </div>
                                   </div>
                                 </div>
@@ -677,7 +713,7 @@ useEffect(() => {
                                     <div className="bg-zinc-900/80 border border-blue-700 rounded-full w-12 h-12 flex items-center justify-center text-xl shadow-inner group-hover:shadow-cyan-300/30 transition-all duration-300">🔗</div>
                                     <div>
                                       <p className="text-white font-semibold">Schritt 1: VPN auswählen</p>
-                                      <p className="text-gray-300 text-sm">Wähle einen datenschutzfreundlichen VPN aus (bald verfügbar).</p>
+                                      <p className="text-gray-300 text-sm">Wähle einen datenschutzfreundlichen VPN. Detecto setzt auf eine Integration mit NordVPN.</p>
                                     </div>
                                   </div>
                                   <div className="flex items-start space-x-4 hover:bg-white/5 hover:shadow-cyan-400/10 p-4 rounded-xl transition-all duration-300 group">

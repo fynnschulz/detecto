@@ -1,3 +1,9 @@
+// Helper to get the base URL from request headers
+async function getBaseUrl(req: Request) {
+  const proto = req.headers.get("x-forwarded-proto") || "https";
+  const host = req.headers.get("x-forwarded-host") || req.headers.get("host");
+  return `${proto}://${host}`;
+}
 import { NextRequest, NextResponse } from "next/server";
 
 // --- Utilities -------------------------------------------------------------
@@ -218,7 +224,7 @@ async function collectPolicyEvidence(baseUrl: URL, candidateLinks: string[]) {
 }
 
 // Compose a richer prompt including observed evidence and a fairer rubric
-function buildPrompt(url: string, evidence: any, headMeta: any, policyEvidence: any) {
+function buildPrompt(url: string, evidence: any, headMeta: any, policyEvidence: any, htmlText: string) {
   return `
   Du bist ein unabhängiger Datenschutz- **und** Risiko-Analyst. Analysiere die Webseite: ${url}
   
@@ -227,6 +233,9 @@ function buildPrompt(url: string, evidence: any, headMeta: any, policyEvidence: 
   DIR VORLIEGENDE BELEGE (aus einem technischen Schnell-Scan):
   EVIDENCE_JSON:
   ${JSON.stringify({ headMeta, evidence, policyEvidence }, null, 2)}
+
+  HTML_SNIPPET (erste ca. 3000 Zeichen der Seite, lesbarer Textauszug):
+  ${htmlText.slice(0, 3000)}
   
   Bitte nutze diese Hinweise **aktiv** (prüfe Plausibilität, identifiziere Lücken), statt nur Vermutungen anzustellen.
   
@@ -262,9 +271,10 @@ async function analyzePrivacyScore(
   url: string,
   evidence: any,
   headMeta: any,
-  policyEvidence: any
+  policyEvidence: any,
+  htmlText: string
 ): Promise<{ score: number | null; result: string; judgement: string }> {
-  const prompt = buildPrompt(url, evidence, headMeta, policyEvidence);
+  const prompt = buildPrompt(url, evidence, headMeta, policyEvidence, htmlText);
 
   const openaiRes = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
@@ -308,6 +318,32 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { url } = body;
 
+  // --- Web search hits (osint) -------------------------------------------------
+  const base = await getBaseUrl(req as any);
+  let webHits: any[] = [];
+  try {
+    const host = new URL(url).hostname;
+    const bare = host.replace(/^www\./, "");
+    const extraQueries = [
+      `site:${host} privacy OR datenschutz OR impressum`,
+      `"${bare}" scam OR betrug OR review OR forum`,
+      `"${bare}" leak OR dump OR paste`,
+    ];
+
+    const wsRes = await fetch(`${base}/api/osint/search`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ extraQueries }),
+      cache: "no-store",
+    });
+    if (wsRes.ok) {
+      const ws = await wsRes.json();
+      webHits = Array.isArray(ws.hits) ? ws.hits.slice(0, 20) : [];
+    }
+  } catch {
+    // ignore errors
+  }
+
   if (!url || typeof url !== "string" || !isValidFullUrl(url)) {
     return NextResponse.json<{ error: string }>(
       { error: "Ungültige oder unvollständige URL (z. B. https://example.com)" },
@@ -349,6 +385,7 @@ export async function POST(req: NextRequest) {
   // --- GET HTML to "look behind the scenes" -------------------------------------
   let html = "";
   let evidence: any = {};
+  let htmlText = "";
   try {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
@@ -370,6 +407,8 @@ export async function POST(req: NextRequest) {
       const base = new URL(url);
       const signals = extractHtmlSignals(html, base);
       evidence = signals;
+      // convert to readable text for model analysis
+      htmlText = htmlToText(html);
     }
   } catch (err) {
     // ignore – model will work with headMeta only
@@ -390,6 +429,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Kein API-Key gesetzt" }, { status: 500 });
   }
 
-  const { score, result, judgement } = await analyzePrivacyScore(url, evidence, headMeta, policyEvidence);
+  const { score, result, judgement } = await analyzePrivacyScore(
+    url,
+    { ...evidence, webHits },
+    headMeta,
+    policyEvidence,
+    htmlText
+  );
   return NextResponse.json({ result, judgement, score, policy: policyEvidence });
 }
