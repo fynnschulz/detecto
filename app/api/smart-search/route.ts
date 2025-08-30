@@ -1,5 +1,6 @@
 import { htmlToText } from "html-to-text";
 import { NextRequest, NextResponse } from "next/server";
+import { buildQueryVariants } from "@/app/lib/osint/connectors";
 
 function getBaseUrl() {
   if (process.env.VERCEL_URL) {
@@ -10,17 +11,26 @@ function getBaseUrl() {
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { query } = body;
+  const { query } = body || {};
 
+  if (!query || typeof query !== "string" || query.trim().length < 2) {
+    return NextResponse.json({ error: "Ungültige oder zu kurze Anfrage." }, { status: 400 });
+  }
+
+  // 1) Query-Varianten für OSINT/CSE erzeugen (verbessert die Trefferqualität)
+  const variants = buildQueryVariants(query).slice(0, 8).map(v => v.q);
+  // Query immer an erster Stelle lassen
+  const extraQueries = Array.from(new Set([query, ...variants]));
+
+  // 2) OSINT-Suche (Google CSE + GitHub) anstoßen
   const baseUrl = getBaseUrl();
   const osintRes = await fetch(`${baseUrl}/api/osint/search`, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ extraQueries: [query] }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ extraQueries }),
     cache: "no-store",
   });
+
   let webHits: any[] = [];
   if (osintRes.ok) {
     try {
@@ -31,7 +41,7 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  // HTML fetching and parsing if query looks like a URL
+  // 3) Falls Query wie URL aussieht, HTML einlesen und auf 3000 Zeichen kürzen
   let htmlText = "";
   if (
     typeof query === "string" &&
@@ -45,21 +55,24 @@ export async function POST(req: NextRequest) {
       const res = await fetch(query, { method: "GET" });
       if (res.ok) {
         const html = await res.text();
-        htmlText = htmlToText(html, { wordwrap: false, selectors: [{ selector: 'script', format: 'skip' }, { selector: 'style', format: 'skip' }] }).slice(0, 3000);
+        htmlText = htmlToText(html, {
+          wordwrap: false,
+          selectors: [
+            { selector: 'script', format: 'skip' },
+            { selector: 'style', format: 'skip' }
+          ]
+        }).slice(0, 3000);
       }
     } catch (e) {
       htmlText = "";
     }
   }
 
-  if (!query || typeof query !== "string" || query.length < 2) {
-    return NextResponse.json({ error: "Ungültige oder zu kurze Anfrage." }, { status: 400 });
-  }
-
   if (!process.env.OPENAI_API_KEY) {
     return NextResponse.json({ error: "Fehlender API-Key." }, { status: 500 });
   }
 
+  // 4) Ranking/Empfehlung durch KI (nutzt Webhits + optional HTML-Snippet)
   const prompt = `
   Du bist ein unabhängiger Datenschutz- und Risiko-Analyst. Eine Webseite darf nur empfohlen werden, wenn sie zum Thema passt **und** beim Detecto-Scan nach denselben Kriterien wie das Scan-Tool voraussichtlich **mindestens 65 %** erreichen würde.
 
@@ -127,6 +140,7 @@ export async function POST(req: NextRequest) {
   ]
 
   Thema: ${query}
+  UsedVariants: ${JSON.stringify(extraQueries.slice(0, 8))}
   RawHits: ${JSON.stringify(webHits)}
   HTML_SNIPPET: ${htmlText}
   `;
@@ -151,7 +165,6 @@ export async function POST(req: NextRequest) {
 
     let alternatives: any[] = [];
     try {
-      // Versuch 1: direkter JSON-Parse (falls Modell sauber JSON liefert)
       const direct = JSON.parse(content);
       if (Array.isArray(direct)) {
         alternatives = direct;
@@ -161,7 +174,6 @@ export async function POST(req: NextRequest) {
         alternatives = direct.alternatives;
       }
     } catch {
-      // Versuch 2: Fallback – Array aus dem Text ausschneiden
       try {
         const first = content.indexOf('[');
         const last = content.lastIndexOf(']');
@@ -174,7 +186,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    return NextResponse.json({ alternatives });
+    return NextResponse.json({ alternatives, usedVariants: extraQueries.slice(0, 8) });
   } catch (error) {
     console.error("Fehler bei smart-search:", error);
     return NextResponse.json({ error: "Fehler beim Verarbeiten der Anfrage." }, { status: 500 });
