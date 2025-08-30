@@ -446,7 +446,7 @@ export default function CommunityPage() {
         <div className="absolute inset-0 bg-[radial-gradient(900px_500px_at_90%_80%,rgba(37,99,235,0.10),transparent)]" />
       </div>
 
-      <div className="mx-auto w-full max-w-6xl px-6 py-10">
+      <div className="mx-auto w-full max-w-6xl px-6 py-10 pt-24 md:pt-28">
         {/* Header */}
         <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.12] to-white/[0.05] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.04)] backdrop-blur">
           <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-white/20 blur-3xl opacity-20" />
