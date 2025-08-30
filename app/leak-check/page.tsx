@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState } from 'react'
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 // Inline Topbar (no import)
@@ -14,7 +15,7 @@ function Topbar({ navItems, audience, className }: { navItems: NavItem[]; audien
   if (audience !== "personal") return null;
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] md:pt-4 bg-transparent backdrop-blur-0 border-0 ${className ?? ""}`}
+      className={`fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] md:pt-4 bg-transparent backdrop-blur-0 border-0 select-none ${className ?? ""}`}
     >
       <div
         className="px-3 py-2 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal [-webkit-overflow-scrolling:touch] md:flex md:justify-center"
@@ -67,6 +68,13 @@ const NAV_ITEMS = [
   { label: "Datencheck", href: "/leak-check" },
   { label: "VPN", href: "/vpn" },
 ];
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.7, ease: 'easeOut', delay },
+});
 
 export default function LeakCheckPage() {
   // Inputs
@@ -144,24 +152,47 @@ export default function LeakCheckPage() {
   )
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-10">
-      <Topbar navItems={NAV_ITEMS} audience="personal" />
-      {/* Hero */}
-      <div className="text-center mb-8">
-        <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300 drop-shadow-[0_0_25px_rgba(0,255,255,0.25)]">
-          DATENCHECK
-        </h1>
-        <p className="mt-4 text-base md:text-lg opacity-90 max-w-2xl mx-auto">
-          Prüfe, ob deine persönlichen Daten in Leaks, Foren oder öffentlichen Quellen aufgetaucht sind.
-          Wähle aus, was du durchsuchen willst – E‑Mail, Telefonnummer oder erweiterte Angaben –
-          und starte eine KI-gestützte Suche mit echten Web‑Treffern.
-        </p>
-      </div>
+    <div className="min-h-screen w-full bg-gradient-to-b from-gray-900 via-[#0b0b0f] to-black text-white overflow-x-hidden">
+      <div className="mx-auto max-w-4xl px-6 py-10 pt-24 md:pt-28">
+        <Topbar navItems={NAV_ITEMS} audience="personal" />
+        {/* HERO */}
+        <section className="relative flex items-center justify-center px-0 pt-2 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0 }}
+            className="relative z-10 max-w-3xl mx-auto px-2"
+          >
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.35),0_0_24px_rgba(59,130,246,0.15)]">
+              <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-white bg-clip-text text-transparent">
+                Leak‑ / Daten‑Check
+              </span>
+            </h1>
+            <p className="mt-5 text-xl md:text-2xl text-gray-300 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]">
+              Finde exponierte E‑Mails, Nummern & Namen – mit echten Web‑Treffern und smarter Risiko‑Einstufung.
+            </p>
+            <div className="mx-auto mt-6 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]" />
+          </motion.div>
 
-      {/* Card container */}
-      <form onSubmit={onSubmit} className="grid gap-5">
+          {/* Subtile Lichter */}
+          <motion.div
+            aria-hidden
+            className="pointer-events-none absolute inset-0"
+            initial={{ opacity: 0.35 }}
+            animate={{ opacity: [0.35, 0.55, 0.35] }}
+            transition={{ duration: 10, repeat: Infinity }}
+          >
+            <div className="absolute -top-24 left-[20%] h-80 w-80 rounded-full blur-3xl bg-cyan-500/20" />
+            <div className="absolute top-24 right-[18%] h-96 w-96 rounded-full blur-3xl bg-blue-500/20" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-56 w-56 rounded-full blur-2xl bg-purple-500/15" />
+          </motion.div>
+        </section>
+
+        {/* Card container */}
+        <form onSubmit={onSubmit} className="grid gap-5">
         {/* BASICS */}
-        <section className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] backdrop-blur-xl p-4 shadow-[0_0_40px_rgba(0,255,255,0.08)] transition-all">
+        <section className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-4 md:p-5 shadow-[0_0_40px_rgba(0,255,255,0.08)] transition-all">
           <button
             type="button"
             onClick={() => setOpenBasics(v => !v)}
@@ -201,7 +232,7 @@ export default function LeakCheckPage() {
         </section>
 
         {/* ADVANCED */}
-        <section className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] backdrop-blur-xl p-4 shadow-[0_0_40px_rgba(255,0,255,0.06)] transition-all">
+        <section className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-4 md:p-5 shadow-[0_0_40px_rgba(255,0,255,0.06)] transition-all">
           <button
             type="button"
             onClick={() => setOpenAdvanced(v => !v)}
@@ -294,7 +325,7 @@ export default function LeakCheckPage() {
         </section>
 
         {/* CONSENT + ACTION */}
-        <section className="rounded-2xl border border-white/10 bg-white/[0.06] backdrop-blur-xl p-4">
+        <section className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-4 md:p-5">
           <label className="flex items-center gap-2 text-sm opacity-90">
             <input type="checkbox" checked={consent} onChange={(e)=>setConsent(e.target.checked)} />
             Ich stimme zu, dass eine KI‑gestützte Suche in externen Quellen durchgeführt wird.
@@ -319,10 +350,10 @@ export default function LeakCheckPage() {
 
           {error && <div className="mt-3 rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm">{error}</div>}
         </section>
-      </form>
+        </form>
 
-      {/* RESULTS */}
-      <section className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/[0.03] backdrop-blur-xl p-4 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
+        {/* RESULTS */}
+        <section className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-4 md:p-5 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
         <button type="button" className="w-full flex items-center justify-between text-left" onClick={()=>setOpenResults(v=>!v)}>
           <h2 className="text-xl font-semibold">Ergebnisse</h2>
           <span className={`i-chevron ${openResults ? 'rotate-180' : ''} transition-transform`}>▼</span>
@@ -336,7 +367,8 @@ export default function LeakCheckPage() {
                     <div className="text-lg font-medium">Treffer: {findings.length}</div>
                   </div>
                   {findings.map((f, i)=> (
-                    <div key={i} className="rounded-2xl border border-white/10 bg-white/5 p-4 hover:shadow-[0_0_30px_rgba(0,255,255,0.15)] transition">
+                    <div key={i} className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 pl-5 hover:shadow-[0_0_30px_rgba(0,255,255,0.15)]">
+                      <div aria-hidden className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-blue-400/10" />
                       <div className="flex items-center gap-3">
                         <RiskDot v={f.confidence} />
                         <div className="font-semibold">{f.title}</div>
@@ -369,6 +401,7 @@ export default function LeakCheckPage() {
           </div>
         )}
       </section>
+      </div>
     </div>
   )
 }
