@@ -61,6 +61,7 @@ type Finding = {
   evidence?: string;
 };
 
+// NAV_ITEMS definieren (irrelevanter Testkommentar)
 const NAV_ITEMS = [
   { label: "Website-Scan", href: "/WebsiteScan" },
   { label: "Suchmaschine", href: "/search" },
@@ -170,7 +171,7 @@ export default function LeakCheckPage() {
               </span>
             </h1>
             <p className="mt-5 text-xl md:text-2xl text-gray-300 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]">
-              Finde exponierte E‑Mails, Nummern & Namen – mit echten Web‑Treffern und smarter Risiko‑Einstufung.
+              Finde geleakte E‑Mails, Nummern & Namen – mit echten Web‑Treffern und smarter Risiko‑Einstufung.
             </p>
             <div className="mx-auto mt-6 h-[2px] w-40 md:w-56 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent blur-[1px]" />
           </motion.div>
