@@ -6,7 +6,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { supabase } from '@/app/lib/supabaseClient';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, usePathname } from 'next/navigation';
 import AuthModal from '@/app/components/AuthModal';
 const TypedAuthModal = AuthModal as any;
 import { useUsername } from '@/app/lib/useUsername';
@@ -19,6 +19,58 @@ import { useAuth } from "@/app/providers";
 import { getCommunityPosts as fetchCommunityPosts, type Post as ApiPost } from '@/app/lib/community';
 
 // --- Local category utilities (kept in sync with PostCard) ---
+
+// Inline Topbar (no import)
+
+type Audience = "personal" | "business";
+type NavItem = { label: string; href: string };
+
+function Topbar({ navItems, audience, className }: { navItems: NavItem[]; audience: Audience; className?: string }) {
+  const pathname = usePathname();
+  if (audience !== "personal") return null;
+  return (
+    <nav
+      className={`fixed left-0 right-0 top-0 z-50 pt-[max(env(safe-area-inset-top),0px)] md:pt-4 bg-transparent backdrop-blur-0 border-0 ${className ?? ""}`}
+    >
+      <div
+        className="px-3 py-2 overflow-x-auto md:overflow-visible whitespace-nowrap md:whitespace-normal [-webkit-overflow-scrolling:touch] md:flex md:justify-center"
+        style={{ msOverflowStyle: "none" as any }}
+      >
+        <div className="inline-flex md:flex items-center gap-2 min-w-max md:min-w-0">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`inline-flex items-center px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 relative 
+            ${
+              isActive
+                ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
+                : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
+            }`}
+                aria-current={isActive ? "page" : undefined}
+              >
+                <span className="relative z-10">{item.label}</span>
+                {isActive && (
+                  <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse" />
+                )}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+const NAV_ITEMS = [
+  { label: "Website-Scan", href: "/WebsiteScan" },
+  { label: "Suchmaschine", href: "/search" },
+  { label: "Community", href: "/community" },
+  { label: "Datencheck", href: "/leak-check" },
+  { label: "VPN", href: "/vpn" },
+];
 type CategoryKey =
   | 'onlineshop'
   | 'bank_finance'
@@ -386,6 +438,7 @@ export default function CommunityPage() {
 
   return (
     <div className="relative">
+      <Topbar navItems={NAV_ITEMS} audience="personal" />
       {/* Background layers (hero-style) */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(1200px_600px_at_50%_-10%,rgba(59,130,246,0.18),transparent)]" />

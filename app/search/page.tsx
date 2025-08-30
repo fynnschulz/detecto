@@ -20,6 +20,7 @@ export default function SearchPage() {
     { label: "Website-Scan", href: "/WebsiteScan" },
     { label: "Suchmaschine", href: "/search" },
     { label: "Community", href: "/community" },
+    { label: "Datencheck", href: "/leak-check" },
     { label: "VPN", href: "/vpn" },
   ];
 
