@@ -98,6 +98,8 @@ export default function LeakCheckPage() {
   const [progressPct, setProgressPct] = useState(0)
   const [progressNotes, setProgressNotes] = useState<string[]>([])
   const [deepScan, setDeepScan] = useState(false)
+  const [helpOpen, setHelpOpen] = useState(false)
+  const [helpExpanded, setHelpExpanded] = useState(false)
 
   // Request state
   const [loading, setLoading] = useState(false)
@@ -181,6 +183,13 @@ export default function LeakCheckPage() {
   const RiskDot: React.FC<{v:number}> = ({ v }) => (
     <span className={`inline-block h-2.5 w-2.5 rounded-full ${v >= 80 ? 'bg-red-400' : v >= 50 ? 'bg-yellow-400' : 'bg-green-400'}`} />
   )
+
+  const toggleHelp = () => {
+    setHelpOpen(v => {
+      if (v) setHelpExpanded(false)
+      return !v
+    })
+  }
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-gray-900 via-[#0b0b0f] to-black text-white overflow-x-hidden">
@@ -460,6 +469,103 @@ export default function LeakCheckPage() {
           </section>
         )}
       </div>
+
+        {/* Floating Help Button */}
+        <button
+          type="button"
+          onClick={toggleHelp}
+          aria-expanded={helpOpen}
+          aria-controls="help-panel"
+          className="fixed bottom-5 right-5 z-[60] flex h-12 w-12 items-center justify-center rounded-full bg-cyan-400 text-black shadow-xl ring-1 ring-cyan-300/60 hover:scale-105 active:scale-95 transition"
+          title={helpOpen ? 'Hilfe schließen' : 'Hilfe öffnen'}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={`h-6 w-6 transition-transform ${helpOpen ? 'rotate-45' : ''}`}
+            aria-hidden
+          >
+            <path d="M11 4a1 1 0 0 1 2 0v7h7a1 1 0 1 1 0 2h-7v7a1 1 0 1 1-2 0v-7H4a1 1 0 1 1 0-2h7V4z"/>
+          </svg>
+        </button>
+
+        {/* Sliding Help Panel */}
+        {helpOpen && (
+          <motion.div
+            id="help-panel"
+            initial={{ opacity: 0, y: 12, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.25, ease: 'easeOut' }}
+            className={`fixed bottom-20 right-5 z-[59] ${helpExpanded ? 'w-[92vw] md:w-[520px] max-h-[70vh]' : 'w-[88vw] md:w-[380px]'} rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl shadow-[0_15px_60px_rgba(0,0,0,0.35)]`}
+            role="dialog"
+            aria-label="Erklärung Datencheck"
+            aria-modal="false"
+          >
+            <div className="relative p-4 md:p-5">
+              {/* Header */}
+              <div className="mb-2 flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-cyan-400" />
+                <h3 className="text-base md:text-lg font-semibold">Wie funktioniert der Datencheck?</h3>
+              </div>
+
+              {/* Content */}
+              {!helpExpanded ? (
+                <div className="text-sm text-gray-200/90 space-y-3">
+                  <p>
+                    Der Datencheck durchsucht öffentliche Quellen (z. B. Paste‑Seiten, Foren, Code‑Hosts und
+                    Suchindizes) nach Spuren deiner Eingaben. Wir normalisieren E‑Mail & Telefonnummer,
+                    bilden Varianten/Hashes und prüfen Treffer mit einer KI auf <em>Evidenz</em> & Risiko.
+                  </p>
+                  <ul className="list-disc pl-5 space-y-1 text-gray-300/90">
+                    <li>Schneller Scan: kompakt & zügig</li>
+                    <li>Deep Scan: mehr Quellen, mehr Varianten, strengere Prüfung</li>
+                  </ul>
+                  <div className="mt-3">
+                    <button
+                      type="button"
+                      onClick={() => setHelpExpanded(true)}
+                      className="text-cyan-300 hover:text-white underline underline-offset-2"
+                    >
+                      Mehr lesen
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-sm text-gray-200/90 max-h-[56vh] overflow-y-auto pr-1 space-y-3">
+                  <p>
+                    <strong>Überblick.</strong> Der Datencheck kombiniert gezielte Websuche mit inhaltlicher
+                    Validierung. Aus deinen Angaben werden normalisierte Varianten erzeugt (E‑Mail‑Normalisierung,
+                    internationale Telefonformate), dazu Hash‑Ableitungen (MD5/SHA‑1/SHA‑256) und leichte
+                    Schreibvarianten.
+                  </p>
+                  <p>
+                    <strong>Suche & Quellen.</strong> Wir erstellen Query‑Kombinationen (z. B. „E‑Mail + leak“,
+                    „Telefon + paste“, Services) und fragen primär seriöse Quellen ab: Paste‑Seiten, Foren,
+                    Code‑Hosts (z. B. GitHub/Gist) und Suchindizes. Ergebnisse werden dedupliziert.
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>Normalisierung:</strong> Klein-/Großschreibung, Sonderzeichen, E.164‑Telefon</li>
+                    <li><strong>Varianten:</strong> Punkte/Plus‑Aliase bei E‑Mails, Hashes, Tokenisierung von Namen</li>
+                    <li><strong>Query‑Expansion:</strong> mehrsprachige Schlüsselwörter, Dienst‑Namen</li>
+                    <li><strong>Fetch & Extraktion:</strong> Seiten abrufen, Text extrahieren, Regex/Fuzzy‑Match</li>
+                    <li><strong>Scoring:</strong> Quelle, Frische, Mehrfach‑Belege → Confidence 0–100</li>
+                    <li><strong>Ausgabe:</strong> Quelle, Hinweis/Evidenz, Risikoschätzung</li>
+                  </ul>
+                  <p>
+                    <strong>Datenschutz.</strong> Die Eingaben werden nur für den Suchvorgang genutzt. Es werden
+                    keine personenbezogenen Daten öffentlich gespeichert. Treffer enthalten nur die nötigsten
+                    Nachweise (kurze Snippets/Links), damit du sie selbst prüfen kannst.
+                  </p>
+                  <p className="opacity-80">
+                    Tipp: Je mehr optionale Felder du angibst (z. B. Name, genutzte Dienste), desto gezielter kann
+                    der Datencheck filtern und False‑Positives reduzieren.
+                  </p>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        )}
     </div>
   )
 }
