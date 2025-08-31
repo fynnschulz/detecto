@@ -366,6 +366,59 @@ export async function POST(req: Request) {
     const usernames=(body.usernames??[]).map(normUsername).filter(Boolean);
     const phones=(body.phones??[]).map(normPhone).filter(Boolean);
 
+    // --- DEMO MODE ---
+    // Triggered if demo@detecto.ai is among emails OR explicit body.demo === true
+    const isDemo = (emails || []).includes('demo@detecto.ai') || (body as any)?.demo === true;
+    if (isDemo) {
+      const demoFindings = [
+        {
+          source: "pastebin.com",
+          title: "Combo dump (sample)",
+          date: "2024-11-07",
+          url: "https://pastebin.com/abcdef12",
+          source_type: "paste",
+          evidence: "… demo@detecto.ai : hunter2 …",
+          exposed: ["email","password"],
+          confidence: 92,
+          status: "kritisch",
+          indicators: ["hash_dump","broker_keywords"],
+          trade_score: 9
+        },
+        {
+          source: "gist.github.com",
+          title: "Credentials list (example)",
+          date: "2025-02-14",
+          url: "https://gist.github.com/1234567890",
+          source_type: "open_web",
+          evidence: "… api_key=sk-demo-XXXXXXXXXXXXXXXX ; jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.…",
+          exposed: ["tokens","api_keys","email"],
+          confidence: 78,
+          status: "hoch",
+          indicators: ["jwt_token","api_key"],
+          trade_score: 4
+        },
+        {
+          source: "controlc.com",
+          title: "phone/email list",
+          date: "2025-03-22",
+          url: "https://controlc.com/abcdef",
+          source_type: "paste",
+          evidence: "… +49 170 0000000 ; demo [at] detecto [dot] ai …",
+          exposed: ["phone","email"],
+          confidence: 65,
+          status: "mittel",
+          indicators: ["obfuscated_email"],
+          trade_score: 2
+        }
+      ];
+
+      const findings = sanitizeFindings(demoFindings).map(f => ({ ...f, actions: actionsForFinding(f) }));
+      const next_steps = summarizeNextSteps(findings);
+      const stats = { queries: deepScan ? 24 : 12, hits: demoFindings.length };
+      const query = { ...body, demo: true };
+      return NextResponse.json({ query, findings, next_steps, stats }, { status: 200 });
+    }
+
     const fullName=normText(body.fullName);
     const city=normText(body.city);
     const country=normText(body.country);
