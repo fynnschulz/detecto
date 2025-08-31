@@ -101,6 +101,10 @@ export default function LeakCheckPage() {
   const [helpOpen, setHelpOpen] = useState(false)
   const [helpExpanded, setHelpExpanded] = useState(false)
 
+  // Circular progress constants
+  const R = 54; // radius
+  const CIRC = useMemo(() => 2 * Math.PI * R, [])
+
   // Request state
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -131,15 +135,15 @@ export default function LeakCheckPage() {
         : []
     )
 
-    let pct = 0
-    const targetWhileWaiting = deepScan ? 92 : 70
+    const startedAt = Date.now()
+    const minDurationMs = deepScan ? 14000 : 3500
+
     const interval = setInterval(() => {
-      // sanft ansteigen lassen, verlangsamt ab ~70%
-      const base = pct < 60 ? 2 + Math.random() * 2 : pct < 80 ? 1 + Math.random() * 1.5 : 0.5 + Math.random()
-      const factor = deepScan ? 0.8 : 1.2
-      pct = Math.min(targetWhileWaiting, pct + base * factor)
-      setProgressPct(Math.round(pct))
-    }, 250)
+      const elapsed = Date.now() - startedAt
+      const fraction = Math.min(elapsed / minDurationMs, 0.99) // bis 99% während wir warten
+      const pct = Math.max(1, Math.floor(fraction * 100))
+      setProgressPct(pct)
+    }, deepScan ? 120 : 80)
 
     try {
       const payload = {
@@ -164,12 +168,30 @@ export default function LeakCheckPage() {
       if (deepScan) setProgressNotes(v => [...v, "Treffer werden geladen & geprüft…"])
       if (!res.ok) throw new Error(`Scan fehlgeschlagen (${res.status})`)
       const data = await res.json()
-      setFindings(data.findings ?? [])
-      setOpenResults(true)
-      if (deepScan) setProgressNotes(v => [...v, "KI‑Validierung & Konsolidierung abgeschlossen"])
-      setProgressPct(100)
-      setPhase('done')
-      clearInterval(interval)
+      const elapsed = Date.now() - startedAt
+      const remaining = Math.max(0, minDurationMs - elapsed)
+
+      const finalize = () => {
+        setFindings(data.findings ?? [])
+        setOpenResults(true)
+        if (deepScan) setProgressNotes(v => [...v, "KI‑Validierung & Konsolidierung abgeschlossen"])
+        setProgressPct(100)
+        setPhase('done')
+        clearInterval(interval)
+      }
+
+      if (remaining > 0) {
+        // Während wir warten, langsam weiter auf ~99% schieben
+        const smoothTimer = setInterval(() => {
+          setProgressPct(p => Math.min(99, p + (deepScan ? 0.4 : 1.8)))
+        }, deepScan ? 220 : 140)
+        setTimeout(() => {
+          clearInterval(smoothTimer)
+          finalize()
+        }, remaining)
+      } else {
+        finalize()
+      }
     } catch (err: any) {
       setError(err?.message || 'Unbekannter Fehler')
       setPhase('error')
@@ -407,29 +429,97 @@ export default function LeakCheckPage() {
         {/* PROGRESS / RESULTS */}
         {phase === 'running' && (
           <section className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-5 shadow-[0_0_40px_rgba(0,255,255,0.08)]">
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="text-xl font-semibold">{deepScan ? 'Tiefer Scan läuft…' : 'Schneller Scan läuft…'}</h2>
-              <div className="text-sm opacity-80">{progressPct}%</div>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-xl font-semibold">{deepScan ? 'Tiefer Scan läuft…' : 'Schneller Scan läuft…'}</h2>
+            <div className="text-base font-semibold tracking-wide">{progressPct}%</div>
+          </div>
+
+          <div className="mt-3 flex items-center gap-4">
+            {/* Circular progress */}
+            <div className="relative h-[132px] w-[132px]">
+              <svg className="h-full w-full -rotate-90" viewBox="0 0 120 120" aria-hidden>
+                <circle cx="60" cy="60" r={R} stroke="rgba(255,255,255,0.15)" strokeWidth="6" fill="none" />
+                <circle
+                  cx="60" cy="60" r={R}
+                  stroke={deepScan ? 'url(#gradDeep)' : 'url(#gradFast)'}
+                  strokeWidth="6"
+                  strokeLinecap="round"
+                  strokeDasharray={CIRC}
+                  strokeDashoffset={((100 - progressPct) / 100) * CIRC}
+                  fill="none"
+                  style={{ transition: 'stroke-dashoffset 120ms linear' }}
+                />
+                <defs>
+                  <linearGradient id="gradDeep" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#22d3ee" />
+                    <stop offset="100%" stopColor="#3b82f6" />
+                  </linearGradient>
+                  <linearGradient id="gradFast" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="#a3e635" />
+                    <stop offset="100%" stopColor="#22d3ee" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div className="absolute inset-0 grid place-items-center text-xl font-semibold">
+                {progressPct}%
+              </div>
             </div>
-            <div className="h-2 w-full rounded-full bg-white/10 overflow-hidden">
-              <div className="h-2 w-full rounded-full bg-gradient-to-r from-cyan-400 via-blue-400 to-white" style={{ transform: `translateX(-${100 - progressPct}%)` }} />
+
+            <div className="flex-1">
+              {deepScan ? (
+                <div className="space-y-2 text-sm opacity-90">
+                  {progressNotes.map((n, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                      <span>{n}</span>
+                    </div>
+                  ))}
+                  <div className="text-xs opacity-70">Dies kann je nach Quelle 10–20 Sekunden dauern.</div>
+                </div>
+              ) : (
+                <div className="text-sm opacity-80">Kurz-Check aktiv. Das geht fix.</div>
+              )}
             </div>
-            {deepScan && (
-              <ul className="mt-4 space-y-2 text-sm opacity-90">
-                {progressNotes.map((n, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-300" />
-                    <span>{n}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-            <div className="mt-4 text-xs opacity-70">{deepScan ? 'Dies kann je nach Quelle 10–20 Sekunden dauern.' : 'Dies dauert nur wenige Sekunden.'}</div>
+          </div>
           </section>
         )}
 
         {phase === 'done' && (
           <section className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-5 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
+            {/* Success flash with full circle */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.25 }}
+              className="mb-3 flex items-center gap-4"
+            >
+              <div className="relative h-[132px] w-[132px]">
+                <svg className="h-full w-full -rotate-90" viewBox="0 0 120 120" aria-hidden>
+                  <circle cx="60" cy="60" r={R} stroke="rgba(255,255,255,0.15)" strokeWidth="6" fill="none" />
+                  <circle
+                    cx="60" cy="60" r={R}
+                    stroke="url(#gradDeep)"
+                    strokeWidth="6"
+                    strokeLinecap="round"
+                    strokeDasharray={CIRC}
+                    strokeDashoffset={0}
+                    fill="none"
+                  />
+                </svg>
+                {/* flash ring */}
+                <motion.span
+                  initial={{ opacity: 0.0, scale: 0.9 }}
+                  animate={{ opacity: [0.0, 0.6, 0.0], scale: [0.9, 1.15, 1.25] }}
+                  transition={{ duration: 0.8, ease: 'easeOut' }}
+                  className="pointer-events-none absolute inset-0 rounded-full ring-4 ring-cyan-300/40"
+                />
+                <div className="absolute inset-0 grid place-items-center text-xl font-semibold">100%</div>
+              </div>
+              <div className="flex-1">
+                <div className="text-base font-medium">Scan abgeschlossen – Ergebnisse unten</div>
+                <div className="text-xs opacity-70">Wir haben alles konsolidiert und gewichten die Treffer nach Quelle & Evidenz.</div>
+              </div>
+            </motion.div>
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold">Scan abgeschlossen</h2>
               <span className="text-sm opacity-80">100%</span>
