@@ -27,6 +27,7 @@ type Payload = {
   birthYear?: number
   aliases?: string[]
   services?: string[]
+  deepScan?: boolean
 }
 
 // --- Normalization helpers ---
@@ -63,6 +64,24 @@ function emailHashes(e: string) {
   const n = normalizeEmailAdvanced(e);
   return [md5(n), sha1(n), sha256(n)];
 }
+
+function b64(s: string) { return Buffer.from(s, "utf8").toString("base64"); }
+function hex(s: string) { return Buffer.from(s, "utf8").toString("hex"); }
+function emailEncodings(e: string) {
+  const n = normalizeEmailAdvanced(e);
+  return [b64(n), hex(n)];
+}
+// Simple Levenshtein + fuzzy comparer for names
+function levenshtein(a: string, b: string){
+  const m=a.length, n=b.length; const dp:number[][]=Array.from({length:m+1},()=>Array(n+1).fill(0));
+  for(let i=0;i<=m;i++) dp[i][0]=i; for(let j=0;j<=n;j++) dp[0][j]=j;
+  for(let i=1;i<=m;i++) for(let j=1;j<=n;j++){
+    const cost=a[i-1]===b[j-1]?0:1;
+    dp[i][j]=Math.min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost);
+  }
+  return dp[m][n];
+}
+const near = (a:string,b:string,dist=2)=>levenshtein(a.toLowerCase(),b.toLowerCase())<=dist;
 
 function normUsername(u: string) { return String(u).trim(); }
 function normPhone(p: string) {
@@ -102,11 +121,12 @@ function sanitizeFindings(raw: any): any[] {
     const evidence = normText(f?.evidence);
     let confidence = Number.isFinite(f?.confidence) ? Math.max(0, Math.min(100, Number(f.confidence))) : 0;
     let exposed: string[] = Array.isArray(f?.exposed) ? f.exposed.map((x: any)=> String(x).toLowerCase().trim()).filter((x: string)=> EXPOSED_WHITELIST.has(x)) : [];
+    const status = normText(f?.status);
     const key = `${source}|${title}|${date}|${url}`;
     if (!source && !title && !url) continue;
     if (dedupe.has(key)) continue;
     dedupe.add(key);
-    out.push({ source, title, date, url, source_type, evidence, exposed, confidence });
+    out.push({ source, title, date, url, source_type, evidence, exposed, confidence, status });
   }
   out.sort((a,b)=>{
     const c = b.confidence - a.confidence;
@@ -119,6 +139,25 @@ function sanitizeFindings(raw: any): any[] {
 }
 
 // --- Evidence extraction ---
+// Extra detectors
+const CC_REGEX = /\b(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})\b/g; // basic major brands
+const IBAN_REGEX = /\b[A-Z]{2}\d{13,32}\b/g; // generic IBAN pattern
+const API_HINTS = /\b(api[_-]?key|secret|token|bearer|authorization|password|passwd|pwd)\b/i;
+const TRADE_HINTS = /\b(for sale|verkauf|price|btc|monero|combo list|database dump|logs for sale|stealer|fullz)\b/i;
+const ABUSE_HINTS = /\b(phishing|spam list|scam kit|credential stuffing|checker)\b/i;
+
+function classifyContext(lower: string){
+  if (TRADE_HINTS.test(lower)) return "verkauf";
+  if (ABUSE_HINTS.test(lower)) return "missbrauch";
+  return "normal";
+}
+
+function weightBySource(host:string){
+  if (/pastebin|ghostbin|hastebin|controlc|rentry|pastelink/i.test(host)) return 10;
+  if (/github|gist|reddit/i.test(host)) return 6;
+  return 0;
+}
+
 function contextSnippet(text: string, idx: number, len: number) {
   const start = Math.max(0, idx-120);
   const end = Math.min(text.length, idx+len+120);
@@ -155,6 +194,7 @@ export async function POST(req: Request) {
     const ip=(req.headers.get("x-forwarded-for")||"").split(",")[0].trim()||"unknown";
     if(!rateLimit(ip)) return NextResponse.json({error:"Zu viele Anfragen. Bitte später erneut."},{status:429});
     const body=(await req.json()) as Payload;
+    const deepScan = body.deepScan === true;
 
     const emails=(body.emails??[]).map(normEmail).filter(Boolean);
     const usernames=(body.usernames??[]).map(normUsername).filter(Boolean);
@@ -175,6 +215,8 @@ export async function POST(req: Request) {
     // Build variants & hashes
     const emailAllVariants = Array.from(new Set(emails.flatMap(emailVariants)));
     const emailAllHashes = Array.from(new Set(emails.flatMap(emailHashes)));
+    const emailAllEnc = Array.from(new Set(emails.flatMap(emailEncodings)));
+    const emailSearchSet = Array.from(new Set([...emailAllVariants, ...emailAllHashes, ...emailAllEnc]));
     const phonesE164 = Array.from(new Set(phones));
     const nameTokens: string[] = [];
     if(fullName) {
@@ -185,7 +227,7 @@ export async function POST(req: Request) {
     }
     for(const a of aliases){ if(a) nameTokens.push(ascii(a)); }
 
-    const queryPayload={emails,usernames,phones,person:{fullName,city,country,address,birthYear,aliases:aliases.length?aliases:undefined},context:{services:services.length?services:undefined}};
+    const queryPayload={emails,usernames,phones,person:{fullName,city,country,address,birthYear,aliases:aliases.length?aliases:undefined},context:{services:services.length?services:undefined},deepScan};
 
     async function getBaseUrl(req: Request) {
       const proto=req.headers.get("x-forwarded-proto")||"https";
@@ -194,24 +236,32 @@ export async function POST(req: Request) {
     }
     const base=await getBaseUrl(req);
 
-    // Build expanded queries
-    const strongHints=[...emailAllVariants,...phonesE164,...nameTokens.map(n=>`\"${n}\"`)];
-    const pasteSites=["site:pastebin.com","site:ghostbin.com","site:hastebin.com","site:controlc.com","site:rentry.co","site:pastelink.net"];
+    // Build expanded queries (mode-aware)
+    const strongHints=[...emailSearchSet,...phonesE164,...nameTokens.map(n=>`"${n}"`)];
+
+    const pasteSitesLite=["site:pastebin.com","site:ghostbin.com","site:controlc.com","site:github.com","site:reddit.com"];
+    const pasteSitesFull=["site:pastebin.com","site:ghostbin.com","site:hastebin.com","site:controlc.com","site:rentry.co","site:pastelink.net","site:github.com","site:gist.github.com","site:reddit.com"]; 
+
+    const extraKwLite=["leak","datenleck","data breach","paste","dump"]; 
+    const extraKwFull=["leak","datenleck","data breach","paste","dump","combo list","credential dump","verkauf","for sale","price","btc","monero","logs"]; 
+
+    const pasteSites = deepScan ? pasteSitesFull : pasteSitesLite;
+    const extraKw = deepScan ? extraKwFull : extraKwLite;
+    const maxQueries = deepScan ? 60 : 20;
+
     const extraQueries=Array.from(new Set([
       ...strongHints,
-      ...strongHints.map(h=>`${h} leak`),
-      ...strongHints.map(h=>`${h} datenleck`),
-      ...strongHints.map(h=>`${h} data breach`),
+      ...strongHints.flatMap(h=>extraKw.map(x=>`${h} ${x}`)),
       ...pasteSites.flatMap(ps=>strongHints.map(h=>`${ps} ${h}`)),
       ...services.flatMap(svc=>strongHints.map(h=>`${h} ${svc}`)),
-    ])).slice(0,30);
+    ])).slice(0,maxQueries);
 
     const osintRes=await fetch(`${base}/api/osint/search`,{
       method:"POST",headers:{"Content-Type":"application/json"},
       body:JSON.stringify({extraQueries}),cache:"no-store"
     });
     let hits:any[]=[];
-    if(osintRes.ok){try{const data=await osintRes.json(); hits=Array.isArray(data?.hits)?data.hits.slice(0,20):[];}catch{}}
+    if(osintRes.ok){try{const data=await osintRes.json(); hits=Array.isArray(data?.hits)?data.hits.slice(0, deepScan ? 40 : 15):[];}catch{}}
 
     // Fetch pages for evidence
     const findingsRaw:any[]=[];
@@ -221,9 +271,23 @@ export async function POST(req: Request) {
         if(!res.ok) continue;
         const html=await res.text();
         const text=htmlToText(html,{wordwrap:false,selectors:[{selector:"script",format:"skip"},{selector:"style",format:"skip"}]});
-        const ev=extractEvidence(text,{emails:emailAllVariants,emailHashes:emailAllHashes,phones:phonesE164,names:nameTokens});
+        const ev=extractEvidence(text,{emails:emailSearchSet,emailHashes:emailSearchSet,phones:phonesE164,names:nameTokens});
+        const host=new URL(h.link).hostname;
+        const lower=text.toLowerCase();
+        const status = classifyContext(lower);
+        const bonus = weightBySource(host) + (status!=="normal"?8:0);
+        const conf = Math.min(100, ev.confidence + bonus);
         if(ev.confidence>0){
-          findingsRaw.push({source:new URL(h.link).hostname,title:h.title||new URL(h.link).hostname,url:h.link,source_type:"open_web",evidence:ev.evidence,exposed:ev.exposed,confidence:ev.confidence});
+          findingsRaw.push({
+            source:host,
+            title:h.title||host,
+            url:h.link,
+            source_type:"open_web",
+            evidence:ev.evidence,
+            exposed:ev.exposed,
+            confidence:conf,
+            status
+          });
         }
       } catch{}
     }
@@ -232,11 +296,14 @@ export async function POST(req: Request) {
     const system=`Du bist ein präziser Sicherheits-Assistent. Analysiere die übergebenen Findings und validiere nur echte, belegbare Treffer. Ergänze falls nötig mit Quelle/Typ. Gib JSON zurück.`;
     const user={role:"user",content:[{type:"text",text:`Query: ${JSON.stringify(queryPayload)}\nRoh-Findings: ${JSON.stringify(findingsRaw)}`}]} as const;
 
-    const controller=new AbortController(); const timeout=setTimeout(()=>controller.abort(),20000);
+    const aiTimeoutMs = deepScan ? 30000 : 18000;
+    const aiMaxTokens = deepScan ? 1600 : 1100;
+
+    const controller=new AbortController(); const timeout=setTimeout(()=>controller.abort(),aiTimeoutMs);
     const aiRes=await fetch("https://api.openai.com/v1/chat/completions",{
       method:"POST",
       headers:{Authorization:`Bearer ${process.env.OPENAI_API_KEY}`,"Content-Type":"application/json"},
-      body:JSON.stringify({model:"gpt-4o-mini",messages:[{role:"system",content:system},user],temperature:0,response_format:{type:"json_object"},max_tokens:1200}),
+      body:JSON.stringify({model:"gpt-4o-mini",messages:[{role:"system",content:system},user],temperature:0,response_format:{type:"json_object"},max_tokens: aiMaxTokens}),
       signal:controller.signal
     });
     clearTimeout(timeout);

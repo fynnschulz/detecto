@@ -94,6 +94,10 @@ export default function LeakCheckPage() {
   const [openBasics, setOpenBasics] = useState(true)
   const [openAdvanced, setOpenAdvanced] = useState(false)
   const [openResults, setOpenResults] = useState(true)
+  const [phase, setPhase] = useState<'idle'|'running'|'done'|'error'>("idle")
+  const [progressPct, setProgressPct] = useState(0)
+  const [progressNotes, setProgressNotes] = useState<string[]>([])
+  const [deepScan, setDeepScan] = useState(false)
 
   // Request state
   const [loading, setLoading] = useState(false)
@@ -117,6 +121,24 @@ export default function LeakCheckPage() {
     setLoading(true)
     setError(null)
     setFindings(null)
+    setPhase('running')
+    setProgressPct(0)
+    setProgressNotes(
+      deepScan
+        ? ["Eingaben normalisiert", "Query‑Expansion wird vorbereitet…"]
+        : []
+    )
+
+    let pct = 0
+    const targetWhileWaiting = deepScan ? 92 : 70
+    const interval = setInterval(() => {
+      // sanft ansteigen lassen, verlangsamt ab ~70%
+      const base = pct < 60 ? 2 + Math.random() * 2 : pct < 80 ? 1 + Math.random() * 1.5 : 0.5 + Math.random()
+      const factor = deepScan ? 0.8 : 1.2
+      pct = Math.min(targetWhileWaiting, pct + base * factor)
+      setProgressPct(Math.round(pct))
+    }, 250)
+
     try {
       const payload = {
         emails: [email.trim().toLowerCase()].filter(Boolean),
@@ -129,6 +151,7 @@ export default function LeakCheckPage() {
         birthYear: birthYear ? Number(birthYear) : undefined,
         aliases: splitCSV(aliases),
         services: splitCSV(services),
+        deepScan,
       }
 
       const res = await fetch('/api/leak-ai-check', {
@@ -136,13 +159,20 @@ export default function LeakCheckPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       })
+      if (deepScan) setProgressNotes(v => [...v, "Treffer werden geladen & geprüft…"])
       if (!res.ok) throw new Error(`Scan fehlgeschlagen (${res.status})`)
       const data = await res.json()
       setFindings(data.findings ?? [])
       setOpenResults(true)
+      if (deepScan) setProgressNotes(v => [...v, "KI‑Validierung & Konsolidierung abgeschlossen"])
+      setProgressPct(100)
+      setPhase('done')
+      clearInterval(interval)
     } catch (err: any) {
       setError(err?.message || 'Unbekannter Fehler')
+      setPhase('error')
     } finally {
+      clearInterval(interval)
       setLoading(false)
     }
   }
@@ -332,13 +362,32 @@ export default function LeakCheckPage() {
             Ich stimme zu, dass eine KI‑gestützte Suche in externen Quellen durchgeführt wird.
           </label>
 
+          {/* Deep Scan Switch */}
+          <div className="mt-3 flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+            <div>
+              <div className="text-sm font-medium">Deep Scan (gründlicher, langsamer)</div>
+              <div className="text-xs opacity-70">Mehr Quellen & Varianten, intensivere Evidenz‑Prüfung</div>
+            </div>
+            <button
+              type="button"
+              onClick={() => setDeepScan(v => !v)}
+              aria-pressed={deepScan}
+              className={`relative h-6 w-11 rounded-full transition ${deepScan ? 'bg-cyan-400/80' : 'bg-white/15'}`}
+              title="Deep Scan umschalten"
+            >
+              <span
+                className={`absolute top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${deepScan ? 'translate-x-5' : 'translate-x-0.5'}`}
+              />
+            </button>
+          </div>
+
           <div className="mt-3 flex gap-3">
             <button
               type="submit"
               disabled={!valid || loading}
               className="inline-flex items-center justify-center rounded-xl border border-cyan-300/40 bg-cyan-500/10 px-4 py-2 hover:bg-cyan-500/20 hover:border-cyan-300/70 disabled:opacity-60 transition"
             >
-              {loading ? 'Prüfe…' : 'Jetzt prüfen'}
+              {loading ? 'Scanne…' : deepScan ? 'Deep Scan starten' : 'Schnellen Scan starten'}
             </button>
             <button
               type="button"
@@ -353,55 +402,70 @@ export default function LeakCheckPage() {
         </section>
         </form>
 
-        {/* RESULTS */}
-        <section className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-4 md:p-5 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
-        <button type="button" className="w-full flex items-center justify-between text-left" onClick={()=>setOpenResults(v=>!v)}>
-          <h2 className="text-xl font-semibold">Ergebnisse</h2>
-          <span className={`i-chevron ${openResults ? 'rotate-180' : ''} transition-transform`}>▼</span>
-        </button>
-        {openResults && (
-          <div className="mt-4 grid gap-4">
-            {findings ? (
-              findings.length ? (
-                <>
-                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                    <div className="text-lg font-medium">Treffer: {findings.length}</div>
-                  </div>
-                  {findings.map((f, i)=> (
-                    <div key={i} className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 pl-5 hover:shadow-[0_0_30px_rgba(0,255,255,0.15)]">
-                      <div aria-hidden className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-blue-400/10" />
-                      <div className="flex items-center gap-3">
-                        <RiskDot v={f.confidence} />
-                        <div className="font-semibold">{f.title}</div>
-                        <div className="ml-auto text-xs opacity-70">{f.source}{f.date ? ` • ${f.date}` : ''}</div>
-                      </div>
-                      {f.exposed?.length ? (
-                        <div className="mt-2 text-sm opacity-90">Betroffen: {f.exposed.join(', ')}</div>
-                      ) : null}
-                      <div className="mt-2 text-xs opacity-70 flex gap-3 flex-wrap">
-                        {f.source_type ? <span className="px-2 py-0.5 rounded bg-white/10">{f.source_type}</span> : null}
-                        <span className="px-2 py-0.5 rounded bg-white/10">Confidence: {Math.round(f.confidence)}%</span>
-                        {f.url ? (
-                          <a href={f.url} target="_blank" rel="noopener noreferrer" className="px-2 py-0.5 rounded bg-white/10 underline">Quelle öffnen</a>
-                        ) : null}
-                      </div>
-                      {f.evidence ? (
-                        <div className="mt-2 text-xs opacity-80">Hinweis: {f.evidence}</div>
+        {/* PROGRESS / RESULTS */}
+        {phase === 'running' && (
+          <section className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-5 shadow-[0_0_40px_rgba(0,255,255,0.08)]">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-xl font-semibold">{deepScan ? 'Tiefer Scan läuft…' : 'Schneller Scan läuft…'}</h2>
+              <div className="text-sm opacity-80">{progressPct}%</div>
+            </div>
+            <div className="h-2 w-full rounded-full bg-white/10 overflow-hidden">
+              <div className="h-2 w-full rounded-full bg-gradient-to-r from-cyan-400 via-blue-400 to-white" style={{ transform: `translateX(-${100 - progressPct}%)` }} />
+            </div>
+            {deepScan && (
+              <ul className="mt-4 space-y-2 text-sm opacity-90">
+                {progressNotes.map((n, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                    <span>{n}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <div className="mt-4 text-xs opacity-70">{deepScan ? 'Dies kann je nach Quelle 10–20 Sekunden dauern.' : 'Dies dauert nur wenige Sekunden.'}</div>
+          </section>
+        )}
+
+        {phase === 'done' && (
+          <section className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-5 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-semibold">Scan abgeschlossen</h2>
+              <span className="text-sm opacity-80">100%</span>
+            </div>
+            {findings && findings.length ? (
+              <div className="mt-4 grid gap-4">
+                <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                  <div className="text-lg font-medium">Treffer: {findings.length}</div>
+                </div>
+                {findings.map((f, i) => (
+                  <div key={i} className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 pl-5 hover:shadow-[0_0_30px_rgba(0,255,255,0.15)]">
+                    <div aria-hidden className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-blue-400/10" />
+                    <div className="flex items-center gap-3">
+                      <RiskDot v={f.confidence} />
+                      <div className="font-semibold">{f.title}</div>
+                      <div className="ml-auto text-xs opacity-70">{f.source}{f.date ? ` • ${f.date}` : ''}</div>
+                    </div>
+                    {f.exposed?.length ? (
+                      <div className="mt-2 text-sm opacity-90">Betroffen: {f.exposed.join(', ')}</div>
+                    ) : null}
+                    <div className="mt-2 text-xs opacity-70 flex gap-3 flex-wrap">
+                      {f.source_type ? <span className="px-2 py-0.5 rounded bg-white/10">{f.source_type}</span> : null}
+                      <span className="px-2 py-0.5 rounded bg-white/10">Confidence: {Math.round(f.confidence)}%</span>
+                      {f.url ? (
+                        <a href={f.url} target="_blank" rel="noopener noreferrer" className="px-2 py-0.5 rounded bg-white/10 underline">Quelle öffnen</a>
                       ) : null}
                     </div>
-                  ))}
-                </>
-              ) : (
-                <div className="rounded-xl border border-white/10 bg-white/5 p-4">Keine Treffer gefunden 🎉</div>
-              )
-            ) : (
-              <div className="rounded-xl border border-white/10 bg-white/5 p-4 opacity-80 text-sm">
-                Noch keine Ergebnisse. Starte zuerst eine Prüfung.
+                    {f.evidence ? (
+                      <div className="mt-2 text-xs opacity-80">Hinweis: {f.evidence}</div>
+                    ) : null}
+                  </div>
+                ))}
               </div>
+            ) : (
+              <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-4">Keine Treffer gefunden 🎉</div>
             )}
-          </div>
+          </section>
         )}
-      </section>
       </div>
     </div>
   )
