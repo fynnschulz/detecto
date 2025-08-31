@@ -182,9 +182,29 @@ export default function LeakCheckPage() {
         setFindings(data.findings ?? [])
         setOpenResults(true)
         if (deepScan) setProgressNotes(v => [...v, "KI‑Validierung & Konsolidierung abgeschlossen"])
-        setProgressPct(100)
-        setPhase('done')
+        // stop the main timer first
         clearInterval(interval)
+
+        // read the latest percentage synchronously via functional update
+        let startVal = 0
+        setProgressPct(p => { startVal = Math.max(0, Math.min(100, p)); return p })
+
+        const duration = deepScan ? 1200 : 600 // ms for the final smooth fill
+        const stepMs = 40
+        const steps = Math.max(1, Math.ceil(duration / stepMs))
+        let i = 0
+        const finTimer = setInterval(() => {
+          i++
+          const next = startVal + ((100 - startVal) * (i / steps))
+          // keep one decimal as elsewhere
+          const rounded = Math.round(next * 10) / 10
+          setProgressPct(Math.min(100, rounded))
+          if (i >= steps) {
+            clearInterval(finTimer)
+            setProgressPct(100)
+            setPhase('done')
+          }
+        }, stepMs)
       }
 
       if (remaining > 0) {
