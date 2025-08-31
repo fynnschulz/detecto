@@ -5,6 +5,13 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
+// helpers for percentage formatting
+const clampPct = (v: number) => Math.max(0, Math.min(100, Number.isFinite(v) ? v : 0))
+const fmtPct = (v: number) => {
+  const x = Math.round(clampPct(v) * 10) / 10
+  return (x % 1 === 0 ? x.toFixed(0) : x.toFixed(1))
+}
+
 // Inline Topbar (no import)
 
 type Audience = "personal" | "business";
@@ -136,7 +143,7 @@ export default function LeakCheckPage() {
     )
 
     const startedAt = Date.now()
-    const minDurationMs = deepScan ? 14000 : 3500
+    const minDurationMs = deepScan ? 18000 : 3500
 
     const interval = setInterval(() => {
       const elapsed = Date.now() - startedAt
@@ -183,7 +190,7 @@ export default function LeakCheckPage() {
       if (remaining > 0) {
         // Während wir warten, langsam weiter auf ~99% schieben
         const smoothTimer = setInterval(() => {
-          setProgressPct(p => Math.min(99, p + (deepScan ? 0.4 : 1.8)))
+          setProgressPct(p => Math.min(99, p + (deepScan ? 0.25 : 1.8)))
         }, deepScan ? 220 : 140)
         setTimeout(() => {
           clearInterval(smoothTimer)
@@ -431,7 +438,7 @@ export default function LeakCheckPage() {
           <section className="mt-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-5 shadow-[0_0_40px_rgba(0,255,255,0.08)]">
           <div className="flex items-center justify-between mb-2">
             <h2 className="text-xl font-semibold">{deepScan ? 'Tiefer Scan läuft…' : 'Schneller Scan läuft…'}</h2>
-            <div className="text-base font-semibold tracking-wide">{progressPct}%</div>
+            <div className="text-base font-semibold tracking-wide">{fmtPct(progressPct)}%</div>
           </div>
 
           <div className="mt-3 flex items-center gap-4">
@@ -445,7 +452,7 @@ export default function LeakCheckPage() {
                   strokeWidth="6"
                   strokeLinecap="round"
                   strokeDasharray={CIRC}
-                  strokeDashoffset={((100 - progressPct) / 100) * CIRC}
+                  strokeDashoffset={((100 - (Math.round(clampPct(progressPct) * 10) / 10)) / 100) * CIRC}
                   fill="none"
                   style={{ transition: 'stroke-dashoffset 120ms linear' }}
                 />
@@ -461,7 +468,7 @@ export default function LeakCheckPage() {
                 </defs>
               </svg>
               <div className="absolute inset-0 grid place-items-center text-xl font-semibold">
-                {progressPct}%
+                {fmtPct(progressPct)}%
               </div>
             </div>
 
