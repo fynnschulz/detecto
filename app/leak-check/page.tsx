@@ -389,13 +389,6 @@ export default function LeakCheckPage() {
             >
               {loading ? 'Scanne…' : deepScan ? 'Deep Scan starten' : 'Schnellen Scan starten'}
             </button>
-            <button
-              type="button"
-              onClick={() => { setEmail(''); setPhone(''); setFullName(''); setCity(''); setCountry(''); setAddress(''); setBirthYear(''); setAliases(''); setServices(''); setFindings(null); setError(null); }}
-              className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-4 py-2 hover:bg-white/10 transition"
-            >
-              Zurücksetzen
-            </button>
           </div>
 
           {error && <div className="mt-3 rounded-lg border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm">{error}</div>}
