@@ -476,7 +476,7 @@ export default function LeakCheckPage() {
           onClick={toggleHelp}
           aria-expanded={helpOpen}
           aria-controls="help-panel"
-          className="fixed bottom-5 right-5 z-[60] flex h-12 w-12 items-center justify-center rounded-full bg-cyan-400 text-black shadow-xl ring-1 ring-cyan-300/60 hover:scale-105 active:scale-95 transition"
+          className="fixed bottom-5 right-5 z-[60] flex h-12 w-12 items-center justify-center rounded-full bg-gray-400 text-black shadow-xl ring-1 ring-gray-300/60 hover:scale-105 active:scale-95 transition"
           title={helpOpen ? 'Hilfe schließen' : 'Hilfe öffnen'}
         >
           <svg
@@ -517,10 +517,9 @@ export default function LeakCheckPage() {
                     Suchindizes) nach Spuren deiner Eingaben. Wir normalisieren E‑Mail & Telefonnummer,
                     bilden Varianten/Hashes und prüfen Treffer mit einer KI auf <em>Evidenz</em> & Risiko.
                   </p>
-                  <ul className="list-disc pl-5 space-y-1 text-gray-300/90">
-                    <li>Schneller Scan: kompakt & zügig</li>
-                    <li>Deep Scan: mehr Quellen, mehr Varianten, strengere Prüfung</li>
-                  </ul>
+                  <p className="text-gray-300/90">
+                    Du kannst zwischen einem schnellen Scan (kompakt und zügig) und einem Deep Scan wählen, der gründlicher arbeitet, mehr Quellen und Varianten einbezieht und die Evidenz strenger prüft.
+                  </p>
                   <div className="mt-3">
                     <button
                       type="button"
@@ -544,14 +543,12 @@ export default function LeakCheckPage() {
                     „Telefon + paste“, Services) und fragen primär seriöse Quellen ab: Paste‑Seiten, Foren,
                     Code‑Hosts (z. B. GitHub/Gist) und Suchindizes. Ergebnisse werden dedupliziert.
                   </p>
-                  <ul className="list-disc pl-5 space-y-2">
-                    <li><strong>Normalisierung:</strong> Klein-/Großschreibung, Sonderzeichen, E.164‑Telefon</li>
-                    <li><strong>Varianten:</strong> Punkte/Plus‑Aliase bei E‑Mails, Hashes, Tokenisierung von Namen</li>
-                    <li><strong>Query‑Expansion:</strong> mehrsprachige Schlüsselwörter, Dienst‑Namen</li>
-                    <li><strong>Fetch & Extraktion:</strong> Seiten abrufen, Text extrahieren, Regex/Fuzzy‑Match</li>
-                    <li><strong>Scoring:</strong> Quelle, Frische, Mehrfach‑Belege → Confidence 0–100</li>
-                    <li><strong>Ausgabe:</strong> Quelle, Hinweis/Evidenz, Risikoschätzung</li>
-                  </ul>
+                  <p>
+                    <strong>Pipeline im Detail.</strong> Zunächst werden Eingaben vereinheitlicht (z. B. Klein‑/Großschreibung und Sonderzeichen sowie E.164‑Formate für Telefonnummern). Darauf aufbauend erzeugen wir Varianten wie Punkte‑ oder Plus‑Aliase bei E‑Mails sowie Hash‑Ableitungen und tokenisierte Namensformen. Anschließend erweitern wir die Suchanfragen mehrsprachig um passende Schlüsselwörter und Dienstnamen, damit auch indirekte Erwähnungen erfasst werden.
+                  </p>
+                  <p>
+                    Danach rufen wir die Seiten ab, extrahieren den Text und suchen mithilfe von Regex und toleranter Ähnlichkeitserkennung nach Treffern. Die Bewertung berücksichtigt Quelle, Aktualität und Mehrfach‑Belege und führt zu einer Confidence‑Einschätzung von 0 bis 100. Am Ende erhältst du eine konsolidierte Ausgabe mit Quelle, kompaktem Hinweis zur Evidenz und einer transparenten Risikoeinschätzung.
+                  </p>
                   <p>
                     <strong>Datenschutz.</strong> Die Eingaben werden nur für den Suchvorgang genutzt. Es werden
                     keine personenbezogenen Daten öffentlich gespeichert. Treffer enthalten nur die nötigsten
