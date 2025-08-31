@@ -71,6 +71,46 @@ function emailEncodings(e: string) {
   const n = normalizeEmailAdvanced(e);
   return [b64(n), hex(n)];
 }
+// --- Query expansion helpers ---
+const leetMap: Record<string,string[]> = { a:["4","@"], e:["3"], i:["1"], o:["0"], s:["5","$"], t:["7"], l:["1"], g:["9"], b:["8"] };
+function leetVariants(s: string){
+  const base = ascii(String(s).toLowerCase());
+  const out = new Set<string>([base]);
+  const chars = base.split("");
+  // single-substitution variants (keep small to avoid explosion)
+  for(let i=0;i<chars.length;i++){
+    const c = chars[i];
+    if(leetMap[c]){
+      for(const sub of leetMap[c]){
+        out.add(chars.slice(0,i).join("")+sub+chars.slice(i+1).join(""));
+      }
+    }
+  }
+  return Array.from(out);
+}
+function usernameVariants(u: string){
+  const base = ascii(normUsername(u).toLowerCase());
+  const bag = new Set<string>([base]);
+  const suffixes = ["123","01","2025","_","-","_dev","_sec"]; 
+  for(const sfx of suffixes){ bag.add(base+sfx); }
+  const prefixes = ["_","-","the","real","its"];
+  for(const pfx of prefixes){ bag.add(pfx+base); }
+  leetVariants(base).forEach(v=>bag.add(v));
+  return Array.from(bag);
+}
+function emailDomainTokens(emails: string[]){
+  const out = new Set<string>();
+  for(const e of emails){
+    const parts = normEmail(e).split("@");
+    if(parts.length!==2) continue;
+    const domain = parts[1];
+    out.add(domain);
+    const [host,tld] = domain.split(".");
+    if(host) out.add(host);
+    if(tld) out.add(tld);
+  }
+  return Array.from(out);
+}
 // Simple Levenshtein + fuzzy comparer for names
 function levenshtein(a: string, b: string){
   const m=a.length, n=b.length; const dp:number[][]=Array.from({length:m+1},()=>Array(n+1).fill(0));
@@ -122,11 +162,13 @@ function sanitizeFindings(raw: any): any[] {
     let confidence = Number.isFinite(f?.confidence) ? Math.max(0, Math.min(100, Number(f.confidence))) : 0;
     let exposed: string[] = Array.isArray(f?.exposed) ? f.exposed.map((x: any)=> String(x).toLowerCase().trim()).filter((x: string)=> EXPOSED_WHITELIST.has(x)) : [];
     const status = normText(f?.status);
+    const indicators: string[] = Array.isArray(f?.indicators) ? f.indicators.map((x:any)=>String(x)) : [];
+    const trade_score = Number.isFinite(f?.trade_score) ? Math.max(0, Math.min(20, Number(f.trade_score))) : 0;
     const key = `${source}|${title}|${date}|${url}`;
     if (!source && !title && !url) continue;
     if (dedupe.has(key)) continue;
     dedupe.add(key);
-    out.push({ source, title, date, url, source_type, evidence, exposed, confidence, status });
+    out.push({ source, title, date, url, source_type, evidence, exposed, confidence, status, indicators, trade_score });
   }
   out.sort((a,b)=>{
     const c = b.confidence - a.confidence;
@@ -138,6 +180,60 @@ function sanitizeFindings(raw: any): any[] {
   return out;
 }
 
+// --- Recommendations ---
+function uniq<T>(arr: T[]) { return Array.from(new Set(arr)); }
+
+function actionsForFinding(f: any): string[] {
+  const acts: string[] = [];
+  const exp = new Set<string>((f?.exposed || []).map((x: string) => String(x).toLowerCase()));
+  const sourceType = String(f?.source_type || '').toLowerCase();
+  const status = String(f?.status || '').toLowerCase();
+  const indicators: string[] = Array.isArray(f?.indicators) ? f.indicators.map((x: any) => String(x).toLowerCase()) : [];
+
+  const isBroker = sourceType === 'broker' || status === 'handel' || indicators.includes('broker_keywords');
+  const hashDump = indicators.includes('hash_dump') || indicators.includes('csv_like_dump');
+
+  // generelle Basics
+  acts.push('Passwörter prüfen und ggf. ändern – besonders bei betroffenen Diensten');
+  acts.push('Zwei‑Faktor‑Authentifizierung (2FA) überall aktivieren');
+
+  if (exp.has('email')) {
+    acts.push('Mail‑Konto absichern: starke Passwörter, 2FA, Weiterleitungen/Filter prüfen');
+    acts.push('Phishing im Blick behalten; Absender genau prüfen');
+  }
+  if (exp.has('password') || hashDump) {
+    acts.push('Passwort‑Wiederverwendung beenden; überall unterschiedliche Passwörter');
+    acts.push('Passwort‑Manager einsetzen und kompromittierte Passwörter austauschen');
+  }
+  if (exp.has('tokens') || exp.has('api_keys')) {
+    acts.push('API‑Schlüssel/Token sofort zurückziehen und neu ausstellen');
+    acts.push('Zugehörige Webhooks/Integrationen überprüfen');
+  }
+  if (exp.has('phone')) {
+    acts.push('Mobilfunk‑Konto mit Kunden‑PIN schützen (SIM‑Swap‑Schutz)');
+    acts.push('Ungewöhnliche SMS/Anrufe skeptisch behandeln, keine Codes weitergeben');
+  }
+  if (exp.has('address') || exp.has('fullname') || exp.has('name')) {
+    acts.push('Personensuchseiten per Opt‑out entfernen (Datenauskunft/Einwilligung widerrufen)');
+  }
+  if (exp.has('credit_card')) {
+    acts.push('Kartenherausgeber kontaktieren, Karte sperren/neu ausstellen lassen');
+    acts.push('Umsätze überwachen und Chargeback‑Fristen beachten');
+  }
+  if (isBroker) {
+    acts.push('Identitäts‑Monitoring aktivieren; ungewöhnliche Anträge/Verträge prüfen');
+    acts.push('Bei Verdacht: Kredit‑/Bonitätsauskunft beobachten und Missbrauch melden');
+  }
+
+  return uniq(acts).slice(0, 10);
+}
+
+function summarizeNextSteps(findings: any[]): string[] {
+  const bag: string[] = [];
+  for (const f of findings) actionsForFinding(f).forEach(a => bag.push(a));
+  return uniq(bag).slice(0, 12);
+}
+
 // --- Evidence extraction ---
 // Extra detectors
 const CC_REGEX = /\b(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})\b/g; // basic major brands
@@ -146,6 +242,46 @@ const API_HINTS = /\b(api[_-]?key|secret|token|bearer|authorization|password|pas
 const TRADE_HINTS = /\b(for sale|verkauf|price|btc|monero|combo list|database dump|logs for sale|stealer|fullz)\b/i;
 const ABUSE_HINTS = /\b(phishing|spam list|scam kit|credential stuffing|checker)\b/i;
 
+// Trade / broker indicators
+const EMAIL_SIMPLE = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/ig;
+const HASH_HEX = /\b[a-f0-9]{32,64}\b/ig; // md5/sha1/sha256 length range
+const CSV_DELIMS = /[,;\t\|]/;
+const PRICE_HINTS = /(\b\d{1,4}(?:[\.,]\d{2})?\s?(?:usd|eur|€|\$)\b|\bprice\b|\bpreisk?\b)/i;
+const CONTACT_SELL = /(contact\s+me|dm\s+for|telegram|whatsapp|icq|jabber).*?(?:price|buy|verkauf|sale)/i;
+
+function countEmails(text: string){
+  const m = text.match(EMAIL_SIMPLE); return m ? m.length : 0;
+}
+function highRowDensity(text: string){
+  // crude heuristic: many short, delimiter‑separated tokens per line
+  const lines = text.split(/\n|\r/).slice(0, 2000);
+  let dense = 0;
+  for (const ln of lines){
+    const parts = ln.split(CSV_DELIMS);
+    if (parts.length >= 4 && ln.length > 12) dense++;
+  }
+  return dense >= 60; // ~60 lines that look like CSV/TSV
+}
+function detectTradeIndicators(text: string){
+  const lower = text.toLowerCase();
+  const flags: string[] = [];
+  let score = 0;
+  const emailCount = countEmails(text);
+  const hashCount = (text.match(HASH_HEX)||[]).length;
+
+  if (TRADE_HINTS.test(lower)) { flags.push('broker_keywords'); score += 6; }
+  if (PRICE_HINTS.test(text))   { flags.push('price_tag');       score += 3; }
+  if (/(btc|bitcoin|monero|xmr)/i.test(text)) { flags.push('crypto'); score += 2; }
+  if (CONTACT_SELL.test(lower)) { flags.push('contact_for_sale'); score += 2; }
+  if (emailCount >= 50)         { flags.push('bulk_emails');      score += 4; }
+  if (hashCount  >= 200)        { flags.push('hash_dump');        score += 4; }
+  if (highRowDensity(text))     { flags.push('csv_like_dump');    score += 3; }
+
+  // normalize/clip
+  if (score > 20) score = 20;
+  return { flags, score };
+}
+
 function classifyContext(lower: string){
   if (TRADE_HINTS.test(lower)) return "verkauf";
   if (ABUSE_HINTS.test(lower)) return "missbrauch";
@@ -153,8 +289,10 @@ function classifyContext(lower: string){
 }
 
 function weightBySource(host:string){
-  if (/pastebin|ghostbin|hastebin|controlc|rentry|pastelink/i.test(host)) return 10;
-  if (/github|gist|reddit/i.test(host)) return 6;
+  if (/(?:^|\.)pastebin|ghostbin|hastebin|controlc|rentry|pastelink/i.test(host)) return 12;
+  if (/(?:^|\.)github|gist|gitlab/i.test(host)) return 8;
+  if (/(?:^|\.)reddit|stackoverflow|superuser/i.test(host)) return 5;
+  if (/(?:^|\.)medium|dev\.to/i.test(host)) return 2;
   return 0;
 }
 
@@ -163,18 +301,46 @@ function contextSnippet(text: string, idx: number, len: number) {
   const end = Math.min(text.length, idx+len+120);
   return text.slice(start,end).replace(/\s+/g," ").trim();
 }
-function extractEvidence(text: string, opts: {emails:string[],emailHashes:string[],phones:string[],names:string[]}) {
+function extractEvidence(text: string, opts: {emails:string[],emailHashes:string[],emailEnc:string[],phones:string[],names:string[]}) {
   const lower = text.toLowerCase();
   const evidences:string[] = [];
   let confidence=0;
   const exposed:string[]=[];
+  // helper for obfuscated email regex
+  function emailObfRegex(e: string){
+    const [local,domain] = e.toLowerCase().split("@");
+    if(!local||!domain) return null;
+    const esc = (s:string)=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const dot = "\\s*(?:\\.|dot)\\s*";
+    const at = "\\s*(?:@|\n|\\[at\\]|\\(at\\)|\\s+at\\s+)\\s*";
+    const localRx = esc(local).replace(/\./g,dot);
+    const domainRx = esc(domain).replace(/\./g,dot);
+    return new RegExp(`${localRx}${at}${domainRx}`,'i');
+  }
   for (const e of opts.emails) {
-    const idx=lower.indexOf(e.toLowerCase());
-    if(idx!==-1){exposed.push("email"); evidences.push(contextSnippet(text,idx,e.length)); confidence+=40;}
+    const eLower = e.toLowerCase();
+    let found=false;
+    let pos=-1; let len=e.length;
+    const idx=lower.indexOf(eLower);
+    if(idx!==-1){found=true; pos=idx;}
+    if(!found){ const rx=emailObfRegex(eLower); if(rx){ const m=rx.exec(text); if(m){found=true; pos=m.index; len=m[0].length;} } }
+    if(!found){
+      // very loose: allow spaces between characters of local/domain
+      const esc = (s:string)=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      const spaced = eLower.replace(/([@.])/g,'$1').split("").map(ch=>ch.match(/[a-z0-9]/)?`${ch}\\s*`:esc(ch)).join("");
+      const rx2 = new RegExp(spaced,'i');
+      const m2 = rx2.exec(text);
+      if(m2){found=true; pos=m2.index; len=m2[0].length;}
+    }
+    if(found){exposed.push("email"); evidences.push(contextSnippet(text,pos,len)); confidence+=40;}
   }
   for (const h of opts.emailHashes) {
     const idx=lower.indexOf(h);
     if(idx!==-1){exposed.push("email"); evidences.push(contextSnippet(text,idx,h.length)); confidence+=25;}
+  }
+  for (const enc of opts.emailEnc) {
+    const idx=lower.indexOf(enc.toLowerCase());
+    if(idx!==-1){exposed.push("email"); evidences.push(contextSnippet(text,idx,enc.length)); confidence+=15;}
   }
   for (const p of opts.phones) {
     const rx=phoneRegexFromE164(p);
@@ -226,6 +392,9 @@ export async function POST(req: Request) {
       if(country) nameTokens.push(`${n} ${ascii(country)}`);
     }
     for(const a of aliases){ if(a) nameTokens.push(ascii(a)); }
+    // Username and domain tokens for expansion
+    const userTokens = Array.from(new Set(usernames.flatMap(usernameVariants)));
+    const domainTokens = emailDomainTokens(emails);
 
     const queryPayload={emails,usernames,phones,person:{fullName,city,country,address,birthYear,aliases:aliases.length?aliases:undefined},context:{services:services.length?services:undefined},deepScan};
 
@@ -237,17 +406,26 @@ export async function POST(req: Request) {
     const base=await getBaseUrl(req);
 
     // Build expanded queries (mode-aware)
-    const strongHints=[...emailSearchSet,...phonesE164,...nameTokens.map(n=>`"${n}"`)];
+    const strongHints=[
+      ...emailSearchSet,
+      ...phonesE164,
+      ...nameTokens.map(n=>`"${n}"`),
+      ...userTokens,
+      ...domainTokens
+    ];
 
     const pasteSitesLite=["site:pastebin.com","site:ghostbin.com","site:controlc.com","site:github.com","site:reddit.com"];
     const pasteSitesFull=["site:pastebin.com","site:ghostbin.com","site:hastebin.com","site:controlc.com","site:rentry.co","site:pastelink.net","site:github.com","site:gist.github.com","site:reddit.com"]; 
 
-    const extraKwLite=["leak","datenleck","data breach","paste","dump"]; 
-    const extraKwFull=["leak","datenleck","data breach","paste","dump","combo list","credential dump","verkauf","for sale","price","btc","monero","logs"]; 
+    const extraKwLite=["leak","datenleck","data breach","paste","dump","exposed","breach"];
+    const extraKwFull=[
+      "leak","datenleck","data breach","paste","dump","combo list","credential dump","verkauf","for sale","price","btc","monero","logs",
+      "database","csv","txt","json","public","index","checker","combo","stealer"
+    ];
 
     const pasteSites = deepScan ? pasteSitesFull : pasteSitesLite;
     const extraKw = deepScan ? extraKwFull : extraKwLite;
-    const maxQueries = deepScan ? 60 : 20;
+    const maxQueries = deepScan ? 80 : 20;
 
     const extraQueries=Array.from(new Set([
       ...strongHints,
@@ -271,22 +449,50 @@ export async function POST(req: Request) {
         if(!res.ok) continue;
         const html=await res.text();
         const text=htmlToText(html,{wordwrap:false,selectors:[{selector:"script",format:"skip"},{selector:"style",format:"skip"}]});
-        const ev=extractEvidence(text,{emails:emailSearchSet,emailHashes:emailSearchSet,phones:phonesE164,names:nameTokens});
+        let extraTexts: string[] = [];
+        if(deepScan){
+          const hrefs = Array.from(html.matchAll(/href=\"([^\"]+)\"/g)).slice(0,50).map(m=>m[1]);
+          const sameHostLinks = hrefs
+            .map(href=>{ try{ return new URL(href, h.link).toString(); }catch{ return null; } })
+            .filter((u): u is string => !!u && new URL(u).hostname===new URL(h.link).hostname)
+            .filter(u=>/(leak|dump|paste|data|csv|txt)/i.test(u))
+            .slice(0,3);
+          for(const u of sameHostLinks){
+            try{
+              const r2=await fetch(u,{method:"GET",cache:"no-store"});
+              if(!r2.ok) continue; const h2=await r2.text();
+              const t2=htmlToText(h2,{wordwrap:false,selectors:[{selector:"script",format:"skip"},{selector:"style",format:"skip"}]});
+              extraTexts.push(t2);
+            }catch{}
+          }
+        }
+        const ev=extractEvidence(text,{emails:emailSearchSet,emailHashes:emailAllHashes,emailEnc:emailAllEnc,phones:phonesE164,names:nameTokens});
+        for(const t2 of extraTexts){
+          const ev2 = extractEvidence(t2,{emails:emailSearchSet,emailHashes:emailAllHashes,emailEnc:emailAllEnc,phones:phonesE164,names:nameTokens});
+          if(ev2.confidence>ev.confidence){
+            ev.confidence = ev2.confidence;
+            ev.evidence = ev2.evidence;
+            ev.exposed = Array.from(new Set([...(ev.exposed||[]), ...(ev2.exposed||[])]));
+          }
+        }
         const host=new URL(h.link).hostname;
         const lower=text.toLowerCase();
         const status = classifyContext(lower);
-        const bonus = weightBySource(host) + (status!=="normal"?8:0);
+        const trade = detectTradeIndicators(text);
+        const bonus = weightBySource(host) + (status!=="normal"?8:0) + (trade.score>=8?6:0);
         const conf = Math.min(100, ev.confidence + bonus);
         if(ev.confidence>0){
           findingsRaw.push({
             source:host,
             title:h.title||host,
             url:h.link,
-            source_type:"open_web",
+            source_type: trade.score>=10 ? "broker" : "open_web",
             evidence:ev.evidence,
             exposed:ev.exposed,
             confidence:conf,
-            status
+            status: trade.score>=10 ? "handel" : status,
+            indicators: trade.flags,
+            trade_score: trade.score
           });
         }
       } catch{}
@@ -310,8 +516,11 @@ export async function POST(req: Request) {
     if(!aiRes.ok){const errText=await aiRes.text(); throw new Error(`OpenAI API Fehler: ${errText}`);}
     const aiData=await aiRes.json();
     let parsed:any; try{const content=aiData.choices?.[0]?.message?.content??"{}"; parsed=JSON.parse(content);}catch{parsed={findings:[]};}
-    const findings=sanitizeFindings(parsed);
-    return NextResponse.json({query:queryPayload,findings},{status:200});
+    const findings = sanitizeFindings(parsed);
+    const findingsWithActions = findings.map(f => ({ ...f, actions: actionsForFinding(f) }));
+    const next_steps = summarizeNextSteps(findingsWithActions);
+    const stats = { queries: extraQueries.length, hits: hits.length };
+    return NextResponse.json({ query: queryPayload, findings: findingsWithActions, next_steps, stats }, { status: 200 });
   } catch(e:any) {
     const msg=e?.name==="AbortError"?"Zeitüberschreitung bei der Abfrage":(e?.message||"Fehler");
     return NextResponse.json({error:msg},{status:500});

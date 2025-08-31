@@ -58,15 +58,19 @@ function Topbar({ navItems, audience, className }: { navItems: NavItem[]; audien
 
 // Types
 type Finding = {
-  source: string;
-  title: string;
-  date?: string;
-  exposed?: string[];
-  confidence: number; // 0–100
-  url?: string;
-  source_type?: 'breach' | 'paste' | 'forum' | 'open_web' | 'broker' | 'darknet' | string;
-  evidence?: string;
-};
+  source: string
+  title?: string
+  date?: string
+  exposed?: string[]
+  confidence: number // 0–100
+  url?: string
+  source_type?: 'breach' | 'paste' | 'forum' | 'open_web' | 'broker' | 'darknet' | string
+  evidence?: string
+  status?: string
+  indicators?: string[]
+  trade_score?: number
+  actions?: string[]
+}
 
 // NAV_ITEMS definieren (irrelevanter Testkommentar)
 const NAV_ITEMS = [
@@ -116,6 +120,8 @@ export default function LeakCheckPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [findings, setFindings] = useState<Finding[] | null>(null)
+  const [nextSteps, setNextSteps] = useState<string[]>([])
+  const [stats, setStats] = useState<{queries:number; hits:number} | null>(null)
 
   const hasAnyInput = useMemo(() => [email, phone, fullName, city, country, address, birthYear]
     .some(v => String(v || '').trim().length > 0), [email, phone, fullName, city, country, address, birthYear])
@@ -136,6 +142,8 @@ export default function LeakCheckPage() {
     setFindings(null)
     setPhase('running')
     setProgressPct(0)
+    setNextSteps([])
+    setStats(null)
     setProgressNotes(
       deepScan
         ? ["Eingaben normalisiert", "Query‑Expansion wird vorbereitet…"]
@@ -180,6 +188,10 @@ export default function LeakCheckPage() {
 
       const finalize = () => {
         setFindings(data.findings ?? [])
+        setNextSteps(Array.isArray(data.next_steps) ? data.next_steps : [])
+        setStats(data.stats && typeof data.stats === 'object'
+          ? { queries: Number(data.stats.queries)||0, hits: Number(data.stats.hits)||0 }
+          : null)
         setOpenResults(true)
         if (deepScan) setProgressNotes(v => [...v, "KI‑Validierung & Konsolidierung abgeschlossen"])
         // stop the main timer first
@@ -551,6 +563,19 @@ export default function LeakCheckPage() {
               <h2 className="text-xl font-semibold">Scan abgeschlossen</h2>
               <span className="text-sm opacity-80">100%</span>
             </div>
+            {nextSteps && nextSteps.length > 0 && (
+              <div className="mb-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div className="mb-1.5 text-lg font-semibold">Nächste Schritte</div>
+                <ul className="space-y-1 text-sm text-gray-200">
+                  {nextSteps.map((a, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="mt-[6px] inline-block h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                      <span>{a}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             {findings && findings.length ? (
               <div className="mt-4 grid gap-4">
                 <div className="rounded-xl border border-white/10 bg-white/5 p-4">
@@ -577,6 +602,19 @@ export default function LeakCheckPage() {
                     {f.evidence ? (
                       <div className="mt-2 text-xs opacity-80">Hinweis: {f.evidence}</div>
                     ) : null}
+                    {f.actions && f.actions.length > 0 && (
+                      <div className="mt-3">
+                        <div className="text-sm font-medium text-white/90">Empfohlen</div>
+                        <ul className="mt-1 space-y-1 text-sm text-gray-300">
+                          {f.actions.slice(0,5).map((act, j) => (
+                            <li key={j} className="flex items-start gap-2">
+                              <span className="mt-[6px] inline-block h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                              <span>{act}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
