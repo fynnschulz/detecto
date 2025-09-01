@@ -1,6 +1,64 @@
 import { NextRequest, NextResponse } from "next/server";
 import { htmlToText } from "html-to-text";
 
+// Grobe Kategorie-Erkennung aus HTML-Text und Domain
+function extractCategoryKeywords(text: string, domain: string): string[] {
+  const src = `${domain} ${text}`.toLowerCase();
+  const map: Record<string, string[]> = {
+    shop: ["shop", "store", "verkauf", "kaufen", "ecommerce"],
+    banking: ["bank", "konto", "überweisung", "kredit", "zahlung", "payment"],
+    versicherung: ["versicherung", "policy", "schaden", "tarif"],
+    gesundheit: ["gesundheit", "arzt", "clinic", "medizin", "pharma"],
+    dating: ["dating", "match", "partner", "beziehung"],
+    social: ["social", "community", "netzwerk", "forum"],
+    cloud: ["cloud", "speicher", "storage", "drive"],
+    vpn: ["vpn", "proxy", "privacy"],
+    mail: ["mail", "email", "inbox"],
+    ai: ["ai", "ki", "gpt", "modell", "chatbot"],
+    learning: ["lernen", "kurs", "tutorial", "academy", "udemy"],
+  };
+  const hits: string[] = [];
+  for (const [key, kws] of Object.entries(map)) {
+    if (kws.some((k) => src.includes(k))) hits.push(key);
+  }
+  return hits.slice(0, 3);
+}
+
+// Baut vielfältige, DE-fokussierte Query-Varianten für Alternativen
+function buildAltQueries(domain: string, categories: string[]): string[] {
+  const base = domain.replace(/^www\./, "");
+  const brand = base.split(".")[0];
+  const cats = categories.length ? categories : ["service", "anbieter", "tool"];
+
+  const q: string[] = [
+    `${brand} alternative`,
+    `${base} alternative`,
+    `ähnliche seiten wie ${brand}`,
+    `seriöse alternative zu ${brand}`,
+    `${brand} konkurrent`,
+    `${brand} competitor`,
+    `${brand} review`,
+    `${brand} erfahrungen`,
+    `${brand} datenschutz`,
+  ];
+
+  // Kategorien einbeziehen (deutsch/regionale Varianten)
+  for (const c of cats) {
+    q.push(
+      `${c} alternative seriös`,
+      `${c} datenschutzfreundlich deutsch`,
+      `${c} anbieter deutschland`,
+      `beste ${c} anbieter datenschutz`,
+      `${c} vergleich sicher`,
+    );
+  }
+  // Double-check: Ergebnisse auf andere Domains richten
+  q.push(`-site:${base} ${brand} alternative`);
+
+  // Einzigartige, auf 20 beschränken
+  return Array.from(new Set(q)).slice(0, 20);
+}
+
 // Hilfsfunktion: vollständige URL prüfen (nur mit https:// erlaubt)
 function isValidFullUrl(url: string): boolean {
   try {
@@ -42,10 +100,12 @@ export async function POST(req: NextRequest) {
   const baseUrl = `${req.headers.get("x-forwarded-proto") || "https"}://${req.headers.get("x-forwarded-host") || req.headers.get("host")}`;
   let webHits: any[] = [];
   try {
+    const categories = extractCategoryKeywords(htmlText, domain);
+    const extraQueries = buildAltQueries(domain, categories);
     const osintRes = await fetch(`${baseUrl}/api/osint/search`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ extraQueries: [`${domain} alternative` , `${domain} competitor`, `${domain} review`] }),
+      body: JSON.stringify({ extraQueries }),
       cache: "no-store",
     });
     if (osintRes.ok) {
@@ -132,7 +192,43 @@ HTML_SNIPPET: ${htmlText}
       }
     }
 
-    return NextResponse.json({ alternatives });
+    // === Score-Konsistenz mit Scan-Tool: gleiche Bewertungslogik nutzen ===
+    // Wir rufen die bestehende Scan-API auf, damit exakt dieselbe Bewertung gilt.
+    try {
+      const scored = await Promise.all(
+        (alternatives || []).map(async (alt) => {
+          try {
+            const scanRes = await fetch(`${baseUrl}/api/scan`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ url: alt.url }),
+              cache: "no-store",
+            });
+            if (!scanRes.ok) return null;
+            const scanData = await scanRes.json();
+            const altScore = typeof scanData?.score === "number" ? scanData.score : null;
+            if (altScore === null) return null;
+            return { ...alt, score: altScore };
+          } catch {
+            return null;
+          }
+        })
+      );
+
+      // Entferne kaputte und schwache Kandidaten (<65) und empfehle nur >=75
+      const filtered = (scored.filter(Boolean) as any[])
+        .filter((a) => typeof a.score === "number" && a.score >= 65)
+        .filter((a) => a.score >= 75);
+
+      // Sortiere nach Score absteigend
+      filtered.sort((a, b) => b.score - a.score);
+
+      // Falls zu wenige übrig bleiben, gib einfach die verbliebenen zurück (kann 0–3 sein)
+      return NextResponse.json({ alternatives: filtered });
+    } catch (e) {
+      // Fallback: wenn Scoring fehlschlägt, liefere die rohen Alternativen
+      return NextResponse.json({ alternatives });
+    }
   } catch (error) {
     console.error("Fehler bei OpenAI-Antwort:", error);
     return NextResponse.json(
