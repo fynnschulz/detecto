@@ -116,6 +116,8 @@ export async function POST(req: NextRequest) {
     // ignore errors
   }
 
+  const rawHitsForPrompt = webHits.length > 0 ? JSON.stringify(webHits) : "[] (keine Treffer, nutze eigenes Wissen)";
+
   // GPT-Prompt zur Alternativen-Suche
   const prompt = `
 
@@ -150,7 +152,7 @@ Die Seiten sollen:
 - dem gleichen oder ähnlichen Zweck dienen wie ${domain}
 - klar bessere Datenschutzpraktiken aufweisen
 - funktionierende echte URLs haben
-RawHits: ${JSON.stringify(webHits)}
+RawHits: ${rawHitsForPrompt}
 HTML_SNIPPET: ${htmlText}
 `;
 
@@ -215,16 +217,20 @@ HTML_SNIPPET: ${htmlText}
         })
       );
 
-      // Entferne kaputte und schwache Kandidaten (<65) und empfehle nur >=75
-      const filtered = (scored.filter(Boolean) as any[])
-        .filter((a) => typeof a.score === "number" && a.score >= 65)
-        .filter((a) => a.score >= 75);
+      let filtered = (scored.filter(Boolean) as any[])
+        .filter((a) => typeof a.score === "number" && a.score >= 65);
 
-      // Sortiere nach Score absteigend
+      // Bevorzugt >=75, aber nicht leer
+      const highQuality = filtered.filter((a) => a.score >= 75);
+      if (highQuality.length >= 3) {
+        filtered = highQuality;
+      }
+
+      // Sortieren nach Score
       filtered.sort((a, b) => b.score - a.score);
 
-      // Falls zu wenige übrig bleiben, gib einfach die verbliebenen zurück (kann 0–3 sein)
-      return NextResponse.json({ alternatives: filtered });
+      // Maximal 3 zurückgeben
+      return NextResponse.json({ alternatives: filtered.slice(0, 3) });
     } catch (e) {
       // Fallback: wenn Scoring fehlschlägt, liefere die rohen Alternativen
       return NextResponse.json({ alternatives });
