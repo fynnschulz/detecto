@@ -16,9 +16,18 @@ export default function WebsiteScanPage() {
   const [judgementText, setJudgementText] = useState<string>("");
   const [showJudgement, setShowJudgement] = useState<boolean>(false);
 
+  const [scanDetails, setScanDetails] = useState<any | null>(null);
+
+  // Empfehlungen (Handlungsempfehlungen)
+  const [recommendations, setRecommendations] = useState<string[]>([]);
+  const [showRecs, setShowRecs] = useState<boolean>(false);
+
   const [showAlternatives, setShowAlternatives] = useState<boolean>(false);
   const [loadingAlternatives, setLoadingAlternatives] = useState<boolean>(false);
   const [alternativeSites, setAlternativeSites] = useState<AltSite[]>([]);
+
+  // Technical details toggle state
+  const [showDetails, setShowDetails] = useState<boolean>(false);
 
   // Info panel state
   const [showInfo, setShowInfo] = useState<boolean>(false);
@@ -68,6 +77,10 @@ export default function WebsiteScanPage() {
       setShowAlternatives(false);
       setAlternativeSites([]);
       setJudgementText("");
+      setScanDetails(null);
+      // Reset recommendations state at new scan start
+      setRecommendations([]);
+      setShowRecs(false);
 
       const res = await fetch("/api/scan", {
         method: "POST",
@@ -108,12 +121,32 @@ export default function WebsiteScanPage() {
         data?.explanation ??
         fromArray(data?.reasons);
 
+      // Set recommendations from API response (array of strings or empty)
+      setRecommendations(Array.isArray(data?.recommendations) ? data.recommendations : []);
+      setShowRecs(false);
+
       setScore(nextScore);
       setJudgementText(
         typeof verdictRaw === "string" && verdictRaw.trim().length > 0
           ? verdictRaw
           : ""
       );
+      setScanDetails({
+        cookies: data?.headMeta?.cookies,
+        headers: {
+          https: data?.headMeta?.https,
+          csp: data?.headMeta?.csp,
+          xfo: data?.headMeta?.xfo,
+          hsts: data?.headMeta?.hsts,
+          referrerPolicy: data?.headMeta?.referrerPolicy,
+          xContentType: data?.headMeta?.xContentType,
+          permissionsPolicy: data?.headMeta?.permissionsPolicy,
+          cors: data?.headMeta?.cors,
+          server: data?.headMeta?.server,
+        },
+        trackers: data?.evidence?.trackersLikely || [],
+        policies: data?.evidence?.policyLinks || [],
+      });
       setShowScale(true);
     } catch (err) {
       setScore(null);
@@ -398,6 +431,24 @@ export default function WebsiteScanPage() {
                   </button>
                 </div>
 
+                <div className="text-center mt-2">
+                  <button
+                    className="text-sm text-gray-400 underline hover:text-gray-200 transition"
+                    onClick={() => setShowDetails((prev) => !prev)}
+                  >
+                    {showDetails ? "Technische Befunde einklappen" : "Technische Befunde anzeigen…"}
+                  </button>
+                </div>
+
+                <div className="text-center mt-2">
+                  <button
+                    className="text-sm text-gray-400 underline hover:text-gray-200 transition"
+                    onClick={() => setShowRecs((prev) => !prev)}
+                  >
+                    {showRecs ? "Handlungsempfehlungen einklappen" : "Handlungsempfehlungen anzeigen…"}
+                  </button>
+                </div>
+
                 {score !== null && score < 65 && (
                   <>
                     <div className="text-center mt-2">
@@ -447,6 +498,18 @@ export default function WebsiteScanPage() {
                   </>
                 )}
 
+                {/* Handlungsempfehlungen Panel */}
+                {showRecs && recommendations && recommendations.length > 0 && (
+                  <div className="mt-4 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black p-6 rounded-2xl text-left text-sm text-gray-300 shadow-[0_0_20px_rgba(0,255,180,0.12)] transition-all duration-700">
+                    <h4 className="text-white font-semibold text-lg mb-2">Handlungsempfehlungen</h4>
+                    <ul className="list-disc ml-5 space-y-1">
+                      {recommendations.map((r, i) => (
+                        <li key={i}>{r}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 {showJudgement && (
                   <div className="mt-4 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black p-6 rounded-2xl text-left text-sm text-gray-300 shadow-[0_0_20px_rgba(0,255,255,0.1)] transition-all duration-700">
                     {judgementText
@@ -462,6 +525,70 @@ export default function WebsiteScanPage() {
                           ))
                       : "Keine detaillierte Begründung verfügbar."}
                   </div>
+                )}
+                {/* Technische Befunde (raw evidence) */}
+                {showDetails && scanDetails && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-8 w-full bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-950 p-6 rounded-2xl shadow"
+                  >
+                    <h3 className="text-xl font-bold text-white mb-4">Technische Befunde</h3>
+                    <div className="space-y-4 text-sm text-gray-300">
+                      <div>
+                        <h4 className="font-semibold text-cyan-400">Cookies</h4>
+                        {scanDetails.cookies?.total > 0 ? (
+                          <ul className="list-disc ml-5">
+                            <li>Gesamt: {scanDetails.cookies.total}</li>
+                            <li>Unsicher auf HTTPS: {scanDetails.cookies.insecureOnHttps}</li>
+                            <li>Kein HttpOnly: {scanDetails.cookies.noHttpOnly}</li>
+                            <li>SameSite=None ohne Secure: {scanDetails.cookies.sameSiteNoneInsecure}</li>
+                          </ul>
+                        ) : (
+                          <p>Keine Cookies erkannt.</p>
+                        )}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-cyan-400">Security-Header</h4>
+                        <ul className="list-disc ml-5">
+                          {Object.entries(scanDetails.headers || {}).map(([k, v]) => (
+                            <li key={k}>
+                              {k}: {String(v || "—")}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-cyan-400">Tracker</h4>
+                        {scanDetails.trackers?.length > 0 ? (
+                          <ul className="list-disc ml-5">
+                            {scanDetails.trackers.map((t: string, i: number) => (
+                              <li key={i}>{t}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p>Keine bekannten Tracker gefunden.</p>
+                        )}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-cyan-400">Policy-Seiten</h4>
+                        {scanDetails.policies?.length > 0 ? (
+                          <ul className="list-disc ml-5">
+                            {scanDetails.policies.map((p: string, i: number) => (
+                              <li key={i}>
+                                <a href={p} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                                  {p}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p>Keine Policy-Seiten gefunden.</p>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
                 )}
               </motion.div>
             )}

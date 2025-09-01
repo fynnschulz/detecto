@@ -37,6 +37,14 @@ function getHeader(headers: Headers, name: string): string | null {
   return null;
 }
 
+// Standardized blocked response
+function blockedResponse() {
+  return NextResponse.json(
+    { error: "Der Scan wurde von der Zielseite blockiert.\nGrund: Bot-/Zugriffsschutz\nTipp: Versuche es später erneut oder scanne eine andere Seite." },
+    { status: 400 }
+  );
+}
+
 // Extract quick, low-cost signals from HTML to give the model more context
 function extractHtmlSignals(html: string, baseUrl: URL) {
   const signals = {
@@ -148,6 +156,39 @@ function prioritizePolicyLinks(links: string[], baseHost: string, cap = 5): stri
   return [...same, ...other].slice(0, cap);
 }
 
+// --- Cookie Analysis -------------------------------------------------------
+
+// Parse an individual Set-Cookie line into a summary
+function parseSetCookie(line: string) {
+  const [nameValue, ...attrs] = line.split(/;\s*/);
+  const [name] = nameValue.split("=");
+  const attrSet = new Set(attrs.map((a) => a.toLowerCase()));
+  return {
+    name: name?.trim() || "",
+    hasSecure: attrSet.has("secure"),
+    hasHttpOnly: attrSet.has("httponly"),
+    sameSite: attrs.find((a) => /^samesite=/i.test(a))?.split("=")[1]?.toLowerCase() || null,
+  };
+}
+
+// Summarize all Set-Cookie headers
+function summarizeCookies(headers: Headers, isHttps: boolean) {
+  const raw = headers.get("set-cookie");
+  if (!raw) {
+    return { total: 0, insecureOnHttps: 0, noHttpOnly: 0, sameSiteNoneInsecure: 0, sample: [] as any[] };
+  }
+  // Split multiple cookies; some runtimes merge them
+  const parts = raw.split(/,(?=[^;]+?=)/);
+  const parsed = parts.map(parseSetCookie);
+  return {
+    total: parsed.length,
+    insecureOnHttps: isHttps ? parsed.filter((c) => !c.hasSecure).length : 0,
+    noHttpOnly: parsed.filter((c) => !c.hasHttpOnly).length,
+    sameSiteNoneInsecure: parsed.filter((c) => c.sameSite === "none" && !c.hasSecure).length,
+    sample: parsed.slice(0, 5),
+  };
+}
+
 // Fetch text with timeout
 async function fetchText(url: string, timeoutMs = 8000): Promise<string | null> {
   try {
@@ -240,31 +281,73 @@ function buildPrompt(url: string, evidence: any, headMeta: any, policyEvidence: 
   Bitte nutze diese Hinweise **aktiv** (prüfe Plausibilität, identifiziere Lücken), statt nur Vermutungen anzustellen.
   
   Bewertungslogik (bitte genau befolgen):
-  1) **Zweck & Angriffsfläche** klassifizieren: { 
-     Art: (Broschüre/Kontakt, Blog, Community, Shop, SaaS/App, Login-Bereich, Behörde/Klinik/Finanzen, Sonstiges),
-     Datenarten: (keine, Kontakt, Login, Zahlungsdaten, Gesundheits-/Finanzdaten, Trackingprofile),
-     Third-Party-Footprint: gering/mittel/hoch
-  }
-  2) **Privatsphäre-Qualität (Datenschutz)** gewichten nach: Datenminimierung, Transparenz (Privacy-/Impressum-/Cookie-Infos vorhanden und verständlich?), Nutzerkontrolle (Consent), Drittanbieter-Nutzung, Security-Header (CSP/HSTS/XFO), HTTPS.
-  3) **Gefährdungsgrad (Risiko)** einschätzen: Wie **wahrscheinlich** und **schadensreich** wären Missbrauch/Tracking/Phishing für einen durchschnittlichen Nutzer? Kleine statische Visitenkarten-Seiten mit nur Kontaktformular und wenigen Drittanbietern bekommen **Bonus** (mildernde Gewichtung) – solange transparent.
-  4) **Policy-Prüfung (DSGVO/GDPR)**: Identifiziere **konkrete Lücken oder mögliche Verstöße** in den Policy-Seiten (Privacy/Datenschutz, Cookies, AGB/Terms, Impressum/Legal). Nenne Artikel/Paragrafen, **falls ableitbar**, und belege sie mit kurzen Zitaten/Indizien (z. B. fehlende Rechtsgrundlage, kein Hinweis auf Betroffenenrechte, kein DPO-Kontakt, unzulässige Drittlandübermittlung ohne geeignete Garantien, fehlerhafte/zwanghafte Cookie-Einwilligung, fehlende Widerrufsmöglichkeit etc.). Wenn unklar: als **„Indizien, unsicher“** kennzeichnen.
-  5) **Realismus**: Branchenübliches ist kein Freifahrtschein, aber fehle keine Enterprise-Header, wenn die Seite nur minimal Daten verarbeitet und sonst solide ist.
-  
-  Gib **genau** dieses Format (ohne Markdown, ohne Vorwort):
-  ---
-  Datenschutz-Score: <Zahl 1–100>%
-  BEWERTUNG: <"kritisch"|"mittelmäßig"|"gut"|"sehr gut">
-  GEFÄHRDUNG: <"niedrig"|"mittel"|"hoch">  // basiert auf der realistischen Gefahr für Nutzer
-  GRÜNDE:
-  - <konkreter, beleggestützter Grund 1>
-  - <konkreter, beleggestützter Grund 2>
-  - <…>
-  VERSTÖSSE/LÜCKEN (Policy):
-  - <möglicher DSGVO-Verstoß oder Lücke | Relevante Norm (z. B. Art. 6, 12–14, 30, 32, 44–49 DSGVO) | kurzer Beleg/Zitat | Einschätzung: "klar" / "Indizien, unsicher" | Auswirkung: niedrig/mittel/hoch>
-  - <… oder „keine konkreten Verstöße identifizierbar“>
-  HINWEISE:
-  - <lästige, aber geringe Risiken>
-  - <Bitte nutze nicht zu viel Fachbegriffe und Fachsprache. Es soll für 95% der Nutzer egal welchen Alters gut verständlich und einfach erklärt sein. erkläre den nutzern was gut und was schlecht an der eingegebenen Website ist. Erkläre es in Stichpunkten... keine langen Sätze.> `;
+A) Rechne einen **Gesamtscore (0–100)** als **Summe fester Teil-Scores**. Keine Heuristik, keine Standardwerte.
+   **Nutze jeden ganzzahligen Wert (nicht runden auf 5er/10er).**
+
+   1) Transport & TLS (0–10)
+      - HTTPS aktiv: +6
+      - HSTS vorhanden: +4
+   2) Security-Header (0–15)
+      - CSP vorhanden: +6
+      - X-Frame-Options vorhanden: +3
+      - X-Content-Type-Options vorhanden: +2
+      - Referrer-Policy gesetzt: +2
+      - Permissions-Policy gesetzt: +2
+   3) Cookies (0–15) – nutze headMeta.cookies
+      - Startwert 15
+      - Abzug −2 je Cookie ohne \`Secure\` bei HTTPS
+      - Abzug −1 je Cookie ohne \`HttpOnly\`
+      - Abzug −2 je \`SameSite=None\` **ohne** \`Secure\`
+      - Clampen auf [0,15]
+   4) Drittanbieter/Tracker (0–15)
+      - Startwert 15
+      - Abzug −3 pro erkanntem Tracker (Google Analytics, Meta, Hotjar, HubSpot, LinkedIn Insight, Matomo)
+      - Zusatzabzug −1 wenn Google Fonts geladen werden
+      - Clampen auf [0,15]
+   5) Policy-Transparenz (0–20)
+      - Privacy/Datenschutz-Seite gefunden: +10
+      - Impressum/Legal vorhanden: +4
+      - Cookie-Policy vorhanden: +3
+      - In den Policy-Texten klare DSGVO-Signale (Rechtsgrundlage **und** Betroffenenrechte **und** DPO/Kontakt): +3
+      - Clampen auf [0,20]
+   6) Datenerhebung & Consent (0–10)
+      - Startwert 10
+      - Abzug −2, wenn Login-Formular vorhanden
+      - Abzug −3, wenn Kontaktformular vorhanden **und** keine sichtbare Privacy/Impressum-Verlinkung
+      - Abzug −2, wenn Tracker vorhanden **und** kein Cookie-Banner erkennbar
+      - Clampen auf [0,10]
+   7) OSINT-Red Flags (0–15) – nutze \`webHits\`
+      - Startwert 15
+      - Abzug −5, wenn Treffer auf Scam/Betrug-Hinweise deuten (Titel/URL enthält "scam" oder "betrug")
+      - Abzug −5, wenn Treffer auf Datenleaks deuten ("leak", "dump", "paste")
+      - Mehrfache Kategorien können kumulieren; Clampen auf [0,15]
+
+   **Gesamtscore = Summe (1–7), auf [0,100] clampen.**
+
+B) Setze BEWERTUNG aus dem Score ab:
+   - <40 → "kritisch"
+   - 40–64 → "mittelmäßig"
+   - 65–79 → "gut"
+   - 80–100 → "sehr gut"
+
+C) Erkläre die **GRÜNDE** belegbasiert und kurz. Nenne konkret, was du gefunden hast.
+D) Liste **VERSTÖSSE/LÜCKEN (Policy)** mit kurzer Evidenz (oder schreibe „keine konkreten Verstöße identifizierbar“).
+E) **HINWEISE**: praxisnahe Tipps, einfach formuliert.
+
+Gib **genau** dieses Format (ohne Markdown, ohne Vorwort):
+---
+Datenschutz-Score: <Zahl 1–100>%
+BEWERTUNG: <"kritisch"|"mittelmäßig"|"gut"|"sehr gut">
+GEFÄHRDUNG: <"niedrig"|"mittel"|"hoch">
+GRÜNDE:
+- <Grund 1>
+- <Grund 2>
+- <…>
+VERSTÖSSE/LÜCKEN (Policy):
+- <…>
+HINWEISE:
+- <…>
+`;
 }
 
 async function analyzePrivacyScore(
@@ -370,13 +453,16 @@ export async function POST(req: NextRequest) {
       csp: !!getHeader(headRes.headers, "content-security-policy"),
       xfo: !!getHeader(headRes.headers, "x-frame-options"),
       hsts: !!getHeader(headRes.headers, "strict-transport-security"),
+      referrerPolicy: getHeader(headRes.headers, "referrer-policy"),
+      xContentType: !!getHeader(headRes.headers, "x-content-type-options"),
+      permissionsPolicy: getHeader(headRes.headers, "permissions-policy"),
+      cors: getHeader(headRes.headers, "access-control-allow-origin"),
       server: getHeader(headRes.headers, "server"),
     };
+    // Add cookie analysis
+    headMeta.cookies = summarizeCookies(headRes.headers, url.startsWith("https://"));
     if (!headOk) {
-      return NextResponse.json(
-        { error: `Diese Webseite antwortet nicht (Status ${headStatus}).` },
-        { status: 400 }
-      );
+      return blockedResponse();
     }
   } catch (err) {
     // continue – we'll still try a GET
@@ -417,12 +503,35 @@ export async function POST(req: NextRequest) {
   // --- Policy pages: discover and fetch for deeper analysis ----------------------
   let policyEvidence: any = { candidates: [], pages: [] };
   try {
-    if (html && evidence.policyLinks && evidence.policyLinks.length) {
+    if (html) {
       const base = new URL(url);
-      policyEvidence = await collectPolicyEvidence(base, evidence.policyLinks);
+      const extraCandidates = [
+        "/impressum",
+        "/datenschutz",
+        "/datenschutzrichtlinie",
+        "/datenschutzrichtlinien",
+        "/privacy",
+        "/privacy-policy",
+        "/terms",
+        "/agb",
+        "/cookies",
+        "/cookie-policy",
+        "/legal",
+        "/rechtliches",
+        "/about",
+        "/ueber-uns",
+        "/uber-uns"
+      ].map((p) => new URL(p, base).toString());
+      const combinedLinks = [...(evidence.policyLinks || []), ...extraCandidates];
+      policyEvidence = await collectPolicyEvidence(base, combinedLinks);
     }
   } catch {
     // non-fatal
+  }
+
+  // If we have neither usable HEAD nor HTML content, treat as blocked
+  if (!headOk && (!html || html.length === 0)) {
+    return blockedResponse();
   }
 
   if (!process.env.OPENAI_API_KEY) {
@@ -436,5 +545,49 @@ export async function POST(req: NextRequest) {
     policyEvidence,
     htmlText
   );
-  return NextResponse.json({ result, judgement, score, policy: policyEvidence });
+
+  if (score === null) {
+    return blockedResponse();
+  }
+
+  // Compute recommendations based on score
+  let recommendations: string[] = [];
+  if (score !== null) {
+    if (score < 40) {
+      recommendations = [
+        "Nicht nutzen. Keine persönlichen Daten eingeben.",
+        "Cookies und Tracker blockieren oder Seite meiden.",
+        "Falls schon Daten eingegeben: Konten überprüfen, Passwörter ändern."
+      ];
+    } else if (score < 65) {
+      recommendations = [
+        "Nutzung nur mit Vorsicht.",
+        "Nur notwendige Cookies akzeptieren.",
+        "Keine sensiblen Daten (Kreditkarten, Gesundheitsdaten) eingeben.",
+        "VPN oder privaten Modus nutzen."
+      ];
+    } else if (score < 80) {
+      recommendations = [
+        "Seite grundsätzlich nutzbar, aber Datenschutzniveau nicht optimal.",
+        "Cookies überprüfen und einschränken.",
+        "Keine langfristigen Accounts anlegen, falls nicht nötig."
+      ];
+    } else {
+      recommendations = [
+        "Seite weist gute Datenschutz- und Sicherheitseinstellungen auf.",
+        "Kann im Normalfall sicher genutzt werden.",
+        "Trotzdem auf individuelle Einstellungen achten (z. B. Cookie-Banner)."
+      ];
+    }
+  }
+
+  return NextResponse.json({
+    result,
+    judgement,
+    score,
+    policy: policyEvidence,
+    headMeta,
+    evidence,
+    recommendations
+  });
 }
