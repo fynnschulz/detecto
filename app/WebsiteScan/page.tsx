@@ -91,6 +91,11 @@ export default function WebsiteScanPage() {
       if (!res.ok) {
         const msg = await res.text();
         setScore(null);
+        setShowScale(false);
+        setShowJudgement(false);
+        setShowRecs(false);
+        setShowAlternatives(false);
+        setScanDetails(null);
         setJudgementText(msg || "Scan fehlgeschlagen. Bitte versuche es erneut.");
         return;
       }
@@ -424,7 +429,9 @@ export default function WebsiteScanPage() {
 
                 <div className="text-center mt-4">
                   <button
-                    className="text-sm text-gray-400 underline hover:text-gray-200 transition"
+                    className={`px-4 py-2 text-sm rounded-full font-medium transition shadow ${
+                      showJudgement ? "bg-zinc-700/80 text-white hover:bg-zinc-600/80" : "bg-cyan-600/80 text-white hover:bg-cyan-500/80"
+                    }`}
                     onClick={() => setShowJudgement((prev) => !prev)}
                   >
                     {showJudgement ? "Einklappen" : "Urteil einsehen…"}
@@ -433,82 +440,14 @@ export default function WebsiteScanPage() {
 
                 <div className="text-center mt-2">
                   <button
-                    className="text-sm text-gray-400 underline hover:text-gray-200 transition"
+                    className={`px-4 py-2 text-sm rounded-full font-medium transition shadow ${
+                      showDetails ? "bg-zinc-700/80 text-white hover:bg-zinc-600/80" : "bg-indigo-600/80 text-white hover:bg-indigo-500/80"
+                    }`}
                     onClick={() => setShowDetails((prev) => !prev)}
                   >
                     {showDetails ? "Technische Befunde einklappen" : "Technische Befunde anzeigen…"}
                   </button>
                 </div>
-
-                <div className="text-center mt-2">
-                  <button
-                    className="text-sm text-gray-400 underline hover:text-gray-200 transition"
-                    onClick={() => setShowRecs((prev) => !prev)}
-                  >
-                    {showRecs ? "Handlungsempfehlungen einklappen" : "Handlungsempfehlungen anzeigen…"}
-                  </button>
-                </div>
-
-                {score !== null && score < 65 && (
-                  <>
-                    <div className="text-center mt-2">
-                      <button
-                        className="inline-flex items-center justify-center gap-2 text-sm text-gray-400 underline hover:text-gray-200 transition"
-                        onClick={() => {
-                          if (showAlternatives) {
-                            setShowAlternatives(false);
-                          } else {
-                            fetchAlternatives();
-                          }
-                        }}
-                      >
-                        {loadingAlternatives && !showAlternatives && (
-                          <svg
-                            className="animate-spin h-4 w-4 text-gray-400"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                          >
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
-                          </svg>
-                        )}
-                        {showAlternatives ? "Einklappen" : "Alternativen anzeigen…"}
-                      </button>
-                    </div>
-                    {showAlternatives && (
-                      <div className="mt-6 space-y-4 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-950 p-6 rounded-2xl shadow-[0_0_25px_rgba(0,255,100,0.15)] transition-all duration-700">
-                        <h4 className="text-white font-semibold text-lg mb-4">Sicherere Alternativen:</h4>
-                        {loadingAlternatives ? (
-                          <p className="text-gray-400">Lade Alternativen...</p>
-                        ) : alternativeSites.length === 0 ? (
-                          <p className="text-gray-400">Keine Alternativen gefunden.</p>
-                        ) : (
-                          alternativeSites.map((site, index) => (
-                            <div key={index} className="bg-black/30 p-4 rounded-xl border border-zinc-700 hover:border-green-400 transition duration-300 shadow-lg hover:shadow-green-500/20">
-                              <a href={site.url} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline font-semibold text-base">
-                                {site.name}
-                              </a>
-                              <p className="text-gray-400 text-sm mt-1">{site.description}</p>
-                            </div>
-                          ))
-                        )}
-                      </div>
-                    )}
-                  </>
-                )}
-
-                {/* Handlungsempfehlungen Panel */}
-                {showRecs && recommendations && recommendations.length > 0 && (
-                  <div className="mt-4 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black p-6 rounded-2xl text-left text-sm text-gray-300 shadow-[0_0_20px_rgba(0,255,180,0.12)] transition-all duration-700">
-                    <h4 className="text-white font-semibold text-lg mb-2">Handlungsempfehlungen</h4>
-                    <ul className="list-disc ml-5 space-y-1">
-                      {recommendations.map((r, i) => (
-                        <li key={i}>{r}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
 
                 {showJudgement && (
                   <div className="mt-4 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black p-6 rounded-2xl text-left text-sm text-gray-300 shadow-[0_0_20px_rgba(0,255,255,0.1)] transition-all duration-700">
@@ -524,6 +463,70 @@ export default function WebsiteScanPage() {
                             </div>
                           ))
                       : "Keine detaillierte Begründung verfügbar."}
+                    {/* Add toggles for Handlungsempfehlungen and Alternativen at the bottom of the Urteil panel */}
+                    <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
+                      {score !== null && score < 65 && (
+                        <button
+                          className={`px-4 py-2 text-sm rounded-full font-medium transition shadow inline-flex items-center gap-2 ${
+                            showAlternatives ? "bg-zinc-700/80 text-white hover:bg-zinc-600/80" : "bg-emerald-600/80 text-white hover:bg-emerald-500/80"
+                          }`}
+                          onClick={() => {
+                            if (showAlternatives) {
+                              setShowAlternatives(false);
+                            } else {
+                              fetchAlternatives();
+                            }
+                          }}
+                        >
+                          {loadingAlternatives && !showAlternatives && (
+                            <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                            </svg>
+                          )}
+                          {showAlternatives ? "Alternativen einklappen" : "Alternativen anzeigen…"}
+                        </button>
+                      )}
+                      <button
+                        className={`px-4 py-2 text-sm rounded-full font-medium transition shadow ${
+                          showRecs ? "bg-zinc-700/80 text-white hover:bg-zinc-600/80" : "bg-fuchsia-600/80 text-white hover:bg-fuchsia-500/80"
+                        }`}
+                        onClick={() => setShowRecs((prev) => !prev)}
+                      >
+                        {showRecs ? "Handlungsempfehlungen einklappen" : "Handlungsempfehlungen anzeigen…"}
+                      </button>
+                    </div>
+                  </div>
+                )}
+                {/* Handlungsempfehlungen Panel */}
+                {showRecs && recommendations && recommendations.length > 0 && (
+                  <div className="mt-4 bg-gradient-to-br from-zinc-800 via-zinc-900 to-black p-6 rounded-2xl text-left text-sm text-gray-300 shadow-[0_0_20px_rgba(0,255,180,0.12)] transition-all duration-700">
+                    <h4 className="text-white font-semibold text-lg mb-2">Handlungsempfehlungen</h4>
+                    <ul className="list-disc ml-5 space-y-1">
+                      {recommendations.map((r, i) => (
+                        <li key={i}>{r}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {/* Alternatives Panel */}
+                {score !== null && score < 65 && showAlternatives && (
+                  <div className="mt-6 space-y-4 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-950 p-6 rounded-2xl shadow-[0_0_25px_rgba(0,255,100,0.15)] transition-all duration-700">
+                    <h4 className="text-white font-semibold text-lg mb-4">Sicherere Alternativen:</h4>
+                    {loadingAlternatives ? (
+                      <p className="text-gray-400">Lade Alternativen...</p>
+                    ) : alternativeSites.length === 0 ? (
+                      <p className="text-gray-400">Keine Alternativen gefunden.</p>
+                    ) : (
+                      alternativeSites.map((site, index) => (
+                        <div key={index} className="bg-black/30 p-4 rounded-xl border border-zinc-700 hover:border-green-400 transition duration-300 shadow-lg hover:shadow-green-500/20">
+                          <a href={site.url} target="_blank" rel="noopener noreferrer" className="text-green-400 hover:underline font-semibold text-base">
+                            {site.name}
+                          </a>
+                          <p className="text-gray-400 text-sm mt-1">{site.description}</p>
+                        </div>
+                      ))
+                    )}
                   </div>
                 )}
                 {/* Technische Befunde (raw evidence) */}
@@ -650,6 +653,10 @@ export default function WebsiteScanPage() {
               <div className="space-y-4 pr-1">
                 <p>
                   Der Website‑Scan von Detecto bewertet eine eingegebene Ziel‑URL ganzheitlich im Hinblick auf Datenschutz, Sicherheit und Transparenz. Nach einer schonenden Abfrage wird die Seite normalisiert und statisch analysiert, ohne aktive Interaktionen oder Skript‑Ausführung zu erzwingen. Dabei werden strukturierte und unstrukturierte Inhalte – etwa Datenschutzerklärungen, Impressum, Meta‑Tags, Schema‑Daten und interne Verlinkungen – ebenso berücksichtigt wie eingebettete Ressourcen, Consent‑Layer‑Artefakte und Third‑Party‑Einbindungen. Der Scanner erkennt Muster für Tracking, Profiling und Fingerprinting, prüft Verschlüsselung und Transport­sicherheit, identifiziert abhängige Domains und potenzielle Datenübermittlungen an externe Dienstleister oder Drittländer und gleicht die Befunde mit rechtlich relevanten Kriterien ab. Dazu zählen u. a. Rechtsgrundlagen und Einwilligungslogik (Opt‑in/Opt‑out, Dark Patterns, Cookie‑Lebensdauer), Datenminimierung und Zweckbindung, Aufbewahrungs‑ und Löschkonzepte, Kontakt‑ und Verantwortlichenangaben sowie Hinweise auf Auftragsverarbeitung (DPA) und Zertifizierungen. Aus den extrahierten Merkmalen wird ein gewichteter Score (0–100) gebildet, der technische Risiken und inhaltliche Transparenz zusammenführt; ergänzend erzeugt das System eine verständliche, aber präzise Begründung, die die wichtigsten Befunde zusammenfasst und typische Schwachstellen klar benennt. Konservative Fallbacks, Block‑/Allow‑Lists, Zeitlimits und Validierungen sorgen dafür, dass fehlerhafte oder unsichere Ergebnisse verworfen werden; dynamische Inhalte, Paywalls oder stark skriptgetriebene Oberflächen können die statische Analyse jedoch begrenzen, weshalb das Ergebnis stets eine Momentaufnahme bleibt und keine Rechtsberatung ersetzt. Ziel ist eine nachvollziehbare, wiederholbare Bewertung, die Dir eine belastbare Entscheidungshilfe liefert – transparent, effizient und mit strikt datenschutzfreundlicher Methodik.
+                  <p className="text-xs text-gray-400 mt-2">
+  Hinweis: Der Score kann leicht schwanken (ca. 2–4%), da sich Webseiten laufend ändern,
+  Suchergebnisse variieren und die KI-Auswertung minimale Unterschiede haben kann.
+</p>
                 </p>
               </div>
             )}

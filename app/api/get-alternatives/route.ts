@@ -123,7 +123,7 @@ export async function POST(req: NextRequest) {
 
 Du bist ein Datenschutzexperte. Eine Webseite mit der Domain "${domain}" wurde beim Datenschutz-Scan mit einem Wert unter 60 % bewertet.
 
-Bitte schlage 3 alternative Webseiten vor, die:
+Bitte schlage 5 alternative Webseiten vor, die:
 - dem gleichen oder ähnlichen Zweck dienen wie "${domain}",
 - deutlich bessere Datenschutzpraktiken aufweisen,
 - vertrauenswürdig sind und echte, funktionierende URLs besitzen.
@@ -143,6 +143,16 @@ Gib exakt dieses JSON zurück (ohne Vorwort, ohne Erklärung, ohne Markdown):
   },
   {
     "name": "Name der Website 3",
+    "url": "https://...",
+    "description": "Kurze Erklärung mit Datenschutzbezug (max. 20 Wörter)"
+  },
+  {
+    "name": "Name der Website 4",
+    "url": "https://...",
+    "description": "Kurze Erklärung mit Datenschutzbezug (max. 20 Wörter)"
+  },
+  {
+    "name": "Name der Website 5",
     "url": "https://...",
     "description": "Kurze Erklärung mit Datenschutzbezug (max. 20 Wörter)"
   }
@@ -218,7 +228,7 @@ HTML_SNIPPET: ${htmlText}
       );
 
       let filtered = (scored.filter(Boolean) as any[])
-        .filter((a) => typeof a.score === "number" && a.score >= 65);
+        .filter((a) => typeof a.score === "number" && a.score >= 60);
 
       // Bevorzugt >=75, aber nicht leer
       const highQuality = filtered.filter((a) => a.score >= 75);
@@ -229,7 +239,7 @@ HTML_SNIPPET: ${htmlText}
       // Sortieren nach Score
       filtered.sort((a, b) => b.score - a.score);
 
-      // Maximal 3 zurückgeben
+      // Mindestens 3 zurückgeben, wenn vorhanden
       return NextResponse.json({ alternatives: filtered.slice(0, 3) });
     } catch (e) {
       // Fallback: wenn Scoring fehlschlägt, liefere die rohen Alternativen
