@@ -453,7 +453,7 @@ export default function LeakCheckPage() {
                     </button>
                   )}
                   <p className="text-xs opacity-70">
-                    Wir speichern deine Passwörter nicht. Sie werden nur kurz für die Suche verarbeitet und danach verworfen.
+                    Wir speichern deine Daten nicht. Sie werden bloß kurzfristig für die Suche verarbeitet und folglich verworfen.
                   </p>
                 </div>
               </div>
@@ -742,6 +742,22 @@ export default function LeakCheckPage() {
                     „Telefon + paste“, optional auch eingegebene Passwörter) und fragen primär seriöse Quellen ab:
                     Paste‑Seiten, Foren, Code‑Hosts (z. B. GitHub/Gist) und Suchindizes. Ergebnisse werden dedupliziert.
                   </p>
+                  <div className="mt-2 rounded-2xl border border-white/10 bg-white/5 p-3">
+                    <div className="text-sm font-semibold mb-1">Was ist ein Leak?</div>
+                    <p className="text-sm text-gray-200/90">
+                      Ein <em>Leak</em> liegt vor, wenn <strong>dein Datensatz</strong> (nicht nur dein Name alleine) irgendwo öffentlich oder halböffentlich auftaucht –
+                      also in einer Liste, Datenbank oder Datei – und dabei <strong>verknüpfte</strong> Infos enthält, z. B.:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-200/90 mt-2">
+                      <li><strong>Name + Adresse</strong> oder <strong>Name + Geburtsjahr</strong></li>
+                      <li><strong>E‑Mail + Passwort</strong> (z. B. <code className="bg-white/10 px-1.5 py-0.5 rounded">max@example.com: Sommer2024!</code>)</li>
+                      <li><strong>Telefonnummer + Adresse</strong> oder andere eindeutige Kombinationen</li>
+                    </ul>
+                    <p className="text-xs text-gray-300/90 mt-2">
+                      Ein Name <em>allein</em> ist in der Regel nur „findbar“ (öffentlich), aber kein Leak.
+                      Kritisch wird es durch die <strong>Kombination</strong> mit weiteren persönlichen Daten.
+                    </p>
+                  </div>
                   <p>
                     <strong>Pipeline im Detail.</strong> Zunächst werden Eingaben vereinheitlicht (z. B. Klein‑/Großschreibung und Sonderzeichen sowie E.164‑Formate für Telefonnummern). Darauf aufbauend erzeugen wir Varianten wie Punkte‑ oder Plus‑Aliase bei E‑Mails sowie tokenisierte Namensformen. Anschließend erweitern wir die Suchanfragen mehrsprachig um passende Schlüsselwörter; optional werden auch eingegebene Passwörter berücksichtigt.
                   </p>
