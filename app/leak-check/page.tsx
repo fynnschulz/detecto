@@ -4,6 +4,7 @@ import React, { useMemo, useState } from 'react'
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import { createClient } from '@supabase/supabase-js';
 
 // helpers for percentage formatting
 const clampPct = (v: number) => Math.max(0, Math.min(100, Number.isFinite(v) ? v : 0))
@@ -112,6 +113,29 @@ export default function LeakCheckPage() {
   const [helpOpen, setHelpOpen] = useState(false)
   const [helpExpanded, setHelpExpanded] = useState(false)
   const consentLoggedRef = React.useRef(false);
+
+  // Supabase client (client-side) and user info for consent logging
+  const supabase = useMemo(() => {
+    return createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    );
+  }, []);
+
+  const [userInfo, setUserInfo] = useState<{id?:string; email?:string; name?:string}|null>(null)
+  React.useEffect(() => {
+    let mounted = true;
+    (async () => {
+      try {
+        const { data } = await supabase.auth.getUser();
+        const u = data?.user;
+        if (mounted && u) {
+          setUserInfo({ id: u.id, email: u.email ?? undefined, name: (u.user_metadata as any)?.name });
+        }
+      } catch {}
+    })();
+    return () => { mounted = false };
+  }, [supabase]);
 
   // Circular progress constants
   const R = 54; // radius
@@ -476,7 +500,14 @@ export default function LeakCheckPage() {
                     await fetch("/api/consent-log", {
                       method: "POST",
                       headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({ scope: "leak-check", deepScan, path: "/leak-check" }),
+                      body: JSON.stringify({
+                        scope: "leak-check",
+                        deepScan,
+                        path: "/leak-check",
+                        userId: userInfo?.id,
+                        userEmail: userInfo?.email,
+                        userName: userInfo?.name,
+                      }),
                     });
                     consentLoggedRef.current = true;
                   } catch {}

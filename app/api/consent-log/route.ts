@@ -12,7 +12,7 @@ function supabaseService() {
 
 export async function POST(req: Request) {
   try {
-    const { scope = "leak-check", deepScan = false, path = "/leak-check" } = await req.json().catch(() => ({}));
+    const { scope = "leak-check", deepScan = false, path = "/leak-check", userId, userEmail, userName } = await req.json().catch(() => ({}));
 
     const ua = req.headers.get("user-agent") || "";
     const ipHeader = req.headers.get("x-forwarded-for") || req.headers.get("x-real-ip") || "";
@@ -25,6 +25,9 @@ export async function POST(req: Request) {
       path,
       user_agent: ua,
       ip: ip || null,
+      user_id: userId || null,
+      user_email: userEmail || null,
+      user_name: userName || null,
     });
     if (error) throw error;
 
