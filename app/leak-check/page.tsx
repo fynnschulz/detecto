@@ -98,7 +98,7 @@ export default function LeakCheckPage() {
   const [address, setAddress] = useState('')
   const [birthYear, setBirthYear] = useState<string>('')
   const [aliases, setAliases] = useState('') // comma separated
-  const [passwords, setPasswords] = useState<string[]>(['']) // up to 3 passwords
+  const [passwords, setPasswords] = useState<string[]>(['']) // up to 5 passwords
   const [consent, setConsent] = useState(false)
 
   // UI state
@@ -111,6 +111,7 @@ export default function LeakCheckPage() {
   const [deepScan, setDeepScan] = useState(false)
   const [helpOpen, setHelpOpen] = useState(false)
   const [helpExpanded, setHelpExpanded] = useState(false)
+  const consentLoggedRef = React.useRef(false);
 
   // Circular progress constants
   const R = 54; // radius
@@ -143,7 +144,7 @@ export default function LeakCheckPage() {
   }
 
   function addPasswordField() {
-    setPasswords(prev => (prev.length < 3 ? [...prev, ''] : prev))
+    setPasswords(prev => (prev.length < 5 ? [...prev, ''] : prev))
   }
 
   function removePasswordField(idx: number) {
@@ -429,7 +430,7 @@ export default function LeakCheckPage() {
               </div>
 
               <div className="grid gap-2">
-                <label className="text-sm opacity-80">Passwörter <span className="opacity-60">(bis zu 3 – optional)</span></label>
+                <label className="text-sm opacity-80">Passwörter <span className="opacity-60">(bis zu 5 – optional)</span></label>
                 <div className="space-y-2">
                   {passwords.map((pw, idx) => (
                     <div key={idx} className="flex items-center gap-2">
@@ -447,7 +448,7 @@ export default function LeakCheckPage() {
                       )}
                     </div>
                   ))}
-                  {passwords.length < 3 && (
+                  {passwords.length < 5 && (
                     <button type="button" onClick={addPasswordField} className="text-sm px-3 py-1.5 rounded-lg bg-white/10 border border-white/10 hover:bg-white/20">
                       + Passwort hinzufügen
                     </button>
@@ -464,7 +465,24 @@ export default function LeakCheckPage() {
         {/* CONSENT + ACTION */}
         <section className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 via-white/[0.06] to-white/[0.03] backdrop-blur-xl p-4 md:p-5">
           <label className="flex items-center gap-2 text-sm opacity-90">
-            <input type="checkbox" checked={consent} onChange={(e)=>setConsent(e.target.checked)} />
+            <input
+              type="checkbox"
+              checked={consent}
+              onChange={async (e) => {
+                const checked = e.target.checked;
+                setConsent(checked);
+                if (checked && !consentLoggedRef.current) {
+                  try {
+                    await fetch("/api/consent-log", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ scope: "leak-check", deepScan, path: "/leak-check" }),
+                    });
+                    consentLoggedRef.current = true;
+                  } catch {}
+                }
+              }}
+            />
             Ich stimme zu, dass eine KI‑gestützte Suche in externen Quellen durchgeführt wird.
           </label>
 

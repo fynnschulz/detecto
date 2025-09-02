@@ -553,7 +553,7 @@ export async function POST(req: Request) {
     const address=normText(body.address);
     const birthYear=Number.isFinite(body.birthYear)?Number(body.birthYear):undefined;
     const aliases=(body.aliases??[]).map(normText).filter(Boolean);
-    const passwords=(body.passwords??[]).map(normText).filter(Boolean).slice(0,3);
+    const passwords=(body.passwords??[]).map(normText).filter(Boolean).slice(0,5);
 
     if(!emails.length && !usernames.length && !phones.length && !fullName && !city && !country && !address) {
       return NextResponse.json({error:"Bitte gib mindestens eine E‑Mail, einen Nutzernamen, eine Telefonnummer oder Name/Ort an."},{status:400});
