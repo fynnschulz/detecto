@@ -98,7 +98,7 @@ export default function LeakCheckPage() {
   const [address, setAddress] = useState('')
   const [birthYear, setBirthYear] = useState<string>('')
   const [aliases, setAliases] = useState('') // comma separated
-  const [services, setServices] = useState('') // comma separated
+  const [passwords, setPasswords] = useState<string[]>(['']) // up to 3 passwords
   const [consent, setConsent] = useState(false)
 
   // UI state
@@ -132,6 +132,22 @@ export default function LeakCheckPage() {
       .split(',')
       .map(s => s.trim())
       .filter(Boolean)
+  }
+
+  function updatePassword(idx: number, value: string) {
+    setPasswords(prev => {
+      const next = [...prev]
+      next[idx] = value
+      return next
+    })
+  }
+
+  function addPasswordField() {
+    setPasswords(prev => (prev.length < 3 ? [...prev, ''] : prev))
+  }
+
+  function removePasswordField(idx: number) {
+    setPasswords(prev => (prev.length > 1 ? prev.filter((_, i) => i !== idx) : prev))
   }
 
   async function onSubmit(e: React.FormEvent) {
@@ -171,7 +187,7 @@ export default function LeakCheckPage() {
         address: address.trim() || undefined,
         birthYear: birthYear ? Number(birthYear) : undefined,
         aliases: splitCSV(aliases),
-        services: splitCSV(services),
+        passwords: passwords.map(p => p.trim()).filter(Boolean),
         deepScan,
       }
 
@@ -413,13 +429,33 @@ export default function LeakCheckPage() {
               </div>
 
               <div className="grid gap-2">
-                <label className="text-sm opacity-80">Genutzte Dienste <span className="opacity-60">(Komma‑getrennt)</span></label>
-                <input
-                  value={services}
-                  onChange={(e)=>setServices(e.target.value)}
-                  placeholder="z. B. Amazon, PayPal, Instagram"
-                  className="rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-fuchsia-300/60 focus:ring-2 focus:ring-fuchsia-300/20 transition"
-                />
+                <label className="text-sm opacity-80">Passwörter <span className="opacity-60">(bis zu 3 – optional)</span></label>
+                <div className="space-y-2">
+                  {passwords.map((pw, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      <input
+                        type="password"
+                        value={pw}
+                        onChange={(e)=>updatePassword(idx, e.target.value)}
+                        placeholder={`Passwort ${idx+1}`}
+                        className="flex-1 rounded-xl border border-white/10 bg-white/10 px-3 py-2 outline-none focus:border-fuchsia-300/60 focus:ring-2 focus:ring-fuchsia-300/20 transition"
+                      />
+                      {passwords.length > 1 && (
+                        <button type="button" onClick={()=>removePasswordField(idx)} className="text-xs px-2 py-1 rounded-lg bg-white/10 border border-white/10 hover:bg-white/20">
+                          Entfernen
+                        </button>
+                      )}
+                    </div>
+                  ))}
+                  {passwords.length < 3 && (
+                    <button type="button" onClick={addPasswordField} className="text-sm px-3 py-1.5 rounded-lg bg-white/10 border border-white/10 hover:bg-white/20">
+                      + Passwort hinzufügen
+                    </button>
+                  )}
+                  <p className="text-xs opacity-70">
+                    Wir speichern deine Passwörter nicht. Sie werden nur kurz für die Suche verarbeitet und danach verworfen.
+                  </p>
+                </div>
               </div>
             </div>
           )}
@@ -581,6 +617,14 @@ export default function LeakCheckPage() {
                 <div className="rounded-xl border border-white/10 bg-white/5 p-4">
                   <div className="text-lg font-medium">Treffer: {findings.length}</div>
                 </div>
+                {stats && (
+                  <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+                    <div className="text-sm opacity-85">
+                      Suchstatistik: <span className="px-2 py-0.5 rounded bg-white/10">Queries: {stats.queries}</span>{' '}
+                      <span className="px-2 py-0.5 rounded bg-white/10 ml-2">Treffer: {stats.hits}</span>
+                    </div>
+                  </div>
+                )}
                 {findings.map((f, i) => (
                   <div key={i} className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4 pl-5 hover:shadow-[0_0_30px_rgba(0,255,255,0.15)]">
                     <div aria-hidden className="pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br from-emerald-400/10 via-cyan-400/10 to-blue-400/10" />
@@ -695,19 +739,17 @@ export default function LeakCheckPage() {
                   </p>
                   <p>
                     <strong>Suche & Quellen.</strong> Wir erstellen Query‑Kombinationen (z. B. „E‑Mail + leak“,
-                    „Telefon + paste“, Services) und fragen primär seriöse Quellen ab: Paste‑Seiten, Foren,
-                    Code‑Hosts (z. B. GitHub/Gist) und Suchindizes. Ergebnisse werden dedupliziert.
+                    „Telefon + paste“, optional auch eingegebene Passwörter) und fragen primär seriöse Quellen ab:
+                    Paste‑Seiten, Foren, Code‑Hosts (z. B. GitHub/Gist) und Suchindizes. Ergebnisse werden dedupliziert.
                   </p>
                   <p>
-                    <strong>Pipeline im Detail.</strong> Zunächst werden Eingaben vereinheitlicht (z. B. Klein‑/Großschreibung und Sonderzeichen sowie E.164‑Formate für Telefonnummern). Darauf aufbauend erzeugen wir Varianten wie Punkte‑ oder Plus‑Aliase bei E‑Mails sowie Hash‑Ableitungen und tokenisierte Namensformen. Anschließend erweitern wir die Suchanfragen mehrsprachig um passende Schlüsselwörter und Dienstnamen, damit auch indirekte Erwähnungen erfasst werden.
+                    <strong>Pipeline im Detail.</strong> Zunächst werden Eingaben vereinheitlicht (z. B. Klein‑/Großschreibung und Sonderzeichen sowie E.164‑Formate für Telefonnummern). Darauf aufbauend erzeugen wir Varianten wie Punkte‑ oder Plus‑Aliase bei E‑Mails sowie tokenisierte Namensformen. Anschließend erweitern wir die Suchanfragen mehrsprachig um passende Schlüsselwörter; optional werden auch eingegebene Passwörter berücksichtigt.
                   </p>
                   <p>
                     Danach rufen wir die Seiten ab, extrahieren den Text und suchen mithilfe von Regex und toleranter Ähnlichkeitserkennung nach Treffern. Die Bewertung berücksichtigt Quelle, Aktualität und Mehrfach‑Belege und führt zu einer Confidence‑Einschätzung von 0 bis 100. Am Ende erhältst du eine konsolidierte Ausgabe mit Quelle, kompaktem Hinweis zur Evidenz und einer transparenten Risikoeinschätzung.
                   </p>
                   <p>
-                    <strong>Datenschutz.</strong> Die Eingaben werden nur für den Suchvorgang genutzt. Es werden
-                    keine personenbezogenen Daten öffentlich gespeichert. Treffer enthalten nur die nötigsten
-                    Nachweise (kurze Snippets/Links), damit du sie selbst prüfen kannst.
+                    <strong>Datenschutz.</strong> Deine Eingaben werden nur für die Dauer der Suche genutzt und anschließend verworfen. Wir speichern keine Passwörter. Treffer enthalten nur kurze Nachweise (Snippets/Links), damit du sie selbst prüfen kannst.
                   </p>
                   <p className="opacity-80">
                     Tipp: Je mehr optionale Felder du angibst (z. B. Name, genutzte Dienste), desto gezielter kann

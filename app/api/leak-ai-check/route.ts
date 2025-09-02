@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server'
 import { htmlToText } from "html-to-text";
 import crypto from "crypto";
+import zlib from "zlib";
+
+export const runtime = 'nodejs';
 
 // --- Rate Limit ---
 const WINDOW_MS = 10 * 60 * 1000;
@@ -15,6 +18,9 @@ function rateLimit(ip: string) {
   return true;
 }
 
+// --- Options ---
+const allowPlainPassword = false; // Opt-in: search plaintext passwords if explicitly enabled
+
 // --- Types ---
 type Payload = {
   emails?: string[]
@@ -26,7 +32,7 @@ type Payload = {
   address?: string
   birthYear?: number
   aliases?: string[]
-  services?: string[]
+  passwords?: string[]
   deepScan?: boolean
 }
 
@@ -67,9 +73,55 @@ function emailHashes(e: string) {
 
 function b64(s: string) { return Buffer.from(s, "utf8").toString("base64"); }
 function hex(s: string) { return Buffer.from(s, "utf8").toString("hex"); }
+function urlEnc(s: string) { return encodeURIComponent(String(s)); }
 function emailEncodings(e: string) {
   const n = normalizeEmailAdvanced(e);
-  return [b64(n), hex(n)];
+  return [b64(n), hex(n), urlEnc(n)];
+}
+
+function passwordHashes(pw: string) {
+  const p = String(pw);
+  return [md5(p), sha1(p), sha256(p)];
+}
+function passwordEncodings(pw: string) {
+  const p = String(pw);
+  return [b64(p), hex(p), urlEnc(p)];
+}
+// --- Username, Phone, and Text Variant Helpers ---
+function usernameHashes(u: string) {
+  const s = ascii(String(u).trim().toLowerCase());
+  return [md5(s), sha1(s), sha256(s)];
+}
+function usernameEncodings(u: string) {
+  const s = ascii(String(u).trim().toLowerCase());
+  return [b64(s), hex(s)];
+}
+function phoneVariantsFormats(e164: string) {
+  const d = e164.replace(/[^0-9]/g, "");
+  if (!d) return [] as string[];
+  // naive splits for EU numbers: CC (2-3) | NDC (2-4) | rest
+  const cc = d.slice(0, 2).startsWith("49") ? "49" : d.slice(0, 2);
+  const rest = d.slice(cc.length);
+  const a = rest.slice(0, 3);
+  const b = rest.slice(3, 6);
+  const c = rest.slice(6);
+  const base = `+${d}`;
+  const out = new Set<string>([
+    base,
+    `+${cc} ${a} ${b}${c ? " " + c : ""}`.trim(),
+    `+${cc}-${a}-${b}${c ? "-" + c : ""}`.trim(),
+    `( +${cc} ) ${a} ${b}${c ? " " + c : ""}`.replace(/\s+/g, " ").trim(),
+  ]);
+  return Array.from(out).filter(Boolean);
+}
+function phoneEncodings(e164: string) {
+  const s = String(e164);
+  return [b64(s), hex(s), urlEnc(s)];
+}
+function textEncodings(s: string) {
+  const v = ascii(String(s).trim().toLowerCase());
+  if (!v) return [] as string[];
+  return [b64(v), hex(v), urlEnc(v)];
 }
 // --- Query expansion helpers ---
 const leetMap: Record<string,string[]> = { a:["4","@"], e:["3"], i:["1"], o:["0"], s:["5","$"], t:["7"], l:["1"], g:["9"], b:["8"] };
@@ -141,6 +193,38 @@ function phoneRegexFromE164(e164: string) {
 }
 function normText(s?: string) { return (s || '').trim(); }
 const ascii = (s: string) => s.normalize("NFKD").replace(/[\u0300-\u036f]/g,"");
+
+// --- Obfuscation Normalizer ---
+const ZERO_WIDTH = /[\u200B-\u200F\u202A-\u202E\u2060-\u206F\uFEFF]/g;
+function stripZeroWidth(s: string){ return s.replace(ZERO_WIDTH, ""); }
+
+// minimal homoglyph map (common confusions)
+const HOMO_MAP: Record<string,string> = {
+  "а":"a", // Cyrillic a
+  "е":"e", // Cyrillic e
+  "о":"o", // Cyrillic o
+  "р":"p", // Cyrillic r
+  "с":"c", // Cyrillic s
+  "х":"x", // Cyrillic x
+  "у":"y", // Cyrillic y
+  "А":"A", "Е":"E", "О":"O", "Р":"P", "С":"C", "Х":"X", "У":"Y"
+};
+function deobfuscateHomoglyphs(s: string){ return s.replace(/[\u0400-\u04FF]/g, ch => HOMO_MAP[ch] || ch); }
+
+function deobfuscateDelimiters(s: string){
+  return s
+    .replace(/\s*\[?\s*(?:at|\(at\)|\[at\]|\{at\}|@)\s*\]?\s*/gi, "@").
+    replace(/\s*\[?\s*(?:dot|\(dot\)|\[dot\]|\{dot\}|\.)\s*\]?\s*/gi, ".")
+    .replace(/\s+at\s+/gi, "@")
+    .replace(/\s+dot\s+/gi, ".");
+}
+
+function normalizeForEvidence(s: string){
+  const step1 = stripZeroWidth(s);
+  const step2 = deobfuscateHomoglyphs(step1);
+  const step3 = deobfuscateDelimiters(step2);
+  return step3.replace(/[\u00A0\s]+/g, " ");
+}
 
 // --- Sanitizer ---
 const EXPOSED_WHITELIST = new Set([
@@ -242,6 +326,9 @@ const API_HINTS = /\b(api[_-]?key|secret|token|bearer|authorization|password|pas
 const TRADE_HINTS = /\b(for sale|verkauf|price|btc|monero|combo list|database dump|logs for sale|stealer|fullz)\b/i;
 const ABUSE_HINTS = /\b(phishing|spam list|scam kit|credential stuffing|checker)\b/i;
 
+const COMBO_LINE = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b\s*[:;,\t]\s*\S{2,}/img; // email:pass style
+const STEALER_HINTS = /\b(stealer|redline|raccoon|vidar|lumma|sentry|openbullet|sentrymba|combo\.txt)\b/i;
+
 // Trade / broker indicators
 const EMAIL_SIMPLE = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/ig;
 const HASH_HEX = /\b[a-f0-9]{32,64}\b/ig; // md5/sha1/sha256 length range
@@ -269,6 +356,13 @@ function detectTradeIndicators(text: string){
   const emailCount = countEmails(text);
   const hashCount = (text.match(HASH_HEX)||[]).length;
 
+  // combo lines (email:pass)
+  const comboMatches = text.match(COMBO_LINE) || [];
+  if (comboMatches.length >= 10) { flags.push('email_pass_lines'); score += 5; }
+  else if (comboMatches.length > 0) { flags.push('some_email_pass'); score += 2; }
+
+  if (STEALER_HINTS.test(lower)) { flags.push('stealer_tool'); score += 2; }
+
   if (TRADE_HINTS.test(lower)) { flags.push('broker_keywords'); score += 6; }
   if (PRICE_HINTS.test(text))   { flags.push('price_tag');       score += 3; }
   if (/(btc|bitcoin|monero|xmr)/i.test(text)) { flags.push('crypto'); score += 2; }
@@ -289,7 +383,7 @@ function classifyContext(lower: string){
 }
 
 function weightBySource(host:string){
-  if (/(?:^|\.)pastebin|ghostbin|hastebin|controlc|rentry|pastelink/i.test(host)) return 12;
+  if (/(?:^|\.)pastebin|ghostbin|hastebin|controlc|rentry|pastelink|paste\.ee|throwbin|katbin|justpaste|ideone/i.test(host)) return 12;
   if (/(?:^|\.)github|gist|gitlab/i.test(host)) return 8;
   if (/(?:^|\.)reddit|stackoverflow|superuser/i.test(host)) return 5;
   if (/(?:^|\.)medium|dev\.to/i.test(host)) return 2;
@@ -301,57 +395,144 @@ function contextSnippet(text: string, idx: number, len: number) {
   const end = Math.min(text.length, idx+len+120);
   return text.slice(start,end).replace(/\s+/g," ").trim();
 }
-function extractEvidence(text: string, opts: {emails:string[],emailHashes:string[],emailEnc:string[],phones:string[],names:string[]}) {
-  const lower = text.toLowerCase();
-  const evidences:string[] = [];
-  let confidence=0;
-  const exposed:string[]=[];
+function extractEvidence(
+  text: string,
+  opts: {
+    emails: string[];
+    emailHashes: string[];
+    emailEnc: string[];
+    phones: string[];
+    names: string[];
+    passwordHashes: string[];
+    passwordEnc: string[];
+    passwordPlain?: string[]; // optional plaintext passwords (opt-in)
+  }
+) {
+  const src = normalizeForEvidence(text);
+  const lower = src.toLowerCase();
+  const evidences: string[] = [];
+  let confidence = 0;
+  const exposed: string[] = [];
   // helper for obfuscated email regex
-  function emailObfRegex(e: string){
-    const [local,domain] = e.toLowerCase().split("@");
-    if(!local||!domain) return null;
-    const esc = (s:string)=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  function emailObfRegex(e: string) {
+    const [local, domain] = e.toLowerCase().split("@");
+    if (!local || !domain) return null;
+    const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const dot = "\\s*(?:\\.|dot)\\s*";
     const at = "\\s*(?:@|\n|\\[at\\]|\\(at\\)|\\s+at\\s+)\\s*";
-    const localRx = esc(local).replace(/\./g,dot);
-    const domainRx = esc(domain).replace(/\./g,dot);
-    return new RegExp(`${localRx}${at}${domainRx}`,'i');
+    const localRx = esc(local).replace(/\./g, dot);
+    const domainRx = esc(domain).replace(/\./g, dot);
+    return new RegExp(`${localRx}${at}${domainRx}`, "i");
   }
   for (const e of opts.emails) {
     const eLower = e.toLowerCase();
-    let found=false;
-    let pos=-1; let len=e.length;
-    const idx=lower.indexOf(eLower);
-    if(idx!==-1){found=true; pos=idx;}
-    if(!found){ const rx=emailObfRegex(eLower); if(rx){ const m=rx.exec(text); if(m){found=true; pos=m.index; len=m[0].length;} } }
-    if(!found){
-      // very loose: allow spaces between characters of local/domain
-      const esc = (s:string)=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-      const spaced = eLower.replace(/([@.])/g,'$1').split("").map(ch=>ch.match(/[a-z0-9]/)?`${ch}\\s*`:esc(ch)).join("");
-      const rx2 = new RegExp(spaced,'i');
-      const m2 = rx2.exec(text);
-      if(m2){found=true; pos=m2.index; len=m2[0].length;}
+    let found = false;
+    let pos = -1;
+    let len = e.length;
+    const idx = lower.indexOf(eLower);
+    if (idx !== -1) {
+      found = true;
+      pos = idx;
     }
-    if(found){exposed.push("email"); evidences.push(contextSnippet(text,pos,len)); confidence+=40;}
+    if (!found) {
+      const rx = emailObfRegex(eLower);
+      if (rx) {
+        const m = rx.exec(src);
+        if (m) {
+          found = true;
+          pos = m.index;
+          len = m[0].length;
+        }
+      }
+    }
+    if (!found) {
+      // very loose: allow spaces between characters of local/domain
+      const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const spaced = eLower
+        .replace(/([@.])/g, "$1")
+        .split("")
+        .map((ch) => (ch.match(/[a-z0-9]/) ? `${ch}\\s*` : esc(ch)))
+        .join("");
+      const rx2 = new RegExp(spaced, "i");
+      const m2 = rx2.exec(src);
+      if (m2) {
+        found = true;
+        pos = m2.index;
+        len = m2[0].length;
+      }
+    }
+    if (found) {
+      exposed.push("email");
+      evidences.push(contextSnippet(src, pos, len));
+      confidence += 40;
+    }
   }
   for (const h of opts.emailHashes) {
-    const idx=lower.indexOf(h);
-    if(idx!==-1){exposed.push("email"); evidences.push(contextSnippet(text,idx,h.length)); confidence+=25;}
+    const idx = lower.indexOf(h);
+    if (idx !== -1) {
+      exposed.push("email");
+      evidences.push(contextSnippet(src, idx, h.length));
+      confidence += 25;
+    }
   }
   for (const enc of opts.emailEnc) {
-    const idx=lower.indexOf(enc.toLowerCase());
-    if(idx!==-1){exposed.push("email"); evidences.push(contextSnippet(text,idx,enc.length)); confidence+=15;}
+    const idx = lower.indexOf(enc.toLowerCase());
+    if (idx !== -1) {
+      exposed.push("email");
+      evidences.push(contextSnippet(src, idx, enc.length));
+      confidence += 15;
+    }
+  }
+  for (const h of opts.passwordHashes) {
+    const idx = lower.indexOf(h.toLowerCase());
+    if (idx !== -1) {
+      exposed.push("password");
+      evidences.push(contextSnippet(src, idx, h.length));
+      confidence += 30;
+    }
+  }
+  for (const enc of opts.passwordEnc) {
+    const idx = lower.indexOf(enc.toLowerCase());
+    if (idx !== -1) {
+      exposed.push("password");
+      evidences.push(contextSnippet(src, idx, enc.length));
+      confidence += 15;
+    }
+  }
+  if (opts.passwordPlain && opts.passwordPlain.length) {
+    for (const pw of opts.passwordPlain) {
+      const pLower = String(pw).toLowerCase();
+      if (!pLower) continue;
+      const idx = lower.indexOf(pLower);
+      if (idx !== -1) {
+        exposed.push("password");
+        evidences.push(contextSnippet(src, idx, pLower.length));
+        confidence += 20;
+      }
+    }
   }
   for (const p of opts.phones) {
-    const rx=phoneRegexFromE164(p);
-    const m=rx.exec(text);
-    if(m){exposed.push("phone"); evidences.push(contextSnippet(text,m.index,m[0].length)); confidence+=35;}
+    const rx = phoneRegexFromE164(p);
+    const m = rx.exec(src);
+    if (m) {
+      exposed.push("phone");
+      evidences.push(contextSnippet(src, m.index, m[0].length));
+      confidence += 35;
+    }
   }
   for (const n of opts.names) {
-    const idx=lower.indexOf(n.toLowerCase());
-    if(idx!==-1){exposed.push("name"); evidences.push(contextSnippet(text,idx,n.length)); confidence+=10;}
+    const idx = lower.indexOf(n.toLowerCase());
+    if (idx !== -1) {
+      exposed.push("name");
+      evidences.push(contextSnippet(src, idx, n.length));
+      confidence += 10;
+    }
   }
-  return {confidence: Math.min(100,confidence), evidence: evidences.slice(0,3).join(" … "), exposed:[...new Set(exposed)]};
+  return {
+    confidence: Math.min(100, confidence),
+    evidence: evidences.slice(0, 3).join(" … "),
+    exposed: [...new Set(exposed)],
+  };
 }
 
 // --- Handler ---
@@ -372,7 +553,7 @@ export async function POST(req: Request) {
     const address=normText(body.address);
     const birthYear=Number.isFinite(body.birthYear)?Number(body.birthYear):undefined;
     const aliases=(body.aliases??[]).map(normText).filter(Boolean);
-    const services=(body.services??[]).map(normText).filter(Boolean);
+    const passwords=(body.passwords??[]).map(normText).filter(Boolean).slice(0,3);
 
     if(!emails.length && !usernames.length && !phones.length && !fullName && !city && !country && !address) {
       return NextResponse.json({error:"Bitte gib mindestens eine E‑Mail, einen Nutzernamen, eine Telefonnummer oder Name/Ort an."},{status:400});
@@ -394,9 +575,22 @@ export async function POST(req: Request) {
     for(const a of aliases){ if(a) nameTokens.push(ascii(a)); }
     // Username and domain tokens for expansion
     const userTokens = Array.from(new Set(usernames.flatMap(usernameVariants)));
+    const userBaseTokens = Array.from(new Set(usernames.map(u=>ascii(normUsername(u).toLowerCase())).filter(Boolean)));
     const domainTokens = emailDomainTokens(emails);
 
-    const queryPayload={emails,usernames,phones,person:{fullName,city,country,address,birthYear,aliases:aliases.length?aliases:undefined},context:{services:services.length?services:undefined},deepScan};
+    const passwordAllHashes = Array.from(new Set(passwords.flatMap(passwordHashes)));
+    const passwordAllEnc = Array.from(new Set(passwords.flatMap(passwordEncodings)));
+
+    // Expanded variants for usernames, phones, names
+    const usernameAllHashes = Array.from(new Set(usernames.flatMap(usernameHashes)));
+    const usernameAllEnc = Array.from(new Set(usernames.flatMap(usernameEncodings)));
+
+    const phoneAllVariants = Array.from(new Set(phonesE164.flatMap(phoneVariantsFormats)));
+    const phoneAllEnc = Array.from(new Set(phonesE164.flatMap(phoneEncodings)));
+
+    const nameTokenEnc = Array.from(new Set(nameTokens.flatMap(textEncodings)));
+
+    const queryPayload={emails,usernames,phones,person:{fullName,city,country,address,birthYear,aliases:aliases.length?aliases:undefined},deepScan};
 
     async function getBaseUrl(req: Request) {
       const proto=req.headers.get("x-forwarded-proto")||"https";
@@ -405,33 +599,62 @@ export async function POST(req: Request) {
     }
     const base=await getBaseUrl(req);
 
-    // Build expanded queries (mode-aware)
-    const strongHints=[
-      ...emailSearchSet,
-      ...phonesE164,
-      ...nameTokens.map(n=>`"${n}"`),
-      ...userTokens,
-      ...domainTokens
-    ];
+    // Freemium split: NORMAL (cheap/fast) vs DEEP (exhaustive)
+    let strongHints: string[] = [];
+    if (deepScan) {
+      strongHints = [
+        ...emailSearchSet,                       // emails: variants + hashes + encodings
+        ...phonesE164,                           // phones: e164
+        ...phoneAllVariants,                     // phones: formatted variants
+        ...nameTokens.map(n=>`"${n}"`),        // names: tokens
+        ...userTokens,                           // usernames: variants
+        ...domainTokens,                         // domains from emails
+        ...passwordAllHashes,                    // passwords: hashes
+        ...passwordAllEnc,                       // passwords: encodings
+        ...(allowPlainPassword ? passwords : []),// passwords: optional plaintext (opt-in)
+        ...usernameAllHashes,                    // usernames: hashes
+        ...usernameAllEnc,                       // usernames: encodings
+        ...phoneAllEnc,                          // phones: encodings
+        ...nameTokenEnc,                         // names: encodings
+      ];
+    } else {
+      // NORMAL SCAN: only the most common/simple variants
+      const emailsPlain = Array.from(new Set(emails.map(normEmail)));
+      strongHints = [
+        ...emailsPlain,                          // emails: plaintext only
+        ...phonesE164,                           // phones: e164 only
+        ...nameTokens.map(n=>`"${n}"`),        // names: plaintext tokens
+        ...userBaseTokens,                       // usernames: base only (no variants)
+        ...domainTokens,                         // domains from emails
+        ...passwordAllHashes,                    // passwords: hashes only
+        // no password encodings, no plaintext passwords
+        // no username hashes/enc, no phone/name encodings
+      ];
+    }
 
     const pasteSitesLite=["site:pastebin.com","site:ghostbin.com","site:controlc.com","site:github.com","site:reddit.com"];
-    const pasteSitesFull=["site:pastebin.com","site:ghostbin.com","site:hastebin.com","site:controlc.com","site:rentry.co","site:pastelink.net","site:github.com","site:gist.github.com","site:reddit.com"]; 
+    const pasteSitesFull=[
+      "site:pastebin.com","site:ghostbin.com","site:hastebin.com","site:controlc.com","site:rentry.co","site:pastelink.net",
+      "site:paste.ee","site:throwbin.io","site:katbin.io","site:justpaste.it","site:ideone.com",
+      "site:github.com","site:gist.github.com","site:gitlab.com","site:bitbucket.org",
+      "site:reddit.com","site:stackoverflow.com"
+    ];
 
     const extraKwLite=["leak","datenleck","data breach","paste","dump","exposed","breach"];
     const extraKwFull=[
       "leak","datenleck","data breach","paste","dump","combo list","credential dump","verkauf","for sale","price","btc","monero","logs",
-      "database","csv","txt","json","public","index","checker","combo","stealer"
+      "database","csv","txt","json","public","index","checker","combo","stealer",
+      "email:pass","combo.txt","fresh dump","sql dump","credential logs","stealer logs","full database","user:pass","passlist","rockyou"
     ];
 
     const pasteSites = deepScan ? pasteSitesFull : pasteSitesLite;
     const extraKw = deepScan ? extraKwFull : extraKwLite;
-    const maxQueries = deepScan ? 80 : 20;
+    const maxQueries = deepScan ? 100 : 20;
 
     const extraQueries=Array.from(new Set([
       ...strongHints,
       ...strongHints.flatMap(h=>extraKw.map(x=>`${h} ${x}`)),
       ...pasteSites.flatMap(ps=>strongHints.map(h=>`${ps} ${h}`)),
-      ...services.flatMap(svc=>strongHints.map(h=>`${h} ${svc}`)),
     ])).slice(0,maxQueries);
 
     const osintRes=await fetch(`${base}/api/osint/search`,{
@@ -447,7 +670,15 @@ export async function POST(req: Request) {
       try {
         const res=await fetch(h.link,{method:"GET",cache:"no-store"});
         if(!res.ok) continue;
-        const html=await res.text();
+        const ct = res.headers.get("content-type")||"";
+        const ce = res.headers.get("content-encoding")||"";
+        let html:string;
+        if (/gzip/i.test(ce) || /application\/(?:gzip|x-gzip)/i.test(ct) || /\.gz(?:$|[?#])/i.test(h.link)) {
+          const buf = Buffer.from(await res.arrayBuffer());
+          try { html = zlib.gunzipSync(buf).toString("utf8"); } catch { html = buf.toString("utf8"); }
+        } else {
+          html = await res.text();
+        }
         const text=htmlToText(html,{wordwrap:false,selectors:[{selector:"script",format:"skip"},{selector:"style",format:"skip"}]});
         let extraTexts: string[] = [];
         if(deepScan){
@@ -455,20 +686,56 @@ export async function POST(req: Request) {
           const sameHostLinks = hrefs
             .map(href=>{ try{ return new URL(href, h.link).toString(); }catch{ return null; } })
             .filter((u): u is string => !!u && new URL(u).hostname===new URL(h.link).hostname)
-            .filter(u=>/(leak|dump|paste|data|csv|txt)/i.test(u))
-            .slice(0,3);
+            .filter(u=>/(leak|dump|paste|data|csv|txt|json|raw|download)/i.test(u))
+            .slice(0,6);
           for(const u of sameHostLinks){
             try{
               const r2=await fetch(u,{method:"GET",cache:"no-store"});
-              if(!r2.ok) continue; const h2=await r2.text();
+              if(!r2.ok) continue;
+              const ct2 = r2.headers.get("content-type")||"";
+              const ce2 = r2.headers.get("content-encoding")||"";
+              let h2:string;
+              if (/gzip/i.test(ce2) || /application\/(?:gzip|x-gzip)/i.test(ct2) || /\.gz(?:$|[?#])/i.test(u)) {
+                const buf2 = Buffer.from(await r2.arrayBuffer());
+                try { h2 = zlib.gunzipSync(buf2).toString("utf8"); } catch { h2 = buf2.toString("utf8"); }
+              } else {
+                h2 = await r2.text();
+              }
               const t2=htmlToText(h2,{wordwrap:false,selectors:[{selector:"script",format:"skip"},{selector:"style",format:"skip"}]});
+              // Try a very small raw-variant follow-up if link hints exist
+              try {
+                const maybeRaw = /href=\"([^\"]*(?:raw|download)[^\"]*)\"/i.exec(h2)?.[1];
+                if (maybeRaw) {
+                  const rawUrl = new URL(maybeRaw, u).toString();
+                  const r3 = await fetch(rawUrl,{method:"GET",cache:"no-store"});
+                  if (r3.ok) {
+                    const ct3 = r3.headers.get("content-type")||"";
+                    const ce3 = r3.headers.get("content-encoding")||"";
+                    let h3:string;
+                    if (/gzip/i.test(ce3) || /application\/(?:gzip|x-gzip)/i.test(ct3) || /\.gz(?:$|[?#])/i.test(rawUrl)) {
+                      const buf3 = Buffer.from(await r3.arrayBuffer());
+                      try { h3 = zlib.gunzipSync(buf3).toString("utf8"); } catch { h3 = buf3.toString("utf8"); }
+                    } else {
+                      h3 = await r3.text();
+                    }
+                    const t3 = htmlToText(h3,{wordwrap:false,selectors:[{selector:"script",format:"skip"},{selector:"style",format:"skip"}]});
+                    extraTexts.push(t3);
+                  }
+                }
+              } catch{}
               extraTexts.push(t2);
             }catch{}
           }
         }
-        const ev=extractEvidence(text,{emails:emailSearchSet,emailHashes:emailAllHashes,emailEnc:emailAllEnc,phones:phonesE164,names:nameTokens});
+        const ev=extractEvidence(text, deepScan
+          ? {emails:emailSearchSet,emailHashes:emailAllHashes,emailEnc:emailAllEnc,phones:phonesE164,names:nameTokens,passwordHashes:passwordAllHashes,passwordEnc:passwordAllEnc,passwordPlain: allowPlainPassword ? passwords : undefined}
+          : {emails:Array.from(new Set(emails.map(normEmail))),emailHashes:[],emailEnc:[],phones:phonesE164,names:nameTokens,passwordHashes:passwordAllHashes,passwordEnc:[],passwordPlain: undefined}
+        );
         for(const t2 of extraTexts){
-          const ev2 = extractEvidence(t2,{emails:emailSearchSet,emailHashes:emailAllHashes,emailEnc:emailAllEnc,phones:phonesE164,names:nameTokens});
+          const ev2 = extractEvidence(t2, deepScan
+            ? {emails:emailSearchSet,emailHashes:emailAllHashes,emailEnc:emailAllEnc,phones:phonesE164,names:nameTokens,passwordHashes:passwordAllHashes,passwordEnc:passwordAllEnc,passwordPlain: allowPlainPassword ? passwords : undefined}
+            : {emails:Array.from(new Set(emails.map(normEmail))),emailHashes:[],emailEnc:[],phones:phonesE164,names:nameTokens,passwordHashes:passwordAllHashes,passwordEnc:[],passwordPlain: undefined}
+          );
           if(ev2.confidence>ev.confidence){
             ev.confidence = ev2.confidence;
             ev.evidence = ev2.evidence;
