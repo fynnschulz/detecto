@@ -101,6 +101,7 @@ export default function LeakCheckPage() {
   const [aliases, setAliases] = useState('') // comma separated
   const [passwords, setPasswords] = useState<string[]>(['']) // up to 5 passwords
   const [consent, setConsent] = useState(false)
+  const [consentMsg, setConsentMsg] = useState<string | null>(null)
 
   // UI state
   const [openBasics, setOpenBasics] = useState(true)
@@ -494,7 +495,14 @@ export default function LeakCheckPage() {
               checked={consent}
               onChange={async (e) => {
                 const checked = e.target.checked;
+                if (checked && !userInfo?.id) {
+                  // block and hint to login/register
+                  setConsent(false);
+                  setConsentMsg("Bitte einloggen oder registrieren.");
+                  return;
+                }
                 setConsent(checked);
+                setConsentMsg(null);
                 if (checked && !consentLoggedRef.current) {
                   try {
                     await fetch("/api/consent-log", {
@@ -516,6 +524,11 @@ export default function LeakCheckPage() {
             />
             Ich stimme zu, dass eine KI‑gestützte Suche in externen Quellen durchgeführt wird.
           </label>
+          {consentMsg && (
+            <div className="mt-2 text-xs text-red-300" role="alert" aria-live="polite">
+              {consentMsg}
+            </div>
+          )}
 
           {/* Deep Scan Switch */}
           <div className="mt-3 flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-3 py-2">
