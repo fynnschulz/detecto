@@ -58,8 +58,8 @@ export default function WebsiteScanPage() {
     { label: "Suchmaschine", href: "/search" },
     { label: "Community", href: "/community" },
     { label: "Datencheck", href: "/leak-check" },
-    { label: "Protecto", href: "/protecto", highlight: true },
     { label: "VPN", href: "/vpn" },
+    { label: "Protecto", href: "/protecto", highlight: true },
   ];
 
   // Dynamische Hintergrundfarbe je nach Score (rot/orange/grün)

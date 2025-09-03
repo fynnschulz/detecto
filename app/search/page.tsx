@@ -21,8 +21,8 @@ export default function SearchPage() {
     { label: "Suchmaschine", href: "/search" },
     { label: "Community", href: "/community" },
     { label: "Datencheck", href: "/leak-check" },
-    { label: "Protecto", href: "/protecto", highlight: true },
     { label: "VPN", href: "/vpn" },
+    { label: "Protecto", href: "/protecto", highlight: true },
   ];
 
   const handleSearch = async () => {

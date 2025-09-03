@@ -74,8 +74,8 @@ const NAV_ITEMS = [
   { label: "Suchmaschine", href: "/search" },
   { label: "Community", href: "/community" },
   { label: "Datencheck", href: "/leak-check" },
-  { label: "Protecto", href: "/protecto", highlight: true },
   { label: "VPN", href: "/vpn" },
+  { label: "Protecto", href: "/protecto", highlight: true },
 ];
 type CategoryKey =
   | 'onlineshop'
