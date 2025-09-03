@@ -16,7 +16,7 @@ const fmtPct = (v: number) => {
 // Inline Topbar (no import)
 
 type Audience = "personal" | "business";
-type NavItem = { label: string; href: string };
+type NavItem = { label: string; href: string; highlight?: boolean };
 
 function Topbar({ navItems, audience, className }: { navItems: NavItem[]; audience: Audience; className?: string }) {
   const pathname = usePathname();
@@ -41,12 +41,17 @@ function Topbar({ navItems, audience, className }: { navItems: NavItem[]; audien
               isActive
                 ? "bg-blue-500/80 text-white shadow-[0_0_10px_rgba(0,200,255,0.6)]"
                 : "bg-zinc-800/60 text-gray-300 hover:bg-blue-700/30 hover:text-white"
-            }`}
+            }
+            ${ (item as any).highlight ? "ring-2 ring-pink-400/80 shadow-[0_0_15px_rgba(255,20,147,0.55)]" : ""}
+          `}
                 aria-current={isActive ? "page" : undefined}
               >
-                <span className="relative z-10">{item.label}</span>
+                <span className={`relative z-10 ${(item as any).highlight ? "bg-gradient-to-r from-pink-300 via-fuchsia-200 to-white bg-clip-text text-transparent" : ""}`}>{item.label}</span>
                 {isActive && (
                   <span className="absolute inset-0 rounded-full bg-blue-500 opacity-10 blur-md animate-pulse" />
+                )}
+                {(item as any).highlight && !isActive && (
+                  <span className="pointer-events-none absolute inset-0 rounded-full bg-pink-400/10 blur-md" />
                 )}
               </Link>
             );
@@ -79,6 +84,7 @@ const NAV_ITEMS = [
   { label: "Suchmaschine", href: "/search" },
   { label: "Community", href: "/community" },
   { label: "Datencheck", href: "/leak-check" },
+  { label: "Protecto", href: "/protecto", highlight: true },
   { label: "VPN", href: "/vpn" },
 ];
 
