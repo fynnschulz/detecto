@@ -25,6 +25,23 @@
     button:hover { background: #555; }
     input { width: 100%; margin: 5px 0; padding: 5px; border-radius: 4px; border: 1px solid #444; background:#222; color:#eee; }
     ul { padding-left: 16px; margin: 0; max-height: 100px; overflow-y: auto; }
+    .mode-btn {
+      transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+      border: 1px solid #333;
+      background: #1b1b1b;
+    }
+    .mode-btn.active {
+      box-shadow: 0 0 0 2px rgba(80,120,255,.35), 0 6px 18px rgba(0,0,0,.35);
+      transform: translateY(-1px);
+      background: #222a3a;
+      border-color: rgba(80,120,255,.6);
+    }
+    .mode-indicator {
+      margin: 8px 0 4px;
+      font-size: 12px;
+      color: #9aa4b2;
+    }
+    .mode-indicator b { color: #e6ebf5; }
   </style>
 </head>
 <body>
@@ -33,13 +50,14 @@
   <p id="recBox" style="padding:8px;border:1px solid #333;border-radius:6px;background:#1a1a1a">
     Berechne Risiko…
   </p>
+  <div class="mode-indicator">Aktiver Modus: <b id="modeName">—</b></div>
   <ul id="reasonList" style="margin-top:6px;"></ul>
 
   <p>Diese Seite schützen:</p>
-  <button id="policy-strict">Strikt</button>
-  <button id="policy-standard">Standard</button>
-  <button id="policy-soft">Sanft</button>
-  <button id="policy-off">Aus</button>
+  <button class="mode-btn" id="policy-strict">Strikt</button>
+  <button class="mode-btn" id="policy-standard">Standard</button>
+  <button class="mode-btn" id="policy-soft">Sanft</button>
+  <button class="mode-btn" id="policy-off">Aus</button>
 
   <hr>
   <p>Whitelist / Policies:</p>

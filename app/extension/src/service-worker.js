@@ -1,214 +1,100 @@
-// Hintergrund-Skript von Protecto (MV3)
-let pixelBlockerEnabled = false;
-let fingerprintInjected = false;
-let pixelBlockerListener = null;
-let pixelRedirectListener = null;
+// --- Protecto Risk Engine bootstrap ---
+try {
+  importScripts("risk/engine.js");
+  importScripts("risk/history.js");
+  console.log("[Protecto] Risk engine loaded:", typeof self.computeRisk);
+} catch (e) {
+  console.error("[Protecto] Risk engine failed to load", e);
+  self.computeRisk = () => ({ score: 0, level: "low", recommend: "soft", reasons: ["engine-not-loaded"] });
+}
 
-// --- Risk Engine State ---
-importScripts("src/risk/engine.js"); // MV3: via importScripts
-importScripts("src/risk/history.js");
-let domainSignals = {}; // { [domain]: { thirdPartyHosts, pixelHits, suspiciousUrls, setCookieLong, setCookieNoneSecure, fingerprintCalls, cmp:{...} } }
-
+// Shared signal storage per domain
+self.domainSignals = self.domainSignals || {};
 function ensureDomain(d) {
-  if (!domainSignals[d]) domainSignals[d] = {
-    thirdPartyHosts: 0, pixelHits: 0, suspiciousUrls: 0,
-    setCookieLong: false, setCookieNoneSecure: false,
-    fingerprintCalls: 0, cmp: { hasLegit: false, onlyNecessary: false }
-  };
-  return domainSignals[d];
-}
-
-chrome.runtime.onInstalled.addListener(async () => {
-  console.log("Protecto Extension installiert!");
-
-  // Kleines Health-Log: Welche statischen Regeln sind aktiv?
-  const rules = await chrome.declarativeNetRequest.getEnabledRulesets();
-  console.log("[Protecto] Enabled rulesets:", rules);
-
-  // Beispiel (optional) für dynamische Regeln:
-  // await chrome.declarativeNetRequest.updateDynamicRules({
-  //   addRules: [
-  //     {
-  //       id: 10001,
-  //       priority: 1,
-  //       action: { type: "block" },
-  //       condition: { urlFilter: "example-tracker.test", resourceTypes: ["xmlhttprequest", "script"] }
-  //     }
-  //   ],
-  //   removeRuleIds: [10001]
-  // });
-});
-
-// Bei jedem Browser-Start Regeln prüfen
-chrome.runtime.onStartup?.addListener(async () => {
-  const rules = await chrome.declarativeNetRequest.getEnabledRulesets();
-  console.log("[Protecto] Startup rulesets:", rules);
-});
-
-// Nachrichten vom Popup empfangen und Regeln setzen
-chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
-  if (msg.type === "policy:apply") {
-    const { domain, policy } = msg;
-    console.log("[Protecto] Policy für", domain, "→", policy);
-    await applyPolicyForDomain(domain, policy);
+  if (!self.domainSignals[d]) {
+    self.domainSignals[d] = {
+      thirdPartyHosts: 0,
+      pixelHits: 0,
+      suspiciousUrls: 0,
+      setCookieLong: false,
+      setCookieNoneSecure: false,
+      fingerprintCalls: 0,
+      suspiciousHeaders: 0,
+      tinyResponses: 0,
+      cmp: { hasLegit: false, onlyNecessary: false }
+    };
   }
-
-  if (msg.type === "risk:signal") {
-    const d = msg.domain;
-    const ref = ensureDomain(d);
-    if (typeof msg.fingerprintCalls === "number") {
-      ref.fingerprintCalls += msg.fingerprintCalls;
-    }
-    if (msg.cmp) {
-      ref.cmp.hasLegit      = ref.cmp.hasLegit || !!msg.cmp.hasLegit;
-      ref.cmp.onlyNecessary = ref.cmp.onlyNecessary || !!msg.cmp.onlyNecessary;
-    }
-    sendResponse?.({ ok: true });
-  }
-
-  if (msg.type === "risk:get") {
-    const d = msg.domain;
-    const ref = ensureDomain(d);
-    try {
-      if (self.getHistory) {
-        ref.history = await self.getHistory(d);
-      }
-    } catch {}
-    const res = self.computeRisk(ref);
-    sendResponse?.(res);
-  }
-
-  return true;
-});
-
-function getHeader(headers, name) {
-  if (!headers) return null;
-  const l = name.toLowerCase();
-  for (const h of headers) {
-    if (h.name && h.name.toLowerCase() === l) return h;
-  }
-  return null;
+  return self.domainSignals[d];
 }
-
-function hostFromUrl(url) {
-  try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return ""; }
-}
-
-function apex(host) {
-  try {
-    const parts = (host || "").split(".");
-    if (parts.length <= 2) return host;
-    return parts.slice(-2).join(".");
-  } catch { return host; }
-}
-function hasSuspiciousPathOrQuery(url) {
-  try {
-    const u = url.toLowerCase();
-    const pathMatch = /[\/?#](pixel|track|collect|beacon|stats|metrics|measure|event|log|g\/.?collect|r\/.?collect)([\/?#]|$)/.test(u);
-    const qMatch    = /(utm_[a-z]+|fbclid|gclid|msclkid|dclid|yclid|mc_eid)=/.test(u);
-    return pathMatch || qMatch;
-  } catch { return false; }
-}
-
-function isSuspiciousTiny(details) {
-  const url = (details.url || "").toLowerCase();
-  const targetHost = hostFromUrl(url);
-  const initiatorHost = hostFromUrl(details.initiator || details.originUrl || "");
-
-  // nur Third‑Party prüfen
-  if (initiatorHost && targetHost && initiatorHost === targetHost) return false;
-
-  const hCL = getHeader(details.responseHeaders, "content-length");
-  const hCT = getHeader(details.responseHeaders, "content-type");
-  const len = hCL ? parseInt(hCL.value) : NaN;
-  const type = hCT?.value ? hCT.value.toLowerCase() : "";
-
-  // eindeutige False‑Positives ausschließen
-  if (url.includes("/favicon.ico") || url.includes("apple-touch-icon") || url.endsWith(".webmanifest") || url.endsWith("/robots.txt") || url.endsWith("/sitemap.xml")) return false;
-
-  // Verdächtige URL‑Muster
-  const suspiciousPath = /[\/?](pixel|track|collect|beacon|stats|metrics)([/?#]|$)/.test(url);
-  const suspiciousQuery = /(utm_[a-z]+|fbclid|gclid|msclkid|dclid|yclid|mc_eid)=/.test(url);
-
-  // Kleine Antworten (typische 1x1 oder Beacon payloads)
-  const tiny = Number.isFinite(len) && len > 0 && len < 200; // 200B Schwelle
-
-  // Typische MIME‑Typen für Pixel/Beacon
-  const isImageTiny = type.startsWith("image/") && tiny;
-  const isPlainTiny = (type.startsWith("text/plain") || type.startsWith("application/json")) && tiny;
-
-  // Blocke nur, wenn Muster + Größe zusammenkommen → präziser, weniger False‑Positives
-  if ((isImageTiny || isPlainTiny) && (suspiciousPath || suspiciousQuery)) {
-    return true;
-  }
-
-  return false;
+function hostFromUrl(u) {
+  try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; }
 }
 
 async function applyPolicyForDomain(domain, policy) {
-  const removeIds = [2000, 2001, 2002, 2003, 2004, 2005, 2006];
+  // Clear previous dynamic rules for this policy scope
+  const removeIds = [];
+  for (let i = 2000; i <= 2050; i++) removeIds.push(i);
   await chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: removeIds });
 
   const addRules = [];
 
+  // Helpers for common redirects
+  const ONE_BY_ONE = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA";
+  const NOOP_JS   = "data:text/javascript,/*noop*/";
+
+  // Trackers → Stubs (scripts)
+  const GA_STUB   = "/src/stubs/ga.js";   // google-analytics
+  const GTM_STUB  = "/src/stubs/gtm.js";  // googletagmanager
+  const FBQ_STUB  = "/src/stubs/fbq.js";  // facebook pixel
+
+  // --- STRICT: aggressiv + generisch ---
   if (policy === "strict") {
+    // Google Analytics (analytics.js, gtag.js)
     addRules.push({
-      id: 2000,
-      priority: 1,
-      action: { type: "block" },
-      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net" }
+      id: 2000, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: GA_STUB } },
+      condition: { initiatorDomains: [domain], urlFilter: "google-analytics.com", resourceTypes: ["script"] }
+    });
+    // Google Tag Manager
+    addRules.push({
+      id: 2001, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: GTM_STUB } },
+      condition: { initiatorDomains: [domain], urlFilter: "googletagmanager.com", resourceTypes: ["script"] }
+    });
+    // Facebook Pixel
+    addRules.push({
+      id: 2002, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: FBQ_STUB } },
+      condition: { initiatorDomains: [domain], urlFilter: "connect.facebook.net", resourceTypes: ["script"] }
+    });
+    // Doubleclick / Syndication scripts → noop JS (keine Stubs nötig)
+    addRules.push({
+      id: 2004, priority: 1,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net", resourceTypes: ["script"] }
     });
     addRules.push({
-      id: 2001,
-      priority: 1,
-      action: { type: "block" },
-      condition: { initiatorDomains: [domain], urlFilter: "google-analytics.com" }
+      id: 2005, priority: 1,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: { initiatorDomains: [domain], urlFilter: "googlesyndication.com", resourceTypes: ["script"] }
     });
 
-    if (!pixelBlockerEnabled) {
-      pixelBlockerListener = (details) => {
-        try {
-          if (isSuspiciousTiny(details)) {
-            console.log("[Protecto] Blocked suspicious tiny request:", details.url);
-            return { cancel: true };
-          }
-        } catch (e) {
-          console.warn("[Protecto] pixel heuristic error", e);
-        }
-      };
-      chrome.webRequest.onHeadersReceived.addListener(
-        pixelBlockerListener,
-        { urls: ["<all_urls>"] },
-        ["blocking", "responseHeaders"]
-      );
-      pixelBlockerEnabled = true;
-    }
-
-    // Redirect suspicious tracker requests to a 1x1 pixel (stealth, no ERR_BLOCKED)
-    if (!pixelRedirectListener) {
-      pixelRedirectListener = (details) => {
-        try {
-          const url = details.url || "";
-          const targetHost = hostFromUrl(url);
-          const initiatorHost = hostFromUrl(details.initiator || details.originUrl || "");
-          if (!targetHost || !initiatorHost) return {};
-          // third-party only
-          if (initiatorHost === targetHost) return {};
-          if (!hasSuspiciousPathOrQuery(url)) return {};
-          // mark signal for initiator domain
-          const d = initiatorHost;
-          const ref = ensureDomain(d);
-          ref.pixelHits = (ref.pixelHits || 0) + 1;
-          ref.pixelRedirects = (ref.pixelRedirects || 0) + 1;
-          return { redirectUrl: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" };
-        } catch (e) { return {}; }
-      };
-      chrome.webRequest.onBeforeRequest.addListener(
-        pixelRedirectListener,
-        { urls: ["<all_urls>"] },
-        ["blocking"]
-      );
-    }
+    // Generische Pixel/Collect/Beacon (image/xhr/ping) → 1x1
+    addRules.push({
+      id: 2010, priority: 1,
+      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
+      condition: { initiatorDomains: [domain], urlFilter: "/collect", resourceTypes: ["image","xmlhttprequest","ping"] }
+    });
+    addRules.push({
+      id: 2011, priority: 1,
+      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
+      condition: { initiatorDomains: [domain], urlFilter: "/pixel", resourceTypes: ["image","xmlhttprequest","ping"] }
+    });
+    addRules.push({
+      id: 2012, priority: 1,
+      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
+      condition: { initiatorDomains: [domain], urlFilter: "/beacon", resourceTypes: ["image","xmlhttprequest","ping"] }
+    });
 
     // Inject strict-mode shims only in strict mode (MAIN world)
     if (!fingerprintInjected) {
@@ -230,62 +116,83 @@ async function applyPolicyForDomain(domain, policy) {
       }
     }
   } else {
-    if (pixelBlockerEnabled) {
-      try {
-        if (pixelBlockerListener) {
-          chrome.webRequest.onHeadersReceived.removeListener(pixelBlockerListener);
-          pixelBlockerListener = null;
-        }
-      } catch {}
-      pixelBlockerEnabled = false;
-    }
-    if (pixelRedirectListener) {
-      try { chrome.webRequest.onBeforeRequest.removeListener(pixelRedirectListener); } catch {}
-      pixelRedirectListener = null;
-    }
     // Reset fingerprint injection flag for non-strict
     fingerprintInjected = false;
   }
 
+  // --- STANDARD: Kern-Tracker + collect/pixel/beacon ---
   if (policy === "standard") {
     addRules.push({
-      id: 2002,
-      priority: 1,
-      action: { type: "block" },
-      condition: { initiatorDomains: [domain], urlFilter: "google-analytics.com" }
+      id: 2020, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: GA_STUB } },
+      condition: { initiatorDomains: [domain], urlFilter: "google-analytics.com", resourceTypes: ["script"] }
+    });
+    addRules.push({
+      id: 2021, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: GTM_STUB } },
+      condition: { initiatorDomains: [domain], urlFilter: "googletagmanager.com", resourceTypes: ["script"] }
+    });
+    addRules.push({
+      id: 2022, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: FBQ_STUB } },
+      condition: { initiatorDomains: [domain], urlFilter: "connect.facebook.net", resourceTypes: ["script"] }
+    });
+    addRules.push({
+      id: 2023, priority: 1,
+      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
+      condition: { initiatorDomains: [domain], urlFilter: "/collect", resourceTypes: ["image","xmlhttprequest","ping"] }
+    });
+    addRules.push({
+      id: 2024, priority: 1,
+      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
+      condition: { initiatorDomains: [domain], urlFilter: "/pixel", resourceTypes: ["image","xmlhttprequest","ping"] }
+    });
+    addRules.push({
+      id: 2025, priority: 1,
+      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
+      condition: { initiatorDomains: [domain], urlFilter: "/beacon", resourceTypes: ["image","xmlhttprequest","ping"] }
     });
   }
 
+  // --- SOFT: nur GA/FBQ; Logins/Consent erlauben ---
   if (policy === "soft") {
-    console.log("[Protecto] Soft Mode: lockert Schutz für", domain);
-
-    // Bestimmte Login-/Consent-Domains explizit erlauben
+    // High-risk scripts
     addRules.push({
-      id: 2004,
-      priority: 1,
+      id: 2030, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: GA_STUB } },
+      condition: { initiatorDomains: [domain], urlFilter: "google-analytics.com", resourceTypes: ["script"] }
+    });
+    addRules.push({
+      id: 2031, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: FBQ_STUB } },
+      condition: { initiatorDomains: [domain], urlFilter: "connect.facebook.net", resourceTypes: ["script"] }
+    });
+
+    // Whitelisted essentials (Login/Consent)
+    addRules.push({
+      id: 2034, priority: 1,
       action: { type: "allow" },
       condition: { initiatorDomains: [domain], urlFilter: "accounts.google.com" }
     });
     addRules.push({
-      id: 2005,
-      priority: 1,
+      id: 2035, priority: 1,
       action: { type: "allow" },
       condition: { initiatorDomains: [domain], urlFilter: "staticxx.facebook.com" }
     });
     addRules.push({
-      id: 2006,
-      priority: 1,
+      id: 2036, priority: 1,
       action: { type: "allow" },
       condition: { initiatorDomains: [domain], urlFilter: "consent.cookiebot.com" }
     });
   }
 
+  // --- OFF: alles erlauben (nur Frames, wie MV3 verlangt) ---
   if (policy === "off") {
     addRules.push({
       id: 2003,
       priority: 1,
       action: { type: "allowAllRequests" },
-      condition: { initiatorDomains: [domain] }
+      condition: { initiatorDomains: [domain], resourceTypes: ["main_frame", "sub_frame"] }
     });
   }
 
@@ -294,50 +201,111 @@ async function applyPolicyForDomain(domain, policy) {
   }
 }
 
-// Passiv: zähle Third-Party & verdächtige URLs (für alle Policies)
+// --- Passive webRequest Logger (no blocking, only signals) ---
 chrome.webRequest.onHeadersReceived.addListener(
   (details) => {
     try {
       const url = details.url || "";
-      const target = hostFromUrl(url);
       const initiator = hostFromUrl(details.initiator || details.originUrl || "");
-      if (!target) return;
-
+      const target = hostFromUrl(url);
       const d = initiator || target;
+      if (!d) return;
       const ref = ensureDomain(d);
 
+      // Third-party host count
       if (initiator && target && initiator !== target) {
         ref.thirdPartyHosts = Math.min((ref.thirdPartyHosts || 0) + 1, 999);
       }
 
-      // Heuristic CNAME cloaking: same apex but suspicious subdomain and tracking path/query
-      const apexInitiator = apex(initiator);
-      const apexTarget = apex(target);
-      if (apexInitiator && apexTarget && apexInitiator === apexTarget) {
-        const sub = (target || "").split(".").slice(0, -2).join(".");
-        if (sub && /(metrics|stats|track|pixel|links|email|news|events)/i.test(sub) && hasSuspiciousPathOrQuery(url)) {
-          ref.cnameCloak = true;
-        }
+      // Suspicious paths / query params typical for tracking
+      if (/[\/?](pixel|track|collect|beacon|stats|metrics)([\/?#]|$)/i.test(url) ||
+          /(utm_[a-z]+|fbclid|gclid|msclkid|dclid|yclid|mc_eid)=/i.test(url)) {
+        ref.suspiciousUrls = (ref.suspiciousUrls || 0) + 1;
       }
 
-      const hasSusp = /[\/?](pixel|track|collect|beacon|stats|metrics)([/?#]|$)/i.test(url) ||
-                      /(utm_[a-z]+|fbclid|gclid|msclkid|dclid|yclid|mc_eid)=/i.test(url);
-      if (hasSusp) ref.suspiciousUrls = (ref.suspiciousUrls || 0) + 1;
+      // Pixel hits (tiny content length)
+      const cl = (details.responseHeaders || []).find(h => (h.name||"").toLowerCase() === "content-length");
+      if (cl && Number(cl.value) > 0 && Number(cl.value) < 256) {
+        ref.pixelHits = (ref.pixelHits || 0) + 1;
+        ref.tinyResponses = (ref.tinyResponses || 0) + 1;
+      }
 
-      if (isSuspiciousTiny(details)) ref.pixelHits = (ref.pixelHits || 0) + 1;
-
-      const setCookie = details.responseHeaders?.filter(h => h.name?.toLowerCase() === "set-cookie") || [];
+      // Set-Cookie indicators
+      const setCookie = (details.responseHeaders || []).filter(h => (h.name||"").toLowerCase() === "set-cookie");
       for (const sc of setCookie) {
         const v = (sc.value || "").toLowerCase();
-        if (/max-age=\s*(3\\d{2}|[4-9]\\d{2,})/.test(v) || /expires=/.test(v)) {
-          ref.setCookieLong = true;
-        }
-        if (v.includes("samesite=none") && v.includes("secure")) {
-          ref.setCookieNoneSecure = true;
-        }
+        if (/max-age=\s*(3\d{2}|[4-9]\d{2,})/.test(v) || /expires=/.test(v)) ref.setCookieLong = true;
+        if (v.includes("samesite=none") && v.includes("secure")) ref.setCookieNoneSecure = true;
+        if (/domain=\./.test(v)) ref.suspiciousHeaders = (ref.suspiciousHeaders || 0) + 1;
       }
-    } catch {}
+    } catch (e) {
+      console.warn("[Protecto][Logger] error onHeadersReceived", e);
+    }
   },
   { urls: ["<all_urls>"] },
   ["responseHeaders"]
 );
+
+chrome.webRequest.onCompleted.addListener(
+  (details) => {
+    try {
+      const url = details.url || "";
+      const initiator = hostFromUrl(details.initiator || details.originUrl || "");
+      const target = hostFromUrl(url);
+      const d = initiator || target;
+      if (!d) return;
+      const ref = ensureDomain(d);
+
+      // Extra: treat very small transfers (no Content-Length header) as tiny
+      if (details.type === "image" || details.type === "xmlhttprequest" || details.type === "ping") {
+        if ((details.fromCache === false) && (details.statusCode >= 200 && details.statusCode < 400)) {
+          // No size reliably available here; we already counted via headers above.
+        }
+      }
+    } catch (e) {}
+  },
+  { urls: ["<all_urls>"] }
+);
+
+chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
+  try {
+    if (msg.type === "risk:get") {
+      const d = (msg.domain || "").replace(/^www\./, "");
+      const ref = ensureDomain(d);
+      const res = self.computeRisk(ref);
+      sendResponse(res || { score: 0, level: "low", recommend: "soft", reasons: [] });
+      return true;
+    }
+
+    if (msg.type === "risk:signal") {
+      const d = (msg.domain || "").replace(/^www\./, "");
+      const ref = ensureDomain(d);
+      if (typeof msg.fingerprintCalls === "number") {
+        ref.fingerprintCalls += msg.fingerprintCalls;
+      }
+      if (msg.cmp) {
+        ref.cmp = ref.cmp || { hasLegit: false, onlyNecessary: false };
+        if (typeof msg.cmp.hasLegit === "boolean") ref.cmp.hasLegit = ref.cmp.hasLegit || msg.cmp.hasLegit;
+        if (typeof msg.cmp.onlyNecessary === "boolean") ref.cmp.onlyNecessary = ref.cmp.onlyNecessary || msg.cmp.onlyNecessary;
+      }
+      sendResponse({ ok: true });
+      return true;
+    }
+
+    if (msg.type === "policy:apply") {
+      const d = (msg.domain || "").replace(/^www\./, "");
+      const pol = msg.policy;
+      const st = await chrome.storage.sync.get("policies");
+      const policies = st.policies || {};
+      policies[d] = pol;
+      await chrome.storage.sync.set({ policies });
+      await applyPolicyForDomain(d, pol);
+      sendResponse({ ok: true });
+      return true;
+    }
+  } catch (e) {
+    console.warn("[Protecto] onMessage error", e);
+    try { sendResponse({ ok:false, error: String(e) }); } catch {}
+    return true;
+  }
+});

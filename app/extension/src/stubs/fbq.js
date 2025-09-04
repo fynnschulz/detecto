@@ -11,6 +11,12 @@
     dpo: null             // data processing options
   };
 
+  const DEBUG = false;
+  function jitter(min=30,max=200){
+    return new Promise(res=>setTimeout(res, Math.floor(min + Math.random()*(max-min))));
+  }
+  function log(...a){ if (DEBUG) console.debug("[Protecto-fbq-stub]",...a); }
+
   function FBQ(){
     const args = Array.prototype.slice.call(arguments);
     if (typeof FBQ.callMethod === "function") {
@@ -31,7 +37,7 @@
   };
 
   // API implementation (no‑ops with local bookkeeping)
-  FBQ.callMethod = function(){
+  FBQ.callMethod = async function(){
     const args = Array.prototype.slice.call(arguments);
     const cmd = (args[0]||"").toString();
 
@@ -49,6 +55,8 @@
         }
         // drain any pre‑init queue (keep as no‑op processing)
         if (state.queue.length) state.queue.length = 0;
+        await jitter();
+        log("init", pixelId, options);
         return;
       }
 
@@ -57,12 +65,16 @@
         const name = args[1] || "event";
         const params = args[2] || {};
         state.lastEvent = { name, params, ts: Date.now() };
+        await jitter();
+        log("track", name, params);
         return true; // pretend success
       }
 
       case "consent": { // fbq('consent', 'grant'|'revoke')
         const action = (args[1]||"").toString().toLowerCase();
         state.consent.granted = (action === "grant");
+        await jitter();
+        log("consent", action);
         return;
       }
 
@@ -86,17 +98,23 @@
             }
           }
         } catch {}
+        await jitter();
+        log("set", args[1], args[2], args[3]);
         return;
       }
 
       case "dataProcessingOptions": {
         // fbq('dataProcessingOptions', ['LDU'], country, state)
         state.dpo = args.slice(1);
+        await jitter();
+        log("dataProcessingOptions", state.dpo);
         return;
       }
 
       default:
         // Unknown command → ignore silently to avoid breaking sites
+        await jitter(10,50);
+        log("unknown command", cmd, args.slice(1));
         return;
     }
   };

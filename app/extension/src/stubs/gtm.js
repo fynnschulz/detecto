@@ -2,52 +2,53 @@
 (function(){
   "use strict";
 
-  // Ensure dataLayer exists
-  window.dataLayer = window.dataLayer || [];
-
   // Internal state for debugging/fake use
   const state = {
     events: [],
-    vars: {}
+    callbacks: []
   };
 
-  // Patch push method to capture events silently
-  const origPush = window.dataLayer.push;
+  // Create the dataLayer array if it doesn't exist
+  window.dataLayer = window.dataLayer || [];
+
+  // Save original push method if exists
+  const originalPush = window.dataLayer.push.bind(window.dataLayer);
+
+  // Override push method to intercept events
   window.dataLayer.push = function(){
     const args = Array.prototype.slice.call(arguments);
-    try {
-      for (const ev of args) {
-        if (ev && typeof ev === "object") {
-          state.events.push({ ev, ts: Date.now() });
-          if (ev.event === "gtm.js") {
-            state.vars["gtm.start"] = ev["gtm.start"] || Date.now();
+
+    // Store each event pushed
+    args.forEach(event => {
+      state.events.push(event);
+
+      // Simulate async processing with slight timing jitter (10-50ms)
+      setTimeout(() => {
+        // Call any registered callbacks for this event
+        state.callbacks.forEach(cb => {
+          try {
+            cb(event);
+          } catch (e) {
+            // Swallow errors to avoid breaking page
           }
-        }
-      }
-    } catch {}
-    return origPush.apply(window.dataLayer, args);
+        });
+      }, 10 + Math.floor(Math.random() * 40));
+    });
+
+    // Call original push to keep normal behavior
+    return originalPush.apply(null, args);
   };
 
-  // Fire gtm.start like real GTM
-  window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
-
-  // Expose a fake gtag wrapper (some sites rely on it)
-  window.gtag = function(){
-    const args = Array.prototype.slice.call(arguments);
-    state.events.push({ ev: { gtag: args }, ts: Date.now() });
-    return true;
-  };
-
-  // Fake consent API (gtag('consent', ...))
-  window.gtag.consent = {
-    granted: true,
-    update: function(params){
-      state.vars.consent = params;
+  // Provide a method to register callbacks for pushed events
+  window.dataLayer.onEvent = function(callback){
+    if (typeof callback === 'function') {
+      state.callbacks.push(callback);
     }
   };
 
-  // Fake get method for debugging hooks
-  window.gtag.get = function(field){
-    return state.vars[field];
-  };
+  // Simulate GTM loader events pushed on initialization
+  const now = new Date().getTime();
+  window.dataLayer.push({'gtm.start': now, event: 'gtm.js'});
+  window.dataLayer.push({event: 'gtm.dom'});
+  window.dataLayer.push({event: 'gtm.load'});
 })();

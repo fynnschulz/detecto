@@ -17,8 +17,8 @@
     "storage",
     "declarativeNetRequest",
     "webRequest",
-    "webRequestBlocking",
-    "scripting"
+    "scripting",
+    "tabs"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -46,7 +46,10 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "src/stubs/*.js"
+        "src/stubs/*.js",
+        "src/stubs/ga.js",
+        "src/stubs/gtm.js",
+        "src/stubs/fbq.js"
       ],
       "matches": ["<all_urls>"]
     }

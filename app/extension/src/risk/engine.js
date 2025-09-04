@@ -1,46 +1,69 @@
-// Sehr leichter Heuristik-Scorer (0–100) – lokal, ohne Cloud
-export function computeRisk(signals) {
-  // signals: { thirdPartyHosts, pixelHits, setCookieLong, setCookieNoneSecure,
-  //            suspiciousUrls, fingerprintCalls, cmp: { hasLegit, onlyNecessary }, history: { hits, lastSeen } }
+(function(){
+  "use strict";
+  // Risk Engine – MV3 compatible (no exports). Exposes: self.computeRisk(signals)
 
-  let s = 0;
-  s += Math.min(signals.thirdPartyHosts || 0, 30) * 1.0;          // 0..30
-  s += (signals.pixelHits || 0) * 6;                               // Pixel stark gewichten
-  s += (signals.suspiciousUrls || 0) * 4;                           // /track,/collect,utm_…
-  if (signals.setCookieLong)        s += 10;                        // Max-Age lang
-  if (signals.setCookieNoneSecure)  s += 8;                         // SameSite=None; Secure
-  s += (signals.fingerprintCalls || 0) * 5;                         // Canvas/Audio/WebGL
-  if (signals.cmp?.hasLegit)        s += 10;                        // legit. interest default
-  if (signals.cmp?.onlyNecessary)   s -= 15;                        // fairer CMP → abwerten
+  function clamp(n, lo, hi){ return Math.max(lo, Math.min(hi, n)); }
 
-  // History weighting (optional): prior incidents increase risk conservatively
-  const histHits = signals.history?.hits || 0;
-  const histLastSeen = signals.history?.lastSeen || 0;
-  if (histHits > 0) {
-    // Add up to +25 points based on prior hits (1.5 per hit, capped)
-    s += Math.min(histHits * 1.5, 25);
-  }
+  self.computeRisk = function(signals){
+    // signals: { thirdPartyHosts, pixelHits, setCookieLong, setCookieNoneSecure,
+    //            suspiciousUrls, fingerprintCalls, cmp: { hasLegit, onlyNecessary },
+    //            history: { hits, lastSeen }, pixelRedirects, cnameCloak,
+    //            suspiciousHeaders, tinyResponses }
+    const sgn = signals || {};
 
-  s = Math.max(0, Math.min(100, Math.round(s)));
-  let level = "low";
-  if (s >= 70) level = "high";
-  else if (s >= 40) level = "mid";
+    let s = 0;
+    s += Math.min(sgn.thirdPartyHosts || 0, 30) * 1.0;          // 0..30
+    s += (sgn.pixelHits || 0) * 6;                              // Pixel stark gewichten
+    s += (sgn.suspiciousUrls || 0) * 4;                         // /track,/collect,utm_…
+    if (sgn.setCookieLong)       s += 10;                       // Max-Age lang
+    if (sgn.setCookieNoneSecure) s += 8;                        // SameSite=None; Secure
+    s += (sgn.fingerprintCalls || 0) * 5;                       // Canvas/Audio/WebGL
+    if (sgn.cmp?.hasLegit)       s += 10;                       // legit. interest default
+    if (sgn.cmp?.onlyNecessary)  s -= 15;                       // fairer CMP → abwerten
 
-  let recommend = "soft";
-  if (level === "mid")  recommend = "standard";
-  if (level === "high") recommend = "strict";
+    // New: suspiciousHeaders (e.g., cookies with wide domain scopes, very large response headers)
+    if (sgn.suspiciousHeaders) s += sgn.suspiciousHeaders * 5;
 
-  // Build human-readable reasons for the computed risk score
-  const reasons = [];
-  if (signals.thirdPartyHosts) reasons.push(`Drittanbieter-Hosts: ${signals.thirdPartyHosts}`);
-  if (signals.pixelHits) reasons.push(`${signals.pixelHits} Tracking-Pixel entdeckt`);
-  if (signals.suspiciousUrls) reasons.push(`${signals.suspiciousUrls} verdächtige Tracking-URLs`);
-  if (signals.setCookieLong) reasons.push("Langzeit-Cookie gefunden");
-  if (signals.setCookieNoneSecure) reasons.push("SameSite=None; Secure-Cookie erkannt");
-  if (signals.fingerprintCalls) reasons.push(`${signals.fingerprintCalls} Fingerprint-Versuche`);
-  if (histHits) reasons.push(`Historie: ${histHits}x auffällig`);
-  if (signals.cmp?.hasLegit) reasons.push("CMP mit legitimen Interesse vorausgewählt");
-  if (signals.cmp?.onlyNecessary) reasons.push("CMP bietet nur notwendige Cookies an");
+    // New: tinyResponses (very small response bodies)
+    if (sgn.tinyResponses) s += sgn.tinyResponses * 4;
 
-  return { score: s, level, recommend, reasons };
-}
+    // History weighting (optional): prior incidents increase risk conservatively
+    const histHits = sgn.history?.hits || 0;
+    if (histHits > 0) {
+      // Add up to +25 points based on prior hits (1.5 per hit, capped)
+      s += Math.min(histHits * 1.5, 25);
+    }
+
+    // Heuristik: CNAME-Cloaking (falls vom SW gesetzt)
+    const cnameCloak = !!sgn.cnameCloak;
+    if (cnameCloak) s += 10;
+
+    s = clamp(Math.round(s), 0, 100);
+
+    let level = "low";
+    if (s >= 70) level = "high";
+    else if (s >= 40) level = "mid";
+
+    let recommend = "soft";
+    if (level === "mid")  recommend = "standard";
+    if (level === "high") recommend = "strict";
+
+    // Build human-readable reasons for the computed risk score
+    const reasons = [];
+    if (sgn.thirdPartyHosts) reasons.push(`Drittanbieter-Hosts: ${sgn.thirdPartyHosts}`);
+    if (sgn.pixelHits) reasons.push(`${sgn.pixelHits} Tracking-Pixel entdeckt`);
+    if (sgn.suspiciousUrls) reasons.push(`${sgn.suspiciousUrls} verdächtige Tracking-URLs`);
+    if (sgn.setCookieLong) reasons.push("Langzeit-Cookie gefunden");
+    if (sgn.setCookieNoneSecure) reasons.push("SameSite=None; Secure-Cookie erkannt");
+    if (sgn.fingerprintCalls) reasons.push(`${sgn.fingerprintCalls} Fingerprint-Versuche`);
+    if (histHits) reasons.push(`Historie: ${histHits}x auffällig`);
+    if (sgn.cmp?.hasLegit) reasons.push("CMP mit legitimen Interesse vorausgewählt");
+    if (sgn.cmp?.onlyNecessary) reasons.push("CMP bietet nur notwendige Cookies an");
+    if (sgn.pixelRedirects) reasons.push(`${sgn.pixelRedirects} Tracking-Pixel umgeleitet`);
+    if (cnameCloak) reasons.push("CNAME-Cloaking-Verdacht");
+    if (sgn.suspiciousHeaders) reasons.push(`${sgn.suspiciousHeaders} verdächtige Header-Muster erkannt (z.B. breite Cookie-Domains, sehr große Header)`);
+    if (sgn.tinyResponses) reasons.push(`${sgn.tinyResponses} ungewöhnlich kleine Antwortkörper entdeckt`);
+
+    return { score: s, level, recommend, reasons };
+  };
+})();

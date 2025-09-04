@@ -1,75 +1,72 @@
-// Google Analytics Stub – pro-level fake that satisfies API calls but sends nothing
+// Google Tag Manager Stub – pro-level fake that satisfies API calls but fires nothing
 (function(){
   "use strict";
-  if (window.ga && window.ga.loaded) return; // already defined
+  if (window.dataLayer && Array.isArray(window.dataLayer) && window.dataLayer._gtmStub) return; // already defined
+
+  const DEBUG = false;
 
   const state = {
-    trackers: {}, // tracker registry keyed by name
-    lastEvent: null,
-    fields: {}
+    pushes: [],
+    lastPush: null,
+    containers: new Set(),
+    startTimestamp: Date.now()
   };
 
-  function GA(){
-    const args = Array.prototype.slice.call(arguments);
-    if (!args.length) return;
-    const cmd = args[0];
-
-    // Universal Analytics style: ga('create', 'UA-XXXXX-Y', 'auto')
-    if (cmd === "create") {
-      const trackingId = args[1] || "UA-FAKE-0";
-      const name = args[2] && typeof args[2] === "string" ? args[2] : "t0";
-      state.trackers[name] = { id: trackingId, name, created: Date.now(), fields: {} };
-      return state.trackers[name];
-    }
-
-    // ga('send', 'pageview'|'event'|...)
-    if (cmd === "send") {
-      const hitType = args[1] || "pageview";
-      const params = args.slice(2);
-      state.lastEvent = { hitType, params, ts: Date.now() };
-      return true;
-    }
-
-    // ga('set', fieldName, value)
-    if (cmd === "set") {
-      if (typeof args[1] === "object") {
-        Object.assign(state.fields, args[1]);
-      } else if (typeof args[1] === "string") {
-        state.fields[args[1]] = args[2];
-      }
-      return;
-    }
-
-    // ga('get', fieldName)
-    if (cmd === "get") {
-      const field = args[1];
-      return state.fields[field];
-    }
-
-    // Tracker-specific calls: ga('trackerName.send', ...)
-    if (typeof cmd === "string" && cmd.includes(".")) {
-      const [trackerName, method] = cmd.split(".");
-      const tracker = state.trackers[trackerName];
-      if (tracker && method === "send") {
-        const hitType = args[1] || "event";
-        const params = args.slice(2);
-        state.lastEvent = { hitType, params, tracker: trackerName, ts: Date.now() };
-        return true;
-      }
-    }
-
-    // Default: ignore silently
-    return;
+  // timing jitter util
+  function jitter(min=30,max=200){
+    return new Promise(res => setTimeout(res, Math.floor(min + Math.random()*(max-min))));
   }
 
-  GA.loaded = true;
-  GA.l = +new Date();
-  GA.q = [];
-  GA.create = function(){ return GA.apply(null, ["create"].concat(Array.from(arguments))); };
-  GA.send   = function(){ return GA.apply(null, ["send"].concat(Array.from(arguments))); };
-  GA.set    = function(){ return GA.apply(null, ["set"].concat(Array.from(arguments))); };
-  GA.get    = function(){ return GA.apply(null, ["get"].concat(Array.from(arguments))); };
+  function createDataLayer() {
+    const dl = [];
+
+    dl._gtmStub = true;
+
+    dl.push = function() {
+      const args = Array.prototype.slice.call(arguments);
+      if (args.length === 0) return 0;
+
+      // Simulate async handling with jitter
+      jitter().then(() => {
+        args.forEach(item => {
+          if (typeof item === 'object' && item !== null) {
+            // Track container ID if 'gtm.start' event with containerId is pushed
+            if (item['gtm.start'] && item['gtm.uniqueEventId']) {
+              if (item['gtm.containerId']) {
+                state.containers.add(item['gtm.containerId']);
+              }
+              state.startTimestamp = item['gtm.start'];
+            }
+            state.pushes.push(item);
+            state.lastPush = item;
+            if (DEBUG) console.log("[Protecto GTM Stub] push:", item);
+          } else {
+            // Unknown push → still log & fake
+            if (DEBUG) console.log("[Protecto GTM Stub] unknown push arg:", item);
+            state.pushes.push({ _raw:item, ts:Date.now() });
+            state.lastPush = item;
+          }
+        });
+
+        // Push to underlying array for length property and compatibility
+        Array.prototype.push.apply(dl, args);
+      });
+
+      // Return new length to mimic native push
+      return dl.length;
+    };
+
+    Object.defineProperty(dl, 'length', {
+      get: function() {
+        return Array.prototype.length.call(dl);
+      },
+      configurable: false,
+      enumerable: true
+    });
+
+    return dl;
+  }
 
   // Expose globally
-  window.ga = GA;
+  window.dataLayer = createDataLayer();
 })();

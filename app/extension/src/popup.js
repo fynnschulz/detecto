@@ -1,45 +1,53 @@
-async function setPolicy(policy) {
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  if (!tab?.url) return;
-
-  const domain = new URL(tab.url).hostname.replace(/^www\./, "");
-
-  // Policy speichern
-  let { policies = {} } = await chrome.storage.sync.get("policies");
-  policies[domain] = policy;
-  await chrome.storage.sync.set({ policies });
-
-  // Service Worker informieren
-  await chrome.runtime.sendMessage({ type: "policy:apply", domain, policy });
-  console.log("[Protecto] Policy gesetzt:", domain, policy);
-
-  // Buttons visuell aktualisieren
-  document.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
-  const btn = document.getElementById(`policy-${policy}`);
-  if (btn) btn.classList.add("active");
+function sendMessageP(message) {
+  return new Promise((resolve) => {
+    try {
+      chrome.runtime.sendMessage(message, (reply) => {
+        if (chrome.runtime.lastError || typeof reply === 'undefined') return resolve(null);
+        resolve(reply);
+      });
+    } catch {
+      resolve(null);
+    }
+  });
 }
 
-document.getElementById("policy-strict").onclick = () => setPolicy("strict");
-document.getElementById("policy-standard").onclick = () => setPolicy("standard");
-document.getElementById("policy-soft").onclick = () => setPolicy("soft");
-document.getElementById("policy-off").onclick = () => setPolicy("off");
+async function getCurrentPolicyForActiveTab(){
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true }).catch(() => [null]);
+  if (!tab?.url) return null;
+  const domain = new URL(tab.url).hostname.replace(/^www\./, "");
+  const { policies = {} } = await chrome.storage.sync.get("policies");
+  return policies[domain] || policies["*"] || null;
+}
 
-const domainInput = document.getElementById("domainInput");
-const whitelistEl = document.getElementById("whitelist");
+async function setPolicy(policy) {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true }).catch(() => [null]);
+  if (!tab?.url) return;
+  const domain = new URL(tab.url).hostname.replace(/^www\./, "");
 
-document.getElementById("addWhitelist").onclick = async () => {
-  const domain = domainInput.value.trim();
-  if (!domain) return;
-  let { whitelist = [] } = await chrome.storage.sync.get("whitelist");
-  if (!whitelist.includes(domain)) whitelist.push(domain);
-  await chrome.storage.sync.set({ whitelist });
-  renderWhitelist(whitelist);
-  domainInput.value = "";
-};
+  // send to SW
+  const res = await sendMessageP({ type: "policy:apply", domain, policy });
+
+  // UI markieren, egal ob reply null ist (SW kann async sein)
+  document.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+  const btn = document.getElementById(`policy-${policy}`);
+  if (btn) btn.classList.add("active");
+
+  const modeNameEl = document.getElementById("modeName");
+  if (modeNameEl) modeNameEl.textContent = policy.toUpperCase();
+
+  // Empfehlung neu laden (zeigt aktuelle Policy-Empfehlung/Gründe)
+  try { await loadRecommendation(); } catch {}
+
+  // Seite sanft neu laden, damit DNR-Redirects sofort wirken
+  try { if (tab.id) await chrome.tabs.reload(tab.id); } catch {}
+}
+
+let domainInput, whitelistEl;
 
 async function renderWhitelist(whitelist) {
+  if (!whitelistEl) return;
   whitelistEl.innerHTML = "";
-  whitelist.forEach((domain) => {
+  (whitelist || []).forEach((domain) => {
     const li = document.createElement("li");
     li.textContent = domain;
     whitelistEl.appendChild(li);
@@ -48,12 +56,12 @@ async function renderWhitelist(whitelist) {
 
 // Load recommendation for the current tab and update UI
 async function loadRecommendation() {
-  const [tab] = await chrome.tabs.query({ active:true, currentWindow:true });
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true }).catch(() => [null]);
   if (!tab?.url) return;
-  const domain = new URL(tab.url).hostname.replace(/^www\./,"");
+  const domain = new URL(tab.url).hostname.replace(/^www\./, "");
 
-  const res = await chrome.runtime.sendMessage({ type:"risk:get", domain });
-  // res = { score, level: "low|mid|high", recommend: "soft|standard|strict", reasons: [...] }
+  let res = await sendMessageP({ type: "risk:get", domain });
+  if (!res) res = { score: 0, level: "low", recommend: "soft", reasons: [] };
 
   const box = document.getElementById("recBox");
   if (box) {
@@ -61,20 +69,43 @@ async function loadRecommendation() {
       <div><b>Bewertung:</b> ${res.score}/100</div>
       <div><b>Risiko-Level:</b> ${res.level.toUpperCase()}</div>
       <div><b>Empfehlung:</b> ${res.recommend.toUpperCase()}</div>
-      <div><b>Gründe:</b><ul>${(res.reasons||[]).map(r=>`<li>${r}</li>`).join("")}</ul></div>
+      ${Array.isArray(res.reasons) && res.reasons.length ? `<div style="margin-top:6px"><b>Gründe:</b><br>${res.reasons.map(r=>`• ${r}`).join("<br>")}</div>` : ""}
     `;
-    document.querySelectorAll("button").forEach(b => b.classList.remove("active"));
-    const btn = document.getElementById(`policy-${res.recommend}`);
-    if (btn) btn.classList.add("active");
+    const modeNameEl = document.getElementById("modeName");
+    if (modeNameEl) modeNameEl.textContent = (await getCurrentPolicyForActiveTab()) || "—";
   }
 }
 
-// Initiales Laden
-(async () => {
+// Init after DOM is ready
+window.addEventListener("DOMContentLoaded", async () => {
+  domainInput = document.getElementById("domainInput");
+  whitelistEl = document.getElementById("whitelist");
+
+  const addBtn = document.getElementById("addWhitelist");
+  if (addBtn) {
+    addBtn.addEventListener("click", async () => {
+      const domain = (domainInput?.value || "").trim();
+      if (!domain) return;
+      let { whitelist = [] } = await chrome.storage.sync.get("whitelist");
+      if (!whitelist.includes(domain)) whitelist.push(domain);
+      await chrome.storage.sync.set({ whitelist });
+      renderWhitelist(whitelist);
+      if (domainInput) domainInput.value = "";
+    });
+  }
+
+  // Policy Buttons
+  document.getElementById("policy-strict")?.addEventListener("click", () => setPolicy("strict"));
+  document.getElementById("policy-standard")?.addEventListener("click", () => setPolicy("standard"));
+  document.getElementById("policy-soft")?.addEventListener("click", () => setPolicy("soft"));
+  document.getElementById("policy-off")?.addEventListener("click", () => setPolicy("off"));
+
+  // Initial Whitelist render
   const { whitelist = [] } = await chrome.storage.sync.get("whitelist");
   renderWhitelist(whitelist);
 
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  // Mark currently stored policy
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true }).catch(() => [null]);
   if (tab?.url) {
     const domain = new URL(tab.url).hostname.replace(/^www\./, "");
     const { policies = {} } = await chrome.storage.sync.get("policies");
@@ -83,7 +114,10 @@ async function loadRecommendation() {
       const btn = document.getElementById(`policy-${currentPolicy}`);
       if (btn) btn.classList.add("active");
     }
+    const modeNameEl = document.getElementById("modeName");
+    if (modeNameEl) modeNameEl.textContent = (currentPolicy || policies["*"] || "—").toUpperCase();
   }
-  // NEU: Empfehlung laden
+
+  // Empfehlung laden
   await loadRecommendation();
-})();
+});
