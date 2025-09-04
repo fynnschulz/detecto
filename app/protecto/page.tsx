@@ -70,7 +70,7 @@ export default function ProtectoPage() {
               href="/signup"
               className={`relative ${glow} inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-pink-500 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-500/20 transition hover:from-pink-400 hover:to-sky-400`}
             >
-              Jetzt vormerken
+              JETZT STARTEN
               <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round"/>
               </svg>

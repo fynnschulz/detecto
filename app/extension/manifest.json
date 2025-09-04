@@ -1,0 +1,54 @@
+{
+  "name": "Protecto by Detecto",
+  "description": "Stealthy cookie, tracker & fingerprint protection with adaptive risk engine.",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Protecto",
+    "default_popup": "src/popup.html"
+  },
+  "background": { "service_worker": "src/service-worker.js" },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "webRequest",
+    "webRequestBlocking",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "base-rules",
+        "enabled": true,
+        "path": "src/rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_ui": {
+    "page": "src/options.html",
+    "open_in_tab": true
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/stubs/*.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
