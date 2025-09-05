@@ -14,7 +14,14 @@ function sendMessageP(message) {
 async function getCurrentPolicyForActiveTab(){
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true }).catch(() => [null]);
   if (!tab?.url) return null;
-  const domain = new URL(tab.url).hostname.replace(/^www\./, "");
+  let domain;
+  try {
+    const u = new URL(tab.url);
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
+    domain = u.hostname.replace(/^www\./, "");
+  } catch {
+    return null;
+  }
   const { policies = {} } = await chrome.storage.sync.get("policies");
   return policies[domain] || policies["*"] || null;
 }
@@ -22,7 +29,14 @@ async function getCurrentPolicyForActiveTab(){
 async function setPolicy(policy) {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true }).catch(() => [null]);
   if (!tab?.url) return;
-  const domain = new URL(tab.url).hostname.replace(/^www\./, "");
+  let domain;
+  try {
+    const u = new URL(tab.url);
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') return;
+    domain = u.hostname.replace(/^www\./, "");
+  } catch {
+    return;
+  }
 
   // send to SW
   const res = await sendMessageP({ type: "policy:apply", domain, policy });
@@ -38,8 +52,12 @@ async function setPolicy(policy) {
   // Empfehlung neu laden (zeigt aktuelle Policy-Empfehlung/Gründe)
   try { await loadRecommendation(); } catch {}
 
-  // Seite sanft neu laden, damit DNR-Redirects sofort wirken
-  try { if (tab.id) await chrome.tabs.reload(tab.id); } catch {}
+  // Seite nur bei wirkungsrelevanten Modi neu laden (standard/strict)
+  try {
+    if (tab?.id && (policy === 'standard' || policy === 'strict')) {
+      await chrome.tabs.reload(tab.id);
+    }
+  } catch {}
 }
 
 let domainInput, whitelistEl;
@@ -58,7 +76,12 @@ async function renderWhitelist(whitelist) {
 async function loadRecommendation() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true }).catch(() => [null]);
   if (!tab?.url) return;
-  const domain = new URL(tab.url).hostname.replace(/^www\./, "");
+  let domain;
+  try {
+    const u = new URL(tab.url);
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') return;
+    domain = u.hostname.replace(/^www\./, "");
+  } catch { return; }
 
   let res = await sendMessageP({ type: "risk:get", domain });
   if (!res) res = { score: 0, level: "low", recommend: "soft", reasons: [] };
@@ -72,7 +95,10 @@ async function loadRecommendation() {
       ${Array.isArray(res.reasons) && res.reasons.length ? `<div style="margin-top:6px"><b>Gründe:</b><br>${res.reasons.map(r=>`• ${r}`).join("<br>")}</div>` : ""}
     `;
     const modeNameEl = document.getElementById("modeName");
-    if (modeNameEl) modeNameEl.textContent = (await getCurrentPolicyForActiveTab()) || "—";
+    if (modeNameEl) {
+      const pol = await getCurrentPolicyForActiveTab();
+      modeNameEl.textContent = pol ? pol.toUpperCase() : "—";
+    }
   }
 }
 
@@ -84,7 +110,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   const addBtn = document.getElementById("addWhitelist");
   if (addBtn) {
     addBtn.addEventListener("click", async () => {
-      const domain = (domainInput?.value || "").trim();
+      const domain = (domainInput?.value || "").trim().toLowerCase();
       if (!domain) return;
       let { whitelist = [] } = await chrome.storage.sync.get("whitelist");
       if (!whitelist.includes(domain)) whitelist.push(domain);
@@ -107,7 +133,18 @@ window.addEventListener("DOMContentLoaded", async () => {
   // Mark currently stored policy
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true }).catch(() => [null]);
   if (tab?.url) {
-    const domain = new URL(tab.url).hostname.replace(/^www\./, "");
+    let domain;
+    try {
+      const u = new URL(tab.url);
+      if (u.protocol !== 'http:' && u.protocol !== 'https:') {
+        await loadRecommendation();
+        return;
+      }
+      domain = u.hostname.replace(/^www\./, "");
+    } catch {
+      await loadRecommendation();
+      return;
+    }
     const { policies = {} } = await chrome.storage.sync.get("policies");
     const currentPolicy = policies[domain];
     if (currentPolicy) {

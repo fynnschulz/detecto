@@ -2,11 +2,51 @@
 try {
   importScripts("risk/engine.js");
   importScripts("risk/history.js");
+  importScripts("engine/adaptive.js"); // NEW: adaptive learning redirect engine
   console.log("[Protecto] Risk engine loaded:", typeof self.computeRisk);
 } catch (e) {
   console.error("[Protecto] Risk engine failed to load", e);
   self.computeRisk = () => ({ score: 0, level: "low", recommend: "soft", reasons: ["engine-not-loaded"] });
 }
+
+// Track whether strict shims were injected for the current active tab
+let fingerprintInjected = false;
+
+// --- Adaptive Cleanup Scheduler (every 30 days) ---
+const CLEANUP_ALARM = "protecto-cleanup";
+const THIRTY_DAYS_MIN = 30 * 24 * 60; // 43,200 minutes
+
+async function scheduleCleanupAlarm() {
+  try {
+    // Create or update repeating alarm (Chrome replaces if same name)
+    await chrome.alarms.create(CLEANUP_ALARM, { periodInMinutes: THIRTY_DAYS_MIN });
+    console.log("[Protecto][Adaptive] cleanup alarm scheduled (every 30 days)");
+  } catch (e) {
+    console.warn("[Protecto][Adaptive] failed to schedule alarm", e);
+  }
+}
+
+chrome.runtime.onInstalled.addListener(() => {
+  scheduleCleanupAlarm();
+  // Optional: run one initial cleanup on install
+  if (self.adaptive?.cleanupLearned) {
+    self.adaptive.cleanupLearned({ maxAgeDays: 30, maxEntries: 5000 }).catch(()=>{});
+  }
+});
+
+chrome.runtime.onStartup.addListener(() => {
+  scheduleCleanupAlarm();
+});
+
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm?.name !== CLEANUP_ALARM) return;
+  if (!self.adaptive?.cleanupLearned) return;
+  self.adaptive.cleanupLearned({ maxAgeDays: 30, maxEntries: 5000 })
+    .then(({ removed, remaining }) => {
+      console.log(`[Protecto][Adaptive] cleanup done – removed:${removed}, remaining:${remaining}`);
+    })
+    .catch((e) => console.warn("[Protecto][Adaptive] cleanup error", e));
+});
 
 // Shared signal storage per domain
 self.domainSignals = self.domainSignals || {};
@@ -28,6 +68,26 @@ function ensureDomain(d) {
 }
 function hostFromUrl(u) {
   try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; }
+}
+
+// Increment selected domain signals in a safe way
+function bumpSignalsFor(domain, inc = {}) {
+  const ref = ensureDomain(domain);
+  if (inc.suspiciousUrls) ref.suspiciousUrls = (ref.suspiciousUrls || 0) + inc.suspiciousUrls;
+  if (inc.pixelHits)      ref.pixelHits      = (ref.pixelHits || 0)      + inc.pixelHits;
+  if (inc.tinyResponses)  ref.tinyResponses  = (ref.tinyResponses || 0)  + inc.tinyResponses;
+}
+
+// Detect tiny responses using headers (fallback heuristic for beacons/pixels)
+function isSuspiciousTinyFromHeaders(details) {
+  try {
+    const headers = details.responseHeaders || [];
+    const cl = headers.find(h => (h.name||"").toLowerCase() === "content-length");
+    if (cl && Number(cl.value) > 0 && Number(cl.value) < 256) return true;
+    const ct = headers.find(h => (h.name||"").toLowerCase() === "content-type");
+    if (ct && /image\/gif/i.test(ct.value || "")) return true;
+  } catch {}
+  return false;
 }
 
 async function applyPolicyForDomain(domain, policy) {
@@ -103,9 +163,15 @@ async function applyPolicyForDomain(domain, policy) {
         for (const tab of tabs) {
           if (tab.id) {
             await chrome.scripting.executeScript({
-              target: { tabId: tab.id },
+              target: { tabId: tab.id, allFrames: true },
               world: "MAIN",
-              files: ["src/shims/fingerprints.js", "src/shims/cloak.js", "src/shims/stealth.js"]
+              files: [
+                "src/shims/cmp.js",
+                "src/shims/cmp-autoclose.js", // NEW: auto-close banner
+                "src/shims/fingerprints.js",
+                "src/shims/cloak.js",
+                "src/shims/stealth.js"
+              ]
             });
             console.log("[Protecto] Injected fingerprints+cloak+stealth shims into", tab.url);
           }
@@ -118,6 +184,27 @@ async function applyPolicyForDomain(domain, policy) {
   } else {
     // Reset fingerprint injection flag for non-strict
     fingerprintInjected = false;
+  }
+
+  // Inject CMP shim for STANDARD as well (MAIN world, all frames)
+  if (policy === "standard") {
+    try {
+      const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
+      for (const tab of tabs) {
+        if (!tab.id) continue;
+        await chrome.scripting.executeScript({
+          target: { tabId: tab.id, allFrames: true },
+          world: "MAIN",
+          files: [
+            "src/shims/cmp.js",
+            "src/shims/cmp-autoclose.js" // NEW: auto-close banner
+          ]
+        });
+      }
+      console.log("[Protecto] Injected CMP shim (standard) into active tab(s)");
+    } catch (e) {
+      console.warn("[Protecto] Failed to inject CMP shim (standard):", e);
+    }
   }
 
   // --- STANDARD: Kern-Tracker + collect/pixel/beacon ---
@@ -201,6 +288,30 @@ async function applyPolicyForDomain(domain, policy) {
   }
 }
 
+// --- Adaptive learning (passive) ---
+chrome.webRequest.onBeforeRequest.addListener((details) => {
+  // Run async without blocking
+  (async () => {
+    try {
+      const { url, initiator, type } = details;
+      if (!url || !/^https?:/i.test(url)) return;
+      const pageHost = hostFromUrl(initiator || "");
+      const reqHost  = hostFromUrl(url);
+      if (!reqHost || !pageHost || reqHost === pageHost) return; // only 3rd-party
+      if (!self.adaptive) return;
+      const active = await self.adaptive.isPolicyActiveFor(pageHost);
+      if (!active) return; // only when Standard/Strict
+
+      if (self.adaptive.looksLikeTrackerUrl(url, type)) {
+        await self.adaptive.maybeLearnAndRedirectHost(reqHost, type);
+        bumpSignalsFor(pageHost, { suspiciousUrls: 1 });
+      }
+    } catch (e) {
+      console.warn("[Protecto][Adaptive] onBeforeRequest error", e);
+    }
+  })();
+}, { urls: ["<all_urls>"] }, []);
+
 // --- Passive webRequest Logger (no blocking, only signals) ---
 chrome.webRequest.onHeadersReceived.addListener(
   (details) => {
@@ -223,11 +334,22 @@ chrome.webRequest.onHeadersReceived.addListener(
         ref.suspiciousUrls = (ref.suspiciousUrls || 0) + 1;
       }
 
-      // Pixel hits (tiny content length)
-      const cl = (details.responseHeaders || []).find(h => (h.name||"").toLowerCase() === "content-length");
-      if (cl && Number(cl.value) > 0 && Number(cl.value) < 256) {
+      // Tiny beacons → trigger adaptive learning (no blocking)
+      const tiny = isSuspiciousTinyFromHeaders(details);
+      if (tiny) {
         ref.pixelHits = (ref.pixelHits || 0) + 1;
         ref.tinyResponses = (ref.tinyResponses || 0) + 1;
+        if (self.adaptive) {
+          const activeCheck = self.adaptive.isPolicyActiveFor(initiator);
+          Promise.resolve(activeCheck).then((active) => {
+            if (!active) return;
+            const t = (details.type || '').toLowerCase();
+            const reqHost = target;
+            if (reqHost && initiator && reqHost !== initiator) {
+              self.adaptive.maybeLearnAndRedirectHost(reqHost, t).catch(() => {});
+            }
+          }).catch(() => {});
+        }
       }
 
       // Set-Cookie indicators
@@ -301,6 +423,35 @@ chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
       await chrome.storage.sync.set({ policies });
       await applyPolicyForDomain(d, pol);
       sendResponse({ ok: true });
+      return true;
+    }
+
+    if (msg.type === "adaptive:cleanup") {
+      const opts = msg.opts || { maxAgeDays: 30, maxEntries: 5000 };
+      if (!self.adaptive?.cleanupLearned) {
+        sendResponse({ ok:false, error:"adaptive not loaded" });
+        return true;
+      }
+      try {
+        const res = await self.adaptive.cleanupLearned(opts);
+        sendResponse({ ok:true, ...res });
+      } catch (e) {
+        sendResponse({ ok:false, error:String(e) });
+      }
+      return true;
+    }
+
+    if (msg.type === "adaptive:stats") {
+      if (!self.adaptive?.getStats) {
+        sendResponse({ ok:false, error:"adaptive not loaded" });
+        return true;
+      }
+      try {
+        const stats = await self.adaptive.getStats();
+        sendResponse({ ok:true, stats });
+      } catch (e) {
+        sendResponse({ ok:false, error:String(e) });
+      }
       return true;
     }
   } catch (e) {

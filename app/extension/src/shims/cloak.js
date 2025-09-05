@@ -67,13 +67,21 @@
   if (typeof window.dataLayer === "undefined" || !Array.isArray(window.dataLayer)) {
     defineIfMissing(window, "dataLayer", []);
   }
+  // Minimal google_tag_manager object (häufige Existenzprüfung)
+  if (typeof window.google_tag_manager !== "object") {
+    defineIfMissing(window, "google_tag_manager", { dataLayer: window.dataLayer });
+  }
   if (!window.dataLayer._patched) {
     const originalPush = window.dataLayer.push || function(){ return 1; };
     Object.defineProperty(window.dataLayer, "push", { configurable:true, writable:true, value: function(){ return originalPush.apply(window.dataLayer, arguments); } });
     Object.defineProperty(window.dataLayer, "_patched", { value: true });
   }
   if (typeof window.gtag !== "function") {
-    function gtag(){ arrPush(window.dataLayer, [arguments]); }
+    function gtag(){
+      const args = arguments;
+      const delay = Math.floor(15 + RAND()*45);
+      setTimeout(() => { try { arrPush(window.dataLayer, [args]); } catch {} }, delay);
+    }
     defineIfMissing(window, "gtag", gtag);
     try { window.gtag("js", new Date()); } catch {}
   }

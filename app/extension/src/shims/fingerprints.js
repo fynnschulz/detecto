@@ -205,15 +205,12 @@
     const fakePlugins = [
       { name: "Chrome PDF Viewer", filename: "internal-pdf-viewer", description: "Portable Document Format" }
     ];
-    const pluginArray = new Proxy(fakePlugins, {
-      get(target, prop) {
-        if (prop === "length") return target.length;
-        if (prop === Symbol.iterator) return target[Symbol.iterator].bind(target);
-        const idx = Number(prop);
-        if (!Number.isNaN(idx)) return target[idx];
-        return Reflect.get(target, prop);
-      }
-    });
+    const pluginArray = {
+      length: fakePlugins.length,
+      item(i){ return fakePlugins[i] || null; },
+      namedItem(name){ return fakePlugins.find(p => p && p.name === String(name)) || null; },
+      [Symbol.iterator](){ return fakePlugins[Symbol.iterator](); }
+    };
     safeDefine(navigator, "plugins", () => { bump(); return pluginArray; });
   } catch {}
 
@@ -222,6 +219,7 @@
     const options = [["en-US","en"], ["de-DE","de"], ["fr-FR","fr"], ["es-ES","es"]];
     const langs = options[seed % options.length];
     safeDefine(navigator, "languages", () => { bump(); return langs; });
+    safeDefine(navigator, "language", () => { bump(); return langs[0]; });
   } catch {}
 
   // platform / maxTouchPoints / webdriver (avoid bot flags)
@@ -341,11 +339,11 @@
         const devices = await origEnum();
         try {
           bump();
-          // Replace deviceId/groupId with deterministic hashes; scrub labels
+          const showLabels = devices.some(d => d && d.label && d.label.length);
           return devices.map(d => ({
             deviceId: "protecto-" + (h32(d.deviceId || d.label || "x").toString(16)),
             kind: d.kind,
-            label: "", // scrubs labels unless permission granted
+            label: showLabels ? (d.label || "") : "",
             groupId: "protecto-" + (h32(d.groupId || "g").toString(16))
           }));
         } catch {
@@ -395,6 +393,56 @@
         // Return as-is but could normalize states to reduce entropy
         return origQuery(params);
       };
+    }
+  } catch {}
+
+  // ============================================================
+  // 9) UA-CH shim (userAgentData) — stable, low-entropy answers
+  // ============================================================
+  try {
+    const uad = navigator.userAgentData;
+    if (uad && typeof uad === 'object') {
+      const brands = [
+        { brand: 'Chromium', version: '119' },
+        { brand: 'Not.A/Brand', version: '99' }
+      ];
+      const proxy = new Proxy(uad, {
+        get(target, prop, recv){
+          if (prop === 'brands' || prop === 'uaList' || prop === 'fullVersionList') return brands;
+          if (prop === 'mobile') return false;
+          if (prop === 'getHighEntropyValues') {
+            return (hints) => {
+              try { bump(); } catch {}
+              const out = {};
+              (Array.isArray(hints) ? hints : []).forEach(h => {
+                switch (h) {
+                  case 'architecture': out[h] = 'x86'; break;
+                  case 'bitness': out[h] = '64'; break;
+                  case 'model': out[h] = ''; break;
+                  case 'platform': out[h] = 'macOS'; break;
+                  case 'platformVersion': out[h] = '13.0.0'; break;
+                  case 'uaFullVersion': out[h] = '119.0.0.0'; break;
+                  case 'fullVersionList': out[h] = brands.map(b => ({ brand: b.brand, version: '119.0.0.0' })); break;
+                  default: out[h] = '';
+                }
+              });
+              return Promise.resolve(out);
+            };
+          }
+          return Reflect.get(target, prop, recv);
+        }
+      });
+      try {
+        Object.defineProperty(navigator, 'userAgentData', { configurable: true, get: () => proxy });
+      } catch {
+        // if defineProperty fails (not configurable), we still benefit from direct method patching below
+        try {
+          if (typeof uad.getHighEntropyValues === 'function') {
+            const orig = uad.getHighEntropyValues.bind(uad);
+            uad.getHighEntropyValues = (hints) => Promise.resolve({});
+          }
+        } catch {}
+      }
     }
   } catch {}
 

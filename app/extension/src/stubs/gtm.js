@@ -51,4 +51,32 @@
   window.dataLayer.push({'gtm.start': now, event: 'gtm.js'});
   window.dataLayer.push({event: 'gtm.dom'});
   window.dataLayer.push({event: 'gtm.load'});
+
+  // Add professional-level dummy implementations
+
+  // 1. Setup window.google_tag_manager with a typical GTM container object
+  window.google_tag_manager = window.google_tag_manager || {};
+  window.google_tag_manager['GTM-XXXXXXX'] = {
+    dataLayer: window.dataLayer
+  };
+
+  // 2. Define global gtag function if not present
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function(){
+      const args = Array.prototype.slice.call(arguments);
+      // Store the gtag call as an event in state.events
+      state.events.push({gtagArgs: args});
+
+      // Simulate async callbacks similar to dataLayer.push
+      setTimeout(() => {
+        state.callbacks.forEach(cb => {
+          try {
+            cb({gtagArgs: args});
+          } catch (e) {
+            // Swallow errors to avoid breaking page
+          }
+        });
+      }, 10 + Math.floor(Math.random() * 40));
+    };
+  }
 })();

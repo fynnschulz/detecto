@@ -1,5 +1,21 @@
 (function(){
   "use strict";
+  const WEIGHTS = {
+    thirdPartyHosts: 1.0,
+    pixelHits: 6,
+    suspiciousUrls: 4,
+    setCookieLong: 10,
+    setCookieNoneSecure: 8,
+    fingerprintCalls: 5,
+    cmpHasLegit: 10,
+    cmpOnlyNecessary: 15,
+    suspiciousHeaders: 5,
+    tinyResponses: 4,
+    historyHit: 1.5,
+    historyMax: 25,
+    cnameCloak: 10,
+    pixelRedirects: 6
+  };
   // Risk Engine – MV3 compatible (no exports). Exposes: self.computeRisk(signals)
 
   function clamp(n, lo, hi){ return Math.max(lo, Math.min(hi, n)); }
@@ -12,31 +28,34 @@
     const sgn = signals || {};
 
     let s = 0;
-    s += Math.min(sgn.thirdPartyHosts || 0, 30) * 1.0;          // 0..30
-    s += (sgn.pixelHits || 0) * 6;                              // Pixel stark gewichten
-    s += (sgn.suspiciousUrls || 0) * 4;                         // /track,/collect,utm_…
-    if (sgn.setCookieLong)       s += 10;                       // Max-Age lang
-    if (sgn.setCookieNoneSecure) s += 8;                        // SameSite=None; Secure
-    s += (sgn.fingerprintCalls || 0) * 5;                       // Canvas/Audio/WebGL
-    if (sgn.cmp?.hasLegit)       s += 10;                       // legit. interest default
-    if (sgn.cmp?.onlyNecessary)  s -= 15;                       // fairer CMP → abwerten
+    s += Math.min(sgn.thirdPartyHosts || 0, 30) * WEIGHTS.thirdPartyHosts;          // 0..30
+    s += (sgn.pixelHits || 0) * WEIGHTS.pixelHits;                              // Pixel stark gewichten
+    s += (sgn.suspiciousUrls || 0) * WEIGHTS.suspiciousUrls;                         // /track,/collect,utm_…
+    if (sgn.setCookieLong)       s += WEIGHTS.setCookieLong;                       // Max-Age lang
+    if (sgn.setCookieNoneSecure) s += WEIGHTS.setCookieNoneSecure;                        // SameSite=None; Secure
+    s += (sgn.fingerprintCalls || 0) * WEIGHTS.fingerprintCalls;                       // Canvas/Audio/WebGL
+    if (sgn.cmp?.hasLegit)       s += WEIGHTS.cmpHasLegit;                       // legit. interest default
+    if (sgn.cmp?.onlyNecessary)  s -= WEIGHTS.cmpOnlyNecessary;                       // fairer CMP → abwerten
 
     // New: suspiciousHeaders (e.g., cookies with wide domain scopes, very large response headers)
-    if (sgn.suspiciousHeaders) s += sgn.suspiciousHeaders * 5;
+    if (sgn.suspiciousHeaders) s += sgn.suspiciousHeaders * WEIGHTS.suspiciousHeaders;
 
     // New: tinyResponses (very small response bodies)
-    if (sgn.tinyResponses) s += sgn.tinyResponses * 4;
+    if (sgn.tinyResponses) s += sgn.tinyResponses * WEIGHTS.tinyResponses;
 
     // History weighting (optional): prior incidents increase risk conservatively
     const histHits = sgn.history?.hits || 0;
     if (histHits > 0) {
       // Add up to +25 points based on prior hits (1.5 per hit, capped)
-      s += Math.min(histHits * 1.5, 25);
+      s += Math.min(histHits * WEIGHTS.historyHit, WEIGHTS.historyMax);
     }
 
     // Heuristik: CNAME-Cloaking (falls vom SW gesetzt)
     const cnameCloak = !!sgn.cnameCloak;
-    if (cnameCloak) s += 10;
+    if (cnameCloak) s += WEIGHTS.cnameCloak;
+
+    // Pixel Redirects contribute to score
+    if (sgn.pixelRedirects) s += sgn.pixelRedirects * WEIGHTS.pixelRedirects;
 
     s = clamp(Math.round(s), 0, 100);
 

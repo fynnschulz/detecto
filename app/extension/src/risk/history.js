@@ -4,6 +4,20 @@
   // Storage-Wrapper (nutzt chrome oder browser API, je nach Browser)
   const storage = (typeof browser !== "undefined" ? browser.storage : chrome.storage);
 
+  // Auto-Prune: entferne Domains ohne Aktivität > 90 Tage
+  const MAX_AGE_MS = 90 * 24 * 60 * 60 * 1000; // 90 Tage
+  function pruneOldEntries(all, cutoffTs){
+    let removed = 0;
+    try {
+      for (const d of Object.keys(all)) {
+        const v = all[d];
+        const last = (v && typeof v.lastSeen === 'number') ? v.lastSeen : 0;
+        if (last && last < cutoffTs) { delete all[d]; removed++; }
+      }
+    } catch {}
+    return removed;
+  }
+
   self.getHistory = function(domain){
     return new Promise((resolve) => {
       storage.local.get(["protecto_history"], (res) => {
@@ -41,6 +55,10 @@
           }
         }
 
+        // Alte Einträge (>90 Tage) automatisch entfernen
+        const cutoff = now - MAX_AGE_MS;
+        pruneOldEntries(all, cutoff);
+
         storage.local.set({ protecto_history: all }, () => resolve(all[domain]));
       });
     });
@@ -62,7 +80,24 @@
             all[domain].signals = {};
           }
         }
+        // Auto-Prune bei Aufruf: lösche Einträge älter als 90 Tage
+        const removed = pruneOldEntries(all, Date.now() - MAX_AGE_MS);
+        if (removed > 0) {
+          storage.local.set({ protecto_history: all }, () => resolve(all));
+          return;
+        }
         resolve(all);
+      });
+    });
+  };
+
+  self.clearOldHistory = function(days = 90){
+    return new Promise((resolve) => {
+      storage.local.get(["protecto_history"], (res) => {
+        const all = res.protecto_history || {};
+        const cutoff = Date.now() - Math.max(0, days) * 24 * 60 * 60 * 1000;
+        const removed = pruneOldEntries(all, cutoff);
+        storage.local.set({ protecto_history: all }, () => resolve({ removed, remaining: Object.keys(all).length }));
       });
     });
   };

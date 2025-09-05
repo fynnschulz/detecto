@@ -35,6 +35,7 @@
     state.queue.push(args);
     return state.queue.length;
   };
+  FBQ.disablePushState = true;
 
   // API implementation (no‑ops with local bookkeeping)
   FBQ.callMethod = async function(){
@@ -67,7 +68,7 @@
         state.lastEvent = { name, params, ts: Date.now() };
         await jitter();
         log("track", name, params);
-        return true; // pretend success
+        return Promise.resolve(true); // pretend success
       }
 
       case "consent": { // fbq('consent', 'grant'|'revoke')

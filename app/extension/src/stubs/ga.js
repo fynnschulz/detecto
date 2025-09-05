@@ -1,72 +1,159 @@
-// Google Tag Manager Stub – pro-level fake that satisfies API calls but fires nothing
+// Google Analytics (analytics.js) – Pro Stub
+// Ziel: Seiten glauben, GA läuft; es werden aber keine Daten gesendet.
 (function(){
   "use strict";
-  if (window.dataLayer && Array.isArray(window.dataLayer) && window.dataLayer._gtmStub) return; // already defined
 
-  const DEBUG = false;
+  // Wenn bereits ein kompatibles ga vorhanden ist, nichts überschreiben
+  if (typeof window.ga === 'function' && window.GoogleAnalyticsObject === 'ga') return;
 
+  const DEBUG = false; // bei Bedarf true schalten für lokale Logs
+
+  // Marker wie im Original
+  window.GoogleAnalyticsObject = 'ga';
+
+  // Interner Zustand
   const state = {
-    pushes: [],
-    lastPush: null,
-    containers: new Set(),
-    startTimestamp: Date.now()
+    trackers: new Map(),      // name -> tracker
+    hits: [],                 // gespeicherte Hits (kein Netzwerk)
+    callbacks: [],            // ga(function(){ ... })
+    defaultName: 't0',
+    startedAt: Date.now()
   };
 
-  // timing jitter util
-  function jitter(min=30,max=200){
+  // kleine zufällige Verzögerung für realistischeres Timing
+  function jitter(min=25, max=90){
     return new Promise(res => setTimeout(res, Math.floor(min + Math.random()*(max-min))));
   }
+  const now = () => Date.now();
 
-  function createDataLayer() {
-    const dl = [];
+  // Tracker-Objekt (vereinfachte, aber kompatible API)
+  function createTracker(trackingId, cookieDomain, nameOrFields){
+    let name = state.defaultName;
+    let fields = {};
 
-    dl._gtmStub = true;
+    if (typeof nameOrFields === 'string') {
+      name = nameOrFields || state.defaultName;
+    } else if (nameOrFields && typeof nameOrFields === 'object') {
+      fields = { ...nameOrFields };
+      if (typeof fields.name === 'string') name = fields.name;
+    }
 
-    dl.push = function() {
-      const args = Array.prototype.slice.call(arguments);
-      if (args.length === 0) return 0;
-
-      // Simulate async handling with jitter
-      jitter().then(() => {
-        args.forEach(item => {
-          if (typeof item === 'object' && item !== null) {
-            // Track container ID if 'gtm.start' event with containerId is pushed
-            if (item['gtm.start'] && item['gtm.uniqueEventId']) {
-              if (item['gtm.containerId']) {
-                state.containers.add(item['gtm.containerId']);
-              }
-              state.startTimestamp = item['gtm.start'];
-            }
-            state.pushes.push(item);
-            state.lastPush = item;
-            if (DEBUG) console.log("[Protecto GTM Stub] push:", item);
-          } else {
-            // Unknown push → still log & fake
-            if (DEBUG) console.log("[Protecto GTM Stub] unknown push arg:", item);
-            state.pushes.push({ _raw:item, ts:Date.now() });
-            state.lastPush = item;
-          }
-        });
-
-        // Push to underlying array for length property and compatibility
-        Array.prototype.push.apply(dl, args);
-      });
-
-      // Return new length to mimic native push
-      return dl.length;
+    const tracker = {
+      name,
+      trackingId: trackingId || 'UA-000000-0',
+      cookieDomain: cookieDomain || 'auto',
+      fieldsObject: { ...fields },
+      _lastSend: 0,
+      set(fieldName, value){
+        if (typeof fieldName === 'object') {
+          Object.assign(this.fieldsObject, fieldName);
+        } else if (typeof fieldName === 'string') {
+          this.fieldsObject[fieldName] = value;
+        }
+        return true;
+      },
+      get(fieldName){
+        return this.fieldsObject[fieldName];
+      },
+      async send(hitType, hitFields){
+        // Varianten: tr.send('pageview'|'event'|..., fields) oder ga('send', { hitType: 'event', ... })
+        const extra = (hitFields && typeof hitFields === 'object') ? hitFields : {};
+        const payload = {
+          t: hitType || (extra.hitType || 'pageview'),
+          ts: now(),
+          tracker: this.name,
+          tid: this.trackingId,
+          cid: this.fieldsObject.clientId || '555.0',
+          dl: document.location.href,
+          dt: document.title,
+          ...this.fieldsObject,
+          ...extra
+        };
+        state.hits.push(payload);
+        if (DEBUG) console.log('[Protecto GA Stub] hit', payload);
+        await jitter(); // so tun, als würde ein Beacon gesendet
+        this._lastSend = payload.ts;
+        return true;
+      }
     };
 
-    Object.defineProperty(dl, 'length', {
-      get: function() {
-        return Array.prototype.length.call(dl);
-      },
-      configurable: false,
-      enumerable: true
-    });
-
-    return dl;
+    state.trackers.set(name, tracker);
+    return tracker;
   }
 
-  // Expose globally
-  window.dataLayer = createDataLayer();
+  function getTrackerByName(name){
+    return state.trackers.get(name || state.defaultName);
+  }
+
+  function getAllTrackers(){
+    return Array.from(state.trackers.values());
+  }
+
+  // Hauptfunktion ga(...)
+  async function ga(command, a1, a2, a3){
+    try {
+      // ga(function(){ ... }) – Callback-Style
+      if (typeof command === 'function') {
+        state.callbacks.push(command);
+        await jitter(5,25);
+        try { command(); } catch {}
+        return Promise.resolve(true);
+      }
+
+      if (typeof command !== 'string') return Promise.resolve(true);
+
+      // t0.send / t0.set / t0.get Syntax
+      if (command.indexOf('.') > -1) {
+        const [trackerName, method] = command.split('.', 2);
+        const tr = getTrackerByName(trackerName);
+        if (!tr) return Promise.resolve(false);
+        if (method === 'send') return Promise.resolve(tr.send(a1, a2));
+        if (method === 'set')  return Promise.resolve(tr.set(a1, a2));
+        if (method === 'get')  return Promise.resolve(tr.get(a1));
+        return Promise.resolve(true);
+      }
+
+      // create / send / set / get (global auf defaultTracker)
+      switch (command) {
+        case 'create':
+          // ga('create', trackingId, cookieDomain, nameOrFields)
+          createTracker(a1, a2, a3);
+          return Promise.resolve(true);
+        case 'send': {
+          const tr = getTrackerByName(state.defaultName) || createTracker();
+          if (typeof a1 === 'object') {
+            const hf = a1 || {}; // { hitType: 'event', ... }
+            return Promise.resolve(tr.send(hf.hitType || 'pageview', hf));
+          }
+          return Promise.resolve(tr.send(a1, a2));
+        }
+        case 'set': {
+          const tr = getTrackerByName(state.defaultName) || createTracker();
+          return Promise.resolve(tr.set(a1, a2));
+        }
+        case 'get': {
+          const tr = getTrackerByName(state.defaultName) || createTracker();
+          return Promise.resolve(tr.get(a1));
+        }
+        case 'remove':
+          return Promise.resolve(true); // no-op
+        default:
+          if (DEBUG) console.log('[Protecto GA Stub] unknown command:', command, a1, a2, a3);
+          return Promise.resolve(true);
+      }
+    } catch (e) {
+      if (DEBUG) console.warn('[Protecto GA Stub] error', e);
+      return Promise.resolve(false);
+    }
+  }
+
+  // Zusätzliche Kurzformen wie im Original
+  ga.l = Date.now();
+  ga.loaded = true;
+  ga.create = (tid, cd, nameOrFields) => createTracker(tid, cd, nameOrFields);
+  ga.getAll = () => getAllTrackers();
+  ga.getByName = (n) => getTrackerByName(n);
+
+  // Exponieren
+  window.ga = ga;
 })();

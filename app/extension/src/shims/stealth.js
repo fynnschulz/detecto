@@ -71,9 +71,9 @@
   // -------------------------
   // Fake response factories
   // -------------------------
-  const PIXEL_GIF = atob("R0lGODlhAQABAAAAACH5BAEKAAEA");
+  const PIXEL_BYTES = Uint8Array.from(atob("R0lGODlhAQABAAAAACH5BAEKAAEA"), c => c.charCodeAt(0));
   function fakePixel() {
-    return new Response(PIXEL_GIF, {
+    return new Response(PIXEL_BYTES, {
       status: 200,
       headers: {
         "Content-Type": "image/gif",
@@ -157,37 +157,31 @@
   // -------------------------
   const origOpen = XMLHttpRequest.prototype.open;
   const origSend = XMLHttpRequest.prototype.send;
+
+  function dataUrlForXHR(url, method){
+    const m = (method || 'GET').toUpperCase();
+    if (m === 'POST') return 'data:text/plain,OK';
+    if (IMG_EXT.test(url) || /pixel|beacon|collect/.test(url)) {
+      return 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA';
+    }
+    if (JSON_EXT.test(url) || /analytics|metrics|event/.test(url)) {
+      // minimal valid JSON
+      return 'data:application/json,%7B%7D';
+    }
+    return 'data:text/plain,OK';
+  }
+
   XMLHttpRequest.prototype.open = function(method, url) {
-    this.__protecto_url = url;
-    this.__protecto_m = (method||"GET").toUpperCase();
+    try {
+      if (url && looksSuspicious(url)) {
+        const replacement = dataUrlForXHR(url, method);
+        return origOpen.call(this, method, replacement);
+      }
+    } catch {}
     return origOpen.apply(this, arguments);
   };
+
   XMLHttpRequest.prototype.send = function(body) {
-    const url = this.__protecto_url;
-    const m = this.__protecto_m || "GET";
-    if (url && looksSuspicious(url)) {
-      (async () => {
-        try {
-          await sleep(delayFor(url));
-          // craft minimal successful response
-          this.status = (m === "POST") ? 204 : 200;
-          this.readyState = 4;
-          if (IMG_EXT.test(url) || /pixel|beacon|collect/.test(url)) {
-            this.response = this.responseText = ""; // image not read
-          } else if (JSON_EXT.test(url) || /analytics|metrics|event/.test(url)) {
-            this.response = this.responseText = JSON.stringify(shapeFor(url));
-          } else {
-            this.response = this.responseText = "OK";
-          }
-          if (typeof this.onload === "function") this.onload();
-          if (typeof this.onreadystatechange === "function") this.onreadystatechange();
-        } catch {
-          // Even on internal failure, avoid throwing to page
-          if (typeof this.onerror === "function") this.onerror(new Error("Network error"));
-        }
-      })();
-      return; // intercept
-    }
     return origSend.apply(this, arguments);
   };
 
