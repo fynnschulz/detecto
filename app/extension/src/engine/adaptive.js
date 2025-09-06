@@ -5,36 +5,47 @@
  *  - Neue/obskure Tracker automatisch erkennen (heuristisch)
  *  - Für erkannte Third-Party-Hosts zur Laufzeit DNR-Redirect-Regeln anlegen
  *  - Gelernte Hosts und Rule-IDs in chrome.storage.local persistieren
+ *  - LRU/TTL-Pruning: alte/zu viele dynamische Redirect-Regeln automatisch abbauen
  *
  * Integration:
  *  - In service-worker.js via: importScripts("engine/adaptive.js")
- *  - Danach stehen globale Funktionen zur Verfügung:
+ *  - Danach stehen globale Funktionen unter self.adaptive zur Verfügung:
  *      - adaptive.hostFromUrl(url)
  *      - adaptive.looksLikeTrackerUrl(url, type)
  *      - adaptive.isPolicyActiveFor(pageHost)
  *      - adaptive.maybeLearnAndRedirectHost(host, type)
+ *      - adaptive.addRedirectRuleForHost(host, type)
+ *      - adaptive.pruneLearned()
+ *      - adaptive.cleanupLearned(opts)
  *      - adaptive.resetLearned(optionalHost)
+ *      - adaptive.getStats()
  */
 (function(){
   'use strict';
 
-  // Data URLs
-  const GIF_1x1 = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA";
-  const NOOP_JS = "data:text/javascript,/*noop*/"; // Fallback, meist nutzen wir Stubs
+  /* eslint-disable no-undef */
 
-  // Script-Fallback-Stub, wenn unklar (GTM-Stub ist robust genug für viele Tracker-APIs)
+  // --- Data URLs -----------------------------------------------------------
+  const GIF_1x1   = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA";
+  const JSON_EMPTY = "data:application/json,{}";     // für XHR/fetch
+  const NOOP_JS   = "data:text/javascript,/*noop*/"; // Fallback (selten genutzt)
+
+  // --- Script-Stub ---------------------------------------------------------
+  // GTM-Stub ist robust und emuliert viele gängige Tracker-Globals
   const GENERIC_STUB = "/src/stubs/gtm.js";
-  const GENERIC_SCRIPT_STUB = GENERIC_STUB; // alias for older references
+  const GENERIC_SCRIPT_STUB = GENERIC_STUB; // alias für ältere Referenzen
 
-  // Startbereich für dynamische Regeln – bewusst hoch, um mit statischen IDs nicht zu kollidieren
-  const DYN_ID_START = 50000;
+  // --- IDs & Limits --------------------------------------------------------
+  const DYN_ID_START        = 50000;                 // Startbereich für dyn. Regeln
+  const DYN_REDIRECT_LIMIT  = 5000;                  // sicheres Limit (MV3)
+  const TTL_MS              = 30 * 24 * 60 * 60 * 1000; // 30 Tage
 
-  // Heuristik-Muster
-  const RE_SUB  = /(^|\.)(ads|adserver|adservice|advertising|doubleclick|googlesyndication|googleadservices|analytics|metrics|stats|pixel|track|beacon|tag|clarity|hotjar|criteo|taboola|outbrain|adform|quantserve|scorecardresearch|moatads|rubiconproject|pubmatic|openx|spotx|zedo|mathtag)\./i;
+  // --- Heuristik-Muster ----------------------------------------------------
+  const RE_SUB = /(^|\.)(ads|adserver|adservice|advertising|doubleclick|googlesyndication|googleadservices|analytics|metrics|stats|pixel|track|beacon|tag|clarity|hotjar|criteo|taboola|outbrain|adform|quantserve|scorecardresearch|moatads|rubiconproject|pubmatic|openx|spotx|zedo|mathtag)\./i;
   const RE_PATH = /(collect|g\/collect|pixel|beacon|track|event|measure|metrics|stats|analytics|fbevents|tr\/|t\/collect|log)(\?|\/|$)/i;
   const RE_QUERY= /(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)=/i;
 
-  // Hilfsfunktionen
+  // --- Hilfsfunktionen -----------------------------------------------------
   function hostFromUrl(url){
     try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; }
   }
@@ -46,17 +57,27 @@
     } catch { return false; }
   }
 
-  // Persistente Zähler/Tabellen (überlebt Neustarts/Reloads)
+  // --- Persistenz (State) --------------------------------------------------
+  async function loadState(){
+    const { dynRuleCounter = DYN_ID_START, learned = {} } = await chrome.storage.local.get([ 'dynRuleCounter', 'learned' ]);
+    return { dynRuleCounter, learned };
+  }
+
+  async function saveState(st){
+    await chrome.storage.local.set(st);
+  }
+
   async function getNextRuleId(){
-    const { dynRuleCounter = DYN_ID_START } = await chrome.storage.local.get('dynRuleCounter');
-    const next = dynRuleCounter + 1;
-    await chrome.storage.local.set({ dynRuleCounter: next });
+    const st = await loadState();
+    const next = st.dynRuleCounter + 1;
+    st.dynRuleCounter = next;
+    await saveState(st);
     return next;
   }
 
   async function getLearnedMap(){
     const { learned = {} } = await chrome.storage.local.get('learned');
-    return learned; // { host: { ruleId, ts, types:{script:true,img:true,xhr:true} } }
+    return learned; // { host: { ruleId, ts, types:{script:true,img:true,xhr:true,fetch:true,ping:true} } }
   }
 
   async function isAlreadyLearned(host, type){
@@ -66,52 +87,108 @@
     if (!entry) return false;
     if (!type) return true;
     const t = (type||'').toLowerCase();
-    return !!(entry.types && (entry.types[t] || (t === 'xmlhttprequest' && entry.types['xhr'])));
+    const key = (t === 'xmlhttprequest') ? 'xhr' : t;
+    return !!(entry.types && entry.types[key]);
   }
 
   async function markLearned(host, ruleId, type){
-    const learned = await getLearnedMap();
+    const st = await loadState();
     const t = (type||'').toLowerCase();
-    const key = (t === 'xmlhttprequest') ? 'xhr' : t || 'any';
-    if (!learned[host]) learned[host] = { ruleId, ts: Date.now(), types: {} };
-    learned[host].ruleId = ruleId; // letzte zugewiesene Regel
-    learned[host].ts = Date.now();
-    learned[host].types[key] = true;
-    await chrome.storage.local.set({ learned });
+    const key = (t === 'xmlhttprequest') ? 'xhr' : (t || 'any');
+    if (!st.learned[host]) st.learned[host] = { ruleId, ts: Date.now(), types: {} };
+    st.learned[host].ruleId = ruleId;
+    st.learned[host].ts = Date.now();
+    st.learned[host].types[key] = true;
+    await saveState(st);
+  }
+
+  async function touchLearned(host, type){
+    if (!host) return;
+    const st = await loadState();
+    const entry = st.learned[host];
+    if (!entry) return;
+    const t = (type||'').toLowerCase();
+    const key = (t === 'xmlhttprequest') ? 'xhr' : (t || 'any');
+    entry.ts = Date.now();
+    entry.types = entry.types || {};
+    entry.types[key] = true;
+    await saveState(st);
   }
 
   async function resetLearned(optionalHost){
     if (optionalHost) {
-      const learned = await getLearnedMap();
-      delete learned[optionalHost];
-      await chrome.storage.local.set({ learned });
+      const st = await loadState();
+      delete st.learned[optionalHost];
+      await saveState(st);
       return;
     }
     await chrome.storage.local.set({ learned: {}, dynRuleCounter: DYN_ID_START });
   }
 
-  // Policy prüfen (Soft → keine Adapt-Regeln; Standard/Strict → aktiv)
+  // --- Policy prüfen -------------------------------------------------------
   async function isPolicyActiveFor(pageHost){
     try {
       const { policies = {} } = await chrome.storage.sync.get('policies');
       const mode = policies[pageHost] || policies['*'] || 'standard';
-      return (mode !== 'off');
+      return (mode !== 'off'); // Adaptive überall außer bei "Aus"
     } catch { return true; }
   }
 
-  // Dynamische Redirect-Regel für Host hinzufügen
+  // --- LRU/TTL-Pruning -----------------------------------------------------
+  async function pruneLearned(){
+    const st = await loadState();
+    const now = Date.now();
+
+    // 1) TTL
+    const toRemoveTTL = [];
+    for (const [h, meta] of Object.entries(st.learned)) {
+      const ts = meta?.ts || 0;
+      if (!ts || (ts + TTL_MS) < now) {
+        if (typeof meta?.ruleId === 'number') toRemoveTTL.push(meta.ruleId);
+        delete st.learned[h];
+      }
+    }
+    if (toRemoveTTL.length) {
+      try { await chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: toRemoveTTL }); } catch {}
+    }
+
+    // 2) LRU wenn über Limit
+    const keys = Object.keys(st.learned);
+    if (keys.length > DYN_REDIRECT_LIMIT) {
+      const sorted = keys.sort((a,b) => (st.learned[a].ts||0) - (st.learned[b].ts||0));
+      const removeCount = keys.length - DYN_REDIRECT_LIMIT;
+      const cut = sorted.slice(0, removeCount);
+      const toRemoveLRU = [];
+      for (const h of cut) {
+        const id = st.learned[h]?.ruleId;
+        if (typeof id === 'number') toRemoveLRU.push(id);
+        delete st.learned[h];
+      }
+      if (toRemoveLRU.length) {
+        try { await chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: toRemoveLRU }); } catch {}
+      }
+    }
+
+    await saveState(st);
+    return { count: Object.keys(st.learned).length };
+  }
+
+  // --- Dynamische Redirect-Regel anlegen (pro Ressourcentyp passend) ------
   async function addRedirectRuleForHost(host, type){
     if (!host) return null;
     const t = (type||'').toLowerCase();
-    const isScript = (t === 'script');
 
-    const action = isScript
-      ? { type: 'redirect', redirect: { extensionPath: GENERIC_STUB } }
-      : { type: 'redirect', redirect: { url: GIF_1x1 } };
-
-    const resourceTypes = isScript
-      ? ['script']
-      : ['image','xmlhttprequest','ping','fetch'];
+    let action, resourceTypes;
+    if (t === 'script') {
+      action = { type: 'redirect', redirect: { extensionPath: GENERIC_STUB } };
+      resourceTypes = ['script'];
+    } else if (t === 'image' || t === 'ping') {
+      action = { type: 'redirect', redirect: { url: GIF_1x1 } };
+      resourceTypes = ['image','ping'];
+    } else { // xhr / fetch / sonstiges → JSON
+      action = { type: 'redirect', redirect: { url: JSON_EMPTY } };
+      resourceTypes = ['xmlhttprequest','fetch'];
+    }
 
     const rule = {
       id: await getNextRuleId(),
@@ -129,17 +206,22 @@
     return rule.id;
   }
 
-  // Haupt-Entry: ggf. neue Rule für Host anlegen, wenn Heuristik anschlägt
+  // --- Haupt-Entry: ggf. neue Rule für Host anlegen -----------------------
   async function maybeLearnAndRedirectHost(host, type){
     try {
       if (!host) return false;
-      if (await isAlreadyLearned(host, type)) return false;
 
-      // Whitelist berücksichtigen
+      // Whitelist respektieren
       const { whitelist = [] } = await chrome.storage.sync.get('whitelist');
-      if (whitelist.includes(host)) return false;
+      if (Array.isArray(whitelist) && whitelist.includes(host)) return false;
 
-      // Regel hinzufügen
+      // Bereits gelernt (inkl. Ressourcentyp)? → nur Timestamp/Typ aktualisieren
+      if (await isAlreadyLearned(host, type)) { await touchLearned(host, type); return false; }
+
+      // Vor jeder neuen Regel: aufräumen (TTL/LRU)
+      await pruneLearned();
+
+      // Regel passend zum Typ anlegen
       await addRedirectRuleForHost(host, type);
       return true;
     } catch (e) {
@@ -148,63 +230,15 @@
     }
   }
 
-  // --- Cleanup & Stats ------------------------------------------------------
-  // Entfernt alte gelernte Hosts und die zugehörigen Dynamic Rules.
-  // Optionen:
-  //   maxAgeDays: Alter in Tagen, ab dem Einträge gelöscht werden (Default 30)
-  //   maxEntries: Hartes Limit für Anzahl gelernter Hosts (älteste zuerst löschen)
+  // --- Aufräumen (öffentliche API) ----------------------------------------
   async function cleanupLearned(options = {}){
-    const maxAgeDays = Number(options.maxAgeDays ?? 30);
-    const maxEntries = Number(options.maxEntries ?? 5000);
-    const now = Date.now();
-    const maxAgeMs = maxAgeDays * 24 * 60 * 60 * 1000;
-
-    const learned = await getLearnedMap();
-    const hosts = Object.keys(learned);
-    if (!hosts.length) return { removed: 0, remaining: 0 };
-
-    // 1) Nach Alter filtern → Rule-IDs zum Entfernen sammeln
-    const toRemoveByAge = [];
-    for (const h of hosts) {
-      const ts = learned[h]?.ts || 0;
-      if (ts && (now - ts) > maxAgeMs) {
-        const rid = learned[h]?.ruleId;
-        if (typeof rid === 'number') toRemoveByAge.push(rid);
-        delete learned[h];
-      }
-    }
-
-    // 2) Wenn zu viele Einträge → älteste zusätzlich entfernen
-    let removedForLimit = 0;
-    let extraRuleIds = [];
-    const remainingHosts = Object.keys(learned);
-    if (remainingHosts.length > maxEntries) {
-      const sorted = remainingHosts.sort((a,b) => (learned[a].ts||0) - (learned[b].ts||0));
-      const overshoot = remainingHosts.length - maxEntries;
-      const cut = sorted.slice(0, overshoot);
-      for (const h of cut) {
-        const rid = learned[h]?.ruleId;
-        if (typeof rid === 'number') extraRuleIds.push(rid);
-        delete learned[h];
-      }
-      removedForLimit = cut.length;
-    }
-
-    // 3) Dynamic Rules entfernen (falls vorhanden)
-    const allRuleIds = [...toRemoveByAge, ...extraRuleIds];
-    if (allRuleIds.length) {
-      try {
-        await chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: allRuleIds });
-      } catch (e) {
-        console.warn('[Protecto][Adaptive] cleanup removeRuleIds error', e);
-      }
-    }
-
-    await chrome.storage.local.set({ learned });
-    return { removed: toRemoveByAge.length + removedForLimit, remaining: Object.keys(learned).length };
+    // Delegiert an pruneLearned; Optionen werden aktuell nicht parametriert,
+    // da TTL/LIMIT konstant festgelegt sind. Struktur bleibt für spätere
+    // Erweiterungen erhalten.
+    return pruneLearned();
   }
 
-  // Gibt aggregierte Kennzahlen zurück, z. B. fürs Popup/Debug
+  // --- Stats für Popup/Debug ----------------------------------------------
   async function getStats(){
     const { dynRuleCounter = DYN_ID_START } = await chrome.storage.local.get('dynRuleCounter');
     const learned = await getLearnedMap();
@@ -216,26 +250,25 @@
       if (!oldest || ts < oldest) oldest = ts;
       if (!newest || ts > newest) newest = ts;
     }
-    return {
-      learnedCount: count,
-      dynRuleCounter,
-      oldestTs: oldest,
-      newestTs: newest,
-    };
+    return { learnedCount: count, dynRuleCounter, oldestTs: oldest, newestTs: newest };
   }
 
-  // Export in globalen Namespace
+  // --- Export --------------------------------------------------------------
   self.adaptive = {
+    // Heuristik/Utils
     hostFromUrl,
     looksLikeTrackerUrl,
     isPolicyActiveFor,
+    // Lernen & Regeln
     maybeLearnAndRedirectHost,
     addRedirectRuleForHost,
-    resetLearned,
+    pruneLearned,
     cleanupLearned,
+    resetLearned,
     getStats,
-    // Konstanten (falls im SW benötigt)
+    // Konstanten (optional verwendet)
     GIF_1x1,
+    JSON_EMPTY,
     NOOP_JS,
     GENERIC_SCRIPT_STUB
   };

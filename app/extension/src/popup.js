@@ -157,4 +157,20 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // Empfehlung laden
   await loadRecommendation();
+
+  // Telemetrie anzeigen
+  try {
+    const { protecto_telemetry = {} } = await chrome.storage.local.get("protecto_telemetry");
+    const learnedHostsCount = protecto_telemetry.learnedHostsCount ?? 0;
+    const dynamicRulesActive = protecto_telemetry.dynamicRulesActive ?? 0;
+    const prunedCount = protecto_telemetry.prunedCount ?? 0;
+    const telemetryBox = document.getElementById("telemetryBox");
+    if (telemetryBox) {
+      telemetryBox.innerHTML = `
+        <div><b>Learned Hosts Count:</b> ${learnedHostsCount}</div>
+        <div><b>Dynamic Rules Active:</b> ${dynamicRulesActive}</div>
+        <div><b>Pruned Count:</b> ${prunedCount}</div>
+      `;
+    }
+  } catch {}
 });

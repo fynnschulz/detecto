@@ -6,6 +6,72 @@
 
   // Auto-Prune: entferne Domains ohne Aktivität > 90 Tage
   const MAX_AGE_MS = 90 * 24 * 60 * 60 * 1000; // 90 Tage
+
+  // --- Local Telemetry (nur lokal; keine externen Calls) -------------------
+  const DYN_LIMIT_DEFAULT = 5000; // MV3: sinnvolles Soft-Limit für dyn. Redirects
+
+  async function _telemetryLoad() {
+    return new Promise((resolve) => {
+      storage.local.get(["protecto_telemetry"], (res) => {
+        const t = res.protecto_telemetry || { hist:{}, dynRulesCount:0, dynLimit:DYN_LIMIT_DEFAULT };
+        if (!t.hist) t.hist = {};
+        if (typeof t.dynRulesCount !== 'number') t.dynRulesCount = 0;
+        if (typeof t.dynLimit !== 'number') t.dynLimit = DYN_LIMIT_DEFAULT;
+        resolve(t);
+      });
+    });
+  }
+
+  async function _telemetrySave(next) {
+    return new Promise((resolve) => {
+      storage.local.set({ protecto_telemetry: next }, () => resolve(true));
+    });
+  }
+
+  // Zähler erhöhen, wenn Adaptive neue Hosts lernt
+  async function bumpLearned(pageHost){
+    const t = await _telemetryLoad();
+    const key = pageHost || "_global";
+    const rec = t.hist[key] || { learned:0, pruned:0 };
+    rec.learned += 1;
+    t.hist[key] = rec;
+    await _telemetrySave(t);
+  }
+
+  // Zähler für bereinigte (geprunte) Regeln
+  async function bumpPruned(pageHost, n = 1){
+    const t = await _telemetryLoad();
+    if (pageHost) {
+      const rec = t.hist[pageHost] || { learned:0, pruned:0 };
+      rec.pruned += (Number(n) || 0);
+      t.hist[pageHost] = rec;
+    }
+    await _telemetrySave(t);
+  }
+
+  // Aktuelle Anzahl dynamischer Regeln (Cache fürs Popup)
+  async function setDynamicRulesCount(n){
+    const t = await _telemetryLoad();
+    t.dynRulesCount = Number(n) || 0;
+    if (typeof t.dynLimit !== 'number') t.dynLimit = DYN_LIMIT_DEFAULT;
+    await _telemetrySave(t);
+  }
+
+  // Zusammenfassung fürs Popup (gesamt + pro aktuelle Domain)
+  async function getSummary(currentHost){
+    const t = await _telemetryLoad();
+    const perHost = currentHost ? (t.hist[currentHost] || { learned:0, pruned:0 }) : null;
+    const totals = Object.values(t.hist).reduce((acc, r) => ({
+      learned: acc.learned + (r.learned || 0),
+      pruned:  acc.pruned  + (r.pruned  || 0),
+    }), { learned:0, pruned:0 });
+    return {
+      dynRulesCount: t.dynRulesCount,
+      dynLimit: t.dynLimit,
+      totals,
+      perHost
+    };
+  }
   function pruneOldEntries(all, cutoffTs){
     let removed = 0;
     try {
@@ -100,5 +166,13 @@
         storage.local.set({ protecto_history: all }, () => resolve({ removed, remaining: Object.keys(all).length }));
       });
     });
+  };
+
+  // Öffentliche Telemetrie-API (nur lokal)
+  self.historyTelemetry = {
+    bumpLearned,
+    bumpPruned,
+    setDynamicRulesCount,
+    getSummary,
   };
 })();

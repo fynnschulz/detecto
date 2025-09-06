@@ -1,0 +1,80 @@
+[
+  {
+    "id": 200001,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["image","ping"],
+      "regexFilter": "(?i)(collect|g/collect|pixel|beacon|track|event|metrics|stats)(\\?|/|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+    }
+  },
+  {
+    "id": 200002,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["xmlhttprequest","other"],
+      "regexFilter": "(?i)(collect|g/collect|pixel|beacon|track|event|metrics|stats)(\\?|/|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "data:application/json,{}" }
+    }
+  },
+  {
+    "id": 200003,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["image","ping"],
+      "regexFilter": "(?i)([?&])(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)="
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+    }
+  },
+  {
+    "id": 200004,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["xmlhttprequest","other"],
+      "regexFilter": "(?i)([?&])(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)="
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "data:application/json,{}" }
+    }
+  },
+  {
+    "id": 200005,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["script"],
+      "regexFilter": "(?i)/(gtm|gtag|analytics|fbevents|tracker|tracking)\\.(m?js)(\\?|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "extensionPath": "/src/stubs/gtm.js" }
+    }
+  },
+  {
+    "id": 200006,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["image","xmlhttprequest","ping","other"],
+      "regexFilter": "(?i)(/tr/|/t/collect)(\\?|/|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "data:application/json,{}" }
+    }
+  }
+]
