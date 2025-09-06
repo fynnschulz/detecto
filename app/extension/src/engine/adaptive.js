@@ -174,37 +174,42 @@
   }
 
   // --- Dynamische Redirect-Regel anlegen (pro Ressourcentyp passend) ------
-  async function addRedirectRuleForHost(host, type){
-    if (!host) return null;
-    const t = (type||'').toLowerCase();
+  async function addRedirectRuleForHost(host, type) {
+  if (!host) return;
 
-    let action, resourceTypes;
-    if (t === 'script') {
-      action = { type: 'redirect', redirect: { extensionPath: GENERIC_STUB } };
-      resourceTypes = ['script'];
-    } else if (t === 'image' || t === 'ping') {
-      action = { type: 'redirect', redirect: { url: GIF_1x1 } };
-      resourceTypes = ['image','ping'];
-    } else { // xhr / fetch / sonstiges → JSON
-      action = { type: 'redirect', redirect: { url: JSON_EMPTY } };
-      resourceTypes = ['xmlhttprequest','fetch'];
-    }
+  const id = await getNextRuleId();
+  const t = String(type || "").toLowerCase();
 
-    const rule = {
-      id: await getNextRuleId(),
-      priority: 1,
-      action,
-      condition: {
-        requestDomains: [host],
-        domainType: 'thirdParty',
-        resourceTypes
-      }
-    };
-
-    await chrome.declarativeNetRequest.updateDynamicRules({ addRules: [rule] });
-    await markLearned(host, rule.id, t);
-    return rule.id;
+  // Script → Stub; sonst → Data-URL (GIF/JSON)
+  let action;
+  if (t === "script") {
+    action = { type: "redirect", redirect: { extensionPath: "/src/stubs/gtm.js" } };
+  } else if (t === "image" || t === "ping") {
+    action = { type: "redirect", redirect: { url: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } };
+  } else {
+    // xhr/fetch/sonstiges → leeres JSON
+    action = { type: "redirect", redirect: { url: "data:application/json,{}" } };
   }
+
+  // Resource-Typen komplett abdecken (Script separat)
+  const rtypes = (t === "script")
+    ? ["script"]
+    : ["image", "xmlhttprequest", "ping", "fetch"];
+
+  const rule = {
+    id,
+    priority: 1,
+    action,
+    condition: {
+      requestDomains: [host],
+      domainType: "thirdParty",
+      resourceTypes: rtypes
+    }
+  };
+
+  await chrome.declarativeNetRequest.updateDynamicRules({ addRules: [rule] });
+  await markLearned(host, id); // { ruleId, ts } kommt aus deiner Persistenz
+}
 
   // --- Haupt-Entry: ggf. neue Rule für Host anlegen -----------------------
   async function maybeLearnAndRedirectHost(host, type){
