@@ -1,0 +1,146 @@
+{
+    "domain": "analytics-helper.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000606,
+    "sites": 6,
+    "subdomains": [
+        "tag",
+        "event"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "analytics-helper\\.com\\/ans\\/uuid",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "432358d2e6fad1480740057020b75325ae2402662c8fff73eafc92cce607c14a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ga_helper_optout": {
+                    "ttl": 31104004,
+                    "length": 1,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lefigaro.fr",
+                "forum.lefigaro.fr"
+            ]
+        },
+        {
+            "rule": "analytics-helper\\.com\\/ans\\/ga\\/data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bef227f70ed9b75b9784d0d79536c4614da8e1473d175ee81a4552f3f95ccf04"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lefigaro.fr",
+                "www.interiale.fr"
+            ]
+        },
+        {
+            "rule": "analytics-helper\\.com\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "centrepompidou.fr",
+                "www.valeursactuelles.com"
+            ]
+        },
+        {
+            "rule": "analytics-helper\\.com\\/ans\\/ga",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7abdd7dff8456c4373c705f90379e3294e69c24fe35ac215223c95e604525b67"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "interiale.fr",
+                "www.mesopinions.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5714285714285714
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "consentframework.com",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "jihoon.ns.cloudflare.com",
+        "raphaela.ns.cloudflare.com"
+    ]
+}

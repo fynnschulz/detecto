@@ -1,0 +1,283 @@
+{
+    "domain": "pardot.com",
+    "owner": {
+        "name": "Salesforce.com, Inc.",
+        "displayName": "Salesforce.com",
+        "privacyPolicy": "https://www.salesforce.com/company/privacy/",
+        "url": "http://salesforce.com"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000804,
+    "sites": 8,
+    "subdomains": [
+        "pi",
+        "go"
+    ],
+    "cnames": [
+        {
+            "original": "success.enea.ch",
+            "resolved": "go.pardot.com"
+        },
+        {
+            "original": "success.schulthess.ch",
+            "resolved": "go.pardot.com"
+        },
+        {
+            "original": "t.chemie.de",
+            "resolved": "go.pardot.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "pardot\\.com\\/pd\\.js",
+            "cookies": 0.000402,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pi",
+                "go"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "Document.cookie setter": 3
+            },
+            "sites": 8,
+            "prevalence": 0.000804,
+            "cnames": [
+                {
+                    "original": "t.chemie.de",
+                    "resolved": "go.pardot.com"
+                },
+                {
+                    "original": "success.enea.ch",
+                    "resolved": "go.pardot.com"
+                },
+                {
+                    "original": "success.schulthess.ch",
+                    "resolved": "go.pardot.com"
+                }
+            ],
+            "responseHashes": [
+                "41402adfc915ad6dfd6328c06c8038763d25fe603e63beba4a2638a2bbc03136"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "pi_opt_in68052": {
+                    "ttl": 315360007,
+                    "length": 5,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 0.5
+                },
+                "visitor_id68052": {
+                    "ttl": 315360007,
+                    "length": 9,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 0.5
+                },
+                "visitor_id68052-hash": {
+                    "ttl": 315360007,
+                    "length": 104,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 0.5
+                },
+                "visitor_id919133": {
+                    "ttl": 315360007,
+                    "length": 10,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                },
+                "visitor_id919133-hash": {
+                    "ttl": 315360007,
+                    "length": 104,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gradle.org",
+                "docs.gradle.org",
+                "letsencrypt.org",
+                "opencorporates.com",
+                "stiftungen.stiftungschweiz.ch",
+                "www.chemie.de",
+                "www.enea.ch",
+                "www.schulthess.ch"
+            ]
+        },
+        {
+            "rule": "pardot\\.com\\/analytics",
+            "cookies": 0.000703,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pi",
+                "go"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [
+                {
+                    "original": "success.enea.ch",
+                    "resolved": "go.pardot.com"
+                },
+                {
+                    "original": "success.schulthess.ch",
+                    "resolved": "go.pardot.com"
+                }
+            ],
+            "responseHashes": [
+                "a2e56eca0b0fc47f8648c623b40ab24a0b837da9ecca699dde6a96b8ad6beb4e",
+                "dcf430710cdd1359115293f45d5023b2a560aef8a2c1e59d578b8b1e10a216d3",
+                "401bdd9c94084ce0143e7378f7dd110bae1289f53bd38b2cc30c3d89f92ba518",
+                "d5ed0d3bb98ae16ad90be29db3becf6153a1390b922506a19cccf2400bbdb1c1",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fb521171c87516b02d7cb63bf6d455409fba74d7a76eef849ba9f18a3c56040b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gradle.org",
+                "docs.gradle.org",
+                "letsencrypt.org",
+                "opencorporates.com",
+                "stiftungen.stiftungschweiz.ch",
+                "www.enea.ch",
+                "www.schulthess.ch"
+            ]
+        },
+        {
+            "rule": "pardot\\.com\\/l\\/988002\\/2022-09-06\\/982tkr",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "go"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "success.enea.ch",
+                    "resolved": "go.pardot.com"
+                }
+            ],
+            "responseHashes": [
+                "90f7da42825ca652e13d000ea039de098c3fd930636f52d654c9d5824f9c9e60"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "enea.ch",
+                "www.enea.ch"
+            ]
+        },
+        {
+            "rule": "pardot\\.com\\/css\\/form\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "go"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "success.enea.ch",
+                    "resolved": "go.pardot.com"
+                }
+            ],
+            "responseHashes": [
+                "6dbd1967a8963d2eead020be31031ed12df79148acfea8cb787fa1358d5b4559"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "enea.ch",
+                "www.enea.ch"
+            ]
+        },
+        {
+            "rule": "pardot\\.com\\/js\\/piUtils\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "go"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "success.enea.ch",
+                    "resolved": "go.pardot.com"
+                }
+            ],
+            "responseHashes": [
+                "87fbc6477d07c0b9eb56d8839da504fcaf1cdbb8bec3e7f6581cfe92f4abdfce"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "enea.ch",
+                "www.enea.ch"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.000603,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "gradle.com",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "gatedcontent.com",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "abetterinternet.org",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "pardot.com",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Script": 17,
+        "Document": 2,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "dns2.p06.nsone.net",
+        "dns3.p06.nsone.net",
+        "dns4.p06.nsone.net",
+        "ns02.salesforce-dns.com",
+        "ns01.salesforce-dns.com",
+        "ns03.salesforce-dns.com",
+        "ns04.salesforce-dns.com",
+        "dns1.p06.nsone.net"
+    ]
+}

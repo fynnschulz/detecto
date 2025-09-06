@@ -1,0 +1,411 @@
+{
+    "domain": "bsky.app",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00015,
+    "sites": 22,
+    "subdomains": [
+        "embed",
+        "api",
+        "public.api",
+        "cdn",
+        "web-cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "bsky\\.app\\/static\\/embed\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "21db9bce2270a072d31efc2ff2eef47f2f2c1c45000417a425169eafad136809"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "balloon-juice.com",
+                "digbysblog.net",
+                "whyevolutionistrue.com",
+                "www.commondreams.org",
+                "www.dailykos.com",
+                "www.eschatonblog.com",
+                "www.mmorpg.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/static\\/post-BbjsTYl5\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {
+                "window.matchMedia(\"prefers-color-scheme\")": 2
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "9dbf5734c9ef57702d06f63869ab9e42c7de88089d0ac912bd6dbf3c1f83215f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "balloon-juice.com",
+                "digbysblog.net",
+                "whyevolutionistrue.com",
+                "www.commondreams.org",
+                "www.eschatonblog.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/static\\/post--65L4d5E\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "609b17cf9089a137b5bc3cdc422e6f1af4f081b490ba7070e2a2a86e45102330"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "balloon-juice.com",
+                "digbysblog.net",
+                "whyevolutionistrue.com",
+                "www.commondreams.org",
+                "www.eschatonblog.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/static\\/post-DbtsuDBE\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "e2aceb48c2061a9f75a37dfba855d7639ec0be00f30395cb199aa999cd17caf7"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "balloon-juice.com",
+                "digbysblog.net",
+                "whyevolutionistrue.com",
+                "www.commondreams.org",
+                "www.eschatonblog.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/xrpc\\/app\\.bsky\\.feed\\.getAuthorFeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikeportland.org",
+                "twokinds.keenspot.com",
+                "winworldpc.com",
+                "www.lawfaremedia.org"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/xrpc\\/app\\.bsky\\.feed\\.getAuthorFeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "35d40a6b992d57d23c396f40f51ad832606ff582f32df80ce7742d8964394b33",
+                "3edb9f79efde28b6006d9e7638bbe4f9afcc128816188b252643f4d3a4094e93",
+                "f2e3413383e8c816fb49c8aa88f2a42693a202e6bda9289f86e5b71e9e50c12e",
+                "3658ad4ab8d265be6b0148b52f0e66dca8cec0ce820b6abccfc899b76cd97fe9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikeportland.org",
+                "twokinds.keenspot.com",
+                "wikimon.net",
+                "winworldpc.com",
+                "www.lawfaremedia.org"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/xrpc\\/app\\.bsky\\.feed\\.getPostThread",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digbysblog.net",
+                "whyevolutionistrue.com",
+                "www.commondreams.org",
+                "www.eschatonblog.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/xrpc\\/app\\.bsky\\.feed\\.getPostThread",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "979a1b1c21a04ae9c336911d2c4ae5165f0e3ab023720abdfeb9811874c5b34d",
+                "0f0f940e2a8727eda0c45aa798d7747a032855b9dfb49f0e06b385edb4d9adcf",
+                "896f1c48afffb059c83edbcdcfe5a1387265b4ffbbb41f99a96c2abfc7edef4b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digbysblog.net",
+                "whyevolutionistrue.com",
+                "www.commondreams.org",
+                "www.eschatonblog.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/img\\/avatar\\/plain\\/did:plc:nmspswiinxvean2hmuk632o7\\/bafkreihywhx2hq3iaoell7beoqsijnmu4vjrhbhae6sft7fzb57e7hzgwe@jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4493ad8527a05cce751410f6594668dcc153f12a82942b8e5e0b7d4d50a87c9c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "keenspot.com",
+                "twokinds.keenspot.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/img\\/feed_thumbnail\\/plain\\/did:plc:nmspswiinxvean2hmuk632o7\\/bafkreihmn6arsjvuoyd6ob2bwqg2hcp4iubobfjgj6innqjag6axzjyetm@jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a8a6b669812662be16759537c3cf88c7396cda6ebb7e8f4df0f69243c9152504"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "keenspot.com",
+                "twokinds.keenspot.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/img\\/feed_thumbnail\\/plain\\/did:plc:nmspswiinxvean2hmuk632o7\\/bafkreicjfnszq6qivmlvwp5y7qgn6i5vykpdhyxlz34restvzxuapbd6d4@jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "20a78ee15d6e66804497c026541906a3f817832b81a7cdd07a04086566ce308d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "keenspot.com",
+                "twokinds.keenspot.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/img\\/feed_thumbnail\\/plain\\/did:plc:nmspswiinxvean2hmuk632o7\\/bafkreidpldocuqfcqbk2xfboitm4aqf3pd2qgfuwkpzucbwqz7nl6xksfa@jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "71639718763904289ef6301690eceb96a34396e19d7e0da120610a9ec007ef13"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "keenspot.com",
+                "twokinds.keenspot.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/img\\/feed_thumbnail\\/plain\\/did:plc:nmspswiinxvean2hmuk632o7\\/bafkreigodux7unmvvobrlo3yuhzfiyokwoxih6acbxhwg7iljzauoskvgq@jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2369aaec9fea11fa1979d99142c8d180666c24af0ed87732d5b320a846203d89"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "keenspot.com",
+                "twokinds.keenspot.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/img\\/feed_thumbnail\\/plain\\/did:plc:nmspswiinxvean2hmuk632o7\\/bafkreidm3c3byp5q4qm7wwczhqtq5gvhqnbi3g223usimdujhryiv4trga@jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1722c9ee7e22c701db183bbc08b699ecf8c3383bd15bcf25c9fdfacec56e356f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "keenspot.com",
+                "twokinds.keenspot.com"
+            ]
+        },
+        {
+            "rule": "bsky\\.app\\/static\\/favicon-32x32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "56d59f8ac524d7aee02a21acf7964e0856500b0bbee3f54517de091e538094a9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bleedinggreennation.com",
+                "www.thegoodphight.com",
+                "www.truebluela.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6833333333333333
+        },
+        {
+            "domain": "blueskytimeline.com",
+            "prevalence": 0.18333333333333332
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.03333333333333333
+        }
+    ],
+    "types": {
+        "Script": 17,
+        "Stylesheet": 5,
+        "Preflight": 8,
+        "Fetch": 9,
+        "Image": 15
+    },
+    "nameservers": [
+        "ns-2001.awsdns-58.co.uk",
+        "ns-1425.awsdns-50.org",
+        "ns-757.awsdns-30.net",
+        "ns-372.awsdns-46.com"
+    ]
+}

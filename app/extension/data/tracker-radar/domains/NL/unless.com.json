@@ -1,0 +1,92 @@
+{
+    "domain": "unless.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "5afe143b-5113-4dbc-ba23-76682b17668d",
+        "c9c1ada6-0ebb-479c-9698-1070e971ffed",
+        "e173bd23-f69a-4719-bfd2-d4efc6143a84"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "unless\\.com\\/js\\/v5\\/latest\\/txt\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "5afe143b-5113-4dbc-ba23-76682b17668d",
+                "c9c1ada6-0ebb-479c-9698-1070e971ffed",
+                "e173bd23-f69a-4719-bfd2-d4efc6143a84"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.sessionStorage": 3,
+                "window.localStorage": 3,
+                "window.innerWidth": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "2de23c540863df57caebf2d076abf448d3ca3b50c42f3a57c5dfd43fcf336dd3",
+                "8b3e586414743cb64b28e51c91676576520e84bf6697cc2e216864fb6a191a89"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kruidvat.be",
+                "www.kruidvat.nl",
+                "zorgdomein.com"
+            ]
+        },
+        {
+            "rule": "unless\\.com\\/api\\/v1\\/txt-api\\/get-experiences",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "5afe143b-5113-4dbc-ba23-76682b17668d",
+                "c9c1ada6-0ebb-479c-9698-1070e971ffed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1d04a1059b7e76eba2d94fb3bb0012f2db7fb11bfb979fcf109fdd668e2eea91"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kruidvat.be",
+                "www.kruidvat.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-521.awsdns-01.net",
+        "ns-410.awsdns-51.com",
+        "ns-1843.awsdns-38.co.uk",
+        "ns-1497.awsdns-59.org"
+    ]
+}

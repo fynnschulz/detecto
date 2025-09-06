@@ -1,0 +1,1213 @@
+{
+    "domain": "ingenie.fr",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00101,
+    "sites": 10,
+    "subdomains": [
+        "static",
+        "belle-ile",
+        "les2alpes",
+        "saint-lary",
+        "vannes",
+        "msm-normandie",
+        "vulcania"
+    ],
+    "cnames": [
+        {
+            "original": "resa.saintlary.com",
+            "resolved": "saint-lary.ingenie.fr"
+        },
+        {
+            "original": "reservation.belle-ile.com",
+            "resolved": "belle-ile.ingenie.fr"
+        },
+        {
+            "original": "reservation.golfedumorbihan.bzh",
+            "resolved": "vannes.ingenie.fr"
+        },
+        {
+            "original": "reservation.les2alpes.com",
+            "resolved": "les2alpes.ingenie.fr"
+        },
+        {
+            "original": "reservation.ot-montsaintmichel.com",
+            "resolved": "msm-normandie.ingenie.fr"
+        },
+        {
+            "original": "sejours.vulcania.com",
+            "resolved": "vulcania.ingenie.fr"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "ingenie\\.fr\\/js\\/widgets\\/resa\\/IngenieWidgetResaClient\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 5,
+                "Navigator.prototype.userAgent": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "543bfe13ed3a134698dd6911b51190d79cd5002a7bf59f1354fb07079380688b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.golfedumorbihan.bzh",
+                "www.les2alpes.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/js\\/widgets\\/min\\/widget-resa\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "632da3749e57afd207688bf1af1dc40f22652ced1df6a1774dc1c6d239fc3cc8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.larochelle-tourisme.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/templates\\/undefined\\/css\\/widget-resa-ingenie\\.css",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "belle-ile",
+                "les2alpes"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "reservation.belle-ile.com",
+                    "resolved": "belle-ile.ingenie.fr"
+                },
+                {
+                    "original": "reservation.les2alpes.com",
+                    "resolved": "les2alpes.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "921d72e266caeadda97f0d8e3d6937997b320f23d50cc7f1b88d6dc3bab36f75"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.les2alpes.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/images\\/ajax\\/ajax-loader\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "472ed22627155c62e9c8484014ca61fc5d9a446cf2df8f64aaf172b32bb51263"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.golfedumorbihan.bzh",
+                "www.les2alpes.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/\\/booking",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "belle-ile",
+                "saint-lary"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "reservation.belle-ile.com",
+                    "resolved": "belle-ile.ingenie.fr"
+                },
+                {
+                    "original": "resa.saintlary.com",
+                    "resolved": "saint-lary.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "5fb52c3e251f09f97549d9f241bf18eb6d42aadcfe81c6afea6cf11d7d1461c4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/javascript\\.js",
+            "cookies": 0.000505,
+            "fingerprinting": 1,
+            "subdomains": [
+                "belle-ile",
+                "vannes",
+                "les2alpes",
+                "msm-normandie",
+                "saint-lary"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [
+                {
+                    "original": "reservation.belle-ile.com",
+                    "resolved": "belle-ile.ingenie.fr"
+                },
+                {
+                    "original": "reservation.golfedumorbihan.bzh",
+                    "resolved": "vannes.ingenie.fr"
+                },
+                {
+                    "original": "reservation.les2alpes.com",
+                    "resolved": "les2alpes.ingenie.fr"
+                },
+                {
+                    "original": "reservation.ot-montsaintmichel.com",
+                    "resolved": "msm-normandie.ingenie.fr"
+                },
+                {
+                    "original": "resa.saintlary.com",
+                    "resolved": "saint-lary.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "21f9814e1f3a66dca159bd44f19a502809df091e407ef5ac64eae6d61aad901b",
+                "9b62f89b8bce8fdac9e110616566032861da1b8635f8da527f207876833aaad8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.golfedumorbihan.bzh",
+                "www.les2alpes.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/booking",
+            "cookies": 0.000606,
+            "fingerprinting": 0,
+            "subdomains": [
+                "belle-ile",
+                "vannes",
+                "les2alpes",
+                "msm-normandie",
+                "saint-lary"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [
+                {
+                    "original": "reservation.belle-ile.com",
+                    "resolved": "belle-ile.ingenie.fr"
+                },
+                {
+                    "original": "reservation.golfedumorbihan.bzh",
+                    "resolved": "vannes.ingenie.fr"
+                },
+                {
+                    "original": "reservation.les2alpes.com",
+                    "resolved": "les2alpes.ingenie.fr"
+                },
+                {
+                    "original": "reservation.ot-montsaintmichel.com",
+                    "resolved": "msm-normandie.ingenie.fr"
+                },
+                {
+                    "original": "resa.saintlary.com",
+                    "resolved": "saint-lary.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "1b9448b1d5d749c42dfaefd9c83981a7efd1de43592224e08a32506244a91caa",
+                "b28d1c8b1f383c248b4a5e810aa5ce657830fb26a41bc42f599be7ef717d2214",
+                "ca56650f78c43ad334ec2f3cb71a1f30ef4b40e0bf2ce469d56611e31ab170b2",
+                "bb12d820176edb20f2654fb7677b9b970569556fb884faff28509c777ba928ed",
+                "845603dc04b99d86d01285d240031b31bf205e4e57df071fa4b4fd9c3b162f4d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.belle-ile.com",
+                "www.golfedumorbihan.bzh",
+                "www.les2alpes.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/css\\/fontawesome-4\\.7\\.0\\/font-awesome\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "b3b08bbcb44d0cd4c2f5ad720d5b4c2e2395469f6ed04658fd60295c8eaeaecc"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.golfedumorbihan.bzh",
+                "www.les2alpes.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/css\\/widget\\/resa\\/widget-resa\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "18a4f331fe4044b1c1d7c7acbf8c136b859c29d12e24d7037ad49b23ff8e6f49"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.golfedumorbihan.bzh",
+                "www.les2alpes.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/css\\/widget\\/resa\\/widget-resa-generic\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "61f2a6ced32fc4d0e868c6bdcd342e0dbb19ffc9e3796478009a448ef4a80c07"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.golfedumorbihan.bzh",
+                "www.les2alpes.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/css\\/widget\\/resa\\/widget-resa-horizontal\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "d768bab292687135ba3559ead78b09d854debb2f4a2befc837d5dc1601f1e4fc"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.golfedumorbihan.bzh",
+                "www.les2alpes.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/css\\/widget\\/resa\\/widget-resa-vertical\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "f0edc02eee9b72238e5ecab8fa83037595a45513e4b9721ad0d256ff89cbbedf"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belle-ile.com",
+                "www.golfedumorbihan.bzh",
+                "www.les2alpes.com",
+                "www.ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/js\\/ScriptsLoader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "35819cf38833d5b01c7feccba216648080c2b1623d2d4b5efeee45e664326b5a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "golfedumorbihan.bzh",
+                "www.ot-montsaintmichel.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/widgets\\/menu-engine\\/js\\/Client\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "window.innerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "28c1317c9e0af26d92d7462c1a565cb78c49b8cd46aedd5241594f0a6e8a0d8c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "golfedumorbihan.bzh",
+                "www.ot-montsaintmichel.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/templates\\/RESA\\/css\\/widget-resa\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vannes"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "reservation.golfedumorbihan.bzh",
+                    "resolved": "vannes.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "40619d34d3586a0743b10f12b73385d7883b2a4312c2c69d3a55ce8e1fd89cf7"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "golfedumorbihan.bzh",
+                "www.golfedumorbihan.bzh"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/helpers\\/ScriptsLoader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "35819cf38833d5b01c7feccba216648080c2b1623d2d4b5efeee45e664326b5a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labaule-guerande.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/components\\/cookieManager\\/js\\/CookieManager\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3003eeceb325aad46e822811cf894173f142cc466abbe8dd812b8efa2ab61174"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labaule-guerande.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/fonts\\/fontawesome-4\\.7\\.0\\/fontawesome-webfont\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "d792afdac7f7ae5de7c6964950c6c61dc6e3f3813180a59e141c7cb4ac4364dc"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labaule-guerande.com",
+                "www.ot-montsaintmichel.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/js\\/colorbox\\/controls\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2ee991432fa1f85dfc0d2b5e2b0fd34d4cf9452377ffac0ddb5a9f5d729324f4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labaule-guerande.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/js\\/colorbox\\/border\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "905ef5f9366bbf78f5ca44be0e3a150635ee9486a64bed286168059669308fa3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labaule-guerande.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/helpers\\/Caller\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bf4d9ef565fedcfa719cebc5b2f1d7a3f4e636c366deea473e6ce4807f4ec372"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labaule-guerande.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/helpers\\/Objects\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "60ff3ce26f93abfcecc00ec64386820f0272bbb6a2c8eb7111d9af088214ad5a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labaule-guerande.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/components\\/cookieManager\\/css\\/style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bd6291891ef1d8a1a402fcc0adc397c66b704d65a631a305b2416184d3cead1c"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labaule-guerande.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/images\\/jquery\\.bxslider\\/bx_loader\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "df927125f386f4445027d5cc842a764fba383244793e51d491a5e07491f474de"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labaule-guerande.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/images\\/resa\\/aide\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "46bed2732e9a50e343bd0d00f0c6111031ea6a882c6b64b0eaee0886af0248aa"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "les2alpes.com",
+                "www.pornic.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/templates\\/RESAV2\\/css\\/widget-resa\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "msm-normandie",
+                "saint-lary"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "reservation.ot-montsaintmichel.com",
+                    "resolved": "msm-normandie.ingenie.fr"
+                },
+                {
+                    "original": "resa.saintlary.com",
+                    "resolved": "saint-lary.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ot-montsaintmichel.com",
+                "www.saintlary.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/provider\\.html",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "92bd8dbf29f902613aa00a731e2d6ceaf471069d7643ae8e2a0f768002718671"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/js\\/iframeResizer\\/easyXDM\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4ab7d6943b8d50d7903d6af6100ffa5f5a03144a2a186be2d7ea2bdb2915a891"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/booking",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "a38de7283bc21257a3cdf7199fe997ebb0800d51d41e10a19d9d070d066e3c46"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/stylesheet\\.css",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/templates\\/2017bis\\/css\\/cache\\/style_moteur_FR_ControllerResa_style-site\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "5b1ab402552ccb0335fb6e552e05f529cc3c2cb72aec3c1da9156e1aa2540c16"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/templates\\/2017bis\\/images\\/accroche\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "255842ff50fc5ac9f2eccf8776c7a02fafce549818f69a6c7324c01f0ce61b3b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/templates\\/2017bis\\/images\\/logo-vulcania\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "24581ede34ac9ad25e96f399ef0ad070f12a78628138843bb17436f24615c718"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/medias\\/images\\/logo_region_auvergne_rhone_alpes_footer_site\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "ee6fdc406db91429a3c32a637c5e80dde0aee680a9587438dba589a236a46199"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/templates\\/2017bis\\/gen\\/js\\/Javascript_default\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "160af6ee20618a314b9e995a2a55812685052b1500f92982472aa1a98dd63603"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/booking",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "780f5d53e4e3752ff0cd61ac859ed48e75a0e29dd5a1eec3d93dba62a5859770"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/ing-widget",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "220f06292f199e14fe5f201c9b14867ff1c63e972e0ecccb5813e466faf0a451"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/medias\\/images\\/prestations\\/multitailles\\/320x240_sejour-decouverte-patrimoine-auvergnat-55705\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "efdf18938710371ba969662ab7197ff8b38665cee0cc8ff5662f5f4e2263c22f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/medias\\/images\\/info_pages\\/multitailles\\/320x240_services-plus-visite-parc-255\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "8bee68274555adf402b1fb619c6470b0c633840bdfe905e8c1057be30a9043ed"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/medias\\/images\\/info_pages\\/multitailles\\/320x240_activites-a-faire-en-auvergne-254\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "83deae1e0f4e35637e6bed5f5e679fdc80a84e609294bd16a12208fdab5d6a13"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/medias\\/images\\/prestations\\/multitailles\\/320x240_hotel-mercure-centre-jaude-reduction-2eme-nuit-55848\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "3a7eaf77214db68a82d7fe7b27edba540893357a24be58841f19f52cd37b9a3b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        },
+        {
+            "rule": "ingenie\\.fr\\/medias\\/images\\/prestations\\/multitailles\\/320x240_puy-de-come-auvergne-3eme-nuit-offerte-55847\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vulcania"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sejours.vulcania.com",
+                    "resolved": "vulcania.ingenie.fr"
+                }
+            ],
+            "responseHashes": [
+                "920bdc71ab8245516d47761cdb65eb8129e9288098142edba9dd164b20e6a5de"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vulcania.com",
+                "www.vulcania.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000606,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.34814814814814815
+        },
+        {
+            "domain": "cloudly.space",
+            "prevalence": 0.3037037037037037
+        },
+        {
+            "domain": "ingenie.fr",
+            "prevalence": 0.15555555555555556
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.11851851851851852
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.07407407407407407
+        }
+    ],
+    "types": {
+        "Script": 38,
+        "Stylesheet": 37,
+        "Image": 29,
+        "Font": 3,
+        "Document": 4,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns2.ingenie.fr",
+        "ns1.ingenie.fr"
+    ]
+}

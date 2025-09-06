@@ -1,0 +1,464 @@
+{
+    "domain": "mapservices.eu",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "phoenix",
+        "tirol",
+        "elastic",
+        "map21"
+    ],
+    "cnames": [
+        {
+            "original": "maps.vinschgau.net",
+            "resolved": "mapservices.eu"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "mapservices\\.eu\\/map\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "phoenix"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.language": 2,
+                "window.devicePixelRatio": 2,
+                "URL.createObjectURL": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "366e4c4efa62507f8d82e9c77243272e16c57c0ee059dae8f724ca55551b3f62"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/nefos_app\\/\\/frontend\\/mandator\\/json\\/Mandator\\.action",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tirol"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "960e2bf3fee59474ffe307dcfec13a9292fc8f8d86ae97996e0cdb18013ed54c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/nefos\\/static\\/fonts\\/Lato-Regular\\.ttf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a0456adb97aaf61f54d16f0356e2e8d059c2e5baf43b2acbc1add6d557d8eda"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/nefos\\/static\\/fonts\\/PlusJakartaSans-Medium\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "81f9c6782fbae29b3074fdeb1b0542e036bbae78a0fd416023beb53e55c45ea2"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/nefos_app\\/frontend\\/resource\\/json\\/Resource\\.action",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tirol"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "1568a950d835a0f3a873ddcc279efd11fd8cf196d04ed200caefe3202e57a5f4",
+                "ec09d62543287cc05cc59359e3b7933313f8a7e1605b619b7443d3587caa0747"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/translations\\/lng\\/translation\\/de\\/maps",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bf23ffccca716c70ee68d5fe8f85d6bb1116701d50fe1137e105d21784719aba"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/translations\\/lng\\/keys\\/maps\\/inlineInfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/nefos_app\\/web\\/api\\/tag\\/list-for-mandator",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tirol"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a52281cce3905e7e0e7443f80ff42f51488e66502b027376a566b491d25c902a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/nefos_app\\/web\\/api\\/tag\\/list-for-mandator",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tirol"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/nefos_app\\/web\\/api\\/mapcontext\\/-1",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tirol"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a2507db96805375633e34df19c54a17a29cb7c439df12a539f33db7b8cf66b7a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/elastic\\/session\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "elastic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8a7b33ebe9b7bc9b4e11a35448db96ff8b9bfb4885b6b9df9029457f862c12e9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/elastic\\/session\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "elastic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/maplibrewrapper\\.85127cbb455d4664a009\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "phoenix"
+            ],
+            "apis": {
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "URL.createObjectURL": 2,
+                "window.devicePixelRatio": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9cc8605c1d4d7546f2e546ce9269de47c520add917c78a2f8989727c326e27ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/9267\\.85127cbb455d4664a009\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "phoenix"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e73c79ae6a87af5ee760c51f7776c1e5ac4d67aea0eb5c90f568376abe2dc7c3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/flightcontroller\\.85127cbb455d4664a009\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "phoenix"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "43ac7902545c19d649ceaf39fa86641200e2c7fafa70252487cd6e73fdd06561"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/sprites\\/gs-liberty\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "map21"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a0e879d67c74051c6e057205d86ae76d165db66d17c370b49ab9a377454a1cfd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitzbueheler-alpen.com",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/tiles\\/styles\\/liberty\\/style\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "map21"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3c1f7d8f56ae5860927fcd4add8e086f08854190d0dbaf0fb97fae794c923a5a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vinschgau.net",
+                "www.vinschgau.net"
+            ]
+        },
+        {
+            "rule": "mapservices\\.eu\\/a3a2b2f0-bdaa-47b9-b1e9-3aae0cb52817",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "maps.vinschgau.net",
+                    "resolved": "mapservices.eu"
+                }
+            ],
+            "responseHashes": [
+                "27d66925ffcfbd743e7c7dc063ca2a41ab50003a5dc073dcc0df48f3442834a3"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vinschgau.net",
+                "www.vinschgau.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8695652173913043
+        },
+        {
+            "domain": "kitzalps.com",
+            "prevalence": 0.08695652173913043
+        },
+        {
+            "domain": "ferienregion-obervinschgau.it",
+            "prevalence": 0.043478260869565216
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "XHR": 15,
+        "Font": 4,
+        "Preflight": 4,
+        "Fetch": 4,
+        "Other": 2
+    },
+    "nameservers": [
+        "ns13.domaincontrol.com",
+        "ns14.domaincontrol.com"
+    ]
+}

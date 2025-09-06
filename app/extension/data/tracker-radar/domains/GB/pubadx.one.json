@@ -1,0 +1,106 @@
+{
+    "domain": "pubadx.one",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "platform",
+        "imp9"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "pubadx\\.one\\/pubadx-ad\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "platform"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "dd51871982b0a0562c4540701e2167196fab5890a76311eb96d732746bb74c71"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mangaread.org",
+                "www.wcostream.tv"
+            ]
+        },
+        {
+            "rule": "pubadx\\.one\\/async-v2\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "d561c12807a76ef0acfb4950af0fb26d68e87c10346b8d5abf8ac610f030a212",
+                "95cb20ef538b60c4f5d592e8c9b743b5024fbb071a110082138375953ab12258"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mangaread.org",
+                "www.mangaread.org",
+                "www.wcostream.tv"
+            ]
+        },
+        {
+            "rule": "pubadx\\.one\\/rec",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imp9"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mangaread.org",
+                "www.mangaread.org",
+                "www.wcostream.tv"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 3,
+        "Image": 3
+    },
+    "nameservers": [
+        "alexandra.ns.cloudflare.com",
+        "jobs.ns.cloudflare.com"
+    ]
+}

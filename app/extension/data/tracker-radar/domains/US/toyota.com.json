@@ -1,0 +1,1091 @@
+{
+    "domain": "toyota.com",
+    "owner": {
+        "name": "Toyota Motor Corporation",
+        "displayName": "Toyota Motor"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000821,
+    "sites": 12,
+    "subdomains": [
+        "nexus",
+        "smetrics",
+        "www",
+        "cdn.dg",
+        "www.ws.public.oatms.tms.aws"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "toyota\\.com\\/privacy\\/v1\\/b\\/b\\.rnc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyotadirect.com",
+                "www.buyatoyota.com",
+                "www.toyotacertified.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/id",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "smetrics"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "beb53436154d10666b31ba8f7e2881169c142709b5510993be9b12a181015856",
+                "f99eedfe548d6219d8bb8b06ef4eb7fc040eed8589670406e4b4fa5a09cfa998",
+                "1ae4aa94148987d25b7e7a5353b291e3c211ba82876ff38590a17d7e2ec32c1b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyotadirect.com",
+                "exploresetoyota.com",
+                "www.buyatoyota.com",
+                "www.toyotacertified.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/analytics\\/XDRemote\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "bf785d0b11140526002e933a652c4a1f7f975255d32bb080cc972fb9c2def924"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyotadirect.com",
+                "www.buyatoyota.com",
+                "www.toyotacertified.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-loader\\/1\\.0\\/dg-loader-app\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a105bf9715c137ef697840c8babaedcaea7bf829899dd05f1f262b22945ec618"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/dg-ui-entry\\.C7h8H8Gx\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ef9bcf2eda227c58b8e32c806884c619c97f7349bb86d05aa161488afbf7e79f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/vendor\\.DAK41jnD\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c005693d647f06b47cd0a84bf989f0dbb883b5465d7fa97c4f40f657f860099c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/common\\.DO6xq2u3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f19f655c6ca90d2d89733f83cb2446e9536286f4a9f38fd294c82e4cd0d8f8d6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/xss\\.B7BQCPi7\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "85aaf609d9a62ef4e73e6630723ebb0237ad093784f53f12e8b3339694920ebd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/assets\\/common-CCnSsbCV\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f2bea2b8d9d0121becf3c514bacfe68e852908c18efc848ddef9ec90e4057288"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/dg-shopping-cart\\.0R4Q1aJp\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6366e371362ce390911f1bafdb186f84fb56cf363964344733337a8fbae59952"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/assets\\/dg-shopping-cart-qfE0Jm_4\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8ac55a77b1c1aeb39a5d44d48379862ab1c9b4b6e1d0e41c27bc83a0b3020585"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/dg-nav-menu\\.C6UZYHjJ\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c5821ce724b16a7770b985c95ff237971701f6a8e5677130e2870f447ebf3eb7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/shared\\/dg-nav-menu\\/dg-trades-page\\.BSLgbckt\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5c87375737b4c9b70b9839c4a2c2373f4f18ad503d224a898149f0926d0e58a8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/assets\\/shared\\/dg-nav-menu\\/dg-trades-page-B_UHu7Ag\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "321517b45541f55ea75fbaa26017075e08a137e5f3bc65b1aa2f3a65af6d1194"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/shared\\/dg-modals\\/dg-nav-menu\\.BWFOTweb\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ed55a61e124b5b71397272ab9ce22559e70f281c23953bd84723fbc3f2bdaf1b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/assets\\/dg-nav-menu-DCwsZVSu\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d0935a9dd5b5a4b966e1fdb7e44665c5bea3c9c5e16adc0adddbc9282c240995"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/dg-modals\\.DbC_4i4D\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "10c9fe169e206418332a75435402b9bf4988c44cac4d7f883c9cff088b6e3fda"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/shared\\/dg-modals\\/dg-saves-page\\.Caz_ph5X\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d8dfc92f5eb1ce0138abb08cae3d48dccc9d31ca3efac5eda84194aae416befb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/shared\\/dg-modals\\/dg-trades-page\\.Cnow2lB7\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d8b66316e54dd99f699ce6a76e3da71e88a597edede57dd55bb4dab4e0a96f12"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/assets\\/dg-modals-7FnhGqGv\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "055c987deef6d5ae5a6978a65980af349623a0b7aeaef1b286c47280cf6fa567"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/static\\/dg-features\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "df5ee935b27795a90c6eb29cb4edfc1e73dcfed29ee4e22e4e6331449ac22a0d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/deploy\\/dg-ui\\/latest\\/toyota\\/assets\\/dg-styles-u6Flx7-T\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.dg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a370d17b99b1bcd6058bdf7c538ea08cf9c9e8b2eca94bcde2031ae57c193560"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atlantatoyota.com",
+                "www.longotoyota.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/Bootstrap\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.languages": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "39415c9e0a0b58e804be165e4ec58598719291542cc701d9e1eb72bd270152ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "AMCV_8F8B67C25245B30D0A490D4C%40AdobeOrg": {
+                    "ttl": 63072028,
+                    "length": 250,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "AMCVS_8F8B67C25245B30D0A490D4C%40AdobeOrg": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "pageLoadCount": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "tms_c": {
+                    "ttl": 1829,
+                    "length": 4,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "tms_kmd": {
+                    "ttl": 146880025,
+                    "length": 154,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "tms_kmv": {
+                    "ttl": 1829,
+                    "length": 154,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "s_ac": {
+                    "ttl": -1755356270,
+                    "length": 13,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "s_cc": {
+                    "ttl": null,
+                    "length": 4,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "kmEngagedTrafficTriggeredSession": {
+                    "ttl": null,
+                    "length": 13,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/analytics\\/xdsync\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.localStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "665421ad898a0924350447e1da54e3dc5e38c4fb2deac1e20d87cc0e8a8eedf7"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.longotoyota.com",
+                "www.parkplacelexusplano.com",
+                "www.toyotadirect.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/serverComponent\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cf83f304b098a82232a5cbc3762e57808a6f243899285c7fb6309b97fedc3407"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/code\\/772a087f3ef31c89c213c441dc8059b9\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bd22a4e0d7fb80b8034c934b64ec2331f0ca4b0931db43cc3d87f6dcbf6cae4c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/code\\/a8d9852787239ad00371f15524234d2a\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e277e7261b07227f21027e671056e11df167ece0d20402a1004ee288109689e3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/code\\/131690b93ce461880cda6a1d9f50e26b\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1d8fa31d10d11d30b84e12712e336ea5814439daa07b69ac1c9dfb8761aeb38e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/code\\/3bc9d7c0fda1bf57e0cafd8c8dd520da\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b7abf806bf5560f64b124362d8324220fbb4547fcabb814958212f4b7b1a034c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/code\\/04534a91ca1bdbcee4e24a4f0215a229\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "304c54027f230ab4516e13d33847033dab4c04bd56c0a3dd5a6334c356c95f48"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/code\\/7a281c8628b0531e682e947148fb744e\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4039874a4005bc5d1aff56a5402632347d24bb8246c8bca6eb37f72a7738386e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/code\\/f5c38a89eea797690ba8372ac17bf2eb\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a066f0ee4521d7d5a39f22d94ab32b9c5d11171df43e2584538330bb8b1976e2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/l-dn-shift-prod\\/code\\/24ff4722e4f4a74690077c9051ecc08f\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "957c9895b44c97a737f55763fdc7a8fe4a3d38a73c9c570d72a1729b8c4f377e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belllexusnorthscottsdale.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/t-dn-shift-prod\\/Bootstrap\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.appName": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "dad2e6809b5c35593774d07ee56387563936aea48fa1926bdb06ff20ee262353"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "AMCV_8F8B67C25245B30D0A490D4C%40AdobeOrg": {
+                    "ttl": 63072016,
+                    "length": 250,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "AMCVS_8F8B67C25245B30D0A490D4C%40AdobeOrg": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "kmEngagedTrafficTriggeredSession": {
+                    "ttl": null,
+                    "length": 13,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "longotoyota.com",
+                "www.toyotadirect.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/v2\\/marketing\\/offers\\/64114",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.ws.public.oatms.tms.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "otvaracie-hodiny.sk",
+                "www.v3cars.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/v2\\/marketing\\/offers\\/64114",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www.ws.public.oatms.tms.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "48fd7572209276003025c67a607dd67c676dc484a8d7d78da2cd13690c354f3e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "otvaracie-hodiny.sk",
+                "www.v3cars.com"
+            ]
+        },
+        {
+            "rule": "toyota\\.com\\/toyotanational\\/t-cuv-p\\/Bootstrap\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "nexus"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.language": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.sessionStorage": 2,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.width": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Screen.prototype.orientation": 1,
+                "window.name": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6433f23d24e54e297e2d267f4f79446c5a3aaacf1518bef54cdecd9276a74ac3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "TOYOTANATIONAL_ENSIGHTEN_PRIVACY_MODAL_VIEWED": {
+                    "ttl": 31536002,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "AMCV_8F8B67C25245B30D0A490D4C%40AdobeOrg": {
+                    "ttl": 63072005,
+                    "length": 263,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "AMCVS_8F8B67C25245B30D0A490D4C%40AdobeOrg": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "tms_vi": {
+                    "ttl": 63072004,
+                    "length": 33,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "tms_firstVisitEver": {
+                    "ttl": null,
+                    "length": 13,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "tms_isNew": {
+                    "ttl": 1804,
+                    "length": 4,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "tms_c": {
+                    "ttl": null,
+                    "length": 4,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "tms_kmd": {
+                    "ttl": null,
+                    "length": 6,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "tms_kmv": {
+                    "ttl": null,
+                    "length": 6,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "tms_visitList": {
+                    "ttl": null,
+                    "length": 6,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "tms_visitReferrer": {
+                    "ttl": 1804,
+                    "length": 4,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "tms_firstReferrer": {
+                    "ttl": 63072004,
+                    "length": 4,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyotacertified.com",
+                "www.toyotacertified.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000547,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8095238095238095
+        },
+        {
+            "domain": "shiftdigitalapps.io",
+            "prevalence": 0.06349206349206349
+        },
+        {
+            "domain": "letzchat.pro",
+            "prevalence": 0.06349206349206349
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.031746031746031744
+        },
+        {
+            "domain": "2mdn.net",
+            "prevalence": 0.031746031746031744
+        }
+    ],
+    "types": {
+        "Image": 3,
+        "XHR": 8,
+        "Document": 7,
+        "Script": 48,
+        "Stylesheet": 12,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "pdns102.ultradns.net",
+        "pdns102.ultradns.com",
+        "pdns102.ultradns.biz",
+        "pdns102.ultradns.org"
+    ]
+}

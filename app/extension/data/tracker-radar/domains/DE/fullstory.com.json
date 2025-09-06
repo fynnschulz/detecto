@@ -1,0 +1,215 @@
+{
+    "domain": "fullstory.com",
+    "owner": {
+        "name": "FullStory",
+        "displayName": "FullStory",
+        "privacyPolicy": "https://www.fullstory.com/legal/privacy/",
+        "url": "http://fullstory.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000706,
+    "sites": 7,
+    "subdomains": [
+        "edge",
+        "edge.eu1",
+        "rs.eu1",
+        "rs"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "fullstory\\.com\\/s\\/fs\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 2,
+            "subdomains": [
+                "edge",
+                "edge.eu1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "Navigator.prototype.vendor": 6,
+                "Document.cookie getter": 5,
+                "window.localStorage": 6,
+                "PerformanceTiming.prototype.navigationStart": 6,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5,
+                "window.sessionStorage": 5,
+                "Document.cookie setter": 3,
+                "Performance.prototype.memory": 4,
+                "window.matchMedia(\"prefers-color-scheme\")": 3,
+                "Navigator.prototype.languages": 4,
+                "window.innerWidth": 4,
+                "window.innerHeight": 4
+            },
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "d4ba09437cb4a8cfe4fec31d9e334a792194fa940f331ec1a59e08db8fd36ece"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fs_lua": {
+                    "ttl": 1809,
+                    "length": 15,
+                    "prevalence": 0.0003026939763898698,
+                    "uniqueness": 1
+                },
+                "fs_uid": {
+                    "ttl": 31536011,
+                    "length": 116,
+                    "prevalence": 0.0003026939763898698,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giphy.com",
+                "kundenportal.m-net.de",
+                "support.hpe.com",
+                "www.findagrave.com",
+                "www.klarna.com",
+                "www.overtake.gg",
+                "www.specialized.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/page",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs.eu1",
+                "rs"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "049f1e02415ba8413d025964261d7b2703b35c2ef89d868fc25e9c535acdd05a",
+                "c947cb0fb6d697ee907754fbd62cb769dc72ba81a64ba974a8c740ec86ab39a7",
+                "c97e9e38ee020c4350c47fe3fbdd216197ceffe81a65983fda27f4198c7aedc8",
+                "d7479eb6295c1101c61a86fcb1dddf7f25106240da1fa391ba55a7968f43b1b1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "m-net.de",
+                "support.hpe.com",
+                "www.findagrave.com",
+                "www.overtake.gg",
+                "www.specialized.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/integrations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs.eu1",
+                "rs"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "50892917ac2dfb4e36a3109369c01fda27b6401380224e60f2271b838f048951",
+                "81b318516ac1fe16efbb612721802aefab9e32064250d9ddefa3f67d4d15e507"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "m-net.de",
+                "support.hpe.com",
+                "www.specialized.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/datalayer\\/v4\\/latest\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.eu1",
+                "edge"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "38d9c5f094f923cfff59f136a246a9505ed36c42c58589e2338c6b58b20764d4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "m-net.de",
+                "support.hpe.com",
+                "www.specialized.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/bundle\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs.eu1",
+                "rs"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "4a619e3efd0f1cdb13158803d918cc6a4b722846e2231543db110cbe5276af09",
+                "48a76cfa3a1c2c7fc77f884ac0c1d7469b7a8a70fd403a38d4a683c033a2525e",
+                "3235060d62681572ed38dde004c1f768f087b9d89257d63ee9c434a48dd63170"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "m-net.de",
+                "support.hpe.com",
+                "www.findagrave.com",
+                "www.specialized.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Analytics",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8235294117647058
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.11764705882352941
+        },
+        {
+            "domain": "tagcommander.com",
+            "prevalence": 0.058823529411764705
+        }
+    ],
+    "types": {
+        "Script": 13,
+        "XHR": 9
+    },
+    "nameservers": [
+        "ns-cloud-d1.googledomains.com",
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d4.googledomains.com"
+    ]
+}

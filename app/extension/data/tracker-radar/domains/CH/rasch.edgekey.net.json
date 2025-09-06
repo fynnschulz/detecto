@@ -1,0 +1,88 @@
+{
+    "domain": "rasch.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000402,
+    "sites": 4,
+    "subdomains": [
+        "prod"
+    ],
+    "cnames": [
+        {
+            "original": "api.pme.ch",
+            "resolved": "prod.rasch.edgekey.net"
+        },
+        {
+            "original": "cdn.graphql.service.beobachter.ch",
+            "resolved": "prod.rasch.edgekey.net"
+        },
+        {
+            "original": "cdn.graphql.service.handelszeitung.ch",
+            "resolved": "prod.rasch.edgekey.net"
+        },
+        {
+            "original": "cdn.graphql.service.schweizer-illustrierte.ch",
+            "resolved": "prod.rasch.edgekey.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "rasch\\.edgekey\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [
+                {
+                    "original": "cdn.graphql.service.beobachter.ch",
+                    "resolved": "prod.rasch.edgekey.net"
+                },
+                {
+                    "original": "cdn.graphql.service.handelszeitung.ch",
+                    "resolved": "prod.rasch.edgekey.net"
+                },
+                {
+                    "original": "api.pme.ch",
+                    "resolved": "prod.rasch.edgekey.net"
+                },
+                {
+                    "original": "cdn.graphql.service.schweizer-illustrierte.ch",
+                    "resolved": "prod.rasch.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e68fbb98c875ec0b444e1f872a061e3a6de8a734c91c96e9da17543bfdf0177f",
+                "d33f2e1b6d5f717e6b7296e5bbfc3bdc824facc2003772d748eb8a00e6c4efbb",
+                "9742c8b16f0a1f4416ba4a8df62f2c3584266cc02dada1dd88c16dadf00134b0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beobachter.ch",
+                "www.handelszeitung.ch",
+                "www.pme.ch",
+                "www.schweizer-illustrierte.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "types": {
+        "Fetch": 4
+    },
+    "nameservers": []
+}

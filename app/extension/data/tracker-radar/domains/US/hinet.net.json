@@ -1,0 +1,703 @@
+{
+    "domain": "hinet.net",
+    "owner": {
+        "name": "中華電信股份有限公司",
+        "displayName": "中華電信股份有限公司"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000752,
+    "sites": 11,
+    "subdomains": [
+        "t.ssp",
+        "a01c395b-6aed-4336-adf1-62db1bd57fc9.t.ssp",
+        "73eb850b-afbb-46ce-bfa7-95721983faa4.t.ssp",
+        "39e8286e-9225-4fed-b481-97fdf0f38d22.t.ssp",
+        "81d90ceb-86ea-4aae-82d5-a5492996f6db.t.ssp",
+        "d11f5fc9-ba00-4bad-9c23-ba2e23c32471.t.ssp",
+        "f19c8371-259f-445d-ae3b-37980df83f11.t.ssp",
+        "pics-ettoday.cdn",
+        "ad-ettoday.cdn",
+        "media-ettoday.cdn"
+    ],
+    "cnames": [
+        {
+            "original": "cdn1.ettoday.net",
+            "resolved": "ad-ettoday.cdn.hinet.net"
+        },
+        {
+            "original": "cdn2.ettoday.net",
+            "resolved": "pics-ettoday.cdn.hinet.net"
+        },
+        {
+            "original": "media.ettoday.net",
+            "resolved": "media-ettoday.cdn.hinet.net"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "hinet\\.net\\/utag\\.js",
+            "cookies": 0.000041,
+            "fingerprinting": 1,
+            "subdomains": [
+                "t.ssp"
+            ],
+            "apis": {
+                "Document.cookie getter": 6,
+                "Date.prototype.getTime": 6,
+                "Document.cookie setter": 6
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "73ae392d3e6fd2a480cd5e6eb0077f17af084abfda5e3bb5487f76c0277be87c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ht_47b240": {
+                    "ttl": 86413,
+                    "length": 1,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 0.3333333333333333
+                },
+                "__htid": {
+                    "ttl": 31536014,
+                    "length": 36,
+                    "prevalence": 0.000034204405527431934,
+                    "uniqueness": 1
+                },
+                "_ht_em": {
+                    "ttl": 3615,
+                    "length": 1,
+                    "prevalence": 0.000034204405527431934,
+                    "uniqueness": 0.2
+                },
+                "_ht_5aaa20": {
+                    "ttl": 86417,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "_ht_50ef57": {
+                    "ttl": 86435,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_ht_hi": {
+                    "ttl": 86432,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "czbooks.net",
+                "www.chinatimes.com",
+                "www.kkbox.com",
+                "www.ltn.com.tw",
+                "www.mobile01.com",
+                "www.taiwannews.com.tw"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/",
+            "cookies": 0.000041,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t.ssp"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "626a459650835ce72749c8b8e198d60352a9d66893b77cef114f7027c8dd8d2b",
+                "ac23277371e618e25fc759da2594f6522c6959b60234ccd6de18374e86ed3d4b",
+                "bedfe1dfaf0d520f4353fd3cd56cd90bf54e4c620ff5ab6831edb65b8cb41136",
+                "2a995d4a8bd5566ef6187d752decd68147e7814d8d82b22235f8a648ec07efdf",
+                "7ee000f8a1b6d2a9186938714c6aeb0e3f408ede5ae320c72065fae17ef89144"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "czbooks.net",
+                "www.chinatimes.com",
+                "www.kkbox.com",
+                "www.ltn.com.tw",
+                "www.mobile01.com",
+                "www.taiwannews.com.tw"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/cm",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t.ssp"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "uuid": 0.00002052264331645916,
+                "AviviD_uuid": 0.000054727048843891096,
+                "__htid": 0.000027363524421945548,
+                "__retuid": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "czbooks.net",
+                "www.chinatimes.com",
+                "www.kkbox.com",
+                "www.ltn.com.tw",
+                "www.mobile01.com",
+                "www.taiwannews.com.tw"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/emome2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t.ssp"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "365fc555dbd2149871a77b9485dbb0cbd487a0553f7a90163444349fee756f60"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__htid": 0.00004104528663291832
+            },
+            "exampleSites": [
+                "czbooks.net",
+                "www.chinatimes.com",
+                "www.kkbox.com",
+                "www.ltn.com.tw",
+                "www.mobile01.com",
+                "www.taiwannews.com.tw"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/pixel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a01c395b-6aed-4336-adf1-62db1bd57fc9.t.ssp",
+                "73eb850b-afbb-46ce-bfa7-95721983faa4.t.ssp",
+                "39e8286e-9225-4fed-b481-97fdf0f38d22.t.ssp",
+                "81d90ceb-86ea-4aae-82d5-a5492996f6db.t.ssp",
+                "d11f5fc9-ba00-4bad-9c23-ba2e23c32471.t.ssp",
+                "f19c8371-259f-445d-ae3b-37980df83f11.t.ssp"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__htid": 0.00004104528663291832,
+                "lotame_domain_check": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "czbooks.net",
+                "www.chinatimes.com",
+                "www.kkbox.com",
+                "www.ltn.com.tw",
+                "www.mobile01.com",
+                "www.taiwannews.com.tw"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/dfp\\/dfp-gpt\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "52e864815f72c8f16e1077f2094c1a15b02d6c20f2a27bb6cf04570cb4b23ce5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/jquery\\/dmp\\/news\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "aeb4c72cf88cfc9cdcf87a778906dd7a1669375184ab722588a75f1e06a0ca01"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/ad\\/biggo\\/biggo_body\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "8dda0b1cebf218fc21d79bf68f7417522756940bddf9750cac7db3d64e9e07be"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/style\\/et_common\\/css\\/social_sharing_2\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "e2844dc36ab6398c753a29e4f7b1df00ea6dc20c8d383ed9b9894587148c3016"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/style\\/live-frame2018\\/etlive\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "cc28cc219dd2acd39f60d8627be0ca778302f90cd9a784b0e05ad62a73bfc09d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/style\\/live-frame2018\\/etlive\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "7bf74f7ff678e8a27f1ccddd8c374dc496819617004d4e024d173c549b0869f1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/style\\/misc\\/loading_800x450\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "d2740aabd8ad29c5f75a658707168a46d2707bffee00c58e6c4a6b2da16ca5a5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/style\\/misc\\/loading_100x100\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "717e9a920fed9cca2bf27cffe7e4a7eaac8954464bcb0e33e37501bbc4f65711"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/ad\\/prebid\\/prebid\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 3,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "8a9f52811c6dc162f05ffa7115de233162749b7c10d6110160158455956f968e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "star.ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/events\\/dmpfastvote\\/js\\/dmpfastvote-common\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "2c7c38a64385c10ab282e3e6e165c3fafcab69d6e7777e2c41db38570d471cdc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/banners\\/0\\/3-c\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ad-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn1.ettoday.net",
+                    "resolved": "ad-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "5472732be2ae9eac3b05896692dc56ae7b6dd6daef5a5ec523979530b1394d06"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/style\\/et_common\\/images\\/et_icon_social-2\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "08648b1335c9a9c4c1a327a7d6766a2cf4897046e4cc2260beb854e1945e8b7b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/style\\/et_common\\/images\\/et_icon_social-3\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "b2b02ac4bf9a4f9f37c5c09ea44eaa6f9d0ecb7fa051cfe2d136b162f95773b8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/ad\\/adJS02\\/adJS02_action\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "4778161ec5e745bdf593c5f6bfad2f7396d34f1043417944d102c90ebb4de9bd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/ad\\/prebid\\/prebid-pc-300x250-2\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2.ettoday.net",
+                    "resolved": "pics-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [
+                "2ba146b69468f56dfdf4e3398475202f786d0e0f4a2755d7dca1e2038b42bc07"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "www.ettoday.net"
+            ]
+        },
+        {
+            "rule": "hinet\\.net\\/events\\/passback\\/gad\\/gam-refresh\\.php",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "media-ettoday.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.ettoday.net",
+                    "resolved": "media-ettoday.cdn.hinet.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ettoday.net",
+                "star.ettoday.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000616,
+    "topInitiators": [
+        {
+            "domain": "holmesmind.com",
+            "prevalence": 0.3125
+        },
+        {
+            "domain": "likr.tw",
+            "prevalence": 0.1875
+        },
+        {
+            "domain": "rollbar.com",
+            "prevalence": 0.1875
+        },
+        {
+            "domain": "amnet.tw",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "popin.cc",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0625
+        }
+    ],
+    "types": {
+        "Script": 25,
+        "XHR": 18,
+        "Image": 14,
+        "Stylesheet": 4,
+        "Document": 2
+    },
+    "nameservers": [
+        "ans1.hinet.net",
+        "ans2.hinet.net",
+        "ans3.hinet.tw"
+    ]
+}

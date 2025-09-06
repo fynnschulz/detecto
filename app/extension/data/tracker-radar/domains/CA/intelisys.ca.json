@@ -1,0 +1,108 @@
+{
+    "domain": "intelisys.ca",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "flight-search-widget",
+        "pal-soar",
+        "pasco-soar"
+    ],
+    "cnames": [
+        {
+            "original": "booking.palairlines.ca",
+            "resolved": "pal-soar.intelisys.ca"
+        },
+        {
+            "original": "res.pacificcoastal.com",
+            "resolved": "pasco-soar.intelisys.ca"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "intelisys\\.ca\\/v\\/2\\.1\\.0\\/lib\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "flight-search-widget"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "ecf962f0730e36433b999989f4f5afc127ce07f365074c35a2812d20762af636"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palairlines.ca",
+                "www.pacificcoastal.com"
+            ]
+        },
+        {
+            "rule": "intelisys\\.ca\\/assets\\/cms\\/airlineData\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pal-soar",
+                "pasco-soar"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "booking.palairlines.ca",
+                    "resolved": "pal-soar.intelisys.ca"
+                },
+                {
+                    "original": "res.pacificcoastal.com",
+                    "resolved": "pasco-soar.intelisys.ca"
+                }
+            ],
+            "responseHashes": [
+                "ec6c2dddcb48ec3d14d764bd64d71463e570367b2d818f764bd8ba91f15df402"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palairlines.ca",
+                "www.pacificcoastal.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "intelisys.ca",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "pdns11.domaincontrol.com",
+        "pdns12.domaincontrol.com"
+    ]
+}

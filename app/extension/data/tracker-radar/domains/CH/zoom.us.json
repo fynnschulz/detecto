@@ -1,0 +1,197 @@
+{
+    "domain": "zoom.us",
+    "owner": {
+        "name": "Zoom Video Communications, Inc.",
+        "displayName": "Zoom Video Communications"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000301,
+    "sites": 3,
+    "subdomains": [
+        "us01ccistatic",
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "zoom\\.us\\/us01cci\\/web-sdk\\/cross-storage\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "us01ccistatic"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "eeb0a0d6efcf01c4f48dd7c16d7779fc2103191caa04de1afbb4c0504d2e2f23"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "broadcom.com",
+                "knowledge.broadcom.com",
+                "support.zoom.com",
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/us01cci\\/web-sdk\\/web-campaign\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "us01ccistatic"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.platform": 3,
+                "Navigator.prototype.product": 3,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "Navigator.prototype.language": 3,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
+                "NavigatorUAData.prototype.brands": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie getter": 3,
+                "URL.createObjectURL": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "32c4f4392ead204a92241b0ac1c4899ebd8e89c8968d3ccc5351fbc97d25ba01"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "broadcom.com",
+                "support.zoom.com",
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/third_party_cookie_check\\.html",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1fd5e09c96059384c5439264a0659d9397cb32786d1b17e9eca43b936af3e3bb"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "thirdparty_test": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/us01cci\\/web-sdk\\/chat-client\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "us01ccistatic"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.onLine": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3959e6bdc8d0bbefa9a77d473f4fc70db0b9f324a94298edccd59b287a79236f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "www.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "www.zoom.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8181818181818182
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.13636363636363635
+        },
+        {
+            "domain": "zoom_support_header.js",
+            "prevalence": 0.045454545454545456
+        }
+    ],
+    "types": {
+        "Document": 6,
+        "Script": 5,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-1137.awsdns-14.org",
+        "ns-888.awsdns-47.net",
+        "ns-387.awsdns-48.com",
+        "ns-1772.awsdns-29.co.uk"
+    ]
+}

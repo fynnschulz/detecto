@@ -1,0 +1,369 @@
+{
+    "domain": "useinsider.com",
+    "owner": {
+        "name": "Sosyo Plus Bilgi Bilişim Tekn. Dan. Hiz. Tic. A.Ş.",
+        "displayName": "Insider"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000908,
+    "sites": 9,
+    "subdomains": [
+        "chargemap.api",
+        "eccogermany.api",
+        "euronewsfr.api",
+        "hunkemoller.api",
+        "royalqueenseedssp.api",
+        "thy.api",
+        "wunschgutscheinde.api",
+        "singaporeairlines.api",
+        "locationv2.api",
+        "typhoon",
+        "hit.api",
+        "log.api",
+        "carrier",
+        "falcon",
+        "aryuder.api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "useinsider\\.com\\/ins\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "chargemap.api",
+                "eccogermany.api",
+                "euronewsfr.api",
+                "hunkemoller.api",
+                "royalqueenseedssp.api",
+                "thy.api",
+                "wunschgutscheinde.api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 7,
+                "Navigator.prototype.vendor": 7,
+                "window.localStorage": 7,
+                "Navigator.prototype.maxTouchPoints": 5,
+                "Date.prototype.getTime": 7,
+                "Navigator.prototype.permissions": 4,
+                "Notification.permission": 4,
+                "window.sessionStorage": 5,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 5,
+                "window.indexedDB": 3,
+                "Navigator.prototype.webkitTemporaryStorage": 3,
+                "Performance.prototype.memory": 3,
+                "Element.prototype.getClientRects": 1,
+                "window.outerHeight": 1,
+                "Navigator.prototype.platform": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.deviceMemory": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "c8af0b423419062013d68d78089ad9ecf76b4380be2332f9895335e88b8d701c",
+                "b7ae78b234aaeb27f99f8f711159f2215a0881727739c99dca9d29a185eeacef",
+                "59beb3b3a333b09b902b72dc0753a52c3e0ec7f02b05b39e4a27230ca2508a2e",
+                "bf4ead7df937edea36e2e5d6be0a0852adfe9dd5efc1dde5967446771202fe27",
+                "663eadccce6511b3c2af4990b2def71bbf0c33f76c2e64eaf73d784888551def"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "de.ecco.com",
+                "de.euronews.com",
+                "www.euronews.com",
+                "www.hunkemoller.de",
+                "www.royalqueenseeds.de",
+                "www.turkishairlines.com",
+                "www.wunschgutschein.de"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/worker-new\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "chargemap.api",
+                "eccogermany.api",
+                "euronewsfr.api",
+                "hunkemoller.api",
+                "royalqueenseedssp.api",
+                "singaporeairlines.api",
+                "thy.api"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 8,
+                "Navigator.prototype.userAgent": 6,
+                "window.localStorage": 7,
+                "window.name": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "d84976707d45c775e06064fa2fc8af50bc7e95a925e9336130c304769788d0ba"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "de.ecco.com",
+                "de.euronews.com",
+                "www.euronews.com",
+                "www.hunkemoller.de",
+                "www.royalqueenseeds.de",
+                "www.singaporeair.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "locationv2.api",
+                "typhoon"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000605,
+            "cnames": [],
+            "responseHashes": [
+                "ae9c92756d2018ac06d081a439f2785945c9e187d74f87890e9466857f7e6b8f",
+                "0863e6e717fee2e0094606ab8ab8541ccbc27bc91ac02a5d2053b0a3512df39e",
+                "b253dd14a9eb0b2972d6ce3a60a4de36ea46ffb8edac3a3c57314a7fc04c2a79",
+                "57053a79532584829017dc358f14f72fbc204c1293bbea016f3f35675da3cd53",
+                "0d91b54d0eb5dda8b99658beea76f56d007881c14507c8e51a7e2afb646fa4d3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "de.ecco.com",
+                "www.hunkemoller.de",
+                "www.royalqueenseeds.de",
+                "www.singaporeair.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/hit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hit.api"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "de.chargemap.com",
+                "de.ecco.com",
+                "www.hunkemoller.de",
+                "www.royalqueenseeds.de",
+                "www.singaporeair.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v2\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hunkemoller.de",
+                "www.hunkemoller.de",
+                "www.royalqueenseeds.de",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/y\\/v2\\/z",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "carrier"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3f94c5fd610ad2695bd27208859e1593f54c48a90860b02f6110d6140705a116"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "royalqueenseeds.de",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/y\\/v2\\/z",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "carrier"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "royalqueenseeds.de",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/api\\/v1\\/contact-profile\\/get\\/singaporeairlines",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "falcon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "947884f103ed676be52706ad94e2a80b7b3bd8c0fe5eb2500ad1c0bd221a9a59"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/api\\/v1\\/contact-profile\\/get\\/singaporeairlines",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "falcon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v3\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aryuder.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v3\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aryuder.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8694259e1f725040d369f69f4ee4c8f7e7055364c8916c3be6908ecf14694968"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5757575757575758
+        },
+        {
+            "domain": "gbqofs.com",
+            "prevalence": 0.36363636363636365
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.06060606060606061
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "Document": 8,
+        "XHR": 19,
+        "Image": 4,
+        "Preflight": 6
+    },
+    "nameservers": [
+        "eric.ns.cloudflare.com",
+        "eva.ns.cloudflare.com"
+    ]
+}

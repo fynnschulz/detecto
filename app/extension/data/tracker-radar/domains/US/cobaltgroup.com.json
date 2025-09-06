@@ -1,0 +1,101 @@
+{
+    "domain": "cobaltgroup.com",
+    "owner": {
+        "name": "CDK Global, LLC.",
+        "displayName": "CDK Global"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "dt"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "cobaltgroup\\.com\\/dt\\/1\\.0\\/dt\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dt"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "3f04e1d119b4744fe0057f1c5471b32e42b29dea3b35deb1a1382d759056f868",
+                "2cdb8ae45e651621b93b65c51266fe0a7aa5fa51034677b007a30f6f1047e142",
+                "6acb0cab0eb067c2ef9b10bf30e1031e7843a35347cf508a6127d8e05093b7f4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "dtvis": {
+                    "ttl": 63072031,
+                    "length": 45,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "generalrv.com",
+                "www.generalrv.com",
+                "www.laurabuickgmc.com",
+                "www.parkplacelexusplano.com"
+            ]
+        },
+        {
+            "rule": "cobaltgroup\\.com\\/retargeting\\/displaytracker\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dt"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f599d4fff322f8b5a6bd90f1b1aa206aa231ee1dd4e348810b5e60503270dec2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mountainstatestoyota.com",
+                "www.mountainstatestoyota.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5714285714285714
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.42857142857142855
+        }
+    ],
+    "types": {
+        "Script": 6
+    },
+    "nameservers": [
+        "ns-1222.awsdns-24.org",
+        "ns-1995.awsdns-57.co.uk",
+        "ns-199.awsdns-24.com",
+        "ns-619.awsdns-13.net"
+    ]
+}

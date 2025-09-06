@@ -1,0 +1,101 @@
+{
+    "domain": "foxnews.com",
+    "owner": {
+        "name": "Fox Corporation",
+        "displayName": "Fox",
+        "privacyPolicy": "https://www.foxnews.com/privacy-policy",
+        "url": "http://foxnews.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "static"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "foxnews\\.com\\/static\\/orion\\/scripts\\/core\\/utils\\/geo\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a72bec7fd7c2769283367a5e4d8a2a05af464fd08e54428d4006a2ead4e2c96a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "outkick.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "foxnews\\.com\\/static\\/strike\\/scripts\\/libs\\/lodash\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "66fdcc69ae455b434f49d9608de3c20d3e89b9edfff293788c6bb560cf706e59"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "outkick.com",
+                "www.tmz.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "webcontentassessor.com",
+            "prevalence": 0.46875
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.34375
+        },
+        {
+            "domain": "fox.com",
+            "prevalence": 0.15625
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.03125
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns01.foxdoua.com",
+        "ns02.foxdoua.com",
+        "ns03.foxdoua.com",
+        "ns04.foxdoua.com",
+        "ns04.dns.fox",
+        "ns03.dns.fox",
+        "ns02.dns.fox",
+        "ns01.dns.fox"
+    ]
+}

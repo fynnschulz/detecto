@@ -1,0 +1,187 @@
+{
+    "domain": "ipify.org",
+    "owner": {
+        "name": "ipify.org",
+        "displayName": "ipify.org"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.00586,
+    "sites": 58,
+    "subdomains": [
+        "api",
+        "api64",
+        "api6"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ipify\\.org\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api",
+                "api64"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.00152,
+            "cnames": [],
+            "responseHashes": [
+                "8fab39d0ad0757e4371dca708b2c9082b50dc9189ef34afad1dce5a01193a859",
+                "0fe99650bbf316bc1cce12d08ff7fdba18d9e08c7726e49e8c5b172110b3df54"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agradi.nl",
+                "developer.salesforce.com",
+                "nl-nl.bakker.com",
+                "plotly.com",
+                "pmvhaven.com",
+                "redis.io",
+                "stagemarkt.nl",
+                "wittebrug.nl",
+                "www.creality.com",
+                "www.cruydthoeck.nl",
+                "www.eigenhuis.nl",
+                "www.kraken.com",
+                "www.pdfdrive.to",
+                "www.verf.nl",
+                "www.zorgkiezer.nl"
+            ]
+        },
+        {
+            "rule": "ipify\\.org\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api",
+                "api6",
+                "api64"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.00182,
+            "cnames": [],
+            "responseHashes": [
+                "8fab39d0ad0757e4371dca708b2c9082b50dc9189ef34afad1dce5a01193a859",
+                "0fe99650bbf316bc1cce12d08ff7fdba18d9e08c7726e49e8c5b172110b3df54"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "assem.nl",
+                "omoda.nl",
+                "thatsthespirit.nu",
+                "thephonelab.nl",
+                "ventilatieshop.com",
+                "www.assem.nl",
+                "www.apotheken-umschau.de",
+                "www.gazellebikes.com",
+                "www.gazelle.nl",
+                "www.gazzetta.it",
+                "www.iplocation.net",
+                "www.livit.nl",
+                "www.loavies.com",
+                "www.omoda.nl",
+                "www.travelbags.nl",
+                "www.uwv.nl",
+                "www.ventilatieshop.com",
+                "www.werk.nl"
+            ]
+        },
+        {
+            "rule": "ipify\\.org\\/",
+            "cookies": 0.000505,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 5,
+                "Document.cookie setter": 5
+            },
+            "sites": 25,
+            "prevalence": 0.00253,
+            "cnames": [],
+            "responseHashes": [
+                "817208713f066742522552ff44b6de6d8b47ecdb7e4d359cd4e0b377925c3f77"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "gtm_ip": {
+                    "ttl": 1805,
+                    "length": 1,
+                    "prevalence": 0.0005051525560719338,
+                    "uniqueness": 0.2
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.dentalclinics.nl",
+                "www.wensink.nl",
+                "www.easytoys.nl",
+                "www.simpel.nl",
+                "community.splunk.com",
+                "www.voordeelhelmen.nl",
+                "palliaweb.nl",
+                "www.wasco.nl",
+                "chickslovefood.com",
+                "www.vijverbenodigdheden.nl",
+                "www.luxaflex.nl",
+                "www.toprc.nl",
+                "www.avans.nl",
+                "www.lynkco.com",
+                "www.inholland.nl",
+                "mijn.simpel.nl",
+                "www.oliehandel.nl",
+                "www.hypotheker.nl",
+                "www.milieucentraal.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000505,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.43333333333333335
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.016666666666666666
+        },
+        {
+            "domain": "gazzettaobjects.it",
+            "prevalence": 0.016666666666666666
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.016666666666666666
+        },
+        {
+            "domain": "uwv.nl",
+            "prevalence": 0.016666666666666666
+        }
+    ],
+    "types": {
+        "Fetch": 15,
+        "XHR": 18,
+        "Script": 25
+    },
+    "nameservers": [
+        "elle.ns.cloudflare.com",
+        "carl.ns.cloudflare.com"
+    ]
+}

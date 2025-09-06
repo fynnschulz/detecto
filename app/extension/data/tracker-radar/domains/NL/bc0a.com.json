@@ -1,0 +1,108 @@
+{
+    "domain": "bc0a.com",
+    "owner": {
+        "name": "BrightEdge Technologies Inc.",
+        "displayName": "BrightEdge"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000909,
+    "sites": 9,
+    "subdomains": [
+        "cdn",
+        "ixfd2-api",
+        "marvel-processor"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "bc0a\\.com\\/autopilot\\/f00000000296103\\/autopilot_sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Date.prototype.getTimezoneOffset": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "815cb315c2fd734e734d5152f8aeb9e4cf6b9476c26bed41a3876cc212db3713"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "swisssense.nl",
+                "www.swisssense.nl"
+            ]
+        },
+        {
+            "rule": "bc0a\\.com\\/api\\/ixf\\/1\\.0\\.0\\/get_capsule\\/f00000000296103\\/0170624974",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ixfd2-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6735d86d091c6926f05258d6a7e2d2f62b48e13a4f0ec4f9214ff93e131a82d4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "swisssense.nl",
+                "www.swisssense.nl"
+            ]
+        },
+        {
+            "rule": "bc0a\\.com\\/snowcloud\\/v1\\/api\\/loadUrl",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "marvel-processor"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoopladigital.com",
+                "www.hoopladigital.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "pdns10.domaincontrol.com",
+        "pdns09.domaincontrol.com"
+    ]
+}

@@ -1,0 +1,532 @@
+{
+    "domain": "signifyd.com",
+    "owner": {
+        "name": "Signifyd Inc.",
+        "displayName": "Signifyd"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000705,
+    "sites": 7,
+    "subdomains": [
+        "cdn-scripts",
+        "imgs"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "signifyd\\.com\\/api\\/script-tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-scripts"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "Navigator.prototype.userAgent": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "d7a363f752524fb545c3b2eb48a56d163cb659bc427d5215800ee7781d92c2ca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupon.co.uk",
+                "www.groupon.co.uk",
+                "www.lowes.com",
+                "www.philips.co.uk",
+                "www.sram.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/api\\/company_toolkit\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn-scripts"
+            ],
+            "apis": {
+                "window.localStorage": 5,
+                "RTCPeerConnection.prototype.constructor": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "6082597f3871c77c9b31aa1383577f8c0e54cb5ff09275dc817bc70d96e6217d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupon.co.uk",
+                "www.groupon.co.uk",
+                "www.lowes.com",
+                "www.philips.co.uk",
+                "www.sram.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/fp\\/clear\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "6882437cef514eeafff92a4dde96489b049e439967c6c99faff992e2045d994c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupon.co.uk",
+                "thepihut.com",
+                "www.groupon.co.uk",
+                "www.lowes.com",
+                "www.mikesdivestore.com",
+                "www.philips.co.uk",
+                "www.sram.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/shopify\\/script-tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-scripts"
+            ],
+            "apis": {
+                "window.name": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4216e478e4df206116ec354d68ee7c66742422868c751754a2c8f69e717004a4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepihut.com",
+                "www.mikesdivestore.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/fp\\/tags\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.appVersion": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "95607851a0e2e6e3c6b52c6b4ff323603e713852d36dd5976df97fcdb77cb9ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepihut.com",
+                "www.mikesdivestore.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/fp\\/check\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.devicePixelRatio": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "window.screenX": 2,
+                "window.screenY": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2,
+                "RTCPeerConnection.prototype.constructor": 2,
+                "Navigator.prototype.getBattery": 2,
+                "OfflineAudioContext.prototype.constructor": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.mediaDevices": 2,
+                "MediaDevices.prototype.enumerateDevices": 2,
+                "Navigator.prototype.storage": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "AudioBuffer.prototype.getChannelData": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0615c09ddd2c21edc1347e2a160186e24acda9a471849e3538f990b6e7c3b38d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepihut.com",
+                "www.mikesdivestore.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/fp\\/clear\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6882437cef514eeafff92a4dde96489b049e439967c6c99faff992e2045d994c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepihut.com",
+                "www.mikesdivestore.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/fp\\/ls_fp\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f507ca22ddbc630a3d45af5dba9b4ee9b62c60b76182ffed3d09f9793ceb1f1a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepihut.com",
+                "www.mikesdivestore.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/fp\\/clear\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepihut.com",
+                "www.mikesdivestore.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/fp\\/es\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6322c5032f3e4bc6f6ed21b5078fbbafadbe27786cf5891af5a734dde597c879"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepihut.com",
+                "www.mikesdivestore.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/fp\\/top_fp\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepihut.com",
+                "www.mikesdivestore.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/fp\\/clear3\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepihut.com",
+                "www.mikesdivestore.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/FsG8a48gFpCrBzP1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupon.co.uk",
+                "www.groupon.co.uk"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/GG35Edds2LlP0sr7",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupon.co.uk",
+                "www.groupon.co.uk"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/aZ2A1JbNyQgw_q7n",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lowes.com",
+                "www.lowes.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/pyt2yWanGVgyHRjM",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "philips.co.uk",
+                "www.philips.co.uk"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/aR9KTYyOQ_HYzIH_",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "philips.co.uk",
+                "www.philips.co.uk"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/0RN4EnxReyPwiEH9",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sram.com",
+                "www.sram.com"
+            ]
+        },
+        {
+            "rule": "signifyd\\.com\\/ZOb0ufzRIUqA2s7X",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sram.com",
+                "www.sram.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000705,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8260869565217391
+        },
+        {
+            "domain": "d2sr58wdgggk0d.cloudfront.net",
+            "prevalence": 0.08695652173913043
+        },
+        {
+            "domain": "trustarc.com",
+            "prevalence": 0.08695652173913043
+        }
+    ],
+    "types": {
+        "Script": 28,
+        "XHR": 7,
+        "Image": 10,
+        "Document": 4
+    },
+    "nameservers": [
+        "ns-637.awsdns-15.net",
+        "ns-1684.awsdns-18.co.uk",
+        "ns-1445.awsdns-52.org",
+        "ns-304.awsdns-38.com"
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "domain": "avmws.com",
+    "owner": {
+        "name": "Dynamic Web Source, Inc.",
+        "displayName": "Dynamic Web Source"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "cdn",
+        "ssl"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "avmws\\.com\\/1031697\\/",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn",
+                "ssl"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6bc132337d75607654c11d555a39a480ad5ea9af207ceedf576f8e5ac9256472"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "avmws": {
+                    "ttl": 63072015,
+                    "length": 77,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "scott-sports.com",
+                "www.scott-sports.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-184.awsdns-23.com",
+        "ns-885.awsdns-46.net",
+        "ns-1066.awsdns-05.org",
+        "ns-1942.awsdns-50.co.uk"
+    ]
+}

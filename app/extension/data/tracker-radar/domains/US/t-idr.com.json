@@ -1,0 +1,122 @@
+{
+    "domain": "t-idr.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "collector",
+        "x"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "t-idr\\.com\\/api\\/v1\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jtb.co.jp",
+                "www.jtb.co.jp",
+                "zexy.net"
+            ]
+        },
+        {
+            "rule": "t-idr\\.com\\/api\\/v1\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jtb.co.jp",
+                "www.jtb.co.jp",
+                "zexy.net"
+            ]
+        },
+        {
+            "rule": "t-idr\\.com\\/api\\/v1\\/identify",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "x"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "289b219842b4d0e69ed875b3b64de271f3cca1b821d4f0ab4d904d7f845d910e",
+                "0a8e2669e757ed3444ba558d0cfe3bac78137d395e55ea49ebcb79c27fa7e8e3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jtb.co.jp",
+                "www.jtb.co.jp",
+                "zexy.net"
+            ]
+        },
+        {
+            "rule": "t-idr\\.com\\/api\\/v1\\/identify",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "x"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jtb.co.jp",
+                "zexy.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "storage.googleapis.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 5,
+        "Fetch": 6
+    },
+    "nameservers": [
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e1.googledomains.com"
+    ]
+}

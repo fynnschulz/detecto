@@ -1,0 +1,88 @@
+{
+    "domain": "confidence.dev",
+    "owner": {
+        "name": "Spotify AB",
+        "displayName": "Spotify"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "resolver"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "confidence\\.dev\\/v1\\/flags:resolve",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "resolver"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6626caa90e08bf636770c42172327f894460b2c1c66e57604d5ba467f8773032"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mentimeter.com",
+                "www.mentimeter.com"
+            ]
+        },
+        {
+            "rule": "confidence\\.dev\\/v1\\/flags:resolve",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "resolver"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mentimeter.com",
+                "www.mentimeter.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "iggcdn.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-cloud-d3.googledomains.com",
+        "dns2.p07.nsone.net",
+        "ns-cloud-d4.googledomains.com",
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d1.googledomains.com",
+        "dns1.p07.nsone.net",
+        "dns4.p07.nsone.net",
+        "dns3.p07.nsone.net"
+    ]
+}

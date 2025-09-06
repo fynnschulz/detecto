@@ -1,0 +1,109 @@
+{
+    "domain": "coolmedia.co",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000808,
+    "sites": 8,
+    "subdomains": [
+        "tracker.dashboard",
+        "pixel.dashboard"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "coolmedia\\.co\\/pixel\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tracker.dashboard"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.platform": 4,
+                "Navigator.prototype.language": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "2e1c66d737a8cf9f06c7e6554685d5d185df02786b08320520035521a6f1eb1b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ozdesignfurniture.com.au",
+                "swisse.com.au",
+                "www.newcastle.edu.au",
+                "www.vikingcruises.com"
+            ]
+        },
+        {
+            "rule": "coolmedia\\.co\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel.dashboard"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ozdesignfurniture.com.au",
+                "superpharmacyplus.com.au",
+                "swisse.com.au",
+                "tradelink.com.au",
+                "www.defencehealth.com.au",
+                "www.newcastle.edu.au",
+                "www.vikingcruises.com",
+                "www.yourdiscountchemist.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.47058823529411764
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.29411764705882354
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.11764705882352941
+        },
+        {
+            "domain": "noibu.com",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.058823529411764705
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 8
+    },
+    "nameservers": [
+        "pdns04.domaincontrol.com",
+        "pdns03.domaincontrol.com"
+    ]
+}

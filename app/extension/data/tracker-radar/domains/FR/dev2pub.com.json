@@ -1,0 +1,104 @@
+{
+    "domain": "dev2pub.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "tag.eu",
+        "api.eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "dev2pub\\.com\\/dev2pub\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag.eu"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "564880f314540fce10c69e04c2638e976ba1e8ef2af9e053c1348e39fb342022"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freenews.fr",
+                "www.freenews.fr"
+            ]
+        },
+        {
+            "rule": "dev2pub\\.com\\/api\\/public\\/Dev2Pub\\/SendAdDisplay\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freenews.fr",
+                "www.freenews.fr"
+            ]
+        },
+        {
+            "rule": "dev2pub\\.com\\/api\\/public\\/Dev2Pub\\/SendAdDisplay\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freenews.fr",
+                "www.freenews.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns1.bdm.microsoftonline.com",
+        "ns2.bdm.microsoftonline.com",
+        "ns3.bdm.microsoftonline.com",
+        "ns4.bdm.microsoftonline.com"
+    ]
+}

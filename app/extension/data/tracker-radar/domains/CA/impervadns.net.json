@@ -1,0 +1,249 @@
+{
+    "domain": "impervadns.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.00162,
+    "sites": 16,
+    "subdomains": [
+        "naouzqe",
+        "73hkzjx",
+        "un6gjre",
+        "hn2roq5",
+        "9ida4yp"
+    ],
+    "cnames": [
+        {
+            "original": "apis.airtransat.com",
+            "resolved": "hn2roq5.impervadns.net"
+        },
+        {
+            "original": "content.hpibet.com",
+            "resolved": "9ida4yp.impervadns.net"
+        },
+        {
+            "original": "info.playalberta.ca",
+            "resolved": "un6gjre.impervadns.net"
+        },
+        {
+            "original": "login.accor.com",
+            "resolved": "naouzqe.impervadns.net"
+        },
+        {
+            "original": "on-api.mycarecompass.lifelabs.com",
+            "resolved": "73hkzjx.impervadns.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "impervadns\\.net\\/as\\/authorization\\.oauth2",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "naouzqe"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "login.accor.com",
+                    "resolved": "naouzqe.impervadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "all.accor.com"
+            ]
+        },
+        {
+            "rule": "impervadns\\.net\\/api\\/LocationFinder\\/GetApptBookingText",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "73hkzjx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "on-api.mycarecompass.lifelabs.com",
+                    "resolved": "73hkzjx.impervadns.net"
+                }
+            ],
+            "responseHashes": [
+                "9239aa9a3d9e7951734fbd97e67000eae53d5138d8fc90d2162eafbc455947b5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifelabs.com",
+                "locations.lifelabs.com"
+            ]
+        },
+        {
+            "rule": "impervadns\\.net\\/_Incapsula_Resource",
+            "cookies": 0.000102,
+            "fingerprinting": 3,
+            "subdomains": [
+                "un6gjre",
+                "hn2roq5"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [
+                {
+                    "original": "info.playalberta.ca",
+                    "resolved": "un6gjre.impervadns.net"
+                },
+                {
+                    "original": "apis.airtransat.com",
+                    "resolved": "hn2roq5.impervadns.net"
+                }
+            ],
+            "responseHashes": [
+                "812c50ca6938829f03907cf7642a883d6ac1510a0db87ef8a10a7dd907c5fb16",
+                "9243246615a76963b8ef74d1c55ea127b1e2c97a8a77f9f8b22aed5fc5a46f0c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "playalberta.ca",
+                "www.airtransat.com",
+                "www.transat.com"
+            ]
+        },
+        {
+            "rule": "impervadns\\.net\\/_Incapsula_Resource",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "un6gjre",
+                "hn2roq5"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [
+                {
+                    "original": "info.playalberta.ca",
+                    "resolved": "un6gjre.impervadns.net"
+                },
+                {
+                    "original": "apis.airtransat.com",
+                    "resolved": "hn2roq5.impervadns.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "playalberta.ca",
+                "www.airtransat.com",
+                "www.transat.com"
+            ]
+        },
+        {
+            "rule": "impervadns\\.net\\/client\\/Persistence\\/UpdateCookies\\/",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hn2roq5"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "apis.airtransat.com",
+                    "resolved": "hn2roq5.impervadns.net"
+                }
+            ],
+            "responseHashes": [
+                "8446c5919922e0812fafdb2f7e390fec51464bf80c6c46b8819b61c8c9995252"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airtransat.com",
+                "www.transat.com"
+            ]
+        },
+        {
+            "rule": "impervadns\\.net\\/slider\\/KP-24-TRACKSIDE-RACE\\.mp4",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "9ida4yp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "content.hpibet.com",
+                    "resolved": "9ida4yp.impervadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hpibet.com",
+                "www.hpibet.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00162,
+    "topInitiators": [
+        {
+            "domain": "neogames.com",
+            "prevalence": 0.5882352941176471
+        },
+        {
+            "domain": "signalfx.com",
+            "prevalence": 0.11764705882352941
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.11764705882352941
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.11764705882352941
+        },
+        {
+            "domain": "msecnd.net",
+            "prevalence": 0.058823529411764705
+        }
+    ],
+    "types": {
+        "Document": 4,
+        "XHR": 2,
+        "Script": 3,
+        "Image": 3,
+        "Media": 2
+    },
+    "nameservers": [
+        "ns3.impervadns.net",
+        "ns2.impervadns.net",
+        "ns1.impervadns.net"
+    ]
+}

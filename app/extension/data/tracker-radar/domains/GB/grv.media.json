@@ -1,0 +1,85 @@
+{
+    "domain": "grv.media",
+    "owner": {
+        "name": "GRV Media",
+        "displayName": "GRV Media"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "client"
+    ],
+    "cnames": [
+        {
+            "original": "prop.faroutmagazine.co.uk",
+            "resolved": "client.grv.media"
+        },
+        {
+            "original": "prop.footballinsider247.com",
+            "resolved": "client.grv.media"
+        },
+        {
+            "original": "prop.manchestersfinest.com",
+            "resolved": "client.grv.media"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "grv\\.media\\/loader\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "prop.faroutmagazine.co.uk",
+                    "resolved": "client.grv.media"
+                },
+                {
+                    "original": "prop.footballinsider247.com",
+                    "resolved": "client.grv.media"
+                },
+                {
+                    "original": "prop.manchestersfinest.com",
+                    "resolved": "client.grv.media"
+                }
+            ],
+            "responseHashes": [
+                "df63ae19516d830ce4236816f3c7e8063285606d9557c80337cc1e7b782041bd",
+                "550a0a58401d71106b102223092ba881f2316b04e2431461737d7a40f630a0a0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faroutmagazine.co.uk",
+                "www.footballinsider247.com",
+                "www.manchestersfinest.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000503,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3
+    },
+    "nameservers": [
+        "amit.ns.cloudflare.com",
+        "emily.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,173 @@
+{
+    "domain": "webtrends-optimize.workers.dev",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "geo",
+        "wto-halfords-lib",
+        "wto-halfords-segment-id",
+        "halfords-pepe-2-0"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "webtrends-optimize\\.workers\\.dev\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fed15d1680a2454e158d8b9cfddb692820a224688fa48ee71977c6d5152f6bec"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dfs.co.uk",
+                "www.dfs.co.uk"
+            ]
+        },
+        {
+            "rule": "webtrends-optimize\\.workers\\.dev\\/api\\/get-lib",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "wto-halfords-lib"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.name": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0be08b60f00801267bc58ba61505130ac70f070d8ae7d6c70431c6079323b4be"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_wt.mode-2392083": {
+                    "ttl": null,
+                    "length": 15,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                },
+                "_wt.user-2392083": {
+                    "ttl": 7776010,
+                    "length": 235,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "halfords.com",
+                "www.halfords.com"
+            ]
+        },
+        {
+            "rule": "webtrends-optimize\\.workers\\.dev\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wto-halfords-segment-id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9eb08186a1621e29634ebaba14b8cc3fc59ad180bea198ac47fb50442f4e5178"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "halfords.com",
+                "www.halfords.com"
+            ]
+        },
+        {
+            "rule": "webtrends-optimize\\.workers\\.dev\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wto-halfords-segment-id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "halfords.com",
+                "www.halfords.com"
+            ]
+        },
+        {
+            "rule": "webtrends-optimize\\.workers\\.dev\\/api\\/get-content",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "halfords-pepe-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8f4b3aec8b20fe4a3d785ea9f5a5c611914d152321a37c86449de575888efdc8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "halfords.com",
+                "www.halfords.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9333333333333333
+        },
+        {
+            "domain": "webtrends-optimize.com",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "XHR": 2,
+        "Script": 2,
+        "Fetch": 4,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "grannbo.ns.cloudflare.com",
+        "keaton.ns.cloudflare.com"
+    ]
+}

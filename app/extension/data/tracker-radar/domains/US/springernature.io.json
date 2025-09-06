@@ -1,0 +1,837 @@
+{
+    "domain": "springernature.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "geo-gcp.cdn",
+        "default.cdn",
+        "sgtm-springer.apps.public.k8s",
+        "sgtm-nature.apps.public.k8s"
+    ],
+    "cnames": [
+        {
+            "original": "cart.springer.com",
+            "resolved": "default.cdn.springernature.io"
+        },
+        {
+            "original": "cmp.nature.com",
+            "resolved": "geo-gcp.cdn.springernature.io"
+        },
+        {
+            "original": "cmp.springer.com",
+            "resolved": "geo-gcp.cdn.springernature.io"
+        },
+        {
+            "original": "idp.nature.com",
+            "resolved": "geo-gcp.cdn.springernature.io"
+        },
+        {
+            "original": "idp.springer.com",
+            "resolved": "geo-gcp.cdn.springernature.io"
+        },
+        {
+            "original": "media.springernature.com",
+            "resolved": "geo-gcp.cdn.springernature.io"
+        },
+        {
+            "original": "sgtm.nature.com",
+            "resolved": "sgtm-nature.apps.public.k8s.springernature.io"
+        },
+        {
+            "original": "sgtm.springer.com",
+            "resolved": "sgtm-springer.apps.public.k8s.springernature.io"
+        },
+        {
+            "original": "verify.nature.com",
+            "resolved": "geo-gcp.cdn.springernature.io"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "springernature\\.io\\/authorize",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "idp.springer.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                },
+                {
+                    "original": "idp.nature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "d5eeb4225813f1f04692b1c326b984eab9679e2a8431a9ff8f5dfafc42172666"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "link.springer.com",
+                "rd.springer.com",
+                "www.nature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/production_live\\/en\\/consent-bundle-8-92\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "cmp.springer.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "a6e8f00780f1c85b0102b536aefef75e36f5b877dda1fa2b9d3e2c0df4713544"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "link.springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/cart-info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "default.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "cart.springer.com",
+                    "resolved": "default.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "link.springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w234h132\\/springer-static\\/image\\/art%3A10\\.1038%2Fs43247-025-02394-y\\/MediaObjects\\/43247_2025_2394_Fig1_HTML\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "a8a5b680d122019a3160652c9f918034a8170eb954b1a98142eedff35746fce8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w234h132\\/springer-static\\/image\\/art%3A10\\.1038%2Fs41598-025-06115-5\\/MediaObjects\\/41598_2025_6115_Fig1_HTML\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "bce3167a771f7139128a7099a3778827a7569ba17c32c5211f5bfda48b476537"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w234h132\\/springer-static\\/image\\/art%3A10\\.1038%2Fs41550-025-02589-5\\/MediaObjects\\/41550_2025_2589_Fig1_HTML\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "96ed3065556f25ce3fa92d3bf33bce7f94fc2af767cff6147a957bd86a2d6442"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w234h132\\/springer-static\\/image\\/art%3A10\\.1007%2Fs00338-025-02695-w\\/MediaObjects\\/338_2025_2695_Fig1_HTML\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "dbc1e5ade8c87498c82654affab3f7f6b83989945ff1b087871586e4db74d0cb"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w234h132\\/springer-static\\/image\\/art%3A10\\.1007%2Fs10071-025-01973-y\\/MediaObjects\\/10071_2025_1973_Fig1_HTML\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "751428db4999bcdaebaf3500f82bc4587c617666cc324f2470c1dc147b8a72f7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w136\\/springer-static\\/cover-hires\\/journal\\/10462",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "b8ee024411f1c11bfbc3719d73c922b4c98d56f282e39ddc1c0ada92bfc2354f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w136\\/springer-static\\/cover-hires\\/journal\\/43621",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "ca8aab6fbde9637601f7efc4ac295445885f5c3db27294585776d1a87b1e8b09"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w136\\/springer-static\\/cover-hires\\/journal\\/44197",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "601bd3112744e89ca24c2d3c2f52ee080a02729d0f8ea1263bd0c8d700a18956"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w184\\/springer-static\\/cover-hires\\/book\\/978-1-0716-1418-1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "c9c24cf7a56fc9c2b2dfd771e70f8afda129c6089866d686d604a1e6d6085216"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w184\\/springer-static\\/cover-hires\\/book\\/978-3-030-54256-6",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "a156852b471220644f4ac96ffd3692845d04800690b7ba1f942cea00219d7191"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w184\\/springer-static\\/cover-hires\\/book\\/978-3-030-95734-6",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "f7795d7ff3ff25b47bdf368364966e62b3ecdc3e08d813c976e7c771ac76a0a9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w184\\/springer-static\\/cover-hires\\/book\\/978-1-4842-5979-5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "630d8f0cd0f714178363466f441582f0018ba1210610a7f5ebccc717dbdece27"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w184\\/springer-static\\/cover-hires\\/book\\/978-3-031-14194-2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "01f0f9bee12ff9b8c125284b369eb9697cb1bbae5641a84971a2a1b06f07ebd0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w184\\/springer-static\\/cover-hires\\/book\\/978-981-19-0027-3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "ef627849885ffad970d4478f1134c393668c8b1dba785a0bc29d9d1c9b8287ae"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w184\\/springer-static\\/cover-hires\\/book\\/978-3-030-88346-1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "6642a3b4805908e890f6e757715a419c02d9a5f8fe644b2ba40b0bcd939f7797"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w184\\/springer-static\\/cover-hires\\/book\\/978-1-4842-7866-6",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "59e839e4dec828c0ec09dba7b0647384cf7d9e82d7839b171ef01869b2395030"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/w184\\/springer-static\\/cover-hires\\/book\\/978-3-030-05387-1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "media.springernature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "c991c596646067bf294d8dddfa9fdeab4100cc5777b34bf96afbd26f56621ffe"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "rd.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/gtm\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sgtm-springer.apps.public.k8s",
+                "sgtm-nature.apps.public.k8s"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "sgtm.springer.com",
+                    "resolved": "sgtm-springer.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.nature.com",
+                    "resolved": "sgtm-nature.apps.public.k8s.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "7c0199888629a69950ae1f843010e54bc05f885b2a034ea1f117b71b9a254b42",
+                "a78fac23149f2f04923fdec495a87f5fc8c2208b590afa8a046d0da4cd1ce973",
+                "0053ecb786d46da65a74b624c3a77194e033c3767b31a9f9275f3491a778e090"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "link.springer.com",
+                "rd.springer.com",
+                "www.nature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/collect-cmp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sgtm-springer.apps.public.k8s",
+                "sgtm-nature.apps.public.k8s"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "sgtm.springer.com",
+                    "resolved": "sgtm-springer.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.nature.com",
+                    "resolved": "sgtm-nature.apps.public.k8s.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "7fff1569ea68ef52782ba25b0cf3934627f7a4fc1e8e22f4652de959c5f97978"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "link.springer.com",
+                "rd.springer.com",
+                "www.nature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/exposed-details",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "idp.springer.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                },
+                {
+                    "original": "idp.nature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "c8d7b28e2be6b6612ece9eb889704f5a0cecb4b09a34ce35d52c9ea71d2dac08"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "springer.com",
+                "link.springer.com",
+                "rd.springer.com",
+                "www.nature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/transit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "idp.nature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nature.com",
+                "www.nature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/production_live\\/en\\/consent-bundle-8-94\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cmp.nature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "540bd69e0c68d2dcb4e9f5e95d640ad407be9832e99622c8414546a2ded173e6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nature.com",
+                "www.nature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/verify\\/nature\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "verify.nature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "9fb4dacdeda9de12e7acfcc1d5872b64269196d2fcc7d5f11c1cdb5746d645f0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nature.com",
+                "www.nature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/verify\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "verify.nature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "9f7b3d39cb7349e1dd6a1273e46393ef375b444ef5abcf67a2c2b3fa2e40f3fa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nature.com",
+                "www.nature.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000342,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Document": 6,
+        "Script": 11,
+        "Fetch": 3,
+        "Image": 38,
+        "XHR": 6
+    },
+    "nameservers": [
+        "pdns2.ultradns.net",
+        "pdns6.ultradns.co.uk",
+        "pdns5.ultradns.info",
+        "pdns3.ultradns.org",
+        "pdns4.ultradns.org",
+        "pdns1.ultradns.net"
+    ]
+}

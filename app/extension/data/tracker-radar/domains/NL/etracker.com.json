@@ -1,0 +1,181 @@
+{
+    "domain": "etracker.com",
+    "owner": {
+        "name": "etracker GmbH",
+        "displayName": "etracker",
+        "privacyPolicy": "https://www.gametracker.com/about/privacy.php",
+        "url": "http://gametracker.com"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "customer",
+        "code"
+    ],
+    "cnames": [
+        {
+            "original": "pse.gabor.com",
+            "resolved": "customer.etracker.com"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "etracker\\.com\\/code\\/e\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "customer",
+                "code"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.pixelDepth": 3,
+                "Navigator.prototype.language": 3,
+                "Document.cookie getter": 3,
+                "window.sessionStorage": 3,
+                "window.localStorage": 3,
+                "window.name": 3,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.platform": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [
+                {
+                    "original": "pse.gabor.com",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "0bee61de50521df31b97cc90e6f38374540db8adb843ef46661060796775cdba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabor.com",
+                "www.reimo.com",
+                "www.speisekarte.de",
+                "www.waschbaer.nl"
+            ]
+        },
+        {
+            "rule": "etracker\\.com\\/t\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "customer",
+                "code"
+            ],
+            "apis": {
+                "window.sessionStorage": 3,
+                "Notification.permission": 3,
+                "Document.cookie getter": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [
+                {
+                    "original": "pse.gabor.com",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "58272136487c6fb7a3f8a659090811b51f6d67f292b967893cc03c0c26cc9631",
+                "cd8484261920b0c6aed7a260fd0aa74fa2dfb7e3cbfac447ae53f6c6705e33ba",
+                "05f2afe3e3ca86e8f1784d84ac04878f390918757006a3a456a02afcf473cd3b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabor.com",
+                "www.reimo.com",
+                "www.speisekarte.de",
+                "www.waschbaer.nl"
+            ]
+        },
+        {
+            "rule": "etracker\\.com\\/api\\/v6\\/tracking\\/webEvents",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "pse.gabor.com",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabor.com",
+                "www.gabor.com"
+            ]
+        },
+        {
+            "rule": "etracker\\.com\\/cntcc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "pse.gabor.com",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabor.com",
+                "www.gabor.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "XHR": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "greg.ns.cloudflare.com",
+        "reza.ns.cloudflare.com"
+    ]
+}

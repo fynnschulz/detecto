@@ -1,0 +1,109 @@
+{
+    "domain": "akamai.com",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "time",
+        "content"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "akamai\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "time"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6bb06d3b28012b3d40deaaa2033169292e92f0bf64eef0708aa4894169c2bba8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vg.no",
+                "tv.vg.no"
+            ]
+        },
+        {
+            "rule": "akamai\\.com\\/js\\/forms2\\/js\\/forms2\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Element.prototype.getClientRects": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1d8f29fefcf1c3c78ed278f87273b54e272722c4672bbcfd903092881e0fd3ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "linode.com",
+                "www.linode.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "vgc.no",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "a9-66.akam.net",
+        "a7-66.akam.net",
+        "a6-66.akam.net",
+        "a18-66.akam.net",
+        "a8-66.akam.net",
+        "a5-66.akam.net",
+        "a13-66.akam.net",
+        "a3-66.akam.net",
+        "a11-66.akam.net",
+        "a12-66.akam.net",
+        "a16-66.akam.net",
+        "a1-66.akam.net",
+        "a28-66.akam.net"
+    ]
+}

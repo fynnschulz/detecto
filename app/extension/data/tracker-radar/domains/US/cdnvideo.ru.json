@@ -1,0 +1,130 @@
+{
+    "domain": "cdnvideo.ru",
+    "owner": {
+        "name": "LLC \"CDN-video\"",
+        "displayName": "CDN-video"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000684,
+    "sites": 10,
+    "subdomains": [
+        "unisound",
+        "cdn2-static-ntv"
+    ],
+    "cnames": [
+        {
+            "original": "cdn2-static.ntv.ru",
+            "resolved": "cdn2-static-ntv.cdnvideo.ru"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "cdnvideo\\.ru\\/static\\/js\\/xman\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "unisound"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.plugins": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3a09f5db692c2c596345a12181346319251939a2706677d44a315d3c8db4ba09"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "radiopotok.ru",
+                "zaycev.net"
+            ]
+        },
+        {
+            "rule": "cdnvideo\\.ru\\/home\\/news\\/2025\\/20250815\\/magadan_pre\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn2-static-ntv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2-static.ntv.ru",
+                    "resolved": "cdn2-static-ntv.cdnvideo.ru"
+                }
+            ],
+            "responseHashes": [
+                "e9daf4e6dd97db6f7679ba012d38cd2cce434b18ba19817850a434f6efdd3519"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ntv.ru",
+                "www.ntv.ru"
+            ]
+        },
+        {
+            "rule": "cdnvideo\\.ru\\/home\\/news\\/2025\\/20250608\\/zs_starchikov\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn2-static-ntv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn2-static.ntv.ru",
+                    "resolved": "cdn2-static-ntv.cdnvideo.ru"
+                }
+            ],
+            "responseHashes": [
+                "cf886f39d560fbfecc918f3669c3040e9cea510c71adc0a4b173396cd7ad231c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ntv.ru",
+                "www.ntv.ru"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9411764705882353
+        },
+        {
+            "domain": "ampproject.org",
+            "prevalence": 0.058823529411764705
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Image": 4
+    },
+    "nameservers": [
+        "ns009.cdnvideo.ru",
+        "ns008.cdnvideo.ru",
+        "ns007.cdnvideo.ru",
+        "ns060.cdnvideo.ru",
+        "ns006.cdnvideo.ru"
+    ]
+}

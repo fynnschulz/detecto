@@ -1,0 +1,554 @@
+{
+    "domain": "contentexchange.me",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00103,
+    "sites": 150,
+    "subdomains": [
+        "bg",
+        "ughr",
+        "ug",
+        "si",
+        "gr",
+        "analytics",
+        "collector",
+        "images4",
+        "www",
+        "tracker_ughr",
+        "tracker-ug",
+        "tracker"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "contentexchange\\.me\\/static\\/tracker\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 2,
+            "subdomains": [
+                "bg",
+                "ughr",
+                "ug",
+                "si",
+                "gr"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "window.localStorage": 5,
+                "Document.cookie setter": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Date.prototype.getTime": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.colorDepth": 3,
+                "window.sessionStorage": 3
+            },
+            "sites": 11,
+            "prevalence": 0.0000752,
+            "cnames": [],
+            "responseHashes": [
+                "dcd325fea6846c8467ba9b5c5b27df3b8e79a14fbcbfa7be5b2bb39fdcd17262",
+                "67383a8af64c1e5bbdbe51b109ec24a9e42de4455373887ecf02c6e5bb324e07",
+                "38845056620b3b74e84b6a2d4486bdb089e26a2f2103d0985b9e4d3b84c4dce4",
+                "436c4f0b9b3375650dbaecb88bc5eeb5b54ee388cebb545028c8f8644139ab1d",
+                "1d091a44e781c82e3edc58ce6a4cc841be59d72d3c6666497c8763602c1315f7",
+                "77b54996decc9bd970e0d4c992e3c732f2f73a73712c1be90d947f28f2edf960",
+                "43c50dcd7dae598456632d559d1e3505992530382df0096adb1dd5cdf05258f1",
+                "40b392f9a9564d15417bf6f35933b417a30e609cf0162f497bf11bdf5c262fd9",
+                "02520ff57441fc6874c25c10265964e2a73e92c4306f36f04557140db06c3fb4",
+                "82498cd1124dec5399a919a526452a5c27a5e24a19996820b24d8d5a77d9c633"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cx_id": {
+                    "ttl": 62208007,
+                    "length": 24,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                },
+                "cx_last_match": {
+                    "ttl": 62208007,
+                    "length": 13,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dariknews.bg",
+                "n1info.hr",
+                "n1info.rs",
+                "n1info.si",
+                "nova.rs",
+                "www.danas.rs",
+                "www.halooglasi.com",
+                "www.sportdog.gr",
+                "www.star.gr",
+                "www.vesti.bg",
+                "www.vijesti.me"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/bex\\/storage\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "window.localStorage": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "d7ff4a30bf33ec1c5fff53a6fd82be63f5285cabdf056d4979ed1673c1b51ee7",
+                "71d72870c8e3600e74c44f3566ed906ed20f272a23ab00bfec6ba188842a90a9",
+                "fcadaf1e3eba63455573948e7cac8f7a1437f612f281b7bbf2a198d0d432b8fb",
+                "2c2f04efca9410f56c8b959df623f0fd37beb4388adacb62b9524ebc9eb73a04",
+                "6f220e661cd40005c8ed6e8ea1ebfc78d63d3c554ab0c4c276178a561b0093d1"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dariknews.bg",
+                "krenizdravo.dnevnik.hr",
+                "nova.bg",
+                "www.halooglasi.com",
+                "www.vesti.bg",
+                "www.vijesti.me"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/bg\\/collect",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "09a0c890af3d005cfbd79eb86ed85457ea6c400f116f7185e5caebc50a537c13"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "cx_id": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "dariknews.bg",
+                "nova.bg",
+                "www.vesti.bg"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/cdn-cgi\\/challenge-platform\\/scripts\\/jsd\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "48d9058977fbc35285484ed7c2cfc3db46856458ffdf931642e80d6ed3fe69d2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dariknews.bg",
+                "krenizdravo.dnevnik.hr",
+                "nova.bg",
+                "www.halooglasi.com",
+                "www.vesti.bg",
+                "www.vijesti.me"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/bex\\/load\\/5f9ae8347f08c7237d8609f9",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Date.prototype.getTime": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.colorDepth": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "94db23815515259321d495a6ad9d1d5d5594f538f8b90867a420a4804f64de69",
+                "f800490be7421f7b0eb0580282a78e1fddd214df6d4bba1ef6dcf87585a07834",
+                "eed35f3e2bd6fa3e1d523d20cfa6172ddc92fda8a62172acf4291e0675a8c5a0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cx_id": {
+                    "ttl": 62208012,
+                    "length": 24,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "cx_last_match": {
+                    "ttl": 62208012,
+                    "length": 13,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dariknews.bg",
+                "nova.bg",
+                "www.abv.bg",
+                "www.vesti.bg"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/cdn-cgi\\/challenge-platform\\/h\\/b\\/scripts\\/jsd\\/4710d66e8fda\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "dccacd86635a87108cd521d88e9123b9e2af0eb503f1712f3c603b03bc4ebe53",
+                "9893b6741c3fe00d6bdb5046c542dd625bd2ef02768737e85e7e58ca9b65093f",
+                "48d9058977fbc35285484ed7c2cfc3db46856458ffdf931642e80d6ed3fe69d2",
+                "96d15e878bbec93bbb2c45a79faa824a5c635734501e8c549bf3c7bc8a26d19c",
+                "6abc7c73404d8c61b2f4fc1641930afec5326de1457d6b1ecf655d19ad669d5f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dariknews.bg",
+                "krenizdravo.dnevnik.hr",
+                "nova.bg",
+                "www.halooglasi.com",
+                "www.vesti.bg",
+                "www.vijesti.me"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/bex\\/scrape",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "ff790de8c60c0cf7bc43b2023b7f3e04a0ec2036cd37c930a3057b0e8a0f3dd0",
+                "bc8e98569b9c996a58b4a5e29d5acd699c45a44e16233c84a193cf1dabae7be4",
+                "5701a871a86d7232c932ba9f5b3c056250ef8945a9f0cb14227259c8efd611c5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dariknews.bg",
+                "krenizdravo.dnevnik.hr",
+                "nova.bg",
+                "www.vesti.bg",
+                "www.vijesti.me"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/fit\\/magic\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "72f0a2df7a468ed5299cfdfd0815c34557a0bbf427f73ba53e9517e84dbd0a27"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dariknews.bg",
+                "www.vijesti.me"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/static\\/ce_thumb\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "62db9e73eb6b6afae6d1742050ee1b2aa6a08f73ac6d399053f00573e3fb4ba5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dariknews.bg",
+                "www.vijesti.me"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/bex\\/load\\/5e5d3f3bf2f66476f179b0b8",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "08eb2fe29515e5abbc4f458e2e01f4f6aa78ec41ee4d5eb57e1939c9a9c93605"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "over.net",
+                "www.zurnal24.si"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/tracker\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tracker_ughr",
+                "tracker-ug",
+                "tracker"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Date.prototype.getTime": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.colorDepth": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "bc3ee72b87be5fb0d7ea17cd87cc203f01debab2d4bf9902dd9b9640e732d4af",
+                "c6d545d15360e0ca74ca84c69f39c5a811ed780946a9bb015c7af0b36613ff96"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cx_id": {
+                    "ttl": 62208004,
+                    "length": 24,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "cx_last_match": {
+                    "ttl": 62208004,
+                    "length": 13,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dnevnik.hr",
+                "www.vijesti.me",
+                "www.zurnal24.si"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/bex\\/load\\/5f85aef32f8be553873579ef",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "aa0643c0f8cce0ff0a60db47631f192adb52849be1e2a9f8451dcc01bddcbe0a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "n1info.rs",
+                "nova.rs"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/bex\\/load\\/5f79f7b82f8be5538735797b",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c8e6824bea2ff2fd40432783934f06189d1bcc65a25cd4772f3bbb8602c480dd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nova.rs",
+                "www.danas.rs"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/sr\\/collect",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "09a0c890af3d005cfbd79eb86ed85457ea6c400f116f7185e5caebc50a537c13"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "cx_id": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "halooglasi.com",
+                "www.vijesti.me"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/bex\\/load\\/63908b9f31f9c463b241e8d7",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "96ef178d545946cf782c44a7cfadbe49254f96bbe417dd0b9c7b57e2bc0fe8d3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportdog.gr",
+                "www.star.gr"
+            ]
+        },
+        {
+            "rule": "contentexchange\\.me\\/cdn-cgi\\/challenge-platform\\/h\\/b\\/jsd\\/r\\/0\\.38565270373187155:1755278563:f0dJ_Jr3hPcqXwcrD-RHoi_RURTv7huCBd4Bvvpsup0\\/96fab40688657d57",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vijesti.me",
+                "www.vijesti.me"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000041,
+    "topInitiators": [
+        {
+            "domain": "adform.net",
+            "prevalence": 0.6073059360730594
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.319634703196347
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.0502283105022831
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0228310502283105
+        }
+    ],
+    "types": {
+        "Script": 38,
+        "Document": 6,
+        "Image": 9,
+        "Fetch": 5,
+        "XHR": 2
+    },
+    "nameservers": [
+        "christian.ns.cloudflare.com",
+        "jocelyn.ns.cloudflare.com"
+    ]
+}

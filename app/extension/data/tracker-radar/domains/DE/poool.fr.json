@@ -1,0 +1,550 @@
+{
+    "domain": "poool.fr",
+    "owner": {
+        "name": "Ano Nymous",
+        "displayName": "Ano Nymous"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "assets",
+        "api",
+        "cdn",
+        "subscribe-assets"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "poool\\.fr\\/access\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9ebf72967906b3056f88e7dc21f7defc0076d393e856b2c11054931b2013d12f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/vendor-audit\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "207933413885c9b647bb0990e3c48131b2890df01aae772c3ae4b43201ef7ea6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/vendor-trim-html\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ace7b061027f649c9d1720c320c5c81840c12125f884a4db45e3a1ab1e9406a9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/api\\/v3\\/subscribe\\/site",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0855f161f2e2ac998e4a2b96ffc07823bbefcdf6d5ae17b6c8c8f262150f58eb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.larousse.fr"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/api\\/v3\\/subscribe\\/site",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.larousse.fr"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/poool-sdk-v4\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a4c2a66c39c016aec35d67a8eed72ded4bf19b37ea4bc496e4d07f9ffc32637a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/api\\/v3\\/access\\/paywall",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2b6b35b6d20f357679f244ab9d06f5797870db72b80b314eb2a17a05ba1cd4b2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/api\\/v3\\/access\\/paywall",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/vendor-access\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9efc94d31cf3ad01733b5bbbcfa394256af54d3d94c4afe094d9e75f4702f047"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/assets\\/fonts\\/google\\/open-sans\\/os-regular\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/assets\\/fonts\\/google\\/open-sans\\/os-semi-bold\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/assets\\/fonts\\/google\\/open-sans\\/os-bold\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/assets\\/fonts\\/poool-ico-2\\/1\\.3\\.0\\/Poool-Ico-2\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/assets\\/fonts\\/poool-ico-2\\/1\\.3\\.0\\/Poool-Ico-2\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/assets\\/fonts\\/poool-ico-2\\/1\\.3\\.0\\/Poool-Ico-2\\.eot",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/assets\\/fonts\\/poool-ico-2\\/1\\.3\\.0\\/Poool-Ico-2\\.ttf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/auth-element\\.71695009d0a107422073\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "subscribe-assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8ced0501dceca770b3d9f95648d5b6ad3aafe893d541bacf49fcfb52aae64f49"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.larousse.fr"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/vendor-buddy-v3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "ea9e8966828bfc86c8cbf56f3a1c610424d315c1484ca3a6568b159e86bd60b7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/vendor-buddy\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "subscribe-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "497d2e2471c37c351b7072342bf99fcd6ccdfd06dd14daec1c3372794b7e06cf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.larousse.fr"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/vendor-sdk-v4\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "subscribe-assets"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "374dcf50a48561598848fff09c8f45e8345f511138c401f71abebb1ab07f51ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.larousse.fr"
+            ]
+        },
+        {
+            "rule": "poool\\.fr\\/assets\\/fonts\\/poool-ico-2\\/1\\.3\\.0\\/Poool-Ico-2\\.ttf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e5d5b37ab5b2fb440a2be6cbcc37b04456936c27d7ffb4a8ccba9e79307dafca"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "larousse.fr",
+                "www.spektrum.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3793103448275862
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3448275862068966
+        },
+        {
+            "domain": "poool-subscribe.fr",
+            "prevalence": 0.20689655172413793
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.06896551724137931
+        }
+    ],
+    "types": {
+        "Script": 19,
+        "Fetch": 4,
+        "Preflight": 4,
+        "Other": 14,
+        "XHR": 2,
+        "Font": 2
+    },
+    "nameservers": [
+        "ara.ns.cloudflare.com",
+        "oswald.ns.cloudflare.com"
+    ]
+}

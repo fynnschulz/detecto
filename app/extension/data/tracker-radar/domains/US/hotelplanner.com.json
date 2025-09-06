@@ -1,0 +1,158 @@
+{
+    "domain": "hotelplanner.com",
+    "owner": {
+        "name": "Lexyl Travel Technologies LLC",
+        "displayName": "Lexyl Travel"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "cdn",
+        "logging",
+        "www"
+    ],
+    "cnames": [
+        {
+            "original": "book.hotels-rates.com",
+            "resolved": "www.hotelplanner.com"
+        },
+        {
+            "original": "secure1.reservations.com",
+            "resolved": "www.hotelplanner.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "hotelplanner\\.com\\/js\\/partners\\/client-1\\.0\\.2\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "15c0ebb2c237949bdcb3eca4aeac3d07804191927a16924b2c87f5d5dc9888db"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reservations.com",
+                "www.reservations.com"
+            ]
+        },
+        {
+            "rule": "hotelplanner\\.com\\/v1\\/logging",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "logging"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "cd497532e137fc0ce8d28b216c465a5f3f2b7c00c31f3c358f6cc0ade896b87e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reservations.com",
+                "www.hotels-rates.com",
+                "www.reservations.com"
+            ]
+        },
+        {
+            "rule": "hotelplanner\\.com\\/Common\\/Cfcs\\/Services\\/OfflineSession\\.cfc",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "secure1.reservations.com",
+                    "resolved": "www.hotelplanner.com"
+                },
+                {
+                    "original": "book.hotels-rates.com",
+                    "resolved": "www.hotelplanner.com"
+                }
+            ],
+            "responseHashes": [
+                "a0c1eb60bb0d56a84b3f48881672e1f1c01b9fe13ab6b19c1d7991b695b839df",
+                "b78dc87e35884c7efde6bd94bc0dea7ba398254111c154c9f937759f8286cd42"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reservations.com",
+                "www.hotels-rates.com",
+                "www.reservations.com"
+            ]
+        },
+        {
+            "rule": "hotelplanner\\.com\\/v1\\/logEvent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logging"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "68c8cf9403f523fc464fb848863af5b61a293af31e344d7d5a87315180e6a34c",
+                "938141203e5990fb97f3fb64947a088b20b9dbffad39f70bb39a976f1d3c0961"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reservations.com",
+                "www.hotels-rates.com",
+                "www.reservations.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8125
+        },
+        {
+            "domain": "hotelplanner.com",
+            "prevalence": 0.1875
+        }
+    ],
+    "types": {
+        "Script": 11
+    },
+    "nameservers": [
+        "lovisa.ns.cloudflare.com",
+        "osmar.ns.cloudflare.com"
+    ]
+}

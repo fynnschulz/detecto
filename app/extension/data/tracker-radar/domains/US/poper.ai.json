@@ -1,0 +1,121 @@
+{
+    "domain": "poper.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "app",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "poper\\.ai\\/share\\/poper\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {
+                "window.localStorage": 6,
+                "window.sessionStorage": 6,
+                "Navigator.prototype.userAgent": 6,
+                "window.innerWidth": 6,
+                "window.innerHeight": 6,
+                "Navigator.prototype.language": 6,
+                "Navigator.prototype.platform": 6,
+                "Navigator.prototype.vendor": 6,
+                "Document.cookie getter": 6,
+                "Date.prototype.getTime": 6,
+                "Document.cookie setter": 1
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "54b7597c42fdf8924517203882575cea9d728e986e2c9d44118568d2d3a4beeb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_poper_m": {
+                    "ttl": 31536002,
+                    "length": 46,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluffytamer.com",
+                "host4geeks.com",
+                "techpulse.be",
+                "texta.ai",
+                "www.bellhaven.org",
+                "www.theatreinchicago.com"
+            ]
+        },
+        {
+            "rule": "poper\\.ai\\/general\\/popup",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "7f4d29081affe2a710cd9aaaa570374d302ca5bd86b46ac8d6708be64e37430c",
+                "ec1a16fcf68e1a6bfbc9fa556d2d9ab6b73212c2a112269240ea5a02ed8a6e87",
+                "63cfbe7fe2eb54441bc174002a6cc5227303668a9dce2c8f9c7eef8250e549fb",
+                "6505a825980c79f974ba89963562ca318c3edb87a8cc1ceed1c7f2a22fb3f5e5",
+                "91356a2cd5773d52922c4633019b4042d4d6c31e2271c6de9f57986c25813ff5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.000034204405527431934,
+                "_gcl_au": 0.000013681762210972774,
+                "_gid": 0.000006840881105486387,
+                "__utma": 0.000006840881105486387,
+                "__utmb": 0.000006840881105486387,
+                "__utmc": 0.000006840881105486387,
+                "__utmz": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "fluffytamer.com",
+                "host4geeks.com",
+                "techpulse.be",
+                "texta.ai",
+                "www.bellhaven.org",
+                "www.theatreinchicago.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Fetch": 6
+    },
+    "nameservers": [
+        "indie.ns.cloudflare.com",
+        "fattouche.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "domain": "accesstype.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "accesstype\\.com\\/frontend\\/v2\\/accesstype\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "4678c90000060f3e6d01b3cb9b550f3fd648c531b79ca40f5b5ac39befaf64b4",
+                "80957c11e33dc9841bb150de0ebeae689c527d07793a6df1bd30c9f00993bc88"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dn.pt",
+                "www.thequint.com",
+                "www.westernstandard.news"
+            ]
+        },
+        {
+            "rule": "accesstype\\.com\\/api\\/v1\\/subscription_groups\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f220344045a70b358df92bf8e5adf02775102517a6f12da986ac3351ad15711f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thequint.com",
+                "www.thequint.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "assettype.com",
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ulla.ns.cloudflare.com",
+        "alan.ns.cloudflare.com"
+    ]
+}

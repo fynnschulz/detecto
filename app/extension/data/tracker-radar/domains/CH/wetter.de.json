@@ -1,0 +1,104 @@
+{
+    "domain": "wetter.de",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.0001,
+    "sites": 1,
+    "subdomains": [
+        "www",
+        "api3"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "wetter\\.de\\/widget\\/rtl-news",
+            "cookies": 0.0001,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Navigator.prototype.doNotTrack": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d35deb6e775425f25f95191df347e7c618cc8543aaeb0e4bd2e7aa36c1eca27d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rtl.de",
+                "www.rtl.de"
+            ]
+        },
+        {
+            "rule": "wetter\\.de\\/api\\/v1\\/places",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d61075880fa2e1ddb19a759eb71054e822fc72f44ebd3af3208b9c9db6334de4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rtl.de",
+                "www.rtl.de"
+            ]
+        },
+        {
+            "rule": "wetter\\.de\\/api\\/v1\\/current-conditions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7576721b2720a017edbf5578987f5ccc9bea3790f64296ce45e3e149f7d2009f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rtl.de",
+                "www.rtl.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Document": 2,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-a.eurodns.com",
+        "ns-b.eurodns.org",
+        "ns-c.eurodns.eu",
+        "ns-d.eurodns.biz"
+    ]
+}

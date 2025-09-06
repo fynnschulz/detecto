@@ -1,0 +1,80 @@
+{
+    "domain": "cloudflareaccess.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "speedcf",
+        "nerdwallet"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "cloudflareaccess\\.com\\/cdn-cgi\\/access\\/login\\/fallback-core-origin\\.speedcdnjs\\.com",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "speedcf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "les-koko.com",
+                "www.martinique.franceantilles.fr"
+            ]
+        },
+        {
+            "rule": "cloudflareaccess\\.com\\/cdn-cgi\\/access\\/login\\/meta\\.nerdwallet\\.io",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nerdwallet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nerdwallet.com",
+                "www.nerdwallet.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000505,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "bellemartinique.com",
+            "prevalence": 0.2857142857142857
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "eva.ns.cloudflare.com",
+        "kanye.ns.cloudflare.com"
+    ]
+}

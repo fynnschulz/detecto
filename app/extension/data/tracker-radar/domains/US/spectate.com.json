@@ -1,0 +1,107 @@
+{
+    "domain": "spectate.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "ssl",
+        "my"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "spectate\\.com\\/s\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ssl"
+            ],
+            "apis": {
+                "Navigator.prototype.mimeTypes": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.vendor": 4,
+                "Navigator.prototype.platform": 4,
+                "Document.cookie getter": 4,
+                "Navigator.prototype.language": 4,
+                "Screen.prototype.height": 4,
+                "Screen.prototype.width": 4,
+                "Navigator.prototype.javaEnabled": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "ecfc5c590361a3ca32f35d6874a364b64a88b6130e766eebd219ef9c1a44d469"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_spectate_tracking_session": {
+                    "ttl": 631152005,
+                    "length": 88,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "copper.org",
+                "www.gvltec.edu",
+                "www.letu.edu",
+                "www.nova.edu"
+            ]
+        },
+        {
+            "rule": "spectate\\.com\\/page_view",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "my"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "17625434401ca51b2396fa22f4d1d6dddeb45f1a89ca4d645d733fc713f94a1b",
+                "1f56f8a26c2f6138f404a1ff6e9a5fa7c1111b715ef6397fe76fb91b9503f7d2",
+                "0c36357194a73b2a87105fdb27dbbbb1187b20e0da0f63f1179078f4f242b439"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "copper.org",
+                "www.gvltec.edu",
+                "www.letu.edu",
+                "www.nova.edu"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Script": 8
+    },
+    "nameservers": [
+        "ns-660.awsdns-18.net",
+        "ns-351.awsdns-43.com",
+        "ns-1056.awsdns-04.org",
+        "ns-1921.awsdns-48.co.uk"
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "domain": "connectad.io",
+    "owner": {
+        "name": "ConnectAd",
+        "displayName": "ConnectAd",
+        "privacyPolicy": "https://www.connectadrealtime.com",
+        "url": "http://connectadrealtime.com"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "i",
+        "sync"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "connectad\\.io\\/api\\/v2",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geekymedics.com",
+                "uk.businessesforsale.com",
+                "www.iplocation.net"
+            ]
+        },
+        {
+            "rule": "connectad\\.io\\/iFrameSyncer",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendarr.com",
+                "www.iplocation.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "fuseplatform.net",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "buysellads.net",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "refinery89.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Fetch": 3,
+        "Document": 2
+    },
+    "nameservers": [
+        "elma.ns.cloudflare.com",
+        "amit.ns.cloudflare.com"
+    ]
+}

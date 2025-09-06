@@ -1,0 +1,134 @@
+{
+    "domain": "thunderhead.com",
+    "owner": {
+        "name": "Thunderhead.com Limited",
+        "displayName": "Thunderhead.com"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "ap1.cdn",
+        "ap1"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "thunderhead\\.com\\/one\\/rt\\/js\\/one-tag\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ap1.cdn",
+                "ap1"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 3,
+                "window.sessionStorage": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f1a831c3249e46858c7fd9967e0acf82b7f9d2b54b3f3d1fc7349ac5f0420568",
+                "909bf55be7fd66a3d6bfe6bcf4a25b809072c61acf1a982c26faf65f381cdcfa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_one_ODAwNg": {
+                    "ttl": 62985605,
+                    "length": 36,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                },
+                "_one_NDgwMDA": {
+                    "ttl": 62985612,
+                    "length": 36,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "luxuryescapes.com",
+                "www.budgetdirect.com.au",
+                "www.chasingcars.com.au",
+                "www.landrover.com.au"
+            ]
+        },
+        {
+            "rule": "thunderhead\\.com\\/one\\/rt\\/web\\/v1\\/ONE-WNLDKAOQ41-1776",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ap1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c3c0bd10542c88191a4101f16534774585e2940e2215d74147bd7a2cc8423ea0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "budgetdirect.com.au",
+                "www.chasingcars.com.au"
+            ]
+        },
+        {
+            "rule": "thunderhead\\.com\\/one\\/rt\\/web\\/v1\\/ONE-DOVHIDWFJK-2034",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ap1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "29e60ecad68df2ad00a5c0f901c6e72fe54119e9aac2b13979f5b25b5d04a2e3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_one_NDgwMDA": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "landrover.com.au",
+                "www.landrover.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-586.awsdns-09.net",
+        "ns-316.awsdns-39.com",
+        "ns-1880.awsdns-43.co.uk",
+        "ns-1531.awsdns-63.org"
+    ]
+}

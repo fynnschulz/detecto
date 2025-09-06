@@ -1,0 +1,302 @@
+{
+    "domain": "instiengage.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000812,
+    "sites": 8,
+    "subdomains": [
+        "auth",
+        "geoip",
+        "eua",
+        "core-commenting",
+        "event",
+        "product"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "instiengage\\.com\\/auth\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000812,
+            "cnames": [],
+            "responseHashes": [
+                "32dcb7b5d0e79583353a56225e4d8097e004103102d584e245d1b96547f9948d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allfreeknitting.com",
+                "www.chordie.com",
+                "www.dailywire.com",
+                "www.dailykos.com",
+                "www.genealogy.com",
+                "www.justjared.com",
+                "www.sherdog.com",
+                "www.sporcle.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/json\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoip"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000711,
+            "cnames": [],
+            "responseHashes": [
+                "7add2a54e12f41328e8702e1ca32667e637fc4d6246e9b1b12636fc1d8af9394"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allfreeknitting.com",
+                "www.chordie.com",
+                "www.dailykos.com",
+                "www.genealogy.com",
+                "www.justjared.com",
+                "www.sherdog.com",
+                "www.sporcle.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/auth\\/authIframe\\.js",
+            "cookies": 0.000508,
+            "fingerprinting": 1,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.cookieEnabled": 5,
+                "Document.cookie setter": 5,
+                "Document.cookie getter": 5,
+                "window.name": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "d986ac10210e65ce35ce408c2c6900dfb4c02ebe7710fa27b0dd09b86ebdcd2b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allfreeknitting.com",
+                "www.chordie.com",
+                "www.dailywire.com",
+                "www.genealogy.com",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/v1\\/auth\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eua"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "a2cf4a73b2880b94c5d9fe56c34eb54dace0b517c98ed6790b76995626e4af26",
+                "57b0432b9c35b9c68ffd0dd217f7562496be45e19bcda2b62e9cfef51137c3af",
+                "8ebe70660cc1a93eedcc1f3bf6fd573de95bfff0ef720382fece37dec18027b5",
+                "63940549a25f844fb3d312c7a7c7185f2606ee028502009348d9717bfcf7a027"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allfreeknitting.com",
+                "www.chordie.com",
+                "www.dailywire.com",
+                "www.genealogy.com",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/v1\\/auth\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eua"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allfreeknitting.com",
+                "www.chordie.com",
+                "www.dailywire.com",
+                "www.genealogy.com",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/core-commenting\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-commenting"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "002cc5e388931d0c25a229a18ac6376e0f1a56e0569fa85483f94ac4445d7753"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailywire.com",
+                "www.genealogy.com",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/core-commenting\\/app\\/2bc7b6642c22bb88c7ac\\/counter\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core-commenting"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "c2995dd39cada8d5b1b4a4c4afadd82a2da3c6b57fadc857eccc4620e38d972d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailywire.com",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/v1\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "genealogy.com",
+                "www.genealogy.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/v1\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "genealogy.com",
+                "www.genealogy.com"
+            ]
+        },
+        {
+            "rule": "instiengage\\.com\\/product-loader-code\\/2cdf4c71-ad6c-487e-b43a-8f1af912284a\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "product"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "7638e9726cceeff0a23b021875cec2cb989c423cf98f8934a8c05cce4c31c7ba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "justjared.com",
+                "www.justjared.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000508,
+    "topInitiators": [
+        {
+            "domain": "d3lcz8vpax4lo2.cloudfront.net",
+            "prevalence": 0.43478260869565216
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.34782608695652173
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.13043478260869565
+        },
+        {
+            "domain": "d2na2p72vtqyok.cloudfront.net",
+            "prevalence": 0.06521739130434782
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.021739130434782608
+        }
+    ],
+    "types": {
+        "Document": 8,
+        "XHR": 7,
+        "Script": 12,
+        "Fetch": 7,
+        "Preflight": 7
+    },
+    "nameservers": [
+        "carl.ns.cloudflare.com",
+        "lola.ns.cloudflare.com"
+    ]
+}

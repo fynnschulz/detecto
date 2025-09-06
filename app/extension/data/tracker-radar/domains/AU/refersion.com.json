@@ -1,0 +1,135 @@
+{
+    "domain": "refersion.com",
+    "owner": {
+        "name": "Refersion, Inc.",
+        "displayName": "Refersion"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000808,
+    "sites": 8,
+    "subdomains": [
+        "tracking",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "refersion\\.com\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "ba3d8d15127ff82d4097e4fc8bca9f8b9c06f8c6837c1e109e382d1cef4e47cb",
+                "13ae788f18ce5d6d619e93bba4f68a58eb7c0580efb1028128a6d1a640731d2e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "secretlabchairs.com.au",
+                "www.armyandoutdoors.com.au",
+                "www.lifespanfitness.com.au",
+                "www.nourishmeorganics.com.au"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "secretlabchairs.com.au",
+                "www.armyandoutdoors.com.au",
+                "www.getnomad.app",
+                "www.lifespanfitness.com.au",
+                "www.mindbodygreen.com",
+                "www.nourishmeorganics.com.au"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/refersion\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2b73b20a91f827ef5bc1ca2a2d1bf8355cf2727d0ec7177a3b8a5c07f546c031"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getnomad.app",
+                "www.mindbodygreen.com"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "49219b0a504433939241ccee27572748664984b9cb9fff56a30266080d0a91d2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getnomad.app",
+                "www.mindbodygreen.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "Preflight": 6,
+        "Script": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "beau.ns.cloudflare.com",
+        "sharon.ns.cloudflare.com"
+    ]
+}

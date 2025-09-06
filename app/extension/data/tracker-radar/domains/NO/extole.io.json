@@ -1,0 +1,100 @@
+{
+    "domain": "extole.io",
+    "owner": {
+        "name": "Extole",
+        "displayName": "Extole"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "udemy",
+        "eset",
+        "revzilla"
+    ],
+    "cnames": [
+        {
+            "original": "refer.eset.com",
+            "resolved": "eset.extole.io"
+        },
+        {
+            "original": "refer.udemy.com",
+            "resolved": "udemy.extole.io"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "extole\\.io\\/core\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "udemy",
+                "eset",
+                "revzilla"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [
+                {
+                    "original": "refer.udemy.com",
+                    "resolved": "udemy.extole.io"
+                },
+                {
+                    "original": "refer.eset.com",
+                    "resolved": "eset.extole.io"
+                }
+            ],
+            "responseHashes": [
+                "d9345182fb15903772107e8f9d48c877a29133bc8e64a34a5bc9cb69a0c6e1f0",
+                "85320f9f5624a150b86cda5c7bfd261c776eaee3cf73590b20d154182d6a6319",
+                "fb9e7a11815724f5b84256f3ec326446a09901bf9004c75fb47aa4113d4094f4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "extole_access_token": {
+                    "ttl": 31536010,
+                    "length": 26,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "udemy.com",
+                "www.eset.com",
+                "www.revzilla.com",
+                "www.udemy.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns-1510.awsdns-60.org",
+        "ns-231.awsdns-28.com",
+        "ns-603.awsdns-11.net"
+    ]
+}

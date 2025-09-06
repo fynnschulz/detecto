@@ -1,0 +1,246 @@
+{
+    "domain": "ionos.com",
+    "owner": {
+        "name": "United Internet AG",
+        "displayName": "United Internet"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "shop-api",
+        "frontend-services"
+    ],
+    "cnames": [
+        {
+            "original": "shop-api.ionos.de",
+            "resolved": "shop-api.ionos.com"
+        },
+        {
+            "original": "shop-api.ionos.fr",
+            "resolved": "shop-api.ionos.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/session",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shop-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "shop-api.ionos.fr",
+                    "resolved": "shop-api.ionos.com"
+                },
+                {
+                    "original": "shop-api.ionos.de",
+                    "resolved": "shop-api.ionos.com"
+                }
+            ],
+            "responseHashes": [
+                "018c2c448b7c71b4fa7bcffeebbac4870bd7f6df328bb4bc4a4b458abd632c6d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/v1\\/api\\/shop\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shop-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "shop-api.ionos.fr",
+                    "resolved": "shop-api.ionos.com"
+                },
+                {
+                    "original": "shop-api.ionos.de",
+                    "resolved": "shop-api.ionos.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/t\\/tag\\/IONOS\\/shop\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "frontend-services"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d0a331f4f5d9d7c8e20aa0ef0e2c8a6beb85098135db894d51ff928d265db536"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/t\\/sentry\\/bundle\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "frontend-services"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "446e661df3f91198c9bf3aa78539687f88da3e4385bd817d4a0436b694c72003"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/t\\/t\\/js\\/t\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "frontend-services"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4eef03703c7bd853b5f56b5ce9b741a252e2e9cde5623fe3d173a332ac734a2d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/t\\/password-indicator\\/js\\/password-indicator\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "frontend-services"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "700b386cb73c06dec2fa48fc4c19435da7d9be4adb201acc7605d9613a628688"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/t\\/ias\\/js\\/ias\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "frontend-services"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "19c1d6e958004e65f503d8e04fd52effffd5f48eed93180cc605c530f2bcac40"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        },
+        {
+            "rule": "ionos\\.com\\/t\\/password-indicator\\/css\\/password-indicator\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "frontend-services"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1922ba6b695515aaf2e76b4b7ba7b663c896741b2128f468ebf847a035177ec9"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "www.ionos.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Preflight": 2,
+        "Script": 10,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "ns-1and1.ui-dns.com",
+        "ns-1and1.ui-dns.biz",
+        "ns-1and1.ui-dns.de",
+        "ns-1and1.ui-dns.org"
+    ]
+}

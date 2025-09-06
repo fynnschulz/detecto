@@ -1,0 +1,190 @@
+{
+    "domain": "fmm.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "consent",
+        "tms"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "fmm\\.io\\/495f718a-9d29-4830-96dc-6035928a6362\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "579fb48df62c1984e7204261218949995ec0f4e06de0a05d2038122a954d5d75",
+                "e0aa282290d45b05a5a1639b976d9b3a1999056d2ef66869daedae4ab2dab195",
+                "7d263be4961f2afb74dd73bc4f1f8d4da3d353171934e43ed217c4f4d2246c2a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "france24.com",
+                "observers.france24.com",
+                "www.france24.com",
+                "www.rfi.fr"
+            ]
+        },
+        {
+            "rule": "fmm\\.io\\/obs\\/en\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tms"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.orientation": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.onLine": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d21c0f2eca15f6964c59cbce3330676e07820748c416aa19bb8d9054e4391dde"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pprv": {
+                    "ttl": 34128006,
+                    "length": 196,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "pa_user": {
+                    "ttl": 5,
+                    "length": 6,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "_tms_journey": {
+                    "ttl": 604807,
+                    "length": 184,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "_tms_ab_popinSurvey": {
+                    "ttl": 604800,
+                    "length": 2,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "france24.com",
+                "observers.france24.com"
+            ]
+        },
+        {
+            "rule": "fmm\\.io\\/sdk\\/94910f175ad9a9428495b4f28fe47a37e5ce4590\\/modern\\/sdk\\.94910f175ad9a9428495b4f28fe47a37e5ce4590\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 2,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4,
+                "window.localStorage": 4,
+                "Date.prototype.getTimezoneOffset": 4,
+                "Navigator.prototype.vendor": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Document.cookie getter": 4,
+                "Navigator.prototype.languages": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "bffa5389b43149b0f306734c2c924af34d8ce787cb574a0e310e277b5fb394cc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "didomi_token": {
+                    "ttl": 31622403,
+                    "length": 186,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                },
+                "didomi_dcs": {
+                    "ttl": 31622402,
+                    "length": 55,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "france24.com",
+                "observers.france24.com",
+                "www.france24.com",
+                "www.rfi.fr"
+            ]
+        },
+        {
+            "rule": "fmm\\.io\\/sdk\\/94910f175ad9a9428495b4f28fe47a37e5ce4590\\/modern\\/ui-web-en-web\\.94910f175ad9a9428495b4f28fe47a37e5ce4590\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "399ffa604a9066296a4f0a41b7313a0417fd268387ad460bdeac29df8f7be749"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "france24.com",
+                "observers.france24.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 12
+    },
+    "nameservers": [
+        "a6-64.akam.net",
+        "a7-65.akam.net",
+        "a9-66.akam.net",
+        "a1-147.akam.net",
+        "a10-66.akam.net",
+        "a26-67.akam.net"
+    ]
+}

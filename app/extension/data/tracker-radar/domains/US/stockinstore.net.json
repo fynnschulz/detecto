@@ -1,0 +1,124 @@
+{
+    "domain": "stockinstore.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "assets",
+        "logusage"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "stockinstore\\.net\\/widgets\\/stockinstore-global\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.appCodeName": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "DeviceMotionEvent.prototype.rotationRate": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f04d21b864cd1976958392d9cbebe0b257f2fa89c0a33ccdb1f2498a7b8dc051"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_SIS_UID": {
+                    "ttl": 31536015,
+                    "length": 18,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "_SIS_SESSID": {
+                    "ttl": 1815,
+                    "length": 32,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sussan.com.au",
+                "www.whitworths.com.au"
+            ]
+        },
+        {
+            "rule": "stockinstore\\.net\\/widget\\/initWidgetSession",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c826eada92cd6dbedd9e32e0996edd4a13b04f77daffcdb0fcb731ea430fcf79"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sussan.com.au",
+                "www.whitworths.com.au"
+            ]
+        },
+        {
+            "rule": "stockinstore\\.net\\/widget\\/logUsage",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logusage"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ab140244cd2fd2892fec183c503c0f9522f9935f5e6c5ace01e92924a7e2e90e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sussan.com.au",
+                "www.whitworths.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 4
+    },
+    "nameservers": [
+        "terry.ns.cloudflare.com",
+        "anahi.ns.cloudflare.com"
+    ]
+}

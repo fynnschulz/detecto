@@ -1,0 +1,207 @@
+{
+    "domain": "ex.co",
+    "owner": {
+        "name": "EX.CO Technologies Ltd.",
+        "displayName": "EX.CO Technologies"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000402,
+    "sites": 4,
+    "subdomains": [
+        "v",
+        "cdn",
+        "sync",
+        "player",
+        "collector-1"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "ex\\.co\\/se\\/openrtb\\/hb\\/pbjs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.jetpunk.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/e15e216-l\\/cookie_sync\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f6dbb7ef244db6f509111fb2b7db6c49ea5b6bccbdf0a7f6876e79fdcf10fd9b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.jetpunk.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/e15e216-l\\/sync\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "479ff42ae15a8777a8bef060c1711a6001c722e1391faaf3d5aa554009d7aa26"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "excotest": {
+                    "ttl": -1755390413,
+                    "length": 1,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.jetpunk.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/cookie_sync",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "f5199f447cf545dfca5914aac20eaa30fda969fff4f9795ab87ca22caaabd459",
+                "bde23ca19277fc741688e804911683b70511cb279bd97a4f89a7decad4e6f18a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.jetpunk.com",
+                "www.sporcle.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/4e877d53-b58f-4d99-a179-3b51e5eb5572",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.devicePixelRatio": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f47480567a1b92de06b0007601aa2f14711d24b8b1a3201ca8330e5512b128df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sporcle.com",
+                "www.sporcle.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/main\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cebe87559cf861d01e9c6b1cefd38ab1db9e13c8fe316b85a296b6cf220f883e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sporcle.com",
+                "www.sporcle.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000301,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4666666666666667
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "casalemedia.com",
+            "prevalence": 0.06666666666666667
+        },
+        {
+            "domain": "mediatradecraft.com",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Fetch": 5,
+        "Document": 2,
+        "Script": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-141.awsdns-17.com",
+        "ns-709.awsdns-24.net",
+        "ns-1048.awsdns-03.org",
+        "ns-1853.awsdns-39.co.uk"
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "domain": "klarnaservices.com",
+    "owner": {
+        "name": "Klarna Bank AB",
+        "displayName": "Klarna Bank"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000603,
+    "sites": 6,
+    "subdomains": [
+        "eu-library",
+        "eu-library.playground",
+        "osm",
+        "na-library"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "klarnaservices\\.com\\/lib\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 2,
+            "subdomains": [
+                "eu-library",
+                "eu-library.playground",
+                "osm"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.language": 5,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 5,
+                "Navigator.prototype.connection": 5,
+                "window.localStorage": 5,
+                "Document.cookie setter": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "52e9f4c31dbf1f2b0e079952969421dd6a2b227732c846510bdd23fa0e6beae8",
+                "30758c1979a4bbb68b0d9d042f5403464be9d2729320e3352d8d37d14ae27584"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alditalk.de",
+                "www.calzedonia.com",
+                "www.delonghi.com",
+                "www.kenwoodworld.com",
+                "www.sony.de",
+                "www.weber.com"
+            ]
+        },
+        {
+            "rule": "klarnaservices\\.com\\/config\\/runtime-config\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "na-library"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "c78e70725a5cd2abbad4c1d8c25e026f11b0c9bcbe6c5e253b77d4843dd394c5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alditalk.de",
+                "www.delonghi.com",
+                "www.kenwoodworld.com",
+                "www.sony.de",
+                "www.weber.com"
+            ]
+        },
+        {
+            "rule": "klarnaservices\\.com\\/v1\\/1\\.0\\.94\\/sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "na-library"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.sessionStorage": 5,
+                "Navigator.prototype.language": 5,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 5,
+                "Navigator.prototype.connection": 5,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "e0c6bd206e0fe71cf46c7461989178c10892ca30db8b4d4e44cf1ea275639d17"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alditalk.de",
+                "www.delonghi.com",
+                "www.kenwoodworld.com",
+                "www.sony.de",
+                "www.weber.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 11,
+        "Fetch": 5
+    },
+    "nameservers": [
+        "ns-745.awsdns-29.net",
+        "ns-334.awsdns-41.com",
+        "ns-1786.awsdns-31.co.uk",
+        "ns-1262.awsdns-29.org"
+    ]
+}

@@ -1,0 +1,1316 @@
+{
+    "domain": "sharethis.com",
+    "owner": {
+        "name": "ShareThis, Inc",
+        "displayName": "ShareThis",
+        "privacyPolicy": "https://www.sharethis.com/privacy/",
+        "url": "http://sharethis.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00727,
+    "sites": 72,
+    "subdomains": [
+        "platform-api",
+        "l",
+        "count-server",
+        "platform-cdn",
+        "w",
+        "ws",
+        "s",
+        "ss",
+        "sd",
+        "buttons-config"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "sharethis\\.com\\/js\\/sharethis\\.js",
+            "cookies": 0.00586,
+            "fingerprinting": 2,
+            "subdomains": [
+                "platform-api"
+            ],
+            "apis": {
+                "Document.cookie setter": 58,
+                "Document.cookie getter": 58,
+                "window.localStorage": 58,
+                "Navigator.prototype.userAgent": 58,
+                "Document.prototype.interestCohort": 53,
+                "Date.prototype.getTime": 60,
+                "NavigatorUAData.prototype.brands": 52,
+                "NavigatorUAData.prototype.platform": 52,
+                "NavigatorUAData.prototype.getHighEntropyValues": 52,
+                "window.innerWidth": 18
+            },
+            "sites": 62,
+            "prevalence": 0.00626,
+            "cnames": [],
+            "responseHashes": [
+                "fd70a1b43954ed8a96aeda2aa011ad0632243c3b09a12ba503f10f3746374f2e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "linote.fr",
+                "hianime.to",
+                "fastercapital.com",
+                "www.manuels.solutions",
+                "www.coolmuster.com",
+                "fr.amoyshare.com",
+                "www.majorgeeks.com",
+                "www.yachtworld.fr",
+                "live-tennis.eu",
+                "www.chassimages.com",
+                "www.juststream.me",
+                "atlasocio.com",
+                "fmoviesz.sc",
+                "westream.to",
+                "www.inautia.com",
+                "www.annoncesbateau.com",
+                "sflix.fi",
+                "howik.com",
+                "ytbdownload.com",
+                "animekai.to"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/pview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "l"
+            ],
+            "apis": {},
+            "sites": 68,
+            "prevalence": 0.00687,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__cmpconsentx86685": 0.000100999899000101,
+                "Hm_lvt_59317e5849f38e9ec82d03f6fb1a84d7": 0.000100999899000101,
+                "Hm_lpvt_59317e5849f38e9ec82d03f6fb1a84d7": 0.000100999899000101,
+                "Hm_lvt_40da850f11b3ae73db643f7a577c2c60": 0.000100999899000101,
+                "Hm_lpvt_40da850f11b3ae73db643f7a577c2c60": 0.000100999899000101
+            },
+            "exampleSites": [
+                "ancensored.com",
+                "www.coolmuster.com",
+                "www.amoyshare.com",
+                "www.jaitoutcompris.com",
+                "mcpedl.com",
+                "caen.fr",
+                "w3schools.tech",
+                "linote.fr",
+                "www.grimper.com",
+                "www.inautia.com",
+                "maisquefaitlamaitresse.com",
+                "fourez.notaires.fr",
+                "www.sitytrail.com",
+                "laptopdecision.com",
+                "www.yachtworld.fr",
+                "lechat.chat",
+                "rtgallery.net",
+                "creati.ai",
+                "www.rencontres-arles.com",
+                "atlasocio.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/v2\\.0\\/get_counts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "count-server"
+            ],
+            "apis": {},
+            "sites": 24,
+            "prevalence": 0.00242,
+            "cnames": [],
+            "responseHashes": [
+                "ff0162bd57e64ae3ebbc1caeae5a70574c17f2ba89c538d34edd62f0b1e56da0",
+                "fceb187a8294205642deca2ca707d817bfac0fcb0fecafefd45450d908f9b020",
+                "8d9ef061b2ec10012d0192223345f3c4454bc1cef109e2035b4ad109dcbec249",
+                "7433ad01d71f06665c693082f24f5883e2ec5ec28c05a17348922d432b85636a",
+                "6b12054b5a6b9f4a3f46211abd5f44a86d7c756ad5f87f88bdf7e2250885292a",
+                "91694227d77361988ee2944770361c09da86df560300148ce52e3cb5a32763a9",
+                "17fc8a8305babdcdbd955ac4db2879990889661c3e855384b8f47c4ac7251175",
+                "860e3775127e3b33175a4d3443b7c34e27b2774e81be477fc692bb67619b0c09",
+                "ead0a8ec961ea2049be2014e0df3c9878a0d895b3edd6c81b29966a2ca2502f3",
+                "72162d7c7e63e12430d95464226a6f45c2b8f8aac97f5cbeb01df5c401bae21c",
+                "3d3b31244c9c12c8557e6be5e76849da56730391724752a10a08c2cea40e21b4",
+                "cbb2d4f3f1634bce9dc4e62c8b1278757e26402301053e7045bcc85bbe89c64c",
+                "19d592101ed5646cc91fe1cbea9989255a5f4b5f3b23707b6b92d13681fc6c6b",
+                "82208332a31f569ab099514d4badbbe01898d91920f796cb5823df27fa4bed15",
+                "8fb25488f68c7980827187c87f033d5716c6718e85d74e32bef1c079539327b9",
+                "ea1a02824625970f453d2657ecd0a24e1ca55bc09692c8c6c28913925d6c022a",
+                "f4822bc76efaa8cd64fd9bbae34fd378034271fb23bdcf1bf8346372d1b8d0c5",
+                "56008642a2f7be23eedd81c9a02f7a1b30680f26524ea8f75398468a47e585d1",
+                "e84bf50dc7e3643ec98232fa51379201b313fca147d55e49a70ae829a13dc703",
+                "764bf56a2f054a3700e63cf78fc9312e9fdff7e3be24d26aac8a2b9e72244856",
+                "1ddfbc5e128c394ea8f68bd64a61320bf0e3b1d5fc7a25f69b5d3c3cfdf45a80",
+                "9b1078c96eaf4cba22e1e8cb204dfdf2fb8fc4569176f57e16d9b69755da444c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "9animetv.to",
+                "missavx.com",
+                "www.glarysoft.com",
+                "thaipornhd.com",
+                "mcpedl.com",
+                "www.tamilyogi.la",
+                "fr.amoyshare.com",
+                "rtgallery.net",
+                "fmoviesz.sc",
+                "www.alternativesante.fr",
+                "fastercapital.com",
+                "fr.thejigsawpuzzles.com",
+                "www.goojara.is",
+                "hianime.to",
+                "ytbdownload.com",
+                "westream.to",
+                "w3schools.tech",
+                "www.juststream.me",
+                "www.quizz.biz",
+                "linote.fr"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/telegram\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "03e42b95e9049816d901eabbe2a2247deda61a85972e3a50e3c8274e6c5fe39b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "9animetv.to",
+                "fastercapital.com",
+                "fmoviesz.sc",
+                "hianime.to",
+                "westream.to",
+                "www.alternativesante.fr"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/twitter\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 24,
+            "prevalence": 0.00242,
+            "cnames": [],
+            "responseHashes": [
+                "76ffdc5337cd5a509f15d70767b85a793aead82975d0d86912e1607e963c9aed"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "linote.fr",
+                "www.coolmuster.com",
+                "www.juststream.me",
+                "www.tamilyogi.la",
+                "fr.amoyshare.com",
+                "ytbdownload.com",
+                "www.majorgeeks.com",
+                "missavx.com",
+                "hianime.to",
+                "westream.to",
+                "thaipornhd.com",
+                "www.glarysoft.com",
+                "fr.thejigsawpuzzles.com",
+                "rtgallery.net",
+                "www.alternativesante.fr",
+                "www.goojara.is",
+                "babesource.com",
+                "fmoviesz.sc",
+                "9animetv.to",
+                "www.manuels.solutions"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/facebook\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 25,
+            "prevalence": 0.00252,
+            "cnames": [],
+            "responseHashes": [
+                "768d97ec0916217ae82c70aeda3a61b9b0dab344edc4a3240a4f7cd94af00307"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.quizz.biz",
+                "live-tennis.eu",
+                "www.coolmuster.com",
+                "www.tamilyogi.la",
+                "hianime.to",
+                "9animetv.to",
+                "fr.amoyshare.com",
+                "fastercapital.com",
+                "www.goojara.is",
+                "www.alternativesante.fr",
+                "rtgallery.net",
+                "babesource.com",
+                "www.amoyshare.com",
+                "fr.thejigsawpuzzles.com",
+                "linote.fr",
+                "www.glarysoft.com",
+                "westream.to",
+                "www.juststream.me",
+                "missavx.com",
+                "www.majorgeeks.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/reddit\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "dadbb59b37bfea4c78c6e15c8cbb96dfba84526e43a0767dc244fd062a841aba"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "9animetv.to",
+                "babesource.com",
+                "fmoviesz.sc",
+                "fr.amoyshare.com",
+                "hianime.to",
+                "thaipornhd.com",
+                "westream.to",
+                "www.amoyshare.com",
+                "www.coolmuster.com",
+                "www.majorgeeks.com",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/sharethis\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 21,
+            "prevalence": 0.00212,
+            "cnames": [],
+            "responseHashes": [
+                "9a83c65bdd0ff9488af9d25720686457ea7295c9c44f9f1d285a0c9ec89bab99"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "babesource.com",
+                "www.tamilyogi.la",
+                "www.alternativesante.fr",
+                "www.goojara.is",
+                "www.majorgeeks.com",
+                "ytbdownload.com",
+                "rtgallery.net",
+                "fastercapital.com",
+                "www.coolmuster.com",
+                "hianime.to",
+                "linote.fr",
+                "fr.amoyshare.com",
+                "www.glarysoft.com",
+                "www.juststream.me",
+                "thaipornhd.com",
+                "9animetv.to",
+                "fr.thejigsawpuzzles.com",
+                "wwv.cuevana.to",
+                "www.quizz.biz",
+                "missavx.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/button\\/buttons\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "w",
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 10,
+                "Date.prototype.getTime": 10,
+                "Document.cookie getter": 10,
+                "NavigatorUAData.prototype.brands": 6,
+                "NavigatorUAData.prototype.platform": 6,
+                "NavigatorUAData.prototype.getHighEntropyValues": 6
+            },
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "c06ec88641687c7f653a3e6b3a601130400dc1698afe67c531d693406cd99440"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "caen.fr",
+                "fanfox.net",
+                "fr.ancensored.com",
+                "www.afpa.fr",
+                "www.jaitoutcompris.com",
+                "www.legrog.org",
+                "www.mangatown.com",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/loader\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s",
+                "ss"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3,
+                "Navigator.prototype.appName": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "65b86fc12f3832f3046d33dca119811267d118182b6e504d3862d8556e3cc71b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__unam": {
+                    "ttl": 23533004,
+                    "length": 29,
+                    "prevalence": 0.000302999697000303,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com",
+                "www.scam-detector.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/button\\/async-buttons\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "window.name": 10,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "c92c3814d5c8ef8bd016d9cb4dec18ff0dfca4a3f2b4968207888383095e0197"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "caen.fr",
+                "fanfox.net",
+                "fr.ancensored.com",
+                "www.afpa.fr",
+                "www.jaitoutcompris.com",
+                "www.legrog.org",
+                "www.mangatown.com",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/button\\/css\\/buttons-secure\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "95dc1b83a7c030dd13ab3e29df921f10e04208b28734f172ea232854264c3b05"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "caen.fr",
+                "fanfox.net",
+                "fr.ancensored.com",
+                "www.afpa.fr",
+                "www.jaitoutcompris.com",
+                "www.legrog.org",
+                "www.mangatown.com",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/pview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "l"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "Hm_lvt_59317e5849f38e9ec82d03f6fb1a84d7": 0.000100999899000101,
+                "Hm_lpvt_59317e5849f38e9ec82d03f6fb1a84d7": 0.000100999899000101,
+                "Hm_lvt_40da850f11b3ae73db643f7a577c2c60": 0.000100999899000101,
+                "Hm_lpvt_40da850f11b3ae73db643f7a577c2c60": 0.000100999899000101
+            },
+            "exampleSites": [
+                "ancensored.com",
+                "caen.fr",
+                "fanfox.net",
+                "fr.ancensored.com",
+                "www.afpa.fr",
+                "www.jaitoutcompris.com",
+                "www.legrog.org",
+                "www.mangatown.com",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure5x\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "61fb5ada883b89031df45d3c5d34d106b47ef3610964a4150e8b4c3ad364c35b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com",
+                "www.afpa.fr",
+                "www.legrog.org",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure5x\\/js\\/stcommon\\.1f60705adac788a51a8240cf535237b0\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "2d200d90966b8380a648972d71130785371751cf24bb7398f2854be23afb4a65"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com",
+                "www.afpa.fr",
+                "www.legrog.org",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure5x\\/js\\/st\\.d46c567ef2d922f9ad89eca462444ab6\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "5d4a01feb41d13176ee653921d64c3f479fc698fe9e5f18e217296b756835900"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com",
+                "www.afpa.fr",
+                "www.legrog.org",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/disc\\/css\\/hoverbuttons\\.ab4b82703a55102eddefc01bb815f2ec\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c733d9703260b1f2950bfe375cc83064458fd0350c0b8987122e5441b756452c"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/disc\\/js\\/hoverbuttons\\.035267d71d894482eb413e5bea488ff5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ca7adfed58ae7c5d3a514891f855a8316e7e7f5d65cd903d8c96bc6ef1bc2239"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/disc\\/images\\/mini_Top_Cap\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "583ff7f1ed27d8c5c0927a99f60c455d3562ff8278fea919e3f47409a7344d6f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/disc\\/images\\/mini_BG\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1696e748b0b1b078b0e1eb68722e2b4a8f2578ffea41bb6e285408c865625a9d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/disc\\/images\\/mini_Bottom_Cap\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "21e00318992bba7098b15ba796211109e834595d31141a362ba7f9d145b21420"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/facebook_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c2c42136f43a28599c5b6b810653b070787865c7f899c564e9e24926576fee71"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/twitter_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "70eccff462770396939013e653c1087f32b6e9bf2baa91dc2e0d3a051be70168"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/googleplus_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2229cfde42969c50a86112023d8a66e0c7caf00fb4252ffae45ead5e15fcdf7c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/reddit_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d104c66773bc47015d33b4200896d3c4646e5b54149c3fa8284b98d2b4c3528e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/pinterest_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "db448e9856e01265779cc5032ee53323eef76ddc12a2b180b290200bb09c8d61"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/linkedin_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "91832dd0430ec0feca31e4f008e6dd71db9764ee1e080e9a0a80c8340b4f4b27"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/email_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e26d8557ab64ce50c2e88c804463c25c3cfc8aa15ee6d70af951dba8990dd704"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/sharethis_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5427720c3716b7570521dcca4fa5c5cf9479b63fd99783a7aa1b43359f80783d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "fr.ancensored.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/email\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "5f5012132c752db2433e17712d91ef8689f1bc95167b2720e23224c2ae62e009"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "babesource.com",
+                "fastercapital.com",
+                "fr.thejigsawpuzzles.com",
+                "linote.fr",
+                "live-tennis.eu",
+                "missavx.com",
+                "rtgallery.net",
+                "wwv.cuevana.to",
+                "www.alternativesante.fr",
+                "www.goojara.is",
+                "www.juststream.me",
+                "www.tamilyogi.la"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/pinterest\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "efc737b4f58cfe73a9bd0e57d7570365701381da31e628b269e7217a0ce3359d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "babesource.com",
+                "linote.fr",
+                "rtgallery.net",
+                "wwv.cuevana.to",
+                "www.goojara.is",
+                "www.juststream.me",
+                "www.tamilyogi.la"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "a8be6d04466f8a2b2117e386c68248fa254b675420c346a10ffaf47ee1c4e533"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caen.fr",
+                "fanfox.net",
+                "www.jaitoutcompris.com",
+                "www.mangatown.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure\\/js\\/st\\.3b9f3f69dc50facea4e7ccac2c236448\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "3d0d76fdc0b6003bf282c7c3ad68d43c77488139d1b3f05c24dea95fc5729c1d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caen.fr",
+                "fanfox.net",
+                "www.jaitoutcompris.com",
+                "www.mangatown.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure\\/js\\/local\\/fr\\/message\\.aa62a365cfe8afe4816e26a3e24a6f15\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "4d8a91c61c7a1e152212e2625d32137a23e41a48bd03552c895dd06c1b0a614e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caen.fr",
+                "fanfox.net",
+                "www.jaitoutcompris.com",
+                "www.mangatown.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/linkedin\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "cb8c2b19fd9b56c41db14bd71b5c0616c1ba4e99b08c8e75084cf695f74b7120"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fastercapital.com",
+                "live-tennis.eu",
+                "rtgallery.net",
+                "www.coolmuster.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/whatsapp\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.00162,
+            "cnames": [],
+            "responseHashes": [
+                "847eb36b4dc4b05f94052dcd98077319e74d882334a106bb9ca451ba211c9c2c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fastercapital.com",
+                "fmoviesz.sc",
+                "fr.amoyshare.com",
+                "fr.thejigsawpuzzles.com",
+                "missavx.com",
+                "rtgallery.net",
+                "thaipornhd.com",
+                "westream.to",
+                "wwv.cuevana.to",
+                "www.amoyshare.com",
+                "www.goojara.is",
+                "www.juststream.me",
+                "www.manuels.solutions",
+                "www.quizz.biz",
+                "www.tamilyogi.la",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/arrow_left\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.00182,
+            "cnames": [],
+            "responseHashes": [
+                "5c833b1818762f1e134fbb158447fb0b92f2b018b15aa36f2e2405213f830d38"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fastercapital.com",
+                "fr.amoyshare.com",
+                "linote.fr",
+                "missavx.com",
+                "rtgallery.net",
+                "thaipornhd.com",
+                "w3schools.tech",
+                "wwv.cuevana.to",
+                "www.alternativesante.fr",
+                "www.amoyshare.com",
+                "www.coolmuster.com",
+                "www.goojara.is",
+                "www.juststream.me",
+                "www.majorgeeks.com",
+                "www.manuels.solutions",
+                "www.quizz.biz",
+                "www.tamilyogi.la",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/arrow_right\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.00182,
+            "cnames": [],
+            "responseHashes": [
+                "1bae747c7fd090f56608956a97c870391e1c43f89d24d5766129b75628985c1e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fastercapital.com",
+                "fr.amoyshare.com",
+                "linote.fr",
+                "missavx.com",
+                "rtgallery.net",
+                "thaipornhd.com",
+                "w3schools.tech",
+                "wwv.cuevana.to",
+                "www.alternativesante.fr",
+                "www.amoyshare.com",
+                "www.coolmuster.com",
+                "www.goojara.is",
+                "www.juststream.me",
+                "www.majorgeeks.com",
+                "www.manuels.solutions",
+                "www.quizz.biz",
+                "www.tamilyogi.la",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/messenger\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "2986551fd9e82929eabb8cba7c44f74a28d8496c744893432f067b320dff55da"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fmoviesz.sc",
+                "westream.to",
+                "www.alternativesante.fr",
+                "www.manuels.solutions",
+                "www.quizz.biz",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/js\\/666abf25f75dab0019adea63\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buttons-config"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d74427c1ea2a7647df56fe12fcfaa44cfd8286c2fac61852b30c3c60ec4e2733"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amoyshare.com",
+                "www.amoyshare.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/blogger\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2b68a13f6d142fc5e69efc0ca98c093d894325ee0d2064463ca0da80a6da2c4b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amoyshare.com",
+                "www.amoyshare.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/js\\/65af1f192bb34700194aa378\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buttons-config"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "682d3cb0eff8044921ade0669dc36ef80df2d7c0aa26fd75e5570d7fc5337975"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cuevana.to",
+                "www.goojara.is",
+                "www.juststream.me",
+                "www.tamilyogi.la"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Third-Party Analytics Marketing",
+        "Social - Share",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.00626,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9099099099099099
+        },
+        {
+            "domain": "consentframework.com",
+            "prevalence": 0.06306306306306306
+        },
+        {
+            "domain": "animekai.me",
+            "prevalence": 0.009009009009009009
+        },
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 0.009009009009009009
+        },
+        {
+            "domain": "consentmanager.net",
+            "prevalence": 0.009009009009009009
+        }
+    ],
+    "types": {
+        "Script": 137,
+        "XHR": 68,
+        "Image": 202,
+        "Stylesheet": 12,
+        "Document": 10
+    },
+    "nameservers": [
+        "ns-1529.awsdns-63.org",
+        "ns-1617.awsdns-10.co.uk",
+        "ns-378.awsdns-47.com",
+        "ns-773.awsdns-32.net"
+    ]
+}

@@ -1,0 +1,248 @@
+{
+    "domain": "marketo.com",
+    "owner": {
+        "name": "Adobe Inc.",
+        "displayName": "Adobe",
+        "privacyPolicy": "https://www.adobe.com/privacy/marketing-cloud.html",
+        "url": "http://adobe.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000812,
+    "sites": 8,
+    "subdomains": [
+        "app-sj15",
+        "app-ab19",
+        "app-ab04",
+        "app-sj01",
+        "sjrtp2-cdn",
+        "abrtp2-cdn",
+        "sjrtp8-cdn",
+        "sjrtp8"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "marketo\\.com\\/js\\/forms2\\/js\\/forms2\\.min\\.js",
+            "cookies": 0.000406,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app-sj15",
+                "app-ab19",
+                "app-ab04",
+                "app-sj01"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Event.prototype.timeStamp": 2,
+                "Element.prototype.getClientRects": 2,
+                "Document.cookie getter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "1d8f29fefcf1c3c78ed278f87273b54e272722c4672bbcfd903092881e0fd3ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mariadb.com",
+                "woodbine.com",
+                "www.heritage.org",
+                "www.mercurymarine.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/rtp-api\\/v1\\/rtp\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 2,
+            "subdomains": [
+                "sjrtp2-cdn",
+                "abrtp2-cdn",
+                "sjrtp8-cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.appName": 1,
+                "window.localStorage": 1,
+                "Document.cookie setter": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "a9b4f4af5deef37a216fb794948381d1672a02dd396f19e2b9ee17144d8d904c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "trwv.uid": {
+                    "ttl": 63072003,
+                    "length": 33,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "trwsa.sid": {
+                    "ttl": 1803,
+                    "length": 33,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "trwv.eml": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "trwsb.stu": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "trwsb.cpv": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "trwv.crd": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "trwv.vc": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "trwv.lvd": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "_ie_eml": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "_ie_cpn": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "trwv.cvd": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "trwsb.sid": {
+                    "ttl": 3,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elastic.co",
+                "www.fidelity.ca",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/gw1\\/rtp\\/api\\/v1_1\\/visitor",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sjrtp8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "df704a751e9f19ea44e9cda8e7d22519261a11c7b104474a096e2a384e838282"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nokia.com",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/gw1\\/msg",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sjrtp8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "424acfb08ce2af3e95bb43efae93136b12951cd8d32a069f7f0f1a3d6bd3773b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nokia.com",
+                "www.nokia.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Third-Party Analytics Marketing",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.000711,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.84
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.08
+        },
+        {
+            "domain": "ensighten.com",
+            "prevalence": 0.04
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.04
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns2.mktdns.com",
+        "ns1.marketo.com"
+    ]
+}

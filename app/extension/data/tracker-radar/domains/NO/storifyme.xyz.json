@@ -1,0 +1,84 @@
+{
+    "domain": "storifyme.xyz",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "storifyme\\.xyz\\/static\\/web-components\\/storifyme-elements\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fc6ef926ea120f207f0f0df8b5b3942c4ba5483dbe7210f96cfad48f212ed1aa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faz.net",
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "storifyme\\.xyz\\/static\\/web-components\\/storifyme-elements-v2\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "15322e36a38c84f7d3dec592d4cebf4933c6977f982b16c5e5f1f4692f48f4ec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faz.net",
+                "www.smh.com.au",
+                "www.zeit.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "storifyme.com",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Script": 5
+    },
+    "nameservers": [
+        "coco.ns.cloudflare.com",
+        "will.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,145 @@
+{
+    "domain": "metaffiliation.com",
+    "owner": {
+        "name": "c2b s.a.",
+        "displayName": "c2b"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00252,
+    "sites": 25,
+    "subdomains": [
+        "action",
+        "img"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "metaffiliation\\.com\\/trk\\.php",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "action"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loterieplus.com",
+                "www.pronosoft.com",
+                "www.wiflix.al"
+            ]
+        },
+        {
+            "rule": "metaffiliation\\.com\\/11\\/75281\\/img_19_5_29\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9a0aabcb4f2a26af4cc42985991bfa13061837e1bb17ff57f9b847a2773357e3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loterieplus.com",
+                "www.pronosoft.com"
+            ]
+        },
+        {
+            "rule": "metaffiliation\\.com\\/na\\/na\\/res\\/trk\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "db8dd0a709db0d88b1b75826f568e1a3c827462acbb38897a54be17e3df4bc31"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "petitcitron.com",
+                "www.tirage-euromillions.net",
+                "www2.u-trail.com"
+            ]
+        },
+        {
+            "rule": "metaffiliation\\.com\\/kwanko-sdk-iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2d43c04a2d2f68039cedc241e492503a5e0d93a2cafb3be130993b3e3dfd8d4a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tirage-euromillions.net",
+                "www.turfomania.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.42857142857142855
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.03571428571428571
+        },
+        {
+            "domain": "pmu.fr",
+            "prevalence": 0.03571428571428571
+        }
+    ],
+    "types": {
+        "Image": 5,
+        "Script": 3,
+        "Document": 2
+    },
+    "nameservers": [
+        "dns200.anycast.me",
+        "ns200.anycast.me"
+    ]
+}

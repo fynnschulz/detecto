@@ -1,0 +1,324 @@
+{
+    "domain": "futurecdn.net",
+    "owner": {
+        "name": "Future Plc",
+        "displayName": "Future"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000707,
+    "sites": 7,
+    "subdomains": [
+        "champagne",
+        "bordeaux",
+        "freyr",
+        "search-api.fie",
+        "slice.vanilla"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "futurecdn\\.net\\/champagne\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "champagne"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "Document.cookie getter": 6,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1,
+                "PerformanceTiming.prototype.navigationStart": 6
+            },
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "8b9322bad4979006769c065eb84a60e8a22a40c0e6526b7d5ea74b8e676506e0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "usprivacy": {
+                    "ttl": 31536004,
+                    "length": 4,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomshardware.com",
+                "www.digitalcameraworld.com",
+                "www.livescience.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/bordeaux\\.js",
+            "cookies": 0.000707,
+            "fingerprinting": 2,
+            "subdomains": [
+                "bordeaux"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 7,
+                "Document.cookie getter": 7,
+                "Navigator.prototype.userAgent": 7,
+                "Navigator.prototype.connection": 7,
+                "window.sessionStorage": 7,
+                "Date.prototype.getTime": 7,
+                "Document.cookie setter": 7,
+                "window.localStorage": 4
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "2aa3c1fa6d17027660215e93958034e636f43c301eeb5c20a72ea47ffe9ce032"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "h_id": {
+                    "ttl": 86403,
+                    "length": 32,
+                    "prevalence": 0.000706999293000707,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomshardware.com",
+                "www.digitalcameraworld.com",
+                "www.livescience.com",
+                "www.techspot.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/freyr\\.js",
+            "cookies": 0.000606,
+            "fingerprinting": 1,
+            "subdomains": [
+                "freyr"
+            ],
+            "apis": {
+                "Document.cookie getter": 7,
+                "Date.prototype.getTime": 6,
+                "Document.cookie setter": 6,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "969f5664819439a5eb6de7584272643ec14d98581f96b827a1d9ac24d9abfa5c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "usprivacy": {
+                    "ttl": 31536002,
+                    "length": 4,
+                    "prevalence": 0.000605999394000606,
+                    "uniqueness": 0.16666666666666666
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomshardware.com",
+                "www.digitalcameraworld.com",
+                "www.livescience.com",
+                "www.techspot.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/merchant-domains\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "0bc93fdc21609713cfc02d97a730c75de1ce460efaa0c264b6479b6f89dce501",
+                "b5b35cf45145f06c703902f02a773cd6ff4d1aec024dc1d12111853da5428d4c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomshardware.com",
+                "www.livescience.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/13-4-6\\/js\\/externals\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slice.vanilla"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "e9655cf4d062b1833393afcb7cd37044219d6467f524201b6147d2508618d002"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digitalcameraworld.com",
+                "www.livescience.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/js\\/w\\/es6\\/17\\.10\\.14-cc88f130fbc9fd057f8c65058bc216e9930999f2\\/responsive\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "89cd6eba4bb45881dcf596ac51555f33b582f516ebdd02ccc2c0d09de6ee3f76"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digitalcameraworld.com",
+                "www.livescience.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/13-4-6\\/js\\/localeSelector\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "slice.vanilla"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9d355872e64ecbb8700692990001d4e5350ce79db3bf58da0f81f9e4fe4b0d84"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digitalcameraworld.com",
+                "www.tomshardware.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/css\\/browser\\/17\\.10\\.14-cc88f130fbc9fd057f8c65058bc216e9930999f2\\/responsive\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "acedf233e50a172946603231648495eec6eae0bf489ac805136c6d1edfae1537"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "livescience.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/translations\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d4275afc9c31d9b01dabe1eb90722f46af749daa375c613e7b75a3696f5c2895"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "livescience.com",
+                "www.windowscentral.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000707,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9636363636363636
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.01818181818181818
+        },
+        {
+            "domain": "future.net.uk",
+            "prevalence": 0.01818181818181818
+        }
+    ],
+    "types": {
+        "Script": 32,
+        "Fetch": 5,
+        "Stylesheet": 4
+    },
+    "nameservers": [
+        "ns-1028.awsdns-00.org",
+        "ns-1944.awsdns-51.co.uk",
+        "ns-407.awsdns-50.com",
+        "ns-554.awsdns-05.net"
+    ]
+}

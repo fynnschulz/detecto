@@ -1,0 +1,932 @@
+{
+    "domain": "kargo.com",
+    "owner": {
+        "name": "Kargo Global, Inc.",
+        "displayName": "Kargo"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.0533,
+    "sites": 525,
+    "subdomains": [
+        "krk2",
+        "crb",
+        "socialcanvas-cdn",
+        "standout-cdn",
+        "socialcanvas-api",
+        "kds-pixel",
+        "storage.cloud"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/prebid",
+            "cookies": 0.0205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "krk2"
+            ],
+            "apis": {},
+            "sites": 203,
+            "prevalence": 0.0206,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+                "7557d6ce696e78a57e6b1225da834b948d7341f433399c72eb347cf681188adc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "forums.macrumors.com",
+                "osxdaily.com",
+                "www.merriam-webster.com",
+                "247wallst.com",
+                "pepperscale.com",
+                "smartcanucks.ca",
+                "www.color-meanings.com",
+                "empressofdirt.net",
+                "www.mediaite.com",
+                "morningchores.com",
+                "chocolatecoveredkatie.com",
+                "copykat.com",
+                "news.meaww.com",
+                "www.pressurecookrecipes.com",
+                "www.mashed.com",
+                "insider-gaming.com",
+                "www.bolde.com",
+                "mechanicbase.com",
+                "www.themuse.com",
+                "www.justataste.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/event\\/timeout",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "krk2"
+            ],
+            "apis": {},
+            "sites": 162,
+            "prevalence": 0.0164,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "forums.macrumors.com",
+                "health.usnews.com",
+                "hollywoodlife.com",
+                "nypost.com",
+                "osxdaily.com",
+                "screenrant.com",
+                "twinfinite.net",
+                "variety.com",
+                "www.businessinsider.com",
+                "www.digitaltrends.com",
+                "www.wideopencountry.com",
+                "www.thereciperebel.com",
+                "www.motor1.com",
+                "simply-delicious-food.com",
+                "www.thedailybeast.com",
+                "www.behindthevoiceactors.com",
+                "www.resetera.com",
+                "www.usmagazine.com",
+                "www.howtoisolve.com",
+                "roadtripalberta.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/dinitsync",
+            "cookies": 0.0105,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crb"
+            ],
+            "apis": {},
+            "sites": 106,
+            "prevalence": 0.0108,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "f5fc402d8142318e11d2215dd46f8d591ad5a86bc025781b50a3696358e2f476",
+                "d92428450d845e30b313e6eeaddcf90254edf21f417ab5dc7992e8fbf775829b",
+                "0be96e39659e2b3b872a5bd43e052c649909404bd0f9369ba140807c6a7c26f5",
+                "8021a8b78a3da7b6b33ec2593239a30e20b930545e5ecfcb30b7ca1cc56aedf0"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "people.com",
+                "www.allrecipes.com",
+                "www.foodnetwork.com",
+                "www.gamespot.com",
+                "www.investopedia.com",
+                "www.lifewire.com",
+                "www.thespruce.com",
+                "www.verywellhealth.com",
+                "megamitensei.fandom.com",
+                "bindingofisaacrebirth.fandom.com",
+                "ageofempires.fandom.com",
+                "deltarune.fandom.com",
+                "coralisland.fandom.com",
+                "ffxiclopedia.fandom.com",
+                "borderlands.fandom.com",
+                "fire.fandom.com",
+                "blue-prince.fandom.com",
+                "slay-the-spire.fandom.com",
+                "baldursgate.fandom.com",
+                "nomanssky.fandom.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/js\\/rh\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "socialcanvas-cdn",
+                "standout-cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 24,
+                "Date.prototype.getTime": 24,
+                "Navigator.prototype.userAgent": 24,
+                "window.localStorage": 24,
+                "Document.cookie getter": 7,
+                "window.innerHeight": 5,
+                "window.innerWidth": 1
+            },
+            "sites": 24,
+            "prevalence": 0.00244,
+            "cnames": [],
+            "responseHashes": [
+                "c86ec868fbae9af797ef4af911d5b77689ddf893c4bc838c57aac52551c535f7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.cheatsheet.com",
+                "www.solveyourtech.com",
+                "www.supercheats.com",
+                "www.eliteprospects.com",
+                "www.iphoneincanada.ca",
+                "en.uesp.net",
+                "www.distractify.com",
+                "anythingtranslate.com",
+                "www.travelmath.com",
+                "www.op.gg",
+                "immigrationnewscanada.ca",
+                "chocolatecoveredkatie.com",
+                "recipeteacher.com",
+                "thecoconutmama.com",
+                "www.foodiecrush.com",
+                "www.greenmatters.com",
+                "okmagazine.com",
+                "www.chamberofcommerce.com",
+                "awoiaf.westeros.org",
+                "www.sportingnews.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/js\\/scpb8\\.js",
+            "cookies": 0.00213,
+            "fingerprinting": 2,
+            "subdomains": [
+                "standout-cdn"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 23,
+                "NavigatorUAData.prototype.platform": 23,
+                "window.sessionStorage": 24,
+                "Date.prototype.getTime": 22,
+                "Navigator.prototype.cookieEnabled": 21,
+                "Document.cookie getter": 21,
+                "window.localStorage": 21,
+                "Document.cookie setter": 21,
+                "window.innerWidth": 21,
+                "window.innerHeight": 21,
+                "Navigator.prototype.doNotTrack": 21,
+                "Navigator.prototype.userAgent": 21,
+                "Navigator.prototype.language": 21,
+                "Navigator.prototype.webdriver": 21,
+                "Screen.prototype.width": 21,
+                "Screen.prototype.height": 21
+            },
+            "sites": 26,
+            "prevalence": 0.00264,
+            "cnames": [],
+            "responseHashes": [
+                "91b605b2b9f0571995f9756ca199d51f059c479411fe9394617fede341ae3a2c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sharedid": {
+                    "ttl": 2419221,
+                    "length": 36,
+                    "prevalence": 0.0021317632727641863,
+                    "uniqueness": 1
+                },
+                "sharedid_cst": {
+                    "ttl": 2419221,
+                    "length": 16,
+                    "prevalence": 0.0021317632727641863,
+                    "uniqueness": 0.23809523809523808
+                },
+                "pbjs-unifiedid": {
+                    "ttl": 5184032,
+                    "length": 150,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid_cst": {
+                    "ttl": 5184032,
+                    "length": 16,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.travelmath.com",
+                "www.supercheats.com",
+                "www.op.gg",
+                "recipeteacher.com",
+                "anythingtranslate.com",
+                "awoiaf.westeros.org",
+                "www.distractify.com",
+                "stylecaster.com",
+                "www.koreaboo.com",
+                "okmagazine.com",
+                "www.solveyourtech.com",
+                "immigrationnewscanada.ca",
+                "www.sportingnews.com",
+                "radaronline.com",
+                "astrologyking.com",
+                "www.cheatsheet.com",
+                "chocolatecoveredkatie.com",
+                "soaps.sheknows.com",
+                "www.greenmatters.com",
+                "www.iphoneincanada.ca"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 26,
+            "prevalence": 0.00264,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stylecaster.com",
+                "www.cheatsheet.com",
+                "astrologyking.com",
+                "radaronline.com",
+                "www.travelmath.com",
+                "www.op.gg",
+                "www.supercheats.com",
+                "chocolatecoveredkatie.com",
+                "immigrationnewscanada.ca",
+                "soaps.sheknows.com",
+                "thecoconutmama.com",
+                "okmagazine.com",
+                "theblast.com",
+                "recipeteacher.com",
+                "anythingtranslate.com",
+                "www.sportingnews.com",
+                "en.uesp.net",
+                "www.solveyourtech.com",
+                "www.chamberofcommerce.com",
+                "www.foodiecrush.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 26,
+            "prevalence": 0.00264,
+            "cnames": [],
+            "responseHashes": [
+                "e9b3d6871613a98bf30bcbc5e497e1380d96691f7a913aa26ad422ca34eccb51",
+                "5f83dfa0e991ae8f1c9767a554534e761d5633bd8c66e3ae2965849b8b80de2d",
+                "a9ced91a6b94c1ae876eebbed772cc624d351fef153c00a9fd791eec3a29bb04",
+                "f5ed160df1ebd3a54e1db4368c6340c211baa0dabda1ec3adccb7d90789ed742",
+                "8d4567ac9b3ffbcf2a1555e5ffb97bfdbd8cee7bfe6994ed4540e9d78cb123a1",
+                "98e60b1540e36c678fda7dfa11e776924b4d2f147ccb9a5c54d414ba9f777c56",
+                "365c422aacb5a009980fbcf4ffc05dfac1aa12b77743eabfb15944ee3a4d0bac",
+                "0a777beadb7ff564c44662b3c23661e1bd043063d0caa2f8fcc82846155c4280",
+                "92079ea3a78304d847cf5a2905b44572a2f4d6aef76387f69a38ed353b77c85b",
+                "6cb0f768328e8cdb6128ff16225c74322225b91de868db3d0576a9ffc1f2d882",
+                "46b7b05d29e73e53bb64d5b53d2775812ba3e2dd836f3e746c9ddbceb80b890b",
+                "b855bfeee8829fe9bbeaa51827d853d55d97a19f50a58ffdfc1287550a659d4f",
+                "cb648234f8b7e4563f6139b34e901709294fd11ce2e3f7e8f40119d4681acb25",
+                "7cd91022d7008ccb3d7958d307ec84b13fea00d01762d0ef5cfd6a672344d381"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.supercheats.com",
+                "awoiaf.westeros.org",
+                "www.cheatsheet.com",
+                "radaronline.com",
+                "stylecaster.com",
+                "www.distractify.com",
+                "theblast.com",
+                "www.eliteprospects.com",
+                "immigrationnewscanada.ca",
+                "astrologyking.com",
+                "www.koreaboo.com",
+                "soaps.sheknows.com",
+                "www.chamberofcommerce.com",
+                "www.travelmath.com",
+                "www.op.gg",
+                "www.foodiecrush.com",
+                "www.solveyourtech.com",
+                "www.iphoneincanada.ca",
+                "en.uesp.net",
+                "recipeteacher.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/rlg\\/ev",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 25,
+            "prevalence": 0.00254,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "soaps.sheknows.com",
+                "www.op.gg",
+                "www.supercheats.com",
+                "www.solveyourtech.com",
+                "chocolatecoveredkatie.com",
+                "www.greenmatters.com",
+                "www.koreaboo.com",
+                "astrologyking.com",
+                "www.chamberofcommerce.com",
+                "stylecaster.com",
+                "www.sportingnews.com",
+                "www.travelmath.com",
+                "www.distractify.com",
+                "theblast.com",
+                "radaronline.com",
+                "okmagazine.com",
+                "www.foodiecrush.com",
+                "www.cheatsheet.com",
+                "thecoconutmama.com",
+                "www.eliteprospects.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/rlg\\/ev",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 25,
+            "prevalence": 0.00254,
+            "cnames": [],
+            "responseHashes": [
+                "843ac01149cced785dfebd0028d3b03ba78e286e1c6f9517ebfcdb609d97af4c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.eliteprospects.com",
+                "recipeteacher.com",
+                "okmagazine.com",
+                "thecoconutmama.com",
+                "www.op.gg",
+                "radaronline.com",
+                "awoiaf.westeros.org",
+                "www.solveyourtech.com",
+                "www.chamberofcommerce.com",
+                "stylecaster.com",
+                "soaps.sheknows.com",
+                "www.sportingnews.com",
+                "chocolatecoveredkatie.com",
+                "www.travelmath.com",
+                "theblast.com",
+                "www.supercheats.com",
+                "anythingtranslate.com",
+                "astrologyking.com",
+                "www.greenmatters.com",
+                "www.koreaboo.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/img\\/close-btn-desktop\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "standout-cdn"
+            ],
+            "apis": {},
+            "sites": 25,
+            "prevalence": 0.00254,
+            "cnames": [],
+            "responseHashes": [
+                "85f708d78d1a2f869e8a8f43764a5b74bb376980aaeff9e56a54335b199df048"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "okmagazine.com",
+                "theblast.com",
+                "www.chamberofcommerce.com",
+                "thecoconutmama.com",
+                "www.koreaboo.com",
+                "astrologyking.com",
+                "recipeteacher.com",
+                "immigrationnewscanada.ca",
+                "www.eliteprospects.com",
+                "www.solveyourtech.com",
+                "www.op.gg",
+                "www.iphoneincanada.ca",
+                "www.sportingnews.com",
+                "www.cheatsheet.com",
+                "awoiaf.westeros.org",
+                "www.distractify.com",
+                "anythingtranslate.com",
+                "soaps.sheknows.com",
+                "radaronline.com",
+                "www.travelmath.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/request\\/adr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 22,
+            "prevalence": 0.00223,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.op.gg",
+                "www.solveyourtech.com",
+                "stylecaster.com",
+                "recipeteacher.com",
+                "www.travelmath.com",
+                "www.koreaboo.com",
+                "www.greenmatters.com",
+                "anythingtranslate.com",
+                "www.cheatsheet.com",
+                "www.distractify.com",
+                "www.foodiecrush.com",
+                "awoiaf.westeros.org",
+                "okmagazine.com",
+                "radaronline.com",
+                "thecoconutmama.com",
+                "astrologyking.com",
+                "chocolatecoveredkatie.com",
+                "www.supercheats.com",
+                "www.chamberofcommerce.com",
+                "www.iphoneincanada.ca"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/request\\/adr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 22,
+            "prevalence": 0.00223,
+            "cnames": [],
+            "responseHashes": [
+                "843ac01149cced785dfebd0028d3b03ba78e286e1c6f9517ebfcdb609d97af4c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "astrologyking.com",
+                "www.travelmath.com",
+                "www.supercheats.com",
+                "www.iphoneincanada.ca",
+                "soaps.sheknows.com",
+                "recipeteacher.com",
+                "www.distractify.com",
+                "awoiaf.westeros.org",
+                "chocolatecoveredkatie.com",
+                "www.cheatsheet.com",
+                "www.greenmatters.com",
+                "www.foodiecrush.com",
+                "www.chamberofcommerce.com",
+                "anythingtranslate.com",
+                "okmagazine.com",
+                "www.solveyourtech.com",
+                "thecoconutmama.com",
+                "www.op.gg",
+                "www.koreaboo.com",
+                "stylecaster.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/prebid",
+            "cookies": 0.0159,
+            "fingerprinting": 0,
+            "subdomains": [
+                "krk2"
+            ],
+            "apis": {},
+            "sites": 160,
+            "prevalence": 0.0162,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+                "befa94db27d7eaa7e28b4458a2bd1b10bdb65d25dcda03c03db88d6b4e7109e1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "health.usnews.com",
+                "hollywoodlife.com",
+                "knowyourmeme.com",
+                "nypost.com",
+                "screenrant.com",
+                "slate.com",
+                "time.com",
+                "twinfinite.net",
+                "tvtropes.org",
+                "variety.com",
+                "www.icy-veins.com",
+                "www.makeuseof.com",
+                "www.britannica.com",
+                "www.themarysue.com",
+                "eldenringnightreign.wiki.fextralife.com",
+                "gamerjournalist.com",
+                "en.uesp.net",
+                "www.supercheats.com",
+                "www.dailyfaceoff.com",
+                "www.pocket-lint.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/event\\/timeout",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "krk2"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.00183,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anythingtranslate.com",
+                "astrologyking.com",
+                "chocolatecoveredkatie.com",
+                "okmagazine.com",
+                "people.howstuffworks.com",
+                "radaronline.com",
+                "recipeteacher.com",
+                "science.howstuffworks.com",
+                "soaps.sheknows.com",
+                "thecoconutmama.com",
+                "www.chamberofcommerce.com",
+                "www.cheatsheet.com",
+                "www.foodiecrush.com",
+                "www.iphoneincanada.ca",
+                "www.koreaboo.com",
+                "www.solveyourtech.com",
+                "www.supercheats.com",
+                "www.travelmath.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/dsync\\/PrebidServer",
+            "cookies": 0.00832,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crb"
+            ],
+            "apis": {},
+            "sites": 85,
+            "prevalence": 0.00863,
+            "cnames": [],
+            "responseHashes": [
+                "10f9bfa42bb96c99729c9b2fee669803ad9c6fcd434d8d7d60a8dc8f5f7cc331",
+                "c956a8bbf43bb56f60d1beefcc5a70f2cb0725083a00e8a0daf423176509fd18"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thoughtcatalog.com",
+                "www.britannica.com",
+                "nytcrossword.org",
+                "www.indianhealthyrecipes.com",
+                "www.almarsguides.com",
+                "homesteadandchill.com",
+                "www.mychemicalfreehouse.net",
+                "bulbagarden.net",
+                "www.logicprohelp.com",
+                "gamerjournalist.com",
+                "retail-insider.com",
+                "www.thereciperebel.com",
+                "pickerwheel.com",
+                "www.electronicshub.org",
+                "www.slashfilm.com",
+                "cararac.com",
+                "www.cruisersforum.com",
+                "www.sudbury.com",
+                "www.techjunkie.com",
+                "www.ramforum.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/dsync\\/amazon",
+            "cookies": 0.00142,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crb"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.00142,
+            "cnames": [],
+            "responseHashes": [
+                "10f9bfa42bb96c99729c9b2fee669803ad9c6fcd434d8d7d60a8dc8f5f7cc331"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "norton.com",
+                "draxe.com",
+                "luminohealth.sunlife.ca",
+                "thekeg.com",
+                "us.norton.com",
+                "www.aplaceformom.com",
+                "www.audible.com",
+                "www.caasco.com",
+                "www.finewoodworking.com",
+                "www.koodomobile.com",
+                "www.miamiherald.com",
+                "www.questrade.com",
+                "www.sunwing.ca",
+                "www.visitparksvillequalicumbeach.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/dsync\\/PulsePoint",
+            "cookies": 0.000812,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crb"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000812,
+            "cnames": [],
+            "responseHashes": [
+                "10f9bfa42bb96c99729c9b2fee669803ad9c6fcd434d8d7d60a8dc8f5f7cc331"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dermnetnz.org",
+                "www.bubbleshooter.net",
+                "www.freeconvert.com",
+                "www.jetpunk.com",
+                "www.koreaboo.com",
+                "www.mahjong.com",
+                "www.ratemyprofessors.com",
+                "www.thelayoff.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/bswsync",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "10f9bfa42bb96c99729c9b2fee669803ad9c6fcd434d8d7d60a8dc8f5f7cc331"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digital-photography-school.com",
+                "www.patheos.com",
+                "www.phonearena.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/track",
+            "cookies": 0.000305,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kds-pixel"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "10f9bfa42bb96c99729c9b2fee669803ad9c6fcd434d8d7d60a8dc8f5f7cc331"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mailchimp.com",
+                "www.carhartt.com",
+                "www.playnow.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/kds\\/kds-events\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "storage.cloud"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "55edb8d2b4e1833f21f416fad19d831c931bd94de5863346913bf96183db0bc0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ae.com",
+                "www.playnow.com",
+                "www.usps.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/dsync\\/PrebidServer",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "baytoday.ca",
+                "www.sudbury.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1",
+            "cookies": 0.000305,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kds-pixel"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "10f9bfa42bb96c99729c9b2fee669803ad9c6fcd434d8d7d60a8dc8f5f7cc331"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "playnow.com",
+                "www.playnow.com",
+                "www.usps.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Ad Fraud"
+    ],
+    "performance": {},
+    "cookies": 0.0522,
+    "topInitiators": [
+        {
+            "domain": "adthrive.com",
+            "prevalence": 0.5200246457178065
+        },
+        {
+            "domain": "adsninja.ca",
+            "prevalence": 0.11213801601971657
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.11028958718422674
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.08317929759704251
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.029574861367837338
+        },
+        {
+            "domain": "blogherads.com",
+            "prevalence": 0.02279728897104128
+        },
+        {
+            "domain": "lngtdv.com",
+            "prevalence": 0.021565003080714726
+        },
+        {
+            "domain": "lasso.link",
+            "prevalence": 0.009242144177449169
+        },
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.009242144177449169
+        },
+        {
+            "domain": "intergient.com",
+            "prevalence": 0.008009858287122612
+        }
+    ],
+    "types": {
+        "XHR": 276,
+        "Fetch": 324,
+        "Document": 106,
+        "Script": 53,
+        "Preflight": 73,
+        "Image": 156,
+        "Ping": 3
+    },
+    "nameservers": [
+        "ns-1512.awsdns-61.org",
+        "ns-635.awsdns-15.net",
+        "ns-243.awsdns-30.com",
+        "ns-1837.awsdns-37.co.uk"
+    ]
+}

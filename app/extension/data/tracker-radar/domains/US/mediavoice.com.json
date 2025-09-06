@@ -1,0 +1,120 @@
+{
+    "domain": "mediavoice.com",
+    "owner": {
+        "name": "Polar",
+        "displayName": "Polar"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000821,
+    "sites": 12,
+    "subdomains": [
+        "plugin",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "mediavoice\\.com\\/plugin\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "plugin"
+            ],
+            "apis": {
+                "window.sessionStorage": 6,
+                "Date.prototype.getTime": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Event.prototype.timeStamp": 2,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "window.devicePixelRatio": 1
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "415e917f4913ccdc7d9467b607f959ff26b48a967f9754f65d75dcc97a4cd4b4",
+                "25baeecedf2acd531e122f860313f0e21cdd72b3747ad52f18825c232216bbfb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bodyandsoul.com.au",
+                "www.dnainfo.com",
+                "www.dtnpf.com",
+                "www.huffingtonpost.co.uk",
+                "www.independent.co.uk",
+                "www.standard.co.uk"
+            ]
+        },
+        {
+            "rule": "mediavoice\\.com\\/nativeads\\/script\\/esi\\/esi-rr-collection\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "independent.co.uk",
+                "www.standard.co.uk"
+            ]
+        },
+        {
+            "rule": "mediavoice\\.com\\/nativeads\\/script\\/24com\\/track\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "news24.com",
+                "www.news24.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7692307692307693
+        },
+        {
+            "domain": "polarcdn-terrax.com",
+            "prevalence": 0.15384615384615385
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.07692307692307693
+        }
+    ],
+    "types": {
+        "Script": 10
+    },
+    "nameservers": [
+        "zara.ns.cloudflare.com",
+        "lynn.ns.cloudflare.com"
+    ]
+}

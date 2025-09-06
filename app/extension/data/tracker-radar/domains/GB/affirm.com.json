@@ -1,0 +1,161 @@
+{
+    "domain": "affirm.com",
+    "owner": {
+        "name": "Affirm Holdings, Inc.",
+        "displayName": "Affirm"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "cdn1",
+        "www",
+        "cdn-assets"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "affirm\\.com\\/js\\/v2\\/affirm\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn1"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie setter": 3,
+                "window.devicePixelRatio": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "3c45588b069a3155e91c7298cf68c32667226aa0a6ef6ad00e2363ca6c8441da"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1755376862,
+                    "length": 1,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 0.3333333333333333
+                },
+                "checkout_continuity_service": {
+                    "ttl": 157680008,
+                    "length": 36,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 1
+                },
+                "tracker_device": {
+                    "ttl": 157680008,
+                    "length": 36,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.eufy.com",
+                "www.razer.com"
+            ]
+        },
+        {
+            "rule": "affirm\\.com\\/api\\/v2\\/session\\/touch_track",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "be34d2b18d8ce5d049c5aea6bd6197177af4a020eb83c2bf1ac03c2585cc4a10",
+                "13622870f270f5210a2d87c21c662d603dc2aabf2ec20ca4018e1b83d7822e1a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.eufy.com",
+                "www.razer.com"
+            ]
+        },
+        {
+            "rule": "affirm\\.com\\/api\\/v2\\/cookie_sent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "924aebf24af414b12986f4af470b2ac7b61d765897f9e222c0af15805de9ae40"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.anker.com",
+                "www.eufy.com",
+                "www.razer.com"
+            ]
+        },
+        {
+            "rule": "affirm\\.com\\/upfunnel\\/experiments\\/axpV2ExperimentList\\.json",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-assets"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "1f55d05a3ba15ad7f4e47d61a307d7d8e1a46cb77e3c6ad7350facf0fd4083ef"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.eufy.com",
+                "www.razer.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 10
+    },
+    "nameservers": [
+        "ns-1463.awsdns-54.org",
+        "ns-1890.awsdns-44.co.uk",
+        "ns-217.awsdns-27.com",
+        "ns-614.awsdns-12.net"
+    ]
+}

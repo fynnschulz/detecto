@@ -1,0 +1,127 @@
+{
+    "domain": "datagrail.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "api.consentjs"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "datagrail\\.io\\/consent\\/a8874704-0379-441d-8e01-2842f35a34b6\\/73f0478c-d625-40e1-ad6d-890f3cbe59e7\\/consent\\.js",
+            "cookies": 0.000404,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api.consentjs"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 4,
+                "Navigator.prototype.doNotTrack": 4,
+                "Navigator.prototype.languages": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "fd8978153fbd5424c8eed68ec334c75f5aa5c03d614b2425928b0f42cbece7b9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "datagrail_consent_id": {
+                    "ttl": 31536003,
+                    "length": 73,
+                    "prevalence": 0.00040412204485754696,
+                    "uniqueness": 1
+                },
+                "datagrail_consent_id_s": {
+                    "ttl": 31536003,
+                    "length": 73,
+                    "prevalence": 0.00040412204485754696,
+                    "uniqueness": 1
+                },
+                "datagrail_consent_version_s": {
+                    "ttl": 31536003,
+                    "length": 36,
+                    "prevalence": 0.00040412204485754696,
+                    "uniqueness": 0.25
+                },
+                "_hjSessionUser_378974": {
+                    "ttl": 31536004,
+                    "length": 114,
+                    "prevalence": 0.00040412204485754696,
+                    "uniqueness": 1
+                },
+                "_hjSession_378974": {
+                    "ttl": 1804,
+                    "length": 147,
+                    "prevalence": 0.00040412204485754696,
+                    "uniqueness": 1
+                },
+                "instance0|cssLoaded": {
+                    "ttl": 31536000,
+                    "length": 4,
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fairphone.com",
+                "shop.fairphone.com",
+                "support.fairphone.com",
+                "www.fairphone.com"
+            ]
+        },
+        {
+            "rule": "datagrail\\.io\\/save_open",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.consentjs"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "datagrail_consent_id_s": 0.0003030915336431602,
+                "datagrail_consent_version_s": 0.0003030915336431602
+            },
+            "exampleSites": [
+                "fairphone.com",
+                "shop.fairphone.com",
+                "support.fairphone.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000505,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "ns-1714.awsdns-22.co.uk",
+        "ns-1324.awsdns-37.org",
+        "ns-713.awsdns-25.net",
+        "ns-264.awsdns-33.com"
+    ]
+}

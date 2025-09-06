@@ -1,0 +1,110 @@
+{
+    "domain": "movingimage.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.0001,
+    "sites": 1,
+    "subdomains": [
+        "nr-agent",
+        "nr-beacon"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "movingimage\\.com\\/nr-loader-spa-current\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "nr-agent"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4a3f66c262a898d24eea5a9d6463516006ccede48c424617250a40cb2fd68c39"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belimo.com",
+                "www.belimo.com"
+            ]
+        },
+        {
+            "rule": "movingimage\\.com\\/nr-spa-1\\.295\\.0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "nr-agent"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.webdriver": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d9fb85be4c99480abd10bcef5aece0c349f6b8d440dd99dbea4a2034c76ab6fc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belimo.com",
+                "www.belimo.com"
+            ]
+        },
+        {
+            "rule": "movingimage\\.com\\/1\\/NRJS-82cba0be311d80b7b8e",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nr-beacon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c59ed353158dd5bc67c49e565579a430131cd8680d8b7f58757b35731ed0eeb6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belimo.com",
+                "www.belimo.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "video-cdn.net",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns2-08.azure-dns.net",
+        "ns3-08.azure-dns.org",
+        "ns4-08.azure-dns.info",
+        "ns1-08.azure-dns.com"
+    ]
+}

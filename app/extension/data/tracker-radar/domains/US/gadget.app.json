@@ -1,0 +1,121 @@
+{
+    "domain": "gadget.app",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000103,
+    "sites": 15,
+    "subdomains": [
+        "kedra-shield",
+        "discovery-shop-by-design",
+        "wheelify"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "gadget\\.app\\/api\\/client\\/web\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "kedra-shield",
+                "discovery-shop-by-design",
+                "wheelify"
+            ],
+            "apis": {
+                "window.localStorage": 7
+            },
+            "sites": 11,
+            "prevalence": 0.0000752,
+            "cnames": [],
+            "responseHashes": [
+                "3f2c08c4457c9933306ea7146736699541e160fee1b68b51ae1f6a219097a8f5",
+                "95d19f506389245d7083143254af8e5d0b541731e0acb46f10531f7c526ce29c",
+                "33ceecbb441c54527877dac5f2f2ac62748fb9b128c20e29b376be8db7f4789a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caskcartel.com",
+                "evacuumstore.com",
+                "levinfurniture.com",
+                "nassaunationalcable.com",
+                "rpstrength.com",
+                "www.altestore.com",
+                "www.anderic.com",
+                "www.batterytender.com",
+                "www.lulifama.com",
+                "www.puckipuppy.com",
+                "www.scooterworks.com"
+            ]
+        },
+        {
+            "rule": "gadget\\.app\\/api\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wheelify"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "cd82d9fcc5e820fcae78a5f44c2156b06b72b2a31b37a6ac40fb3d2b42be0671",
+                "600ff3b250545bb4e3645a356f28c3d95e2a8800b0f7be0a03f46688cbbf5b92",
+                "54d3defd71eb51d2ad89d00a0ee9fc7ac6c5994dbefb49088ddf5148933adc25"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nassaunationalcable.com",
+                "rpstrength.com",
+                "www.lulifama.com",
+                "www.puckipuppy.com"
+            ]
+        },
+        {
+            "rule": "gadget\\.app\\/api\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wheelify"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nassaunationalcable.com",
+                "rpstrength.com",
+                "www.lulifama.com",
+                "www.puckipuppy.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 11,
+        "Fetch": 4,
+        "Preflight": 4
+    },
+    "nameservers": [
+        "christina.ns.cloudflare.com",
+        "max.ns.cloudflare.com"
+    ]
+}

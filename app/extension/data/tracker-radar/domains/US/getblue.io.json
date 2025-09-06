@@ -1,0 +1,320 @@
+{
+    "domain": "getblue.io",
+    "owner": {
+        "name": "getblue",
+        "displayName": "getblue"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000226,
+    "sites": 33,
+    "subdomains": [
+        "event",
+        "widget",
+        "cms"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "getblue\\.io\\/js\\/blue-tag\\.min\\.js",
+            "cookies": 0.000109,
+            "fingerprinting": 1,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 21,
+                "Date.prototype.getTime": 21,
+                "Navigator.prototype.cookieEnabled": 21,
+                "Document.cookie getter": 17,
+                "window.sessionStorage": 19,
+                "window.localStorage": 19,
+                "Document.cookie setter": 16
+            },
+            "sites": 21,
+            "prevalence": 0.000144,
+            "cnames": [],
+            "responseHashes": [
+                "e93d3ddd95df3718056879b69c0220cc64ee2da9daf106317549ba4dc02f9677"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "blueID": {
+                    "ttl": 31536007,
+                    "length": 36,
+                    "prevalence": 0.00010945409768778219,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.paguemenos.com.br",
+                "www.thesportsgeek.com",
+                "curiositystream.com",
+                "movavi.com",
+                "www.autonomous.ai",
+                "www.eltiempo.com",
+                "petlibro.com",
+                "www.obagi.com",
+                "www.gardenersdream.co.uk",
+                "handyhand.dk",
+                "www.cityplumbing.co.uk",
+                "uae.sharafdg.com",
+                "www.apollo.io",
+                "www.positivegrid.com",
+                "www.ipvanish.com",
+                "www.movavi.com",
+                "xeroshoes.com",
+                "www.bonanza.com",
+                "www.dhgate.com",
+                "dhgate.com"
+            ]
+        },
+        {
+            "rule": "getblue\\.io\\/p\\/",
+            "cookies": 0.00015,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {},
+            "sites": 22,
+            "prevalence": 0.00015,
+            "cnames": [],
+            "responseHashes": [
+                "995b75356fb0664b4ba67c51f14612cab223ae3fa7d8dd0bd84ffa02d8d40fc6",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "5b740f8d151dd9ab72027632af5d3c2391bc77b22a57e2e6be9cb2f16638a5f8",
+                "9152baaf7803be78e27da65249058e34e27d973af23ad92c45844fec8a205671",
+                "50689216b71ffb3faa0ce30a09c016cec37fc546fe15c1c12a58f08d978e420a",
+                "17d98e8566279f784fbddf037968c5fc8919bc31adab3d5d014d8245b9bff454",
+                "9af3eeb01b02462d6b9451b346ed759341e3288382e69f4b7c69e63371ec38e5",
+                "857e8e97289515a60291d39aeeba65e3af509c7ac24f9f82fa5227f5950638ee",
+                "5af65664e34381c6772a6ad25509ea05a4735c6dd600520a0513ffadfb615035",
+                "afcf08bb70076d4cb0fe6b28f90a687092132a1ad1eaa163a91a2f66df90edd7",
+                "8f42950d70d85249af023391b9dff4f96f891ccb63fe323df32d10ceed99c06b",
+                "7e29a8253c8daf46c7b10521a5fb139cfab155a271d13b407589d71c2d9e8c80",
+                "6968c03a8145a2589d2211f4ab2b851942153e7a28c5d2e5bec16b3e7f63bc42",
+                "f0fb8866a01be9dab9dd445c6a5dbad9c27c636915d60758840534f369e07bba",
+                "9244d90137c958524adf923ebfa39a33853d3712a5bb11eee2fad7b97a16be6a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "blueID": 0.00011629497879326857
+            },
+            "exampleSites": [
+                "www.obagi.com",
+                "www.positivegrid.com",
+                "curiositystream.com",
+                "www.eltiempo.com",
+                "xeroshoes.com",
+                "www.gardenersdream.co.uk",
+                "www.dhgate.com",
+                "dhgate.com",
+                "www.paguemenos.com.br",
+                "www.ipvanish.com",
+                "www.apollo.io",
+                "www.autonomous.ai",
+                "www.thesportsgeek.com",
+                "www.movavi.com",
+                "uae.sharafdg.com",
+                "www.cityplumbing.co.uk",
+                "movavi.com",
+                "handyhand.dk",
+                "tiendamia.com",
+                "www.betonline.ag"
+            ]
+        },
+        {
+            "rule": "getblue\\.io\\/event\\/",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Screen.prototype.width": 11,
+                "Screen.prototype.height": 11,
+                "Screen.prototype.colorDepth": 11
+            },
+            "sites": 22,
+            "prevalence": 0.00015,
+            "cnames": [],
+            "responseHashes": [
+                "5b92a408bbe994550b7055a07066d79ec13a646062d36f046dbd84a9d59e86e1",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "eb99134542c987f687360d120213eeec049a290d73d2302ee1b74a01ce279f4d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "blueID": 0.00011629497879326857
+            },
+            "exampleSites": [
+                "www.obagi.com",
+                "dhgate.com",
+                "xeroshoes.com",
+                "petlibro.com",
+                "www.paguemenos.com.br",
+                "www.eltiempo.com",
+                "handyhand.dk",
+                "www.betonline.ag",
+                "www.gardenersdream.co.uk",
+                "www.positivegrid.com",
+                "movavi.com",
+                "www.autonomous.ai",
+                "www.bonanza.com",
+                "www.dhgate.com",
+                "www.movavi.com",
+                "uae.sharafdg.com",
+                "www.ipvanish.com",
+                "www.cityplumbing.co.uk",
+                "www.thesportsgeek.com",
+                "www.apollo.io"
+            ]
+        },
+        {
+            "rule": "getblue\\.io\\/r\\/audience-pixel\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.vendor": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "53c9c8069c1e6d7a39a04ef06083b5fab6c6807e295529c37ccf8b4b96f61ddb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dhgate.com",
+                "uae.sharafdg.com",
+                "www.dhgate.com"
+            ]
+        },
+        {
+            "rule": "getblue\\.io\\/cm\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cms"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.0000958,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "blueID": 0.00006840881105486387
+            },
+            "exampleSites": [
+                "dhgate.com",
+                "movavi.com",
+                "petlibro.com",
+                "tiendamia.com",
+                "uae.sharafdg.com",
+                "www.apollo.io",
+                "www.autonomous.ai",
+                "www.betonline.ag",
+                "www.dhgate.com",
+                "www.gardenersdream.co.uk",
+                "www.movavi.com",
+                "www.paguemenos.com.br",
+                "www.positivegrid.com",
+                "www.thesportsgeek.com"
+            ]
+        },
+        {
+            "rule": "getblue\\.io\\/js\\/blue-tag-eu\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e93d3ddd95df3718056879b69c0220cc64ee2da9daf106317549ba4dc02f9677"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "blueID": {
+                    "ttl": 31536007,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "betonline.ag",
+                "www.betonline.ag"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000219,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.4230769230769231
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3076923076923077
+        },
+        {
+            "domain": "staticont.net",
+            "prevalence": 0.11538461538461539
+        },
+        {
+            "domain": "dhresource.com",
+            "prevalence": 0.07692307692307693
+        },
+        {
+            "domain": "ziffstatic.com",
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "storage.googleapis.com",
+            "prevalence": 0.038461538461538464
+        }
+    ],
+    "types": {
+        "Script": 48,
+        "Document": 22,
+        "Image": 14
+    },
+    "nameservers": [
+        "ns-730.awsdns-27.net",
+        "ns-1053.awsdns-03.org",
+        "ns-48.awsdns-06.com",
+        "ns-1752.awsdns-27.co.uk"
+    ]
+}

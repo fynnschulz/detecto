@@ -1,0 +1,104 @@
+{
+    "domain": "eaton.com",
+    "owner": {
+        "name": "EATON Corporation",
+        "displayName": "EATON"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "dynamicmedia",
+        "target"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "eaton\\.com\\/s7viewers\\/libs\\/responsive_image\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dynamicmedia"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fe66a7615c2e20ea89878474b0d7fc9a695d031a37af97951138ba80956576cb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "golfpride.com",
+                "www.golfpride.com"
+            ]
+        },
+        {
+            "rule": "eaton\\.com\\/rest\\/v1\\/delivery",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "target"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e151d1851511e08be54030d2a952ebe70394120a9b914256c2c1613e84f21334"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "golfpride.com",
+                "www.golfpride.com"
+            ]
+        },
+        {
+            "rule": "eaton\\.com\\/is\\/image\\/eaton\\/M4XS-60X-M0T-XA_C-PNG",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dynamicmedia"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3bb05bc2979c708504eaa5934fd41efb12e07e5375c148087490dd1cc561a130"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "golfpride.com",
+                "www.golfpride.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns2.eaton.com",
+        "ns1.eaton.com"
+    ]
+}

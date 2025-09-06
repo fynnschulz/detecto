@@ -1,0 +1,82 @@
+{
+    "domain": "conversionbear.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "trust",
+        "bundle"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "conversionbear\\.com\\/script",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "trust",
+                "bundle"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "bc3a36fadc4fe2cbb12e31d896630bdaf3a9bbe794f2beef641577f20c6be97e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "musiccitycanada.com",
+                "www.urbannaturestore.ca"
+            ]
+        },
+        {
+            "rule": "conversionbear\\.com\\/settings",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bundle"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a88df4f70613fdd10eedb2d3ee93f5d3ea737fa96067bc94ae39c15d5fbd27b8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "urbannaturestore.ca",
+                "www.urbannaturestore.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "brianna.ns.cloudflare.com",
+        "coby.ns.cloudflare.com"
+    ]
+}

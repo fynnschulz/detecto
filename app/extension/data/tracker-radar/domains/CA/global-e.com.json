@@ -1,0 +1,908 @@
+{
+    "domain": "global-e.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000609,
+    "sites": 6,
+    "subdomains": [
+        "webservices",
+        "utils",
+        "gepi",
+        "globale-analytics-sdk",
+        "s3",
+        "web"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "global-e\\.com\\/merchant\\/freeShippingBanner",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "3ad663e23ec9f67f71b16722cad519d91364813a2e2de7973b0408a7c9efbe4b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skims.com",
+                "wearpact.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/set",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "utils"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [
+                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "dy_fs_page": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "skims.com",
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/Utils\\/IsThirdPartCookiesAllowed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gepi"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "52c63272ba9756dcc243d33b5bf09b333494864fa57a13dc922e43f9a0e02dc2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/PROD\\/bundle\\.js",
+            "cookies": 0.000305,
+            "fingerprinting": 1,
+            "subdomains": [
+                "globale-analytics-sdk"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "window.sessionStorage": 4,
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "bdceb9bef359b16d1a072b2174c9bbc9b42066c0af3423db48950a7bcec5ab84"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "GlobalE_Analytics": {
+                    "ttl": 63072019,
+                    "length": 690,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/client",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "utils"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/GAData",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {
+                "window.sessionStorage": 3
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "d30f43ebf56261298786772fa996f8a06ecd7f10bcca893fa4c978cb8450ca35",
+                "5e35f90a4847e10941285a6690b00499ab97d7db73b0e1325db2b15f5d15b26d",
+                "3199f2ab421fd9af32ca574166851d673921e141eb1ff103f37a6d5cf27fbcdb",
+                "18cbf5441cfbd1764f2f35c69046c0eec063140a4cb9731fba2725ca2d58b9a2"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/mappedBundles\\/prefetcher\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Event.prototype.timeStamp": 3
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "3837c917350082ea50898117efdc9640ea1738b0f26fc1851880350ddd28e873"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/changeshippingandcurrency",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "857ebe42ec721c289ab2190ce5f10c9ca6067ea39b87ab35ea10a3a7fb468cbc",
+                "92d8bca22324a60623d2aade931dd767d6297b9271e9f94ef7ec604737bab314",
+                "a820aa49ad95f1d00a63128be88b02ef81d17f71e9fda4d68d8270e795ae70ec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/script\\/welcome",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "c2cd54f90911390cc88f06558b4cba0690625baee41e6b71b1ff8345b9ac0025",
+                "490210db3eb9dcb181921dde6198146ec7d03c7e2628e836301e1f687eb16e03"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/content\\/images\\/flags\\/ca\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gepi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e39d243fab10b65664e3e57fcfb7a978e0a2d70aae7faa2fe15d435077806ca3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/shared\\/PrefetcherProcess",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "5ceb8e11e7f465b391298a3b17640bc4f1d23d4abb8283eb79367d92a8d5abea",
+                "ca679a4da61d74de3ccbac90a91443ce021b5ae405414ce7acbbe401b29ae5a8",
+                "27c8351fc80e92feeeacdcc0588511c45eeaee02198667073213211a58d44ce8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/cdn-cgi\\/challenge-platform\\/scripts\\/jsd\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "13b162d61e5dc01120d16072b9e1124a34b820aec0f08dfb7fa8bd9fbb719c17",
+                "5c387801ed4f2ce0d6bdff947b31639413b072ac42429d9c6cd6900d8dbf733d",
+                "f323dfa44373b3cea634e4aaa53605969c5d59223c0fdc435757fa6b881f56cf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/mappedBundles\\/checkoutv2_top\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "faa632568556155c28483d7cf5319f5242743359577c4c314cef577e28079227"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/mappedbundles\\/checkoutv2_bottom\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "ae1b3c59966d2e9b08a02c7033215aac12d60a24228cc15165667992276eb819"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/mappedBundles\\/secured\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "a99a4f18909ad26b354df0ae283b77ff4d7edf5581388f2194c092d75fb336f1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/mappedBundles\\/content_bootstrap_css\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "e1a1cda9e020ae75c761818618a173c30930002ab9faca26d8a7462fbd089ee5"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/mappedBundles\\/content_bootstrap_cssRtl\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "451af779acd8dbaec66373748a369ce178bfbe57e33b21d009631d9800394d62"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/Merchant\\/Script\\/CheckoutSkin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "a8375b0afb28c7f5390ebe595613da6a95ff6edb8e031527d64f7daa6dd83ed2",
+                "1018230639f65fb97bac51bf4227ce282b93175894642609c1087c636326978d",
+                "991281d34a92b3fb4add6326c215f08ab6ed4f646e580589462c419da8ab7713"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/content\\/images\\/loader4\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "3312d5e49fe3c8755cff0da991c511d9f648393c4d41ad3d975ab11dd4b1a387"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/Content\\/Images\\/horizontal_loader\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "e21a215fec167ce93e1889534d8bc18f180c073ae0b56fb221bdb9b20df3d4ee"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/Images\\/Sprites\\/spritesheet\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "9f91683007a8727cdfae78780de4652d520f487363a9e34671fd570383f790b6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/Images\\/Sprites\\/secure_spritesheet\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "abbc0e64004a6d75e75300482666b5b74a1ab680302685865e18cf82bf87761b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/Images\\/Sprites\\/sprite_CA\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "baf261a03d1f069412505aaa08e06647bd96361693d68cfee789accacedf44d3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.llbean.ca",
+                "www.llbean.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/cdn-cgi\\/challenge-platform\\/h\\/b\\/scripts\\/jsd\\/4710d66e8fda\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "e9eb983269538d865e3fabcca07b2eac137427497985839f46987e042344d186",
+                "13b162d61e5dc01120d16072b9e1124a34b820aec0f08dfb7fa8bd9fbb719c17",
+                "5c387801ed4f2ce0d6bdff947b31639413b072ac42429d9c6cd6900d8dbf733d",
+                "f323dfa44373b3cea634e4aaa53605969c5d59223c0fdc435757fa6b881f56cf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.landsend.com",
+                "www.llbean.ca",
+                "www.llbean.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/includes\\/css\\/1616",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gepi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "860c19414bf858d9f985f0e6c954d54f886b0a5aaa594b697561510664cd118f"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "landsend.com",
+                "www.landsend.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/analytics\\/sdk\\/init\\/1616\\/CA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "b1d18be44d07b77e05b9540f2f4c352debae8a3231dd0eb4664e4eb72ca51c52"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "landsend.com",
+                "www.landsend.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/analytics\\/sdk\\/init\\/1616\\/CA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "landsend.com",
+                "www.landsend.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/Images\\/Sprites\\/sprite_IL\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "957d72ce0f403e51e0156a1baecad31d90a39667028fa5f7220c23e504a69fb4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "landsend.com",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/clientsdk\\/1722",
+            "cookies": 0.000203,
+            "fingerprinting": 2,
+            "subdomains": [
+                "web"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.language": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "818f4656e4fc419c4ae0609cfb5c99f725c020ba0630f69f78c3725e59f39618"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "GlobalE_Geo_Popup": {
+                    "ttl": 259205,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "GlobalE_CT_Data": {
+                    "ttl": 63072008,
+                    "length": 260,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "GlobalE_Full_Redirect": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "llbean.ca",
+                "www.llbean.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/shared\\/prefetcher\\/1722\\/CA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "623cc5bd19a1e16475003e450fa6de5c3f78cb2e1867042982212b4cd6629153"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "llbean.ca",
+                "www.llbean.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/analytics\\/sdk\\/init\\/1722\\/CA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "daf5504eb0e1a8aac8b6a2d3b07d8cf3a81c317f648ea722d61bba353445f3cb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "llbean.ca",
+                "www.llbean.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/analytics\\/sdk\\/init\\/1722\\/CA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "llbean.ca",
+                "www.llbean.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/includes\\/CSS\\/672",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gepi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "df5bdd5eb254b16ef1db24c3abf44f0e510af62439aaa84d472cdb88b8104f91"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sennheiser-hearing.com",
+                "www.sennheiser-hearing.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000609,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5686274509803921
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.35294117647058826
+        },
+        {
+            "domain": "llbean.ca",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.0196078431372549
+        }
+    ],
+    "types": {
+        "Script": 35,
+        "Image": 37,
+        "Document": 7,
+        "XHR": 20,
+        "Stylesheet": 19,
+        "Fetch": 4,
+        "Preflight": 4
+    },
+    "nameservers": [
+        "ns-734.awsdns-27.net",
+        "ns-1982.awsdns-55.co.uk",
+        "ns-1386.awsdns-45.org",
+        "ns-80.awsdns-10.com"
+    ]
+}

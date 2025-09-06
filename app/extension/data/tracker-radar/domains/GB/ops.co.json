@@ -1,0 +1,160 @@
+{
+    "domain": "ops.co",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "exchange",
+        "logging"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "ops\\.co\\/openrtb2\\/auction",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "exchange"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "266d55a393d9cd7ca8b4eb6d8b9cc7829a2fe801ebdd33a341bf9d97046b763b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "appleinsider.com",
+                "www.politifact.com"
+            ]
+        },
+        {
+            "rule": "ops\\.co\\/sync\\.html",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "exchange"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ac63a7afe4abbe1307f604fead89ce795bf1f4dd7ecfa93ade5764fea85a4ef3"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "appleinsider.com",
+                "www.politifact.com"
+            ]
+        },
+        {
+            "rule": "ops\\.co\\/setuid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "exchange"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "politifact.com",
+                "www.politifact.com"
+            ]
+        },
+        {
+            "rule": "ops\\.co\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logging"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "politifact.com",
+                "www.politifact.com"
+            ]
+        },
+        {
+            "rule": "ops\\.co\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logging"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "politifact.com",
+                "www.politifact.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "d283fm003ll1xs.cloudfront.net",
+            "prevalence": 0.6190476190476191
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "bidmatic.io",
+            "prevalence": 0.09523809523809523
+        },
+        {
+            "domain": "a-mo.net",
+            "prevalence": 0.09523809523809523
+        },
+        {
+            "domain": "kueezrtb.com",
+            "prevalence": 0.047619047619047616
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "Document": 2,
+        "Image": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns48.domaincontrol.com",
+        "ns47.domaincontrol.com"
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "domain": "sayprimer.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "analytics",
+        "web-script.api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "sayprimer\\.com\\/primerAnalytics\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3,
+                "Navigator.prototype.language": 3,
+                "Navigator.prototype.connection": 3,
+                "Document.cookie getter": 3,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "f695ea8849a8f785aa47527862d92ed0a6325f2c3e153f50ed4dd8f3e2d66b00"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "engine.com",
+                "relayfi.com",
+                "www.apollo.io",
+                "www.rippling.com",
+                "www.verkada.com"
+            ]
+        },
+        {
+            "rule": "sayprimer\\.com\\/v2\\/ingest\\/pageview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-script.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "relayfi.com",
+                "www.apollo.io",
+                "www.rippling.com"
+            ]
+        },
+        {
+            "rule": "sayprimer\\.com\\/v2\\/ingest\\/pageview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-script.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "relayfi.com",
+                "www.apollo.io",
+                "www.rippling.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Preflight": 3,
+        "XHR": 3
+    },
+    "nameservers": [
+        "carla.ns.cloudflare.com",
+        "boyd.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "domain": "browser-update.org",
+    "owner": {
+        "name": "Browser Update",
+        "displayName": "Browser Update"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.00171,
+    "sites": 17,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "browser-update\\.org\\/static\\/img\\/small\\/c\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "aec70dd30e0d953626f4361a6ae683c99002e6e84a1513a3e08a0a74e08293d8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "emmencenter.ch",
+                "lilys.ch",
+                "online-services.admin.ch",
+                "www.bauernzeitung.ch",
+                "www.brita.ch",
+                "www.christies.com",
+                "www.konstanz-info.com",
+                "www.mittelthurgau.ch",
+                "www.projet-voltaire.fr",
+                "www.sativa.bio",
+                "www.visit-x.net"
+            ]
+        },
+        {
+            "rule": "browser-update\\.org\\/update\\.min\\.js",
+            "cookies": 0.000904,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.languages": 13,
+                "Navigator.prototype.userAgent": 14,
+                "Navigator.prototype.platform": 14,
+                "Document.cookie getter": 14,
+                "Date.prototype.getTime": 9,
+                "Document.cookie setter": 9
+            },
+            "sites": 14,
+            "prevalence": 0.00141,
+            "cnames": [],
+            "responseHashes": [
+                "0d0dd392755a4608885d8ed10c8a53aaf14e5dab21e3481abe56a8bd53d20b28"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "browserupdateorg": {
+                    "ttl": 604803,
+                    "length": 5,
+                    "prevalence": 0.0009043408360128617,
+                    "uniqueness": 0.1111111111111111
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huthaus.ch",
+                "lilys.ch",
+                "online-services.admin.ch",
+                "www.bauernzeitung.ch",
+                "www.bell.ch",
+                "www.brita.ch",
+                "www.christies.com",
+                "www.ekz.ch",
+                "www.konstanz-info.com",
+                "www.mittelthurgau.ch",
+                "www.sativa.bio",
+                "www.salz.ch",
+                "www.visit-x.net",
+                "www.zugersee-schifffahrt.ch"
+            ]
+        },
+        {
+            "rule": "browser-update\\.org\\/update\\.show\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 11
+            },
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "9aacb6274d50dc232f8787681ca62abff895e9d28ed0e495b9eae644fb284bf0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lilys.ch",
+                "online-services.admin.ch",
+                "www.bauernzeitung.ch",
+                "www.brita.ch",
+                "www.christies.com",
+                "www.konstanz-info.com",
+                "www.mittelthurgau.ch",
+                "www.projet-voltaire.fr",
+                "www.sativa.bio",
+                "www.visit-x.net",
+                "www.zugersee-schifffahrt.ch"
+            ]
+        }
+    ],
+    "categories": [
+        "Badge",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.000904,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8
+        },
+        {
+            "domain": "consentmanager.net",
+            "prevalence": 0.06666666666666667
+        },
+        {
+            "domain": "ccm19.de",
+            "prevalence": 0.06666666666666667
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.03333333333333333
+        },
+        {
+            "domain": "browserupdate.org",
+            "prevalence": 0.03333333333333333
+        }
+    ],
+    "types": {
+        "Image": 11,
+        "Script": 25
+    },
+    "nameservers": [
+        "vick.ns.cloudflare.com",
+        "rose.ns.cloudflare.com"
+    ]
+}

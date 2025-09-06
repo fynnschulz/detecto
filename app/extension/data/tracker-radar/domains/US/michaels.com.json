@@ -1,0 +1,239 @@
+{
+    "domain": "michaels.com",
+    "owner": {
+        "name": "Michaels Stores Inc.",
+        "displayName": "Michaels Stores"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "www",
+        "static.platform",
+        "vnhonri2c"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "michaels\\.com\\/240Tphbio\\/M\\/b\\/WjsShkMF0SmAJf-M\\/VOYLhmmXcLcGLV3c\\/EltsWg\\/Djp4bj\\/ZtfF4B",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.plugins": 2,
+                "window.sessionStorage": 2,
+                "window.indexedDB": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.storage": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.mediaDevices": 2,
+                "Navigator.prototype.permissions": 2,
+                "Navigator.prototype.webkitTemporaryStorage": 2,
+                "speechSynthesis.__proto__.getVoices": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "window.outerWidth": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.onLine": 2,
+                "Navigator.prototype.webdriver": 2,
+                "DeviceMotionEvent.prototype.acceleration": 2,
+                "DeviceMotionEvent.prototype.accelerationIncludingGravity": 2,
+                "DeviceMotionEvent.prototype.rotationRate": 2,
+                "DeviceOrientationEvent.prototype.alpha": 2,
+                "DeviceOrientationEvent.prototype.beta": 2,
+                "DeviceOrientationEvent.prototype.gamma": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.connection": 2,
+                "Performance.prototype.memory": 2,
+                "Notification.permission": 2,
+                "window.devicePixelRatio": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bef9393fcdfc7a7299c058ba2a69253c32e0964dd3e97834e17a8cdb5dce7cf6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "joann.com",
+                "www.joann.com"
+            ]
+        },
+        {
+            "rule": "michaels\\.com\\/api\\/product\\/smallInfo\\/skus",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "da50ba3a75fe15c669e7080b11a85b69d36e5c19cfea8f6e494de5409b785e9d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "joann.com",
+                "www.joann.com"
+            ]
+        },
+        {
+            "rule": "michaels\\.com\\/ssr\\/cicjyz2171\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static.platform"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "643c7ede01fbbd2b5621f0abd38e7584765096057dbf32d4d92e2b83a39b2a64"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "spses.21a6": {
+                    "ttl": 1803,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "spid.21a6": {
+                    "ttl": 63072003,
+                    "length": 108,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "joann.com",
+                "www.michaelscustomframing.com"
+            ]
+        },
+        {
+            "rule": "michaels\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vnhonri2c"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "joann.com",
+                "www.joann.com",
+                "www.michaelscustomframing.com"
+            ]
+        },
+        {
+            "rule": "michaels\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vnhonri2c"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "joann.com",
+                "www.michaelscustomframing.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5833333333333334
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "XHR": 5,
+        "Fetch": 2,
+        "Script": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "wvzmsim1",
+        "a20-64.akam.net",
+        "a9-67.akam.net",
+        "a1-184.akam.net",
+        "a18-67.akam.net",
+        "a5-66.akam.net",
+        "a4-65.akam.net"
+    ]
+}

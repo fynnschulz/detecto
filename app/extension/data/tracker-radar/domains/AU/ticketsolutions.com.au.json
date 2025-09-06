@@ -1,0 +1,144 @@
+{
+    "domain": "ticketsolutions.com.au",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "inpageanalytics",
+        "personalisationapi.production.live"
+    ],
+    "cnames": [
+        {
+            "original": "personalisationapi.oztix.com.au",
+            "resolved": "personalisationapi.production.live.ticketsolutions.com.au"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ticketsolutions\\.com\\.au\\/notify",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "inpageanalytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goodthingsfestival.com.au",
+                "tickets.oztix.com.au",
+                "www.goodthingsfestival.com.au"
+            ]
+        },
+        {
+            "rule": "ticketsolutions\\.com\\.au\\/notify",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "inpageanalytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "a036d288c49384a579022b7baa98c6bba850014017c5b303f74b89c45a94f62b",
+                "84e84c9eb52a06552685670055e74bc2b2154551ebcb577c964be1828519600a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goodthingsfestival.com.au",
+                "tickets.oztix.com.au",
+                "www.goodthingsfestival.com.au"
+            ]
+        },
+        {
+            "rule": "ticketsolutions\\.com\\.au\\/api\\/recommendations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "personalisationapi.production.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "personalisationapi.oztix.com.au",
+                    "resolved": "personalisationapi.production.live.ticketsolutions.com.au"
+                }
+            ],
+            "responseHashes": [
+                "3f0364493c53c34e337f2ce9761f30a96b84087acda8dac82191c70f937b1117"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oztix.com.au",
+                "tickets.oztix.com.au"
+            ]
+        },
+        {
+            "rule": "ticketsolutions\\.com\\.au\\/api\\/interaction\\/event\\/view",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "personalisationapi.production.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "personalisationapi.oztix.com.au",
+                    "resolved": "personalisationapi.production.live.ticketsolutions.com.au"
+                }
+            ],
+            "responseHashes": [
+                "3584c2ff3d983c61433470ff74b3a4d2a85915550a665c7d685d6d0c3f49d5d4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oztix.com.au",
+                "tickets.oztix.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "d3fcfeclx4v047.cloudfront.net",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Preflight": 3,
+        "XHR": 7
+    },
+    "nameservers": [
+        "ns-497.awsdns-62.com",
+        "ns-1091.awsdns-08.org",
+        "ns-818.awsdns-38.net",
+        "ns-1784.awsdns-31.co.uk"
+    ]
+}

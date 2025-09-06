@@ -1,0 +1,173 @@
+{
+    "domain": "cloudflarestream.com",
+    "owner": {
+        "name": "Cloudflare, Inc.",
+        "displayName": "Cloudflare",
+        "privacyPolicy": "https://www.cloudflare.com/privacypolicy/",
+        "url": "http://cloudflare.com"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000909,
+    "sites": 9,
+    "subdomains": [
+        "embed",
+        "customer-p7boxjjom839cmds",
+        "customer-ltx6ylk10sje63q6",
+        "customer-inzw641ip69u692h",
+        "customer-30zc4hfqg1m9lcz1"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "cloudflarestream\\.com\\/embed\\/sdk\\.latest\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "97849a460fe74a016bc1105ff4b94fecc80108bda8536b96ed13bb434f613d3a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "erikalust.com",
+                "gizmodo.com",
+                "old.bitchute.com"
+            ]
+        },
+        {
+            "rule": "cloudflarestream\\.com\\/embed\\/sdk-iframe-integration\\.fla9\\.latest\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "customer-p7boxjjom839cmds",
+                "customer-ltx6ylk10sje63q6"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.language": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.vendor": 2,
+                "MediaSource.isTypeSupported": 2,
+                "Screen.prototype.orientation": 2,
+                "Navigator.prototype.storage": 2,
+                "Navigator.prototype.mediaCapabilities": 2,
+                "window.innerHeight": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.connection": 2,
+                "HTMLMediaElement.prototype.canPlayType": 2,
+                "Event.prototype.timeStamp": 2,
+                "URL.createObjectURL": 2,
+                "window.innerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "erikalust.com",
+                "www.nist.gov"
+            ]
+        },
+        {
+            "rule": "cloudflarestream\\.com\\/9f631c2452f5dd4456371563adf0cb15\\/manifest\\/video\\.m3u8",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer-inzw641ip69u692h"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bd15418b1b6fd33057be9f9f2aa5d39cd6eb677f49ff3eae229cd04cdb54e96c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vitakruid.nl",
+                "www.vitakruid.nl"
+            ]
+        },
+        {
+            "rule": "cloudflarestream\\.com\\/ee2a1b2094eb54397472537b8301698b\\/downloads\\/default\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer-30zc4hfqg1m9lcz1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "creality.com",
+                "www.creality.com"
+            ]
+        },
+        {
+            "rule": "cloudflarestream\\.com\\/ee2a1b2094eb54397472537b8301698b\\/dl\\/default\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer-30zc4hfqg1m9lcz1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "creality.com",
+                "www.creality.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "XHR": 2,
+        "Media": 4
+    },
+    "nameservers": [
+        "jim.ns.cloudflare.com",
+        "val.ns.cloudflare.com"
+    ]
+}

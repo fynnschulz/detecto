@@ -1,0 +1,325 @@
+{
+    "domain": "vlitag.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "currency",
+        "cdn",
+        "services",
+        "dsp",
+        "s3"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "vlitag\\.com\\/rates\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "currency"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b96872ea1a0c1b1abe8cc2af7d6a9476cb5df6b55d00ee51e27d7809333cb67a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "colonist.io",
+                "www.how2shout.com"
+            ]
+        },
+        {
+            "rule": "vlitag\\.com\\/assets\\/plugins\\/hls\\.js\\/hls\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0290f0d61a6b94aca37bd874640ee172d86ec3743f3c0a611063036261074f92"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "colonist.io",
+                "www.how2shout.com"
+            ]
+        },
+        {
+            "rule": "vlitag\\.com\\/assets\\/plugins\\/safeframe\\/src\\/js\\/sf_host\\.min\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1916cf4455a526aadafd82710bf7304154905dcdf69dd9e0b516a63cc82e27e0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sf_ck_tst": {
+                    "ttl": 15,
+                    "length": 4,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "colonist.io",
+                "www.how2shout.com"
+            ]
+        },
+        {
+            "rule": "vlitag\\.com\\/adv1\\/",
+            "cookies": 0.000303,
+            "fingerprinting": 2,
+            "subdomains": [
+                "services"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "window.sessionStorage": 3,
+                "window.innerHeight": 3,
+                "Document.cookie setter": 3,
+                "window.innerWidth": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e8bc2f0d8a15c489d711a5695067a25ee04f98672cd0afe608c980ae2e26ee5a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__ppIdCC": {
+                    "ttl": 5184007,
+                    "length": 30,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pastebin.com",
+                "plugins4free.com",
+                "www.grammar-monster.com"
+            ]
+        },
+        {
+            "rule": "vlitag\\.com\\/js\\/v1\\/adtag\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dsp"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0054a9cdffefff2be7d13c8df786efc16358e680dc81813f36014b49fb84aae4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pastebin.com",
+                "www.grammar-monster.com"
+            ]
+        },
+        {
+            "rule": "vlitag\\.com\\/vli-assets\\/prebid\\/default\\/prebid-10\\.7\\.0\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 3,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.sessionStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.availWidth": 3,
+                "Screen.prototype.availHeight": 3,
+                "Screen.prototype.colorDepth": 3,
+                "window.innerHeight": 3,
+                "window.innerWidth": 3,
+                "window.outerWidth": 3,
+                "window.outerHeight": 3,
+                "Navigator.prototype.doNotTrack": 3,
+                "Navigator.prototype.language": 3,
+                "Navigator.prototype.webdriver": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.connection": 2,
+                "window.devicePixelRatio": 1,
+                "Screen.prototype.orientation": 1,
+                "Navigator.prototype.deviceMemory": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "455f4e621e1d656f917c00a5bf6c44b56f06602eff8419cad0e4bff5a202f671"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sharedid": {
+                    "ttl": 2419210,
+                    "length": 36,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 1
+                },
+                "sharedid_cst": {
+                    "ttl": 2419210,
+                    "length": 12,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 0.3333333333333333
+                },
+                "cto_bundle": {
+                    "ttl": 33696009,
+                    "length": 262,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 1
+                },
+                "cto_bidid": {
+                    "ttl": 33696009,
+                    "length": 186,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pastebin.com",
+                "plugins4free.com",
+                "www.grammar-monster.com"
+            ]
+        },
+        {
+            "rule": "vlitag\\.com\\/vli-assets\\/plugins\\/safeframe\\/src\\/js\\/sf_host\\.min\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "1916cf4455a526aadafd82710bf7304154905dcdf69dd9e0b516a63cc82e27e0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sf_ck_tst": {
+                    "ttl": 12,
+                    "length": 4,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 0.3333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pastebin.com",
+                "plugins4free.com",
+                "www.grammar-monster.com"
+            ]
+        },
+        {
+            "rule": "vlitag\\.com\\/cli\\/df664aa0-8ea7-4906-adff-768937d58510\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "581519f00b8d850273dd5de957c704e61ab31febca0cf39d95d28891ecbd755c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.0002018774603815484
+            },
+            "exampleSites": [
+                "how2shout.com",
+                "www.how2shout.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000505,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9333333333333333
+        },
+        {
+            "domain": "google.com",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "XHR": 4,
+        "Script": 15
+    },
+    "nameservers": [
+        "may.ns.cloudflare.com",
+        "theo.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,223 @@
+{
+    "domain": "webpushr.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000808,
+    "sites": 8,
+    "subdomains": [
+        "cdn",
+        "bot",
+        "analytics"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "webpushr\\.com\\/app\\.min\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 8,
+                "window.localStorage": 8,
+                "Notification.permission": 8,
+                "window.sessionStorage": 8,
+                "Document.cookie getter": 6,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "9d7b97a214fab427f116a28f6a65c94478db654cf2fd65a026d027463bcb112d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_webpushrPageViews": {
+                    "ttl": 7776005,
+                    "length": 1,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ouest-france.fr",
+                "charlestech.fr",
+                "eduforge.org",
+                "feuxdeforet.fr",
+                "livebox-news.com",
+                "mersetbateaux.com",
+                "www.196flavors.com",
+                "www.yubigeek.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/sw-server\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "b8f4b9ebbca65de0554f4d6a21137c78718c4b24c7396319c0f50d15253a6d23"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ouest-france.fr",
+                "charlestech.fr",
+                "eduforge.org",
+                "feuxdeforet.fr",
+                "mersetbateaux.com",
+                "www.196flavors.com",
+                "www.yubigeek.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/prompt\\/get_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bot"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "27e132f7c857c7c09005da1a25fcfcf83785ae1fbc0fd37ed41b069abf9f420b",
+                "48f361ab25c60e75f389719479fe27b7cc9cfa09dba595989704030e3cd23efd",
+                "4957e03194cd9a1cb41ad74a11081d13ed1f8e9b6e0e22b4e6a481ed4f59c6c5",
+                "b8a643b75a9e6069b34c9b774ee7df6daad11aa7b59b7f1bfb302e0164478be4",
+                "f902bc7b53781f70627b62a14e02f27bb557fedf7f715a12b6b05e0de2e0b726",
+                "7ab5aa8a9833ce0aedc385c49781f9589c0a06e98773907f6a64e923a2e740b1",
+                "c23afa202624573ea82e210f9ddcfbf1664e1ff4063ad950c9e133fd5b626bfa"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ouest-france.fr",
+                "charlestech.fr",
+                "eduforge.org",
+                "feuxdeforet.fr",
+                "livebox-news.com",
+                "mersetbateaux.com",
+                "www.196flavors.com",
+                "www.yubigeek.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/impression\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ouest-france.fr",
+                "charlestech.fr",
+                "eduforge.org",
+                "feuxdeforet.fr",
+                "mersetbateaux.com",
+                "www.196flavors.com",
+                "www.yubigeek.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/impression\\/prompt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ouest-france.fr",
+                "charlestech.fr",
+                "livebox-news.com",
+                "mersetbateaux.com",
+                "www.yubigeek.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/notification_card\\/impression",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ouest-france.fr",
+                "charlestech.fr",
+                "feuxdeforet.fr",
+                "mersetbateaux.com",
+                "www.yubigeek.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.95
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "Other": 7,
+        "Fetch": 25
+    },
+    "nameservers": [
+        "ns-514.awsdns-00.net",
+        "ns-397.awsdns-49.com",
+        "ns-1581.awsdns-05.co.uk",
+        "ns-1225.awsdns-25.org"
+    ]
+}

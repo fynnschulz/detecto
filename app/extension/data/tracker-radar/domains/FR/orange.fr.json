@@ -1,0 +1,212 @@
+{
+    "domain": "orange.fr",
+    "owner": {
+        "name": "Orange",
+        "displayName": "Orange"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "api-elcos-tech",
+        "sso",
+        "pdata",
+        "login",
+        "datalayer",
+        "trust-system-eui"
+    ],
+    "cnames": [
+        {
+            "original": "sso.sosh.fr",
+            "resolved": "sso.orange.fr"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "orange\\.fr\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-elcos-tech"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "shop.sosh.fr",
+                "www.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/pushms\\/advise\\/mct\\/1\\.1\\/proposal",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sso"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "sso.sosh.fr",
+                    "resolved": "sso.orange.fr"
+                }
+            ],
+            "responseHashes": [
+                "9aaddd583ca2fff3df00f8166e4978efe66efd934352b15ca238e3e6bf38c529",
+                "a1b6cc4fc054f70436beabfd479f4e771300b039dd5522c15dd51e2ffc691710"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "shop.sosh.fr",
+                "www.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/pconsent\\/_pdb\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pdata"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "1bd2aa0bb9f0a0fd919c42a18c81645bd6d9601f60086928b05db8a5be978689"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "shop.sosh.fr",
+                "www.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "18eb05e2707196964664fd01f4bfaeee901c9b50e740da09571ee22823420381"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "www.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "datalayer"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "9be473a076fe72c9591ae681b1c73ad4aff72ccf32fa6516d71ef126902f8045"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "shop.sosh.fr",
+                "www.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/trust",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trust-system-eui"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "shop.sosh.fr",
+                "www.sosh.fr"
+            ]
+        },
+        {
+            "rule": "orange\\.fr\\/api\\/access",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sosh.fr",
+                "www.sosh.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "woopic.com",
+            "prevalence": 0.8695652173913043
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.13043478260869565
+        }
+    ],
+    "types": {
+        "Ping": 3,
+        "Fetch": 8,
+        "Image": 3,
+        "Document": 2,
+        "XHR": 3
+    },
+    "nameservers": [
+        "ns2.orange.fr",
+        "ns1.orange.fr"
+    ]
+}

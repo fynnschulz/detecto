@@ -1,0 +1,95 @@
+{
+    "domain": "bf-tools.net",
+    "owner": {
+        "name": "BurdaForward GmbH",
+        "displayName": "BurdaForward"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000906,
+    "sites": 9,
+    "subdomains": [
+        "a",
+        "mds"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "bf-tools\\.net\\/de\\/de\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "a"
+            ],
+            "apis": {
+                "window.localStorage": 9,
+                "Document.cookie getter": 2
+            },
+            "sites": 9,
+            "prevalence": 0.000906,
+            "cnames": [],
+            "responseHashes": [
+                "b74850e5da2fc331e19521edac63d80276452af54d573abad5dc97cdf689275a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
+                "praxistipps.chip.de",
+                "www.chip.de",
+                "www.einfachkochen.de",
+                "www.einfachbacken.de",
+                "www.mein-schoener-garten.de",
+                "www.netdoktor.de",
+                "www.playboy.de",
+                "www.tvspielfilm.de"
+            ]
+        },
+        {
+            "rule": "bf-tools\\.net\\/api\\/v1\\/getMetadata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mds"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1ce9a56127f815c917c13cee0eb0fd0269fd43bf5625fbb30438c05bb6d09b25"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "einfachkochen.de",
+                "www.einfachbacken.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "a20-66.akam.net",
+        "a18-65.akam.net",
+        "a11-64.akam.net",
+        "a26-67.akam.net",
+        "a7-64.akam.net",
+        "a1-195.akam.net"
+    ]
+}

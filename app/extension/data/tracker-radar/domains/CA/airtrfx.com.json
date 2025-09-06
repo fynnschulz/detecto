@@ -1,0 +1,185 @@
+{
+    "domain": "airtrfx.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000406,
+    "sites": 4,
+    "subdomains": [
+        "openair-california",
+        "em-font-service-prod",
+        "em-tr4ck-settings",
+        "vg-api",
+        "em-frontend-assets"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "airtrfx\\.com\\/hangar-service\\/v2\\/f8\\/airports\\/search",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openair-california"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flyflair.com",
+                "flights.flyflair.com"
+            ]
+        },
+        {
+            "rule": "airtrfx\\.com\\/",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "em-font-service-prod",
+                "em-tr4ck-settings"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e91a138469bfa0b704ac39113fdd5efb67ed91dfe75a1bfd596a1631bd1d1ae1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flyflair.com",
+                "flights.flyflair.com"
+            ]
+        },
+        {
+            "rule": "airtrfx\\.com\\/hangar-service\\/v2\\/f8\\/airports\\/search",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openair-california"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "72659fd3ca87bff867cba795b581a0061b881119681257ee611a30d6d93dc299"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flyflair.com",
+                "flights.flyflair.com"
+            ]
+        },
+        {
+            "rule": "airtrfx\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vg-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "3111d82a6239962d2ad91102cd0723a748f55a4339c7ad627f3a3b69a75aab49"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flyflair.com",
+                "flights.flyflair.com"
+            ]
+        },
+        {
+            "rule": "airtrfx\\.com\\/mm\\/x-start\\.js",
+            "cookies": 0.000305,
+            "fingerprinting": 0,
+            "subdomains": [
+                "em-frontend-assets"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "a1da86e21ddb0b8edee78a17622e73d140619f6f79731938a7c17ec132c792ec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alaskaair.com",
+                "www.copaair.com",
+                "www.jetblue.com"
+            ]
+        },
+        {
+            "rule": "airtrfx\\.com\\/mm\\/1\\.1\\.21\\/adnetify\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "em-frontend-assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.maxTouchPoints": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "65f2343c972f23e407411f49e3011a8564f22fee1efe6d108b0616986dfd7cfb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alaskaair.com",
+                "www.copaair.com",
+                "www.jetblue.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000406,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9130434782608695
+        },
+        {
+            "domain": "appdynamics.com",
+            "prevalence": 0.043478260869565216
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.043478260869565216
+        }
+    ],
+    "types": {
+        "Preflight": 2,
+        "XHR": 4,
+        "Fetch": 2,
+        "Script": 6
+    },
+    "nameservers": [
+        "ns-990.awsdns-59.net",
+        "ns-1283.awsdns-32.org",
+        "ns-1770.awsdns-29.co.uk",
+        "ns-105.awsdns-13.com"
+    ]
+}

@@ -1,0 +1,189 @@
+{
+    "domain": "syf.com",
+    "owner": {
+        "name": "Synchrony Financial",
+        "displayName": "Synchrony Financial"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000109,
+    "sites": 16,
+    "subdomains": [
+        "apply",
+        "tags",
+        "buy"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "syf\\.com\\/etail\\/css\\/syfClient\\.css",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apply"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4efb7bea848f2a82eab7d7fc1815d8b1c9c508f3b2a9b9f2ebec731824d5bc15"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jcrew.com",
+                "www.jcrew.com"
+            ]
+        },
+        {
+            "rule": "syf\\.com\\/etail\\/js\\/syfClient\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apply"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9caa4ba2f111f06f25210a88f005ee21346875bb23838e2f2077ac26b007a4d6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jcrew.com",
+                "www.jcrew.com"
+            ]
+        },
+        {
+            "rule": "syf\\.com\\/syf-unifi-spa\\/prod\\/utag\\.js",
+            "cookies": 0.000041,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tags"
+            ],
+            "apis": {
+                "Document.cookie getter": 6,
+                "Date.prototype.getTime": 6,
+                "Document.cookie setter": 6,
+                "Navigator.prototype.appName": 5,
+                "Navigator.prototype.userAgent": 5,
+                "window.innerHeight": 6,
+                "window.innerWidth": 6,
+                "Date.prototype.getTimezoneOffset": 6,
+                "window.localStorage": 6,
+                "window.sessionStorage": 6
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "15b0c57e08859e0837d3c7dfed06f8e4f0b38e7e9d2345fc5a513615561e2b90"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "TEST_AMCV_COOKIE": {
+                    "ttl": 63072014,
+                    "length": 1,
+                    "prevalence": 0.000034204405527431934,
+                    "uniqueness": 0.2
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mikesbikes.com",
+                "www.chicagomusicexchange.com",
+                "www.dxengineering.com",
+                "www.gibson.com",
+                "www.lovesac.com",
+                "www.musicdirect.com",
+                "www.perfectcircuit.com"
+            ]
+        },
+        {
+            "rule": "syf\\.com\\/digitalbuy\\/js\\/merchant_ff\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "buy"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "0f585966b256ef3e817c9182973322b97106ff067102a838a7aa1f0a9125d596"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "homfurniture.com",
+                "www.homfurniture.com",
+                "www.samys.com"
+            ]
+        },
+        {
+            "rule": "syf\\.com\\/digitalbuy\\/css\\/syfdbuymodal\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "4b9355a93d97992aea4ad9470d5458b074e51ad1ef8b07ad1642fa038d0152e0"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "homfurniture.com",
+                "www.homfurniture.com",
+                "www.samys.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000821,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6363636363636364
+        },
+        {
+            "domain": "syfpayments.com",
+            "prevalence": 0.3181818181818182
+        },
+        {
+            "domain": "synchrony.com",
+            "prevalence": 0.045454545454545456
+        }
+    ],
+    "types": {
+        "Stylesheet": 5,
+        "Script": 12
+    },
+    "nameservers": [
+        "a3-64.akam.net",
+        "a22-67.akam.net",
+        "a18-66.akam.net",
+        "a7-64.akam.net",
+        "a1-181.akam.net",
+        "a20-64.akam.net"
+    ]
+}

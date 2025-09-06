@@ -1,0 +1,126 @@
+{
+    "domain": "prepr.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.00101,
+    "sites": 10,
+    "subdomains": [
+        "cdn.tracking"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "prepr\\.io\\/js\\/prepr_v2\\.min\\.js",
+            "cookies": 0.000707,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.tracking"
+            ],
+            "apis": {
+                "Document.cookie getter": 7,
+                "Date.prototype.getTime": 7,
+                "Document.cookie setter": 7
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "902baf50624df64457f99dd8853fadc134d88025b2071b7b192cc3b02f1cc0b6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__prepr_uid": {
+                    "ttl": 63072003,
+                    "length": 19,
+                    "prevalence": 0.0007072135785007072,
+                    "uniqueness": 1
+                },
+                "__prepr_ed": {
+                    "ttl": null,
+                    "length": 4,
+                    "prevalence": 0.0007072135785007072,
+                    "uniqueness": 0.14285714285714285
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eo.nl",
+                "dit.eo.nl",
+                "ikmisje.eo.nl",
+                "nederlandzingt.eo.nl",
+                "www.droomplekken.nl",
+                "www.eo.nl",
+                "www.explorebreda.com"
+            ]
+        },
+        {
+            "rule": "prepr\\.io\\/e942c3ac8072ceaa1208872391520f957920f7647fc26f1b51e025d58adfaf1a\\/experiments\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.tracking"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "335c237fa6e51e46a390e0b6c827c30ec43f44eb813f0e74c6b1ad244fc03fff"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eo.nl",
+                "dit.eo.nl",
+                "ikmisje.eo.nl",
+                "nederlandzingt.eo.nl",
+                "www.eo.nl"
+            ]
+        },
+        {
+            "rule": "prepr\\.io\\/e942c3ac8072ceaa1208872391520f957920f7647fc26f1b51e025d58adfaf1a\\/experiments\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.tracking"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eo.nl",
+                "dit.eo.nl",
+                "ikmisje.eo.nl",
+                "nederlandzingt.eo.nl",
+                "www.eo.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000707,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Fetch": 5,
+        "Preflight": 5
+    },
+    "nameservers": [
+        "blair.ns.cloudflare.com",
+        "kurt.ns.cloudflare.com"
+    ]
+}

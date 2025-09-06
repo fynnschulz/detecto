@@ -1,0 +1,341 @@
+{
+    "domain": "global-e.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000808,
+    "sites": 8,
+    "subdomains": [
+        "webservices",
+        "web-pacsun",
+        "globale-analytics-sdk",
+        "web-she",
+        "utils",
+        "crossborder-integration",
+        "gepi"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "global-e\\.com\\/merchant\\/changeshippingandcurrency",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices",
+                "web-pacsun"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f26d3c3db0b4762f706525ac9db0975b62480249f7c2b42103afb62857950ef9",
+                "bcc9b8d7abf28a113d74fa1cc9ce966f6c061c880615f1ede1f1db11edabd28e",
+                "01dc82cfd9e43588e568da4b0b86fa88c17781e572785582c8115e9927a58dac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ba-sh.com",
+                "www.aigle.com",
+                "www.jonak.fr",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/GAData",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "webservices",
+                "web-pacsun"
+            ],
+            "apis": {
+                "window.sessionStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "6763c35c440cb45735650cb517b54c4bbf311bd4824d0424307c3ce904fbd369",
+                "3bd42be3137ac8aeafe6de2707326001e795b13ff7082a208106ad57ab69e7ff",
+                "09c465c5a5ac607c554e445962c2168d8f63ea9349b5c43c783d1735a1014f8c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ba-sh.com",
+                "www.aigle.com",
+                "www.jonak.fr",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/PROD\\/bundle\\.js",
+            "cookies": 0.000505,
+            "fingerprinting": 1,
+            "subdomains": [
+                "globale-analytics-sdk"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5,
+                "window.sessionStorage": 5,
+                "Document.cookie setter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "bdceb9bef359b16d1a072b2174c9bbc9b42066c0af3423db48950a7bcec5ab84"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "GlobalE_Analytics": {
+                    "ttl": 63072012,
+                    "length": 649,
+                    "prevalence": 0.000504999495000505,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ba-sh.com",
+                "thebradery.com",
+                "www.aigle.com",
+                "www.jonak.fr",
+                "www.leslipfrancais.fr"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/freeShippingBanner",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices",
+                "web-pacsun",
+                "web-she"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ba-sh.com",
+                "thebradery.com",
+                "www.aigle.com",
+                "www.armorlux.com",
+                "www.dim.fr",
+                "www.jonak.fr",
+                "www.leslipfrancais.fr",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/set",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "utils"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "GLBE_SESS_ID": 0.000100999899000101
+            },
+            "exampleSites": [
+                "ba-sh.com",
+                "thebradery.com",
+                "www.aigle.com",
+                "www.armorlux.com",
+                "www.jonak.fr",
+                "www.leslipfrancais.fr",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/client",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "utils"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ba-sh.com",
+                "thebradery.com",
+                "www.aigle.com",
+                "www.jonak.fr"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/resources\\/js\\/app",
+            "cookies": 0.000404,
+            "fingerprinting": 1,
+            "subdomains": [
+                "crossborder-integration"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4,
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 4,
+                "window.localStorage": 3,
+                "window.sessionStorage": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "4ac1bf4bcf5a1ec47e238f448f6d599145a437d5b7a0753513044c99dda45724",
+                "827d01b2851c7df0cb6ed4f0bb22fbfc4c77d031d1b9e329fc03ca9336403051",
+                "4b64ea8e45791231d6c62752658ae56b5bead74112cfbe8807c802e206d7f383"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "GlobalE_Consent": {
+                    "ttl": null,
+                    "length": 91,
+                    "prevalence": 0.000403999596000404,
+                    "uniqueness": 0.5
+                },
+                "GLBE_SESS_ID": {
+                    "ttl": 63072011,
+                    "length": 77,
+                    "prevalence": 0.000302999697000303,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thebradery.com",
+                "www.armorlux.com",
+                "www.dim.fr",
+                "www.leslipfrancais.fr"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/cookieConsentScript",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices",
+                "web-she"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "779c6206d57d6380056e5f6c7ff41a997cc05e1cd785b28ccf08d045fc912fdb",
+                "c855c921f1c49af2e0288493397305d8ab82426dcfd34ce1655aa9859aecabf8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thebradery.com",
+                "www.armorlux.com",
+                "www.dim.fr",
+                "www.leslipfrancais.fr"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/Utils\\/IsThirdPartCookiesAllowed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gepi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "52c63272ba9756dcc243d33b5bf09b333494864fa57a13dc922e43f9a0e02dc2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jonak.fr",
+                "www.sennheiser-hearing.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/includes\\/CSS\\/672",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gepi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "df5bdd5eb254b16ef1db24c3abf44f0e510af62439aaa84d472cdb88b8104f91"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sennheiser-hearing.com",
+                "www.sennheiser-hearing.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000808,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9705882352941176
+        },
+        {
+            "domain": "contentsquare.net",
+            "prevalence": 0.029411764705882353
+        }
+    ],
+    "types": {
+        "Script": 27,
+        "Document": 4,
+        "Image": 11,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "ns-1386.awsdns-45.org",
+        "ns-1982.awsdns-55.co.uk",
+        "ns-734.awsdns-27.net",
+        "ns-80.awsdns-10.com"
+    ]
+}

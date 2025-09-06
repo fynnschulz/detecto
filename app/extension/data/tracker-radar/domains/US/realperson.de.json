@@ -1,0 +1,288 @@
+{
+    "domain": "realperson.de",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "chat640",
+        "chat12",
+        "chat131",
+        "chat3000"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "realperson\\.de\\/system\\/scripts\\/loadchatmodul\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 2,
+            "subdomains": [
+                "chat640",
+                "chat12",
+                "chat131",
+                "chat3000"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 4,
+                "URL.createObjectURL": 4,
+                "window.localStorage": 4,
+                "window.sessionStorage": 4,
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4,
+                "window.innerHeight": 3
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "cbbe11d8ecb17d7935db8c6823bef7a6b5c131cd587f94c102acfc38abe36464",
+                "ef888e8fd86eb31beafbe35ec8cc26264304fb6cf656d0d991369aac7df2917a",
+                "b5e82f7747df2b3861520b892bcdacb2ef12568f3832cf1f7963271ea2aea120"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "REALPERSON_SESSION": {
+                    "ttl": null,
+                    "length": 40,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arag.de",
+                "www.ergo.de",
+                "www.flyedelweiss.com",
+                "www.segmueller.de"
+            ]
+        },
+        {
+            "rule": "realperson\\.de\\/api\\/embed\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat640",
+                "chat12",
+                "chat131",
+                "chat3000"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "1f54329c5d28ab830c166881b0b695288438bd14837c5d44761b231fe00de0bd",
+                "1374b5b177b28668c594b8a93a4ea5312edca98f285a9db77dc46e97c8d880f1",
+                "85a21edf3145b9c994c5360b2b82c3a685b3950f767badc1f3557051760f4e35"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arag.de",
+                "www.ergo.de",
+                "www.flyedelweiss.com",
+                "www.segmueller.de"
+            ]
+        },
+        {
+            "rule": "realperson\\.de\\/api\\/embed\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat640",
+                "chat12",
+                "chat131",
+                "chat3000"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arag.de",
+                "www.ergo.de",
+                "www.flyedelweiss.com",
+                "www.segmueller.de"
+            ]
+        },
+        {
+            "rule": "realperson\\.de\\/system\\/css\\/realperson-code\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat640",
+                "chat12",
+                "chat131",
+                "chat3000"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e0efc08104682150070192ceb1e857587b66c3facb2fb105efc8c3461aa54546",
+                "2b03cc34fd450f2e8b0f1c8dd8643e9e62512175c26e234b0f2a9d9f0d6feb6b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arag.de",
+                "www.ergo.de",
+                "www.flyedelweiss.com",
+                "www.segmueller.de"
+            ]
+        },
+        {
+            "rule": "realperson\\.de\\/system\\/scripts\\/loadlayerchatmodul-v2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "chat640",
+                "chat12",
+                "chat3000"
+            ],
+            "apis": {
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "4fac64cd6f49f80d4be9f00a022888939850fb0e3c9faeaf7a95d2fb5c8c7fcd",
+                "54970859cb6f19b24e35842b017cae531bb45e73190b02076a5aab2b1a3d78bd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arag.de",
+                "www.ergo.de",
+                "www.segmueller.de"
+            ]
+        },
+        {
+            "rule": "realperson\\.de\\/assets\\/js\\/mqtt\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "chat640",
+                "chat12",
+                "chat3000"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "94f2bbef9fbfe34e71aa9ed776de899a530a4ec23e6bc87946f554b31a15f7a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arag.de",
+                "www.ergo.de",
+                "www.segmueller.de"
+            ]
+        },
+        {
+            "rule": "realperson\\.de\\/api\\/embed\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat640",
+                "chat12",
+                "chat131",
+                "chat3000"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "2190696802153c5e564d613fcf16f9c9b556032117cba7215c0644ef16c3ec28",
+                "531ed807b18abbffd7b3aec47107f8825d7b53960d0f03a77e362098b88e7a2e",
+                "e6b0d806cd782e9c350a25ffdedfc33cb4626f2f98ea60d90d09f201180cfb7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arag.de",
+                "www.ergo.de",
+                "www.flyedelweiss.com",
+                "www.segmueller.de"
+            ]
+        },
+        {
+            "rule": "realperson\\.de\\/api\\/embed\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat640",
+                "chat12",
+                "chat131",
+                "chat3000"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arag.de",
+                "www.ergo.de",
+                "www.flyedelweiss.com",
+                "www.segmueller.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "loadlayerchatmodul-v2.js",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "instana.io",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.07142857142857142
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "Fetch": 8,
+        "Preflight": 8,
+        "Stylesheet": 4
+    },
+    "nameservers": [
+        "ns4.stratoserver.net",
+        "ns3.stratoserver.net"
+    ]
+}

@@ -1,0 +1,130 @@
+{
+    "domain": "btmessage.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "cdn",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "btmessage\\.com\\/script\\/rlink\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b6700b495832dd2437d70b6dbbb3ba03edd89ac97f1e07bae0ee1716bbaa12ee"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leagueofgraphs.com",
+                "www.mobafire.com"
+            ]
+        },
+        {
+            "rule": "btmessage\\.com\\/assets\\/bt-rlink-storage-BvSbFeGG\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b8760d978e3e5a85634bea5f64e0fc29de72ff390a06c81007793e7c8b2dd489"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leagueofgraphs.com",
+                "www.mobafire.com"
+            ]
+        },
+        {
+            "rule": "btmessage\\.com\\/websiteconfig",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "36b34b35c4dcbb3124817aeed2db14fa6f6f8657ddf33a8279222ffd7b45d153"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leagueofgraphs.com",
+                "www.mobafire.com"
+            ]
+        },
+        {
+            "rule": "btmessage\\.com\\/events\\/mw",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leagueofgraphs.com",
+                "www.mobafire.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "btloader.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Document": 2,
+        "Fetch": 4
+    },
+    "nameservers": [
+        "anna.ns.cloudflare.com",
+        "anuj.ns.cloudflare.com"
+    ]
+}

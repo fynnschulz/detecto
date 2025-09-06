@@ -1,0 +1,167 @@
+{
+    "domain": "upremium.asia",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "player",
+        "delivery"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "upremium\\.asia\\/adrefresh\\.v1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "f969fd732adfce95e353bd20eacd44a84a3e56c2958fed18410818ef6a941ae3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dantri.com.vn",
+                "www.dinamani.com",
+                "www.dimsumdaily.hk"
+            ]
+        },
+        {
+            "rule": "upremium\\.asia\\/demo\\/3rdpartycookiecheck\\/start\\.html",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Document.cookie setter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {
+                "thirdparty": {
+                    "ttl": 3600,
+                    "length": 3,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dantri.com.vn",
+                "www.dinamani.com",
+                "www.dimsumdaily.hk"
+            ]
+        },
+        {
+            "rule": "upremium\\.asia\\/dist\\/uaf\\/v2\\.4\\.348\\/libs-adrefresh\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1,
+                "window.name": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {
+                "uadrefresh_49c0b3d79f9d123d72e249": {
+                    "ttl": 31536028,
+                    "length": 18,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dantri.com.vn",
+                "www.dinamani.com"
+            ]
+        },
+        {
+            "rule": "upremium\\.asia\\/api\\/publishers\\/player\\/content",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "delivery"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "dantri.com.vn",
+                "www.dinamani.com"
+            ]
+        },
+        {
+            "rule": "upremium\\.asia\\/content-player\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "window.name": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "23bae614312d6965fbea2c95b617e91f59799e3e2e19e9d617acb475b06f0bec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thanhnien.vn",
+                "www.dimsumdaily.hk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Document": 3,
+        "XHR": 2
+    },
+    "nameservers": [
+        "garret.ns.cloudflare.com",
+        "isabel.ns.cloudflare.com"
+    ]
+}

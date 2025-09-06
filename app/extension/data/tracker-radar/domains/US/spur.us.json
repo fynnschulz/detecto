@@ -1,0 +1,166 @@
+{
+    "domain": "spur.us",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "mcl",
+        "2a831e1d96034247ba92b7b08487c270.verify-nane1",
+        "4ee1cfdc0ee44e419d8f3efdb2d88bbd.verify-nane1",
+        "9ae297394290478588aaf96b810097a0.verify-nane1",
+        "a6a9fd6c54a346ac9ab94c8b4ca2fc48.verify-nane1"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "spur\\.us\\/d\\/mcl\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "mcl"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.plugins": 2,
+                "window.indexedDB": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groups.io",
+                "shop.bobcat.com"
+            ]
+        },
+        {
+            "rule": "spur\\.us\\/r\\/mcl\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "2a831e1d96034247ba92b7b08487c270.verify-nane1",
+                "4ee1cfdc0ee44e419d8f3efdb2d88bbd.verify-nane1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1285f67e98d7a86d28391a153343e120d3459a7d9b7e3097b935c77b9ccf70e2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groups.io",
+                "shop.bobcat.com"
+            ]
+        },
+        {
+            "rule": "spur\\.us\\/d\\/p",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "9ae297394290478588aaf96b810097a0.verify-nane1",
+                "a6a9fd6c54a346ac9ab94c8b4ca2fc48.verify-nane1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "99d578548cbb5e31b48d2621be1ae576d0691981cb2a89ff49bd8a4ee97f1513"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groups.io",
+                "shop.bobcat.com"
+            ]
+        },
+        {
+            "rule": "spur\\.us\\/d\\/w",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mcl"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groups.io",
+                "shop.bobcat.com"
+            ]
+        },
+        {
+            "rule": "spur\\.us\\/r\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mcl"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f4d651147ac9f9cdded5af34033d8e84f4ad9c38ce6ed01ae6c964795a1e9823"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groups.io",
+                "shop.bobcat.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 2,
+        "WebSocket": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d1.googledomains.com",
+        "ns-cloud-d4.googledomains.com"
+    ]
+}

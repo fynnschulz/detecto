@@ -1,0 +1,188 @@
+{
+    "domain": "lc-api.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "lovehoney-com-au-offers",
+        "lovehoney-co-uk-offers",
+        "lovehoney-com-offers",
+        "lh-us",
+        "lh-eu",
+        "sentry-static",
+        "sentry"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "lc-api\\.net\\/v2\\/offers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lovehoney-com-au-offers",
+                "lovehoney-co-uk-offers",
+                "lovehoney-com-offers"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "5dd5e20f4cc1eba31a8aa468acc43b25b22653da15ed628412be4189f0b4898d",
+                "bb81d2e0b5bc4c37dd417a566209b5b24aceff9f0d754a021fb0197e41eb0afc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lovehoney.com.au",
+                "www.lovehoney.co.uk",
+                "www.lovehoney.com"
+            ]
+        },
+        {
+            "rule": "lc-api\\.net\\/v2\\/offers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lovehoney-com-au-offers",
+                "lovehoney-co-uk-offers",
+                "lovehoney-com-offers"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lovehoney.com.au",
+                "www.lovehoney.co.uk",
+                "www.lovehoney.com"
+            ]
+        },
+        {
+            "rule": "lc-api\\.net\\/stats\\/nav",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lh-us",
+                "lh-eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lovehoney.com.au",
+                "www.lovehoney.co.uk",
+                "www.lovehoney.com"
+            ]
+        },
+        {
+            "rule": "lc-api\\.net\\/stats\\/nav",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lh-us",
+                "lh-eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lovehoney.com.au",
+                "www.lovehoney.co.uk",
+                "www.lovehoney.com"
+            ]
+        },
+        {
+            "rule": "lc-api\\.net\\/bundle-8\\.30\\.0\\.tracing\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sentry-static"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e898ac474b5c65002911b26904e56a269d5267f98ef2bc41407641435bd49453"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lovehoney.com.au",
+                "www.lovehoney.co.uk",
+                "www.lovehoney.com"
+            ]
+        },
+        {
+            "rule": "lc-api\\.net\\/api\\/5\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "afc3a132385899815f3af9e88605955bf7297c1169e46bae5e96ea1eef42c019",
+                "641f7152473fcee54d1f9ff9be69c4dacceac785df36bac61857e9f533ee219d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lovehoney.com.au",
+                "www.lovehoney.com",
+                "www.lovehoney.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 3,
+        "Preflight": 6,
+        "Fetch": 6,
+        "Script": 3
+    },
+    "nameservers": [
+        "ns-1728.awsdns-24.co.uk",
+        "ns-1244.awsdns-27.org",
+        "ns-939.awsdns-53.net",
+        "ns-100.awsdns-12.com"
+    ]
+}

@@ -1,0 +1,464 @@
+{
+    "domain": "i-mobile.co.jp",
+    "owner": {
+        "name": "i-mobile co. LTD",
+        "displayName": "i-mobile"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00151,
+    "sites": 15,
+    "subdomains": [
+        "imp-adedge",
+        "imp-bidapi",
+        "spnativeapi-tls",
+        "ssp-sync",
+        "spdeliver",
+        "spsvcpc-tls",
+        "spimgv1",
+        "ssp-bidapi",
+        "spnativeapi-direct",
+        "xid"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "i-mobile\\.co\\.jp\\/script\\/v1\\/spot\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "imp-adedge"
+            ],
+            "apis": {
+                "window.name": 13,
+                "Navigator.prototype.userAgent": 13,
+                "window.localStorage": 13,
+                "window.sessionStorage": 13
+            },
+            "sites": 13,
+            "prevalence": 0.00131,
+            "cnames": [],
+            "responseHashes": [
+                "b59458daaee10e6fb9cc51a4200ec52c73d904aa3dd3f19019ee4eb121d4bec1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pixiv.net",
+                "ero-gazou.jp",
+                "erogame.tcs7.net",
+                "erogazou.gallery",
+                "geinoujin-gazou.mixh.jp",
+                "hentai-witch.com",
+                "himebon.blog",
+                "kyarabetsunijiero.net",
+                "megamich.com",
+                "oppaisan.com",
+                "puni-puni.com",
+                "twicomi.com",
+                "xvideo-jp.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/api\\/v1\\/spot\\.ashx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imp-bidapi"
+            ],
+            "apis": {},
+            "sites": 13,
+            "prevalence": 0.00131,
+            "cnames": [],
+            "responseHashes": [
+                "c616ca3d232bee38e6c335f24c74815585edc5c7be66233120cffc36e0e9f6c0",
+                "8d52630765fcc5bb3d02616b5f01732be3cfd18600699ece151871ae1032a2c7",
+                "9c0d8f1e4aef96072331d99d44e4a298ec9698065db6e2883c724f130f82a7fb",
+                "4420eb505bf6c4f981510d37a65e8df183c95e02d0e1d852726d8374f41c5e6d",
+                "0fef7ff41ff17cf48e78fb9472d11fedc82aa0cac18a7d74c38ac653f3856e47",
+                "96fb6ea0f518b2a2c35afef209af39cacfd41e4d2c581256ec36c9c2f187ddef",
+                "b41527b399ad19b81a4664d3a414b92fe8e4b38f6415ec70badc85a2f685269d",
+                "ae81fc046953f7e223d72b2e18dfc568169dbec22240f040af1ddeeea3a70679",
+                "5182c82791c7e7d3cff7dbe8bb9a693cceb9cce6a6e3406ece49abf41ca93794",
+                "4b811385ed783fd6b6c0e8ce03a82213f7146a8afb6e728c1af09142e7fe9337",
+                "274212f778e09f1b1dc8dfb745a2f79785ac3df2fb80fcf3c2c69da881386bc6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pixiv.net",
+                "ero-gazou.jp",
+                "erogame.tcs7.net",
+                "erogazou.gallery",
+                "geinoujin-gazou.mixh.jp",
+                "hentai-witch.com",
+                "himebon.blog",
+                "kyarabetsunijiero.net",
+                "megamich.com",
+                "oppaisan.com",
+                "puni-puni.com",
+                "twicomi.com",
+                "xvideo-jp.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/api\\/ad_spot\\.ashx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spnativeapi-tls"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "c901f92abdd2466fa09b22c31f9036186d248694f0f4ba28ddc1d7c23a201c8d",
+                "53d002fbe0ad9f6b7c43d951c95ad27b3b42509fb45667cf8dc74a5f4d6dca4e",
+                "8636ba901e468bafe84ee21fb4919184ec4bb3dee724a87c0cdd44a52b52eb3f",
+                "b32c1fa94ab79aad67d74896861f472a96b522b59de2761ce89e3b0895c1eae2",
+                "9b9f49251805c789d808794f22fae6e559af26901bc7d44ba0e77275f0a6f846",
+                "c571f7cfd4f432ba02b2cb272f2386e88e3e8ab2debbee9ed9b60d88a36dc3bc",
+                "0003db5b394880d49646ef1dcdbf9c08db46b96c21b8a5940d446a3e201691a2",
+                "ccc16efee73e62cd2ad27f18fc62de07f6ffc3923294c4fdc62f7e67a7dbfb23",
+                "5b642c736d0faaf362f8cb46420a3791d95bae520e9cef38165987463bc4e739",
+                "b69fe44389f4a9b2765d0474222a15873a58648f9d19339fd610e2fcc1792fd8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pixiv.net",
+                "dic.pixiv.net",
+                "ero-gazou.jp",
+                "erogame.tcs7.net",
+                "geinoujin-gazou.mixh.jp",
+                "hentai-witch.com",
+                "kyarabetsunijiero.net",
+                "megamich.com",
+                "oppaisan.com",
+                "twicomi.com",
+                "xvideo-jp.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/api\\/v1\\/log\\.ashx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp-sync"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000909,
+            "cnames": [],
+            "responseHashes": [
+                "1e9d058a9ab82233831abc3720b6d8597799c5a94b6ebe47afac79e4deba0e69"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pixiv.net",
+                "ero-gazou.jp",
+                "geinoujin-gazou.mixh.jp",
+                "hentai-witch.com",
+                "kyarabetsunijiero.net",
+                "megamich.com",
+                "oppaisan.com",
+                "twicomi.com",
+                "xvideo-jp.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/script\\/adsnativepc\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "spdeliver"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "851578710fa984955fe1faf65e8900a3c99b23284c0abf96fecac99750649ad5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tcs7.net",
+                "erogazoumura.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/ajax\\/ad_native\\.ashx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spsvcpc-tls"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "ae4a3bb62dd36ab46706e650b9717429a942fb04366ecfb1736e5408f6964738"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tcs7.net",
+                "erogame.tcs7.net",
+                "erogazoumura.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/shared\\/opt-i\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spimgv1"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "4523539b67f95374afaa096c406692a82ef422ac01b5697ce294ddc6509c4a9d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tcs7.net",
+                "ero-gazou.jp",
+                "hentai-witch.com",
+                "kyarabetsunijiero.net",
+                "megamich.com",
+                "oppaisan.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/a4615\\/01K2GT9RSQVWT4NMBQ924QZHGZ\\/main\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spimgv1"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "18820c611c32c5a37a3d26dfeced279b7e8c34dcd6a427bd5dea9a7d41163b34"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tcs7.net",
+                "ero-gazou.jp",
+                "hentai-witch.com",
+                "oppaisan.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/ajax\\/imp\\/imp_count\\.ashx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp-bidapi"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "fe85cceb474303eb80a5ca9a60b16d92208a8e0b38647647654b0c42447b51f7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tcs7.net",
+                "ero-gazou.jp",
+                "erogazou.gallery",
+                "hentai-witch.com",
+                "himebon.blog",
+                "kyarabetsunijiero.net",
+                "megamich.com",
+                "oppaisan.com",
+                "puni-puni.com",
+                "xvideo-jp.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/api\\/ad_imp_count\\.ashx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spnativeapi-direct"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "1711cac5df1dfa9a680169f3332eb4012fdb8c6587fe24557fc3fa89d7bba8b0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tcs7.net",
+                "ero-gazou.jp",
+                "hentai-witch.com",
+                "kyarabetsunijiero.net",
+                "megamich.com",
+                "oppaisan.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/RestoreXidToMediaStorage\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b1cf9494979497e2751b2b9933adb75ca049dbd1c9ee21a9981c630a83061cf1"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tcs7.net",
+                "erogame.tcs7.net"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/a4615\\/01K2GT9RSQHZGWQVTXE0B7BSFJ\\/main\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spimgv1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e7f698cf878606bd560e540ddfbdf7bb2e7cc1499a81555b39c99bbfc6ab1eee"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ero-gazou.jp",
+                "hentai-witch.com",
+                "kyarabetsunijiero.net"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/a4615\\/01K2GT9RSQN1XXTFGPDNMAVKR0\\/main\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spimgv1"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "2d6e8fc4cfbe8883159cbffa917c347c3d3f32188f564d6e07bb07343beedd96"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hentai-witch.com",
+                "kyarabetsunijiero.net",
+                "megamich.com",
+                "oppaisan.com"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/a4615\\/01K2GT9RSQ96NRGNQ7R0RDBM39\\/main\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spimgv1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "eaebad6417183ca5c7b96d65ba39a715abd0ebf1c8ca504df3cfdedad5b2e27d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hentai-witch.com",
+                "kyarabetsunijiero.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8666666666666667
+        },
+        {
+            "domain": "ziyu.net",
+            "prevalence": 0.044444444444444446
+        },
+        {
+            "domain": "genieesspv.jp",
+            "prevalence": 0.022222222222222223
+        },
+        {
+            "domain": "microad.net",
+            "prevalence": 0.022222222222222223
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.022222222222222223
+        },
+        {
+            "domain": "ad-cheers.com",
+            "prevalence": 0.022222222222222223
+        }
+    ],
+    "types": {
+        "Script": 26,
+        "XHR": 26,
+        "Image": 34,
+        "Document": 2
+    },
+    "nameservers": [
+        "ns-1333.awsdns-38.org",
+        "ns-108.awsdns-13.com",
+        "ns-636.awsdns-15.net",
+        "ns-2000.awsdns-58.co.uk"
+    ]
+}

@@ -1,0 +1,97 @@
+{
+    "domain": "naver.net",
+    "owner": {
+        "name": "Naver Corporation",
+        "displayName": "Naver"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.00102,
+    "sites": 10,
+    "subdomains": [
+        "wcs"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "naver\\.net\\/wcslog\\.js",
+            "cookies": 0.00102,
+            "fingerprinting": 2,
+            "subdomains": [
+                "wcs"
+            ],
+            "apis": {
+                "Document.cookie getter": 10,
+                "Date.prototype.getTime": 10,
+                "Document.cookie setter": 10,
+                "Navigator.prototype.appName": 10,
+                "Navigator.prototype.userAgent": 10,
+                "Navigator.prototype.platform": 10,
+                "Navigator.prototype.language": 10,
+                "Screen.prototype.width": 10,
+                "Screen.prototype.height": 10,
+                "Screen.prototype.colorDepth": 10,
+                "Navigator.prototype.javaEnabled": 10,
+                "Navigator.prototype.appVersion": 10,
+                "Navigator.prototype.cookieEnabled": 10,
+                "window.localStorage": 10
+            },
+            "sites": 10,
+            "prevalence": 0.00102,
+            "cnames": [],
+            "responseHashes": [
+                "f85c25ccd2d895cb838de9fbd7e6a8d7db306a22901a2113cafc22452dae3777"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_fwb": {
+                    "ttl": 6307200007,
+                    "length": 37,
+                    "prevalence": 0.001015125367982946,
+                    "uniqueness": 1
+                },
+                "wcs_bt": {
+                    "ttl": 6307200007,
+                    "length": 25,
+                    "prevalence": 0.001015125367982946,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "databricks.com",
+                "marriott.com",
+                "www.cyberlink.com",
+                "www.databricks.com",
+                "www.genesis.com",
+                "www.guinnessworldrecords.com",
+                "www.insta360.com",
+                "www.klook.com",
+                "www.marriott.com",
+                "www.trip.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00102,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Script": 10
+    },
+    "nameservers": [
+        "ns2.naver.com",
+        "ns1.naver.com"
+    ]
+}

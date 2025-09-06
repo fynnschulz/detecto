@@ -1,0 +1,202 @@
+{
+    "domain": "kr3m.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "cas2",
+        "tracking-live",
+        "borg-live",
+        "odo-live",
+        "loco"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "kr3m\\.com\\/js\\/cas2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cas2"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "173dbd96bbae2e084f329d09f7386649dc08c69862effd73e5ba96f821715727"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spiegel.de",
+                "spiele.spiegel.de"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/js\\/client\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tracking-live"
+            ],
+            "apis": {
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d8063d8d24ee78ab6df566817a977b02aac3709f39e204ad3f1dce552c2b0148"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spiegel.de",
+                "www.sueddeutsche.de"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/matomo\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "borg-live",
+                "odo-live"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "dbefc0fa9b6b7680a9a1c1e5a0f0cc7c8ae3c41a7b15c206a144963cb36a073d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spiegel.de",
+                "www.sueddeutsche.de"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/services",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cas2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "718bf1aa55b13315471e60d362327b973a71b0de31922d9f0f1e9b54f422dfb7",
+                "cf41bbeeb6b1091254dcb86acf144b27e08e427160a50e573d39f6324d707e55"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spiegel.de",
+                "spiele.spiegel.de",
+                "www.sueddeutsche.de"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "borg-live",
+                "odo-live"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spiegel.de",
+                "spiele.spiegel.de",
+                "www.sueddeutsche.de"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/project\\.json",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "loco"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "26e9b444c370977d5d39d140c15030f9309106e5ac047e2ea20c859976058024"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spiegel.de",
+                "www.sueddeutsche.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6071428571428571
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "das-onlinespiel.de",
+            "prevalence": 0.17857142857142858
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "XHR": 5,
+        "Ping": 3
+    },
+    "nameservers": [
+        "ns1.bw-networx.net",
+        "ns3.bw-networx.net",
+        "ns2.bw-networx.net"
+    ]
+}

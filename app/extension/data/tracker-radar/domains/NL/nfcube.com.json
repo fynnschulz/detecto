@@ -1,0 +1,135 @@
+{
+    "domain": "nfcube.com",
+    "owner": {
+        "name": "Mintt Studio",
+        "displayName": "Mintt Studio"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "instafeed",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "nfcube\\.com\\/feed\\/v6",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "instafeed"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "50e0fc545035540dbee8ce2c647266d0ee488142f90698b221e1b5a7f1d35735",
+                "92ecc99e121d3de584e167bed865e9f400da0eb7d21551a59dc9e75632aa288c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ecostyle.nl",
+                "www.decathlon.com",
+                "yaya.eu"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/assets\\/img\\/placeholder\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "instafeed"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "968b17baf99ffc8097fdbe0d8552113c2f6e7da2a63e3967f24811e2e2e0a312"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ecostyle.nl",
+                "isabelbernard.com",
+                "www.decathlon.com",
+                "yaya.eu"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/cdn\\/instafeed-16\\.8\\.0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "instafeed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "60659997d05ec776c261b829ee7ef3c084bb417ce68d5add59632829c32dc272"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "isabelbernard.com",
+                "yaya.eu"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/instafeed-8cf98a5a67967db58e071fdb98e726b4\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.connection": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "044f37f296da768276ce96963c3de07b6e4952e4da0f1b12e6fbd94e8b19cf28"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.com",
+                "www.decathlon.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 3,
+        "Image": 4,
+        "Stylesheet": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "ivan.ns.cloudflare.com",
+        "pat.ns.cloudflare.com"
+    ]
+}

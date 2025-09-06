@@ -1,0 +1,83 @@
+{
+    "domain": "camsys-apps.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "otp-mta-prod",
+        "collector-otp-prod"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "camsys-apps\\.com\\/otp\\/routers\\/default\\/index\\/routes",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otp-mta-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a6fb85606d370602b1cbdd6acffea03fd1c378719b8f0c31dd4ebe42fe562ef1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omny.info",
+                "www.mta.info"
+            ]
+        },
+        {
+            "rule": "camsys-apps\\.com\\/realtime\\/gtfsrt\\/ALL\\/alerts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-otp-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "350269028010f9953bc5828553d886f924367c85582f9ee7701603034745f97d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omny.info",
+                "www.mta.info"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "mta.info",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-40.awsdns-05.com",
+        "ns-675.awsdns-20.net",
+        "ns-1969.awsdns-54.co.uk",
+        "ns-1385.awsdns-45.org"
+    ]
+}

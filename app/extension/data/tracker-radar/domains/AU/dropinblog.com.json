@@ -1,0 +1,109 @@
+{
+    "domain": "dropinblog.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "io",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "dropinblog\\.com\\/shopify\\/recentposts\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "io"
+            ],
+            "apis": {
+                "window.outerWidth": 3,
+                "window.innerWidth": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "339f86b61cbcc254360b6e2fb93f91b77882d4fb64ae74a00f192cf80367a2cb",
+                "c95630fda2ef8d7a99043d1e2e20f4a468008768bb9d583305b2565a9e80c429"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "grahams.com.au",
+                "www.shiels.com.au",
+                "www.watchdepot.com.au"
+            ]
+        },
+        {
+            "rule": "dropinblog\\.com\\/v1\\/shopify\\/recent\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "ecd4b255f5b258a565cdca4520b6db7da9d7eb199e0b88281f4e6800067b73eb",
+                "1504bc1459ee547a836772434e66ae98f55fee83e7086a9224859e62f17ac31e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "grahams.com.au",
+                "www.shiels.com.au",
+                "www.watchdepot.com.au"
+            ]
+        },
+        {
+            "rule": "dropinblog\\.com\\/js\\/shopify\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "io"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "78091f390341941ced2fbb6c4c27c466ae1a341ccc659041e4105ba8a90bfd27"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "checkout_shop": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "grahams.com.au",
+                "www.shiels.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "hank.ns.cloudflare.com",
+        "uma.ns.cloudflare.com"
+    ]
+}

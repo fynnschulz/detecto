@@ -1,0 +1,104 @@
+{
+    "domain": "algorecs.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "media",
+        "recs"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "algorecs\\.com\\/rrserver\\/js\\/2\\.1\\/p13n\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "1ec7919c43fdf14879a6808db57c66aa5b4c661081609a88f47fdf73d22d3fc2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "notonthehighstreet.com",
+                "www.simplybe.co.uk",
+                "www.viking-direct.co.uk"
+            ]
+        },
+        {
+            "rule": "algorecs\\.com\\/rrserver\\/p13n_generated\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8f4a783e7a2743be1a685e7e5fccb764ca1e5e763ec3a448052ac39e175f540c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "notonthehighstreet.com",
+                "www.viking-direct.co.uk"
+            ]
+        },
+        {
+            "rule": "algorecs\\.com\\/rrserver\\/p13n_generated\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "notonthehighstreet.com",
+                "www.viking-direct.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "hera.ns.cloudflare.com",
+        "rayden.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,966 @@
+{
+    "domain": "criteo.com",
+    "owner": {
+        "name": "Criteo SA",
+        "displayName": "Criteo",
+        "privacyPolicy": "https://www.criteo.com/privacy/",
+        "url": "http://criteo.com"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.0184,
+    "sites": 182,
+    "subdomains": [
+        "grid-bidder",
+        "gum",
+        "bidder",
+        "gumi",
+        "ssp-sync",
+        "dis",
+        "dynamic",
+        "sslwidget",
+        "ads.eu",
+        "rtb.fr3.eu",
+        "cat.nl3.eu",
+        "d",
+        "d.us",
+        "b.nl3.eu",
+        "widget.us"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "criteo\\.com\\/openrtb_2_5\\/pbjs\\/auction\\/request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "grid-bidder"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "a-z-animals.com",
+                "mtgdecks.net",
+                "osxdaily.com",
+                "pimylifeup.com",
+                "www.merriam-webster.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/sid\\/json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gum"
+            ],
+            "apis": {},
+            "sites": 90,
+            "prevalence": 0.00909,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00040412204485754696
+            },
+            "exampleSites": [
+                "9gag.com",
+                "community.spiceworks.com",
+                "fortune.com",
+                "lifehacker.com",
+                "soundcloud.com",
+                "time.com",
+                "www.digitaltrends.com",
+                "www.speedtest.net",
+                "wh40k.lexicanum.com",
+                "www.seat61.com",
+                "www.isitdownrightnow.com",
+                "www.allmovie.com",
+                "www.bubbleshooter.net",
+                "timesofindia.indiatimes.com",
+                "www.bubbleshooter.com",
+                "www.ted.com",
+                "civitai.com",
+                "openguessr.com",
+                "www.dcode.fr",
+                "sms24.me"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/sid\\/json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gum"
+            ],
+            "apis": {},
+            "sites": 131,
+            "prevalence": 0.0132,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+                "aea75c6000b45d84f8be36a8ae7f05ee937258577d8c82a99f404e13a03faf9a",
+                "11cb2f70185e2b9f7eda97a37d6e3fb9b1d4ff922b51c6934377c8ae7ab1ef43",
+                "fefb6d96c8bd8eb285ec187b22d3657ea5162205467dadd2467f95b3cbe27b54",
+                "c57adcc65d0fbbe44a824f5d20683dabf48d36bb3de2d833917b8695c8bc9fd6",
+                "f064ab05cabd19e2c42ecd93b37ab76aa4029eb255256dfbd616b38065a00e30",
+                "45c8ede34f10a6991ecac2ea50330995af85a0f09bc068e7c286dd08782cd87e",
+                "ab95427605995669c3176ad1a5dc5ebdce67ecee9752868f52052694f0c635cf",
+                "aa561134e6f00b5e2d5bbbb2786d54c586d65fb69767d59c5f549a7f5c10ce3d",
+                "5127ade061743fabec2d799b4310e5db876ac9970178bce1b1bec27079118929",
+                "86e4b442633e7f0d601eb18ebb1e6bfd043e7a2930b80a9039053b8d425d6ae5",
+                "82f8eba681141f54a35b59f0e8d0c6d583d4b5f5311b1f48b22c03a25d333a50",
+                "be83ad9bc692abc500ecf59758c317e6140ba5ba5ae40f7c1fbb40a04e3252a2",
+                "d72e72913adc174ee76e035e2211b0ab05db2ab91bd1029764e51164d675676a",
+                "40b39224ddacb94e4c8f331da755a0d66726a0fa7a41fe225f8adbe8950cf3e6",
+                "043409a7b8d44ec42e61a9e1eff5dbece8345c4ff24891007e8327371c89e87f",
+                "5630fd3a2b3dbf09dbd056ef7285ab003612a0957f85670164cb2f1dd07d9c3b",
+                "0e46d628358fe08d98cba0862f31e46d9051c518c2212a707efb15cb5ae2399f",
+                "9dee6150511a1f26187fa040b23d2b38a0f4b8cf2debae348454307264429c58",
+                "f98401ead0d015da56e3893d5b491011f74f3a1668d6620f04fae30e75bdf793",
+                "042a582b5eb5e895c39c8b99f0c28886b717c3f9f12bc9ae983cabf013c35d32",
+                "cec94bd4aaea0dfe5710a60296405679b16331db57bbcf6a227b9da6ce34c1a7",
+                "9d5f9f8e8fbd113b31344e9556fddd146563046aa47758186d2f0c212b3563c2",
+                "a4ff9334999bbaf6a1009ecec0865292233b6996083e20d44a83c9aab423c129",
+                "22e130ac554390bbb9957eef1d8c9549bd09cbf4a39e416c2fbc08d499ef7305",
+                "7c26bce14ca24a833c9c9103e99d201e3043e7b617823e28167416bf9f4ca091",
+                "79dd9d45077d69af6338d38fd8180bc3822ac766fe95f9ffee19372913de16a1",
+                "a77f6b18000c6a297fea3dbccaccc5a892ca5433b5e46c99afdb6fb3e9e0d585",
+                "1bed1a348cf2ba5e740e541fa6f27a1aa44084a4579961651590e3d57f52370c",
+                "dd157112aa449b52360465ad1d3be09fb5ec91f93312e49e760c20c28398b463",
+                "bf30bdc287eabb99fc9e9468bb3dca61694c259fe51844c61daaf7ba83de5f73",
+                "953d4e65395ce100f1fd87410b7963bf3c9bb93ca6494729b38d8ee0abd57aae",
+                "441a25b2f537126e6e0ab5825b653fbe17dd995ad69a4100e8ce38169508b7a3",
+                "51c32850d938fb9f41a11348566cb1b1da7c24010f372f1ee8deda4747cf078e",
+                "24f34b2d15cb1655d1567521d355c8eacce07f951a776316153968bdf3b80579",
+                "16d0f01d4224f1569940514c66153beaf2a4154c1c7b1eb1d734f385f0114598",
+                "6847c134457b2719a3ce20c2b9232752f8955db9525e22c79961478a3cce64dd",
+                "6306a5f44b1341f33c0cbfce86f398530e6c9abf38ef9adf81dfbefa19e834c7",
+                "b11d64a8c3e1f3df075b98bc4e845cb098c5b50500eeba26aef4cdfdfda241a2",
+                "5e1059acb859bd3d88099de735a2623dbf00bcf12199beea9892d839ac160a9d",
+                "8357058ce931a4b8d31f7dc3a6ca82a5867a2c7cc84b425170823ba2141c1363",
+                "06031f890783e7e4a5bce39b9728ca2909621a24f82d7022ea6d3d6abefce8f4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00040412204485754696
+            },
+            "exampleSites": [
+                "9gag.com",
+                "community.spiceworks.com",
+                "cplusplus.com",
+                "draxe.com",
+                "fortune.com",
+                "lifehacker.com",
+                "soundcloud.com",
+                "time.com",
+                "www.cbc.ca",
+                "www.costco.com",
+                "latour-lith.nl",
+                "www.songtell.com",
+                "mydramalist.com",
+                "timesofindia.indiatimes.com",
+                "www.spanjevandaag.com",
+                "www.politico.com",
+                "www.topcpu.net",
+                "www.index.hr",
+                "www.rogerebert.com",
+                "www.gosunoob.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/cdb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bidder"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allestoringen.nl",
+                "downdetector.com",
+                "nl.haenselblatt.com",
+                "slate.com",
+                "sonichits.com",
+                "www.hardreset.info",
+                "www.iplocation.net"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/sync",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gum",
+                "gumi"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "8a62cfef3ed90b9f8bf73a0cbe3a8dcc1c1fbdbd6c41ae8a0ca410e034ef3ca1",
+                "189b8ed64093b12937354b2ef71ccf1df59690d90432241a10fe1cb25000acba",
+                "aee57ef6760265aff6d5270258732ffbcbcfb0f96add35de5189cb60f20c6e41",
+                "acb5d519051cc13618e992a7df4bce6a980036dfbe2e17a970ec716194329f6a",
+                "1aadcf5376efdba8bacd77f173f0a96b673b2421326c0c4fdf5b8679afcd68dc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "go.com",
+                "polyestershoppen.nl",
+                "radaronline.com",
+                "thetvdb.com",
+                "timesofindia.indiatimes.com",
+                "www.businessinsider.com",
+                "www.mobafire.com",
+                "www.momjunction.com",
+                "www.msnbc.com",
+                "www.nbcnews.com",
+                "www.today.com",
+                "xxlnutrition.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/user-sync\\/redirect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp-sync"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "appleinsider.com",
+                "nl.radio.net",
+                "slate.com",
+                "www.phonearena.com",
+                "www.powerpyx.com",
+                "www.radio.net"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/dis\\/usersync\\.aspx",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dis"
+            ],
+            "apis": {},
+            "sites": 24,
+            "prevalence": 0.00242,
+            "cnames": [],
+            "responseHashes": [
+                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slate.com",
+                "techcrunch.com",
+                "www.accuweather.com",
+                "www.thesaurus.com",
+                "imageresizer.com",
+                "www.msnbc.com",
+                "appleinsider.com",
+                "www.radio.net",
+                "nl.radio.net",
+                "thetvdb.com",
+                "wukihow.com",
+                "www.motorcyclespecs.co.za",
+                "www.thewrap.com",
+                "downdetector.com",
+                "www.biblestudytools.com",
+                "www.ctvnews.ca",
+                "www.astrology.com",
+                "ets2.lt",
+                "www.phonearena.com",
+                "www.mindbodygreen.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/syncframe",
+            "cookies": 0.00556,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gum"
+            ],
+            "apis": {
+                "Document.cookie getter": 33
+            },
+            "sites": 63,
+            "prevalence": 0.00636,
+            "cnames": [],
+            "responseHashes": [
+                "156fe3faf8c76edba51e94660d31c822f72e28bdde94a82a574e14385dd41c3e",
+                "6a8eb5b635f0ad3ff79d495cd0ae0228b70560990355b09280b519f04c91db68"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biblehub.com",
+                "cplusplus.com",
+                "draxe.com",
+                "www.cbc.ca",
+                "www.costco.com",
+                "www.nbcnews.com",
+                "www.politico.com",
+                "imageresizer.com",
+                "ets2.lt",
+                "www.powerpyx.com",
+                "vevor.nl",
+                "scrolller.com",
+                "medicspark.nl",
+                "guide.michelin.com",
+                "toomics.com",
+                "www.elmundo.es",
+                "latour-lith.nl",
+                "us.shein.com",
+                "www.remarkt.nl",
+                "www.vevor.nl"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/openrtb_2_5\\/pbjs\\/auction\\/request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "grid-bidder"
+            ],
+            "apis": {},
+            "sites": 33,
+            "prevalence": 0.00333,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cplusplus.com",
+                "www.mapquest.com",
+                "www.nbcnews.com",
+                "www.politico.com",
+                "www.ctvnews.ca",
+                "www.behindthename.com",
+                "www.haaretz.com",
+                "imageresizer.com",
+                "www.moddb.com",
+                "www.nintendolife.com",
+                "www.radio.net",
+                "thetvdb.com",
+                "www.today.com",
+                "ets2.lt",
+                "www.msnbc.com",
+                "www.thephoblographer.com",
+                "scrolller.com",
+                "mydramalist.com",
+                "www.jezebel.com",
+                "openguessr.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/js\\/ld\\/ld\\.js",
+            "cookies": 0.00253,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dynamic"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 26,
+                "Date.prototype.getTime": 26,
+                "Document.cookie setter": 25,
+                "Document.cookie getter": 26,
+                "window.localStorage": 26
+            },
+            "sites": 29,
+            "prevalence": 0.00293,
+            "cnames": [],
+            "responseHashes": [
+                "05e1e294e84f77d1521d109f4bdb121427f3322a1af93d4a1e4533a6a9b57660",
+                "42db3a72ab5a1182f8cc24f96feae9cf617b35a16f5ec20149b7e0a65f2c7102",
+                "dd63df41ce26e189719fe12bc521a0a65e79b8f2eaf4b06c6e7a18095bd5815c",
+                "8660a7f77d16cfd92dc9f2b9ad3c42c26476f0fb7bd9de4a8c4390cff0c8fdf0",
+                "797d9e65b056ecb3020b990ff67e472c3f41a34520bda815593e32b39a8073d2",
+                "5c276b5a96ffd2e85a3f7ce04b660f314ef9e55100db33d92d7368ac22165daf",
+                "99ec97c15c11e32bce464a6d80e19a72ecec68ea10af8c9f1ad78e3c7b2a999b",
+                "0b0cd290bc94b569a9c150ef79521309b651b7f7b04b322b672f277252fc1b6c",
+                "11f0f3479d45ee24ea5e9df89531d33a38f59cbfc9c3c1649fbb6eec8d80d7d6",
+                "63f870fc71b33696a09bf2db55ab735da4289d4924815e254b62636488e870b1",
+                "7934debfd08379722b6511ac422a77e0b0b018ab97026624b7a79c5298db930b",
+                "92664d74da8136caa78c7121a712cf9896927735c839435d3d91e6eb6ed23d29",
+                "6d9da38b285f974189c1af498c654308be2b7bd9c6aa0268715a27e60f618b7d",
+                "9e0cd941d8a1a7ec8c577d5e30ad6f60804e64e24fc51041f3194458e453a911",
+                "afa37625901fdec9dab563dc177864b3ed0b11d4adf75324e7ba28564d92721a",
+                "48e4a67d262e31f5e5c0ad1c308fbf3122195c1fe05e8e3b7849ff30881f2626",
+                "e4a72a25411f025984cd282d9da49df9aba1b085f014a6916c775d04d45f20dc",
+                "33e4538f68fe708d4028bd4fd46dc3c1cfa516e343cb5d67a127d92ebd2e5a3a",
+                "b0c47b087a27fed9d8f293dd796de9359dc4e3788484eead3ac5505181daa791",
+                "92d3770bd2d412efa1b50e9a011135b2fa2619864158f7166d10a74b38dca7a7",
+                "b34722af3abaa24cdb14a50ad1a6a61d7432f2d9be83dd0fa80ef236d8a1ac09",
+                "d4c69c232edc222d76b8115fe8757bc2f3f19b60ddf8057784f464e247f0d857",
+                "6ede4cb1ecc378205280ce7c1018e1600109e3f46b6ec9c25e897bcfbd9cb254",
+                "26861b444bd9b3a41331d2704140f6ab5cbe931f0d6a626b81d884cf08f62aeb",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "cd6ffdbc7c9495622b41b114c813ce4fad4dfccd4d81b5f1ad2387107611eadc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cto_bundle": {
+                    "ttl": 34164008,
+                    "length": 294,
+                    "prevalence": 0.0021216407355021216,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.costco.com",
+                "www.dmm.co.jp",
+                "www.deboerdrachten.nl",
+                "www.vevor.nl",
+                "www.cmoa.jp",
+                "welzo.com",
+                "www.woonexpress.nl",
+                "www.anker.com",
+                "www.berger-camping.nl",
+                "www.green-acres.fr",
+                "www.artmajeur.com",
+                "guide.michelin.com",
+                "prom.ua",
+                "zelesta.nl",
+                "vevor.nl",
+                "www.purevpn.com",
+                "www.opmaatzagen.nl",
+                "www.sheetmusicplus.com",
+                "www.tonecontrol.nl"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sslwidget"
+            ],
+            "apis": {},
+            "sites": 26,
+            "prevalence": 0.00263,
+            "cnames": [],
+            "responseHashes": [
+                "c29326c96dc78662cf650d385a95abd53d7a34ccd629d71b07a08f7865f639be"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_fbp": 0.0012123661345726409,
+                "_ttp": 0.0005051525560719338,
+                "cto_bundle": 0.0019195797130733482,
+                "CriteoSessionUserId": 0.00010103051121438674,
+                "_ym_d": 0.00010103051121438674
+            },
+            "exampleSites": [
+                "draxe.com",
+                "www.costco.com",
+                "latour-lith.nl",
+                "guide.michelin.com",
+                "www.deboerdrachten.nl",
+                "prom.ua",
+                "www.woonexpress.nl",
+                "www.dmm.co.jp",
+                "welzo.com",
+                "www.opmaatzagen.nl",
+                "polyestershoppen.nl",
+                "www.vevor.nl",
+                "www.anker.com",
+                "www.cmoa.jp",
+                "toomics.com",
+                "www.green-acres.fr",
+                "www.pharmamarket.nl",
+                "www.remarkt.nl",
+                "us.shein.com",
+                "vevor.nl"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/user-sync\\/bidder-initiated",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp-sync"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.00152,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ets2.lt",
+                "imageresizer.com",
+                "nl.radio.net",
+                "thetvdb.com",
+                "wukihow.com",
+                "www.behindthename.com",
+                "www.ctvnews.ca",
+                "www.iplocation.net",
+                "www.kookfans.nl",
+                "www.motorcyclespecs.co.za",
+                "www.msnbc.com",
+                "www.politico.com",
+                "www.powerpyx.com",
+                "www.radio.net",
+                "www.thephoblographer.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/user-sync\\/match",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp-sync"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.00162,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ets2.lt",
+                "imageresizer.com",
+                "nl.radio.net",
+                "thetvdb.com",
+                "wukihow.com",
+                "www.behindthename.com",
+                "www.ctvnews.ca",
+                "www.iplocation.net",
+                "www.kookfans.nl",
+                "www.motorcyclespecs.co.za",
+                "www.msnbc.com",
+                "www.phonearena.com",
+                "www.politico.com",
+                "www.powerpyx.com",
+                "www.radio.net",
+                "www.thephoblographer.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/user-sync\\/redirect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp-sync"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.00152,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_uc_referrer": 0.00010103051121438674
+            },
+            "exampleSites": [
+                "lets-rebuild.com",
+                "nl.lets-rebuild.com",
+                "sms24.me",
+                "wukihow.com",
+                "www.behindthename.com",
+                "www.gismeteo.ru",
+                "www.iplocation.net",
+                "www.kookfans.nl",
+                "www.mysqltutorial.org",
+                "www.oracletutorial.com",
+                "www.politico.com",
+                "www.pythontutorial.net",
+                "www.seat61.com",
+                "www.sqlitetutorial.net",
+                "www.thephoblographer.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/dis\\/usersync\\.aspx",
+            "cookies": 0.000808,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dis"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lets-rebuild.com",
+                "nl.lets-rebuild.com",
+                "sms24.me",
+                "www.behindthename.com",
+                "www.gismeteo.ru",
+                "www.mysqltutorial.org",
+                "www.oracletutorial.com",
+                "www.pythontutorial.net",
+                "www.seat61.com",
+                "www.sqlitetutorial.net"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/user-sync\\/match",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp-sync"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lets-rebuild.com",
+                "sms24.me",
+                "www.gismeteo.ru",
+                "www.mysqltutorial.org",
+                "www.pythontutorial.net",
+                "www.seat61.com",
+                "www.sqlitetutorial.net"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/delivery\\/r\\/afr\\.php",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ads.eu"
+            ],
+            "apis": {
+                "window.devicePixelRatio": 6,
+                "Navigator.prototype.userAgent": 7,
+                "Element.prototype.getClientRects": 4,
+                "Performance.prototype.memory": 4,
+                "Navigator.prototype.connection": 4
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "e967f1e1c336eea9b14e92d95dbad26707b141f8cae9a3fb3c0326c0cef1744e",
+                "79c60990a5a28ec0db199407742476d0eb67b06302e2deecdb0a1ae981b17290",
+                "a67e7e9b7042f6d56c8c729f8aeec36b69a43e95e73d36039ff48f94c8c132df",
+                "537657ef6acda08b84d2617bf29108c0e9f2f23123cfdf496712956d225db3b9",
+                "f0b30add3d2fbefa45ddc22815d25e912c8925279b9df888ad9b7021cbf82c7d",
+                "4a2c5be357f57a9c6ed14a937b6ec061d6db72cab305f56855b9b4875d4cf69d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "habr.com",
+                "qna.habr.com",
+                "www.dcode.fr",
+                "www.kijiji.ca",
+                "www.newsnow.co.uk",
+                "www.newsnow.com",
+                "www.theater.nl"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/googleortb\\/auction\\/notify",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rtb.fr3.eu"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "habr.com",
+                "qna.habr.com",
+                "www.dcode.fr",
+                "www.kijiji.ca",
+                "www.newsnow.co.uk",
+                "www.newsnow.com",
+                "www.theater.nl"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/delivery\\/lg\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cat.nl3.eu"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "habr.com",
+                "qna.habr.com",
+                "www.dcode.fr",
+                "www.kijiji.ca",
+                "www.newsnow.co.uk",
+                "www.newsnow.com",
+                "www.theater.nl"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/cdb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bidder"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "songmeanings.com",
+                "www.csfd.cz",
+                "www.gezondheid.be"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/sync",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gum"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "support.lenovo.com",
+                "www.walmart.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/Delivery\\/ClientPaths\\/Library\\/rm\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "d"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c99a3f1123723c5c0d1346077967067cbb67b5d310466f192203b267c661b033"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "conrad.nl",
+                "www.costco.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/delivery\\/retailmedia",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "490120c628ed648886d996965dbc7d4849af16f2db6b33e75377012a170a6dc6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "CriteoSessionUserId": 0.00020206102242877348
+            },
+            "exampleSites": [
+                "costco.com",
+                "www.costco.com"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/rm",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "b.nl3.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "currys.co.uk",
+                "www.currys.co.uk"
+            ]
+        },
+        {
+            "rule": "criteo\\.com\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sslwidget",
+                "widget.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "walmart.com",
+                "www.walmart.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Third-Party Analytics Marketing"
+    ],
+    "performance": {},
+    "cookies": 0.00727,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.18398268398268397
+        },
+        {
+            "domain": "smilewanted.com",
+            "prevalence": 0.09740259740259741
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.06060606060606061
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.05194805194805195
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "stpd.cloud",
+            "prevalence": 0.04112554112554113
+        },
+        {
+            "domain": "vntsm.com",
+            "prevalence": 0.03896103896103896
+        },
+        {
+            "domain": "criteo.net",
+            "prevalence": 0.032467532467532464
+        },
+        {
+            "domain": "snigelweb.com",
+            "prevalence": 0.032467532467532464
+        },
+        {
+            "domain": "adthrive.com",
+            "prevalence": 0.032467532467532464
+        }
+    ],
+    "types": {
+        "XHR": 10,
+        "Preflight": 90,
+        "Fetch": 180,
+        "Script": 69,
+        "Image": 73,
+        "Document": 102
+    },
+    "nameservers": [
+        "ns1.criteo.com",
+        "ns2.criteo.com"
+    ]
+}

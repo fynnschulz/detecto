@@ -1,0 +1,101 @@
+{
+    "domain": "groupon.com.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000102,
+    "sites": 1,
+    "subdomains": [
+        "gtm"
+    ],
+    "cnames": [
+        {
+            "original": "gtm.groupon.com",
+            "resolved": "gtm.groupon.com.edgekey.net"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "groupon\\.com\\.edgekey\\.net\\/tag\\/g\\/collect",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gtm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "gtm.groupon.com",
+                    "resolved": "gtm.groupon.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "d3c975c18248b5717b37e5e3df2db9e8319c0f823c5faa277c40b4a5010ef74e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.00040605014719317836,
+                "_li_dcdm_c": 0.00020302507359658918
+            },
+            "exampleSites": [
+                "groupon.com",
+                "www.groupon.com"
+            ]
+        },
+        {
+            "rule": "groupon\\.com\\.edgekey\\.net\\/TV58c5\\/GSfdK\\/n9pRa\\/4UQB\\/OmbuzGmDLSrbkr5t\\/OE9CMGI1\\/ZhB\\/DfGxRXy4B",
+            "cookies": 0.000203,
+            "fingerprinting": 3,
+            "subdomains": [
+                "gtm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "gtm.groupon.com",
+                    "resolved": "gtm.groupon.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "bef9393fcdfc7a7299c058ba2a69253c32e0964dd3e97834e17a8cdb5dce7cf6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupon.com",
+                "www.groupon.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "grouponcdn.com",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "XHR": 2
+    },
+    "nameservers": []
+}

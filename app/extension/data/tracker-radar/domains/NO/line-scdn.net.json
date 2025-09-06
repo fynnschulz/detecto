@@ -1,0 +1,93 @@
+{
+    "domain": "line-scdn.net",
+    "owner": {
+        "name": "LY-Corporation",
+        "displayName": "LY-Corporation"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "d"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "line-scdn\\.net\\/n\\/line_tag\\/public\\/release\\/v1\\/lt\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "d"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "589dc9e3526bc771a26cd4f2f0e33785d14e061b9ecce3535065d9cd5c43e0af"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__lt__cid": {
+                    "ttl": 63072006,
+                    "length": 36,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "__lt__cid.5537f4b8": {
+                    "ttl": 63072006,
+                    "length": 36,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "__lt__sid": {
+                    "ttl": 1806,
+                    "length": 17,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "__lt__sid.5537f4b8": {
+                    "ttl": 1806,
+                    "length": 17,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "louispoulsen.com",
+                "www.teamlab.art"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 2
+    },
+    "nameservers": [
+        "ns1.naver.jp",
+        "ns2.naver.jp",
+        "ans1.linecorp.com",
+        "ans2.linecorp.com"
+    ]
+}

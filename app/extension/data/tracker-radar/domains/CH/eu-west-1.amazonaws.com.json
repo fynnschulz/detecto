@@ -1,0 +1,128 @@
+{
+    "domain": "eu-west-1.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.00171,
+    "sites": 17,
+    "subdomains": [
+        "q6p3fvajj5b7darbmdq5hkuhzm.appsync-api",
+        "k5kp6ayfrrebnbv3qk4xazbmnq.appsync-api",
+        "cognito-identity",
+        "firehose"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "q6p3fvajj5b7darbmdq5hkuhzm.appsync-api",
+                "k5kp6ayfrrebnbv3qk4xazbmnq.appsync-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecycleverse.com",
+                "worldathletics.org"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "33c1b70850210f6b4f20c733e2fbca3773c779d2fe9e0446c35d5227e6c3f4e6",
+                "b2333316021a298f1451b54a56320facc16515b04afb98398a70b791a38ab958"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "directferries.de",
+                "www.directferries.de",
+                "www.lingoda.com"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "directferries.de",
+                "www.directferries.de",
+                "www.lingoda.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9107142857142857
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.05357142857142857
+        },
+        {
+            "domain": "uqd.io",
+            "prevalence": 0.017857142857142856
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.017857142857142856
+        }
+    ],
+    "types": {
+        "Preflight": 5,
+        "XHR": 3
+    },
+    "nameservers": [
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.com",
+        "ns1.amzndns.net",
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
+    ]
+}

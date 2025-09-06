@@ -1,0 +1,180 @@
+{
+    "domain": "caroda.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "publisher",
+        "api",
+        "ads",
+        "data"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "caroda\\.io\\/videoPlayer\\/caroda\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "publisher"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "eda07968aa578e6c81ffbc7287f350f6895d9270feaa4b30f802142e9671d3ed",
+                "ca13462a430a34f5372511d4bcd5a569e6e31a66c013a2a7ce61cf42b0763d2c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csfd.cz",
+                "www.modrykonik.sk",
+                "www.nakluky.cz"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/targetingProfile\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8d8628c8630646ef79e98ccbfb077a7dbf110987328c1fd7dc3ba25426b9d9ae"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csfd.cz",
+                "www.nakluky.cz"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/videoPlayer\\/v\\/0499cbacb0a7688f60101c1dda848ca16361726f64612d323032352d30382d31325431343a33353a30322e3237315a\\/s\\/2\\/static\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.indexedDB": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.languages": 2,
+                "Date.prototype.getTime": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "245f3602dd89d7e506a6f95dc68c1c7058c118d62ac964574ff66dd54ffa25c8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csfd.cz",
+                "www.nakluky.cz"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/api\\/hit\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cbd100d7cdab80ff21d2b11415e4d289beb2560bf07960915286afbeb5460c12"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nakluky.cz",
+                "www.nakluky.cz"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/videoPlayer\\/v\\/0499cbacb0a7688f60101c1dda848ca16361726f64612d323032352d30382d31325431343a33353a30322e3237315a\\/s\\/default\\/prebid\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.cookieEnabled": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nakluky.cz",
+                "www.nakluky.cz"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "nkcdn.cz",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Fetch": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns-534.awsdns-02.net",
+        "ns-433.awsdns-54.com",
+        "ns-1542.awsdns-00.co.uk",
+        "ns-1130.awsdns-13.org"
+    ]
+}

@@ -1,0 +1,198 @@
+{
+    "domain": "conscent.in",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "sdk-v2",
+        "api",
+        "collections"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "conscent\\.in\\/csc-sdk\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk-v2"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "window.localStorage": 4,
+                "Document.cookie setter": 4,
+                "Date.prototype.getTime": 4,
+                "window.sessionStorage": 4,
+                "Navigator.prototype.cookieEnabled": 3
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "05ad222a71c535e601b7f7c25c75874a55bb77eab6fd8269d5c3c1bf2c9a47b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_cscAnonId": {
+                    "ttl": 1577836807,
+                    "length": 36,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathrubhumi.com",
+                "gulfnews.com",
+                "nation.africa",
+                "www.mathrubhumi.com"
+            ]
+        },
+        {
+            "rule": "conscent\\.in\\/api\\/v2\\/client\\/sdk-config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "7e06987ffcae92ec0a59b9180f2150d37e4c5f0ae09f8410c7221cc3eceb530d",
+                "797df0a2b381b36952243ee062027f1f260e3da104cd44aa4eef25586e5c5c6e",
+                "2248d47e9c1b2ec8de04708e273de4a9f57db1f43b209d611b56cb98ee14a95f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathrubhumi.com",
+                "gulfnews.com",
+                "nation.africa",
+                "www.mathrubhumi.com"
+            ]
+        },
+        {
+            "rule": "conscent\\.in\\/api\\/v2\\/authorization\\/user-purchase-details",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathrubhumi.com",
+                "gulfnews.com",
+                "nation.africa",
+                "www.mathrubhumi.com"
+            ]
+        },
+        {
+            "rule": "conscent\\.in\\/api\\/v2\\/journey",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "051669a03dbb40e4b2b80051f8d52715002039906c46064787264b816977615c",
+                "f34ade9b6849cdde0e1fbfa2d91c533439f4cb79962228168494a877db30837a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_cscAnonId": 0.00002052264331645916,
+                "lotame_domain_check": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "mathrubhumi.com",
+                "nation.africa",
+                "www.mathrubhumi.com"
+            ]
+        },
+        {
+            "rule": "conscent\\.in\\/api\\/v2\\/authorization\\/user-purchase-details",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e1654c7ad9ce4df238c7c18cafe8b85a27ac81155501831fcb1583963308e9a5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathrubhumi.com",
+                "gulfnews.com",
+                "nation.africa",
+                "www.mathrubhumi.com"
+            ]
+        },
+        {
+            "rule": "conscent\\.in\\/collect\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collections"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "fab052efd8ca367863c32df8344312b9744250dc5d839c74301e1ee0dc6626fb",
+                "d69521349cd0f2c5d9db6795198696ea777d433657076bcd80f7e24db2e8b54e"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathrubhumi.com",
+                "nation.africa",
+                "www.mathrubhumi.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000479,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 11,
+        "Preflight": 4,
+        "Ping": 3
+    },
+    "nameservers": [
+        "sierra.ns.cloudflare.com",
+        "sterling.ns.cloudflare.com"
+    ]
+}

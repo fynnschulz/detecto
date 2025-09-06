@@ -1,0 +1,262 @@
+{
+    "domain": "extole.io",
+    "owner": {
+        "name": "Extole",
+        "displayName": "Extole"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000812,
+    "sites": 8,
+    "subdomains": [
+        "ashleyhomestore",
+        "kotn",
+        "endy",
+        "revzilla",
+        "roots",
+        "simon-and-schuster",
+        "udemy"
+    ],
+    "cnames": [
+        {
+            "original": "my.kotn.com",
+            "resolved": "kotn.extole.io"
+        },
+        {
+            "original": "refer.endy.com",
+            "resolved": "endy.extole.io"
+        },
+        {
+            "original": "refer.udemy.com",
+            "resolved": "udemy.extole.io"
+        },
+        {
+            "original": "share.ashleyhomestore.ca",
+            "resolved": "ashleyhomestore.extole.io"
+        },
+        {
+            "original": "share.roots.com",
+            "resolved": "roots.extole.io"
+        },
+        {
+            "original": "share.simonandschuster.com",
+            "resolved": "simon-and-schuster.extole.io"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "extole\\.io\\/core\\.js",
+            "cookies": 0.000508,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ashleyhomestore",
+                "kotn",
+                "endy",
+                "revzilla",
+                "roots",
+                "simon-and-schuster",
+                "udemy"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 7,
+            "prevalence": 0.000711,
+            "cnames": [
+                {
+                    "original": "share.ashleyhomestore.ca",
+                    "resolved": "ashleyhomestore.extole.io"
+                },
+                {
+                    "original": "my.kotn.com",
+                    "resolved": "kotn.extole.io"
+                },
+                {
+                    "original": "refer.endy.com",
+                    "resolved": "endy.extole.io"
+                },
+                {
+                    "original": "share.roots.com",
+                    "resolved": "roots.extole.io"
+                },
+                {
+                    "original": "share.simonandschuster.com",
+                    "resolved": "simon-and-schuster.extole.io"
+                },
+                {
+                    "original": "refer.udemy.com",
+                    "resolved": "udemy.extole.io"
+                }
+            ],
+            "responseHashes": [
+                "7e9025f1906d0cc6f9a85dda94805ea5f86b07578d748fcc2ca212cdf53edfc6",
+                "85320f9f5624a150b86cda5c7bfd261c776eaee3cf73590b20d154182d6a6319",
+                "31287de3eecb2082694036bba90179fae4b24c4703f68530844be3f881153a5e",
+                "37f571d147450d29830594f980fb708c67b6cc025c144f9b01db7edb9a56898c",
+                "fb9e7a11815724f5b84256f3ec326446a09901bf9004c75fb47aa4113d4094f4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "extole_access_token": {
+                    "ttl": 31536006,
+                    "length": 26,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ashleyhomestore.ca",
+                "kotn.com",
+                "www.endy.com",
+                "www.revzilla.com",
+                "www.roots.com",
+                "www.simonandschuster.com",
+                "www.udemy.com"
+            ]
+        },
+        {
+            "rule": "extole\\.io\\/zones\\/global_footer",
+            "cookies": 0.000508,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ashleyhomestore",
+                "endy",
+                "revzilla",
+                "roots",
+                "simon-and-schuster"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [
+                {
+                    "original": "share.ashleyhomestore.ca",
+                    "resolved": "ashleyhomestore.extole.io"
+                },
+                {
+                    "original": "refer.endy.com",
+                    "resolved": "endy.extole.io"
+                },
+                {
+                    "original": "share.roots.com",
+                    "resolved": "roots.extole.io"
+                },
+                {
+                    "original": "share.simonandschuster.com",
+                    "resolved": "simon-and-schuster.extole.io"
+                }
+            ],
+            "responseHashes": [
+                "730df08a10cfd216b72797bfad218ab1bb069cf44b37c5f415fb039a1188cc2f",
+                "ea1b98bdcb3fe71fffddd0874b51e0e86f7bb3148b3e88477f75a8c1534824ff",
+                "e7907b11019af3297d9bf421dfbfab9a2720f883cf7ec665fdc5209e38c32f0d",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ashleyhomestore.ca",
+                "www.endy.com",
+                "www.revzilla.com",
+                "www.roots.com",
+                "www.simonandschuster.com"
+            ]
+        },
+        {
+            "rule": "extole\\.io\\/zones\\/mobile_header",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ashleyhomestore",
+                "roots"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "share.ashleyhomestore.ca",
+                    "resolved": "ashleyhomestore.extole.io"
+                },
+                {
+                    "original": "share.roots.com",
+                    "resolved": "roots.extole.io"
+                }
+            ],
+            "responseHashes": [
+                "f4155d94e4d8792071ff477d0b6e3ab5932170fb491fc3e83130c5ad9007f88c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ashleyhomestore.ca",
+                "www.roots.com"
+            ]
+        },
+        {
+            "rule": "extole\\.io\\/zones\\/category_dropdown",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "simon-and-schuster"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "share.simonandschuster.com",
+                    "resolved": "simon-and-schuster.extole.io"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "simonandschuster.com",
+                "www.simonandschuster.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000508,
+    "topInitiators": [
+        {
+            "domain": "noibu.com",
+            "prevalence": 0.4444444444444444
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "XHR": 9
+    },
+    "nameservers": [
+        "ns-1510.awsdns-60.org",
+        "ns-231.awsdns-28.com",
+        "ns-603.awsdns-11.net"
+    ]
+}

@@ -1,0 +1,183 @@
+{
+    "domain": "quantummetric.com",
+    "owner": {
+        "name": "Quantum Metric Inc.",
+        "displayName": "Quantum Metric"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000504,
+    "sites": 5,
+    "subdomains": [
+        "cdn",
+        "ingest",
+        "ingesteu"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "quantummetric\\.com\\/qscripts\\/quantum-vistaprint-test\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "URL.createObjectURL": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.webkitTemporaryStorage": 2,
+                "Performance.prototype.memory": 2,
+                "Animation.prototype.currentTime": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.storage": 2,
+                "Navigator.prototype.connection": 2,
+                "Screen.prototype.orientation": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.doNotTrack": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "436c1e3fbf29719065a22493355a03e4da8aed211633cf751772f22521dd2254"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "QuantumMetricSessionID": {
+                    "ttl": 1814,
+                    "length": 32,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                },
+                "QuantumMetricUserID": {
+                    "ttl": 31536014,
+                    "length": 32,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.de",
+                "www.vistaprint.de"
+            ]
+        },
+        {
+            "rule": "quantummetric\\.com\\/horizon\\/vistaprint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c48ad8d1c3db7a5a249c10dabb2f25d7fb2e6f8315ff94803dac1b675408de32"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.de",
+                "www.vistaprint.de"
+            ]
+        },
+        {
+            "rule": "quantummetric\\.com\\/horizon\\/telegraph",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingesteu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "QuantumMetricSessionID": 0.00010089799212995662
+            },
+            "exampleSites": [
+                "telegraph.co.uk",
+                "www.telegraph.co.uk"
+            ]
+        },
+        {
+            "rule": "quantummetric\\.com\\/horizon\\/vueling",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingesteu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vueling.com",
+                "www.vueling.com"
+            ]
+        },
+        {
+            "rule": "quantummetric\\.com\\/horizon\\/wu",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "QuantumMetricSessionID": 0.00010089799212995662
+            },
+            "exampleSites": [
+                "westernunion.com",
+                "www.westernunion.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9333333333333333
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 8
+    },
+    "nameservers": [
+        "ian.ns.cloudflare.com",
+        "mary.ns.cloudflare.com"
+    ]
+}

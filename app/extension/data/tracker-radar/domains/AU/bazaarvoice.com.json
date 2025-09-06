@@ -1,0 +1,1320 @@
+{
+    "domain": "bazaarvoice.com",
+    "owner": {
+        "name": "Marlin Equity Partners",
+        "displayName": "Marlin Equity"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.0101,
+    "sites": 100,
+    "subdomains": [
+        "apps",
+        "network-a",
+        "network-eu-a",
+        "api",
+        "analytics-static.ugc",
+        "network",
+        "display.ugc"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/api\\/api-0\\.8\\.2\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 63,
+            "prevalence": 0.00636,
+            "cnames": [],
+            "responseHashes": [
+                "dccfc3418e69f6ca37f92a3459c360d871b36744be9a4e2b96bbe3ae4e45e4fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.connor.com.au",
+                "www.elgato.com",
+                "egopowerplus.com.au",
+                "www.lifespanfitness.com.au",
+                "www.tarocash.com.au",
+                "cottonon.com",
+                "www.jbl.com.au",
+                "www.footlocker.com",
+                "www.mountaindesigns.com",
+                "intersport.com.au",
+                "www.mathers.com.au",
+                "www.bose.com",
+                "www.celebritycruises.com",
+                "www.hairhouse.com.au",
+                "www.countryroad.com.au",
+                "www.asics.com",
+                "www.netgear.com",
+                "www.babybunting.com.au",
+                "www.pharmacyonline.com.au",
+                "www.itvsn.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/analytics\\/bv-analytics\\.js",
+            "cookies": 0.00828,
+            "fingerprinting": 2,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "Screen.prototype.width": 85,
+                "Screen.prototype.height": 85,
+                "Navigator.prototype.language": 85,
+                "Navigator.prototype.cookieEnabled": 85,
+                "Date.prototype.getTimezoneOffset": 85,
+                "Date.prototype.getTime": 85,
+                "Document.cookie getter": 82,
+                "Document.cookie setter": 82,
+                "PerformanceTiming.prototype.navigationStart": 36
+            },
+            "sites": 87,
+            "prevalence": 0.00878,
+            "cnames": [],
+            "responseHashes": [
+                "e78a631e6a55855a5f352fae80fc07b7a3d1ea526286ca78cb7dbdcc3ff07cfc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.ozhairandbeauty.com",
+                "www.camerahouse.com.au",
+                "www.williamsshoes.com.au",
+                "www.brother.com.au",
+                "www.aegpowertools.com.au",
+                "swisse.com.au",
+                "www.calvinklein.com.au",
+                "mizuno.com.au",
+                "www.bonds.com.au",
+                "www.chemistdirect.com.au",
+                "swann.com",
+                "www.footlocker.com",
+                "www.anacondastores.com",
+                "www.countryroad.com.au",
+                "www.bioceuticals.com.au",
+                "www.asics.com",
+                "www.tefal.com.au",
+                "www.columbiasportswear.com.au",
+                "theordinary.com",
+                "www.nisbets.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/a\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "network-a",
+                "network-eu-a"
+            ],
+            "apis": {},
+            "sites": 87,
+            "prevalence": 0.00878,
+            "cnames": [],
+            "responseHashes": [
+                "07383c96980710a04144e5a39ae59e7f9f74bcfd6462a6932ded48efe6d73bce"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "BVBRANDID": 0.008478853336025032,
+                "BVBRANDSID": 0.008478853336025032,
+                "_hjTLDTest": 0.0002018774603815484,
+                "IR_gbd": 0.0004037549207630968,
+                "crl8.fpcuid": 0.0004037549207630968
+            },
+            "exampleSites": [
+                "www.autoone.com.au",
+                "www.columbiasportswear.com.au",
+                "www.itvsn.com.au",
+                "www.nisbets.com.au",
+                "www.tarocash.com.au",
+                "www.trenery.com.au",
+                "www.homehardware.com.au",
+                "supre.com.au",
+                "www.pillowtalk.com.au",
+                "au.wilson.com",
+                "www.shavershop.com.au",
+                "www.mathers.com.au",
+                "www.vans.com.au",
+                "www.chemistdirect.com.au",
+                "danmurphys.com.au",
+                "intersport.com.au",
+                "www.yellowpages.com.au",
+                "www.harrisscarfe.com.au",
+                "www.hillspet.com.au",
+                "www.pharmacyonline.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/inline_ratings\\/inline_ratings-2\\.7\\.8\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 8,
+                "Document.cookie getter": 7,
+                "Navigator.prototype.userAgent": 7
+            },
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "f97cc3e93faeb7fe43e819100520ed4184e16490bb15282100c98189eafb80b5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autobarn.com.au",
+                "swisse.com.au",
+                "www.bioceuticals.com.au",
+                "www.mathers.com.au",
+                "www.nisbets.com.au",
+                "www.ozito.com.au",
+                "www.styletread.com.au",
+                "www.sunbeam.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/inline_ratings\\/inline_ratings-2\\.7\\.4\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 16,
+                "Document.cookie getter": 16,
+                "Navigator.prototype.userAgent": 16
+            },
+            "sites": 16,
+            "prevalence": 0.00162,
+            "cnames": [],
+            "responseHashes": [
+                "06157fe7373a05dcdb6507afec1813e23d8c2f57dea0e95434971a67fdecb8b5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autopro.com.au",
+                "intersport.com.au",
+                "levis.com.au",
+                "theordinary.com",
+                "www.aegpowertools.com.au",
+                "www.camerahouse.com.au",
+                "www.chemistdirect.com.au",
+                "www.homehardware.com.au",
+                "www.jbl.com.au",
+                "www.milwaukeetool.com.au",
+                "www.mitre10.com.au",
+                "www.ozhairandbeauty.com",
+                "www.pharmacyonline.com.au",
+                "www.repco.com.au",
+                "www.shavershop.com.au",
+                "www.westerndigital.com"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/data\\/statistics\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "276e9f110e72cb6c07310fcbea70953d007c6d6b149b748b467ec42102cfbca8",
+                "96f73380ca4ceb681dc9ac52b14f80b382266a53be44b5fb4c8377e782554520",
+                "1cc61e8c8d3a04a8bffb8f2f291dbcab14325c06f39abb4a1e91880faa2e16b5",
+                "44766dcb6f38a4f5b1057bed14940ef90465eddbb6897ded665d8c802cec4a05"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autopro.com.au",
+                "www.bioceuticals.com.au",
+                "www.chemistwarehouse.co.nz",
+                "www.retravision.com.au",
+                "www.shavershop.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/deployments\\/dan-murphys\\/main_site\\/production\\/en_AU\\/bv\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2237bc558033d1cd1159ea6e455b2d2884c95b406ee7143cfd6ce87e54ff9db2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "NoCookie": {
+                    "ttl": -86373,
+                    "length": 4,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 0.5
+                },
+                "BVBRANDID": {
+                    "ttl": 31536027,
+                    "length": 36,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                },
+                "BVBRANDSID": {
+                    "ttl": 1827,
+                    "length": 36,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "danmurphys.com.au",
+                "www.danmurphys.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/deployments\\/dan-murphys\\/main_site\\/production\\/en_AU\\/api-config\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8f7cd3f4e0a415e81d710cd531c006f6fb05655fc3f598152ab2164fa4e7c3bd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "danmurphys.com.au",
+                "www.danmurphys.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/inline_ratings\\/inline_ratings-2\\.7\\.2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1a803a937487cd0a6970769ac668cc875507e1fd59c249328400a6764ce8efbe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "egopowerplus.com.au",
+                "www.autoone.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/api\\/data\\/statistics\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "5d693537c5228b3c339ffcf7fc98e359b7c111508de8631b0500160dc0e6b920",
+                "ba444cfd76b686aebfcbcf9bf7e398427332f3235f02f506cfb886c2c37e46a3",
+                "10ea6b89dde542fabfbda52e124661ba2dc74562ffd91c8b26d38ef3fef25eb4",
+                "de5196f4851d30e44e047ccf34655a3cfa9c8a6597f611d0921418f6f0fc1996",
+                "2a3ec17e49929ae8de3be8b9ffe87add60a212458b960012bb5b2d5bfd0b7a96",
+                "acd0fed91dc4f2c215b23a0697f36e768dd0a78a702d929655357a0c0a70f4f8",
+                "7b32b802ce72a219200d9a809d41f79d55331a55ffb4c20b0180045ece80843a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "egopowerplus.com.au",
+                "intersport.com.au",
+                "theordinary.com",
+                "www.aegpowertools.com.au",
+                "www.camerahouse.com.au",
+                "www.jbl.com.au",
+                "www.milwaukeetool.com.au",
+                "www.westerndigital.com"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/data\\/statistics\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "de044a468cb7e7b88a6b09c0e53f61d0206c80387a456e07d71ee054828ea9cd",
+                "63da882ac69496e221e2be981bf861cd8e0cb8413e139ae19c60ce858760ed1f",
+                "ad02b92ee768604afb0cca89b0eff51f1169487348a7f44717579b3ed8764dc7",
+                "11c2f03ca45c033e4051a3825c5e1aa2fe17c5e74858d2e5b68888c84a65680a",
+                "3a9880cf2ef7daed6949c9595085ac886714b6f066cd0f0c74e19891d5d71041",
+                "05ea378da3f34660bc9806629490925af655c91d9ea9daa122795408107d8d2b",
+                "7162a0cf51d6576a93fd56c69c0e25d15bda6c3939e3b5df4024d575bf2eaed9",
+                "64d39e8847cc9d0adadad915a5de205b280778c8da5056b545a79aac15b61a0a",
+                "1ea20071a4642a7e34fba2dce2147670980dbbca36e69402683e1dc1bfecdeaa",
+                "fb0f8b466401ab1306100163380b8212b3d13db033e100da3b8f4d643ae1976c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greenpan.com.au",
+                "levis.com.au",
+                "www.aami.com.au",
+                "www.autoone.com.au",
+                "www.bingle.com.au",
+                "www.blackmores.com.au",
+                "www.drmartens.com.au",
+                "www.scorptec.com.au",
+                "www.skechers.com.au",
+                "www.tefal.com.au",
+                "www.vans.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/seller_ratings\\/seller_ratings-1\\.5\\.5\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4a2b02e6faebaac2659379426e4129f30b245497d32cb4db2894496958bb0ead"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intersport.com.au",
+                "www.repco.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/seller_ratings\\/seller_ratings-1\\.5\\.5\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "178a87bca683b09639951b4cdc9cd8e91ecf422feb4fb809890e84b8153d6a8e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intersport.com.au",
+                "www.repco.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/prod\\/static\\/3\\/bv-analytics\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics-static.ugc"
+            ],
+            "apis": {
+                "Screen.prototype.width": 6,
+                "Screen.prototype.height": 6,
+                "Navigator.prototype.language": 6,
+                "Navigator.prototype.cookieEnabled": 6,
+                "Document.cookie getter": 6,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "PerformanceTiming.prototype.navigationStart": 2
+            },
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "e78a631e6a55855a5f352fae80fc07b7a3d1ea526286ca78cb7dbdcc3ff07cfc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "NoCookie": {
+                    "ttl": -86383,
+                    "length": 4,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 0.3333333333333333
+                },
+                "BVBRANDID": {
+                    "ttl": 31536017,
+                    "length": 36,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 1
+                },
+                "BVBRANDSID": {
+                    "ttl": 1817,
+                    "length": 36,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intersport.com.au",
+                "store.sony.com.au",
+                "www.chemistwarehouse.co.nz",
+                "www.repco.com.au",
+                "www.retravision.com.au",
+                "www.scorptec.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/sid\\.gif",
+            "cookies": 0.000707,
+            "fingerprinting": 0,
+            "subdomains": [
+                "network"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "07383c96980710a04144e5a39ae59e7f9f74bcfd6462a6932ded48efe6d73bce"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intersport.com.au",
+                "store.sony.com.au",
+                "www.calvinklein.com.au",
+                "www.chemistwarehouse.co.nz",
+                "www.repco.com.au",
+                "www.retravision.com.au",
+                "www.scorptec.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/id\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "network"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "c3412bd2ed5730cc10799097f7bbfb2cdecab14d8f831fe6597185628e6fb645"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intersport.com.au",
+                "store.sony.com.au",
+                "www.calvinklein.com.au",
+                "www.chemistwarehouse.co.nz",
+                "www.repco.com.au",
+                "www.retravision.com.au",
+                "www.scorptec.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/st\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "network"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "07383c96980710a04144e5a39ae59e7f9f74bcfd6462a6932ded48efe6d73bce"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_hjTLDTest": 0.0001009387301907742,
+                "IR_gbd": 0.0001009387301907742,
+                "BVBRANDID": 0.000504693650953871,
+                "BVBRANDSID": 0.000504693650953871
+            },
+            "exampleSites": [
+                "intersport.com.au",
+                "store.sony.com.au",
+                "www.calvinklein.com.au",
+                "www.chemistwarehouse.co.nz",
+                "www.repco.com.au",
+                "www.retravision.com.au",
+                "www.scorptec.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/deployments\\/sharkninja-anz\\/main_site\\/production\\/en_AU\\/bv\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2a0491c0988c050ca548ce366c6a67a5ff69971436dc87a6190d7bada5ed3fa8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ninjakitchen.com.au",
+                "sharkclean.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/common\\/static-assets\\/3\\.3\\.3\\/jquery-bv%403\\.5\\.1%2Blodash-bv%404\\.17\\.19\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "display.ugc"
+            ],
+            "apis": {
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "7e77c571a4a2547f6a78feaf06d969bd97b4d0f7854a5dd006a041acef608638"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.com.au",
+                "www.calvinklein.com.au",
+                "www.pillowtalk.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/splitTests\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "459b781dcc1aa87b461cc1c8b260d157d6b9f18ab35321efd07a8a1bc19af512"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "betta.com.au",
+                "www.footlocker.com",
+                "www.michaelhill.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/data\\/batch\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c521e52d086703fcc4b57b5392130a12d3f4ae1eef0d839f9f6eeacb6810ca15"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "betta.com.au",
+                "www.calvinklein.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/inline_ratings\\/inline_ratings-2\\.4\\.7\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "Document.cookie getter": 3,
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "eaf6a103ac137f0eb26f6b4e2b1da56abc6652fe4cc9c9aef0d91b5826834de9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackmores.com.au",
+                "www.drmartens.com.au",
+                "www.skechers.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/data\\/display\\/0\\.2alpha\\/product\\/summary",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d2777fef97fecbefd4c6c10507cd0b340462310bde4a8a25e2c6d12378cf5cd4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bose.com",
+                "www.bose.com"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/data\\/products\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9b31157091ce67e76e708df82ae42ce11a36e6833ead2c50eb494c4010dc8a7e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bose.com",
+                "www.bose.com"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/api\\/data\\/statistics\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "942f4a9a2dfe58df30a492a09d9c88402af0bf976db516e64b2e14f13e596633",
+                "5ffa0b098298af29829fc876d3c518aa4454443723d45fcd3976bafe0d089335",
+                "c1553a13c4fc7735925f0020dda4bcc9409a3158eb91bcd6b544e5607df90e53",
+                "0aad4c2b544c2d073ef04cc89778968f2f409ee9859be3a4ad080fd93438b0cf",
+                "35502875809d17b530f4ae443eb2e14ed0e34dde388102a91fc83e71eb5dc8ac",
+                "590e38770b129911c6609d6e1371efd3df6409c8c1e549a84fd476210cb06960"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chemistdirect.com.au",
+                "www.chemistdirect.com.au",
+                "www.homehardware.com.au",
+                "www.mitre10.com.au",
+                "www.ozhairandbeauty.com",
+                "www.pharmacyonline.com.au",
+                "www.repco.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/api\\/api-0\\.8\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3c3669397a0d6ab57176fa267184cf71c62cac31cd57d6d26aa0f5cdd1797d19"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chemistwarehouse.co.nz",
+                "www.scorptec.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/inline_ratings\\/inline_ratings-2\\.2\\.3\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "dac442d83b1787ebe3ddfbc0426119b8ff4d9f4503294d36e0a909531dedc12d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chemistwarehouse.co.nz",
+                "www.retravision.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/deployments\\/connor\\/main_site\\/production\\/en_AU\\/bv\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f69cb0c7a062ab636c1a9691afbfa11f4540becb81e779d267ff7ea3e3687efa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "connor.com.au",
+                "www.connor.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/deployments\\/dysonglobal\\/main_site_magento\\/production\\/en_AU\\/bv\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "591b463e37f7e7cb24192903a4ff412f7eef5e671cd24a8b8715a7cf7ef6420b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "NoCookie": {
+                    "ttl": -86391,
+                    "length": 4,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "BVBRANDID": {
+                    "ttl": 31536009,
+                    "length": 36,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "BVBRANDSID": {
+                    "ttl": 1809,
+                    "length": 36,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dyson.com",
+                "www.dyson.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/deployments\\/dysonglobal\\/main_site_magento\\/production\\/en_AU\\/api-config\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1c085dea2ad70d2ee95eb5f2a29ff480c305ae27474a4245bbf2e1b142db25c6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dyson.com",
+                "www.dyson.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/apps\\/rating_summary\\/rating_summary-2\\.69\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1f5c774b63e5d7290e16d093bbe61403879d2fae7a1e4892a6db46f27c8cdede"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hairhouse.com.au",
+                "www.ryobi.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/bfd\\/v1\\/clients\\/hairhouse_warehouse\\/api-products\\/cv2\\/resources\\/data\\/display\\/0\\.2alpha\\/product\\/summary",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hairhouse.com.au",
+                "www.hairhouse.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/bfd\\/v1\\/clients\\/hairhouse_warehouse\\/api-products\\/cv2\\/resources\\/data\\/products\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hairhouse.com.au",
+                "www.hairhouse.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/bfd\\/v1\\/clients\\/hairhouse_warehouse\\/api-products\\/cv2\\/resources\\/data\\/display\\/0\\.2alpha\\/product\\/summary",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ce3ace418a0168aed5e8c1da4295349edf5ffdcf7c22bf8aca4c47634c336a31"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hairhouse.com.au",
+                "www.hairhouse.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/bfd\\/v1\\/clients\\/hairhouse_warehouse\\/api-products\\/cv2\\/resources\\/data\\/products\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9daec056352f1ee09cd476b5a304d0d5b0563dd6dbb5fed898c2a1ea250b9b72"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hairhouse.com.au",
+                "www.hairhouse.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/prod\\/static\\/latest\\/bv-analytics\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics-static.ugc"
+            ],
+            "apis": {
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Navigator.prototype.language": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "PerformanceTiming.prototype.navigationStart": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e78a631e6a55855a5f352fae80fc07b7a3d1ea526286ca78cb7dbdcc3ff07cfc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifespanfitness.com.au",
+                "www.scorptec.com.au",
+                "www.t2tea.com"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/data\\/batch\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3ad1a8acdfbb251e76218057b73c8d7bb15ae23dcaf2863e1f7e236b8a0e7ac3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pillowtalk.com.au",
+                "www.pillowtalk.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/deployments\\/platypusshoes-anz\\/main_site\\/production\\/en_AU\\/bv\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e8ee8116ab87174a2fbdc0200487c42cd33e74d18293268e1be8a114690d391b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "NoCookie": {
+                    "ttl": -86395,
+                    "length": 4,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 0.5
+                },
+                "BVBRANDID": {
+                    "ttl": 31536005,
+                    "length": 36,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 0.5
+                },
+                "BVBRANDSID": {
+                    "ttl": 1805,
+                    "length": 36,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "platypusshoes.com.au",
+                "www.platypusshoes.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/bfd\\/v1\\/clients\\/ryobitools-anz\\/api-products\\/cv2\\/resources\\/data\\/display\\/0\\.2alpha\\/product\\/summary",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ryobi.com.au",
+                "www.ryobi.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/bfd\\/v1\\/clients\\/ryobitools-anz\\/api-products\\/cv2\\/resources\\/data\\/products\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ryobi.com.au",
+                "www.ryobi.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/bfd\\/v1\\/clients\\/ryobitools-anz\\/api-products\\/cv2\\/resources\\/data\\/display\\/0\\.2alpha\\/product\\/summary",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ca422dc8de0768a48f57d93c8a602173f5dc381e278375025a8b6330c74cef4c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ryobi.com.au",
+                "www.ryobi.com.au"
+            ]
+        },
+        {
+            "rule": "bazaarvoice\\.com\\/bfd\\/v1\\/clients\\/ryobitools-anz\\/api-products\\/cv2\\/resources\\/data\\/products\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c2f8743b243287c38eb906ee0501957ec6006cd780a16781f4fe3ba82f5192d3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ryobi.com.au",
+                "www.ryobi.com.au"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Audience Measurement",
+        "Third-Party Analytics Marketing",
+        "Action Pixels",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.00888,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8227848101265823
+        },
+        {
+            "domain": "contentsquare.net",
+            "prevalence": 0.03481012658227848
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.022151898734177215
+        },
+        {
+            "domain": "d2wy8f7a9ursnm.cloudfront.net",
+            "prevalence": 0.0189873417721519
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.015822784810126583
+        },
+        {
+            "domain": "dyson.com.au",
+            "prevalence": 0.015822784810126583
+        },
+        {
+            "domain": "yottaa.com",
+            "prevalence": 0.015822784810126583
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.012658227848101266
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.012658227848101266
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.00949367088607595
+        }
+    ],
+    "types": {
+        "Script": 222,
+        "Image": 101,
+        "Fetch": 27,
+        "XHR": 21,
+        "Stylesheet": 2,
+        "Preflight": 8
+    },
+    "nameservers": [
+        "a13-66.akam.net",
+        "a10-64.akam.net",
+        "a11-65.akam.net",
+        "a2-67.akam.net",
+        "a1-191.akam.net",
+        "a6-64.akam.net"
+    ]
+}

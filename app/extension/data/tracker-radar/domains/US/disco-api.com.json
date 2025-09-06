@@ -1,0 +1,214 @@
+{
+    "domain": "disco-api.com",
+    "owner": {
+        "name": "Discovery Communications Europe Limited",
+        "displayName": "Discovery Communications Europe"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "eu3-prod",
+        "us1-prod"
+    ],
+    "cnames": [
+        {
+            "original": "eu3-prod-direct-eurosport.tvn24.pl",
+            "resolved": "eu3-prod.disco-api.com"
+        },
+        {
+            "original": "eu3-prod-direct.eurosport.nl",
+            "resolved": "eu3-prod.disco-api.com"
+        },
+        {
+            "original": "us1-prod-direct.investigationdiscovery.com",
+            "resolved": "us1-prod.disco-api.com"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "disco-api\\.com\\/playback\\/v3\\/videoPlaybackInfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu3-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "eu3-prod-direct-eurosport.tvn24.pl",
+                    "resolved": "eu3-prod.disco-api.com"
+                },
+                {
+                    "original": "eu3-prod-direct.eurosport.nl",
+                    "resolved": "eu3-prod.disco-api.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tvn24.pl",
+                "www.eurosport.nl"
+            ]
+        },
+        {
+            "rule": "disco-api\\.com\\/playback\\/v3\\/videoPlaybackInfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu3-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "eu3-prod-direct-eurosport.tvn24.pl",
+                    "resolved": "eu3-prod.disco-api.com"
+                },
+                {
+                    "original": "eu3-prod-direct.eurosport.nl",
+                    "resolved": "eu3-prod.disco-api.com"
+                }
+            ],
+            "responseHashes": [
+                "e4581754d3cfa9e967796a5847a599319d02068a356ee6749d0f4e61999adc91",
+                "4688a8291a0becc8ebb6ee92976d4618becf31fa997203decf9bfc21515287f5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tvn24.pl",
+                "eurosport.tvn24.pl",
+                "www.eurosport.nl"
+            ]
+        },
+        {
+            "rule": "disco-api\\.com\\/token",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu3-prod",
+                "us1-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "eu3-prod-direct-eurosport.tvn24.pl",
+                    "resolved": "eu3-prod.disco-api.com"
+                },
+                {
+                    "original": "eu3-prod-direct.eurosport.nl",
+                    "resolved": "eu3-prod.disco-api.com"
+                },
+                {
+                    "original": "us1-prod-direct.investigationdiscovery.com",
+                    "resolved": "us1-prod.disco-api.com"
+                }
+            ],
+            "responseHashes": [
+                "51e5258d5f098299ffa05dc866724b1ca7864f3309ebed97c1f06bf20f01e2b1",
+                "67c3e391f49dd1dedf2f50307dc3b67b42d66dbc0136a6932aa0f1803035a0fd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tvn24.pl",
+                "www.eurosport.nl",
+                "www.investigationdiscovery.com"
+            ]
+        },
+        {
+            "rule": "disco-api\\.com\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu3-prod",
+                "us1-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "eu3-prod-direct-eurosport.tvn24.pl",
+                    "resolved": "eu3-prod.disco-api.com"
+                },
+                {
+                    "original": "eu3-prod-direct.eurosport.nl",
+                    "resolved": "eu3-prod.disco-api.com"
+                },
+                {
+                    "original": "us1-prod-direct.investigationdiscovery.com",
+                    "resolved": "us1-prod.disco-api.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tvn24.pl",
+                "www.eurosport.nl",
+                "www.investigationdiscovery.com"
+            ]
+        },
+        {
+            "rule": "disco-api\\.com\\/users\\/me",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us1-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "us1-prod-direct.investigationdiscovery.com",
+                    "resolved": "us1-prod.disco-api.com"
+                }
+            ],
+            "responseHashes": [
+                "67845dfcff70101ec70bfce05fe5dcd68bada2c416d4d2562e75d1a139dbe16e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "investigationdiscovery.com",
+                "www.investigationdiscovery.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 5,
+        "Fetch": 8
+    },
+    "nameservers": [
+        "ns-1277.awsdns-31.org",
+        "ns-1647.awsdns-13.co.uk",
+        "ns-722.awsdns-26.net",
+        "ns-235.awsdns-29.com"
+    ]
+}

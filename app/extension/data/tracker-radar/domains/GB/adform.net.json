@@ -1,0 +1,503 @@
+{
+    "domain": "adform.net",
+    "owner": {
+        "name": "Adform A/S",
+        "displayName": "Adform",
+        "privacyPolicy": "https://site.adform.com/privacy-center/overview/",
+        "url": "http://adform.com"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00654,
+    "sites": 65,
+    "subdomains": [
+        "adx",
+        "cm",
+        "s2",
+        "track",
+        "a2",
+        "a1",
+        "c1"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "adform\\.net\\/adx\\/openrtb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adx"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "appleinsider.com",
+                "ftv.bg",
+                "maryberryrecipes.co.uk",
+                "www.ephotozine.com",
+                "www.jewishnews.co.uk",
+                "www.tasteatlas.com"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/cookie",
+            "cookies": 0.00171,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cm"
+            ],
+            "apis": {},
+            "sites": 17,
+            "prevalence": 0.00171,
+            "cnames": [],
+            "responseHashes": [
+                "7fff1569ea68ef52782ba25b0cf3934627f7a4fc1e8e22f4652de959c5f97978"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_dbid": 0.00010064412238325282,
+                "hb_insticator_uid": 0.00030193236714975844
+            },
+            "exampleSites": [
+                "appleinsider.com",
+                "downdetector.com",
+                "sage-advices.com",
+                "songmeanings.com",
+                "thequickadvisor.com",
+                "tipsfolder.com",
+                "www.35mmc.com",
+                "www.atlasobscura.com",
+                "www.behindthename.com",
+                "www.gbmb.org",
+                "www.iplocation.net",
+                "www.jewishnews.co.uk",
+                "www.politico.com",
+                "www.seat61.com",
+                "www.sqlitetutorial.net",
+                "www.thephoblographer.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/banners\\/scripts\\/st\\/trackpoint-async\\.js",
+            "cookies": 0.000403,
+            "fingerprinting": 2,
+            "subdomains": [
+                "s2"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 5,
+                "Navigator.prototype.language": 5,
+                "Screen.prototype.colorDepth": 5,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "59938868870ce60b8576506d0211346d8a85329a9d54997c39d921389c493b34"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "adformfrpid": {
+                    "ttl": 2592007,
+                    "length": 19,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "meassociation.org.uk",
+                "reolink.com",
+                "support.reolink.com",
+                "www.flypgs.com",
+                "www.herts.ac.uk",
+                "www.lelo.com",
+                "www.mdanderson.org",
+                "www.s24su.com",
+                "www.totalrl.com",
+                "www.whatuni.com"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/Serving\\/TrackPoint\\/",
+            "cookies": 0.000906,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track",
+                "a2",
+                "a1"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000906,
+            "cnames": [],
+            "responseHashes": [
+                "a4b658b0f7b4563cfffa7cb809cbeb52588d38dd1c4947705861bc4901987870",
+                "764f710b5770d36d692c4614c05f80a8d159c2333f6f152012ab856e34b22132",
+                "ee9915ec1db482b9843dfb2c23dfab8f8bcf6cd2e9d328aa8984f28c563857d4",
+                "7432af71fdcb10a9aee26c9dee982dcf30c38d75d466751b8c6fed8d2a1ca4a3",
+                "8f630f546267dfb5b0bb0394cfc3b07c8b3cc59129c183c7acda02e2b4e93985"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "adformfrpid": 0.00010064412238325282,
+                "_hjTLDTest": 0.00010064412238325282,
+                "_li_dcdm_c": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "moneyfarm.com",
+                "blog.moneyfarm.com",
+                "meassociation.org.uk",
+                "reolink.com",
+                "support.reolink.com",
+                "www.flypgs.com",
+                "www.lelo.com",
+                "www.mdanderson.org",
+                "www.whatuni.com"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/serving\\/container\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track",
+                "a1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ef8be259818bfdfb9350f1c81c2c8e1e63aa6713c72f732ac7c338a1b311db2f"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "www.mdanderson.org"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/cookie",
+            "cookies": 0.000906,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c1",
+                "cm"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "7fff1569ea68ef52782ba25b0cf3934627f7a4fc1e8e22f4652de959c5f97978"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "euconsent-v2": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "boxrec.com",
+                "maryberryrecipes.co.uk",
+                "mydramalist.com",
+                "www.101soundboards.com",
+                "www.azlyrics.com",
+                "www.calendarr.com",
+                "www.convertunits.com",
+                "www.ephotozine.com",
+                "www.footballtransfers.com",
+                "www.myabandonware.com",
+                "www.powerpyx.com"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/serving\\/cookie\\/match",
+            "cookies": 0.00151,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c1"
+            ],
+            "apis": {},
+            "sites": 17,
+            "prevalence": 0.00171,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ju_dm": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "vodafone.co.uk",
+                "deviceguides.vodafone.co.uk",
+                "draxe.com",
+                "talkmobile.co.uk",
+                "us.norton.com",
+                "www.airtransat.com",
+                "www.azlyrics.com",
+                "www.audible.com",
+                "www.colgate.com",
+                "www.dictionary.com",
+                "www.grammar-monster.com",
+                "www.hardreset.info",
+                "www.hilton.com",
+                "www.mcarthurglen.com",
+                "www.metmuseum.org",
+                "www.moma.org",
+                "www.vodafone.co.uk"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/serving\\/cookie\\/match",
+            "cookies": 0.00101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c1"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "downdetector.com",
+                "sage-advices.com",
+                "techcrunch.com",
+                "www.azlyrics.com",
+                "www.behindthename.com",
+                "www.iplocation.net",
+                "www.jetpunk.com",
+                "www.koreaboo.com",
+                "www.mangaread.org",
+                "www.thephoblographer.com"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/serving\\/scripts\\/trackpoint\\/async\\/",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "track",
+                "a2",
+                "a1"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Document.cookie getter": 5,
+                "Navigator.prototype.language": 6,
+                "Screen.prototype.colorDepth": 6,
+                "Screen.prototype.width": 6,
+                "Screen.prototype.height": 6,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {
+                "adformfrpid": {
+                    "ttl": 2592009,
+                    "length": 19,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reolink.com",
+                "support.reolink.com",
+                "www.firstbus.co.uk",
+                "www.lelo.com",
+                "www.mdanderson.org",
+                "www.s24su.com",
+                "www.totalrl.com"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/adx\\/openrtb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adx"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "songmeanings.com",
+                "www.guitaretab.com",
+                "www.lyricsmode.com",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/adx\\/openrtb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guitaretab.com",
+                "www.lyricsmode.com"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/serving\\/unload\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7fff1569ea68ef52782ba25b0cf3934627f7a4fc1e8e22f4652de959c5f97978"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sqlitetutorial.net",
+                "www.sqlitetutorial.net"
+            ]
+        },
+        {
+            "rule": "adform\\.net\\/adx\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "da0d73065db0e49ba577331fed38478e255bd492862885a4550dfb333a4096b0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "worldfootball.net",
+                "www.worldfootball.net"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Ad Fraud",
+        "Audience Measurement"
+    ],
+    "performance": {},
+    "cookies": 0.00513,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.13043478260869565
+        },
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.09937888198757763
+        },
+        {
+            "domain": "gumgum.com",
+            "prevalence": 0.09316770186335403
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.062111801242236024
+        },
+        {
+            "domain": "sojern.com",
+            "prevalence": 0.062111801242236024
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.049689440993788817
+        },
+        {
+            "domain": "smilewanted.com",
+            "prevalence": 0.049689440993788817
+        },
+        {
+            "domain": "demdex.net",
+            "prevalence": 0.037267080745341616
+        },
+        {
+            "domain": "themoneytizer.fr",
+            "prevalence": 0.037267080745341616
+        },
+        {
+            "domain": "bidmatic.io",
+            "prevalence": 0.024844720496894408
+        }
+    ],
+    "types": {
+        "Fetch": 6,
+        "Document": 29,
+        "Script": 27,
+        "Image": 28,
+        "XHR": 6,
+        "Preflight": 2,
+        "Ping": 2
+    },
+    "nameservers": [
+        "a10-66.akam.net",
+        "a20-66.akam.net",
+        "a11-67.akam.net",
+        "a14-65.akam.net",
+        "a13-64.akam.net",
+        "a1-125.akam.net"
+    ]
+}

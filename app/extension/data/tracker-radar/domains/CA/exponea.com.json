@@ -1,0 +1,341 @@
+{
+    "domain": "exponea.com",
+    "owner": {
+        "name": "Bloomreach, Inc.",
+        "displayName": "Bloomreach"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.00112,
+    "sites": 11,
+    "subdomains": [
+        "api.us1",
+        "api",
+        "aeo-api.us",
+        "api.uk"
+    ],
+    "cnames": [
+        {
+            "original": "api.br.ae.com",
+            "resolved": "aeo-api.us.exponea.com"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "exponea\\.com\\/js\\/exponea\\.min\\.js",
+            "cookies": 0.000914,
+            "fingerprinting": 2,
+            "subdomains": [
+                "api.us1",
+                "api",
+                "aeo-api.us",
+                "api.uk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 10,
+                "Navigator.prototype.vendor": 10,
+                "window.localStorage": 10,
+                "window.sessionStorage": 10,
+                "Document.cookie getter": 9,
+                "Date.prototype.getTime": 10,
+                "Navigator.prototype.maxTouchPoints": 7,
+                "Document.cookie setter": 9,
+                "Notification.permission": 1
+            },
+            "sites": 11,
+            "prevalence": 0.00112,
+            "cnames": [
+                {
+                    "original": "api.br.ae.com",
+                    "resolved": "aeo-api.us.exponea.com"
+                }
+            ],
+            "responseHashes": [
+                "d7cb7512c292c234e5ced51e31e142c18af5c8550fb24d600b74a19833fc76e3",
+                "29e7ba853a7b431baeeb7165fed40ea204e22cbd49e785fc3ea6a25fefb3ab56",
+                "84d6ffdb931e20f3dc03188f80391182b178b109afe8c188eb420719565811b2",
+                "b63da26b63b8f21eac6893a5d11a705fd4feecfc6a1bea18ef7f3c358bd4dbad"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__exponea_etc__": {
+                    "ttl": 94608010,
+                    "length": 36,
+                    "prevalence": 0.0009136128311846513,
+                    "uniqueness": 1
+                },
+                "__exponea_time2__": {
+                    "ttl": 3611,
+                    "length": 19,
+                    "prevalence": 0.0009136128311846513,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "altitude-sports.com",
+                "caaneo.ca",
+                "fr.altitude-sports.com",
+                "reservationdesk.com",
+                "www.ae.com",
+                "www.altitude-sports.com",
+                "www.atptour.com",
+                "www.performancebike.com",
+                "www.roots.com",
+                "www.sheetmusicplus.com",
+                "www.thelasthunt.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/f12f84fc-9688-11ec-8b3b-c6b3e2f8c09c\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "29fd2e3f46559227a80630ea82be97f76118a2a6209167fbcbf898302ca78580"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "altitude-sports.com",
+                "fr.altitude-sports.com",
+                "www.altitude-sports.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/bulk",
+            "cookies": 0.00102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1",
+                "api",
+                "aeo-api.us"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00102,
+            "cnames": [
+                {
+                    "original": "api.br.ae.com",
+                    "resolved": "aeo-api.us.exponea.com"
+                }
+            ],
+            "responseHashes": [
+                "2fc20425c81fc696b22b58a1f9c1a1bada3094f725916983caede8768131827a",
+                "1e54d5128d8f57c9bc1f41bdf6d169a8d7b8394ae03d1ad9a5d8f01e99a32eb9",
+                "895a4bfe4d5e9f2e211879fb30589fd7473b2aeebd850b44d5d3ba2f4839f34c",
+                "6919147b0f2fceb0145af967b6493e9ccec77d6d8ab59fdea8b6d56380c2b102",
+                "2e97f861a7394614bdac13394e642745d03ca5f0ce91f8e09631ffdca295cab2",
+                "ec9ea5a97b042c9cf769c0999a5e8c652a91ea44f553d79228989b49856cd9e3",
+                "7509e8f9187ea2270101cae08c15fcbcd53877c002206cf794fd2984e61288b7",
+                "3369820456492c569fa605c606efeeafe71f136670a99b9b84bc003e6dc2efcd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "altitude-sports.com",
+                "caaneo.ca",
+                "fr.altitude-sports.com",
+                "reservationdesk.com",
+                "www.ae.com",
+                "www.altitude-sports.com",
+                "www.performancebike.com",
+                "www.roots.com",
+                "www.sheetmusicplus.com",
+                "www.thelasthunt.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/managed-tags\\/show",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1",
+                "api"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000914,
+            "cnames": [],
+            "responseHashes": [
+                "5c858b1c80e2a37e46abc26525a908fe14db93ebdce1dbdbdd2828cd180bbeec",
+                "ada03c9948a5702a3105693c163454e929410f0a677f397cfe4d7596f96f519d",
+                "51a0bc77bd9638a68a954c16794556788b613f9c01959b98c8e79c3589a897a5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "altitude-sports.com",
+                "caaneo.ca",
+                "fr.altitude-sports.com",
+                "reservationdesk.com",
+                "www.altitude-sports.com",
+                "www.performancebike.com",
+                "www.roots.com",
+                "www.sheetmusicplus.com",
+                "www.thelasthunt.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/campaigns\\/banners\\/show",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1",
+                "api"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000711,
+            "cnames": [],
+            "responseHashes": [
+                "8f97dc323ed0543f80b2cfd2cafad8c7c4d0df59bebe8a68ef03fff135d571b4",
+                "ac19be3ea9475e7bf292bef5a29a52cde243d5ed6b9fab8548da086d0f3f8ba0",
+                "b558036637750722c28de12c9845d52239cd285026ad90c5d28d8376117c494b",
+                "5e33f48ebe63ba41c2107c996e23ca29b64304d35d92c52c34f95b03bac8b3d8",
+                "f5c1388868f22487ce09932804f0203ff0e4821dc325963da6337358b3c6274f",
+                "207262426b789ff27e8f8ba8986477926bb086b523fe9f49e90f7fa550a442af"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "altitude-sports.com",
+                "caaneo.ca",
+                "fr.altitude-sports.com",
+                "www.altitude-sports.com",
+                "www.performancebike.com",
+                "www.sheetmusicplus.com",
+                "www.thelasthunt.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/aade2346-d4c5-11ee-a462-62368f159a26\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "performancebike.com",
+                "www.performancebike.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/f9aa7276-eab5-11ee-98bd-0e92b60508d9\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "af7de04105f6709964016fc95647b8adb212e4d029e08b8493e7e34a1d069f20"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "roots.com",
+                "www.roots.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/5ecc4afa-dabd-11eb-9bcf-a2a41a4e8acb\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "0bb3f647fdc772cc5b0c8c0eb9eb3463751e270c09ab409bed832c7109481c36"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sheetmusicplus.com",
+                "www.sheetmusicplus.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/8515b1a2-9a60-11ec-b7f7-22007208bd1d\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "f5f7a85d58784adbb9a059bb09055985c182eb8ffd37c93aed7a4c68d577fb7a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thelasthunt.com",
+                "www.thelasthunt.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00102,
+    "topInitiators": [
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.4657534246575342
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3424657534246575
+        },
+        {
+            "domain": "noibu.com",
+            "prevalence": 0.1643835616438356
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0273972602739726
+        }
+    ],
+    "types": {
+        "Script": 11,
+        "Fetch": 37
+    },
+    "nameservers": [
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
+    ]
+}

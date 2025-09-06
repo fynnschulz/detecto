@@ -1,0 +1,169 @@
+{
+    "domain": "episerver.net",
+    "owner": {
+        "name": "EPiServer AB",
+        "displayName": "EPiServer"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000609,
+    "sites": 6,
+    "subdomains": [
+        "s.usea01.idio",
+        "s.emea01.idio",
+        "a.usea01.idio",
+        "a.emea01.idio",
+        "buclprod.peerius",
+        "dl"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "episerver\\.net\\/ia\\.js",
+            "cookies": 0.000406,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s.usea01.idio",
+                "s.emea01.idio"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 4,
+                "Date.prototype.getTime": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "23a1a6f198b4d909350fa59d97d61ffcc56410ed6c85bb0f10dfb1885ed7e9b1",
+                "c87248e40a582a0fd1ed277d647585fed86bcdc89f10ca2e327142f1a3a897df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "is": {
+                    "ttl": 1805,
+                    "length": 36,
+                    "prevalence": 0.00040605014719317836,
+                    "uniqueness": 1
+                },
+                "iv": {
+                    "ttl": 63072005,
+                    "length": 36,
+                    "prevalence": 0.00040605014719317836,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atb.com",
+                "www.bdc.ca",
+                "www.birkenstock.com",
+                "www.comptia.org"
+            ]
+        },
+        {
+            "rule": "episerver\\.net\\/ia\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a.usea01.idio",
+                "a.emea01.idio"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "c00a759275b8628823a9809f24cbeca08cb48b52713adf221f70284e66d9c82f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "is": 0.00040605014719317836,
+                "iv": 0.00040605014719317836
+            },
+            "exampleSites": [
+                "atb.com",
+                "www.bdc.ca",
+                "www.birkenstock.com",
+                "www.comptia.org"
+            ]
+        },
+        {
+            "rule": "episerver\\.net\\/tracker\\/api\\/v1_4\\/buclprod\\/rec\\/shown\\.pagex",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buclprod.peerius"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "birkenstock.com",
+                "www.birkenstock.com"
+            ]
+        },
+        {
+            "rule": "episerver\\.net\\/13\\.6\\.1\\/epi-util\\/find\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dl"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "3e1a80357e787d5abc7fc1995596c0ce860c60e368c35344ad89e5b0ee124211"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frigidaire.ca",
+                "www.mint.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000406,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Image": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-1436.awsdns-51.org",
+        "ns-1660.awsdns-15.co.uk",
+        "ns-194.awsdns-24.com",
+        "ns-876.awsdns-45.net"
+    ]
+}

@@ -1,0 +1,370 @@
+{
+    "domain": "directferries.com",
+    "owner": {
+        "name": "Direct Ferries Limited",
+        "displayName": "Direct Ferries"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "wiz",
+        "ws",
+        "ssl",
+        "ssl-dealfinder",
+        "ssgtm-container",
+        "images"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "directferries\\.com\\/partners\\/deal_finder_iframe\\.aspx",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wiz"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "ba90aa20dca18a8dca08b435a2d2ecb27621098099a578858e57dd3308732551",
+                "fa512f410416965309d1fec345bb88bdc64ca94b084499e14c1f1ce3bb9d059d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faehren.net",
+                "ferrygogo.com",
+                "ostseefaehren.com"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/wiz\\/df_dede\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5a6c21473a76b839be05c66c6a183c6a51bf22778ecdc2f9a6884fdedfeacbb7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faehren.net",
+                "ostseefaehren.com"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/scripts\\/fs-external\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "cccbfeae9193114ea9aeeaee8a1efca60ed18ec42ad855cc1c86fe01a16ca203"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faehren.net",
+                "ferrygogo.com",
+                "ostseefaehren.com"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/partners\\/deal_finder\\.aspx",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "903000e9d2b3caa85d09f3acae37afa48aa69280cd976c0ea105b5eddb31156c",
+                "becc346603263ed74cbc6d594041170647a9fc87cc0795ebe6e60b51afd48b00"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faehren.net",
+                "ferrygogo.com",
+                "ostseefaehren.com"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/secure\\/ws\\/recent_searches\\.asmx\\/GetLatestRecentSearch",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl",
+                "ssl-dealfinder"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "5352e32051b0e511f22da20ef7b0e9118774b23fc67341659ee200706b4c1546",
+                "2a13309e1cd63506350e6d433c56bcf75d0a171feb291531754277ba40a121d1",
+                "982728e7b2d4393dd64df6de427b25fc3f7732ce23dad335aceec7906b9ff2e9",
+                "39e3c155f40e5aa57f19170a2687e9912f9d286bff52950096a920b8f942ecc7",
+                "7f9846444d79cddf3b4bc3c2439965536c771ab26c8dfc1ab31dae1937915ca6",
+                "2b45a790e3916c7107da49e0eb7d427af0ecb9732dc2f43a7318d97570c11527"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "dfutm": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "faehren.net",
+                "ferrygogo.com",
+                "ostseefaehren.com",
+                "www.directferries.de",
+                "www.directferries.fr",
+                "www.directferries.nl",
+                "www.directferries.co.uk"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/partners\\/dealFinderBaseData\\.aspx",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl-dealfinder"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "66bfdec7794e80ad8728492ef2f96efd94425a4a10401e20bfb9e701c83970b5",
+                "c11da0824de6bbab11f6b59d05a2574544f7ff3f71f7773d543c4235a6656a1f",
+                "540127b23800e48780231e005f8c3c9ee6cc2c79da2c546838b67c5f5a0eb6ba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "dfutm": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "directferries.de",
+                "www.directferries.fr",
+                "www.directferries.nl",
+                "www.directferries.co.uk"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/ferry\\/ws\\/dealpicker\\.asmx\\/SearchDataGetAB",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl-dealfinder"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "ca5389e729a41e5a530fc6d0f03c3c050d8eaaf8b663c0a257bc72bd94d5ab73",
+                "ed54f2d55df8734f27b3340c9f19b9d23fa8640ae657028a9733643be10a502f",
+                "20dfa695187b9db9656845a2f62d5fc718756ada1c1afe7404f5e94e3b59c858"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "dfutm": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "directferries.de",
+                "www.directferries.fr",
+                "www.directferries.nl",
+                "www.directferries.co.uk"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssgtm-container"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "directferries.de",
+                "www.directferries.fr",
+                "www.directferries.nl",
+                "www.directferries.co.uk"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/secure\\/ws\\/dfeventlogging\\.aspx\\/LogPageRequest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl-dealfinder"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "fca5506086fbe634c82ef20a64102a7429e6cd0ef31fa300c5e253accf30b3e5",
+                "718f6effc5c4feb626dffc25bca8c2ee5af090b77f7f36ed4ff3cbea19b95f78",
+                "80d8f5ab98c4e4e2d9ae551058e245b06f2c2da046b522df5126d723b961dbe8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "dfutm": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "directferries.de",
+                "www.directferries.fr",
+                "www.directferries.nl",
+                "www.directferries.co.uk"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/secure\\/ws\\/dfwstrk\\.asmx\\/AddTrackingCookies",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl-dealfinder"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "5a8e5f6e6d2ed73e333f886c90735517394b679f56b8ecf8e3966f19f06f8b89",
+                "446ec5b78611f587993e9aa1ef2a196626ca6219ac5507b2d8a9cef3d04bdc60",
+                "1c2bb93314d3be6d9fc49445ec4d38af708e5f61a22cd4f1b8f48c97c060e324"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "directferries.de",
+                "www.directferries.fr",
+                "www.directferries.nl",
+                "www.directferries.co.uk"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/brand\\/df-hero-brand\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "08947e7f603b8c29d1005f3b9d5ba3d557da36d3f913ec617ae05d8f9fa07dba"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "directferries.fr",
+                "www.directferries.co.uk"
+            ]
+        },
+        {
+            "rule": "directferries\\.com\\/ferry\\/ws\\/dealpicker\\.asmx\\/RouteDataGet",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl-dealfinder"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4544f6c439c90ecb5e07cca1c24fb302ca9b127e02d34cdc5776b09ee73eaa09"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "directferries.fr",
+                "www.directferries.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000479,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.78125
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.09375
+        },
+        {
+            "domain": "directferries.co.uk",
+            "prevalence": 0.0625
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.0625
+        }
+    ],
+    "types": {
+        "Document": 3,
+        "Script": 33,
+        "Fetch": 4,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns-222.awsdns-27.com",
+        "ns-964.awsdns-56.net",
+        "ns-1408.awsdns-48.org",
+        "ns-2041.awsdns-63.co.uk"
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "domain": "vigo.one",
+    "owner": {
+        "name": "Vigo Software Ltd.",
+        "displayName": "Vigo Software"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "vigo\\.one\\/html5\\/Vigo\\.min\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "window.localStorage": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "fd4d6643de84636fc3de8115a0ee390781ceb5c70086d8198a7b25a9393f96b6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "v_did": {
+                    "ttl": null,
+                    "length": 32,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "basetop.ru",
+                "nalog-nalog.ru",
+                "ucrazy.org",
+                "www.edimdoma.ru"
+            ]
+        },
+        {
+            "rule": "vigo\\.one\\/html5\\/cgi-bin\\/vigoUrandId\\.php",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "94c79aefc8a4c355ac54713de48dd8087c2391a53eddd437b1c38cee56d41955",
+                "49d030753ef3ae9aaf8c2d77d8383f0eebff4f9c9d5f60d807eb9f00d8ba441b",
+                "fabc2c3957f7a96af7cd49f5d7a03bfe67df253a2acbe8ffbd98b526330c691c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "v_did": {
+                    "ttl": null,
+                    "length": 32,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "basetop.ru",
+                "nalog-nalog.ru",
+                "ucrazy.org",
+                "www.edimdoma.ru"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "rutube.ru",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Document": 4
+    },
+    "nameservers": [
+        "dns2.yandex.net",
+        "dns1.yandex.net"
+    ]
+}

@@ -1,0 +1,179 @@
+{
+    "domain": "insurads.com",
+    "owner": {
+        "name": "InsurAds",
+        "displayName": "InsurAds"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "services",
+        "cdn",
+        "web-messaging"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "insurads\\.com\\/init",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "services"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "62d13452335d68a9aafe094a8d081554142fb850b426c476569d26a58796eb34",
+                "1bfe4f368dc21b0d75913970942296b4fe3b06611269e6613f21403cd4f6e311"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "calendarr.com",
+                "www.todays-golfer.com",
+                "www.translate.com"
+            ]
+        },
+        {
+            "rule": "insurads\\.com\\/iat-realtime-8\\.2\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e5667075ea2ebe5ed81bb4c56294114db94a62a5c20e6a32ebeb9c0f8797b847"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendarr.com",
+                "www.todays-golfer.com",
+                "www.translate.com"
+            ]
+        },
+        {
+            "rule": "insurads\\.com\\/iat-client-1\\.16\\.31rg\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "0ea482c1ae925e96fda18327be95edb106b49d965f38c9ced99fc32a32112ef6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "___iat_idl": {
+                    "ttl": 86400,
+                    "length": 1,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendarr.com",
+                "www.todays-golfer.com",
+                "www.translate.com"
+            ]
+        },
+        {
+            "rule": "insurads\\.com\\/initcb",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "services"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "b2be998af7bc5c3d0c2404d79aac315f7827ad228c20a2e282e5088b5d05d09a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "___iat_ses": 0.0003028161905723226,
+                "lotame_domain_check": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "calendarr.com",
+                "www.todays-golfer.com",
+                "www.translate.com"
+            ]
+        },
+        {
+            "rule": "insurads\\.com\\/rt-pub\\/node\\/hub",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-messaging"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "calendarr.com",
+                "www.translate.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "ay.delivery",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2857142857142857
+        }
+    ],
+    "types": {
+        "Script": 12,
+        "WebSocket": 2
+    },
+    "nameservers": [
+        "ns-1779.awsdns-30.co.uk",
+        "ns-1070.awsdns-05.org",
+        "ns-560.awsdns-06.net",
+        "ns-196.awsdns-24.com"
+    ]
+}

@@ -1,0 +1,148 @@
+{
+    "domain": "vidoomy.com",
+    "owner": {
+        "name": "Soluciones Corporativas IP, SL",
+        "displayName": "Soluciones Corporativas IP"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.00111,
+    "sites": 11,
+    "subdomains": [
+        "vid",
+        "d",
+        "ad"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "vidoomy\\.com\\/sync",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {
+                "Navigator.prototype.vendor": 1,
+                "OfflineAudioContext.prototype.constructor": 1,
+                "Screen.prototype.availTop": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availLeft": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.availHeight": 1,
+                "AudioBuffer.prototype.getChannelData": 1
+            },
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "4cd9d7fe6bef9e82616b20d2c4a7a9842652ed469b704922e4c682f209754768"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thequickadvisor.com",
+                "www.01net.com",
+                "www.flightradar24.com",
+                "www.jezebel.com",
+                "www.listchallenges.com",
+                "www.metrotimes.com",
+                "www.politico.com",
+                "www.randomlists.com",
+                "www.refinery29.com",
+                "www.seat61.com"
+            ]
+        },
+        {
+            "rule": "vidoomy\\.com\\/api\\/rtbserver\\/prebid\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ephotozine.com",
+                "www.ephotozine.com"
+            ]
+        },
+        {
+            "rule": "vidoomy\\.com\\/api\\/adserver\\/tracking\\/tag",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ad"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "30760ba5ec1169343ff3a2a1433973ab93870e317dc6535ec867f82a76abe42d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ephotozine.com",
+                "www.ephotozine.com"
+            ]
+        },
+        {
+            "rule": "vidoomy\\.com\\/api\\/adserver\\/tracking\\/tag",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ad"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ephotozine.com",
+                "www.ephotozine.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "smilewanted.com",
+            "prevalence": 0.9523809523809523
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.047619047619047616
+        }
+    ],
+    "types": {
+        "Document": 10,
+        "Fetch": 2,
+        "XHR": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns7.dondominio.com",
+        "ns2.dondominio.com"
+    ]
+}

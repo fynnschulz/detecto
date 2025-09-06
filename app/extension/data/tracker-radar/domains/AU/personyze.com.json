@@ -1,0 +1,117 @@
+{
+    "domain": "personyze.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "counter",
+        "count"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "personyze\\.com\\/stat-track-lib\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 2,
+            "subdomains": [
+                "counter"
+            ],
+            "apis": {
+                "Navigator.prototype.vendor": 3,
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "window.sessionStorage": 3,
+                "Document.cookie setter": 3,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3,
+                "Date.prototype.getTime": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Navigator.prototype.platform": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.colorDepth": 3,
+                "Navigator.prototype.plugins": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Navigator.prototype.javaEnabled": 3,
+                "Element.prototype.getClientRects": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "64036a5ed5877963f5dd851ecc05c925088a355239100144ad73a29255ad4860"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "stat_track_u_id": {
+                    "ttl": 63072017,
+                    "length": 112,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 1
+                },
+                "_stat_track_s_id": {
+                    "ttl": null,
+                    "length": 198,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "supercheapauto.com.au",
+                "www.icruise.com",
+                "www.tyroola.com.au"
+            ]
+        },
+        {
+            "rule": "personyze\\.com\\/stat-track-log-visit\\.js\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "count"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "6eaac083905bf9858a0049e9de4642dc4f5bfb9e3dd555a1eaadee270a9ec236",
+                "e46263e5d60d5e5f2e706be80a7d476b282aa8460f25f16e1547a069073fdd21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "utag_main_v_id": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "supercheapauto.com.au",
+                "www.icruise.com",
+                "www.tyroola.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "tyroola.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 6
+    },
+    "nameservers": [
+        "ns23.domaincontrol.com",
+        "ns24.domaincontrol.com"
+    ]
+}

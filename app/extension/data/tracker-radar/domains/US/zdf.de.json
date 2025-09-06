@@ -1,0 +1,159 @@
+{
+    "domain": "zdf.de",
+    "owner": {
+        "name": "Zweites Deutsches Fernsehen Anstalt des öffentlichen Rechts",
+        "displayName": "Zweites Deutsches Fernsehen Anstalt des öffentlichen Rechts"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "psi"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "zdf\\.de\\/zdf\\/article\\/https%3A%25f%25fwww%25dzdfheute%25dde%25fnachrichtenticker-100%25dhtml\\/teaser",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "psi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "14ea8fcd159f6ba85463e46c7b0f23192ec1e224b09c9cd804687d2d8db10af3"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdfheute.de",
+                "www.zdfheute.de"
+            ]
+        },
+        {
+            "rule": "zdf\\.de\\/static\\/js\\/399\\.2b698e9b\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "psi"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.vendor": 2,
+                "window.indexedDB": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.product": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c74b2b31470d5e2a73c14fa1af77e7afb1c338c5a79cc1c83c69bebfd504a5ca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdfheute.de",
+                "www.zdfheute.de"
+            ]
+        },
+        {
+            "rule": "zdf\\.de\\/static\\/js\\/main\\.e230a455\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "psi"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cd0024e34db77de51929f85de5db9e70fc5b1c6e8be2d482caec908624027d98"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdfheute.de",
+                "www.zdfheute.de"
+            ]
+        },
+        {
+            "rule": "zdf\\.de\\/static\\/css\\/main\\.600faa05\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "psi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ea8a2c62eeb5fbf7b4c5af4905d904c69b233dbc685d01c859f5b40fedc96269"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdfheute.de",
+                "www.zdfheute.de"
+            ]
+        },
+        {
+            "rule": "zdf\\.de\\/api\\/eventlog\\/logEvent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "psi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "35f9298c2dddfc48a16ffba21ba00fbdb58d9af0bf03f3607da68bdad189aea5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdfheute.de",
+                "www.zdfheute.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Document": 2,
+        "Script": 4,
+        "Stylesheet": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns01.zdf.de",
+        "ns02.zdf.de"
+    ]
+}

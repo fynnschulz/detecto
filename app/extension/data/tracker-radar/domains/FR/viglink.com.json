@@ -1,0 +1,92 @@
+{
+    "domain": "viglink.com",
+    "owner": {
+        "name": "Sovrn Holdings",
+        "displayName": "Sovrn Holdings",
+        "privacyPolicy": "https://www.sovrn.com/sovrn-legal-policies/",
+        "url": "http://sovrn.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "cdn",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "viglink\\.com\\/api\\/vglnk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "71032845ccbdd843bb7ae8771543dd74c43e6351b350344e1d60eaed3d988d10"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stevehoffman.tv",
+                "thestreamable.com",
+                "www.head-fi.org",
+                "www.repaire.net"
+            ]
+        },
+        {
+            "rule": "viglink\\.com\\/api\\/ping",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stevehoffman.tv",
+                "thestreamable.com",
+                "www.head-fi.org",
+                "www.repaire.net"
+            ]
+        }
+    ],
+    "categories": [
+        "Advertising"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-1524.awsdns-62.org",
+        "ns-1677.awsdns-17.co.uk",
+        "ns-270.awsdns-33.com",
+        "ns-978.awsdns-58.net"
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "domain": "bamgrid.com",
+    "owner": {
+        "name": "The Walt Disney Company",
+        "displayName": "The Walt Disney Company"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "pcs",
+        "hiveplayer-static"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "bamgrid\\.com\\/v1\\/espn",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pcs"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "fb753c1e1b3a99f8651897cf8bcdaae0f15b8a39bab95ae7171c9ed092dd2e72"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.com.sg",
+                "www.espn.nl",
+                "www.espn.ph"
+            ]
+        },
+        {
+            "rule": "bamgrid\\.com\\/v1\\/espn",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pcs"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "ad037a50d59fb051befa3ce832945eae9ebd2829f5d5c3b37666478c405ff734",
+                "f683f81c45587de561fbb84db99fd6eed94efddc446ac0870babcb6681df1ccd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.com.sg",
+                "www.espn.com.sg",
+                "www.espn.nl",
+                "www.espn.ph"
+            ]
+        },
+        {
+            "rule": "bamgrid\\.com\\/artifacts\\/hive\\/playback-service\\/25\\.10\\.1-neptune\\/all_browser_es5\\/playback-service\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "hiveplayer-static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.vendor": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Navigator.prototype.language": 3,
+                "Screen.prototype.availHeight": 3,
+                "MediaSource.isTypeSupported": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "ee0fadeb959988094c50cb33c520b685bc789ddecf203e0b5066052f59798977"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.com.sg",
+                "www.espn.nl",
+                "www.espn.ph"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "espn.net",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Fetch": 3,
+        "XHR": 4,
+        "Script": 3
+    },
+    "nameservers": [
+        "ns-1846.awsdns-38.co.uk",
+        "ns-489.awsdns-61.com",
+        "ns-732.awsdns-27.net",
+        "ns-1037.awsdns-01.org"
+    ]
+}

@@ -1,0 +1,5926 @@
+{
+    "domain": "twitch.tv",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00131,
+    "sites": 13,
+    "subdomains": [
+        "player",
+        "embed",
+        "assets",
+        "gql",
+        "passport",
+        "hermes",
+        "pubsub-edge",
+        "irc-ws.chat"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "twitch\\.tv\\/",
+            "cookies": 0.000908,
+            "fingerprinting": 1,
+            "subdomains": [
+                "player",
+                "embed"
+            ],
+            "apis": {
+                "Document.cookie getter": 8,
+                "Navigator.prototype.language": 9,
+                "window.localStorage": 6
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "6c46d1188516a4d0dc958a4b3c2a9df51a0667e84712abae96c5f17521ab0611",
+                "ca91ac66b898d89e0a9c8010a0adcab724ae31f71194cb1512a32a97f11a1609",
+                "76d207ae4ce9aa65c9a6924381563e0b61fdfd688da0352313fe0e5c06ae6868",
+                "339b3f7d92fbd11156404727696a038d9e077b6510928add3c7a3fbe8bf9776f",
+                "5113922f2fe7873082c374bbc504a11c3de25af05251c17b10ebb1a09afa65ee",
+                "6807c6b68df252486cb0aef48d08e3f8771092135efa6ecc52fd801c2c0a75c3",
+                "f662c493731abdb2c8cbf2df98533044318ce3c2fcc17d4c90a125510cbcba6d",
+                "68cfd1f912d481677b9cf51455a1601975a0e7f5ec95ac9f8d12489e98d88053"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/player-main-615294b418399bf12809\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "d7ea0052e67a5fe438b93f251e32171e12dd35d1d1443c7d6935d153dab987f4"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/config\\/settings\\.151c933d1fe65d1a06965177c2227e3e\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "8391ef7515f06c630929c1ff3d07de426e018e333d986eacbf6d225c03df8062"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/eppo\\/api\\/flag-config\\/v1\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "0b0371202d505d6a6f9bc94b2a79a7af9bd1bc3d8e70f2026ce6ff963affe47e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/gql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gql"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "b91243b658e070eccbda1c6ba2252d0026de1bb7afb38513c39a8e0886d6eea4",
+                "274ff10ac155abbfc34ecc6ca301cc39b0c82f5ad0fd0121d67aa243aacbe7f2",
+                "c63dda4121e53cdad25dc009c84a31a1c6d86d36344731e98aace6729720bb37",
+                "cfadb07b3b7d6873d9c9b267a96f9befbe85ec8ce579d5445dd8e07ecf26e97e",
+                "ce43bfcebb0186acf186c41f4d4f798e0c001cc9e64f7fdef6e6e56844748ec3",
+                "3319c5707496a0df631b3e613d29b2de4ee793f827cd4fbcae511e80454793d6",
+                "206a34888cf08cdd0a2cd1ca96922ed31a0ec097cbd7fb36fee29e3b49fab94d",
+                "c7b01c5cc16a86dc26b59a25e72bc69c3ea6bae2c32bb1cdccf9cedc24348e0c",
+                "1aaa1eb7472bf586e818fda2bfaaf371ff2dc690d61bdc1df15d04aa4f23015e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "bulbapedia.bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/gql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gql"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "bulbapedia.bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/polyfills-584ae49d9b8c9312de1d\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 9
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "d507eee2c4df0271199eb63241df39b0b23566cf7bd635e117e91ba6a3b61d64"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/flags-3d45758f7bdfd1658d5f\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "64b9238e1f01a1354bfd6ac171d199cde9829c3f4919bb72419edd2abe700c9e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/27561-f51eaf9e54d0d7099964\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "f69f1167f102a77bf24c4ee438e3958c52085b5f6738e81dd9bd81ea312203d2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/79025-2601433df308b0458702\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "a9248b37ccdef7372aa0b236e6ed93d2ded23dc49f4e61e83db63750402ec090"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/67813-76a88ec384280a5e925c\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "db8d0db62375142e511131302c646cd8edb2e135aa91cb9e59423a8745b4828a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/75451-eb34b4e976d4577f47ea\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "0039fed4a652ae02a6c7dac2846171d0753b6ad5dc0c54798a1839a24d83b427"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/63062-9994cc2aff9d6e060c0c\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "75814aeb5478e946fd332f33fef03c5b4be69ceb59934d71841695eaf1c8075f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/88480-1f21246c7c9a2d347c74\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "c5e2982f7732915d3cc2a2271b70c5ca6d28f4710764a10aca90302ba4405ddf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/60761-8506fc4798c27afe6273\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "af75df3a508cf43672f2a93864b4bb783ad00b5c2f29f0d5262eaa0abe9155af"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/20312-17ca21e784f6fef3ca2d\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "decec83bab8d06461b44c71cad95f373933329b9fc6678d657b8ee32c31c4e58"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/79831-92f53ca7fce9c173540c\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "ce6e89bb2b36bfda1f3f8274a442eb31dc92fa086e8e090953f89c04ad40fc44"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/75115-ed4b0a76d693c266a6ee\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "59890eea909fa7065fc9755f263b6b33c6a5197436e539af9594f5e98aaecff7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/89319-e55856b31df0202cf4dd\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "8defa809477f5a5402308b44b300b51d27ba5aaa2bd992d6448b412cd3bb3f7a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/48890-f6db6e064ba6798d30af\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 9
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "73b2068a9c569f0f1c143d174927ae2b28446add8cf88f53b7b52b139e02f788"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/65910-504f4a836ac48c474f08\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "ac9cf27bb9dafcf710803cc9b21e1bcb216c05b9854a323e7b46f73fe166a581"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/46031-0d312136bfdb2871c40b\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "42ecee57e3e8345e04cc831c5f15100965e4fec3d353faa1ee559a0f682f3e61"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/6411-9f5e77558af00b1acec0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 9
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "66c5f6fe23176bab9c9a6f9916be65a28e10dd6e3a3c9d96fd943ce3a3dd7f08"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/25470-5ce5f87c00934421b4d0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "window.localStorage": 9,
+                "Date.prototype.getTime": 5
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "d91fe47d0fc07570f076607b3a1de85571c000d4c35987195034cc6f362e70a3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/69381-0e369073b873423bf52d\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "62e8131d78314b9183ae3d092de445db7ebb13986d99d4126b057c311d23f220"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/16624-70b687f95f9c94073236\\.js",
+            "cookies": 0.000908,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 9,
+                "Navigator.prototype.userAgent": 9,
+                "window.sessionStorage": 9,
+                "Document.cookie getter": 9,
+                "Date.prototype.getTime": 9,
+                "Document.cookie setter": 9,
+                "NavigatorUAData.prototype.getHighEntropyValues": 9,
+                "window.matchMedia(\"prefers-color-scheme\")": 9,
+                "Event.prototype.timeStamp": 4,
+                "Date.prototype.getTimezoneOffset": 1
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "be7522df935d0b984347f48faa0923165ce21872601cb46094b0b8728e5f4958"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/46126-43696cbf725fca7c2c14\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "384c7c056ae7f8262a00f693bee739c418ab8feb733b2a0bd5a750a3600cefde"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/74241-02955bac21f7005ce106\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "241c535c344d316ea21559d7b5183b197e9f8222b0769ea930bff0a0d59d8930"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/67028-b1f8ec370b33ad84b8c3\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "742c8c751234585f6323a04b2c87cd7709387249159ecdd0059f3a9e39213892"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/3853-c0b4a8fb4dc1b8fcd942\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "4e3b412f53f696287c669fca1fa6acb4f4a0487f2fad4f2a72f946d8bb293631"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/56450-e6256c991c98aa567a3a\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "73a794d31e1a3e5dde4bd21cd18b0adcf0dc90b35541e31d60e3bf0ac455900c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/49307-7141a4957e4c7e65a452\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "6d96183c0ebb2b4c9acd8023b32b045d5dc9088f3405ffa888abe9f415ce7441"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/33246-06fe4963671ab275209d\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "4708f5040ee0dbcffbff4f72021ffc3023de3d81a083c9ad09f0ba6a3f62562e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/65239-88d557d9b75c6852e294\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "53f066a56b61f8cac6e7d81f451c4cb17cdda0978eaebf081305b58895c6a54f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/94524-1e6b138f83ff24365e0b\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "window.innerHeight": 7,
+                "window.innerWidth": 7
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "788c3fbfb28b670fe72877f582356239d837fa5aaace459f0f8f9830b4356a20"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/87004-3891cf91b8fc7224fd60\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "fc9192ceb457c178b8583aef5cc5462e25d6d363463da82d8201da350dd69f8e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/94954-e089c2349cd38be1e23b\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "1d4b19e0a2e909852903ee2a8b2edbad4eb4c3d3bcfe2b6df7387613cf0d4a9d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/87056-2878f55c8b9715088f46\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.onLine": 9,
+                "window.innerWidth": 9,
+                "window.innerHeight": 9,
+                "Date.prototype.getTime": 9,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "4677e4e3d18803bd8ddd97d6f9cf14c7ea78720fdfb7cc4191d84ce859114f44"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/2441-b9745e1e3e0b778673c1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "0c73acd92ced4ce05ee3aeff2f5b410faad6dfcdaf1fb4b890348167f759c900"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/49168-debc3ad3824b4d4a1a11\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "03e38dd123b4acb5e0b1f8c283be8d237dba81a606a3f52703925109331c4257"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/92382-06cf2983ed8a5c81927f\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 9,
+                "window.localStorage": 9,
+                "window.sessionStorage": 9,
+                "Date.prototype.getTime": 9,
+                "PerformanceTiming.prototype.navigationStart": 9,
+                "Document.cookie getter": 9,
+                "Navigator.prototype.languages": 9,
+                "window.innerHeight": 8,
+                "window.innerWidth": 8,
+                "Navigator.prototype.language": 8,
+                "Navigator.prototype.appVersion": 8
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "f452f61a034e7411354402c08c52577fa2ef526c93f5459d946f3cf8735069d8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/23321-fa59feb17bcc5ea833a3\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "2ba3bd3a196599c1311256d211c5add56c002c903972435c1cfba36fc418b67e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/player-main-9d62521ce221b4b6f7c9\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "173306e19067bf178f76be6ff7ac7cbca3792f184c68228fce7909ea46bb7c1e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/core\\.locales\\.de-a9bfdf25d830cadbd0eb\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "a7d15b24c4aa41ec72ee7b402650d444b7b10b0df8daad6b198551f8628b6dd9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/149e9513-01fa-4fb0-aad4-566afd725d1b\\/2d206a39-8ed7-437e-a3be-862e0f06eea3\\/fp",
+            "cookies": 0.00101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gql",
+                "passport"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "adec2d6b802c70281f4b8ec1e8a1f7f3523d94f6045bb3fd1e7c9ceec8f9beea",
+                "a7d9c08d2f4d2bab766f80715c14e3d22bb7974da5ae1f6751f52ea4c3ddce04",
+                "72c92fb004ace335473747fad7e00ee4b6c7d3441066474744b5a601c80a8cf1",
+                "7828b44f0ffc40433960e90848934f8941ce7751020438add902fee82324b8c6",
+                "eeb6f9e40dfb4177b73963e586dede8a4b09f8ab3e20815f61bd98d48a53c8d4",
+                "8aef45bc4f7a3141bd602539462fe486f6d8754c6567bfe6119dc1c5b54ae5f9",
+                "b0cd33e34de57f0538f248698ea6c6248cf9c74d29ac465eb3f6114ea2d52a35",
+                "31cb58a09d18b6e7fb8663806193c2eadb047d9d51ae0037b7ec7b0be6d3299d",
+                "c9a75903ab1c319bd35da169ad329d6bf00126ad670fd402434a6bfdb83e7d4d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "bulbapedia.bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/inter-latin-variable-wghtOnly-normal-a05a0d687a088c4efed3\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "94f3953f92fb85ba856a9e36eaba7cbf0cf93a5ba87a359b3f6aaeb0d753f67e"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/38673-cbf89afe79805ef86546\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "283e95913010a56cecc409084acb59962c823f9d8eefb26aa4772829a41985fe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/32731-dfe1bb12be58aea7989d\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "2014f54c8ff7af5c173a79e5ccd24586724a736ccf465fee452e5517d1cfaada"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/player-core-variant-b-40ae4ed9b51a75db7aa9\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.appVersion": 5,
+                "URL.createObjectURL": 5,
+                "Navigator.prototype.getBattery": 5,
+                "MediaSource.isTypeSupported": 5,
+                "window.localStorage": 1,
+                "window.devicePixelRatio": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "fd9edc3438137ee790b434bb12280dfd302812edfb0203cbc00d6295c726f4b3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "raider.io",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/149e9513-01fa-4fb0-aad4-566afd725d1b\\/2d206a39-8ed7-437e-a3be-862e0f06eea3\\/ips\\.js",
+            "cookies": 0.00101,
+            "fingerprinting": 3,
+            "subdomains": [
+                "gql",
+                "passport"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 10,
+                "Navigator.prototype.language": 10,
+                "Navigator.prototype.platform": 10,
+                "Screen.prototype.height": 10,
+                "Screen.prototype.width": 10,
+                "window.outerHeight": 10,
+                "window.outerWidth": 10,
+                "Navigator.prototype.hardwareConcurrency": 10,
+                "WebGL2RenderingContext.prototype.getExtension": 10,
+                "WebGL2RenderingContext.prototype.getParameter": 10,
+                "window.devicePixelRatio": 10,
+                "Element.prototype.getClientRects": 10,
+                "Navigator.prototype.webdriver": 10,
+                "HTMLMediaElement.prototype.canPlayType": 10,
+                "Navigator.prototype.plugins": 10,
+                "Navigator.prototype.vendor": 10,
+                "Navigator.prototype.languages": 10,
+                "Navigator.prototype.permissions": 10,
+                "Navigator.prototype.maxTouchPoints": 10,
+                "WebGLRenderingContext.prototype.getParameter": 10,
+                "window.name": 10,
+                "window.innerWidth": 10,
+                "window.innerHeight": 10,
+                "window.screenX": 10,
+                "window.screenY": 10,
+                "window.screenLeft": 10,
+                "window.screenTop": 10,
+                "window.indexedDB": 10,
+                "window.sessionStorage": 10,
+                "window.localStorage": 10,
+                "Screen.prototype.orientation": 10,
+                "Navigator.prototype.mimeTypes": 10,
+                "Navigator.prototype.connection": 10,
+                "Screen.prototype.availHeight": 10,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 10,
+                "BarProp.prototype.visible": 10,
+                "Performance.prototype.memory": 10,
+                "Date.prototype.getTimezoneOffset": 10,
+                "Screen.prototype.availWidth": 10,
+                "Screen.prototype.colorDepth": 10,
+                "Screen.prototype.pixelDepth": 10,
+                "Navigator.prototype.deviceMemory": 10,
+                "Navigator.prototype.appVersion": 10
+            },
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "d884546ddf6295815a555bee716f3c8fcba84c10ac51d11775139a058d3f7da0",
+                "c915fea6da4d1981a86c3ace822b24a49fce9774a7faca4eb4bb0ffa866e8bb6",
+                "1170a97e4b39394db365aa91ca34f1aa4bad511db032659a467d903176fc5e82",
+                "8d1de498b7178feb7e22e7071f91d2093ff3006208cedcc1d818381402be8bc5",
+                "166a5014a85b19ab7a39df10375ccecca05ff55f6b04fbba55d164e414f324e7",
+                "da35f42e9e7d5661527e50da0dfd402fc3450c7cd1fa46b158ffd3274f5dcc5b",
+                "dde1830a422695ad8cd8e87ea705663a50aee96607b58484aa18044f3b441e6c",
+                "58ad588308805fd62f054c7d22e246169dd5fb18818d3dede064893d9d0437d9",
+                "46bf65aafff90761c3653d5afa91c6f2ba4e9a9fb308510f9f43ed7fcbdb9780"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "bulbapedia.bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.video-player-core\\.components\\.video-ads\\.stream-display-ad\\.pushdown\\.portal-c0de0f43cb4fdc6cb41f\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "7994508154ab00c1f906dba9b875fdeb65aed8fb030fa76830e8d6ad9990a566"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/97316-f4c1017cd70c0565c2c9\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "b74e3e8e1166ca225c5bfb199788f660650ecd94a5f16d06e165b688c815e781"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/14030-ed04e70597c2b022f7d5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "08f905c779211c4b09f1a60ecb3f499b425f7fa5db0aa286bad9dcc19631a617"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/57792-5cba9274dbc61817ce46\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "606fed908836901159d95ea3fdb302f8b12b10ebb8ac0931dfee326e4c6216b3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.channel-celebrations\\.components\\.celebration-display-1a8de823d298a3eb6dd1\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "c1811bef08970abe2c698f7bf4d69d8a4ed9b4dd5b19cccf8a1e5b389f790820"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.channel-celebrations\\.components\\.celebration-display-76482be2b8d654a5eea5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "5ca2f5642f58595138486cf5376f2676e30a53e6edc65bf433adaf09636d201a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.video-player-core\\.components\\.video-ads\\.audio-ad-overlay\\.component-d74158bfd9ea923ff5c4\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "25171df040839e7293f78f6f84337e24a1d701360bde0434b61030b327cf74cc"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.video-player-core\\.components\\.video-ads\\.audio-ad-overlay\\.component-08be4787f44e5639b517\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "22b658881cff0a24b7be88e3b76ebf8c7663c19d073e12a383c662c1c10bcc69"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.ads\\.components\\.dsa-wizard\\.components\\.dsa-modal\\.dsa-modal-manager-a833ab3c0532488775a2\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "18c214557129119c9686f2e99cd90ccc5510b533c55e1fbb1be3aba00951db6d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.video-player-core\\.components\\.video-ads\\.pushdown-sda-eligibility-4980ab71104a6afb6911\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "7801d06d728143f2f0ccfbbfd32ac07b19c179cd66872793ffa8442db868c7c5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/39963-6c4e7748d7bad218b1f2\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "e114050b6cf1b6dbfe61f8f34754f9d56e55bfe9d3312e90221463a92e0d434a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/87791-8323c2b0fec1f801b84c\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "a16af4a5c1e6f2c375524cbdeb28101572cceb6af72e9f3cfaabf8c5b9e50ff3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.consent\\.components\\.cmp-api-e5c4430847218b51331d\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "37178b89e53f405ef485073d6605ad2c6bed0ed24f111c06bab1decfaa8a5846"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.consent\\.components\\.cmp-api-fff5450b3812f9e06fb0\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "377aec793ed3046a02ffc720aa7caf543275c695ef2a7b5287658a037d724e86"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/149e9513-01fa-4fb0-aad4-566afd725d1b\\/2d206a39-8ed7-437e-a3be-862e0f06eea3\\/tl",
+            "cookies": 0.00101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gql",
+                "passport"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "bulbapedia.bulbagarden.net",
+                "classic.goldgoblin.net",
+                "raider.io",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/amazon-ivs-wasmworker\\.min-47f30eaf12d539901198\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "be8b89ae14171761c0167c3dc74dc565b762c4d6346bdd746b8dc747cdb3d00d"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "raider.io",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/v1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hermes",
+                "pubsub-edge"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "bulbapedia.bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/amazon-ivs-wasmworker\\.min-955d2f0020c87c9c0071\\.wasm",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "aa27d213fb42af2086eadaf13e33021e441293bd4b626b3d6ea5f88b88c17b74"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/integrity",
+            "cookies": 0.000807,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gql"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "2c32b2018b4ad614f29c8e9c5f00aabd556638325a3da562d0e2c5c53a52e1b1",
+                "1c8008df08aa47b78181c58009b35e1406e2d9273f0b23cc5797e0b4c71a4707",
+                "57cad23e5f8e08df0995179e59a88b410883582422232d62fe60170b9a89d17b",
+                "c21c919f8bfab0c40d538ed6edb723d9768751b363ffc307393e642a52d56f3c",
+                "2425345d984bb13b36682c828e15b83e4aa4af2b88a514b0027e7f895402991b",
+                "e29f5235a96981e1b6fc2703314f69f09f438447c7f31fd986c4cdf6d64f417a",
+                "44d43a611b24c90239215dd626e4402a7045a379f2eb548fd862451ec60b96fb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/integrity",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gql"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/14399-8b2273074edc62dbc345\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "44e48472bf65d3d7c639af306b46bf8d4114207cf7d805923e34e4c8cef9ad40"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/15708-d4c469c85794495465be\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "d9e602a1816f313f2eb0670bc30a76d98c3f0ea86a15ce0150e7796be317bae5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/11262-d03d0a719307ae528a59\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "856eeab30efd9d7a4184b7e028bc52e254118dcdb7f82a4c3e1fa538f0364ff9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.guest-star\\.components\\.guest-star-rtj-channel-content-0d3afca3531927064f58\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "window.innerWidth": 7
+            },
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "97101fd38818827fb5ffaf652952ade0c87deb3eedcfda82e7d30af70e928e7e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/55152-f1ffd0a8f4040ab2af19\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "ecade37ef37c34e914d5b1aa91ececce016c0215db2c8be34791313c356433e5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/64498-b5a3f97aaa8f4c60e5ba\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "window.innerWidth": 7
+            },
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "237d89be36888207d62335f323b3cdcffe71ee4b05d206316acf94568c66e82e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/98922-9f2264bad3748b1179f2\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "cbc341dd1ec799d499273941df6e464f7a76df05e6875244250f486d888be060"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/57013-cd6e9a26c07235243445\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "6e21b11ef3cc297e818ad9014dab65942deb878fcf070d11289209557ae22708"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.subscribe-button\\.components\\.subscribe-button-ac33e97cfd66b46715a8\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "f9bb4053c4da0223967fadffc4a8d64a5055a4f2f36e9482ac1a2486161846eb"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.subscribe-button\\.components\\.subscribe-button-1e0ca5931207d65568e8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "42a103dd0769f0b861a586fec244fc13e8417723863f7b6ac8f47f6001e821c2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.guest-star\\.components\\.guest-star-rtj-channel-content\\.components\\.guest-list-6012359acadfe410b0a1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "8aecdd3294df3eac1ff2a63ee1922a248a6d3d9fecb3bc8563fa023a4acc5113"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.guest-star\\.components\\.guest-star-rtj-channel-content\\.components\\.request-button-7b6854de605c73fd39c0\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "d3c8b3ecd22969068c0f3e691993ed49c7ba499cb0c0e32c92997a5d42a458f2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.sub-modal\\.components\\.sub-modal-8a550618f2daccdc2b54\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "735c7b59f89aeff250e7de4bfea72d82373b3c0cf0879171200e745bd5766e0b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.sub-modal\\.components\\.sub-modal-2c22d4cf30b17805c80c\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "fe51d76bf611c1ad18b7dac1a3ed4c593a2bb476b8e9c7da68ccec73a384705e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/95845-c0199d57fed7ad188289\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "cf39ab632ae5beae480a223438b36275af8d405d99839951f3ab2e9136cb1e81"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/80975-8f2b49d748976a8f3bff\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "f0462e41e1f47f8f03cd5fdd2eed3a96f7ea33d363a3e9af0c086f8cf1535ede"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/45302-d23820ede3a0f04da6bc\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "86e971e316bb06a06b851939427e7cb18b0a51f0234a3732ea1e3fb224f590c9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/6799-dd2df2ac24e216fc0959\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "a67d8e3e71033d72c6510bcc97076a797a2231d63e7ec9986ae864e26a1cb039"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/26324-17e0a3e50e87307ba779\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "773adb533dee17a449dbc7e2db5b101d863ee6d1eaf0bdac438a41d24a04172b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/21745-e7d9bfc6a2a8b218f836\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "8aef27e94d146df6f87c5174eebfd5d19d88b0784d5d500780a9537506928e90"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/27047-33a047dde53701c95268\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "5bb67bb4c48500ba16d415194b1a33db6c065cf7c9ee4ea69bbcd5e7df9c0201"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/38753-f6ea3f14d1b016c840a4\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "ce72e714a106528d38666a4754d780fc262a5739c64da2de1970e36b4a805a28"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/16001-980fd97f47edd5624aa1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "8bcefb5c3296fd00fba1ed27246d3c1e252b2ea665d2c196937a7103975186cc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/33768-9d71dd5df2a1a1253048\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "b96db922d924feda3afe8be0f90f6072102d78f43c08412c520d330bfad5b59d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/3847-50bd848c49f3461d3cb7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "66bc5705681bf849aeaf323941e891182e2c192bfaa33025ea3d1b4a95670208"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/54659-66a37453b7ba58edc81f\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "13cdadd5b481cbe7d92be7f6e136e09563a34c10d040ad5d386161316324f7c8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/14908-312f263f45cd44b68de8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "f266c8cbe1f5572a863eb4f869e2b72369f421db63a42720e556f59dfa07c3aa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/80954-32122b911ae5db63dd15\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "0bb1e138b56b6bee74d61cbfd3c505c61d7547baa3ef4afb7ba96c7980a85567"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/79274-77f39391345da191a844\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "acd046155a89917f52ae588c5c531086b8bbaf61f2e94beca4d1f6a645b7f0c3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/17246-12814dcedc082b93c20a\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "6daf51afed8a87b65843ea1ebef1f1e6c1e4435120d90bb837d3d4c4e6e5c4f5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/92948-d301d4054983932a7a2e\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "411fc1f4cf9517d12f2f77c014206dfdc0a5a85f2090bb61f60a92ebf5a94525"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/92779-1d7bbb89088facc3407f\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "e2222145eaeff36ca394c0202a85bf59c469294c6d3c5d0549a9fd7316c50de1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/58940-a852e04105faca054cdb\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "e83268848b6485c9b02025d4db7223ff6a91a3517e3ba64886903ae923dbde51"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/1510-1af0cf531c7cfa67ceac\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "7709c17fa57115ddb27dd61024a10b8ab682be621d2a732649fcb83840684d07"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/94260-019978fc1ea240a5053a\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "327cf94f602b2c997e7b1e71bc142f1be37cad36ad4f524aff2edb72d57b8e20"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/5741-6b0bd6d782fa5448e841\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "682b1215cf596d7870a57bf1a8006280a933d02015a8d0bfe4a3315823f6548f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.support-panel\\.components\\.support-panel-container-c47246a3edb84061623c\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "d50848b1bbe699aa02a4dd9a14e3dcc757cfa38e61235a6c1c03cdfcd14fb29b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.support-panel\\.components\\.support-panel-container-8caaf8f6e39c96e15436\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "066aa925c7d6f523fbf5204ebf51fa74a2630b470e7f23adc843d75f4b2ae998"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.support-panel\\.components\\.support-panel-7cd162837386c6ec237f\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "79cf03a57d494abdab6848f41304911a2a3295a078bc6a9fc78fc9774c46589f"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.support-panel\\.components\\.support-panel-03e2c5f95be6c975ce98\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "89b960bb9944d30eec23d3ff6ef05464b715ebd58c974033b21f72d45a86b6a6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bulbagarden.net",
+                "classic.goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg",
+                "www.speedrun.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/js\\/embed\\/v1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "922251094bc0c211bd4dffdfd8bcd77b5fc6197e2f32946fc997d3a665cbb4b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goldgoblin.net",
+                "en.uesp.net",
+                "wago.io",
+                "www.animalsex.video",
+                "www.goldgoblin.net"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/player-core-variant-a-43bc9893561e907577c8\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.appVersion": 4,
+                "URL.createObjectURL": 4,
+                "Navigator.prototype.getBattery": 4,
+                "MediaSource.isTypeSupported": 4,
+                "window.localStorage": 1,
+                "window.devicePixelRatio": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "a039d3f4b4ae538c665c5386847d1f5d5d20698774929c8575de434ebd071f0e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/amazon-ivs-wasmworker\\.min-d4458f55b392b4ea0401\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "8143580fe2c557881fb96ac1ceafb379d8b2809f55defb0f684d73a01082e357"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/amazon-ivs-wasmworker\\.min-7a371053658e0470e76b\\.wasm",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "7329da059f13fc26877b8d27c50795686bbc38ea6d7446417f2b60da88306267"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/Roobert-Regular-2b0345b049d46f67090f\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f84942befe9e60ca24201fc06d3f1e3c510b5fd8c481a80a8d85dd5330d4d2e3"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goldgoblin.net",
+                "wago.io",
+                "www.goldgoblin.net",
+                "www.method.gg"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/85459-73473fadcde246d809c4\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "72ac8453fbb8bfa49f29e21b0a181fa460f3a1910afdde55aa295995278e7811"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/29122-551c159519c4a15eb4e6\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bbf92a15d5946b7ddbbb15167320ae8408e6646626352131b7c13ed2ca02bcef"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/10204-24a66860bfe93ddba3f1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d445c2fde91618c521982637b78b7cf9c6cd61f9860194287db61995547db28f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/72929-c5303997c2678794d3b4\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4f7c6f6c625d8263431cda260787ff4b29ec1570c4ea9200c40c160b2ca7fc48"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/85958-c22ae214e65725521820\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "abf09c27dfcf8cc20b2ac251ed6d359dcf31eab8c93ced69a2029a815a80788b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/35057-05e47b79bc870e5a4b04\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ec434e8db6947f81b13a23e6652e6ea34340f018462ac315265662d0fd1ccb25"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/87838-895f825fdb3207a31b7e\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "882d1efe17997d35779501d79e221ace9916d1d989b2fa839c404528fdf30202"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/46663-c21332d3270e2389acc8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c1cea4d578748ce71021e766fc5e5365968c076490ed11c5cb79c0c40064a225"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/88499-6a000854563808bfb440\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0194bde72610870ca45020bf695581d25a25f7e1f881e75716e553e3efa14ef9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/34675-0a877a1d6e173f4d48af\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "36132bb98e5e8204d5128f0353d1964f237d8bd74ecd2832fd338d94a1ee213e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/72338-6a2064ee30dd0e8c875f\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "88e80cc5cc3d3891b271916b38efa090b1c72ecb26c1ba15ab1ca5ffb15418d6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/56547-524c7373cbe9e386f804\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5c33a7a8e3c1969ac684b529321567894c609a1b2fa3a5b72daf85600b2cf3a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/70352-7b388fb36687dbec4e87\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "da6e76d1850d86573ad07e8a98da9088216c1a9f22b4fef066debff8bca06b05"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/34644-c4ec678ddfab7c8da610\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7c2cc1ee708868f301612ffdba614fabd24e77e68b20da80bbb85149d786c035"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/54434-99a6c0b136095a2df464\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2e933bb6d3337eb73fd7bd205abbe9995377ad5845ed54b3f0fb013e5bbc1b1f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/33480-5a2ace7cc4eb9ea70604\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0c2cbff905573906e307ddf971cc1e212a708ac76059ef319eee6ea927eab78f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/68348-d16a318a06a8afcc7808\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a8ca635cd9562f9add3231a20b7b557bf2b1daeb6147be51a452d7495a8a915d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/7356-a935a873b6428bdaf5f7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f69b77c7cdd1e59365117aa216c2f7dc95e1932452da10c0a59036804e9ba0d1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/5814-876282218fa2abda1cff\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c74d21b4f929645250b18b6d522656e792883969ac200091b676da13f133f3a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/20916-ff62661e7d4f70c353a1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "20715b2368104ad02506386b58b4f0964adbfa216ceea622e2db8836b31b2ecc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/96824-4ffb9fb1362c25ffa98c\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1d2ae2daab2a6c2686ee49e24d278579fa86f642ef9469aaef6187fefdecceea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/1376-8ca4b07365b565104e2e\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8f8f6698dec80780b8621fd84307db295131362e868f8daacfd2d310396ab47d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/75358-d3cc471cca8bfaf2eed2\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9b400ae68cf88af0bd01f874e740da3838a6c8383792794589ec7b4e2b48b705"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/18867-b577cb43e5b29bf5a184\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "19eef5d1d9fa82347e2be8711596497d6f73b5bb1b13af13634ac15f96c1a675"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/79739-65d9d9eea7846644c79c\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fa97e16455924fd2ca61a1c0e4085375347f0f0ec05cc435624ef46537192ad6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/22009-61292b6030032e9496b1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "22b76e2a597941e44f6793170ab7061bc5672733808ebdef2b6590b9837511e6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/33055-98f5bdcc935ae56a48f5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "dbf381a3bd08573dcd83a7d68afe3f16592aba5e3af9ba0fd5f4cef25a3b4665"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/88050-d4a3b55ba0111ba6b743\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "94ccddae554bfea98b58328b3320cfa1e637b16d0a5d7f3fb3896f7bc08aca2d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/88050-c509b84d6744a7312dc8\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "eeb66bf9a80d2a073a338673fb37c60b54726dd360b37135ada32982036dbe8e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/56146-954f13b4236c45c88a72\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9a4a236ec44ded06547b0d461d74c65d51b43df1372f29faf3a4b779d1efdcc7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/99488-df04ac37b2fe1e48d4cb\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ca9178e11a7073e4dc3cf4ca8261fa86e9f9088eed4431ce8f1991dbc7aa3cc0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "irc-ws.chat"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/32936-b5b70eeb9e9cb64b1f5b\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e0fcad38964ae92295369e1f6b1715e05d45e4621b8a7bfa7fe7bd86c6d308e4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/54146-24e30ad249a770c489a9\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "05b122d55033b6751058f971386cc340734829c75e820f5c9ff29d80a46e2c6e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat\\.components\\.chat-input\\.components\\.wysiwyg-chat-input\\.component-a7e61bcee9c4e8b04de0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c558bec14b451d7f26c6ff8c61564546a3cd3eec6db8bb5c57c9f0c2ae7d89df"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat\\.components\\.chat-input\\.components\\.wysiwyg-chat-input\\.component-8f351e1663dcd65ee43e\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "81177eabc536cd26d679c340d3ff37e5399081f1548dedeb740ed27d2e8efe91"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/Roobert-Medium-050c71a0449f34eb9cd3\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fa50b749c876caac12bfe3973e2cec4271e6a9b68f89e0864295d8967d129584"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat\\.components\\.orbis-9f8bf4e7574df9506d51\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "596aed55635ffc78dbffd4e1e9cb9d8cef6e2a71e0387c75b375a06d258a6dd5"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat\\.components\\.orbis-f478712a3f3b5c6933be\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f2cba9b9aa0dc04bb424753ead11b59118c6d330115d2754c90c8af72805bd62"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.paid-pinned-chat\\.components\\.message-list\\.component-8051179b682788c59fbd\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e31b3b6be0e92344c34652d6f6fd35f4da117eb712a6eee0e85ea7afec62ddcd"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.paid-pinned-chat\\.components\\.message-list\\.component-728f70024b2a1a62d4a7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "48abbd7638c615cb6a525d3cf84b39bc72af33f38f58706821f73285bb1e9524"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat\\.components\\.chat-room\\.components\\.acknowledge-unban-request-prompt-1ea40e349ff5cd1dee26\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f250df1432020ae98b16f093c1380a1bf57662b6f8f7854f9b32f283a6043392"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat\\.components\\.chat-room\\.components\\.acknowledge-unban-request-prompt-45a133943a749c3b8940\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "59e6670980af39c1afa13ad3e3043895209eafaaaf8bd2600ec11b82ffbefc57"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/77541-74bb79276cdfdfc34b44\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "764d2c6945bc42a7dc6fcf3d7299201ec76ca37535a789aa9cda5b7e9468551e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/85756-ae6d05197adbd75ea1f7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fbf7cbf50faae864502302342eecfcc811f22ae2cb6b52ffa3cfd573a976a424"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/27168-219800c8b8bfe8e79378\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "211ef9e7ea85b52f5b052084144217a423d05fa28e7acdb109331c91c32584e0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/21519-6307bec49f6b24f88438\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7c402fa59b095645ed4c5a633e125dd9fee055ddda0e2d4941212b7c8d21733c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/19423-9cbc1800fee8c2fb57a0\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "48d044f88d90fa17719002a212deed02b51a3ecb21e3ad9704e50ee7f8c51590"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/62721-6db25692bc1ca4e2e8eb\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a7b350cce222ee8a66b7f8dbe68c2aff604f2120940578862277b3f96245505b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/10766-793c59f40a010a9aeeed\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "84a466f27dd0be8c6b42013951607e971d6353b31cb2459cc367dc9b5ab1b4fb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat\\.components\\.chat-command-handlers\\.component-fe27809cf748fa554c1b\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "53cd2b344cfa9ec1202727ef0a8682e43d28ff11a90bf14945cac900bd630049"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat\\.components\\.chat-command-handlers\\.component-0a0cc4ad648dd733f2c8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "94d32184e6d53aa7ef0d43ea6f5422f99478bc1b0b65ef67953b5377f0b25bef"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/10664-c93ab93616c31cd6daa8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "39a0bb67046ecf8646ffbaff75d54ae43dee19db78ae4279b1a2b1c2f9594a5f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/18051-8afa40fb692748a0ebee\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5a02af28076e1e84046f08e9be4dc5e896a30b5fde4f4c58526b5a1df8eed7f7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/86536-4d02ff68edb4fe49cb08\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7543a70309de8ddd84d93879208c3623c58361fef10478e9147ecdec0a354787"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/90296-2a94615134bfa2f3910e\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1e21fa41bf45cb665b0805c85103945f0d6c925d3a0b5d9bdf705403b9f8c950"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/76673-43fa92d3bbb51e3bd9e5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "651ecf033edd44d7b68829c7dee78e6928a0c060491f43b66a909a50df97e1fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/54673-ae068241bc4d9a62f298\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7482aef030e24be7612903ec8d4cb2fd53dca122e4efe0d1c44f2617f87adcae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/75539-3727804070bd8fc48c70\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6a489117bdb7fbae6db834af8c700caa6ce62982242aeb4330ad2a6eddca454b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/44319-fdff9dab877bac1c262a\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "192ae34fd6adfc25799112f2ad80a33b94c3c11a207e95de2728b5543af1eed3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/82110-1a5db1185452b3229c20\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "55c55d02acaa6abfa50723e97983ff6c8196ef03b180103bbe1c90c8606a1b57"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/4098-a640169a47eaa4871bca\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8301d66ee22ae8ced9e0cd36391d9f2bc11f938c5e187fc74d7be00f20842e94"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/49832-096d8d4b9af8d6b5c371\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2f8b4656b4255ec074c44e1654b021ad364d8de2607bd5acba76579267b7058e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/30502-b60d7c0db5817dd4ced6\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8ccaae1d46d02ed6a5ba091364fa61e8005b4590c4cda8fee1627527f1fb22a0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/44750-546f3a49a714b238dc33\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e1f7076eff63ace731691043b25f2d52f52149aaffc4dfbdc5e2cd06586c1639"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/48783-6562354d0a74524870b8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fbd876ed8b8a2d0537f6596d0a359d3e5ec29e7cbaaf0c8a6d131a8da885492f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/75138-4fc679a8ee296a770ba4\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7174aff59dfe9b9aa831655d9b65b6c33f4ad438efe849bdc3059dc69b7ad2c6"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/75138-8cf253f3b9f08d5da17b\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0e9a0336bc10fa3752b83c87af66d91231f0b06c001c623189f6a8fc30a4b372"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/41510-caf4c96540f390d6f704\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e18bbb19bcbc31af307989dd85cbc122798091f6076fb071df5cd3af41b78d63"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat-community-highlights\\.components\\.community-highlight-stack-manager-c431f3fe118a973a7906\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b074a1ebac1e53a59eeb9ace711225f3c7826787e94a78d1ab70659baba61414"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat-community-highlights\\.components\\.community-highlight-stack-manager-e192e1497e626d3f609e\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9b2de24087ddb2cfad98939ae93d1ac6548001734ab5f957467514740dca0b9e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat\\.components\\.bounty-board-notification-a2832c0b928d3e55c137\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1ebdd0eabbd01a8217c2d536eca106782db86d75a7bcdb2c2a22dea3fdb2041a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/96227-f6da263fcc91c111787b\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "26aae9b5f7483bc659a43e1c718a6666d8ce934f3ce54180eada278766908faa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/83468-94e3df5b858290101e3d\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f3602c50804ce485b08f46675f64219436cc8951486c33f771cb43f753e95b4c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/83089-9dc5cc5b2af0a6632ba4\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f383599876a3ea8477c6a5f21788046911c771d0bd06bb2a3af6703f6ff748c0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/27629-2317bc5cbbd2bcc339c9\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "882caff4d4d36626a086882572ed5ca7829385a5d53a30b8c2f4c1204bbb051c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/25082-58d88746847c60377bdf\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8f973eddeaa58076ad5990ced344f1c9faf2e258f44c27725116a74614addba6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/65315-7fd58f4d6211ae6a4519\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2305b827a7144502fca8d6ad17da3e0c93a77e3395aaaa3918f0a549965451e5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/88628-4e9d8474ecf11de80a39\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "61192ac2501da58718063e2a38e3dc8876879d31e4877dcd542eb952b50e40e5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/41284-72cd5a8f1d3a14621014\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6e3ff054be23584e0919f064c8e60bd14cd0ddb63cb1d01aa712f6214106fb56"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/57186-e90174b68d2bd51bed63\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "87525f6f9927c8aacf11593cad687d26bdd26e7c652c83b4ff35758a07b44c05"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/86692-a71c91cdbf2faeba14cd\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fa6ccec3b8a32312ff68341907b0b1afaf15a634851ee33a8dadf5ce9e413962"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/52831-ca85972acd0e8542cb34\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d0da8763b742938367b2719e4acf91fd7feca0840b069877153875c7f33ed56b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/80071-7e33ff41b179ef45f091\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "cd7051c9ea8cd352c343b6ec8d76551468b5b666d24f5809a903fa25697def7b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/8324-99c4f8abf3cf7a449f98\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f6dc89ee37775f6001b25fba3e19525b6b28ef86fe239f7b345803041b89d6fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/95238-71ff767d15347007df87\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "cd4fc0dd69e7ad2baa7a1afe30f93ce2603fc63cee66903d94598d0afad1045a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/67316-f8e24214de51f1c4aea5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f97d9b7eb7e304533718e872d6a9df41bd6dd8977091f04a091f5734d262025b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/29928-e55f8fe550c8f5f3fafe\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2985b529afba25d81eb02eddb36ce33e78596cc357a77522dd47e263022252e2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.community-points\\.components\\.reward-center-addde980c1511d4e24f3\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "47ba31ea1e64026424bf0eaba067d12689d118231530f1c34b9c610951d510ad"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.community-points\\.components\\.reward-center-24c5e47c0e8038fd9375\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d61a4abfc33a7ece27eac8f74ed889c8d338e90df46cc26f0e1c1990cab0bd27"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/23193-9b3c86bb641da8620376\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9e1047391ef08c7ae68e656943c30fdea46e680e33d02a659b2807aeaf7c1257"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/59830-99001a5de647466d1dc9\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "365446a2e63c824ff598fad008fb90ab61bbdb70716d52ff52f9b418a87162e0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/92849-85d79a3a3f9790115ece\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a108b3643ef051bb8f256af28490005b0424cfb15a6169b4e8f6efedfdf81901"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/52342-4d91abdf3efeef575326\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8cfe62082de41d1981997631dc46f2b50d326ff2ec4ed830a01cf0d7d722c069"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat-private-callouts\\.components\\.chat-private-callout-queue-12f05f5f87dd8f83a0d0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3ea456c58b8eee0063db1b695cdd1386b6df6dee4a98c532611cc159601319ca"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat-private-callouts\\.components\\.chat-private-callout-queue-7aa95e6c2ff657f09ce5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "764332cba51042ebf09efca5f5113ca568480ad5f1149be1126eab2cbcca92b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.community-points\\.contexts\\.watch-streak-context\\.provider-a1cc7f76eb360e03c79c\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "810884c98a9e28b75ebfce5690bcdde16ad7f90b7b03caf2e58a07e1ae1e06ba"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.community-points\\.contexts\\.watch-streak-context\\.provider-86a67e03a7602e5487f9\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4327b7b392f69ae7e3a4ec9b7af3aab1e377540eb073e0b3bd2fcfdc6b439e21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.bits-6be75749bacabbd7a1a0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ca56a444ba39adc0e949cf004e93981ca04d0e2aa7f678d1ea0844a9f9b5a1e8"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.bits-3e3ab9e7528ab80390c0\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "73e006307c25e02bbfc69a0331b8479b15aa93fe55033ccc6368ac5bb43d59ca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.chat-settings\\.components\\.chat-settings\\.component-7b21a00ddf80b7227b3d\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "997edabb9d72e1f0c5a9566ef5932d5f69d573c19c9e93d38d641c13fdf94720"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.emote-picker-cf03e2bd43c9d6e143ce\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3fc728d143d6295524887911e15628c83a2813aa4d8dff3e8f0bb4464bc4fd2b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.emote-picker-3d394c957ba67e549ebc\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f3c4bddfc1e2a4c18af133b6a3a8479a75227c7528e15c85f8e501450d76aa44"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.channel-leaderboard-d608d3c05977593ad095\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "dce19f4bdb5dcf7cf251cd30f5ebe62bde526c4a83e4d9daefc8e7ebe1a6fa9e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.channel-leaderboard-a5bf55f9e289090632ff\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1e958ab0f8dbf4f84db296afb4c14902c39791946450c551e8d9d0559655d7a3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.last-x-events-5fe3c9e51e0767c04a69\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a9fc349c2b24d9a79160cc21a08c091cd8505d1c10e8c89d806d214d8ab04cff"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.last-x-events-72d3272187c5890beab9\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "de17524bcdbcf99e8d163d58f5f230b7129fe67a29808c1b1ad0bf9948773338"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.community-points\\.components\\.flame-animation-314a12d02d4204b12196\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "945664233770f946e3580a659f93b9d537b5d7ee6f44e5804e208834580b1b53"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/features\\.community-points\\.components\\.flame-animation-e38427651a606f713b8c\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "be017e4a4ea457c9105ab4f581244b423b3cfa98beea93eab85132e21714702a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wago.io",
+                "www.kicker.at"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/embed\\/v1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "922251094bc0c211bd4dffdfd8bcd77b5fc6197e2f32946fc997d3a665cbb4b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamescom.global",
+                "www.kicker.at",
+                "www.mtggoldfish.com",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/everywhere-main-615294b418399bf12809\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d7ea0052e67a5fe438b93f251e32171e12dd35d1d1443c7d6935d153dab987f4"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kicker.at",
+                "www.warcraftlogs.com"
+            ]
+        },
+        {
+            "rule": "twitch\\.tv\\/assets\\/everywhere-main-d154ff13bde063d2adb3\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ddfa0b17bdf99ab93909e21de75817c8fb8a7de49602e66ddff94fa8bb2f8739"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kicker.at",
+                "www.warcraftlogs.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.000908,
+    "topInitiators": [
+        {
+            "domain": "twitchcdn.net",
+            "prevalence": 0.7878787878787878
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.12121212121212122
+        },
+        {
+            "domain": "twitch.tv",
+            "prevalence": 0.06818181818181818
+        },
+        {
+            "domain": "rpglogs.com",
+            "prevalence": 0.015151515151515152
+        },
+        {
+            "domain": "raiderio.net",
+            "prevalence": 0.007575757575757576
+        }
+    ],
+    "types": {
+        "Document": 19,
+        "Stylesheet": 99,
+        "Script": 949,
+        "Fetch": 26,
+        "Preflight": 18,
+        "Font": 15,
+        "XHR": 10,
+        "Other": 9,
+        "WebSocket": 12
+    },
+    "nameservers": [
+        "ns-1778.awsdns-30.co.uk",
+        "ns-1450.awsdns-53.org",
+        "ns-664.awsdns-19.net",
+        "ns-219.awsdns-27.com"
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "domain": "libanswers.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "v2",
+        "unswlibrary",
+        "region-au",
+        "usyd",
+        "chat-au"
+    ],
+    "cnames": [
+        {
+            "original": "ask.un.org",
+            "resolved": "v2.libanswers.com"
+        },
+        {
+            "original": "faq.lib.uts.edu.au",
+            "resolved": "region-au.libanswers.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "libanswers\\.com\\/load_chat\\.php",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "v2",
+                "unswlibrary",
+                "region-au",
+                "usyd"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [
+                {
+                    "original": "ask.un.org",
+                    "resolved": "v2.libanswers.com"
+                },
+                {
+                    "original": "faq.lib.uts.edu.au",
+                    "resolved": "region-au.libanswers.com"
+                }
+            ],
+            "responseHashes": [
+                "d21d43e61f200b00c1dc6ee2ccff8d168884e23a820b3e963f08aaec3bf11f40",
+                "86da07a021b751a115aeb993b6101b64127fa9982e33e673751334c379d3dc17",
+                "79353aea040671d0938c2440a9125a559b0986b96814af83d0d67622de002695"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "un.org",
+                "www.library.unsw.edu.au",
+                "www.lib.uts.edu.au",
+                "www.library.sydney.edu.au"
+            ]
+        },
+        {
+            "rule": "libanswers\\.com\\/widget_status",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat-au"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "unsw.edu.au",
+                "www.library.sydney.edu.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-140.awsdns-17.com",
+        "ns-1474.awsdns-56.org",
+        "ns-1830.awsdns-36.co.uk",
+        "ns-591.awsdns-09.net"
+    ]
+}

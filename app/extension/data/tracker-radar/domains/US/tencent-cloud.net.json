@@ -1,0 +1,167 @@
+{
+    "domain": "tencent-cloud.net",
+    "owner": {
+        "name": "Tencent Holdings Ltd.",
+        "displayName": "Tencent"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "ins-2768eays.ias",
+        "ins-g2nwxn2x.ias",
+        "ins-pc499c33.ias"
+    ],
+    "cnames": [
+        {
+            "original": "hwvip.iflix.com",
+            "resolved": "ins-g2nwxn2x.ias.tencent-cloud.net"
+        },
+        {
+            "original": "unifiedaccess.gameloop.com",
+            "resolved": "ins-2768eays.ias.tencent-cloud.net"
+        },
+        {
+            "original": "vplay.iflix.com",
+            "resolved": "ins-pc499c33.ias.tencent-cloud.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "tencent-cloud\\.net\\/v2\\/dynamicard2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins-2768eays.ias"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "unifiedaccess.gameloop.com",
+                    "resolved": "ins-2768eays.ias.tencent-cloud.net"
+                }
+            ],
+            "responseHashes": [
+                "7dca40a54e50d0e78ddee6631fb135b747961b518bb07e50f2c5c4b5976bccce"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gameloop.com",
+                "www.gameloop.com"
+            ]
+        },
+        {
+            "rule": "tencent-cloud\\.net\\/rpc\\/trpc\\.long_link_group\\.inter_long_link_intl\\.InterLongLinkIntl\\/CreateGuidIntl",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins-g2nwxn2x.ias"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "hwvip.iflix.com",
+                    "resolved": "ins-g2nwxn2x.ias.tencent-cloud.net"
+                }
+            ],
+            "responseHashes": [
+                "52711579c8d25ea2bd3acf28798c28bbb5545cc6a64bffc1baee2783c0600b5d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iflix.com",
+                "www.iflix.com"
+            ]
+        },
+        {
+            "rule": "tencent-cloud\\.net\\/getvinfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins-pc499c33.ias"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "vplay.iflix.com",
+                    "resolved": "ins-pc499c33.ias.tencent-cloud.net"
+                }
+            ],
+            "responseHashes": [
+                "1bfb6feae460725960fd7d51c9f12f97c2e04e49e10dfb678bd0545b9d1bf94f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "guid": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "iflix.com",
+                "www.iflix.com"
+            ]
+        },
+        {
+            "rule": "tencent-cloud\\.net\\/rpc\\/trpc\\.internation_pre_auth\\.web_pre_auth\\.WebPreAuthService\\/GetVideoPreAuthInfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins-g2nwxn2x.ias"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "hwvip.iflix.com",
+                    "resolved": "ins-g2nwxn2x.ias.tencent-cloud.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iflix.com",
+                "www.iflix.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "wetvinfo.com",
+            "prevalence": 0.6923076923076923
+        },
+        {
+            "domain": "cdn-go.cn",
+            "prevalence": 0.3076923076923077
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "XHR": 4,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-open1.qq.com",
+        "ns-open2.qq.com",
+        "ns-open3.qq.com"
+    ]
+}

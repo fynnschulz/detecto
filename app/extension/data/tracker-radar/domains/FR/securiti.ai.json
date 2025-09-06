@@ -1,0 +1,248 @@
+{
+    "domain": "securiti.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "cdn-prod",
+        "app",
+        "app.eu",
+        "cdn-prod.eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-latest\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "491ca5d57cb2970a011c01dec985b46b87819644a09cade0d9349f76db883790"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickhouse.com",
+                "www.3mfrance.fr"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/core\\/v1\\/utils\\/geo\\/location",
+            "cookies": 0.000404,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f908c481b82885c91445264bbe1e8fa90e65a2852398966e3bf7f1ae6387e20f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickhouse.com",
+                "www.3mfrance.fr",
+                "www.hertz.fr",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/privaci\\/v1\\/consent\\/cookie\\/singleupload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app",
+                "app.eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "3mfrance.fr",
+                "www.hertz.fr",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/privaci\\/v1\\/consent\\/cookie\\/singleupload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app",
+                "app.eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "f1e25328be62ee5aca4777d33ecfbaf64a502f80dac2008bd7197e236cac8dc7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "3mfrance.fr",
+                "www.hertz.fr",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/sdk-stub\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-prod.eu"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3ba6a7938ad39390a43f6a96ae5524571967d7537c4552b02fc24aaf86d9f77d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hertz.fr",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "398c47dcb5fd4f5c6044bbcf13a1124079ad669e84a4438b03846501effd35ef"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hertz.fr",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-1\\.99\\.0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f151605d72ebb524288d4812044195e4e0cb2e0762060592e12db760869a0a47"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hertz.fr",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-sdk-1\\.99\\.0\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-prod.eu"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.cookieEnabled": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e242a3e46b65c80fdfdca871a4a54375fb25a4f1a18003a703658c8a09b8cc77"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__privaci_cookie_consent_uuid": {
+                    "ttl": 31536010,
+                    "length": 39,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                },
+                "__privaci_cookie_consent_generated": {
+                    "ttl": 31536010,
+                    "length": 39,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                },
+                "__privaci_cookie_no_action": {
+                    "ttl": 31863,
+                    "length": 30,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hertz.fr",
+                "www.hertz.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9565217391304348
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.043478260869565216
+        }
+    ],
+    "types": {
+        "Stylesheet": 4,
+        "XHR": 7,
+        "Preflight": 3,
+        "Script": 6
+    },
+    "nameservers": [
+        "matt.ns.cloudflare.com",
+        "elly.ns.cloudflare.com"
+    ]
+}

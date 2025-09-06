@@ -167,10 +167,10 @@ async function applyPolicyForDomain(domain, policy) {
               world: "MAIN",
               files: [
                 "src/shims/cmp.js",
-                "src/shims/cmp-autoclose.js", // NEW: auto-close banner
                 "src/shims/fingerprints.js",
                 "src/shims/cloak.js",
-                "src/shims/stealth.js"
+                "src/shims/stealth.js",
+                "src/shims/netpatch.js"
               ]
             });
             console.log("[Protecto] Injected fingerprints+cloak+stealth shims into", tab.url);
@@ -197,7 +197,7 @@ async function applyPolicyForDomain(domain, policy) {
           world: "MAIN",
           files: [
             "src/shims/cmp.js",
-            "src/shims/cmp-autoclose.js" // NEW: auto-close banner
+            "src/shims/netpatch.js"
           ]
         });
       }

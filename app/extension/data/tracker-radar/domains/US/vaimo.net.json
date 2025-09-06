@@ -1,0 +1,90 @@
+{
+    "domain": "vaimo.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "suunto-prod"
+    ],
+    "cnames": [
+        {
+            "original": "store.suunto.com",
+            "resolved": "suunto-prod.vaimo.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "vaimo\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "suunto-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "store.suunto.com",
+                    "resolved": "suunto-prod.vaimo.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "suunto.com",
+                "www.suunto.com"
+            ]
+        },
+        {
+            "rule": "vaimo\\.net\\/graphql",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "suunto-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "store.suunto.com",
+                    "resolved": "suunto-prod.vaimo.net"
+                }
+            ],
+            "responseHashes": [
+                "b0b3f53de13d9c2562b327737f36380aeefe0cf1f347db0feb03900717fac660"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "suunto.com",
+                "www.suunto.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "azure.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "hera.ns.cloudflare.com",
+        "major.ns.cloudflare.com"
+    ]
+}

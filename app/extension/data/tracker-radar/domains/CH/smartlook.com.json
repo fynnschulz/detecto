@@ -1,0 +1,91 @@
+{
+    "domain": "smartlook.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000301,
+    "sites": 3,
+    "subdomains": [
+        "web-sdk"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "smartlook\\.com\\/recorder\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {
+                "window.sessionStorage": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "b79263bfdcdeff0539b9c03378ce9bc22f71c9ab476a5fc345000b7bea153018"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allevents.in",
+                "community.splunk.com",
+                "docs.splunk.com"
+            ]
+        },
+        {
+            "rule": "smartlook\\.com\\/es6\\/init\\.cdc840947d17d40acc65\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.webdriver": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "b07cba6ccc4a4da2f3f24d000d8a7ac897b629520f404968274a2cab1ce3a60e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allevents.in",
+                "community.splunk.com",
+                "docs.splunk.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 6
+    },
+    "nameservers": [
+        "ns-429.awsdns-53.com",
+        "ns-1317.awsdns-36.org",
+        "ns-1600.awsdns-08.co.uk",
+        "ns-949.awsdns-54.net"
+    ]
+}

@@ -1,0 +1,555 @@
+{
+    "domain": "trendemon.com",
+    "owner": {
+        "name": "SSL Corporation",
+        "displayName": "SSL"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000958,
+    "sites": 14,
+    "subdomains": [
+        "assets",
+        "trackingapi",
+        "pic"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "trendemon\\.com\\/tag\\/trends\\.min\\.js",
+            "cookies": 0.0000616,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 10,
+                "window.localStorage": 10,
+                "Navigator.prototype.userAgent": 9,
+                "Document.cookie getter": 9,
+                "Document.cookie setter": 9,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 11,
+            "prevalence": 0.0000752,
+            "cnames": [],
+            "responseHashes": [
+                "9b2f52f5a4335fd8a9912112e6c6abbc65f5c09e7a0ebb41bd1372cb55cd462a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "trd_cid": {
+                    "ttl": 31536009,
+                    "length": 17,
+                    "prevalence": 0.00006156792994937747,
+                    "uniqueness": 1
+                },
+                "trd_vid_l": {
+                    "ttl": 31536012,
+                    "length": 24,
+                    "prevalence": 0.00006156792994937747,
+                    "uniqueness": 0.8888888888888888
+                },
+                "trd_vuid_l": {
+                    "ttl": 31536012,
+                    "length": 20,
+                    "prevalence": 0.00006156792994937747,
+                    "uniqueness": 0.8888888888888888
+                },
+                "trd_ma_cookie": {
+                    "ttl": 43212,
+                    "length": 83,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "221616.com",
+                "docs.tenable.com",
+                "feedly.com",
+                "help.perforce.com",
+                "monday.com",
+                "nation.foxnews.com",
+                "snyk.io",
+                "tenable.my.site.com",
+                "www.checkpoint.com",
+                "www.puppet.com",
+                "www.tenable.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/global\\/identity\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 9,
+                "Navigator.prototype.webdriver": 9,
+                "Navigator.prototype.language": 9,
+                "Screen.prototype.colorDepth": 9,
+                "Navigator.prototype.deviceMemory": 9,
+                "Navigator.prototype.hardwareConcurrency": 9,
+                "Screen.prototype.width": 9,
+                "Screen.prototype.height": 9,
+                "Screen.prototype.availWidth": 9,
+                "Screen.prototype.availHeight": 9,
+                "Date.prototype.getTimezoneOffset": 9,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 9,
+                "window.sessionStorage": 9,
+                "window.localStorage": 9,
+                "window.indexedDB": 9,
+                "Navigator.prototype.platform": 9,
+                "Navigator.prototype.appName": 9,
+                "Navigator.prototype.plugins": 9,
+                "WebGLRenderingContext.prototype.getExtension": 9,
+                "HTMLCanvasElement.prototype.toDataURL": 9,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 9,
+                "WebGLRenderingContext.prototype.getParameter": 9,
+                "WebGLRenderingContext.prototype.getContextAttributes": 9,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 9,
+                "Navigator.prototype.languages": 9,
+                "Navigator.prototype.maxTouchPoints": 9,
+                "Navigator.prototype.productSub": 9
+            },
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "1220bdf087a7b3b0f068e1dc2422c361ef11cf999ff8ea343573d9e5a7c19bdc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "221616.com",
+                "docs.tenable.com",
+                "feedly.com",
+                "help.perforce.com",
+                "monday.com",
+                "snyk.io",
+                "tenable.my.site.com",
+                "www.checkpoint.com",
+                "www.puppet.com",
+                "www.tenable.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/Identity\\/me",
+            "cookies": 0.0000616,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "76d098f29915fafd8a24b706335d248d635c9ebd6766f1bb729cf07870c014b8",
+                "3c97d9c962c9455c28d576ad5d48e5fccd9537ddf0ffd8070dd0160fe53c4a10",
+                "a7ff5f515da686da600566068ddd72dbd024d82c31642222f2e24768a45c252b",
+                "468c18fb592883c596f9bbf811583c4ae2f9e448e515851ba7a57c2ca0a32bef",
+                "7a4d8e8387edd94ec65ee705db97363216da83d5d3f81c22709f0baa258e5b60",
+                "ab9fa82835c85e9429a86764d4918a6878e471ba3c8ca65dd212ecf888a75dc0",
+                "4f66d06416fec934f0c5ab528315151b5e62c1df63cbc364e37819e0a11a3656",
+                "d2dec367ced305b244284e80efb43d7cdd19a06a3206b9785b957550cb69b87e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "trd_cid": 0.00006156792994937747
+            },
+            "exampleSites": [
+                "221616.com",
+                "docs.tenable.com",
+                "feedly.com",
+                "help.perforce.com",
+                "monday.com",
+                "snyk.io",
+                "tenable.my.site.com",
+                "www.checkpoint.com",
+                "www.puppet.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/marketingautomation",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "a24ccf2f98c08ae635c1372d36772e7b10b6255bd5fef473ed4ad97374ace993",
+                "53017c874986cc9f15a362881d1dbb50ad141cba3fd6cc2c1b1c2a3a2b062363",
+                "e3681319fdc943bb957033affae721959ad34ff766810c4c441f9f0aa36d9bc0",
+                "860642cd08de9cfcc2777b920f0b6330636354b0276bd7207307d61934a17a84",
+                "db607454768268fcdc4fb90d2c825000d5815d81e64738b56562f87822baa5ac",
+                "f7525593b7fc7d52fd365a1c1952add7787998cf2a6130c04f0c2a0cd505698a",
+                "4e9e4f0028b64fc4a0a425ac8473276e7738b3f602e86355eccd482c9cb10abd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "trd_cid": 0.000054727048843891096,
+                "trd_ma_cookie": 0.000054727048843891096
+            },
+            "exampleSites": [
+                "221616.com",
+                "docs.tenable.com",
+                "feedly.com",
+                "help.perforce.com",
+                "monday.com",
+                "snyk.io",
+                "tenable.my.site.com",
+                "www.checkpoint.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/events\\/pageview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "f4eef8263281c0b26486637831251059757bc3fdc4c3a48045a8ef8646b36e8f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "trd_cid": 0.00006156792994937747
+            },
+            "exampleSites": [
+                "221616.com",
+                "docs.tenable.com",
+                "feedly.com",
+                "help.perforce.com",
+                "monday.com",
+                "snyk.io",
+                "tenable.my.site.com",
+                "www.checkpoint.com",
+                "www.puppet.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/experience\\/personal-stream",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "892efa38fb39497354c4dbfda6e99ba1ec29f0822f8655f5f263a875f60967ff",
+                "01a69b354369bf4a587f69285802572c2403156d03c72facebd2b5a41970f198",
+                "aa08c806b69938af933da59c59d46c25a2071d980d9b05daebf9a45925544625",
+                "26ebe75b45bdc7c3983c42a242406b4111e447ca5d73b859a05a74e1d2349445"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "trd_cid": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "221616.com",
+                "docs.tenable.com",
+                "help.perforce.com",
+                "snyk.io",
+                "tenable.my.site.com",
+                "www.checkpoint.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/experience\\/personal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "3dc1ce4ce840966df0d411b6381a52a99171d762c0a7dd5193d9231adda219a3",
+                "b471f34e0ec64bb0fa352ca207771fe19eed50756a2e25420c255f8d53292747",
+                "ce7ccf19bcb9533328954ca5ea5d7463822a8b2207d8828a4939a515f23bb968",
+                "fb07650237cc59eb83160999189326a55c5087ea871b8ba95b16d678c5906e2b",
+                "0afccf455bee16e42d8dda157110621e5fd64e0992421f87d7786016b7e78ab0",
+                "b269783d359d362e9a298613bf91de53426468e8fd8587c45132e791c80262e0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "trd_cid": 0.000034204405527431934,
+                "hubspotutk": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "221616.com",
+                "docs.tenable.com",
+                "monday.com",
+                "snyk.io",
+                "tenable.my.site.com",
+                "www.checkpoint.com",
+                "www.puppet.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/experience\\/personal-embedded",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "135aa49434869defa21d9cb662b758dc161e6b1d2807829b120e08b8bd813c56",
+                "2c92dc4b43fbaf58d140d3abce2d91bcc9a4a537c82ba4f09e4aa42d6f82946c",
+                "681de8b9ef09aae11c2e18c067378e99d24eb69d6f77bea229c73099b2a6c632",
+                "eee3eb85534846b1bef4c651abade11c865f8a3114ac269bc157878ebcd91f30",
+                "d579c86c7f5fcec9beb16949c83fae833158b8ac2e9032f9f4361141351ba098",
+                "28b79130af9feb5ca93e2ad73d8c5768925acc61408521a84d405e83972cb8a2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "trd_cid": 0.000034204405527431934,
+                "hubspotutk": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "221616.com",
+                "docs.tenable.com",
+                "monday.com",
+                "snyk.io",
+                "tenable.my.site.com",
+                "www.checkpoint.com",
+                "www.puppet.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/events\\/uplift",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "f4eef8263281c0b26486637831251059757bc3fdc4c3a48045a8ef8646b36e8f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "trd_cid": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "221616.com",
+                "monday.com",
+                "www.puppet.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/settings\\/2110",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "eb89f632d236043167b6460b31977c62ad944e2f977bc1fc8b52d429945a8d95",
+                "4117f44ce7a29d22e09bc70d81056aba9da22eda639b53ff2e9ba7f6c1ec7f0f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tenable.com",
+                "tenable.my.site.com",
+                "www.tenable.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/experience\\/ace-campaign",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "66f26eb9f1d21e36fc0871ae736690a6164b71389f3ee73a0d33df6930ecb6ca",
+                "4a5a5cc97e2736ee3038aaf0be90ffbb84400e9b96f1b94e1ee57e923d16960c",
+                "01dc99ad80c3620fe142c8d4fdd2abcfedcee4ceb0f9d019ddf9f7416c4f3cb7",
+                "fcff0db45e64636926182820b26f0265534df497dc621542716331760945a044"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "trd_cid": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "tenable.com",
+                "help.perforce.com",
+                "tenable.my.site.com",
+                "www.checkpoint.com",
+                "www.puppet.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/images\\/closex\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pic"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "384f24a122d3d3818a1b477c7d9af49efd9e2d42023a013be9123cca726d3c98"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "monday.com",
+                "snyk.io",
+                "www.puppet.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/scripts\\/2102\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9b2f52f5a4335fd8a9912112e6c6abbc65f5c09e7a0ebb41bd1372cb55cd462a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "nation.foxnews.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/settings\\/2102",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d758579034e4503e37655781ea1e295334f9c4f0d1e904d9e2ac99284dc9df26"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "nation.foxnews.com"
+            ]
+        },
+        {
+            "rule": "trendemon\\.com\\/api\\/settings\\/2336",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trackingapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c65a4581e2a5881292e86e80c1f2be3d5cde91815084899c420b7746df90d6bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "checkpoint.com",
+                "www.checkpoint.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000752,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4594594594594595
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.24324324324324326
+        },
+        {
+            "domain": "userway.org",
+            "prevalence": 0.13513513513513514
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.10810810810810811
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.05405405405405406
+        }
+    ],
+    "types": {
+        "Script": 72,
+        "Image": 15
+    },
+    "nameservers": [
+        "ns07.domaincontrol.com",
+        "ns08.domaincontrol.com"
+    ]
+}

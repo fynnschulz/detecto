@@ -1,0 +1,474 @@
+{
+    "domain": "appsflyer.com",
+    "owner": {
+        "name": "AppsFlyer",
+        "displayName": "AppsFlyer"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00263,
+    "sites": 384,
+    "subdomains": [
+        "websdk",
+        "wa",
+        "onelinksmartscript",
+        "impression",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "appsflyer\\.com\\/",
+            "cookies": 0.000595,
+            "fingerprinting": 3,
+            "subdomains": [
+                "websdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 244,
+                "window.localStorage": 242,
+                "window.sessionStorage": 242,
+                "Navigator.prototype.webdriver": 242,
+                "Navigator.prototype.language": 243,
+                "Screen.prototype.colorDepth": 242,
+                "Navigator.prototype.cookieEnabled": 243,
+                "Navigator.prototype.deviceMemory": 238,
+                "window.devicePixelRatio": 239,
+                "Screen.prototype.width": 242,
+                "Screen.prototype.height": 242,
+                "Screen.prototype.orientation": 242,
+                "Screen.prototype.availWidth": 242,
+                "Screen.prototype.availHeight": 242,
+                "Date.prototype.getTimezoneOffset": 245,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 245,
+                "window.indexedDB": 242,
+                "Navigator.prototype.platform": 243,
+                "Navigator.prototype.doNotTrack": 243,
+                "Navigator.prototype.languages": 243,
+                "Navigator.prototype.javaEnabled": 243,
+                "PerformanceTiming.prototype.navigationStart": 241,
+                "Document.cookie getter": 91,
+                "Date.prototype.getTime": 238,
+                "NavigatorUAData.prototype.getHighEntropyValues": 94,
+                "Document.cookie setter": 87
+            },
+            "sites": 248,
+            "prevalence": 0.0017,
+            "cnames": [],
+            "responseHashes": [
+                "2a00fb51cdbaf78302a4111b33366e56cd06c7f2f106a273d3d65d8762cd613d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "afUserId": {
+                    "ttl": 63072007,
+                    "length": 38,
+                    "prevalence": 0.0005746340128608565,
+                    "uniqueness": 1
+                },
+                "AF_SYNC": {
+                    "ttl": 604808,
+                    "length": 13,
+                    "prevalence": 0.0005609522506498837,
+                    "uniqueness": 1
+                },
+                "AF_MEASUREMENT_STATUS": {
+                    "ttl": 63072005,
+                    "length": 4,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 0.3333333333333333
+                },
+                "AF_DEFAULT_MEASUREMENT_STATUS": {
+                    "ttl": 63072006,
+                    "length": 4,
+                    "prevalence": 0.000047886167738404704,
+                    "uniqueness": 0.2857142857142857
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "overstock.com",
+                "rei.com",
+                "soundcloud.com",
+                "weather.com",
+                "www.bloomberg.com",
+                "m.comic.naver.com",
+                "www.goindigo.in",
+                "www.localiza.com",
+                "m1.com",
+                "chicos.com",
+                "home.ibotta.com",
+                "www.notino.pl",
+                "vix.com",
+                "mileiq.com",
+                "www.backmarket.com",
+                "www.8days.sg",
+                "soma.com",
+                "www.fubo.tv",
+                "www.hungama.com",
+                "hindi.astroyogi.com"
+            ]
+        },
+        {
+            "rule": "appsflyer\\.com\\/events",
+            "cookies": 0.000657,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wa"
+            ],
+            "apis": {},
+            "sites": 99,
+            "prevalence": 0.000677,
+            "cnames": [],
+            "responseHashes": [
+                "942c297383fc00fdc684095fdad41d76d822027c49beaf39f8a215b2ef122b74",
+                "3838b471074fd4f170943a6c60f2929b1287c64dbe3101bfc56133f84432200d",
+                "274987d803af2831990fb773b9a7144a007b3a40c2c70de214319f4fea1715bc",
+                "4948f3462e22d3b78f3d3a46e40df8f32f1229189d2ebf66c2894b0a651108a2",
+                "29d8d5b4af87d93e06e9b2fc8aacabdd85851183e5b48e820f851f2feed5dea3",
+                "7017b0666fabc78be2605eb7eeb16fed05eb844c4953c7151bde706b696f4b23",
+                "71d6b0f0fee22930d9d01cbe31af1f3f8b2f05bf2d8654fa47ed346006afc60a",
+                "37e0736bd302b7c491d56413b1c4e7c487d46317c14fce343a5235e9ce618d81",
+                "bb6fc018dfe7dfe0da0bf0563a80af7a6fce4a47dca256a1329a6d3557f886d3",
+                "2f2c35274921f6ad2f185468ebf190670901058cb14dcc088d97c090947e90b1",
+                "a9d5a5bee6c2f18dcbddf75874213f2e63a559e066fdb68b9452f7c3bf0cf7fe",
+                "a22afcd8491f74971269bc8c7a1925909020a5242f808863c509b6e9e69f12c2",
+                "0a7b6e4303f2131f38f58861db9f3181fe582f046c2fbc37eb30be3a886d4609",
+                "b435f9808db7cd52f2164fdb2d1d6a267cc640fe8a6449b9928808171152117d",
+                "bd372ac1226bbd836da580e24f27df6a477cf150fc0b64fd57cd638b5bfe3ffc",
+                "23ad2eff704df6de0e51d92b09d9a7b10556062b6ed7e8cd8bae7f1bc3f4253a",
+                "7c8be7d12bf2e6395d1746bc44f963350861e322f9746ad813836e007600aebf",
+                "7378347eaa504c2577a869142cbae87e36858fc86b98ac1e41b680109eb638da",
+                "302b187ca1876395cd8ec995a5ce22cf69e5fcaa03bd8f040d16c703edfc1d57",
+                "48f20e4759298c64d48871c7692beb9dbc960180c326f222fdbd0265b19ce35b",
+                "4e8eccc0426e86e198f3039e4041a1f7c56a6ac3e58a3ea1f29a4f8ef227891d",
+                "d74e29180572f4f1ce8aeda5559c7b4972e9a9e3bf9cbce2afdd46e89f160741",
+                "19bf34ab2c7642968c35ff2e36cc1b2314485d0ab772da3dc9fa40955fa75c89",
+                "ff3adbe4b178606f5717001a0bb937e9cc26be00ca6e9d0a578b9f26f0de722d",
+                "89dc000bacf1fc49e9b3e5566e8869f6f8b2ebdf2a94ed3790df616e2fda2793",
+                "7a87bb6f70850b2f5050b6efea4de6c11d966aa0cbd7aac866334caf7cc4d194",
+                "ca153599909021d7095d37117afc62f55923f9eb073fd9359de5304e870b6a49",
+                "647b616c0d8f6b3889f0f023a6b55a701089510e63a22ae8c45f8ff9679defa7",
+                "fdab0921318f8eb621436f5784e28ce0d0453f23f64d6a68c9969486f4d4a5b2",
+                "0d04b893e074300e744c7b449b82f68c102a00ec9887f6609dbb1336d4ae4d7b",
+                "35a2d7854eebd231d46af6a12b7c0347736cfeb856b50f20c01e2c50b469f795",
+                "23b53be0e486bcf802a452bd84d3986675e8a51b85c4f1b9bf66a4a131b7112a",
+                "df80bebd0f0bd9efc6c7183f9acc983455e4a2667ae54eabf17faaeb41d232a4",
+                "2476f0ff3f6451242767f77ea9bf592a22880653d8be2e70c417732686088ed7",
+                "b6bfa9cf67e076f80f030d392a92798444e86b387fae092fc19b2c21745c9a72",
+                "2ce7ff8644141991fdf015281b91215af3be94412061d7d50570d6db04e38751",
+                "322dc1ea2431066dcd7cf83244b13edf601c28d7943e64fb88c51c4ce663d98f",
+                "6246d7fe2bb3828d4bcd9b2847d430311799f1a5023977acafba9e434b31285c",
+                "52dfb5cbc3ea378075ec83034f2dc971385b1f031de81f46247fa00adf4712a6",
+                "b98acd75b10ee0b89bf45631b7d0a8dab00a1edf0a224c9b4282200063cc6dfc",
+                "e971e71c15e9f37d366caaa4d6883c4ca613612facfa605f5a919493fa69baa4",
+                "a9ea9fd79f03522903a50f29f92d57dde2609c4c07a2219fd603ee1667442e29",
+                "eebd8d11b26516ea7d23897af662e4fcee38a55a1bcd6086f51357b920fd350b",
+                "02d0ef601074128b8249453446e6f7a3af08e43f04d46f0ec14decfff47a88d1",
+                "5b08945dee1cd4a1b4a2031a223e986edafe7959297c08b457d8e9f45df1d5e8",
+                "07b884a19c3483446e0b86ab25bc61cbcaa77fded41608994fb396457adb67a1",
+                "9e87924d165f2721ef27f1a4a45426bb26cf545b91ed091ddcf2742d363bf97e",
+                "f61896dc8401652fb8abe82fb1431eecf73bc86a65abdc60a0d8ef7298f6c63d",
+                "38f5f2e98483085af1e764afd79012f02ae8ffd6c58381ce0938c7dadfc2be76",
+                "55c932a2a49e5220ba6139865dd3322f4bfa4b5627de559c216ad6c920ff64b3",
+                "09f3044bd0aae176e2aefedec16669c7b9d38f6ec1aef69e6d8e9e27c1c88b28",
+                "4a830efe56034d3896db6f7be24e76961c17987f85963dd6b64c52d1da5b4a20",
+                "a2ab18406b3b720571cf1a2b9ecfd7f7cf96465fcb4321ed7ab293535db0471a",
+                "b0f7b19e1d0eb5baba08f53e61fbc8628f65cb68a3d60530efce0c763c6a477f",
+                "5700f797e801b5bd227e1a0a22912d34cdd4fdbcc4b129b892de99e16dcb6653",
+                "7df7b84b4e6478986d5170305f6978c380fed4475b941e5dbc67520f2810f0ba",
+                "94a905b1e01c23eedea1da46d803642d619ed16189ca042a083497e4bda48ee6",
+                "2892bb1f768b2e3e7d86329e317051a779db8115fdb9d27f60cf219524e5128a",
+                "16efa5ddf0ee3af108eefcf4d9dc6ead85c05e43dace659e8bf971ba4249ae76",
+                "3a64a67c0f3a65a98c07af79b2180baaf63f3dd62c6253315d065b05941d54ac",
+                "7ad3b4b59aadce456ff0140c52aa1710baf1907c27a1576479faea92fd36eda7",
+                "4c5c389676eb3f08da5ffa05bfc287dc145692f777ee2d04798590bca69bb03b",
+                "305f8561255db6ad98d21fb2a2e20a803d656237028396804fb6a8668dd62181",
+                "e8914163bfbf81f74f31442764f041b2726f3507173369af54f59d8720b514a8",
+                "30668799c6521d1c05adc3093fbb415c1e757a2463c3608b10f3a53d39c3d012",
+                "bd356da0e65a99014f665b7820d3bd62538b2e2817649303816f1f522d7844ca",
+                "f1f132cb6682ecdb55bea8d82bad9c65c1d0a8f15c041c39f5a4be8417bdb661",
+                "359e493a13cd146d4a30457b7feaf27e32273ec3df187e8fa518868aa5fb0f3d",
+                "323cf67aa8aca4774a334b70400b3b70410f54505e60a4816c5350b1ec72a654",
+                "073fbd06b7b3f828329335656e1bd39d07301cf6e0316846ffe6c8025aaa4706",
+                "9fa9f8097f1e25806344d9dd53fa3b81a28646647d7ade3ac2da759b3365f38d",
+                "2c29cbaa64d6223d1bb805430307e4bc6805bfdca6b6f4948101c51bc1dd2203",
+                "68899152282301dca0fe93f16ea6aaf4307c240f122c035a5d0fce22f27136ba",
+                "3296295c8f76e2ac2bf476e2dea223fb86eacb7ed1b8f67f94af8b0ea48e6fba",
+                "e41ce60bb1295e4b1ec719ba66261e4d5123b2dd1e19310bf13f85c1c122053c",
+                "dd3e7a26f51f0fb6d8a0b92e617dc4986106d3eb07fc645cfa8fec8834c6f258",
+                "4925cd76d97e85218f54f1fcf0508d532915ec6b961fa2184e3876be9bdc5298",
+                "77349f3154bc2e4bdffd69eb31450e21349b88e94392798b248b7396340f35b8",
+                "fdc991608f5588581e1f5c551ad6d6244bf63652d64fd6c6d8dc0ab47aaa08f7",
+                "ee41575c1ba023954334125661008118e70b7047813e31e6ea2bebae8fa74e80",
+                "3bed0c39d14e4366028b787c63ecec6e79ab61184674c6815bf4de6199764b0f",
+                "63bafbe7ec1fa37ca628fd377472f26a82da94fa180707fb1cebbdd054d00d5a",
+                "bce9199824e4954c01c98ddf53ea7f0f1bc8fd5b367fc1b4b831f520571c6bdc",
+                "11f2e40004a0f3a61fb134e839d984cd263cd92ad3127b95e580c14a11a2da90",
+                "5688583cc5c4b268cf728aa760315d3895a5deed806f0c5c565cad04fb3c1c23",
+                "d673b37d956faf39a182d66cb2897f8ed2697cc3f2793df3aff9482fa00a66ab",
+                "ec63a9ff9230b60875d7a2ed89362192eec21dc6490cf877a7cbc5bc57130d97",
+                "5ca45c8fcb8e7e51db6a7967ce2052e0614838a97a7fa61df1e414951a71eb4e",
+                "f50972262b511c0d84de73864df102ae721c5cd7c803945059efc7ac3d091744",
+                "6b3fee3811621573d49aa7152b078070fb380c495570a2769fe6a2f11961c316",
+                "f9d5be62468dee8ea1093dd38a17839905d4764220fa805a9f3cc34ab3c8d31e",
+                "9079c11db81d769e8cda3a65295dc1ba05f7c0327931de98ba3ba1cb1a680fe9",
+                "54a8007b445060121a4810d24610235fdaa8e2fd0b5873e9e19202fd33edbce5",
+                "c2842286086d42df3a3d7bb1d50f442b5c7bbd2bd396b2ea5ddc985bb9034ba1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "https://wa.appsflyer.com/events?site-id": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "rei.com",
+                "soundcloud.com",
+                "www.bloomberg.com",
+                "www.hbo.com",
+                "www.surfline.com",
+                "sportsbook.caesars.com",
+                "www.netspend.com",
+                "www.moneygram.com",
+                "www.ruparupa.com",
+                "www.sayweee.com",
+                "www.vidio.com",
+                "stocktwits.com",
+                "www.kabum.com.br",
+                "www.stoloto.ru",
+                "www.plex.tv",
+                "beta.character.ai",
+                "manta.net",
+                "booksy.com",
+                "pro.kraken.com",
+                "suno.com"
+            ]
+        },
+        {
+            "rule": "appsflyer\\.com\\/onelink-smart-script-latest\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "onelinksmartscript"
+            ],
+            "apis": {
+                "window.localStorage": 13,
+                "Date.prototype.getTime": 13,
+                "Navigator.prototype.userAgent": 6,
+                "NavigatorUAData.prototype.getHighEntropyValues": 6
+            },
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "cd7b220104e46c1083e29dc20045e07d039d31cbf714a77716849af03e19bc3f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "monarchmoney.com",
+                "easy.co.il",
+                "gc.com",
+                "ltx.studio",
+                "pocketoption.com",
+                "saily.com",
+                "suno.com",
+                "vsco.co",
+                "weverse.io",
+                "www.etnownews.com",
+                "www.etoro.com",
+                "www.mixbook.com",
+                "www.monarchmoney.com",
+                "www.reddrivingschool.com",
+                "www.viki.com"
+            ]
+        },
+        {
+            "rule": "appsflyer\\.com\\/342809508",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "impression"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "utag_main_vapi_domain": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "gap.com",
+                "athleta.gap.com"
+            ]
+        },
+        {
+            "rule": "appsflyer\\.com\\/342797197",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "impression"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "utag_main_vapi_domain": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "gap.com",
+                "bananarepublic.gap.com"
+            ]
+        },
+        {
+            "rule": "appsflyer\\.com\\/coverdomain",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wa"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "863918950f874966cd274fc6c43410dc787a7d5a7cc35029141061e4a0dcb276",
+                "b72f86df6985fc4a8ecf29bd834f9890bb48535008f3da604118ce987cdbe375",
+                "bb5b4bdc8a4a7e8239899010e69f5a73549584334e77ac1f3b98fd22342c5121",
+                "fc45762bad858a3da6a167d2c7222c5a7eeeb7c43f8f6969bf29a23c9e96e027",
+                "1e2949a5794ac50a524b9c72e5b6262aa4e800738d6843412bc0a48eac877b43",
+                "58d8a8b13cdd29320afc6289020cc7e5ac5c47ed0317627ee16854c1169cdb10",
+                "dd9a38181f5647dfcbef2527e4db4be799c064a8fd40a81feff4099019cd6a34",
+                "7fedc75fbffe7dbde799ecce0a34b2f9651284de3b4ad7f9d51047f37f50cbbc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "character.ai",
+                "melonsandbox.com",
+                "www.alltrails.com",
+                "www.davivienda.com",
+                "www.freshdirect.com",
+                "www.surfline.com",
+                "www.webcomicsapp.com",
+                "www.webtoons.com",
+                "www.windsorstore.com"
+            ]
+        },
+        {
+            "rule": "appsflyer\\.com\\/326347260",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "impression"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "utag_main_vapi_domain": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "gap.com",
+                "www.gap.com"
+            ]
+        },
+        {
+            "rule": "appsflyer\\.com\\/web-sdk\\/banner\\/latest\\/sdk\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitco.com",
+                "www.kitco.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000971,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5649606299212598
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2933070866141732
+        },
+        {
+            "domain": "ziffstatic.com",
+            "prevalence": 0.021653543307086614
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.013779527559055118
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.011811023622047244
+        },
+        {
+            "domain": "yottaa.com",
+            "prevalence": 0.007874015748031496
+        },
+        {
+            "domain": "px-cloud.net",
+            "prevalence": 0.007874015748031496
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.005905511811023622
+        },
+        {
+            "domain": "sndcdn.com",
+            "prevalence": 0.005905511811023622
+        },
+        {
+            "domain": "vidiocdn.com",
+            "prevalence": 0.005905511811023622
+        }
+    ],
+    "types": {
+        "Script": 265,
+        "XHR": 108,
+        "Image": 6
+    },
+    "nameservers": [
+        "ns-326.awsdns-40.com",
+        "ns-1429.awsdns-50.org",
+        "ns-659.awsdns-18.net",
+        "ns-1547.awsdns-01.co.uk"
+    ]
+}

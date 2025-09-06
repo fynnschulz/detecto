@@ -1,0 +1,105 @@
+{
+    "domain": "content-youtube.googleapis.com",
+    "owner": {
+        "name": "Google LLC",
+        "displayName": "Google",
+        "privacyPolicy": "https://policies.google.com/privacy?hl=en&gl=us",
+        "url": "http://google.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "content-youtube\\.googleapis\\.com\\/static\\/proxy\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "5bf4fb37851d5ffef1d4b4287a01cdc54781a723ba4e54a896ba43d4d7863f49",
+                "70dd35f6cd6036d9d4d0844d10317d13a3aff5442da0f880701cb094b24d96b8",
+                "136d27d984fc55e24c5e1f19d00cf8eddbebeb28ed09075320f8c55ccfb80212"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leisurevans.com",
+                "oconeesc.com",
+                "www.gamersunite.com",
+                "www.nato.int"
+            ]
+        },
+        {
+            "rule": "content-youtube\\.googleapis\\.com\\/youtube\\/v3\\/channels",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "21570cd6e37f006f9aff930e7580930350d4a37fa7a30fa25487c2da20d53e28"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oconeesc.com",
+                "www.gamersunite.com"
+            ]
+        },
+        {
+            "rule": "content-youtube\\.googleapis\\.com\\/youtube\\/v3\\/playlistItems",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c838fe0f99bb335803aabf11caebf783bc90cda517bc56886051ae575627b620"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "masshist.org",
+                "www.masshist.org"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "google.com",
+            "prevalence": 0.8181818181818182
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.18181818181818182
+        }
+    ],
+    "types": {
+        "Document": 4,
+        "XHR": 2,
+        "Fetch": 2
+    },
+    "nameservers": []
+}

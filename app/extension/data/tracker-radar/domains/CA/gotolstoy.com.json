@@ -1,0 +1,191 @@
+{
+    "domain": "gotolstoy.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "widget",
+        "apilb",
+        "cf-apilb",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "gotolstoy\\.com\\/widget\\/widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "BroadcastChannel.prototype.constructor": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "window.innerWidth": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "6d2c89be267405377ee7431322d7e58f1edfeefbeb56a6cc32347749f7d94d12"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theordinary.com",
+                "www.complex.com"
+            ]
+        },
+        {
+            "rule": "gotolstoy\\.com\\/widgets\\/global-config\\/getWidgetGlobalConfig",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apilb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "85cbcb92d6e37b0ad0e77f8e3a40799eaf172d1c76d19734cd52c6237286feec"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theordinary.com",
+                "www.complex.com"
+            ]
+        },
+        {
+            "rule": "gotolstoy\\.com\\/settings\\/widget\\/by-product-url",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cf-apilb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a8329c50871e54d2a65f4d3ff9affc94c48ea4fa11b5e14d56d5787a6bace94c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theordinary.com",
+                "www.complex.com"
+            ]
+        },
+        {
+            "rule": "gotolstoy\\.com\\/events\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theordinary.com",
+                "www.complex.com"
+            ]
+        },
+        {
+            "rule": "gotolstoy\\.com\\/events\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theordinary.com",
+                "www.complex.com"
+            ]
+        },
+        {
+            "rule": "gotolstoy\\.com\\/we\\/widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "BroadcastChannel.prototype.constructor": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "b187d4180093d2d1d8b488cc69fb89c867924191f7c028460828dbe196acdc60"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "complex.com",
+                "www.complex.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "osano.com",
+            "prevalence": 0.7272727272727273
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2727272727272727
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 6,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-284.awsdns-35.com",
+        "ns-995.awsdns-60.net",
+        "ns-1549.awsdns-01.co.uk",
+        "ns-1333.awsdns-38.org"
+    ]
+}

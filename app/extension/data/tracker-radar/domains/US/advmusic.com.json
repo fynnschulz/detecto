@@ -1,0 +1,144 @@
+{
+    "domain": "advmusic.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "api",
+        "rbtify"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "advmusic\\.com\\/stats\\.php",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "rbtify_visit_id": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "hotplayer.ru",
+                "lightaudio.ru",
+                "musify.club",
+                "muzrecord.com"
+            ]
+        },
+        {
+            "rule": "advmusic\\.com\\/",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "072a3ffb64c0689fb88a6b22d45555522b9e9154e50c242c5291edd0e052ac8d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotplayer.ru",
+                "lightaudio.ru"
+            ]
+        },
+        {
+            "rule": "advmusic\\.com\\/rbtify\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rbtify"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie getter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "890891455c8904131c1f4ee855e78b60cd43fce5605b0118d2a8ec77cff745a3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotplayer.ru",
+                "lightaudio.ru",
+                "musify.club",
+                "muzrecord.com"
+            ]
+        },
+        {
+            "rule": "advmusic\\.com\\/index\\.php",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "9182d3fdf7408c5896b9196eaa931caaa5fa099f6e4b5f6a8d134ddd8cf28119",
+                "142c2ee24f55ef3c98adee2766c7f6c7eadbead7d6252faa0070fccc00c48b45",
+                "05a9f09518b3dfebe3b01dd3a6018a6716dd65612ae16131b4bb080433d166a9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "rbtify_visit_id": 0.000027363524421945548,
+                "rbtify_session_id": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "hotplayer.ru",
+                "lightaudio.ru",
+                "musify.club",
+                "muzrecord.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000342,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "hitplayer.ru",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "ligaudio.ru",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Fetch": 8,
+        "Script": 6
+    },
+    "nameservers": [
+        "penny.ns.cloudflare.com",
+        "vasilii.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,354 @@
+{
+    "domain": "securiti.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000703,
+    "sites": 7,
+    "subdomains": [
+        "cdn-prod",
+        "app",
+        "cdn-prod.eu",
+        "app.eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-latest\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "491ca5d57cb2970a011c01dec985b46b87819644a09cade0d9349f76db883790"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickhouse.com",
+                "www.3mschweiz.ch",
+                "www.trailforks.com",
+                "www.united.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/core\\/v1\\/utils\\/geo\\/location",
+            "cookies": 0.000603,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "8bc1132f8a1d8d25e842e3fc78ffaca1460eb7c948a3e892b5a87382c4133ed0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickhouse.com",
+                "velo.outsideonline.com",
+                "www.3mschweiz.ch",
+                "www.hertz.com",
+                "www.hertz.ch",
+                "www.trailforks.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-sdk-loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "30031fe3a022cc16008191a7395737977e6230218acf2d28734426bf5502cc98"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "outsideonline.com",
+                "www.3mschweiz.ch",
+                "www.trailforks.com",
+                "www.united.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/core\\/v1\\/utils\\/geo\\/location",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8bc1132f8a1d8d25e842e3fc78ffaca1460eb7c948a3e892b5a87382c4133ed0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "outsideonline.com",
+                "www.3mschweiz.ch"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/sdk-stub\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-prod",
+                "cdn-prod.eu"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "3ba6a7938ad39390a43f6a96ae5524571967d7537c4552b02fc24aaf86d9f77d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "outsideonline.com",
+                "www.hertz.ch",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-sdk-latest\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-prod"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.cookieEnabled": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "1c979680991d4e7318af7250ffaf5254a73a376957ed08c943181025ee0e1667"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__privaci_cookie_consent_uuid": {
+                    "ttl": 31536004,
+                    "length": 38,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                },
+                "__privaci_cookie_consent_generated": {
+                    "ttl": 31536004,
+                    "length": 38,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                },
+                "__privaci_cookie_no_action": {
+                    "ttl": 13322,
+                    "length": 30,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "3mschweiz.ch",
+                "www.trailforks.com",
+                "www.united.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/privaci\\/v1\\/consent\\/cookie\\/singleupload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app",
+                "app.eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "3mschweiz.ch",
+                "www.hertz.ch",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/privaci\\/v1\\/consent\\/cookie\\/singleupload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app",
+                "app.eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "f1e25328be62ee5aca4777d33ecfbaf64a502f80dac2008bd7197e236cac8dc7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "3mschweiz.ch",
+                "www.hertz.ch",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "398c47dcb5fd4f5c6044bbcf13a1124079ad669e84a4438b03846501effd35ef"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hertz.com",
+                "www.hertz.ch"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-1\\.99\\.0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-prod.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f151605d72ebb524288d4812044195e4e0cb2e0762060592e12db760869a0a47"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hertz.ch",
+                "www.hertz.com"
+            ]
+        },
+        {
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-sdk-1\\.99\\.0\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-prod.eu"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.cookieEnabled": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e242a3e46b65c80fdfdca871a4a54375fb25a4f1a18003a703658c8a09b8cc77"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__privaci_cookie_consent_uuid": {
+                    "ttl": 31536010,
+                    "length": 39,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 1
+                },
+                "__privaci_cookie_consent_generated": {
+                    "ttl": 31536010,
+                    "length": 39,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 1
+                },
+                "__privaci_cookie_no_action": {
+                    "ttl": 14091,
+                    "length": 30,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hertz.ch",
+                "www.hertz.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000603,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9428571428571428
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.02857142857142857
+        },
+        {
+            "domain": "pinkbike.org",
+            "prevalence": 0.02857142857142857
+        }
+    ],
+    "types": {
+        "Stylesheet": 6,
+        "XHR": 9,
+        "Script": 14,
+        "Fetch": 2,
+        "Preflight": 3
+    },
+    "nameservers": [
+        "matt.ns.cloudflare.com",
+        "elly.ns.cloudflare.com"
+    ]
+}

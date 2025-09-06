@@ -1,0 +1,85 @@
+{
+    "domain": "cigna.com",
+    "owner": {
+        "name": "Cigna",
+        "displayName": "Cigna"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "tlt"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "cigna\\.com\\/tealeaf\\/TealeafTarget\\.jsp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tlt"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accredo.com",
+                "www.evernorth.com",
+                "www.express-scripts.com"
+            ]
+        },
+        {
+            "rule": "cigna\\.com\\/tealeaf\\/TealeafTarget\\.jsp",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tlt"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "1ebb886bda77f0869396f49570b38fdc8172b8e230ee16583784d5ecc46e3844",
+                "7916c36dde1078ce3e89daa297b2c5a1f22a4a4040b1291ed4d19126395d3627"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accredo.com",
+                "www.evernorth.com",
+                "www.express-scripts.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Preflight": 3,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "ns2.cigna.com",
+        "ns.cigna.com"
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "domain": "qortex.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000606,
+    "sites": 6,
+    "subdomains": [
+        "tags",
+        "events",
+        "cpm"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "qortex\\.ai\\/bootstrapper",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tags"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "0d6133b474f8da38d343f9bc474ae59a4f6332fc2b44bd4d0855e9b8f632ee0f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalpost.com",
+                "www.gadgetreview.com",
+                "www.timeout.com"
+            ]
+        },
+        {
+            "rule": "qortex\\.ai\\/api\\/v1\\/player-event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalpost.com",
+                "www.gadgetreview.com",
+                "www.timeout.com"
+            ]
+        },
+        {
+            "rule": "qortex\\.ai\\/cxo\\/cx-bootstrapper-init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tags"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "2d217a8be8258ef8e1280c9ef4ad33d8d4fdc690aa90658ad2b5e91424d33483"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalpost.com",
+                "www.gadgetreview.com",
+                "www.timeout.com"
+            ]
+        },
+        {
+            "rule": "qortex\\.ai\\/hb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cpm"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e8fb5d6ca7ef59d1c365dc4bb73a18917dc61797b017d83ce3d118151c0b8c98",
+                "822f962c75fe4b4d53313d80d5a4a26f380914d34090b88b56a86f61abba6212",
+                "b517e84da28d37d46db12b86df4a7bbfc475792631a654327bd0b7c04c1c1f46"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avforums.com",
+                "www.avforums.com",
+                "www.dailywire.com",
+                "www.listchallenges.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "aditude.io",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Fetch": 7
+    },
+    "nameservers": [
+        "olof.ns.cloudflare.com",
+        "rosemary.ns.cloudflare.com"
+    ]
+}

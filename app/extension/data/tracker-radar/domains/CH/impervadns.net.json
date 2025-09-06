@@ -1,0 +1,133 @@
+{
+    "domain": "impervadns.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.001,
+    "sites": 10,
+    "subdomains": [
+        "naouzqe",
+        "sfizigb",
+        "jp6nzpr"
+    ],
+    "cnames": [
+        {
+            "original": "gateway.euronext.com",
+            "resolved": "sfizigb.impervadns.net"
+        },
+        {
+            "original": "login.accor.com",
+            "resolved": "naouzqe.impervadns.net"
+        },
+        {
+            "original": "matomo.dafy-moto.com",
+            "resolved": "jp6nzpr.impervadns.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "impervadns\\.net\\/as\\/authorization\\.oauth2",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "naouzqe"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "login.accor.com",
+                    "resolved": "naouzqe.impervadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "all.accor.com"
+            ]
+        },
+        {
+            "rule": "impervadns\\.net\\/charts\\/intraday\\.gif",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sfizigb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "gateway.euronext.com",
+                    "resolved": "sfizigb.impervadns.net"
+                }
+            ],
+            "responseHashes": [
+                "1d1055c844f5e475a06af68b81958b334210eba16752cdb3d3043a24874946d7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "euronext.com",
+                "live.euronext.com"
+            ]
+        },
+        {
+            "rule": "impervadns\\.net\\/matomo\\.php",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jp6nzpr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "matomo.dafy-moto.com",
+                    "resolved": "jp6nzpr.impervadns.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dafy-moto.com",
+                "www.dafy-moto.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.001,
+    "topInitiators": [
+        {
+            "domain": "unpkg.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Document": 2,
+        "Image": 2,
+        "Ping": 2
+    },
+    "nameservers": [
+        "ns1.impervadns.net",
+        "ns2.impervadns.net",
+        "ns3.impervadns.net"
+    ]
+}

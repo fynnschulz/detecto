@@ -1,0 +1,123 @@
+{
+    "domain": "adsmoloco.com",
+    "owner": {
+        "name": "Moloco Inc.",
+        "displayName": "Moloco"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "cdn-f",
+        "postback",
+        "tr-asia"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "adsmoloco\\.com\\/js\\/pixel\\/m_pixel\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-f"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8b62ee649687bf3c20e317baa687c9f2409240b2d340ac5695508a0f30413385"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "moloco_cid": {
+                    "ttl": 7776012,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "honkaku-uranai.jp",
+                "st.benesse.ne.jp"
+            ]
+        },
+        {
+            "rule": "adsmoloco\\.com\\/postback",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "postback"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "moloco_cid": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "honkaku-uranai.jp",
+                "st.benesse.ne.jp"
+            ]
+        },
+        {
+            "rule": "adsmoloco\\.com\\/cminit",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr-asia"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airasia.com",
+                "www.airasia.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "widerplanet.com",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Ping": 2,
+        "Document": 2
+    },
+    "nameservers": [
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d4.googledomains.com",
+        "ns-cloud-d1.googledomains.com"
+    ]
+}

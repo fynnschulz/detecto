@@ -1,0 +1,107 @@
+{
+    "domain": "grv.media",
+    "owner": {
+        "name": "GRV Media",
+        "displayName": "GRV Media"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "client"
+    ],
+    "cnames": [
+        {
+            "original": "prop.faroutmagazine.co.uk",
+            "resolved": "client.grv.media"
+        },
+        {
+            "original": "prop.soundtrack.net",
+            "resolved": "client.grv.media"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "grv\\.media\\/loader\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 3,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prop.faroutmagazine.co.uk",
+                    "resolved": "client.grv.media"
+                },
+                {
+                    "original": "prop.soundtrack.net",
+                    "resolved": "client.grv.media"
+                }
+            ],
+            "responseHashes": [
+                "7d59f33ee155f8361856097d4efedcff7a06fea14ab116a7fd9137759da9d00b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faroutmagazine.co.uk",
+                "www.soundtrack.net"
+            ]
+        },
+        {
+            "rule": "grv\\.media\\/uuid",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prop.faroutmagazine.co.uk",
+                    "resolved": "client.grv.media"
+                },
+                {
+                    "original": "prop.soundtrack.net",
+                    "resolved": "client.grv.media"
+                }
+            ],
+            "responseHashes": [
+                "8950f05441ec36baf4284793c5ac0774ad9130a9abfa9782c914819b722467e2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faroutmagazine.co.uk",
+                "www.soundtrack.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "emily.ns.cloudflare.com",
+        "amit.ns.cloudflare.com"
+    ]
+}

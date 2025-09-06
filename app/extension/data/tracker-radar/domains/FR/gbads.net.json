@@ -1,0 +1,143 @@
+{
+    "domain": "gbads.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "weather-api.prod",
+        "grapeshot-goldbach.prod",
+        "goldlayer-api.prod"
+    ],
+    "cnames": [
+        {
+            "original": "gs-goldbach.da-services.ch",
+            "resolved": "grapeshot-goldbach.prod.gbads.net"
+        },
+        {
+            "original": "weather.da-services.ch",
+            "resolved": "weather-api.prod.gbads.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "gbads\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "weather-api.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "weather.da-services.ch",
+                    "resolved": "weather-api.prod.gbads.net"
+                }
+            ],
+            "responseHashes": [
+                "1a5a2b395e5fcabcdf0e497f54e0e49014ccafb5739af740d75134c195763e50"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24heures.ch",
+                "www.tdg.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/grapeshot\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "grapeshot-goldbach.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "gs-goldbach.da-services.ch",
+                    "resolved": "grapeshot-goldbach.prod.gbads.net"
+                }
+            ],
+            "responseHashes": [
+                "ff26920512ecc37ad7ea70e44c73e1b23100de5777ab90686d0ef64d63c96f5e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24heures.ch",
+                "www.tdg.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/openrtb\\/2\\.5\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "goldlayer-api.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24heures.ch",
+                "www.tdg.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/openrtb\\/2\\.5\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "goldlayer-api.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6e92770d35e700ab8f90c64cdb5d231ec3805a8bae0f40b594e01c1eb57cdf88"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24heures.ch",
+                "www.tdg.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "da-services.ch",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 4,
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-1184.awsdns-20.org",
+        "ns-1548.awsdns-01.co.uk",
+        "ns-178.awsdns-22.com",
+        "ns-741.awsdns-28.net"
+    ]
+}

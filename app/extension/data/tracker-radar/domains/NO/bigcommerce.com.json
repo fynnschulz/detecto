@@ -1,0 +1,159 @@
+{
+    "domain": "bigcommerce.com",
+    "owner": {
+        "name": "Bigcommerce Pty Ltd",
+        "displayName": "Bigcommerce"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "checkout-sdk",
+        "cdn11",
+        "bes.gcp.data"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "bigcommerce\\.com\\/v1\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "checkout-sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "77200df34c4112b458c1801041a06b570d26979cb998904d89ef7b5a8247f0a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digilent.com",
+                "focusrite.com",
+                "system76.com"
+            ]
+        },
+        {
+            "rule": "bigcommerce\\.com\\/shared\\/js\\/csrf-protection-header-5eeddd5de78d98d146ef4fd71b2aedce4161903e\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn11"
+            ],
+            "apis": {
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "ee4a537566f2a5a1640eb459ab00fd4ad32ad195d6763458f4fbfa388af8a637"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digilent.com",
+                "focusrite.com",
+                "system76.com"
+            ]
+        },
+        {
+            "rule": "bigcommerce\\.com\\/r-a321e023109533896ba7a63414af17de49b9433a\\/javascript\\/visitor_stencil\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn11"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "039bd6e8e3957d061a22d2987a26998574744e243834dc71affe60922455fa21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digilent.com",
+                "focusrite.com"
+            ]
+        },
+        {
+            "rule": "bigcommerce\\.com\\/nobot",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bes.gcp.data"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digilent.com",
+                "focusrite.com",
+                "system76.com"
+            ]
+        },
+        {
+            "rule": "bigcommerce\\.com\\/nobot",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bes.gcp.data"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "c88a0b907419a70c27ab7c1f8e5fb54441a4d9c3567e4c928fa7b2091194aecf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digilent.com",
+                "focusrite.com",
+                "system76.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "Preflight": 3,
+        "XHR": 3
+    },
+    "nameservers": [
+        "ns-cloud-d1.googledomains.com",
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d3.googledomains.com",
+        "dns2.p01.nsone.net"
+    ]
+}

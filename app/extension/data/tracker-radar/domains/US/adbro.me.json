@@ -1,0 +1,209 @@
+{
+    "domain": "adbro.me",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000287,
+    "sites": 42,
+    "subdomains": [
+        "tag",
+        "apis"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "adbro\\.me\\/tags\\/ptag\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "window.localStorage": 34,
+                "window.sessionStorage": 34,
+                "Navigator.prototype.userAgent": 29,
+                "window.innerHeight": 29
+            },
+            "sites": 40,
+            "prevalence": 0.000274,
+            "cnames": [],
+            "responseHashes": [
+                "94a941aa3ec10d58a5673c99dc50999f290ef22304abae4c5d7f602f2bcdd56d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.thairath.co.th",
+                "www.idntimes.com",
+                "www.viv.co.id",
+                "www.poskota.co.id",
+                "www.nst.com.my",
+                "www.dailysia.com",
+                "www.cantika.com",
+                "www.pep.ph",
+                "www.malaymail.com",
+                "www.hmetro.com.my",
+                "tribune.net.ph",
+                "geekculture.co",
+                "www.freemalaysiatoday.com",
+                "duniaku.idntimes.com",
+                "mediaindonesia.com",
+                "health.detik.com",
+                "thethaiger.com",
+                "newswav.com",
+                "says.com",
+                "katadata.co.id"
+            ]
+        },
+        {
+            "rule": "adbro\\.me\\/api\\/v2\\/advertising\\/cookie_sync",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailysia.com",
+                "www.dailysia.com"
+            ]
+        },
+        {
+            "rule": "adbro\\.me\\/configs\\/uszhekxv\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8b6fa44b59eb1280f0aa43822d27e03af03b2c20f451375faf74d604a741b6c6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idntimes.com",
+                "www.idntimes.com"
+            ]
+        },
+        {
+            "rule": "adbro\\.me\\/configs\\/f39zy0ac\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "07232f31d32e47e2797489da8c7ab213b924186775112a27d07daf63a11c53db"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "surabayainside.com",
+                "www.viv.co.id"
+            ]
+        },
+        {
+            "rule": "adbro\\.me\\/tags\\/atag\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e34593029633e9d375497777325009da378a67a10c656711bb1f577ba027a85b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vietjetair.com",
+                "www.vietjetair.com"
+            ]
+        },
+        {
+            "rule": "adbro\\.me\\/api\\/v2\\/advertising\\/track\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vietjetair.com",
+                "www.vietjetair.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.32941176470588235
+        },
+        {
+            "domain": "vietnamnetad.vn",
+            "prevalence": 0.023529411764705882
+        },
+        {
+            "domain": "pubmatic.com",
+            "prevalence": 0.023529411764705882
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.023529411764705882
+        }
+    ],
+    "types": {
+        "Script": 46,
+        "Document": 2,
+        "WebSocket": 2
+    },
+    "nameservers": [
+        "lynn.ns.cloudflare.com",
+        "nina.ns.cloudflare.com"
+    ]
+}

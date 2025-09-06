@@ -1,0 +1,124 @@
+{
+    "domain": "ndash.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "4279ec2b",
+        "55ae30ab"
+    ],
+    "cnames": [
+        {
+            "original": "cologger.shopping.naver.com",
+            "resolved": "55ae30ab.ndash.net"
+        },
+        {
+            "original": "proxy.blog.naver.com",
+            "resolved": "4279ec2b.ndash.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "ndash\\.net\\/m",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "4279ec2b"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "proxy.blog.naver.com",
+                    "resolved": "4279ec2b.ndash.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "naver.com",
+                "m.blog.naver.com"
+            ]
+        },
+        {
+            "rule": "ndash\\.net\\/api\\/v1\\/collect\\/exlogcr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "55ae30ab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cologger.shopping.naver.com",
+                    "resolved": "55ae30ab.ndash.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "naver.com",
+                "www.naver.com"
+            ]
+        },
+        {
+            "rule": "ndash\\.net\\/api\\/v1\\/collect\\/exlogcr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "55ae30ab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cologger.shopping.naver.com",
+                    "resolved": "55ae30ab.ndash.net"
+                }
+            ],
+            "responseHashes": [
+                "1b2388d7e6149aed4721865fd1d376c63c28131aca52185382dcaba3e72c3515"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "naver.com",
+                "www.naver.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "pstatic.net",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Ping": 2,
+        "Preflight": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns3.ndash.net",
+        "ns1.ndash.net",
+        "ns2.ndash.net"
+    ]
+}

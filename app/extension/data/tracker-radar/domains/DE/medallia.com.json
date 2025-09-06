@@ -1,0 +1,223 @@
+{
+    "domain": "medallia.com",
+    "owner": {
+        "name": "Medallia Inc.",
+        "displayName": "Medallia",
+        "privacyPolicy": "https://www.medallia.com/privacy-policy/",
+        "url": "http://medallia.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000706,
+    "sites": 7,
+    "subdomains": [
+        "resources.digital-cloud-west",
+        "analytics-fe.digital-cloud-west",
+        "analytics-fe.digital-cloud-us-main",
+        "analytics-fe.digital-cloud"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "medallia\\.com\\/wdcwest\\/448709\\/onsite\\/embed\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "resources.digital-cloud-west"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0c13babb781ce9b36955ad24ad1310243ffd99847f731fe8bdd6b754be6c610d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.de",
+                "www.decathlon.de"
+            ]
+        },
+        {
+            "rule": "medallia\\.com\\/wdcwest\\/448709\\/onsite\\/generic1755097644166\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "resources.digital-cloud-west"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "window.devicePixelRatio": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "window.innerHeight": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ff1a632cab8b3f8dce7a467cf412b37520f66bcd620ace9f08652203f7399a3e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "kampyle_userid": {
+                    "ttl": 31536008,
+                    "length": 39,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                },
+                "kampyleUserSession": {
+                    "ttl": 31536008,
+                    "length": 13,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                },
+                "kampyleSessionPageCounter": {
+                    "ttl": 31536009,
+                    "length": 1,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 0.5
+                },
+                "kampyleUserSessionsCount": {
+                    "ttl": 31536009,
+                    "length": 1,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 0.5
+                },
+                "kampyleUserPercentile": {
+                    "ttl": 31536009,
+                    "length": 17,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.de",
+                "www.decathlon.de"
+            ]
+        },
+        {
+            "rule": "medallia\\.com\\/wdcsea\\/448709\\/forms\\/20343\\/formDataV2_1734533800309_de\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "resources.digital-cloud-west"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "09ccc14052cf9835db680d09f7261663e9bbf58c04f4fb3d7b00dc63b3a960fc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.de",
+                "www.decathlon.de"
+            ]
+        },
+        {
+            "rule": "medallia\\.com\\/api\\/web\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-fe.digital-cloud-west",
+                "analytics-fe.digital-cloud-us-main",
+                "analytics-fe.digital-cloud"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.de",
+                "www.decathlon.de",
+                "www.fishersci.de",
+                "www.target.com",
+                "www.thermofisher.com"
+            ]
+        },
+        {
+            "rule": "medallia\\.com\\/api\\/web\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-fe.digital-cloud-west",
+                "analytics-fe.digital-cloud-us-main",
+                "analytics-fe.digital-cloud"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.de",
+                "www.decathlon.de",
+                "www.fishersci.de",
+                "www.target.com",
+                "www.thermofisher.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000504,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7333333333333333
+        },
+        {
+            "domain": "ensighten.com",
+            "prevalence": 0.13333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.06666666666666667
+        },
+        {
+            "domain": "targetimg1.com",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 7,
+        "Preflight": 5
+    },
+    "nameservers": [
+        "ns-183.awsdns-22.com",
+        "ns-881.awsdns-46.net",
+        "ns-1874.awsdns-42.co.uk",
+        "ns-1363.awsdns-42.org"
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "domain": "browser-intake-datadoghq.eu",
+    "owner": {
+        "name": "Datadog, Inc.",
+        "displayName": "Datadog"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00101,
+    "sites": 10,
+    "subdomains": [
+        "csp-report"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "5ab12b0c20dd45314ca550e913a5c09373b0cfb1e375f845dd29c8e51c0256ff",
+                "76cd007804e139db18c69b180c9c733994520b0ff226f5fda113d287bea653b7",
+                "1e7d785ca101729a229250a7282396a97c8fc28d85ecaef4426f641af4dfbc0a",
+                "82a99399b0d44c764ba5b89b62383e344caeead003ae314b8877c46ccba6b161",
+                "d55dd1348c231975fccc506d6266506c4401ec2face98ec403531246853dc59e",
+                "e2b0f743a9072d037b02874e24c02f096a243d267d085814c776d292c2da2fe9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "payfit.com",
+                "www.decitre.fr",
+                "www.kiabi.com",
+                "www.lexus.fr",
+                "www.tameteo.com",
+                "www.toyota.fr",
+                "www.vente-unique.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atelierdeschefs.fr",
+                "www.britishairways.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.5238095238095238
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.47619047619047616
+        }
+    ],
+    "types": {
+        "Fetch": 7,
+        "Other": 2
+    },
+    "nameservers": [
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
+    ]
+}

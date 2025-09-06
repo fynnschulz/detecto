@@ -1,0 +1,130 @@
+{
+    "domain": "divcom.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "ag",
+        "s3"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "divcom\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ag"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "89db5344e4f90d5c61c4c6f96a3e2569dca2e129af602fa9886f47db1e75b7b5",
+                "e9dadfa656f0b25e5ebc959a71fea453cae777c0020a4ac9f8da781770d031e3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalfisherman.com",
+                "www.nationalfisherman.com",
+                "www.seafoodsource.com"
+            ]
+        },
+        {
+            "rule": "divcom\\.com\\/assets\\/js\\/visitorapi\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e42de3189be050f4db4f28013ad0eea2c9c2986496ee32d32f5bafde4902a2fe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "AMCV_3734016862D876710A495E89%40AdobeOrg": {
+                    "ttl": 63072007,
+                    "length": 248,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "AMCVS_3734016862D876710A495E89%40AdobeOrg": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalfisherman.com",
+                "www.seafoodsource.com"
+            ]
+        },
+        {
+            "rule": "divcom\\.com\\/data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ag"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalfisherman.com",
+                "www.nationalfisherman.com",
+                "www.seafoodsource.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9166666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05555555555555555
+        },
+        {
+            "domain": "d2zj227kyirtba.cloudfront.net",
+            "prevalence": 0.027777777777777776
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Ping": 3
+    },
+    "nameservers": [
+        "george.ns.cloudflare.com",
+        "brianna.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,110 @@
+{
+    "domain": "usemaxserver.de",
+    "owner": {
+        "name": "Emego GmbH",
+        "displayName": "Emego"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000502,
+    "sites": 5,
+    "subdomains": [
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "usemaxserver\\.de\\/d\\.php",
+            "cookies": 0.000402,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "window.innerWidth": 5,
+                "Navigator.prototype.userAgent": 5,
+                "window.innerHeight": 5,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "61af58a80279be2b694daca2482ffe27c45fa3138d2c1c66fb995f4adb7bcfab",
+                "20cf7a289bae287ce5adc96e404053ab46d17008a4759654f92184647d358fdb",
+                "6096396320ee07815dcd9c6952d4454f82c2d020e93e714b6c4a2dea75ad957f",
+                "d16b5f58fbbe51f5e6f30f8ea91d9ca877885a9b510c9612570daa94f9a36f20"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "usm_um_rt": {
+                    "ttl": 31536010,
+                    "length": 10,
+                    "prevalence": 0.00040192926045016077,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "schaefer-shop.ch",
+                "walbusch.ch",
+                "www.moevenpick-wein.com",
+                "www.peterhahn.ch",
+                "www.schaefer-shop.ch"
+            ]
+        },
+        {
+            "rule": "usemaxserver\\.de\\/rt\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "1a7c18e28ac8ebb597604f2229e16c9b25babdb16c34be3d62969a1fd41479bd",
+                "4482b4c79bda9cdf61bedf99781cf491b9c4dbc45bbc3773fa22f82873bbc110",
+                "a5ac07d7e1f413d655e6242f38c3ed6aac146a0bfe70468a493c5d94b62ceeb3"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "walbusch.ch",
+                "www.moevenpick-wein.com",
+                "www.peterhahn.ch",
+                "www.schaefer-shop.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000402,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.8
+        },
+        {
+            "domain": "tradedoubler.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Document": 4
+    },
+    "nameservers": [
+        "dns.dns2.de",
+        "dns.dns4.de",
+        "dns.dns1.de",
+        "dns.dns3.de"
+    ]
+}

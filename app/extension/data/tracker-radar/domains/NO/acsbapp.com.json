@@ -1,0 +1,119 @@
+{
+    "domain": "acsbapp.com",
+    "owner": {
+        "name": "accessiBe Inc.",
+        "displayName": "accessiBe"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000805,
+    "sites": 8,
+    "subdomains": [
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "acsbapp\\.com\\/apps\\/app\\/dist\\/js\\/app\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 7,
+                "Navigator.prototype.maxTouchPoints": 7,
+                "window.devicePixelRatio": 7,
+                "window.localStorage": 6,
+                "NavigatorUAData.prototype.brands": 6
+            },
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "8b1bdc957f8e41e36e356f930582c81c1fd442f07c32ba78a7432c72e537e516"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "metamask.io",
+                "seatosummit.com",
+                "www.dlink.com",
+                "www.fashionbeans.com",
+                "www.lyca-mobile.no",
+                "www.scott-sports.com",
+                "www.wickedweasel.com"
+            ]
+        },
+        {
+            "rule": "acsbapp\\.com\\/config\\/wickedweasel\\.com\\/config\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bde9c2949e64d059c18d8f93566a64dafc6d2e8e259a70322fb804831dfd0b5b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wickedweasel.com",
+                "www.wickedweasel.com"
+            ]
+        },
+        {
+            "rule": "acsbapp\\.com\\/cache\\/app\\/wildcards\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2af2b3ffd2026621f59f88b9af822b702a3c043a991fc7477274dc20530a8153"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wickedweasel.com",
+                "www.wickedweasel.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Fetch": 4
+    },
+    "nameservers": [
+        "bill.ns.cloudflare.com",
+        "davina.ns.cloudflare.com"
+    ]
+}

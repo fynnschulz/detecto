@@ -1,0 +1,102 @@
+{
+    "domain": "rapidedge.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000402,
+    "sites": 4,
+    "subdomains": [
+        "metrics",
+        "assets"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "rapidedge\\.io\\/gamera\\.js",
+            "cookies": 0.000402,
+            "fingerprinting": 1,
+            "subdomains": [
+                "metrics"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "fbc257b6e32685bb3852286e8c6fa2c4e89aeb4b7c4340fad9c34ed125e8f532",
+                "6dadd13bbf8215758271ab57d157719ed2169fae846e486d563d1938e443138e",
+                "6d3eec16e98f921c576c855870632e7357535c6cb40f909e709213d47bdd4e0c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "gamera_user_id": {
+                    "ttl": 31536006,
+                    "length": 36,
+                    "prevalence": 0.00040192926045016077,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "solitaired.com",
+                "tanstack.com",
+                "www.cloudynights.com",
+                "www.iplocation.net"
+            ]
+        },
+        {
+            "rule": "rapidedge\\.io\\/gamera\\/tracker\\/production\\/3pcs\\.html",
+            "cookies": 0.000301,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Document.cookie setter": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "7c61069183aadd1d9f39ea20a59fb24ddf157e25d12614303f75fe7ce0270378"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "solitaired.com",
+                "tanstack.com",
+                "www.cloudynights.com",
+                "www.iplocation.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000402,
+    "topInitiators": [
+        {
+            "domain": "fuseplatform.net",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "lngtdv.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Document": 4
+    },
+    "nameservers": [
+        "jill.ns.cloudflare.com",
+        "garret.ns.cloudflare.com"
+    ]
+}

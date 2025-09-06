@@ -1,0 +1,309 @@
+{
+    "domain": "clicktripz.com",
+    "owner": {
+        "name": "Clicktripz",
+        "displayName": "Clicktripz"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "compare-static.flightconnections.com",
+        "static",
+        "compare-static.thecrazytourist.com",
+        "www",
+        "compare.flightconnections.com",
+        "api",
+        "compare.thecrazytourist.com"
+    ],
+    "cnames": [
+        {
+            "original": "compare-static.flightconnections.com",
+            "resolved": "compare-static.flightconnections.com.clicktripz.com"
+        },
+        {
+            "original": "compare-static.thecrazytourist.com",
+            "resolved": "compare-static.thecrazytourist.com.clicktripz.com"
+        },
+        {
+            "original": "compare.flightconnections.com",
+            "resolved": "compare.flightconnections.com.clicktripz.com"
+        },
+        {
+            "original": "compare.thecrazytourist.com",
+            "resolved": "compare.thecrazytourist.com.clicktripz.com"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "clicktripz\\.com\\/tag\\.js",
+            "cookies": 0.000403,
+            "fingerprinting": 1,
+            "subdomains": [
+                "compare-static.flightconnections.com",
+                "static",
+                "compare-static.thecrazytourist.com"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [
+                {
+                    "original": "compare-static.flightconnections.com",
+                    "resolved": "compare-static.flightconnections.com.clicktripz.com"
+                },
+                {
+                    "original": "compare-static.thecrazytourist.com",
+                    "resolved": "compare-static.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "cbcf7f92e70f8e5870f23a2ae21e4d6157bdf0e497eac65a7bcb60ee72a06724"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ctpuid": {
+                    "ttl": 7779611,
+                    "length": 36,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flightconnections.com",
+                "www.mapquest.com",
+                "www.thecrazytourist.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/api\\/integrations\\/v1\\/constrain",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "e1226fb2c705788b7916caf176cd552a6d9d72e8ca2aa1578c69f4286b470594",
+                "c1b40a7bcd4dada00644d7c0f4f7b27a5cc5faa896971804876ed65cec1a0d9d",
+                "82a998390307f455a55ba515bc848aaff222af5286fec0acdf5ee354beacb9f8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flightconnections.com",
+                "www.flightconnections.com",
+                "www.mapquest.com",
+                "www.thecrazytourist.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/b9s\\/v0\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "compare.flightconnections.com",
+                "api",
+                "compare.thecrazytourist.com"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [
+                {
+                    "original": "compare.flightconnections.com",
+                    "resolved": "compare.flightconnections.com.clicktripz.com"
+                },
+                {
+                    "original": "compare.thecrazytourist.com",
+                    "resolved": "compare.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flightconnections.com",
+                "www.flightconnections.com",
+                "www.mapquest.com",
+                "www.thecrazytourist.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/x\\/pas",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "compare.flightconnections.com",
+                "www",
+                "compare.thecrazytourist.com"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [
+                {
+                    "original": "compare.flightconnections.com",
+                    "resolved": "compare.flightconnections.com.clicktripz.com"
+                },
+                {
+                    "original": "compare.thecrazytourist.com",
+                    "resolved": "compare.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "fe1b5c4dfe78dac270617c57d59358fcadc410276ac375e512543122e4e5dee4",
+                "6b3b9724c5dea4a691be02abca2aac5c48ba121d0f9b738f5c79975aff86f8c9",
+                "46436954dd3827ef7d7826d1cade8663531be19b31522f0a88898c74faffc124",
+                "282e4773c664f84a3861b23388ba320b902fbf1f21973b84b3f7319beca46fc8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ctpuid": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "flightconnections.com",
+                "www.flightconnections.com",
+                "www.mapquest.com",
+                "www.thecrazytourist.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/p7c\\/v1\\/pixel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "compare.flightconnections.com",
+                "api",
+                "compare.thecrazytourist.com"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [
+                {
+                    "original": "compare.flightconnections.com",
+                    "resolved": "compare.flightconnections.com.clicktripz.com"
+                },
+                {
+                    "original": "compare.thecrazytourist.com",
+                    "resolved": "compare.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "8e5db8cb545e7e3a97b1a02368802806a7abfb534594d16dcc8351c326444c73"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ctpuid": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "flightconnections.com",
+                "www.flightconnections.com",
+                "www.mapquest.com",
+                "www.thecrazytourist.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/asset\\/__adslot-bundle\\/b656472c045b7e29083c62c9539e1a82db4c56ad\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "compare-static.thecrazytourist.com",
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.appVersion": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Navigator.prototype.plugins": 1,
+                "Document.cookie getter": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Navigator.prototype.languages": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "window.screenX": 1,
+                "window.screenY": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "compare-static.thecrazytourist.com",
+                    "resolved": "compare-static.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "a55730228a92f75dbd0c3397fdaa8e3b6dd4e52cc5c0c48dfad1a27b935b2f63"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecrazytourist.com",
+                "www.travelgay.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "ay.delivery",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Fetch": 10,
+        "Ping": 5,
+        "Image": 5
+    },
+    "nameservers": [
+        "ns-300.awsdns-37.com",
+        "ns-940.awsdns-53.net",
+        "ns-1631.awsdns-11.co.uk",
+        "ns-1486.awsdns-57.org"
+    ]
+}

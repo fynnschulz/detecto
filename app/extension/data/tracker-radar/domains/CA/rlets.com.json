@@ -1,0 +1,195 @@
+{
+    "domain": "rlets.com",
+    "owner": {
+        "name": "Gannett Co., Inc.",
+        "displayName": "Gannett"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "e353a3ac-985b-4f06-84b5-f48c66d6a536",
+        "92382fb2-326e-416e-8f11-0ca5a782c673",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "rlets\\.com\\/static\\/storage\\.html",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "e353a3ac-985b-4f06-84b5-f48c66d6a536",
+                "92382fb2-326e-416e-8f11-0ca5a782c673"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "398ee5a42dce97f3140d48141a057f7f4d58efd212805ee18851e4d8a9cc588c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "rl_campaign": {
+                    "ttl": 8651,
+                    "length": 236,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "history_campaign": {
+                    "ttl": 315360011,
+                    "length": 164,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "history_referrer_type": {
+                    "ttl": 315360011,
+                    "length": 6,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                },
+                "last_activity_at": {
+                    "ttl": 315360011,
+                    "length": 13,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                },
+                "visitor_id": {
+                    "ttl": 315360011,
+                    "length": 36,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                },
+                "sifi_user_id": {
+                    "ttl": 315360011,
+                    "length": 32,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "visit_id": {
+                    "ttl": 315360011,
+                    "length": 36,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                },
+                "test": {
+                    "ttl": 86404,
+                    "length": 4,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mysask411.com",
+                "www.whitespot.ca"
+            ]
+        },
+        {
+            "rule": "rlets\\.com\\/capture_static\\/mms\\/capture\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "c0ec7287b361d247ac98148eb2fe9a3a515956b6d476efff3cb0332865dc783b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mysask411.com",
+                "www.whitespot.ca"
+            ]
+        },
+        {
+            "rule": "rlets\\.com\\/api\\/v1\\/visits",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "e353a3ac-985b-4f06-84b5-f48c66d6a536",
+                "92382fb2-326e-416e-8f11-0ca5a782c673"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mysask411.com",
+                "www.whitespot.ca"
+            ]
+        },
+        {
+            "rule": "rlets\\.com\\/api\\/v1\\/visits",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "e353a3ac-985b-4f06-84b5-f48c66d6a536",
+                "92382fb2-326e-416e-8f11-0ca5a782c673"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mysask411.com",
+                "www.whitespot.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Document": 2,
+        "Script": 2,
+        "XHR": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-1654.awsdns-14.co.uk",
+        "ns-709.awsdns-24.net",
+        "ns-1429.awsdns-50.org",
+        "ns-103.awsdns-12.com"
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "domain": "addin1.name",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "addin1\\.name\\/api\\/spots\\/234356",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "325d18db15a71e3234c832098aa9cde8fb73e3447862ce86d0b7a674f5d7d164"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "asgfp": {
+                    "ttl": 31536005,
+                    "length": 32,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "analdin.com",
+                "www.analdin.com"
+            ]
+        },
+        {
+            "rule": "addin1\\.name\\/api\\/click\\/11065188035278132115",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "analdin.com",
+                "www.analdin.com"
+            ]
+        },
+        {
+            "rule": "addin1\\.name\\/api\\/click\\/1981188359100483115",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "analdin.com",
+                "www.analdin.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Document": 2,
+        "Image": 4
+    },
+    "nameservers": [
+        "ns1.topdns.me",
+        "ns3.topdns.me",
+        "ns2.topdns.me"
+    ]
+}

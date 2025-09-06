@@ -1,0 +1,121 @@
+{
+    "domain": "se.trafficmanager.net",
+    "owner": {
+        "name": "Microsoft Corporation",
+        "displayName": "Microsoft",
+        "privacyPolicy": "https://privacy.microsoft.com/en-us/privacystatement",
+        "url": "http://microsoft.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00000684,
+    "sites": 1,
+    "subdomains": [
+        "api.forex"
+    ],
+    "cnames": [
+        {
+            "original": "api.forex.se",
+            "resolved": "api.forex.se.trafficmanager.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "se\\.trafficmanager\\.net\\/currency\\/exchangeRates\\/SWE-SEK-EGP\\/exchange\\/8000\\.000000",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.forex"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.forex.se",
+                    "resolved": "api.forex.se.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "80dbfbaccdc6bfccdb1b606025bfd60c0c86681dfaa9e7b109e4aa0ced034ba6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "forex.se",
+                "www.forex.se"
+            ]
+        },
+        {
+            "rule": "se\\.trafficmanager\\.net\\/currency\\/priceCategories",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.forex"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.forex.se",
+                    "resolved": "api.forex.se.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "fde7d2c79ac0c73f7a9d09b6fe4a1698f9f8d4a8aa3f094c6d61d095e7d6d111"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "forex.se",
+                "www.forex.se"
+            ]
+        },
+        {
+            "rule": "se\\.trafficmanager\\.net\\/currency\\/priceCategories",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.forex"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.forex.se",
+                    "resolved": "api.forex.se.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "forex.se",
+                "www.forex.se"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "azure.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "Preflight": 2
+    },
+    "nameservers": []
+}

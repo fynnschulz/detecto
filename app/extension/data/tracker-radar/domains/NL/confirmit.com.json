@@ -1,0 +1,147 @@
+{
+    "domain": "confirmit.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "digitalfeedback.us"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "confirmit\\.com\\/api\\/digitalfeedback\\/loader",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "digitalfeedback.us"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "09563b3e7b671a38954328cfa621c93b4a674d327216b5faa3edadc9e89d34dd",
+                "8db339b2d23e6fe32cfc5534964cb98c789ace7fcc889b2a8c74fb551b2fab12"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.lenovo.com",
+                "www.mcafee.com"
+            ]
+        },
+        {
+            "rule": "confirmit\\.com\\/api\\/digitalfeedback\\/loader\\/prod\\/program",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "digitalfeedback.us"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "ac0ebd61be254ce8390a0ba3e39273987b2b93c3f6f81f8b5ed9ae615e4eb4eb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.lenovo.com",
+                "www.mcafee.com"
+            ]
+        },
+        {
+            "rule": "confirmit\\.com\\/api\\/digitalfeedback\\/loader\\/prod\\/scenario",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "digitalfeedback.us"
+            ],
+            "apis": {
+                "window.sessionStorage": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "00e934c689cd4dd76f8da60b7fe9ecf4ebb5bd53f6b1a39cfec424b0692dcba2",
+                "3989b24fc39dcf295a8d1a3f528e64e0be9bb26fcb7f5dcbebc111a098b4f92a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "support.lenovo.com",
+                "www.mcafee.com"
+            ]
+        },
+        {
+            "rule": "confirmit\\.com\\/api\\/digitalfeedback\\/static\\/v33\\/intercept-survey\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "digitalfeedback.us"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9a5fbd58b25337834b01cadf961fe6ff6b7de4fcb3c98382a31cdcf10f392318"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.mcafee.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.6111111111111112
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2777777777777778
+        },
+        {
+            "domain": "static.pub",
+            "prevalence": 0.05555555555555555
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.05555555555555555
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "XHR": 3
+    },
+    "nameservers": [
+        "udns2.cscdns.uk",
+        "udns1.cscdns.net"
+    ]
+}

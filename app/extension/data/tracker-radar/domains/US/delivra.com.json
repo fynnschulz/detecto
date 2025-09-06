@@ -1,0 +1,165 @@
+{
+    "domain": "delivra.com",
+    "owner": {
+        "name": "Delivra",
+        "displayName": "Delivra"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000958,
+    "sites": 14,
+    "subdomains": [
+        "integration"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "delivra\\.com\\/tracking\\/cs\\/v3\\/dltr\\.js",
+            "cookies": 0.0000547,
+            "fingerprinting": 1,
+            "subdomains": [
+                "integration"
+            ],
+            "apis": {
+                "Document.cookie getter": 8,
+                "Document.cookie setter": 8
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "2ab629806d2e514655044615f2cad80bef3d80e516d7413856b618de6f77bdff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "dlv-suid": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 1
+                },
+                "dlv-leadlandurl": {
+                    "ttl": null,
+                    "length": 55,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 1
+                },
+                "dlv-leadft": {
+                    "ttl": 31536004,
+                    "length": 19,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 0.125
+                },
+                "dlv-leadlt": {
+                    "ttl": null,
+                    "length": 19,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 0.125
+                },
+                "dlv-auid": {
+                    "ttl": 31536004,
+                    "length": 36,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aacreditunion.org",
+                "www.calranch.com",
+                "www.centier.com",
+                "www.coastalcountry.com",
+                "www.corrections1.com",
+                "www.firstflorida.org",
+                "www.mint.ca",
+                "www.northshorecare.com",
+                "www.qu.edu"
+            ]
+        },
+        {
+            "rule": "delivra\\.com\\/tracking\\/cs\\/v3\\/PageView\\.ashx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "integration"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aacreditunion.org",
+                "www.calranch.com",
+                "www.centier.com",
+                "www.coastalcountry.com",
+                "www.corrections1.com",
+                "www.firstflorida.org",
+                "www.mint.ca",
+                "www.northshorecare.com",
+                "www.qu.edu"
+            ]
+        },
+        {
+            "rule": "delivra\\.com\\/tracking\\/default\\.aspx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "integration"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5a39c8b5678b3c5da451e882b0c3df49032e7df7b2e8bfc9a91efc5b79f51423"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "harvard.edu",
+                "www.health.harvard.edu"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.2692307692307692
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.19230769230769232
+        },
+        {
+            "domain": "onlineaccess1.com",
+            "prevalence": 0.038461538461538464
+        }
+    ],
+    "types": {
+        "Script": 11,
+        "XHR": 9
+    },
+    "nameservers": [
+        "ns0.dnsmadeeasy.com",
+        "ns1.dnsmadeeasy.com",
+        "ns2.dnsmadeeasy.com",
+        "ns3.dnsmadeeasy.com",
+        "ns4.dnsmadeeasy.com"
+    ]
+}

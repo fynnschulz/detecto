@@ -1,0 +1,90 @@
+{
+    "domain": "storifyme.xyz",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "storifyme\\.xyz\\/static\\/web-components\\/storifyme-elements-v2\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "15322e36a38c84f7d3dec592d4cebf4933c6977f982b16c5e5f1f4692f48f4ec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smh.com.au",
+                "www.usmagazine.com"
+            ]
+        },
+        {
+            "rule": "storifyme\\.xyz\\/widgets\\/us-weekly-6482746\\/widget\\/custom\\/8543",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "98f87619ff7124d7655ed9c5ab30fad8ca37cf1b511b692c44b547f49b91ab3a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usmagazine.com",
+                "www.usmagazine.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6153846153846154
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.23076923076923078
+        },
+        {
+            "domain": "storifyme.com",
+            "prevalence": 0.07692307692307693
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.07692307692307693
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "coco.ns.cloudflare.com",
+        "will.ns.cloudflare.com"
+    ]
+}

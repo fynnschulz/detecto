@@ -1,0 +1,96 @@
+{
+    "domain": "lfeeder.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "tr-rc",
+        "tr",
+        "sc"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "lfeeder\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr-rc",
+                "tr"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f4eef8263281c0b26486637831251059757bc3fdc4c3a48045a8ef8646b36e8f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e-greenelectrical.com.au",
+                "www.fitnesspassport.com.au",
+                "www.framer.com",
+                "www.searchenginejournal.com"
+            ]
+        },
+        {
+            "rule": "lfeeder\\.com\\/lftracker_v1_ywVkO4XBvJ18Z6Bj\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sc"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "41c856846c4940160ce69e960be8716b6a3688d5381f656dbf1500573f45488c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_lfa": {
+                    "ttl": 31536026,
+                    "length": 36,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "framer.com",
+                "www.framer.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Image": 4,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-381.awsdns-47.com",
+        "ns-859.awsdns-43.net",
+        "ns-1285.awsdns-32.org",
+        "ns-1972.awsdns-54.co.uk"
+    ]
+}

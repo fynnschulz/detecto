@@ -1,0 +1,156 @@
+{
+    "domain": "seeds.no",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "kommunikasjon.stats",
+        "rfd.stats",
+        "stats",
+        "vetinst.stats"
+    ],
+    "cnames": [
+        {
+            "original": "stats.kommunikasjon.no",
+            "resolved": "kommunikasjon.stats.seeds.no"
+        },
+        {
+            "original": "stats.rfd.no",
+            "resolved": "rfd.stats.seeds.no"
+        },
+        {
+            "original": "stats.senterpartiet.no",
+            "resolved": "stats.seeds.no"
+        },
+        {
+            "original": "stats.vetinst.no",
+            "resolved": "vetinst.stats.seeds.no"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "seeds\\.no\\/matomo\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "kommunikasjon.stats",
+                "rfd.stats",
+                "stats",
+                "vetinst.stats"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [
+                {
+                    "original": "stats.kommunikasjon.no",
+                    "resolved": "kommunikasjon.stats.seeds.no"
+                },
+                {
+                    "original": "stats.rfd.no",
+                    "resolved": "rfd.stats.seeds.no"
+                },
+                {
+                    "original": "stats.senterpartiet.no",
+                    "resolved": "stats.seeds.no"
+                },
+                {
+                    "original": "stats.vetinst.no",
+                    "resolved": "vetinst.stats.seeds.no"
+                }
+            ],
+            "responseHashes": [
+                "43a30b0a08ad6845c9a514a8945ac5eac93966af235d0a0de0ee4e234d8b444c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kommunikasjon.no",
+                "www.rfd.no",
+                "www.senterpartiet.no",
+                "www.vetinst.no"
+            ]
+        },
+        {
+            "rule": "seeds\\.no\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rfd.stats",
+                "stats"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "stats.rfd.no",
+                    "resolved": "rfd.stats.seeds.no"
+                },
+                {
+                    "original": "stats.senterpartiet.no",
+                    "resolved": "stats.seeds.no"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rfd.no",
+                "www.rfd.no",
+                "www.senterpartiet.no"
+            ]
+        },
+        {
+            "rule": "seeds\\.no\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rfd.stats",
+                "stats"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "stats.rfd.no",
+                    "resolved": "rfd.stats.seeds.no"
+                },
+                {
+                    "original": "stats.senterpartiet.no",
+                    "resolved": "stats.seeds.no"
+                }
+            ],
+            "responseHashes": [
+                "42c52ce2b36dd31e5cfa3375ab23a23a19f3f094eec33e796ccc3ef78ed43970"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rfd.no",
+                "www.senterpartiet.no"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "types": {
+        "Script": 6,
+        "Ping": 3
+    },
+    "nameservers": [
+        "aragorn.ns.cloudflare.com",
+        "arya.ns.cloudflare.com"
+    ]
+}

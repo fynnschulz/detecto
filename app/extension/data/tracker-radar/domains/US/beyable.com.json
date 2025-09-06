@@ -1,0 +1,270 @@
+{
+    "domain": "beyable.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000547,
+    "sites": 8,
+    "subdomains": [
+        "tag",
+        "front.activation",
+        "front.lytics"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "beyable\\.com\\/api\\/beYableJSv2-mrbricolage\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ade0d29caeadcc931121e0b4cf0a741dd55043991c438214f6f53cd09fc3b24d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "beyable-TrackingId": {
+                    "ttl": 34128011,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "beyable-MustBeDisplayed": {
+                    "ttl": 34128011,
+                    "length": 4,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "aaaaaaaaafd14d2ab4c994c6d84d05da67d9a7cde": {
+                    "ttl": 1811,
+                    "length": 149,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "undefined_v": {
+                    "ttl": 34128011,
+                    "length": 35,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "aaaaaaaaaf2c16875d9fd47e5a87c5900f875c6cf": {
+                    "ttl": 1811,
+                    "length": 149,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mr-bricolage.fr",
+                "magasin.mr-bricolage.fr"
+            ]
+        },
+        {
+            "rule": "beyable\\.com\\/api\\/v2\\/displays",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "front.activation"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "d8eb26c86ac3092be44219c097cb537669e1e3b653c73014611d37cb9639c33b",
+                "841e88af73827cf6d0ccc843eddcf6b93133de494c3546ad010371c23f03fc97"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "beyable-TrackingId": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "mr-bricolage.fr",
+                "magasin.mr-bricolage.fr",
+                "www.specialchem.com"
+            ]
+        },
+        {
+            "rule": "beyable\\.com\\/api\\/beYableJS-analytics\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3,
+                "Navigator.prototype.webdriver": 3,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
+                "Navigator.prototype.language": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "f16560393b5ba226601d40eece81c2bce9cfd7e8bcffc6e8a181f96d03afa62c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_bey_id": {
+                    "ttl": 33696008,
+                    "length": 32,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bricocash.fr",
+                "www.bricomarche.com",
+                "www.bricorama.fr"
+            ]
+        },
+        {
+            "rule": "beyable\\.com\\/v1\\/api\\/pageview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "front.lytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "1c6cb5039b9506658186e28d93e6bec1e02206e5647bc70360794a69bda487e9",
+                "8d289e43e9fa93fe2135e39688fdf41dac9d72f6e808065006c3a3f8b8983461"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bricocash.fr",
+                "www.bricomarche.com",
+                "www.bricorama.fr"
+            ]
+        },
+        {
+            "rule": "beyable\\.com\\/v1\\/api\\/pageview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "front.lytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bricocash.fr",
+                "www.bricomarche.com",
+                "www.bricorama.fr"
+            ]
+        },
+        {
+            "rule": "beyable\\.com\\/api\\/beYableJSvnext-notracking\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.innerHeight": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7289dd4fd06006efb2b668d4afd5c0ed5210df3aa89cdfa9d45c8090285e7005"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "la-spa.fr",
+                "www.lafoirfouille.fr"
+            ]
+        },
+        {
+            "rule": "beyable\\.com\\/apiwithnotracking\\/v2\\/displayswithnotracking",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "front.activation"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "540b085dd173da654ad81e5cf48bb00fe0dde0c1358cd097121e3f93714ddf0d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "la-spa.fr",
+                "www.lafoirfouille.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000479,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5833333333333334
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "get-potions.com",
+            "prevalence": 0.08333333333333333
+        }
+    ],
+    "types": {
+        "Script": 12,
+        "XHR": 3,
+        "Preflight": 3
+    },
+    "nameservers": [
+        "dns200.anycast.me",
+        "ns200.anycast.me"
+    ]
+}

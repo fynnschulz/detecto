@@ -1,0 +1,162 @@
+{
+    "domain": "marker.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "edge",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "marker\\.io\\/latest\\/shim\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "519168dd0b7aa6e5593c5f2ac75c1edcc57f50199282c5c3c906c395d985a318"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefarmersdogpub.com",
+                "www.healthcareers.nhs.uk",
+                "www.powerland.co.uk"
+            ]
+        },
+        {
+            "rule": "marker\\.io\\/latest\\/2\\.v2\\.30\\.0\\.714b4da18575a1ac7d06\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "edge"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Event.prototype.timeStamp": 3,
+                "window.localStorage": 3,
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "2b90652963f55661863dc50926ee658f83303f600e0c1848ef65fe4abcbca562"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefarmersdogpub.com",
+                "www.healthcareers.nhs.uk",
+                "www.powerland.co.uk"
+            ]
+        },
+        {
+            "rule": "marker\\.io\\/latest\\/3\\.v2\\.30\\.0\\.574dcb3275f221a97ce4\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "edge"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "9db2e8e0cdc7fa307db61ad68d92b8cfffe6d26006824d260969de37313b084d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefarmersdogpub.com",
+                "www.healthcareers.nhs.uk",
+                "www.powerland.co.uk"
+            ]
+        },
+        {
+            "rule": "marker\\.io\\/widget\\/ping",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "c2db8b71d618ab6493095cba873576bf2278a6d474f492d9b22c98ddab58c9ad",
+                "85c7261166de8325cdb70792d356e733331243b6401aabb8d5073c27534daf63"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefarmersdogpub.com",
+                "www.healthcareers.nhs.uk",
+                "www.powerland.co.uk"
+            ]
+        },
+        {
+            "rule": "marker\\.io\\/widget\\/ping",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefarmersdogpub.com",
+                "www.healthcareers.nhs.uk",
+                "www.powerland.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Fetch": 3,
+        "Preflight": 3
+    },
+    "nameservers": [
+        "cody.ns.cloudflare.com",
+        "lara.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "domain": "makestories.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000752,
+    "sites": 11,
+    "subdomains": [
+        "js",
+        "apis.v2"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "makestories\\.io\\/player\\/StoryPlayer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "window.innerWidth": 6,
+                "window.localStorage": 1
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "4ba4ca06f7576776b4859a031d4587ee3c3a6e5593833eeb9a69427ddcd1ed63"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bighomeprojects.com",
+                "crestsandarms.com",
+                "thewandererindia.com",
+                "thewildtrek.com",
+                "www.elcomercio.com",
+                "www.minimalismmadesimple.com",
+                "www.pulse.ng"
+            ]
+        },
+        {
+            "rule": "makestories\\.io\\/widget\\/e2fe4291-5887-44ec-8b96-611b6591e290\\/stories",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apis.v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pulse.ng",
+                "www.pulse.ng"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "nick.ns.cloudflare.com",
+        "molly.ns.cloudflare.com"
+    ]
+}

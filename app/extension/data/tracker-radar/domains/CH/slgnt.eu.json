@@ -1,0 +1,185 @@
+{
+    "domain": "slgnt.eu",
+    "owner": {
+        "name": "Selligent",
+        "displayName": "Selligent"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000804,
+    "sites": 8,
+    "subdomains": [
+        "loro",
+        "ashampoo",
+        "fenix",
+        "lindt",
+        "unhcr",
+        "site-see",
+        "edidomus",
+        "ovh"
+    ],
+    "cnames": [
+        {
+            "original": "web.loro.ch",
+            "resolved": "loro.slgnt.eu"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "slgnt\\.eu\\/optiext\\/webtracker\\.dll",
+            "cookies": 0.000502,
+            "fingerprinting": 1,
+            "subdomains": [
+                "loro",
+                "ashampoo",
+                "fenix",
+                "lindt",
+                "unhcr"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [
+                {
+                    "original": "web.loro.ch",
+                    "resolved": "loro.slgnt.eu"
+                }
+            ],
+            "responseHashes": [
+                "2bab728483f61ebaa8b3f35ef0d18f9196473eeea34a4725815b0174bdf78c97",
+                "b5f698262d8d676b6bdc8c0be42849740af839799ab679e6cbc6cc4a448c5d9d",
+                "362212db3e33acce3f5fd09c2457866211fb526467a3c4003b1e0738d68d89df",
+                "0cdc14231a0971b39bba92cc183ce5d5318b260c92472f5d62aba7651d77830b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "m_ses": {
+                    "ttl": null,
+                    "length": 14,
+                    "prevalence": 0.00040192926045016077,
+                    "uniqueness": 1
+                },
+                "m_cnt": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00040192926045016077,
+                    "uniqueness": 0.25
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loro.ch",
+                "www.ashampoo.com",
+                "www.fjallraven.com",
+                "www.lindt.ch",
+                "www.unhcr.org"
+            ]
+        },
+        {
+            "rule": "slgnt\\.eu\\/frontend\\/api\\/track",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-see"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "8006461ddbbb58532718fcad02d0b9bcff19438a90de88ec08bea9c22c2359a7",
+                "3cc1f6f0ba68e1387f69e82df5b06cd72dcab9f7a38316b27deb22dcdff32d09"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loro.ch",
+                "www.cucchiaio.it",
+                "www.gifi.fr"
+            ]
+        },
+        {
+            "rule": "slgnt\\.eu\\/frontend\\/api\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-see"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loro.ch",
+                "www.cucchiaio.it",
+                "www.gifi.fr"
+            ]
+        },
+        {
+            "rule": "slgnt\\.eu\\/optiext\\/optiextension\\.dll",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edidomus",
+                "ovh"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cucchiaio.it",
+                "www.ovhcloud.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000804,
+    "topInitiators": [
+        {
+            "domain": "windows.net",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.1875
+        },
+        {
+            "domain": "usercentrics.eu",
+            "prevalence": 0.0625
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Fetch": 3,
+        "Preflight": 3,
+        "Document": 2
+    },
+    "nameservers": [
+        "ns11.dnsmadeeasy.com",
+        "ns10.dnsmadeeasy.com",
+        "ns15.dnsmadeeasy.com",
+        "ns14.dnsmadeeasy.com",
+        "ns12.dnsmadeeasy.com",
+        "ns13.dnsmadeeasy.com"
+    ]
+}

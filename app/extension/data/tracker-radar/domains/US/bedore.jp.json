@@ -1,0 +1,214 @@
+{
+    "domain": "bedore.jp",
+    "owner": {
+        "name": "PKSHA Technology Inc.",
+        "displayName": "PKSHA"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "webagent",
+        "webagent.paypay",
+        "webswitcher",
+        "image"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "bedore\\.jp\\/init\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webagent",
+                "webagent.paypay"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "1d3396f070c792fc4fb980e43a094094f4e0a7e4e8ec8803efd3a6d1a3f04fad",
+                "6b196ad1344bd9e9fd59ea8283332647174fdecebcdbb82e41eb2c017e225d6e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "expy.jp",
+                "paypay.ne.jp",
+                "www.aeon.co.jp",
+                "www.city.kobe.lg.jp",
+                "www.donki.com"
+            ]
+        },
+        {
+            "rule": "bedore\\.jp\\/conf\\/default\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webagent",
+                "webagent.paypay"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "3aac61699f13829a63e57ee0d3addb1db6300ea1168c9ee05233f81ce70157fa",
+                "ca76cb6b2746e2e51814a3ae79c2c6e3d334701fcf2a7d8901206842601da56a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "expy.jp",
+                "paypay.ne.jp",
+                "www.aeon.co.jp",
+                "www.city.kobe.lg.jp",
+                "www.donki.com"
+            ]
+        },
+        {
+            "rule": "bedore\\.jp\\/7\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "webagent",
+                "webagent.paypay"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.product": 5,
+                "window.localStorage": 5,
+                "Document.cookie getter": 5,
+                "NavigatorUAData.prototype.getHighEntropyValues": 4,
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.language": 4,
+                "window.innerWidth": 4,
+                "Screen.prototype.height": 4,
+                "Screen.prototype.width": 4,
+                "window.innerHeight": 4,
+                "Date.prototype.getTimezoneOffset": 1
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "097be180bc9c15eb06b182d614d7a42873f0bdf375c277c62a91ecc197699511",
+                "b0a65591e97f8f939d205779f7c9b3fe57e8b21a40f6eadfac59c61648489478"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "expy.jp",
+                "paypay.ne.jp",
+                "www.aeon.co.jp",
+                "www.city.kobe.lg.jp",
+                "www.donki.com"
+            ]
+        },
+        {
+            "rule": "bedore\\.jp\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webswitcher"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "expy.jp",
+                "www.aeon.co.jp",
+                "www.city.kobe.lg.jp"
+            ]
+        },
+        {
+            "rule": "bedore\\.jp\\/c98e9225-b7e9-40d4-9f5e-88828a997389\\/cee3fa76-f9a1-460b-88b3-68099373e01b\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5478e16614ce40d8a4354100b78062639090935b6a4264fa75ddd7929aeef015"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aeon.co.jp",
+                "www.aeon.co.jp"
+            ]
+        },
+        {
+            "rule": "bedore\\.jp\\/dc906672-d5a2-4684-9848-d89595a6d0ef\\/459b91a6-cf8a-4086-8207-55d0b4159c63\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6b58156904d40df5be0c92958b1a322d95c08ac1e8c52fad8443db55ba8cc759"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kobe.lg.jp",
+                "www.city.kobe.lg.jp"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "ppih.co.jp",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "Fetch": 5,
+        "WebSocket": 3,
+        "Image": 4
+    },
+    "nameservers": [
+        "ns-1795.awsdns-32.co.uk",
+        "ns-116.awsdns-14.com",
+        "ns-1395.awsdns-46.org",
+        "ns-869.awsdns-44.net"
+    ]
+}

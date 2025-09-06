@@ -1,0 +1,2947 @@
+{
+    "domain": "crisp.chat",
+    "owner": {
+        "name": "Crisp IM SARL",
+        "displayName": "Crisp IM"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00114,
+    "sites": 166,
+    "subdomains": [
+        "client",
+        "image",
+        "client.relay"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "crisp\\.chat\\/l\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 115,
+                "Date.prototype.getTimezoneOffset": 118,
+                "Navigator.prototype.languages": 115,
+                "Navigator.prototype.appVersion": 115,
+                "Navigator.prototype.mediaDevices": 110,
+                "window.innerWidth": 114,
+                "window.innerHeight": 111,
+                "Navigator.prototype.cookieEnabled": 114
+            },
+            "sites": 119,
+            "prevalence": 0.000814,
+            "cnames": [],
+            "responseHashes": [
+                "9ad6ffd9c5b7e8c58ba2d98eb877b3bb70829372d04ead94835f5ac740c62188"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plisio.net",
+                "theseedconnect.com",
+                "aieasypic.com",
+                "blog.anyleads.com",
+                "skinsmonkey.com",
+                "www.businessclass.com",
+                "taboo.tv",
+                "www.umc.org",
+                "taos.org",
+                "atlasgunworks.com",
+                "www.rockislandauction.com",
+                "www.makegirl.ai",
+                "www.icliniq.com",
+                "osrsmoneymaking.guide",
+                "whoisfreaks.com",
+                "arnzenarms.com",
+                "everglades.farm",
+                "zeemo.ai",
+                "dmarcly.com",
+                "contentstudio.io"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/javascripts\\/client\\.js",
+            "cookies": 0.000752,
+            "fingerprinting": 3,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {
+                "HTMLMediaElement.prototype.canPlayType": 118,
+                "Navigator.prototype.platform": 119,
+                "Navigator.prototype.mediaDevices": 113,
+                "MediaDevices.prototype.enumerateDevices": 113,
+                "Navigator.prototype.maxTouchPoints": 119,
+                "Date.prototype.getTime": 119,
+                "Document.cookie getter": 118,
+                "Navigator.prototype.product": 118,
+                "window.sessionStorage": 118,
+                "window.localStorage": 118,
+                "Document.cookie setter": 110,
+                "window.innerHeight": 115,
+                "window.innerWidth": 115,
+                "Navigator.prototype.userAgent": 1,
+                "KeyboardEvent.prototype.keyCode": 3,
+                "Navigator.prototype.doNotTrack": 3
+            },
+            "sites": 119,
+            "prevalence": 0.000814,
+            "cnames": [],
+            "responseHashes": [
+                "908d3adfe003180e67f6ae45be1527dadeff8e045de865e964dd512c273c2967"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "crisp-client%2Fsession%2Fe103dd2f-a8f6-4b0b-b2e4-0474e0c05f40": {
+                    "ttl": 15768003,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fa450ebf9-a452-413f-8358-3fd2ba62b32b": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F3cbe9701-e380-4845-92f6-b9f1125fb6b4": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F12b2fdcd-413a-4665-8e74-4315dc031e0f": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F4c994fda-f533-47aa-bcde-decd575a879d": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F58d2712f-ff0b-4ebe-9755-b9fa85f1cef0": {
+                    "ttl": 15768003,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F3d62323b-9f5a-4db1-bb50-aa029dfc4419": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F62898f29-37b1-4c6b-9317-b637fd286ec8": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F2dc87a17-fcbe-4c6b-ac38-cbd56e9e2376": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Ff208d599-079d-41e6-9964-1c1a1fcb9c4f": {
+                    "ttl": 15768012,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F3b789ce4-6075-481a-8e10-a7400520bae3": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fec286dac-e0e6-45e3-940f-b69cb0d0a9e7": {
+                    "ttl": 15768003,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F3d4db135-358c-4f80-9f58-5b73115122b4": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F97574406-45de-4d56-82bd-cd1c8fee6cbf": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F30544868-da78-4c75-9599-f5ad332031d3": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F7b0c2919-62e6-45f9-b898-828ef5bbf6f2": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F4da20f89-7307-431c-8d34-76f813560ffb": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F6f248082-7402-4dbe-a052-718e3e63a1aa": {
+                    "ttl": 15768013,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F732175c7-3524-44a0-a94c-d3235e14e1d5": {
+                    "ttl": 15768002,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Ff37067ce-24a1-46b2-9290-142d081abd31": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F43e2c30f-06b5-4e74-b684-c6a8dd8374c9": {
+                    "ttl": 15768009,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2F93a86f61-01b4-4185-86b9-99ddcd746bc8": {
+                    "ttl": -1755349291,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F93a86f61-01b4-4185-86b9-99ddcd746bc8": {
+                    "ttl": 1,
+                    "length": 9,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F63598683-e74a-459d-8c89-8637fa85e247": {
+                    "ttl": 15768017,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F5c93f976-e863-41a0-9ad8-3e80ef6e5d35": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fa896e8bb-93d5-4f3a-bbec-b80bbde5bbf4": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fcdfb9054-1a9e-43f8-8888-33f42869f76a": {
+                    "ttl": 15768020,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fd20120ec-5114-45f3-b820-27dff5e57837": {
+                    "ttl": 15768003,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fb3c3ceb9-78c2-4e48-b2b8-24bdb0ead741": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fc3f7f49d-fc19-4527-8e99-1689ad4ce09d": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2Fc3f7f49d-fc19-4527-8e99-1689ad4ce09d": {
+                    "ttl": 608,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F973ee6c1-de6a-4947-863f-cab6a6396176": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F4735b150-22e1-4670-82df-2a1ae4bbb2cf": {
+                    "ttl": 15768009,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F2d324191-a86e-45b0-bc6b-53677f34b1c4": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F16e453e8-f0c6-490d-8be5-ff3c860d94c0": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F44d2a7f7-07ad-4dfb-8c30-fe794fc2a392": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F43e39921-c6c9-4db9-86ae-a4a1a1c6f8fa": {
+                    "ttl": 15768015,
+                    "length": 44,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F02aa9b53-fc37-4ca7-954d-7a99fb3393de": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fcbf214ca-92d8-485b-9286-6dc24c8d5a9d": {
+                    "ttl": 15768009,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2Fcbf214ca-92d8-485b-9286-6dc24c8d5a9d": {
+                    "ttl": 609,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F34577866-774a-4c56-91bb-7bc0080f548e": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F391b7598-49de-45af-be8f-8918ca7a2735": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2F391b7598-49de-45af-be8f-8918ca7a2735": {
+                    "ttl": 605,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fe6bcdb67-7133-49e6-b0ab-729f79fd455e": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F4cbadfa0-065f-42d7-a374-1a089c172cf8": {
+                    "ttl": 15768014,
+                    "length": 44,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F117215d5-19e8-48b6-8ae0-e3ff96d6f5b8": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fa8f73b18-9994-4e49-8ce0-aa35b0f8717c": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F8582e868-5611-4536-8897-51c0c51cc840": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fd7f86e1f-73fd-44a4-a0a7-fc8bb0543f55": {
+                    "ttl": 15768010,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fc65b3c05-d915-4ebe-a091-3a9d4d62bcb5": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fd4d56454-8015-41fb-9373-a6c849749131": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F687915a9-2e5d-4c3b-b75d-283cf56836d9": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fb0db9de1-4b9a-4cea-b2a6-8b539bf0ea4b": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F29eaece3-d1c8-46f5-88a7-aedf754953bd": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F548865b7-9b9b-4004-ac3d-f63e34974659": {
+                    "ttl": 15768009,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F767b8264-f46e-47ad-b311-1a03fe2af86b": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F846e7116-4b55-41e1-879f-090df46793d3": {
+                    "ttl": 15768009,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F561ccd50-e11d-4181-b3e4-e8a40fd7d9da": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2F561ccd50-e11d-4181-b3e4-e8a40fd7d9da": {
+                    "ttl": 172811,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fb5d826ce-0153-4705-b1d5-bb16c3d3fb2a": {
+                    "ttl": 15768009,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F97aa307f-dd46-4a60-ab53-398c8b29980b": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F5ff773a3-ef0f-483f-a204-82866b392f21": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F2454d40d-81d4-46b0-87cd-324247880fbf": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Feec3062c-ceb7-40bc-8de0-78d3f92cbdbd": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F4e1ff683-edd9-4793-a19d-442d18f07bc8": {
+                    "ttl": 15768014,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fe6f4a1e7-86c6-42a1-a6a8-fab86eba7059": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F47aae147-8c5f-4771-904c-64fa151962c3": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fdb836005-83da-409d-8d23-59da4dea55af": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fa5e30a41-d9ce-4191-be8a-a540abb8df07": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F2fb99264-3b30-4659-adb6-962e615f016a": {
+                    "ttl": 15768019,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fa944d74c-206f-485a-bb22-8e38fda57665": {
+                    "ttl": 15768026,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F9e2619ed-344c-43b3-b017-35265471f9f2": {
+                    "ttl": 15768006,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F2b4fa56b-c47c-48c4-9a4c-db6ca7684268": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F0b83d4b5-3201-4f0e-8359-d80f7ae0d4d5": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fc9586cfd-6f63-42d0-b741-e38b297c6313": {
+                    "ttl": 15768011,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F3ee3a405-d6c0-45af-87ee-9ea79da387b0": {
+                    "ttl": 15768009,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2F3ee3a405-d6c0-45af-87ee-9ea79da387b0": {
+                    "ttl": 609,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F44c8628b-aae9-45eb-98f2-c4db5eea6088": {
+                    "ttl": 15768010,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F7d35961b-baac-4b1b-b61d-b616a68cebe0": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F7303d158-f836-4f74-b592-3906c2e19b31": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F7d40299f-4001-49e2-9294-d7a501b33028": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2F7d40299f-4001-49e2-9294-d7a501b33028": {
+                    "ttl": 172809,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F559e5016-e65c-4ec6-b550-0295d3d0042d": {
+                    "ttl": 15768010,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F4da84c64-b8be-446c-9edc-be1aca1152d5": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fcd30e8c4-1679-46ad-a123-5ca7be5fc481": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F25de3f97-d147-447d-840d-5a4e8c18c518": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F86d7c7be-1457-4da8-bd07-0b2588a4b8af": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Ff47af669-d515-4747-98d1-491067b5cdc5": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F71c822a9-03a4-4f4d-a852-2ebbf2881b18": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F8e2d4610-4065-41e8-8581-0ada71f642f2": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fac4f49ab-752b-4fd2-9c55-ae1e5fca7f9a": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Facdc1fd1-8e1e-4133-b909-04461eea9247": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F540a6247-3e2e-43cd-8221-d6c4fefd267b": {
+                    "ttl": 36005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F48216ffb-3cf8-45cf-8491-34e5fa45dc88": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2F48216ffb-3cf8-45cf-8491-34e5fa45dc88": {
+                    "ttl": 172807,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F5f6775a4-dfb3-4f49-a992-7f1183d6802e": {
+                    "ttl": 15768018,
+                    "length": 44,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F8d76a183-5360-4a54-a71e-0b092af5d96a": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fa4685f43-8022-4142-b9cb-b786c6628a92": {
+                    "ttl": 15768012,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2Fa4685f43-8022-4142-b9cb-b786c6628a92": {
+                    "ttl": 612,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fff3e51a2-da3d-4b4b-934d-7c0bf03df088": {
+                    "ttl": 15768018,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F228076e4-da91-4abb-b1ac-e9ecacfb4cda": {
+                    "ttl": 15768007,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fa2ad7025-0024-4c0b-82d7-081fb15713c1": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fee223f08-33b2-44ef-ae0e-5f7509406cc2": {
+                    "ttl": 15768009,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F99d33d31-6c5b-4401-b4c8-4b22e91474ca": {
+                    "ttl": 15768013,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsocket%2F99d33d31-6c5b-4401-b4c8-4b22e91474ca": {
+                    "ttl": -1755254481,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2Fc221bf12-8661-4e87-98c5-e0fc3b3e9ee5": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F52c76188-9551-40ee-875b-3be84c518417": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F4800a278-926c-4c0c-883c-be08768a5ae6": {
+                    "ttl": 15768005,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F82eb739a-248b-4393-984b-f41d1133c5cb": {
+                    "ttl": 15768004,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F13b9b371-6484-4d30-a274-54e01f1e9da4": {
+                    "ttl": 15768010,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F44af3fd8-bd25-456d-b27b-0cee1fae23e5": {
+                    "ttl": 15768012,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F73da16f8-bfb2-4bb1-af74-c59c7efa7110": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F32d3ddb1-edee-460a-9095-74a7c7e8ddf7": {
+                    "ttl": 15768013,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "crisp-client%2Fsession%2F35b3019c-e0e6-4cb1-9411-acce947093b4": {
+                    "ttl": 15768008,
+                    "length": 44,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.calilio.com",
+                "www.lightbulbs.com",
+                "gogograndparent.com",
+                "dicloak.com",
+                "www.levoyageanantes.fr",
+                "videotube.ai",
+                "www.resourceumc.org",
+                "fliki.ai",
+                "poolweb.com",
+                "www.optery.com",
+                "theseedconnect.com",
+                "www.blackpoolpleasurebeach.com",
+                "vdownloader.com",
+                "osrsmoneymaking.guide",
+                "a1solarstore.com",
+                "audiocleaner.ai",
+                "pixeldojo.ai",
+                "www.burmanshealthshop.com",
+                "contentstudio.io",
+                "characterhub.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/stylesheets\\/client_legacy\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 119,
+            "prevalence": 0.000814,
+            "cnames": [],
+            "responseHashes": [
+                "403e18fa528f46d543b7b9304d60d5996cf4d9b258a3d97a06bf5d65dc340ad0"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dietmenus.com",
+                "skinsmonkey.com",
+                "www.tryparrotai.com",
+                "blog.accountinghelpline.com",
+                "theseedconnect.com",
+                "aifaceswap.io",
+                "www.lightbulbs.com",
+                "image.galaxy.ai",
+                "litcommerce.com",
+                "visittallinn.ee",
+                "vdownloader.com",
+                "mishimoto.com",
+                "privacybee.com",
+                "www.roomsketcher.com",
+                "extract.pics",
+                "notegpt.io",
+                "docs.litellm.ai",
+                "deepimg.ai",
+                "zefame.com",
+                "www.nesco.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/javascripts\\/locales\\/en\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 113,
+            "prevalence": 0.000773,
+            "cnames": [],
+            "responseHashes": [
+                "055ca2eeb54c30350a3e8db5a5041c15ac7d5e854135ab9a0b9e85d820dab319"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "us.filofax.com",
+                "atlasgunworks.com",
+                "aeroleads.com",
+                "cartpanda.com",
+                "dietmenus.com",
+                "www.golfsub70.com",
+                "characterhub.com",
+                "www.namehero.com",
+                "idcardbuilder.net",
+                "www.visitalbuquerque.org",
+                "osrsmoneymaking.guide",
+                "www.lightbulbs.com",
+                "image.galaxy.ai",
+                "zeemo.ai",
+                "galaxy.ai",
+                "www.canadadrugsdirect.com",
+                "www.projectexpedition.com",
+                "www.woodworkingshop.com",
+                "www.calilio.com",
+                "reedsy.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/process\\/thumbnail\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 25,
+            "prevalence": 0.000171,
+            "cnames": [],
+            "responseHashes": [
+                "d6253a1378d832b37f1604a9f29e47a53eaa106350def761e51448b6b97a2524",
+                "56ac6724d3adbc64798a2f6e098b6e69ef5a51786d1ac52a45aef2260b5fcb8a",
+                "2d8ed2c905bbc6581e27e2bfdb8bcb2210248a5d1bb57585ca8d8aeada4c0e48",
+                "5f894ea907c70907a1200f478f7127c76e117a6c973c3871849e404eed4a3d2b",
+                "0915e0e084b3688aed566b7e3597c9d26a0609250ab59bed6d77d44a5db3a7fa",
+                "3c2878119d98b4606da4955c9df2d4427107404754bbace7c24f97016e6dcd6e",
+                "bc46926b7cc9b0cf5177db9184768613d763f15f0b53ebd431c52c8e77776161",
+                "0506c3c6c650fb248f218b6115462f2909052fced5707de33ceeccc83d85bd82",
+                "91c9f1da33362600b9bfb98495b7ae9c9298375f751b3fcfa843bfc9a126ba79",
+                "35000680c0e278ab95c837ee90b5597d68f92b2c04ca7f34e566abe26647b122",
+                "dca4f7bc9bf2048651cb9e9739e5d327fe05c5816825890df9efba572d1d8991",
+                "937d0aee055fe4a7807dc2571745f0c524620cfbc66bcb2c44fb3a88e296a7b2",
+                "b7e6d1765b99ff82d7a481fc1cca6c120df7991857507fa339de7e6251b0f200",
+                "820bf9a49274c420e64335cd8e58cc093ed14ce67abfb61226b8f8b28775e1cd",
+                "ddf89ae6819efff9af5338964f62085e1977cb63be8b23bb616585b320ad2a86",
+                "7fbadf5ef16e1ce4ca852f1001c688dc65ab745a497eac508ce115d2aa7e22f2",
+                "30da67c23a547bf7837d0b89fd0180d50d3f6749e5fd281650377dd26bee8d39",
+                "081e543e100e09cb7cec0256906588ea961791812365f326c6ef473ea19b98ed",
+                "41f32a64e41932a99d8702957c3fe4397ed0ec35edf81447f40af8810e538abe",
+                "cd03080a4c1e9cd6a16bdcbe6924175417cc62fb6f65fb92fa28b1dd6e7c1276",
+                "23bc091243cdd215326b13edd67e39ae905691660a56fc9cee5a75a3a846c6c1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "taos.org",
+                "blog.yaleappliance.com",
+                "www.papertrue.com",
+                "litcommerce.com",
+                "www.roomsketcher.com",
+                "www.canadadrugsdirect.com",
+                "www.clockworks.com",
+                "www.herault-tourisme.com",
+                "www.ranktracker.com",
+                "www.istripper.com",
+                "www.trackingmore.com",
+                "aeroleads.com",
+                "www.canadapharmacy.com",
+                "ggservers.com",
+                "www.calilio.com",
+                "www.levoyageanantes.fr",
+                "www.poolweb.com",
+                "dicloak.com",
+                "www.unihosted.com",
+                "reedsy.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/fonts\\/noto_sans\\/full\\/noto_sans_bold\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 27,
+            "prevalence": 0.000185,
+            "cnames": [],
+            "responseHashes": [
+                "1e7c4eb3fc368d7e056761216a90fee126b9b72f6d626a22f8118dcef0217516"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.levoyageanantes.fr",
+                "flowbite.com",
+                "poolweb.com",
+                "www.calilio.com",
+                "www.canadadrugsdirect.com",
+                "dicloak.com",
+                "www.ranktracker.com",
+                "www.roomsketcher.com",
+                "www.canadapharmacy.com",
+                "www.poolweb.com",
+                "ggservers.com",
+                "taos.org",
+                "www.leparfait.com",
+                "aeroleads.com",
+                "www.istripper.com",
+                "www.trackingmore.com",
+                "www.unihosted.com",
+                "www.blackpoolpleasurebeach.com",
+                "www.ircpa.org",
+                "blog.yaleappliance.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/fonts\\/noto_sans\\/full\\/noto_sans_regular\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 27,
+            "prevalence": 0.000185,
+            "cnames": [],
+            "responseHashes": [
+                "ee3294e516b2406553e19ff2d79ef09444fe5f55be5b9c70a92c15c31d9b9857"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.canadapharmacy.com",
+                "www.poolweb.com",
+                "www.burmanshealthshop.com",
+                "poolweb.com",
+                "www.ranktracker.com",
+                "taos.org",
+                "ggservers.com",
+                "dicloak.com",
+                "www.herault-tourisme.com",
+                "www.leparfait.com",
+                "www.ircpa.org",
+                "flowbite.com",
+                "whoisfreaks.com",
+                "www.levoyageanantes.fr",
+                "www.clockworks.com",
+                "www.calilio.com",
+                "blog.yaleappliance.com",
+                "reedsy.com",
+                "www.canadadrugsdirect.com",
+                "www.blackpoolpleasurebeach.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/javascripts\\/templates\\/chat\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "826009aaa02be42a204ed68ee4a315638f3111fff9b165e43a634de4b77d9d6f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aeroleads.com",
+                "whoisfreaks.com",
+                "www.clockworks.com",
+                "www.leparfait.com",
+                "www.ranktracker.com",
+                "www.roomsketcher.com",
+                "www.trackingmore.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/stylesheets\\/chat_legacy\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "bd4196d61e6a3141ae1175d15ed4ee4a49abdf2d6327b764a233d01604420099"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aeroleads.com",
+                "whoisfreaks.com",
+                "www.clockworks.com",
+                "www.leparfait.com",
+                "www.ranktracker.com",
+                "www.roomsketcher.com",
+                "www.trackingmore.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/sounds\\/events\\/chat-message-receive\\.oga",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "1b86c88af2ab88b8bef3cf613161c53bc65a1ec446cae158e13d1bc1cb923166"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aeroleads.com",
+                "whoisfreaks.com",
+                "www.clockworks.com",
+                "www.leparfait.com",
+                "www.ranktracker.com",
+                "www.roomsketcher.com",
+                "www.trackingmore.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/sounds\\/events\\/chat-message-action\\.oga",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "f56ae34ebd778f6732469be3f8651fadc8596c8dcc5de430ccd4ef382220b1ce"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aeroleads.com",
+                "whoisfreaks.com",
+                "www.clockworks.com",
+                "www.leparfait.com",
+                "www.ranktracker.com",
+                "www.roomsketcher.com",
+                "www.trackingmore.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/3d62323b-9f5a-4db1-bb50-aa029dfc4419\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f768a1727ae40365141b6b19dd086c42b9e48e03fa143f0c144198a2f7e2659b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asquarecloudhosting.com",
+                "blog.accountinghelpline.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/a9f\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asquarecloudhosting.com",
+                "blog.accountinghelpline.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/3d62323b-9f5a-4db1-bb50-aa029dfc4419\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5c6656b68beb1e62956dff2f0da86d8a1ca43cccaadbb3f999ebb4cb25fdd797"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asquarecloudhosting.com",
+                "blog.accountinghelpline.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/f208d599-079d-41e6-9964-1c1a1fcb9c4f\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0bb3bb18bae34b96448a720d440e6907a3cce848e073ecb7b4fa38d10f290030"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yaleappliance.com",
+                "blog.yaleappliance.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/6b9\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yaleappliance.com",
+                "blog.yaleappliance.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/f208d599-079d-41e6-9964-1c1a1fcb9c4f\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "39cd5ce390bff97b66307bfa5b1e1a35ae8f009eb3565d7447a9e32e6bb05475"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yaleappliance.com",
+                "blog.yaleappliance.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/be07a4d6-dba0-4df7-961d-9302c86b7ebc\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "263398e3a59b8ee5b59e6d8d3ba790f69436b30001608c859ba19c8bb7bc2cf2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "litellm.ai",
+                "docs.litellm.ai"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/be07a4d6-dba0-4df7-961d-9302c86b7ebc\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e0606463b9e101bc5cfbb28aa85e88e5f5b5ca099cf9cc5a479d30c3708f15ab"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "litellm.ai",
+                "docs.litellm.ai"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/a896e8bb-93d5-4f3a-bbec-b80bbde5bbf4\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "76be017483ea8569a50debbf4d60e597612810263d6e7b2e8fd6a350ccc0a1a9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "galaxy.ai",
+                "image.galaxy.ai"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/1fb\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "galaxy.ai",
+                "image.galaxy.ai"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/a896e8bb-93d5-4f3a-bbec-b80bbde5bbf4\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "133e738383d3445d0cedc81da270fb4788bc8d3f166944262ae0270c7eb24295"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "galaxy.ai",
+                "image.galaxy.ai"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/b3c3ceb9-78c2-4e48-b2b8-24bdb0ead741\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f075fe34f236391cf610d95668bc778614037672508f038714bfee83aabba563"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gogograndparent.com",
+                "www.gogograndparent.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/74b\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gogograndparent.com",
+                "www.gogograndparent.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/b3c3ceb9-78c2-4e48-b2b8-24bdb0ead741\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e991d039fc79abd77c169f61b732f15f7fceb43d288e3fbb000a5595ecf06bfe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gogograndparent.com",
+                "www.gogograndparent.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/43e39921-c6c9-4db9-86ae-a4a1a1c6f8fa\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f71c02020b93435c7f9f20e5d78a2c6e5ddcff32c5085eea69d037872faab292"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mishimoto.com",
+                "www.mishimoto.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/5b1\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mishimoto.com",
+                "www.mishimoto.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/43e39921-c6c9-4db9-86ae-a4a1a1c6f8fa\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ca3bf57ae06690be7a4feb114a7b441838ced66e70ffbc2f13c9813f0a1fa6d2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mishimoto.com",
+                "www.mishimoto.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/4cbadfa0-065f-42d7-a374-1a089c172cf8\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d49f26fa19b6e7885273a28fab87ba2862e21587d0a22d80d073678359495f14"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "poolweb.com",
+                "www.poolweb.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/99d\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "poolweb.com",
+                "www.poolweb.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/4cbadfa0-065f-42d7-a374-1a089c172cf8\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "65489e1c8818c3d3eb9c2f53ea6f2ad44a2614d43743c79b2eb9e4a8e3d7dc7d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "poolweb.com",
+                "www.poolweb.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/avatar\\/website\\/4cbadfa0-065f-42d7-a374-1a089c172cf8\\/60\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f60229de0102cd1af4edd984bdc6532ddee0cafecda310357147f816af283b17"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "poolweb.com",
+                "www.poolweb.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/c0e\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "videotube.ai",
+                "www.schwalbetires.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/eec3062c-ceb7-40bc-8de0-78d3f92cbdbd\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3e659e93ea4b2576c8a1a90f16b2ee1e3f03f9be4179a441b234838ce1baf81c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burmanshealthshop.com",
+                "www.burmanshealthshop.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/8cb\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burmanshealthshop.com",
+                "www.burmanshealthshop.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/eec3062c-ceb7-40bc-8de0-78d3f92cbdbd\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f4fd8c68a5e41e990418d0f0794f502aa874bc2961fe44b58d7a06c116f23715"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burmanshealthshop.com",
+                "www.burmanshealthshop.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/avatar\\/operator\\/3917eb78-a8d2-4b21-be06-01ed700c1e49\\/60\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6b3da89922d333d106b84fefeebd7b16bfebf4cfbd7bef37fa10a47c471ae64c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burmanshealthshop.com",
+                "www.burmanshealthshop.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/avatar\\/website\\/eec3062c-ceb7-40bc-8de0-78d3f92cbdbd\\/60\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a5fbd5f1674c50b2af90934cb3d2ca3fcbf09f938e4d8be69681f6c8d34eee8f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burmanshealthshop.com",
+                "www.burmanshealthshop.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/4e1ff683-edd9-4793-a19d-442d18f07bc8\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c9ad046caf5292756c28ac0622f2853707d12f25d7a9ca9ffbc718eb26267a31"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessclass.com",
+                "www.businessclass.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/4ce\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessclass.com",
+                "www.businessclass.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/4e1ff683-edd9-4793-a19d-442d18f07bc8\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6953bc41ef3cb9a656a023d6062a9d8d2df241f4b3688b6f0648390c0f5b0d77"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessclass.com",
+                "www.businessclass.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/e6f4a1e7-86c6-42a1-a6a8-fab86eba7059\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0651e1e65d6e83a18a7d8f698b412986ca7c37cf960e302902744b3d6664c0c8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calilio.com",
+                "www.calilio.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/ed7\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calilio.com",
+                "www.calilio.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/e6f4a1e7-86c6-42a1-a6a8-fab86eba7059\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "597245cfc18a1b9b4562f4334309e92fc5d2d818ad4d2777a2ac31f09c9b0d6f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calilio.com",
+                "www.calilio.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/avatar\\/website\\/e6f4a1e7-86c6-42a1-a6a8-fab86eba7059\\/60\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1ce675fa26a44b11e6f8dda4d3801ffec16438dd8ecb7c013890e670a698cd62"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calilio.com",
+                "www.calilio.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/avatar\\/operator\\/a0ea93db-34bd-463b-8029-fba8f026c62e\\/60\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "937d0aee055fe4a7807dc2571745f0c524620cfbc66bcb2c44fb3a88e296a7b2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadapharmacy.com",
+                "www.canadapharmacy.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/avatar\\/operator\\/96b56057-4059-46d3-9349-89586af68b34\\/60\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "27916ae2adaa0ccdb1ec1bd7cf1bb51efa3263a5bf0e5aa38c4f8768448a527f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadapharmacy.com",
+                "www.canadapharmacy.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/avatar\\/website\\/db836005-83da-409d-8d23-59da4dea55af\\/60\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "image"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "91ced3f75f921e6175a2a74b026ce752072a0dc40d52ee57a4494fe49e843e6d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadapharmacy.com",
+                "www.canadapharmacy.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/db836005-83da-409d-8d23-59da4dea55af\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "26d8af88e61177e8f850f6258676eeae7527c4997b4bb2d8e0f79428af2b8b35"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadapharmacy.com",
+                "www.canadapharmacy.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/985\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadapharmacy.com",
+                "www.canadapharmacy.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/db836005-83da-409d-8d23-59da4dea55af\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "68f2891ed9e4ba0a9ec7d6343c287f84794f75ddeb7788b69aadaf15935ad548"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadapharmacy.com",
+                "www.canadapharmacy.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/a5e30a41-d9ce-4191-be8a-a540abb8df07\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f91ee0564aac7a60fd7b4412adbe2798d487c7ec4d83f76f8282b2e794f00d57"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clockworks.com",
+                "www.clockworks.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/ce7\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clockworks.com",
+                "www.clockworks.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/a5e30a41-d9ce-4191-be8a-a540abb8df07\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fedd7e7cd3745cc33a5e17d4aa4828123b4f74c3a6dc3c7a0c685cc980f32b19"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clockworks.com",
+                "www.clockworks.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/a944d74c-206f-485a-bb22-8e38fda57665\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cf34bc4c7e2ea6af37312c11964db2270e90a31c54142583d797907fe3bc5ff8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fortworth.com",
+                "www.fortworth.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/317\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fortworth.com",
+                "www.fortworth.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/a944d74c-206f-485a-bb22-8e38fda57665\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7b3c0c1c93315959592ab791df26a930e14d6797bead6fa70166d178b679e6a3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fortworth.com",
+                "www.fortworth.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/static\\/javascripts\\/locales\\/fr\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e8915661c514be8f4fb05fcf36ec9ec66d3942e5f7daab5e6c78183cee61aaf8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hellowatt.fr",
+                "www.levoyageanantes.fr"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/559e5016-e65c-4ec6-b550-0295d3d0042d\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "277e4607ea0851ffbb13092bc1acc99d9429781aad8916e160778e59190f8bbe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "levels.fyi",
+                "www.levels.fyi"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/5be\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "levels.fyi",
+                "www.levels.fyi"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/559e5016-e65c-4ec6-b550-0295d3d0042d\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "59e08cd7895c983b74a3f7d4576d172d984416ff12fd10bf459f0c97cbfc4486"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "levels.fyi",
+                "www.levels.fyi"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/25de3f97-d147-447d-840d-5a4e8c18c518\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9f614b683fe2e9db7886496357ad9d3c5a9ac47e0d5c151084e74e017f673016"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "makegirl.ai",
+                "www.makegirl.ai"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/ec1\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "makegirl.ai",
+                "www.makegirl.ai"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/25de3f97-d147-447d-840d-5a4e8c18c518\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2f19b70ed10193a42afd17ba4bfa608b33959385f91becb6148e36be9bc12f86"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "makegirl.ai",
+                "www.makegirl.ai"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/71c822a9-03a4-4f4d-a852-2ebbf2881b18\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c3f6eb659c94b0987b96cc498971fb20c2a28c9415734b92ac6ae5697e77606c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oliveoil.com",
+                "www.oliveoil.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/12f\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oliveoil.com",
+                "www.oliveoil.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/71c822a9-03a4-4f4d-a852-2ebbf2881b18\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4542a254bd2dda0caa5d691b1b8c5dee5cf81f65fa295f04d56e5d1fde7af9ed"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oliveoil.com",
+                "www.oliveoil.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/ac4f49ab-752b-4fd2-9c55-ae1e5fca7f9a\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "03cc87a0ba97942e4c13bc768f7bc3a79becebafefcacb82c6da2320263ff5c3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "optery.com",
+                "www.optery.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/062\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "optery.com",
+                "www.optery.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/ac4f49ab-752b-4fd2-9c55-ae1e5fca7f9a\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "01ad7d02848de6f3338659d8ee6437ab66f3e4487602bf8ed9e7f864ce7e4281"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "optery.com",
+                "www.optery.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/5f6775a4-dfb3-4f49-a992-7f1183d6802e\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "66a849c35937e964849e4652fb486249ef7c0cb0c1d06b73f7a5b328f7c02cd6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "resourceumc.org",
+                "www.umc.org"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/093\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "resourceumc.org",
+                "www.umc.org"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/5f6775a4-dfb3-4f49-a992-7f1183d6802e\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7364deb9bbb1d54d2368e778db8281d0d95bfe5fcb22ecdee9a05f47f9c708b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "resourceumc.org",
+                "www.umc.org"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/8d76a183-5360-4a54-a71e-0b092af5d96a\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "df3d0e044388e91f2d874de170768bfa9e79e135baa3c6be7972b3f7a4e50be8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rockislandauction.com",
+                "www.rockislandauction.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/7e3\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rockislandauction.com",
+                "www.rockislandauction.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/8d76a183-5360-4a54-a71e-0b092af5d96a\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3cdb38a486d4c18b0b8b896492a8acf190ac64eaff7f9780a35847466a3ef5ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rockislandauction.com",
+                "www.rockislandauction.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/ff3e51a2-da3d-4b4b-934d-7c0bf03df088\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "757c3160fde18ef42406a27753c0fa795bfc1b9d2e979ceebace928b7d80f5fe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "roomsketcher.com",
+                "www.roomsketcher.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/518\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "roomsketcher.com",
+                "www.roomsketcher.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/ff3e51a2-da3d-4b4b-934d-7c0bf03df088\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "50e1c6ccdbe32b439745c2a68edec6229f070526c0ee16cfae2863260b88e92f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "roomsketcher.com",
+                "www.roomsketcher.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/228076e4-da91-4abb-b1ac-e9ecacfb4cda\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1135aa3c10688c55765db2e3dde07986b0868c081ad5ec33a8fc8a465753c3e9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "schwalbetires.com",
+                "www.schwalbetires.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/228076e4-da91-4abb-b1ac-e9ecacfb4cda\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e380e929251b64f22c6f9169f74a456d59c0734f050b6688b6fcc5e9e8a17a82"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "schwalbetires.com",
+                "www.schwalbetires.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/99d33d31-6c5b-4401-b4c8-4b22e91474ca\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a369e0c1221767652c2156c00b41a82234662078f3ad26c2ea53bd7b95b0842f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trackingmore.com",
+                "www.trackingmore.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/4bf\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trackingmore.com",
+                "www.trackingmore.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/99d33d31-6c5b-4401-b4c8-4b22e91474ca\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "20b46ddc130709fbea9a60bf39c9bee937ef1d8b0d0784998d16d0203e2d9dd5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trackingmore.com",
+                "www.trackingmore.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/4800a278-926c-4c0c-883c-be08768a5ae6\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "867f5a4a202e1a80dc5477523cee06b9d483e35d787ab7d8bead965d49bc01f2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tryparrotai.com",
+                "www.tryparrotai.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/df3\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tryparrotai.com",
+                "www.tryparrotai.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/4800a278-926c-4c0c-883c-be08768a5ae6\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4b26e8e964f01b5d9619d0c24550a3b14391c9a2439cd814e6f806c69fbad937"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tryparrotai.com",
+                "www.tryparrotai.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/82eb739a-248b-4393-984b-f41d1133c5cb\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2f31d4fd5b97de53dc86702b1cad25ec766a633c3bbfe8b12186df57d69cfd23"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "unihosted.com",
+                "www.unihosted.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/7cc\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "unihosted.com",
+                "www.unihosted.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/82eb739a-248b-4393-984b-f41d1133c5cb\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "27aceca0e0f132497bfc062236182e93d120dca061bd1a525018cf298ee5969f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "unihosted.com",
+                "www.unihosted.com"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/44af3fd8-bd25-456d-b27b-0cee1fae23e5\\/prelude\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "82f4f2fb2a4f9c1e1c7a99f1832407bea0d9e26dbb357ede06ada025876ea461"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "visitalbuquerque.org",
+                "www.visitalbuquerque.org"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/w\\/1f1\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client.relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "visitalbuquerque.org",
+                "www.visitalbuquerque.org"
+            ]
+        },
+        {
+            "rule": "crisp\\.chat\\/settings\\/website\\/44af3fd8-bd25-456d-b27b-0cee1fae23e5\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "98b8c236b78ee65f4e7f7bdf1ab26e6d80258ed4996c51b74f7285043d5962c5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "visitalbuquerque.org",
+                "www.visitalbuquerque.org"
+            ]
+        }
+    ],
+    "categories": [
+        "Support Chat Widget"
+    ],
+    "performance": {},
+    "cookies": 0.00105,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9004149377593361
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.04149377593360996
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.016597510373443983
+        },
+        {
+            "domain": "crisp.im",
+            "prevalence": 0.012448132780082987
+        },
+        {
+            "domain": "dicloak.net",
+            "prevalence": 0.008298755186721992
+        },
+        {
+            "domain": "jam.dev",
+            "prevalence": 0.008298755186721992
+        },
+        {
+            "domain": "ravenjs.com",
+            "prevalence": 0.008298755186721992
+        },
+        {
+            "domain": "am-static.com",
+            "prevalence": 0.004149377593360996
+        }
+    ],
+    "types": {
+        "Script": 460,
+        "Stylesheet": 126,
+        "Image": 39,
+        "Font": 54,
+        "XHR": 14,
+        "WebSocket": 48
+    },
+    "nameservers": [
+        "ns2.crisp.chat",
+        "ns1.crisp.chat"
+    ]
+}

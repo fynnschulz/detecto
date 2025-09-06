@@ -1,0 +1,127 @@
+{
+    "domain": "redbull.edgesuite.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "ssl01.microsites"
+    ],
+    "cnames": [
+        {
+            "original": "embeds.redbull.com",
+            "resolved": "ssl01.microsites.redbull.edgesuite.net"
+        },
+        {
+            "original": "pm.redbull.com",
+            "resolved": "ssl01.microsites.redbull.edgesuite.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "redbull\\.edgesuite\\.net\\/js\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ssl01.microsites"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "pm.redbull.com",
+                    "resolved": "ssl01.microsites.redbull.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "39c350afce9707e80e6e7587c56929ea5b062157f0d368cf4db2c8d27de5f453"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redbull.com",
+                "www.redbull.com"
+            ]
+        },
+        {
+            "rule": "redbull\\.edgesuite\\.net\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl01.microsites"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "pm.redbull.com",
+                    "resolved": "ssl01.microsites.redbull.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redbull.com",
+                "www.redbull.com"
+            ]
+        },
+        {
+            "rule": "redbull\\.edgesuite\\.net\\/footer-configs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl01.microsites"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "embeds.redbull.com",
+                    "resolved": "ssl01.microsites.redbull.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "2e0ffbc8759b7ad5ffc646798c64f524c6dafcf6e35c7a875af0fc837aea9179"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redbull.com",
+                "www.redbull.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 4
+    },
+    "nameservers": []
+}

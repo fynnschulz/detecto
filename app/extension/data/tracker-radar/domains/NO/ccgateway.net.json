@@ -1,0 +1,354 @@
+{
+    "domain": "ccgateway.net",
+    "owner": {
+        "name": "Clicksco FZ",
+        "displayName": "Clicksco FZ"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.00101,
+    "sites": 10,
+    "subdomains": [
+        "carbon-cdn",
+        "script-api",
+        "pb-rtd",
+        "privacy-location-edge",
+        "pogo",
+        "dual-targeting"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ccgateway\\.net\\/script",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "carbon-cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4,
+                "window.localStorage": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "ba1a68d5db07c46a0d2c58bd9d5db9a582110f5bed5807debe3a3322fd8f110a",
+                "80a13a49cb661d0ff8fa52c00b07f31381ac50fe2df453386047aacc3fc0426b",
+                "f48302286457d85d89b85c9a25fafe7a10111ad70d2777dd3982aacbab88deb0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "indiatimes.com",
+                "www.bustle.com",
+                "www.hindustantimes.com",
+                "www.inverse.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/1\\/userId",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "67491c7e69c4c1a1e0a3d08fee106997d4d82ce6ad1c5a8bb17494dd31bdebcf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/launcher\\/2\\/user\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a11d3b4b6f2902037c365146ff80b5bf95923f3176f1a827355e45177314d423"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/launcher\\/1\\/customevents\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "04c94ecaae50f713607dd45d40c5756d0e6a9e58c6398433ac098bc9bee89f5d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/launcher\\/6\\/api\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "880444af8f79aca9fdb01d819bb615c7d8ce8fb9327df856784f7027819de58b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/setUser",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ae5072e36a1daf15ddc62e9f7d105f39df37e3b310761c4a716f18565a826eb4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/v1\\.0\\/realtime\\/382a96c69b",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pb-rtd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ebeab098564ed22963609aaf8ef07239bb4d84a6128752089704579b829c8282"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbcgoodfood.com",
+                "www.radiotimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/v1\\.0\\/realtime\\/dc0638b30f",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pb-rtd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "510f3a470e38083de369bc6ce1b1a174ea23ab1c849975c5bd8e33a177170b1e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buzzfeed.com",
+                "www.buzzfeednews.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/privacy\\/location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "privacy-location-edge"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1c55d9b826e8dfa994370e306ae8dc2e849f3e003381dc848a0b95f782c0c0e3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.com",
+                "www.timeout.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/v1\\/p\\/67c7fcd8b0\\/classification",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pogo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2c22ddaaddd40c4249b7cb078bdb7a78c110d7c5bb07be29fd018bc9a686d0a6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bustle.com",
+                "www.inverse.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/v1\\/custom_taxonomy\\/p\\/67c7fcd8b0\\/rules",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pogo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a170db1307f0a7d95c2631589bcd2e04504d420230841abfa49548dd6faeb23e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bustle.com",
+                "www.inverse.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/dual-targeting\\/v1\\/audiences\\/67c7fcd8b0",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dual-targeting"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a0ee773d39afb6e5d271e61339e36ac68d91ae39e3555e3e40f12481713bd945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bustle.com",
+                "www.inverse.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000805,
+    "topInitiators": [
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.6875
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3125
+        }
+    ],
+    "types": {
+        "Script": 16,
+        "Fetch": 4,
+        "XHR": 8
+    },
+    "nameservers": [
+        "ns1-05.azure-dns.com",
+        "ns2-05.azure-dns.net",
+        "ns3-05.azure-dns.org",
+        "ns4-05.azure-dns.info"
+    ]
+}

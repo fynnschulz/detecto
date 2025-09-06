@@ -1,0 +1,188 @@
+{
+    "domain": "squiz.cloud",
+    "owner": {
+        "name": "Squiz Australia Pty. Ltd.",
+        "displayName": "Squiz Australia"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.00182,
+    "sites": 18,
+    "subdomains": [
+        "lgasa-edge",
+        "dfed-search",
+        "dxp-au-search.funnelback",
+        "unsw-search.funnelback"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "squiz\\.cloud\\/__data\\/assets\\/js_file_folder\\/0033\\/1677516\\/fb\\.js",
+            "cookies": 0.000404,
+            "fingerprinting": 1,
+            "subdomains": [
+                "lgasa-edge"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e9506c631341e8dc19e2dd9f2bb75c3a6391fc5b3d85a169305569452aa80f03"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "charlessturt.sa.gov.au",
+                "www.cityofpae.sa.gov.au",
+                "www.mitchamcouncil.sa.gov.au",
+                "www.teatreegully.sa.gov.au"
+            ]
+        },
+        {
+            "rule": "squiz\\.cloud\\/s\\/resources-global\\/thirdparty\\/typeahead-0\\.11\\.1\\/typeahead\\.bundle\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dfed-search",
+                "dxp-au-search.funnelback"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "075c11a06a2a62c26afcdeda6d40a3fb015225bf341ba5ea505f23c5cc5658ba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "education.sa.gov.au",
+                "www.service.tas.gov.au"
+            ]
+        },
+        {
+            "rule": "squiz\\.cloud\\/s\\/resources-global\\/thirdparty\\/handlebars-4\\.0\\.5\\/handlebars\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dfed-search",
+                "dxp-au-search.funnelback"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "acc39238ce470f35443285594efdb5f3df912924d2818e5929f4df6a9eeadb31"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "education.sa.gov.au",
+                "www.service.tas.gov.au"
+            ]
+        },
+        {
+            "rule": "squiz\\.cloud\\/s\\/resources-global\\/js\\/funnelback\\.autocompletion-2\\.6\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dfed-search",
+                "dxp-au-search.funnelback"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8db0e58b3cb2214c506443b30b691b55fcb7030c90c5d4fbffa74b95a027a375"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "education.sa.gov.au",
+                "www.service.tas.gov.au"
+            ]
+        },
+        {
+            "rule": "squiz\\.cloud\\/s\\/search\\.json",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "unsw-search.funnelback",
+                "dxp-au-search.funnelback"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5d27e57921c6affc807e2edfcb9698a00cd2197292cc6386457e47896767d29c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "unsw.edu.au",
+                "www.tac.vic.gov.au"
+            ]
+        },
+        {
+            "rule": "squiz\\.cloud\\/s\\/search\\.html",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "unsw-search.funnelback"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8d7af59370a229329738c6ec85bf2669e5238c22a17f5f8ea59caeeb93f67d09"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "unsw.edu.au",
+                "www.unsw.edu.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00131,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.59375
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.40625
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "Fetch": 4
+    },
+    "nameservers": [
+        "ns3.squiz.net",
+        "ns2.squiz.net",
+        "ns1.squiz.net"
+    ]
+}

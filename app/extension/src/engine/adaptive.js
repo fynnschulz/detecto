@@ -23,15 +23,16 @@
   const NOOP_JS = "data:text/javascript,/*noop*/"; // Fallback, meist nutzen wir Stubs
 
   // Script-Fallback-Stub, wenn unklar (GTM-Stub ist robust genug für viele Tracker-APIs)
-  const GENERIC_SCRIPT_STUB = "/src/stubs/gtm.js";
+  const GENERIC_STUB = "/src/stubs/gtm.js";
+  const GENERIC_SCRIPT_STUB = GENERIC_STUB; // alias for older references
 
   // Startbereich für dynamische Regeln – bewusst hoch, um mit statischen IDs nicht zu kollidieren
   const DYN_ID_START = 50000;
 
   // Heuristik-Muster
-  const RE_PATH = /(collect|g\/collect|pixel|beacon|track|event|analytics|log|metrics|stats)\b/i;
-  const RE_QUERY = /(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)=/i;
-  const RE_SUB   = /(^|\.)(stats|metrics|pixel|track|beacon|tag|ads|analytic)\./i;
+  const RE_SUB  = /(^|\.)(ads|adserver|adservice|advertising|doubleclick|googlesyndication|googleadservices|analytics|metrics|stats|pixel|track|beacon|tag|clarity|hotjar|criteo|taboola|outbrain|adform|quantserve|scorecardresearch|moatads|rubiconproject|pubmatic|openx|spotx|zedo|mathtag)\./i;
+  const RE_PATH = /(collect|g\/collect|pixel|beacon|track|event|measure|metrics|stats|analytics|fbevents|tr\/|t\/collect|log)(\?|\/|$)/i;
+  const RE_QUERY= /(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)=/i;
 
   // Hilfsfunktionen
   function hostFromUrl(url){
@@ -41,11 +42,7 @@
   function looksLikeTrackerUrl(url, type){
     try {
       const u = new URL(url);
-      if (RE_PATH.test(u.pathname)) return true;
-      if (RE_QUERY.test(u.search)) return true;
-      if (RE_SUB.test(u.hostname)) return true;
-      // Tiny beacons: häufig image/gif, aber das prüfen wir im SW via headers
-      return false;
+      return RE_SUB.test(u.hostname) || RE_PATH.test(u.pathname) || RE_QUERY.test(u.search);
     } catch { return false; }
   }
 
@@ -109,13 +106,12 @@
     const isScript = (t === 'script');
 
     const action = isScript
-      ? { type: 'redirect', redirect: { extensionPath: GENERIC_SCRIPT_STUB } }
+      ? { type: 'redirect', redirect: { extensionPath: GENERIC_STUB } }
       : { type: 'redirect', redirect: { url: GIF_1x1 } };
 
-    // Ressourcentypen passend setzen
     const resourceTypes = isScript
       ? ['script']
-      : ['image','xmlhttprequest','ping'];
+      : ['image','xmlhttprequest','ping','fetch'];
 
     const rule = {
       id: await getNextRuleId(),

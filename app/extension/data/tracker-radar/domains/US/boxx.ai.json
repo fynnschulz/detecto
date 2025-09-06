@@ -1,0 +1,178 @@
+{
+    "domain": "boxx.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "js",
+        "eun1-js",
+        "sfs",
+        "loki",
+        "eun1-loki"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "boxx\\.ai\\/js_init\\/",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js",
+                "eun1-js"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "2ef02f7de94ff0441f9c95093bbb5494d6b902a92bad239d8b6ea366af167f04",
+                "dd170c3e31586265e9b7e1ef8a281d3375e6100e1fa4e530f7f8bda97a7ed626"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000013681762210972774,
+                "_li_dcdm_c": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "rumah123.com",
+                "www.airindiaexpress.com",
+                "www.holzkern.com",
+                "www.khaleejtimes.com",
+                "www.nyandcompany.com",
+                "www.thestar.com.my"
+            ]
+        },
+        {
+            "rule": "boxx\\.ai\\/sdk",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sfs"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a9a1ead49451c2315f0abe04058b1005820158c083173eeb54ded1d7f9845f02"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "bxSesT": {
+                    "ttl": 1822,
+                    "length": 24,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "bxSesC": {
+                    "ttl": 63072022,
+                    "length": 24,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "bxSegDetail": {
+                    "ttl": 63072028,
+                    "length": 200,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "boxx_token_id": {
+                    "ttl": 31536023,
+                    "length": 48,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "bxCacheInit": {
+                    "ttl": 628,
+                    "length": 8,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rumah123.com",
+                "www.holzkern.com"
+            ]
+        },
+        {
+            "rule": "boxx\\.ai\\/nav",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "loki",
+                "eun1-loki"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2912a3596a7fdd0af1f4fcb8d552937b402109ef80f7c93392d82f2e3baf5591"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rumah123.com",
+                "www.holzkern.com"
+            ]
+        },
+        {
+            "rule": "boxx\\.ai\\/nav",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "loki",
+                "eun1-loki"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rumah123.com",
+                "www.holzkern.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "netcoresmartech.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "Fetch": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-280.awsdns-35.com",
+        "ns-937.awsdns-53.net",
+        "ns-1025.awsdns-00.org",
+        "ns-1655.awsdns-14.co.uk"
+    ]
+}

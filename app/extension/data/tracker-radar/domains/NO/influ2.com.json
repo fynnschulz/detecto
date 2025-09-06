@@ -1,0 +1,93 @@
+{
+    "domain": "influ2.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "www",
+        "t"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "influ2\\.com\\/tracker",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "c74d7a5b2d723d6455b17d2008fda0d9c45d8461c5c3b07cfce1a3a445e6a46d",
+                "c4f33e31cb08209b7a614bace0f91cc205dcd28af94b4eaa97912e8241c806ed",
+                "fb5f7fcec2dff876ea6ace4946bd099dc38461b88113f1eaf594a4edb630d80e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "postman.com",
+                "www.nvidia.com",
+                "www.postman.com",
+                "www.sanity.io"
+            ]
+        },
+        {
+            "rule": "influ2\\.com\\/u\\/",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "0aed806b5d0e8d62a2dd0c71128844d8bc12d253e520fc9a4f1806c9abbc8406",
+                "ee072c81ae7108c47b96ffe16dcce9eac69e4eaabfe9c8978ee6bf9cf6ad4836",
+                "8c490fcc9e87af9450f9b1b4fdb67efae1505658b899b740bb4c8fa358f3e9fc"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "postman.com",
+                "www.nvidia.com",
+                "www.postman.com",
+                "www.sanity.io"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 4
+    },
+    "nameservers": [
+        "dns2.registrar-servers.com",
+        "dns1.registrar-servers.com"
+    ]
+}

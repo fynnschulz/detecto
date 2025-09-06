@@ -1,0 +1,134 @@
+{
+    "domain": "consentag.eu",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000301,
+    "sites": 3,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "consentag\\.eu\\/public\\/5\\.0\\.0\\/consenTag\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ca5604dd2434d5fff4b29da9f7567b8a1758052cc9ca59a8373931024be8d065"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__tmbid": {
+                    "ttl": 31536013,
+                    "length": 46,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omanair.com",
+                "www.v-kitchen.ch"
+            ]
+        },
+        {
+            "rule": "consentag\\.eu\\/public\\/5\\.0\\.0\\/popup\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "156b99ec116ec6f77a26f27ca4d1e2eaf1832607e67b104a89005ea1a95bf388"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omanair.com",
+                "www.v-kitchen.ch"
+            ]
+        },
+        {
+            "rule": "consentag\\.eu\\/public\\/5\\.0\\.0\\/consenTagContainer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "613698915445602080240f20ef03cca2740280866cd1b43c3c7d1526207fd801"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omanair.com",
+                "www.v-kitchen.ch"
+            ]
+        },
+        {
+            "rule": "consentag\\.eu\\/manager\\/consent\\/user\\/getuam",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0114ac1a282e63223c3d681849cb77e5fb8d306850b90ca6262906afe5ac7e0a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omanair.com",
+                "www.v-kitchen.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000301,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5555555555555556
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Document": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns60.domaincontrol.com",
+        "ns59.domaincontrol.com"
+    ]
+}

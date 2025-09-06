@@ -1,0 +1,149 @@
+{
+    "domain": "shop.pe",
+    "owner": {
+        "name": "Add Shoppers",
+        "displayName": "Add Shoppers"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "shopper",
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "shop\\.pe\\/widget\\/widget_async\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dbjourney.com",
+                "draxe.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/widget\\/main\\/init\\/params",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "bc32943283bb510a30ce028c177adacc05b19e991073fb2b05dd539a6aabc82a",
+                "9e895fcead4afe37c8d2874eec1908162ad81f2853f8ba149e283affdba2e742",
+                "927173b00d93598b781b45743b7fe8aeba143f196a650de2135dc47796a95c4f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ju_dm": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "dbjourney.com",
+                "draxe.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/input\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "shopper"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 4,
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "a60b91c0826c2f6e38d6d42a608764f34cfe6ea7419b69770b47463d9d962ce7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dbjourney.com",
+                "draxe.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/app\\/datapartners\\/status",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "b4435b5ac2f1916ed1135fb1738a1cef87cb666f4356a6678fb1c77e1273f9e1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dbjourney.com",
+                "draxe.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "d2mjzob2nc713b.cloudfront.net",
+            "prevalence": 0.76
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.12
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.08
+        },
+        {
+            "domain": "impactcdn.com",
+            "prevalence": 0.04
+        }
+    ],
+    "types": {
+        "Script": 12,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-482.awsdns-60.com",
+        "ns-601.awsdns-11.net",
+        "ns-1375.awsdns-43.org",
+        "ns-1678.awsdns-17.co.uk"
+    ]
+}

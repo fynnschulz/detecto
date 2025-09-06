@@ -1,0 +1,121 @@
+{
+    "domain": "pocustrack.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000752,
+    "sites": 11,
+    "subdomains": [
+        "api-ingest"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "pocustrack\\.com\\/pocus\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 7
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "381ce0104a0e9f828c886bd602113fca678afd15c752f1aa169175c53e963a98"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digitalocean.com",
+                "docs.digitalocean.com",
+                "plaid.com",
+                "www.digitalocean.com",
+                "www.openphone.com",
+                "www.pinecone.io",
+                "www.upguard.com"
+            ]
+        },
+        {
+            "rule": "pocustrack\\.com\\/v1\\/visitor-events\\/enqueue",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-ingest"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digitalocean.com",
+                "docs.digitalocean.com",
+                "plaid.com",
+                "www.digitalocean.com",
+                "www.openphone.com",
+                "www.pinecone.io",
+                "www.upguard.com"
+            ]
+        },
+        {
+            "rule": "pocustrack\\.com\\/v1\\/visitor-events\\/enqueue",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-ingest"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "digitalocean.com",
+                "docs.digitalocean.com",
+                "plaid.com",
+                "www.digitalocean.com",
+                "www.openphone.com",
+                "www.pinecone.io",
+                "www.upguard.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Fetch": 7,
+        "Preflight": 7
+    },
+    "nameservers": [
+        "coby.ns.cloudflare.com",
+        "adele.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,1239 @@
+{
+    "domain": "us-east-2.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00109,
+    "sites": 160,
+    "subdomains": [
+        "00lpc7tdyj.execute-api",
+        "9kvu81ddh3.execute-api",
+        "dgbixniqt3.execute-api",
+        "6jk6d9jp92.execute-api",
+        "kinesis",
+        "cognito-identity",
+        "firehose",
+        "bnuce0nwsc.execute-api",
+        "lb7b5fiod9.execute-api",
+        "j5qjalwk0b.execute-api",
+        "uvbscqvnyb.execute-api",
+        "ln8x2sqiz4.execute-api",
+        "k8s-istiogat-istioing-5dbdf723f2-ca445303a60695c4.elb",
+        "d-ah4chwfwr9.execute-api",
+        "57gf63ma3ze7lnphjroe43iw6m.appsync-api",
+        "db0y8smio0.execute-api",
+        "qww6pubpm4.execute-api",
+        "dhukrzx4tb.execute-api",
+        "dataplane.rum",
+        "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+    ],
+    "cnames": [
+        {
+            "original": "app.yournavi.com",
+            "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+        },
+        {
+            "original": "graphql.studentportal.osu.edu",
+            "resolved": "57gf63ma3ze7lnphjroe43iw6m.appsync-api.us-east-2.amazonaws.com"
+        },
+        {
+            "original": "ingestion.events.asurion.com",
+            "resolved": "d-ah4chwfwr9.execute-api.us-east-2.amazonaws.com"
+        },
+        {
+            "original": "rum.collector.na-01.cloud.solarwinds.com",
+            "resolved": "k8s-istiogat-istioing-5dbdf723f2-ca445303a60695c4.elb.us-east-2.amazonaws.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/prod\\/public\\/cart",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "00lpc7tdyj.execute-api"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "76c1abcbdd3acc26723bda854e40f956ca20b7aca865318d1d04ab9a717c989a",
+                "e63c1a3a44bce216f7efc2401a561a68e101c4d7a45e522ae70755ed876847da",
+                "4d20e3cf0e6092e4f56054f3f1cbebcbcf37a1e59b7a18b8bba45cb2a34cbd33",
+                "4d77a84bfdc17faabfff9f26b0cfbc7c02329b28a215b7e6339a3fb5951ffef0",
+                "276d263dc49980c181c0c6c9e4e89203661e4bb76ff475427729d907f7e4efe4",
+                "ac30939b28c527a6bf823b71a9bd5b56c9b1815977e90198d1e406aa2d5e7dc7",
+                "7cc2a7cadb91c172dd748f5e9b0fc94798a76185867878c23de0a6503945075e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "7ohheaven.com",
+                "goldspot.com",
+                "merachfit.com",
+                "store.arduino.cc",
+                "thedildohub.com",
+                "www.naturesrise.com",
+                "www.qforquinn.com",
+                "www.rovedashcam.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/prod\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "9kvu81ddh3.execute-api"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "912d0c07da7bdb22cdae025b96da26d01523aaab7362edb28544e3949deb369d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brewerfanatic.com",
+                "dailycaring.com",
+                "sundayschoolzone.com",
+                "twinsdaily.com",
+                "www.acdirect.com",
+                "www.barrietoday.com",
+                "www.consolevault.com",
+                "www.destinationbryan.com",
+                "www.ekka.com.au",
+                "www.guelphtoday.com",
+                "www.petersen.org",
+                "www.ryzesuperfoods.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/prod\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "9kvu81ddh3.execute-api"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brewerfanatic.com",
+                "dailycaring.com",
+                "sundayschoolzone.com",
+                "twinsdaily.com",
+                "www.acdirect.com",
+                "www.barrietoday.com",
+                "www.consolevault.com",
+                "www.destinationbryan.com",
+                "www.ekka.com.au",
+                "www.guelphtoday.com",
+                "www.petersen.org",
+                "www.ryzesuperfoods.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/trackingPixeProcessing\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dgbixniqt3.execute-api",
+                "6jk6d9jp92.execute-api"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.0000958,
+            "cnames": [],
+            "responseHashes": [
+                "25b4ecfd3a740f29d76fe930a4cec9d41afa0cfd2bafa70ca4051bd3d5395d74"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lw_clientID": 0.000054727048843891096,
+                "dy_fs_page": 0.000013681762210972774,
+                "IR_gbd": 0.000006840881105486387,
+                "_ga": 0.000006840881105486387,
+                "cookies.js_dtest": 0.000006840881105486387,
+                "parsely_uuid": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "bugmd.com",
+                "navage.com",
+                "pockethose.com",
+                "tommyjohn.com",
+                "transformertable.com",
+                "www.ahs.com",
+                "www.americancruiselines.com",
+                "www.bulbhead.com",
+                "www.endurancewarranty.com",
+                "www.newyorker.com",
+                "www.qunol.com",
+                "www.shoeshowmega.com",
+                "www.tommyjohn.com",
+                "www.umgc.edu"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kinesis",
+                "cognito-identity",
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 55,
+            "prevalence": 0.000376,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gordonua.com",
+                "www.audi-sport.net",
+                "www.sozcu.com.tr",
+                "cordopolis.eldiario.es",
+                "www.granadahoy.com",
+                "goodmenproject.com",
+                "www.metropoles.com",
+                "www.cumhuriyet.com.tr",
+                "lakalle.bluradio.com",
+                "www.pentapostagma.gr",
+                "www.salud180.com",
+                "www.diariodesevilla.es",
+                "www.yenicaggazetesi.com.tr",
+                "www.webtekno.com",
+                "wrestlingheadlines.com",
+                "www.targatocn.it",
+                "mychords.net",
+                "www.iol.co.za",
+                "www.majorcadailybulletin.com",
+                "www.vanguardia.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kinesis",
+                "cognito-identity",
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 53,
+            "prevalence": 0.000363,
+            "cnames": [],
+            "responseHashes": [
+                "bef82ae85d9c2a458cbda6c53c815fcf599887980406c2fd8d855160c8bc4fcc",
+                "b306331aa58bc2ca616c466a7b640e18e7da3fde349d08de7aeff8c186dc63ad",
+                "b6990156c852eccf4b7ed87f6af95a190ad12a73d3aa06ca2a0c9f3636e254fd",
+                "387188d30567f03108d6819372f9c0d7e62d0ba3c4b3dfb52c0e3491dc47184e",
+                "8053b4799d9c303a609f3b14450f0ab5e870587356e2b54c579fbdaeec8e4e2a",
+                "c414edd49c123ca7ae4539afda7f7b349d239125e2604b722f3500847a28d349",
+                "1eb99591deeab613dc4d75c1f87b31eb21b0bebfbf8819393f879c7e25ab2497",
+                "c298a4f38c2dd5775e3e1dd7154d6465147ca5dcfca9fd86b8455e569f16429b",
+                "bb349ad5db9bf5c2c27e408b7cc5015f37eba906231b723fd6a4c7a8dc9cc7ed",
+                "6b406501df2ff3a374f2f415dd2859606c34312da361e91a5469c8fe6ae4bd51",
+                "1f28707d201a07f590df321b5fed8e5c671cb9a9f0f4958dff42ab18d154c85d",
+                "02644f7439225de007c64e9f0436531b63984463e8df2ef98d66ccd22fd788e5",
+                "a6056f27d9e455306153782050ac71a06abc60bbb51759f4d86235eaee20b484",
+                "85dfdc89a0062f2e24029090feb4b16cca21f0b95b5b8c0f5a1c162b54bd2cbf",
+                "1643f23bc3c229edd92a3b09504f0523aecd366c04f73a49a2eae959c0a440f5",
+                "3234eb1d19a200c4069777e26014d657493def477abc71a2ad19790c28976ae5",
+                "c3017b3f794b339688ab337e570102545d8f2486bd35771ea3332b9c46e6a9bf",
+                "8506696c97e2e33ceb29f41e51c0a59161f5b88b2dbeb0593c15d50f70767aed",
+                "a509df176f25f3e2681670d9a4269bef5e1fd82058f744bb8ad44c4446c3b7d2",
+                "4c5239b5a522e28f6a9263701e21d6848e29412e975e4808a7ff848c15ecf8b7",
+                "948b51af44c00dc213d019cc2c395614f21d55562dd92d4a850245158586834e",
+                "425d1842950356c41c21ec64aae56f7751292fff4001010aca7e7d32d00b3a1a",
+                "80724b85cf053b3a7923e43c7ca34e86dd621256dd1d1e0bb9e4edf4e8dd45ac",
+                "cb092324d17633b8d5e293c7c612aed4103bdd95b78e8762e65a3d5ae3bca7dc",
+                "ceb64a0684eb1be823353c882b4c7d2a72915fc014e6e92aaec8820797d5361f",
+                "07e810377ba749ec6307400495b7eb0204c50f1a2b9dc47234c0f1d1661301d5",
+                "810ec66d4876365222a0dfc861db683d56ef2ec7e2323132af9fe6bce5118529",
+                "9fc399958bb252c8a126701107b34c0f36f788f9e0fa1c63398f7e94de8944ae",
+                "b9cd4f3bedf5c646616d236e30f673e6c046492330ae316330db29bb4ed87135",
+                "69e608ac9d4275000f1e0bdac4351ec25acb1184fe0e02d8557ab83196575370",
+                "f22f3c4651686d4fe8bae05eb3c363fddc1ace7473421714d69c2b93db95c005",
+                "c5d89b8eaf9f302ede82e7e7d225244530c5050dbcc51a3445c79583e4bea2a1",
+                "76c0fd35712a49fd4f40eebce21f153f7cbd211f7a48514cd3cbe2beb1d34165",
+                "679964387041b4f416b6bd573b0be50c0cfec7c7ba82fcb9d298210ed3c2a3eb",
+                "7b7613bb24df11cd0459077ed5ec1372256afcc5eb38bc43d74ee9a74eefad6f",
+                "e334a5b906fd2ad9c45dc47443af6697fd8c9f601110eb2f8cff8037e31cbb76",
+                "1d5a0d1e86d9758aa89b6608fc06c07766484123b283bc2cd999c13616be4be5",
+                "c77a7a2897c6a3a8ed099cb4e193d28298eca035dd502abb9cefa77aca87144e",
+                "86b2b957b4a2feed2c6e40805a9fef34e932fbfed5f359ec6010029fed05995e",
+                "040f9860769409f928f4f3b8bea2a1a8245554fa03662880d4960c7ea74bfb28",
+                "ac8bb869ba2b23b22fe9c4800290d561be48060728581ba84473af67336fcb11",
+                "98ba71adfff78dbeea768fd86437307b815496538f3b56fd862a0ec03cbc0662",
+                "c89315e6e4c425774196c82c5e82f8871e2cd2b03ff62121aa1af0b5373ed201",
+                "f4256b96ec61b074485b8cfd335d275dd621b5724911c8a90c4cbff9616b268e",
+                "93aec214a1e6674986661c46d9dbd04bb59bc84e75acd734d23bd2ff889c570f",
+                "c9934d613061c3cd8687b5f4ca231407f67e04c31b6e35f1eb4eefcb7cd87be8",
+                "64b54f9527fa856f86425ea8fc642b2a17685933f149829af39d50748486e475",
+                "4290644676e59533b9f78c40ff4e2bc0a04fe6dfe52b2f69534966156b4ee1ab",
+                "ee8f26e93caedde212dfcdf18ec1f4f3572566959bfe2db6628680f2c21df414",
+                "16113968712f640277f110b1239a39a01589a3b263187013c734b73253a8d8d4",
+                "5dc1f5c1964a120fb2097ced54612319eb08b13dcc14b9398db4a32c011c7d02",
+                "838f4dd24cc3c9e3b8dd19755c9025f731f5a133d183a70306c07ebce637ae18"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.majorcadailybulletin.com",
+                "www.calciomercato.it",
+                "www.zleague.gg",
+                "gordonua.com",
+                "wrestlingheadlines.com",
+                "www.eluniversal.com.co",
+                "mazdas247.com",
+                "www.ntv.com.tr",
+                "euroweeklynews.com",
+                "songmeanings.com",
+                "www.europasur.es",
+                "goodmenproject.com",
+                "www.onekeymls.com",
+                "www.ultimahora.es",
+                "www.pentapostagma.gr",
+                "www.infoescola.com",
+                "www.buckeyelink.osu.edu",
+                "www.sozcu.com.tr",
+                "www.diariodecadiz.es",
+                "www.granadahoy.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/pixelImport",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bnuce0nwsc.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c88a0b907419a70c27ab7c1f8e5fb54441a4d9c3567e4c928fa7b2091194aecf"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "catholiccompany.com",
+                "www.catholiccompany.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/live\\/user-tracking\\/add-user-action",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lb7b5fiod9.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gunwatcher.com",
+                "truegunvalue.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/security\\/csp-reports",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "j5qjalwk0b.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smartsheet.com",
+                "help.smartsheet.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/Prod\\/script",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uvbscqvnyb.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "007f31fd1a7e5f6d49ee4d4faf7a96857b3508d063138b1625263e16b657141d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manlybands.com",
+                "photobucket.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/master\\/api\\/birdeye\\/get-reviews",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ln8x2sqiz4.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orkin.com",
+                "www.orkin.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/master\\/api\\/birdeye\\/get-reviews",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ln8x2sqiz4.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f0381172b8b423e2ca113d3271be14b13bb5b993bfb66bbf580d13611567da68"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orkin.com",
+                "www.orkin.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/master\\/api\\/CampaignById",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ln8x2sqiz4.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e0c8bf3e601304fdf6d7fc7f30d970487d05095b66a11961f742ef5e80e2a53d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orkin.com",
+                "www.orkin.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "784f3346a6082ed681b712bea1a01aea663d64ee7fa5e40b25f22568309e8ab2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecommense.com",
+                "woodbine.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/img\\/beacon\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-istiogat-istioing-5dbdf723f2-ca445303a60695c4.elb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "rum.collector.na-01.cloud.solarwinds.com",
+                    "resolved": "k8s-istiogat-istioing-5dbdf723f2-ca445303a60695c4.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "solarwinds.com",
+                "www.dnsstuff.com",
+                "www.solarwinds.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/stream",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d-ah4chwfwr9.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "ingestion.events.asurion.com",
+                    "resolved": "d-ah4chwfwr9.execute-api.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asurion.com",
+                "www.asurion.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/stream",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d-ah4chwfwr9.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "ingestion.events.asurion.com",
+                    "resolved": "d-ah4chwfwr9.execute-api.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "0ec14c19bec9cdd6d6863682b6a23b4e9d816546eef9a0b2d48949bbd36bac16"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asurion.com",
+                "www.asurion.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "57gf63ma3ze7lnphjroe43iw6m.appsync-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "graphql.studentportal.osu.edu",
+                    "resolved": "57gf63ma3ze7lnphjroe43iw6m.appsync-api.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "osu.edu",
+                "www.buckeyelink.osu.edu"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "57gf63ma3ze7lnphjroe43iw6m.appsync-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "graphql.studentportal.osu.edu",
+                    "resolved": "57gf63ma3ze7lnphjroe43iw6m.appsync-api.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "0b9a868d2668b16dcd653dec50ea994d8545cc25a53e06bad1875249de280877"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "osu.edu",
+                "www.buckeyelink.osu.edu"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/default\\/p1-website-events-enqueue",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "db0y8smio0.execute-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "equipmentworld.com",
+                "www.equipmentworld.com",
+                "www.forconstructionpros.com",
+                "www.oemoffhighway.com",
+                "www.policemag.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/production\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qww6pubpm4.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "findtruckservice.com",
+                "www.findtruckservice.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/production\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qww6pubpm4.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e831f1d100de021d1b57a2a4676b3c534b8917e711b12b91b61a1dddccdcd90a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "findtruckservice.com",
+                "www.findtruckservice.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/prod",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dhukrzx4tb.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kimt.com",
+                "www.wptv.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/appmonitors\\/8e4a7ed5-9b6b-4844-8f57-b0619811501a",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane.rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onekeymls.com",
+                "www.onekeymls.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/appmonitors\\/8e4a7ed5-9b6b-4844-8f57-b0619811501a",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane.rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c2a533ad49b3fbae779c1392267f8833d45b7e6da91f29c3dace93d460306381"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onekeymls.com",
+                "www.onekeymls.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/assets\\/js\\/thirdparty\\/widget\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "5d0106d93eb2e241191b60142e77bd829e9c3269a7438e267c72384581e740b3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "201c97404dcb050abef2c6c5afda0f304052ef0584309c08414f5edc415f307b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/chunk-PGEUTMAM\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7abbac1ab216441acd6778e4e981a5376b723baa9a846ecd7ddba972bc494acc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/chunk-VGKI5AM4\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "463bb58b07841d9c1172bb958bdc01d6b68b22cbc0a7a80ffcec6ad4eeafb686"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/polyfills-B6TNHZQ6\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e58411db71b908616c5c212d2373e7b5ab79055c7987e0836e64b259da72507f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/scripts-2NZCXSYF\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "fad52a8dad0e3f23ac8da5cf8d5318d18f8d563a6ae9b884d2d42f7c8bb9d10f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/main-V6RV3SYW\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "40c9283c0070d2935aa871a29a2e70f85bdf744c96d073602e5d2ed726fed67f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/styles-3AKVBDQR\\.css",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "89609de1aec44205a2ae74250a88c509139e9635385016c9bd1764b231b5613a"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/media\\/Graphik-Regular-Web-X5IM6OBN\\.woff2",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "81ba00aab3a52ba0dab064d6ba858d740ebd18852f5916a311b5250b91bf9e3c"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/api\\/v1\\/ext\\/api-config",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "30df694c6ca13b3a43d13da9b0668f40520becc0a014083137e802aa4d12519e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/chunk-WQBZKFDO\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "c83928e7c6c38241eb513b548e2883298977b70a336f08325eb05ca59524b067"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/chunk-2GA5ELYC\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7fd641343c5b3c96b306385decf651f8d7dea2a462fa2da36eb139bb21fec0e7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/api\\/v1\\/ext\\/get_target_device_oems",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "084c2dbb436fc00dc33562233b34155e87721c487d8218e035f5bbb2f89e7fac"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/media\\/Graphik-Medium-Web-26XXM4SN\\.woff2",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "21f47ff2095dbc5a59984a7de09840009ddd25b55089117b46538ad498db80b9"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/phone_onboarding\\/chunk-KIPBJG52\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "app.yournavi.com",
+                    "resolved": "us-east-2-prod-ingress-nlb-st-fde15fbc93ff676b.elb.us-east-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "66eaaa9f25d0e16d8b4e36ff30e4ed13829cb09a64da5da61b59af1268a21f5d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yournavi.com",
+                "www.yournavi.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "membrana.media",
+            "prevalence": 0.40150093808630394
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.275797373358349
+        },
+        {
+            "domain": "mailchimp.com",
+            "prevalence": 0.06378986866791744
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.04690431519699812
+        },
+        {
+            "domain": "parameter1.com",
+            "prevalence": 0.03189493433395872
+        },
+        {
+            "domain": "bizible.com",
+            "prevalence": 0.028142589118198873
+        },
+        {
+            "domain": "lw.direct",
+            "prevalence": 0.013133208255159476
+        },
+        {
+            "domain": "sessionrewind.com",
+            "prevalence": 0.01125703564727955
+        },
+        {
+            "domain": "notsy.io",
+            "prevalence": 0.01125703564727955
+        },
+        {
+            "domain": "glbimg.com",
+            "prevalence": 0.009380863039399626
+        }
+    ],
+    "types": {
+        "XHR": 22,
+        "Fetch": 71,
+        "Preflight": 77,
+        "Image": 14,
+        "Ping": 14,
+        "Other": 2,
+        "Script": 18,
+        "Document": 2,
+        "Stylesheet": 2,
+        "Font": 4
+    },
+    "nameservers": [
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.com",
+        "ns1.amzndns.net",
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
+    ]
+}

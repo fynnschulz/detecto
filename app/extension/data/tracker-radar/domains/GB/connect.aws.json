@@ -1,0 +1,61 @@
+{
+    "domain": "connect.aws",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "bcccontactcenter.my",
+        "live-policy-expert.my"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "connect\\.aws\\/connectwidget\\/static\\/amazon-connect-chat-interface-client\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "bcccontactcenter.my",
+                "live-policy-expert.my"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5c63ce64873534ceb1f46eb7f5283ffe42723352e636db61a97cb409fa341fec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "birmingham.gov.uk",
+                "www.policyexpert.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-464.awsdns-58.com",
+        "ns-801.awsdns-36.net",
+        "ns-1407.awsdns-47.org",
+        "ns-1609.awsdns-09.co.uk"
+    ]
+}

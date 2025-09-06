@@ -1,0 +1,103 @@
+{
+    "domain": "vercel.live",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "vercel\\.live\\/_next-live\\/feedback\\/feedback\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "window.screenX": 2,
+                "window.screenY": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7f0b8f2233b04f73a568c8639a689c9aca85cc0dedbfd93359f7a51744010452"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ai-sdk.dev",
+                "lmarena.ai"
+            ]
+        },
+        {
+            "rule": "vercel\\.live\\/_next-live\\/feedback\\/feedback\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b4e6e10b5b7d92c0e012f344c98eb40de2c2e0940b61ee1b0ad7d5cce61220b7"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ai-sdk.dev",
+                "lmarena.ai"
+            ]
+        },
+        {
+            "rule": "vercel\\.live\\/login\\/validate",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c76492e2a52850a2fdb198dedb5e774f451c93899136648bdae51d8b841fb9b7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ai-sdk.dev",
+                "lmarena.ai"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Document": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns1.vercel-dns.com",
+        "ns2.vercel-dns.com"
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "domain": "s10h.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000609,
+    "sites": 6,
+    "subdomains": [
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "s10h\\.io\\/pixel\\.js",
+            "cookies": 0.000609,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "Document.cookie getter": 6,
+                "Date.prototype.getTime": 6,
+                "Document.cookie setter": 6,
+                "window.localStorage": 6,
+                "Navigator.prototype.userAgent": 6
+            },
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [
+                "248e116b56c8e95f2e7a0bd73d8028e8603dd4cd372d8800d2e8eb3882b15a11"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_switch_session_id": {
+                    "ttl": 604806,
+                    "length": 36,
+                    "prevalence": 0.0006090752207897675,
+                    "uniqueness": 1
+                },
+                "_switch_session": {
+                    "ttl": 604821,
+                    "length": 705,
+                    "prevalence": 0.0006090752207897675,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pcfinancial.ca",
+                "secure.eqbank.ca",
+                "www.eqbank.ca",
+                "www.gadventures.com",
+                "www.pcfinancial.ca",
+                "www.questrade.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000609,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 6
+    },
+    "nameservers": [
+        "harleigh.ns.cloudflare.com",
+        "razvan.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,166 @@
+{
+    "domain": "dy-api.eu",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.001,
+    "sites": 10,
+    "subdomains": [
+        "direct-collect",
+        "direct"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home24.ch",
+                "www.home24.de",
+                "www.home24.ch"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home24.ch",
+                "www.home24.de",
+                "www.home24.ch"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/serve\\/user\\/choose",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jysk.ch",
+                "jysk.de",
+                "www.amorelie.ch",
+                "www.dm.at",
+                "www.dm.de",
+                "www.iba.ch",
+                "www.salomon.com"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/serve\\/user\\/choose",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "7b26dd7e2b49563774a2f70dd46bdd3d5b39202476a4d3599933adb0bbf5e1d5",
+                "dd01baaa79fa66512380fe0c412b4b1547adb07e18874aa4d9d7e04d2a59c84f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jysk.ch",
+                "jysk.de",
+                "www.salomon.com"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/serve\\/user\\/choose",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "d09d2cb8cc3f90ffa7b4cdb3c7db25f364ead10f7e2d935381b382db480476cc",
+                "a319cd95b1552e90283d6a31eb0b56aa3a55f61204cf32f7545dac07716b4e7a",
+                "2842c44f6db0b7bc9c3b17edb412dd436236f66a759e8d89ddf9c5410b120c46",
+                "332157f7eb5a33d89dc3771be44deba9d03bac6db83fb24dc450fceb1b18ba56"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amorelie.ch",
+                "www.amorelie.ch",
+                "www.dm.at",
+                "www.dm.de",
+                "www.iba.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9
+        },
+        {
+            "domain": "dm.de",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "px-cloud.net",
+            "prevalence": 0.05
+        }
+    ],
+    "types": {
+        "Preflight": 10,
+        "XHR": 8,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "ns-204.awsdns-25.com",
+        "ns-926.awsdns-51.net",
+        "ns-1242.awsdns-27.org",
+        "ns-1819.awsdns-35.co.uk"
+    ]
+}

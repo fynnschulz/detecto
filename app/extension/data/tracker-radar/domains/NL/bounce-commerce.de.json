@@ -1,0 +1,95 @@
+{
+    "domain": "bounce-commerce.de",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "bounce-commerce\\.de\\/bounce\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 5,
+                "window.localStorage": 5,
+                "window.sessionStorage": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "b048f6aef863df2c65ed87b2c6b63c5653203bb474f7063965a7bd4d308ebc6c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "superfoodstore.nl",
+                "waterpompshop.nl",
+                "www.superfoodstore.nl",
+                "www.vanbeekumspecerijen.nl",
+                "www.waterpompshop.nl"
+            ]
+        },
+        {
+            "rule": "bounce-commerce\\.de\\/request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "76a203e427afc7eae92852433365e8c08e5e6d7f1b2d8516c823edf41ac3cf9e",
+                "cb3d6f0afe511551f59642087b506c2748fce1b94a3c4a015546979e2f0bc11d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "superfoodstore.nl",
+                "waterpompshop.nl",
+                "www.superfoodstore.nl",
+                "www.vanbeekumspecerijen.nl",
+                "www.waterpompshop.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "dwin1.com",
+            "prevalence": 0.5555555555555556
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.4444444444444444
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Fetch": 5
+    },
+    "nameservers": [
+        "a.ns14.net",
+        "b.ns14.net",
+        "c.ns14.net",
+        "d.ns14.net"
+    ]
+}

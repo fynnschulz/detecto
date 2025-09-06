@@ -1,0 +1,151 @@
+{
+    "domain": "inside-graph.com",
+    "owner": {
+        "name": "Michael Browitt",
+        "displayName": "Michael Browitt"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000301,
+    "sites": 3,
+    "subdomains": [
+        "us4-cdn",
+        "eu2-track",
+        "us4-live",
+        "eu2-live"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "inside-graph\\.com\\/ig\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 3,
+            "subdomains": [
+                "us4-cdn",
+                "eu2-track"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.mediaDevices": 2,
+                "MediaDevices.prototype.enumerateDevices": 2,
+                "Element.prototype.getClientRects": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f29ce9dbd5774c284e6f892ed1d03c8df6256db721aebdada565a43821e47ee5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "inside-us4": {
+                    "ttl": 31536018,
+                    "length": 78,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                },
+                "inside-eu2": {
+                    "ttl": 31536011,
+                    "length": 79,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jaeger-lecoultre.com",
+                "www.lenovo.com"
+            ]
+        },
+        {
+            "rule": "inside-graph\\.com\\/config",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us4-live",
+                "eu2-live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8ba885423126c32ab7bc42435fa8a28ae13de7506c2cca29075aa5525c169b24"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jaeger-lecoultre.com",
+                "www.lenovo.com"
+            ]
+        },
+        {
+            "rule": "inside-graph\\.com\\/page\\/cf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us4-live",
+                "eu2-live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "44331e19f704b1aa193eb036489942dba2d531f69fdfab1bac892d685d0c8b3e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jaeger-lecoultre.com",
+                "www.lenovo.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.7272727272727273
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.09090909090909091
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.09090909090909091
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.09090909090909091
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-1314.awsdns-36.org",
+        "ns-449.awsdns-56.com",
+        "ns-753.awsdns-30.net",
+        "ns-1621.awsdns-10.co.uk"
+    ]
+}

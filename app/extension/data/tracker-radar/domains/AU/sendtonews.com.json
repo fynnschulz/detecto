@@ -1,0 +1,124 @@
+{
+    "domain": "sendtonews.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "embed",
+        "s2l",
+        "cdnmedia"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "sendtonews\\.com\\/player3\\/embedcode\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "76db360cbbb176d24a5fc04f869049033618ec693544b63aaf12919e436bd280"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "mm-src-01jdswwpjafwx65a": {
+                    "ttl": 1800,
+                    "length": 55,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nydailynews.com",
+                "www.statmuse.com"
+            ]
+        },
+        {
+            "rule": "sendtonews\\.com\\/stn_trk\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s2l"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "c00a759275b8628823a9809f24cbeca08cb48b52713adf221f70284e66d9c82f"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com",
+                "www.nydailynews.com"
+            ]
+        },
+        {
+            "rule": "sendtonews\\.com\\/videos\\/video_thumb\\/XL\\/vqx9dgu1njo2tet2fbno7gfk9kdt7nn9\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdnmedia"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c1d39f49b7baf01fa222f7358401773d0ec1ac221ae402acc2cc435049189493"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nydailynews.com",
+                "www.nydailynews.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "mmvideocdn.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.36363636363636365
+        },
+        {
+            "domain": "sportingnews.com",
+            "prevalence": 0.13636363636363635
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Ping": 3,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns-1466.awsdns-55.org",
+        "ns-603.awsdns-11.net",
+        "ns-348.awsdns-43.com",
+        "ns-1739.awsdns-25.co.uk"
+    ]
+}

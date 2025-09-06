@@ -1,0 +1,207 @@
+{
+    "domain": "satis.fi",
+    "owner": {
+        "name": "Consult IT Nordic AB",
+        "displayName": "Consult IT Nordic"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000711,
+    "sites": 7,
+    "subdomains": [
+        "chat",
+        "prod-satisfilabs-resources-gcs"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "satis\\.fi\\/popup\\/embedder",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "chat"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 7,
+                "window.innerWidth": 7,
+                "window.devicePixelRatio": 7,
+                "window.localStorage": 1
+            },
+            "sites": 7,
+            "prevalence": 0.000711,
+            "cnames": [],
+            "responseHashes": [
+                "2f3460453177b392ace2c80622650cdc62fc3d8714f22c3c1d57bf47317b4c8c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalbankopen.com",
+                "www.argonauts.ca",
+                "www.calgaryzoo.com",
+                "www.stampeders.com",
+                "www.sunpeaksresort.com",
+                "www.torontofc.ca",
+                "www.usopen.org"
+            ]
+        },
+        {
+            "rule": "satis\\.fi\\/popup\\/GetCSS",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000711,
+            "cnames": [],
+            "responseHashes": [
+                "dc0893f6b3ee136d6f4c4ed70e754048ab6a0e2f3ae95700911a87a070e23a53"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalbankopen.com",
+                "www.argonauts.ca",
+                "www.calgaryzoo.com",
+                "www.stampeders.com",
+                "www.sunpeaksresort.com",
+                "www.torontofc.ca",
+                "www.usopen.org"
+            ]
+        },
+        {
+            "rule": "satis\\.fi\\/Default\\/GetAWSConfig",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000711,
+            "cnames": [],
+            "responseHashes": [
+                "25eca592f3785484d9098120c463294ce6e805e7c5a8ccf81a8b8b35f2de91e1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalbankopen.com",
+                "www.argonauts.ca",
+                "www.calgaryzoo.com",
+                "www.stampeders.com",
+                "www.sunpeaksresort.com",
+                "www.torontofc.ca",
+                "www.usopen.org"
+            ]
+        },
+        {
+            "rule": "satis\\.fi\\/ClientAssets\\/Fonts\\/Roboto-Regular\\.ttf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-satisfilabs-resources-gcs"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "0289d8e09591be788a7ed196839e57f93b35de95b9970635d9c3b190afcdf055"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "argonauts.ca",
+                "www.calgaryzoo.com",
+                "www.stampeders.com",
+                "www.torontofc.ca"
+            ]
+        },
+        {
+            "rule": "satis\\.fi\\/ClientAssets\\/PopupConfigs\\/PopupConfig-7373\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-satisfilabs-resources-gcs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "01481a2fce0612fb2a79fd5aa52cc3f34585910d2fa8bbab31b6c93e2a50d565"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usopen.org",
+                "www.usopen.org"
+            ]
+        },
+        {
+            "rule": "satis\\.fi\\/ClientAssets\\/ThemeFiles\\/popuptheme-3198\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-satisfilabs-resources-gcs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e950ad3878afc96d6d699c59819e1f272a6994de7663500d7ab836d33d8bff75"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usopen.org",
+                "www.usopen.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.42857142857142855
+        },
+        {
+            "domain": "instana.io",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.07142857142857142
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Stylesheet": 7,
+        "Fetch": 9,
+        "Font": 4
+    },
+    "nameservers": [
+        "ns-1072.awsdns-06.org",
+        "ns-259.awsdns-32.com",
+        "ns-1650.awsdns-14.co.uk",
+        "ns-874.awsdns-45.net"
+    ]
+}

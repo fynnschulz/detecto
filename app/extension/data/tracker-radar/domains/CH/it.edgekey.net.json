@@ -1,0 +1,74 @@
+{
+    "domain": "it.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "collector.subito"
+    ],
+    "cnames": [
+        {
+            "original": "collector.subito.it",
+            "resolved": "collector.subito.it.edgekey.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "it\\.edgekey\\.net\\/api\\/v1\\/track\\/sdrn:schibsted:client:subito",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector.subito"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "collector.subito.it",
+                    "resolved": "collector.subito.it.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "90687150c18ec51580a40877532d01b82c479d207966f5b51972f0efee916f18"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "subito.it",
+                "www.subito.it"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "slgnt.eu",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Fetch": 2
+    },
+    "nameservers": []
+}

@@ -1,0 +1,136 @@
+{
+    "domain": "impervadns.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000705,
+    "sites": 7,
+    "subdomains": [
+        "naouzqe",
+        "sfizigb"
+    ],
+    "cnames": [
+        {
+            "original": "gateway.euronext.com",
+            "resolved": "sfizigb.impervadns.net"
+        },
+        {
+            "original": "login.accor.com",
+            "resolved": "naouzqe.impervadns.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "impervadns\\.net\\/as\\/authorization\\.oauth2",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "naouzqe"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "login.accor.com",
+                    "resolved": "naouzqe.impervadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "all.accor.com"
+            ]
+        },
+        {
+            "rule": "impervadns\\.net\\/charts\\/intraday\\.gif",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sfizigb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "gateway.euronext.com",
+                    "resolved": "sfizigb.impervadns.net"
+                }
+            ],
+            "responseHashes": [
+                "1d1055c844f5e475a06af68b81958b334210eba16752cdb3d3043a24874946d7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "euronext.com",
+                "live.euronext.com"
+            ]
+        },
+        {
+            "rule": "impervadns\\.net\\/api\\/ticker\\/instrumentDetail",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sfizigb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "gateway.euronext.com",
+                    "resolved": "sfizigb.impervadns.net"
+                }
+            ],
+            "responseHashes": [
+                "9e84f5fc94baea0a86dfd9bb9db8bd0417e7888fb57916cc0a1b70057ee4fa8d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "euronext.com",
+                "live.euronext.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000705,
+    "topInitiators": [
+        {
+            "domain": "signalfx.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Document": 2,
+        "Image": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns1.impervadns.net",
+        "ns2.impervadns.net",
+        "ns3.impervadns.net"
+    ]
+}

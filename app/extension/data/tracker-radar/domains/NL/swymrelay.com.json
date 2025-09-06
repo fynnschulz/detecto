@@ -1,0 +1,116 @@
+{
+    "domain": "swymrelay.com",
+    "owner": {
+        "name": "Swym Corporation",
+        "displayName": "Swym"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "swymstore-v3pro-01",
+        "swymstore-v3premium-01",
+        "procdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "swymrelay\\.com\\/api\\/v3\\/provider\\/checkAndGet",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "swymstore-v3pro-01",
+                "swymstore-v3premium-01"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "517370e7ddf10ccaf89aa4794155cc6a522b80d8e1e1eb1eecd831aa95ca984e",
+                "b039b4f3a43bf3526c5a3d784d6b07a97fb04b340ccc4752ed8d01503aa5beb2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pit-pit.com",
+                "sprinklr.co",
+                "www.studioanneloes.nl"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/code\\/v3\\/swym_fonts\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "procdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "eec39015505be5c8f43e0bea54219f165ce607be9c07ce433f9c79a6ac3c2c01"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pit-pit.com",
+                "sprinklr.co"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/api\\/v2\\/provider\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "swymstore-v3premium-01",
+                "swymstore-v3pro-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bcc147eb09d25fb72bf6b04b46525c63010919c11202f5b4523bca5878a848b0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sprinklr.co",
+                "www.studioanneloes.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5789473684210527
+        },
+        {
+            "domain": "azureedge.net",
+            "prevalence": 0.3157894736842105
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.10526315789473684
+        }
+    ],
+    "types": {
+        "XHR": 5,
+        "Font": 2
+    },
+    "nameservers": [
+        "ns66.domaincontrol.com",
+        "ns65.domaincontrol.com"
+    ]
+}

@@ -1,0 +1,458 @@
+{
+    "domain": "virail.app",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "plausible",
+        "rybbit",
+        "umami",
+        "autocomplete",
+        "flyer",
+        "search"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "virail\\.app\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "plausible"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orario-treni.it",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rybbit"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/js\\/script\\.pageview-props\\.tagged-events\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "plausible"
+            ],
+            "apis": {
+                "Navigator.prototype.webdriver": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "04400ffd0524031c77ce502af48169ccac2d5ec050885d36abf7cf620dd86706"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/umami\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "umami"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/v1\\/search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "autocomplete"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/v1\\/search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "autocomplete"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ce89525efeaaa6895113e9ed01cd31fe1f75fe35ab197f658d7ccdc0118825e9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/dist\\/flyer\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flyer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8d837d5f3361c7c78f61b1e0b1b6a4e44ed67bbb17dda3b57d2233bbc0ae61c2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/v1\\/flyer",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flyer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "46062cc10aed23dfff73eab8b2bdb89f65c6f4b912a2eb2e31328cc9128e7559"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/v1\\/flyer",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flyer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/accommodation\\/v1\\/a\\.5920288\\/2025-08-15\\/2025-08-16\\/1\\/com\\/en_us",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b07243af3d70857a6b829b5b4514afce8a067b33756579c26c0ef80e1b7ed5eb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/v1\\/flyer\\/a9b8ae97-dc14-4cdb-b94b-9f06fe17fd2c\\/image",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flyer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c42979b5e911f9493fcbe0733924bdadaae85eff568f49c569c39c9126595bc7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/accommodation\\/v1\\/a\\.5074472\\/2025-08-18\\/2025-08-19\\/1\\.0:_:_\\/com\\/en_us",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b8af5f3451c570375afd62c15344d52bf6076da74c2782ea0c69e4c7f5e3a1da"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/accommodation\\/v1\\/a\\.4393217\\/2025-08-18\\/2025-08-19\\/1\\.0:_:_\\/com\\/en_us",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9998a23357e623374033c0d952ba940ae764a39f1368fccf0dc4a36d6d0c2932"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/accommodation\\/v1\\/a\\.4853828\\/2025-08-18\\/2025-08-19\\/1\\.0:_:_\\/com\\/en_us",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ba6ed775dcc44628bcc54cd9801b8f4ee0983b4eb85109b909e719bd136640bc"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/accommodation\\/v1\\/a\\.4876523\\/2025-08-18\\/2025-08-19\\/1\\.0:_:_\\/com\\/en_us",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f487d531a0c0acd313f031fef3a3ed355eb493eee58f34d9179cf70c11df69cd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/accommodation\\/v1\\/a\\.4247703\\/2025-08-18\\/2025-08-19\\/1\\.0:_:_\\/com\\/en_us",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6a9a4e58cbcfb7d482ba542259874bfe1abbab10d9dfe8a4e60bd6a5acbc61f6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/accommodation\\/v1\\/a\\.5072006\\/2025-08-18\\/2025-08-19\\/1\\.0:_:_\\/com\\/en_us",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b9d79ccc56ff3561a954771f6446f45f680ca145c8a1e7cb1e2a1fbab46f3f77"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/accommodation\\/v1\\/a\\.5043473\\/2025-08-18\\/2025-08-19\\/1\\.0:_:_\\/com\\/en_us",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "827b4faed750770c07094a1d5c2079876b9314a80b5ed10a7220a8ce52b70d6a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        },
+        {
+            "rule": "virail\\.app\\/api\\/accommodation\\/v1\\/a\\.4880889\\/2025-08-18\\/2025-08-19\\/1\\.0:_:_\\/com\\/en_us",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8929c335454f8d031e0581007726e178dc55b65d5b82f7b61c00f88b5df6eb2f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "virail.com",
+                "www.virail.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 2,
+        "Script": 8,
+        "Preflight": 4,
+        "Fetch": 22,
+        "Image": 2
+    },
+    "nameservers": [
+        "ivan.ns.cloudflare.com",
+        "dawn.ns.cloudflare.com"
+    ]
+}

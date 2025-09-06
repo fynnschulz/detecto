@@ -1,0 +1,109 @@
+{
+    "domain": "m32.media",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.0001,
+    "sites": 1,
+    "subdomains": [
+        "rdc"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "m32\\.media\\/madops\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rdc"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "db7c3ecdc8888abf6dc7067dab5f96c2222580f920550cfe229538112c64c1fc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ricardocuisine.com",
+                "www.ricardocuisine.com"
+            ]
+        },
+        {
+            "rule": "m32\\.media\\/adops\\/custom_files\\/ricardocuisine\\.com\\/custom\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rdc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "578b945f755166045e6910c8f5645e7c6e3b1fc8718c9f2a2dd5278a30ff4567"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ricardocuisine.com",
+                "www.ricardocuisine.com"
+            ]
+        },
+        {
+            "rule": "m32\\.media\\/prebid\\/ricardocuisine\\.com\\/prebid\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rdc"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a7df815cc4cfa6682abc3fa1ea64d15b202f3bb5f326ec7fefacbcccc8435e6e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ricardocuisine.com",
+                "www.ricardocuisine.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-cloud-c3.googledomains.com",
+        "ns-cloud-c2.googledomains.com",
+        "ns-cloud-c1.googledomains.com",
+        "ns-cloud-c4.googledomains.com"
+    ]
+}

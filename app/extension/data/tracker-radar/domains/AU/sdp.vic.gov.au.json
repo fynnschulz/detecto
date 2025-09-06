@@ -1,0 +1,80 @@
+{
+    "domain": "sdp.vic.gov.au",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "a83890f7a31dea14e1ae83c6f0afacca.sdp4.elastic",
+        "82fd82a8a6a68c599eb4e2cc2d6c49a5.sdp4.elastic"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "sdp\\.vic\\.gov\\.au\\/elasticsearch_index_production_node\\/_search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a83890f7a31dea14e1ae83c6f0afacca.sdp4.elastic",
+                "82fd82a8a6a68c599eb4e2cc2d6c49a5.sdp4.elastic"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ambulance.vic.gov.au",
+                "www.ambulance.vic.gov.au",
+                "www.betterhealth.vic.gov.au"
+            ]
+        },
+        {
+            "rule": "sdp\\.vic\\.gov\\.au\\/elasticsearch_index_production_node\\/_search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a83890f7a31dea14e1ae83c6f0afacca.sdp4.elastic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "318ba1badc20d2feb7a628d5c863d69761b5676c85360b8c60c607b129e17520"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ambulance.vic.gov.au",
+                "www.ambulance.vic.gov.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 3,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-564.awsdns-06.net",
+        "ns-1117.awsdns-11.org",
+        "ns-2021.awsdns-60.co.uk",
+        "ns-385.awsdns-48.com"
+    ]
+}

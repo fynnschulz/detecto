@@ -1,0 +1,108 @@
+{
+    "domain": "syftdata.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "cdn",
+        "event"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "syftdata\\.com\\/syftnext\\/syft\\.umd\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.language": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a385fd521328f13be17850785f10cd690975a122c89b5313169b6b11bdc47ad8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "syft.anonymous_id": {
+                    "ttl": 31536008,
+                    "length": 42,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "syft.source_touch": {
+                    "ttl": 86408,
+                    "length": 2,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "syft.initial_source_touch": {
+                    "ttl": 2592008,
+                    "length": 2,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "syft.session": {
+                    "ttl": 31536028,
+                    "length": 158,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spacelift.io",
+                "www.heygen.com"
+            ]
+        },
+        {
+            "rule": "syftdata\\.com\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spacelift.io",
+                "www.heygen.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "seth.ns.cloudflare.com",
+        "clara.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,196 @@
+{
+    "domain": "monetixads.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000705,
+    "sites": 7,
+    "subdomains": [
+        "dsp-service",
+        "prebid",
+        "static.cdn",
+        "noktacom.rtb",
+        "adverge.rtb"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "monetixads\\.com\\/cookie_sync",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dsp-service"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "9ada1cad98d4554cc26ea4fce89d6a7a8cb4f52852b04e0af78f975037615283"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thestreamable.com",
+                "www.nj.com",
+                "www.planetminecraft.com"
+            ]
+        },
+        {
+            "rule": "monetixads\\.com\\/setuid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prebid"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetminecraft.com",
+                "www.planetminecraft.com",
+                "www.techolay.biz"
+            ]
+        },
+        {
+            "rule": "monetixads\\.com\\/cookie\\.html",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static.cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "481c8382889f68e105a819ab253cbea9e6a52e86d611edd9fde5feae25e1d8a7"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetminecraft.com",
+                "www.planetminecraft.com",
+                "www.techolay.biz"
+            ]
+        },
+        {
+            "rule": "monetixads\\.com\\/pb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "noktacom.rtb",
+                "adverge.rtb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinemalar.com",
+                "www.sofascore.com",
+                "www.techolay.biz"
+            ]
+        },
+        {
+            "rule": "monetixads\\.com\\/pb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "noktacom.rtb",
+                "adverge.rtb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinemalar.com",
+                "www.sofascore.com",
+                "www.techolay.biz"
+            ]
+        },
+        {
+            "rule": "monetixads\\.com\\/monetixads\\/sync\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static.cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "b09ec6c97dc3b7ce79ed4a268ca435fc7d59425784c53f0dffc032d04264c118"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinemalar.com",
+                "www.sofascore.com",
+                "www.techolay.biz"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "virgul.com",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "smaato.net",
+            "prevalence": 0.3
+        },
+        {
+            "domain": "pubadx.one",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "adverge.ai",
+            "prevalence": 0.1
+        }
+    ],
+    "types": {
+        "Document": 12,
+        "Fetch": 3,
+        "Preflight": 3
+    },
+    "nameservers": [
+        "ursula.ns.cloudflare.com",
+        "porter.ns.cloudflare.com"
+    ]
+}

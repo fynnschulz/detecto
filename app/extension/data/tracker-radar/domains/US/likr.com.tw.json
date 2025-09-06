@@ -1,0 +1,82 @@
+{
+    "domain": "likr.com.tw",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000684,
+    "sites": 10,
+    "subdomains": [
+        "auto-load-balancer"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "likr\\.com\\.tw\\/pushEndPoint\\/uuid_gen\\/uuid_iframe\\.php",
+            "cookies": 0.0000547,
+            "fingerprinting": 1,
+            "subdomains": [
+                "auto-load-balancer"
+            ],
+            "apis": {
+                "Document.cookie getter": 8,
+                "Date.prototype.getTime": 8,
+                "Document.cookie setter": 8
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "294b0c2e3ec3edc89ec51dcef5ef2e099b3111a0634b2e7121cd249744d39b3a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "AviviD_uuid": {
+                    "ttl": 315360003,
+                    "length": 36,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "AviviD_refresh_uuid_status": {
+                    "ttl": 315360003,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "czbooks.net",
+                "jalantikus.com",
+                "news.ltn.com.tw",
+                "thanhnien.vn",
+                "www.bola.net",
+                "www.chinatimes.com",
+                "www.insertlive.com",
+                "www.ltn.com.tw",
+                "www.malaymail.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000616,
+    "topInitiators": [
+        {
+            "domain": "likr.tw",
+            "prevalence": 0.5882352941176471
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.4117647058823529
+        }
+    ],
+    "types": {
+        "Document": 9
+    },
+    "nameservers": [
+        "elaine.ns.cloudflare.com",
+        "guy.ns.cloudflare.com"
+    ]
+}

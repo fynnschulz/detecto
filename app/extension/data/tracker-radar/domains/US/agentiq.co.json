@@ -1,0 +1,105 @@
+{
+    "domain": "agentiq.co",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "chat",
+        "chat-service.pnb",
+        "chat-service.fab",
+        "chat-service.imcu",
+        "chat-service.nicolet",
+        "chat-service.rockland"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "agentiq\\.co\\/webchat\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "chat"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 5,
+                "Document.cookie getter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "e948394c65818cce1150bf38f4f3f9e8221ff495a1ccaab833831f5c436a1b9b",
+                "0f1927326135b5ccc346ce9219c50762fd37f02172ee1f77ea6f55d2b3b6074e",
+                "a3a411e1eaee6f1eebfd1e8d3f5cd292205efc9c6eac7a59b4ec5e731bce284b",
+                "756f5d4fc3e1aec26675b2995acecb041dfbd25eb88921aaf18502912de1bac4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "parknationalbank.com",
+                "www.firstambank.com",
+                "www.imcu.com",
+                "www.nicoletbank.com",
+                "www.rocklandtrust.com"
+            ]
+        },
+        {
+            "rule": "agentiq\\.co\\/static\\/themes\\/base\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat-service.pnb",
+                "chat-service.fab",
+                "chat-service.imcu",
+                "chat-service.nicolet",
+                "chat-service.rockland"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "4e0714b88b1610b8df35b78a8d4fb8f90266c2c1c249df7eb72326efd8cca4b7"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "parknationalbank.com",
+                "www.firstambank.com",
+                "www.imcu.com",
+                "www.nicoletbank.com",
+                "www.rocklandtrust.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2857142857142857
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Stylesheet": 5
+    },
+    "nameservers": [
+        "ns-2028.awsdns-61.co.uk",
+        "ns-1150.awsdns-15.org",
+        "ns-196.awsdns-24.com",
+        "ns-727.awsdns-26.net"
+    ]
+}

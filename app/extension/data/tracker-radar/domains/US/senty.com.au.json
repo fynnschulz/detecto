@@ -1,0 +1,82 @@
+{
+    "domain": "senty.com.au",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "stats"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "senty\\.com\\.au\\/js\\/script\\.outbound-links\\.pageview-props\\.tagged-events\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {
+                "Navigator.prototype.webdriver": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "4f6d3ce6fee0211ee389d61a9344b2f0ff30dc1f7db4e6fd9f2e9417f800afc6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spotifystats.com",
+                "sz-games.github.io",
+                "turbo-scratch.org"
+            ]
+        },
+        {
+            "rule": "senty\\.com\\.au\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spotifystats.com",
+                "sz-games.github.io",
+                "turbo-scratch.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "XHR": 3
+    },
+    "nameservers": [
+        "kehlani.ns.cloudflare.com",
+        "coby.ns.cloudflare.com"
+    ]
+}

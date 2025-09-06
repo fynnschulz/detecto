@@ -1,0 +1,588 @@
+{
+    "domain": "pinterest.com",
+    "owner": {
+        "name": "Pinterest, Inc.",
+        "displayName": "Pinterest",
+        "privacyPolicy": "https://policy.pinterest.com/en/privacy-policy",
+        "url": "http://pinterest.com"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.0561,
+    "sites": 556,
+    "subdomains": [
+        "ct",
+        "widgets",
+        "api",
+        "assets",
+        "log"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "pinterest\\.com\\/user\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {},
+            "sites": 382,
+            "prevalence": 0.0386,
+            "cnames": [],
+            "responseHashes": [
+                "1565038fbe08159ac748f17b7968f41580980d541249ff9bce39edf23c5bac97",
+                "665e38f2f4291bdd335da59256b0c6780e77124e88456669051f4ad9eff6a965",
+                "9fa264eaa1094404f9e99527a5cbde70fa86456243f2a48448cc7211d3c974ac",
+                "90e4fa6684ac1e41628a4c99fe4f21d00ff3b8c3bcef61daaddd06e6e92b7823",
+                "f63f69ec28dc51ead182cde351099bd1b1e0b14cae9ea44ee019a1cef6c06bcd",
+                "1578fec5b07577537d63030ba03f65dbff6009c0130a611aa26cdbd63ed8eec5",
+                "c0353699b54024e201d12ccf4ce082e20c6ed9350d6c02a0a7215a96e09158f3",
+                "ef2342f168da52e64d692d761633082a24ed4810ce84f87d3d52a3f673451efe",
+                "36c06af1d8f9f0a0fad54984291ef0de4dc490707cc93016275560ae879fc65a",
+                "da340f67c7743fb98705f19a19b6b825cf17c331a8c54709785ca4f8ab926a65",
+                "d3b9761d9bf4107a1e6bed0cfcb345b4d95df8454e0247b14f7bb41d48be1ced",
+                "d718f52e07ab8904d9a3aaf014e56dfb55fee9bb828bbd8b5326cfdb2935d0ca",
+                "5bfafbcd88b28a975eebae116558cf6f5e1da0df9da7e23375a2d820126d203a",
+                "9ac2133ee7aec51d18f16c92d2bf6139294a0e020e9f225dfe54b79748b2c701",
+                "95a32be7fd5e4601103c6970e5a166299f8a939645f55a78d061b33720564f06",
+                "6e3d3c39014af864ac0dc8c62a567eba2041e817464539dd07540d136a3b03ee",
+                "29850ad44928ea8c47733ad0f626640411aa90caa61ca5bff7ad75ae07f58032"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_pin_unauth": 0.0011103260320985161
+            },
+            "exampleSites": [
+                "mashable.com",
+                "news.com.au",
+                "www.samsung.com",
+                "www.tasteofhome.com",
+                "www.webmd.com",
+                "www.zillow.com",
+                "luxuryescapes.com",
+                "fonts.adobe.com",
+                "www.itvsn.com.au",
+                "baredfootwear.com",
+                "koalaliving.com.au",
+                "www.ukulele-tabs.com",
+                "readingeggs.com",
+                "www.renovatorstore.com.au",
+                "www.foxtel.com.au",
+                "tradelink.com.au",
+                "www.sydneysymphony.com",
+                "www.bendonlingerie.com.au",
+                "www.fool.com",
+                "www.inspirationspaint.com.au"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/v3\\/",
+            "cookies": 0.0489,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {},
+            "sites": 490,
+            "prevalence": 0.0495,
+            "cnames": [],
+            "responseHashes": [
+                "81652748b524d25356b352a8487426a9bd3a89a03789bf7b5c22d979349a6106",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_pin_unauth": 0.001615019683052387,
+                "lotame_domain_check": 0.0007065711113354194,
+                "IR_gbd": 0.004744120318966387,
+                "_li_dcdm_c": 0.0011103260320985161,
+                "_hjTLDTest": 0.002119713334006258
+            },
+            "exampleSites": [
+                "mashable.com",
+                "news.com.au",
+                "www.samsung.com",
+                "www.tasteofhome.com",
+                "www.webmd.com",
+                "www.zillow.com",
+                "www.provincialhomeliving.com.au",
+                "www.arthritis.org",
+                "www.forestrytools.com.au",
+                "www.fijiairways.com",
+                "www.yourtown.com.au",
+                "kitchenaid.com.au",
+                "www.kingliving.com.au",
+                "www.eventbrite.com.au",
+                "www.skechers.com.au",
+                "www.mwave.com.au",
+                "www.tiffany.com.au",
+                "www.clarkrubber.com.au",
+                "allyfashion.com",
+                "levis.com.au"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/ct\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {
+                "window.localStorage": 145
+            },
+            "sites": 334,
+            "prevalence": 0.0337,
+            "cnames": [],
+            "responseHashes": [
+                "f83b1a3ea61ad62e47fad82de5495a2547e2f12e591ad8108050538c566ae1e3"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.samsung.com",
+                "www.tasteofhome.com",
+                "www.zillow.com",
+                "community.adobe.com",
+                "www.platypusshoes.com.au",
+                "www.stfrock.com.au",
+                "www.seek.com.au",
+                "au.whogivesacrap.org",
+                "poshmark.com",
+                "www.tesselaar.net.au",
+                "www.inspirationspaint.com.au",
+                "www.redbubble.com",
+                "www.eurekafurniture.com.au",
+                "www.countryroad.com.au",
+                "www.adfcareers.gov.au",
+                "www.highgrovebathrooms.com.au",
+                "merrypeople.com",
+                "www.chefshat.com.au",
+                "www.abiinteriors.com.au",
+                "my.ryobi.com.au"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/static\\/ct\\/token_create\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {},
+            "sites": 332,
+            "prevalence": 0.0335,
+            "cnames": [],
+            "responseHashes": [
+                "146258f4d1ba603b89b097a12736cab5683df2ac763069d941ebfc84fad0617a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.samsung.com",
+                "www.tasteofhome.com",
+                "www.zillow.com",
+                "www.belong.com.au",
+                "pages.ebay.com.au",
+                "www.davidlawrence.com.au",
+                "www.seek.com.au",
+                "www.nationalgeographic.com",
+                "www.harrisfarm.com.au",
+                "www.casetify.com",
+                "classbento.com.au",
+                "www.iherb.com",
+                "www.strandbags.com.au",
+                "merrypeople.com",
+                "au.iherb.com",
+                "www.japan-experience.com",
+                "www.maggiebeer.com.au",
+                "www.vivino.com",
+                "www.metricon.com.au",
+                "www.kikki-k.com"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/user\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {},
+            "sites": 129,
+            "prevalence": 0.013,
+            "cnames": [],
+            "responseHashes": [
+                "665e38f2f4291bdd335da59256b0c6780e77124e88456669051f4ad9eff6a965",
+                "1565038fbe08159ac748f17b7968f41580980d541249ff9bce39edf23c5bac97",
+                "f63f69ec28dc51ead182cde351099bd1b1e0b14cae9ea44ee019a1cef6c06bcd",
+                "ef2342f168da52e64d692d761633082a24ed4810ce84f87d3d52a3f673451efe",
+                "2af032a492ab7af1aa4705240b77d201629adc1f9852550125d788508097cecf",
+                "da340f67c7743fb98705f19a19b6b825cf17c331a8c54709785ca4f8ab926a65"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_hjTLDTest": 0.0013122034924800646
+            },
+            "exampleSites": [
+                "assemblylabel.com",
+                "www.shiels.com.au",
+                "au.camilla.com",
+                "www.billabong.com.au",
+                "www.diggers.com.au",
+                "akubra.com.au",
+                "www.kidstuff.com.au",
+                "www.cablemelbourne.com",
+                "stockmansteaks.com.au",
+                "threadcollective.com.au",
+                "www.fatshackvintage.com.au",
+                "reebok.com.au",
+                "tulio.com.au",
+                "fellahamilton.com.au",
+                "plyco.com.au",
+                "shop.landwater.com.au",
+                "japanesetaste.com.au",
+                "kentstreetcellars.com.au",
+                "www.hypop.com.au",
+                "www.paire.com.au"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/v1\\/urls\\/count\\.json",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgets",
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "141b270510dd7ddf6b1211d65409f0b8a6b71cbd9cca7aea243872ea1647b2c2",
+                "1c9c48198c391a3087caefc53aff59621f2f610abcd34981f5f8cf3e0f4e613b",
+                "bb9da5a7b7129de19a12fa41e35bc71a889c02514ff06134036c5ec3482d321c",
+                "2e178f2e332f72a995e9c3f2dd4a654c92c188cc34ab98526d1c9be5025baf9a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "appliancechat.com",
+                "components101.com",
+                "roserambles.org",
+                "www.readanybook.com",
+                "youtubemp3free.com"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/js\\/pinit\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 27
+            },
+            "sites": 27,
+            "prevalence": 0.00273,
+            "cnames": [],
+            "responseHashes": [
+                "3faadebc89cdb21d11634a032816f152462d1cb8903eb21d0642501fcad065de"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.purewow.com",
+                "www.k5learning.com",
+                "hepper.com",
+                "sallysbakingaddiction.com",
+                "www.acouplecooks.com",
+                "www.womansworld.com",
+                "theorganisedhousewife.com.au",
+                "www.archyde.com",
+                "ikeahackers.net",
+                "www.spine-health.com",
+                "britishrecipesbook.co.uk",
+                "natashaskitchen.com",
+                "www.justonecookbook.com",
+                "www.worldtimebuddy.com",
+                "simplehomeedit.com",
+                "www.artstation.com",
+                "www.readanybook.com",
+                "insanelygoodrecipes.com",
+                "www.lovetoknow.com"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/js\\/pinit_main\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 36,
+                "Navigator.prototype.userAgent": 36,
+                "Navigator.prototype.language": 36
+            },
+            "sites": 36,
+            "prevalence": 0.00363,
+            "cnames": [],
+            "responseHashes": [
+                "79e9f1410dfcf6f141bae90a3c3195c275ec390f5d35fce5bcba4b4927a1a7e1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.archyde.com",
+                "www.readanybook.com",
+                "www.artstation.com",
+                "ultimateclassicrock.com",
+                "chefsbliss.com",
+                "www.lovetoknow.com",
+                "www.powerofpositivity.com",
+                "britishrecipesbook.co.uk",
+                "hepper.com",
+                "www.oh-mygut.com",
+                "fienza.com.au",
+                "www.lovisa.com.au",
+                "ultimatebackyard.com.au",
+                "jamieolivereats.co.uk",
+                "youtubemp3free.com",
+                "www.acouplecooks.com",
+                "www.purewow.com",
+                "sallysbakingaddiction.com",
+                "www.k5learning.com"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log"
+            ],
+            "apis": {},
+            "sites": 36,
+            "prevalence": 0.00363,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.000504693650953871,
+                "lotame_domain_check": 0.0003028161905723226,
+                "IR_gbd": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "draxe.com",
+                "thisitaliankitchen.com",
+                "theorganisedhousewife.com.au",
+                "www.lovisa.com.au",
+                "www.oh-mygut.com",
+                "www.worldtimebuddy.com",
+                "simplehomeedit.com",
+                "www.acouplecooks.com",
+                "theadventurelab.com.au",
+                "chefsbliss.com",
+                "thetouristchecklist.com",
+                "youtubemp3free.com",
+                "www.spine-health.com",
+                "www.lovetoknow.com",
+                "sallysbakingaddiction.com",
+                "www.archyde.com",
+                "mumcentral.com.au",
+                "www.womansworld.com",
+                "www.readanybook.com",
+                "www.powerofpositivity.com"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/v3\\/",
+            "cookies": 0.00293,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {},
+            "sites": 31,
+            "prevalence": 0.00313,
+            "cnames": [],
+            "responseHashes": [
+                "81652748b524d25356b352a8487426a9bd3a89a03789bf7b5c22d979349a6106",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.cosmopolitan.com",
+                "www.harpersbazaar.com",
+                "www.countryliving.com",
+                "www.allure.com",
+                "www.ubereats.com",
+                "humbletrail.com.au",
+                "www.realtor.ca",
+                "www.airnewzealand.com.au",
+                "www.belong.com.au",
+                "www.gq.com",
+                "www.australiansuper.com",
+                "www.bonappetit.com",
+                "www.familyhandyman.com",
+                "www.elle.com",
+                "www.winnings.com.au",
+                "www.vanityfair.com",
+                "www.glamour.com",
+                "pitchfork.com",
+                "investor.vanguard.com",
+                "www.housebeautiful.com"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/v3\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_pin_unauth": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "hipcamp.com",
+                "www.hipcamp.com"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/images\\/pidgets\\/pinit_fg_en_rect_red_28\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b187e7b360b0bb72d5b84f7fd2475044aba5db4122cac2b2f069bee534b159dc"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oh-mygut.com",
+                "www.powerofpositivity.com"
+            ]
+        },
+        {
+            "rule": "pinterest\\.com\\/images\\/pidgets\\/pinit_fg_en_rect_gray_20\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9bbc8b2780a1912e6af8fda994519b44fc3738b593d3b91ab922d7452469c00f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readanybook.com",
+                "www.worldtimebuddy.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Social - Share",
+        "CDN",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.0515,
+    "topInitiators": [
+        {
+            "domain": "pinimg.com",
+            "prevalence": 0.45234375
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "permutive.app",
+            "prevalence": 0.04140625
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.010546875
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.00625
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.005859375
+        },
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.00546875
+        },
+        {
+            "domain": "contentsquare.net",
+            "prevalence": 0.0046875
+        },
+        {
+            "domain": "squarecdn.com",
+            "prevalence": 0.0046875
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.0046875
+        }
+    ],
+    "types": {
+        "XHR": 382,
+        "Fetch": 619,
+        "Document": 334,
+        "Script": 400,
+        "Image": 71,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns5.pinterest.com",
+        "ns6.pinterest.com",
+        "ns9.pinterest.com",
+        "ns10.pinterest.com"
+    ]
+}

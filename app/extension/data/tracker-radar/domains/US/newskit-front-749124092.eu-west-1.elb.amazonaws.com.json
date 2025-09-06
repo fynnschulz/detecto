@@ -1,0 +1,88 @@
+{
+    "domain": "newskit-front-749124092.eu-west-1.elb.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [],
+    "cnames": [
+        {
+            "original": "api.dawn.com",
+            "resolved": "newskit-front-749124092.eu-west-1.elb.amazonaws.com"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "newskit-front-749124092\\.eu-west-1\\.elb\\.amazonaws\\.com\\/count",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.dawn.com",
+                    "resolved": "newskit-front-749124092.eu-west-1.elb.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dawn.com",
+                "www.dawn.com"
+            ]
+        },
+        {
+            "rule": "newskit-front-749124092\\.eu-west-1\\.elb\\.amazonaws\\.com\\/count",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.dawn.com",
+                    "resolved": "newskit-front-749124092.eu-west-1.elb.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "03c1c4a55d0faf51f6e60416005b1da93ce60c77edb4b2f3621a17449fd13911"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dawn.com",
+                "www.dawn.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "jquery.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 2,
+        "XHR": 2
+    },
+    "nameservers": []
+}

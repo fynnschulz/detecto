@@ -1,0 +1,135 @@
+{
+    "domain": "tradedoubler.com",
+    "owner": {
+        "name": "TradeDoubler AB",
+        "displayName": "TradeDoubler"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000906,
+    "sites": 9,
+    "subdomains": [
+        "wrap",
+        "swrap",
+        "svht",
+        "sdk",
+        "impfr",
+        "impes",
+        "imp"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "tradedoubler\\.com\\/wrap",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wrap",
+                "swrap"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "e07af92426c336d04faa28f39e06f65f3bebe753ee05152da1770d529ff6923f",
+                "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068",
+                "a8c6311fcd852dd155e101816b53654ae8c87dcc4ced68b3b057a3e11801a4f8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bagbrokers.no",
+                "bokia.no",
+                "no.milwaukeetool.eu",
+                "www.careofcarl.no",
+                "www.directferries.com",
+                "www.elmundo.es",
+                "www.gartnerbutikken.no"
+            ]
+        },
+        {
+            "rule": "tradedoubler\\.com\\/tr_sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "svht",
+                "sdk"
+            ],
+            "apis": {
+                "window.localStorage": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "591f7f156b2dc7d1d865d0435adc2c68810c7ecd46979be8c24eb4aad6a9fecb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bagbrokers.no",
+                "bokia.no",
+                "no.milwaukeetool.eu",
+                "www.directferries.com",
+                "www.gartnerbutikken.no"
+            ]
+        },
+        {
+            "rule": "tradedoubler\\.com\\/imp",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "impfr",
+                "impes",
+                "imp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "forklarmeg.com",
+                "www.elmundo.es",
+                "www.loppemarkeder.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.26666666666666666
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Script": 12,
+        "Image": 3
+    },
+    "nameservers": [
+        "ns-2038.awsdns-62.co.uk",
+        "ns-159.awsdns-19.com",
+        "ns-1359.awsdns-41.org",
+        "ns-582.awsdns-08.net"
+    ]
+}

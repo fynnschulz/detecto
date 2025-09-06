@@ -1,0 +1,78 @@
+{
+    "domain": "mediavitrina.ru",
+    "owner": {
+        "name": "JSC \"VITRINA TV\"",
+        "displayName": "VITRINA TV"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00000684,
+    "sites": 1,
+    "subdomains": [
+        "static-api",
+        "stat-analytics"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "mediavitrina\\.ru\\/v1\\/epg\\/russia1\\/ad-injections\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c4d2946f29b139a94c989fe6a0479a38cb96364405bc7af3e0bc3c374cd7925f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mail.ru",
+                "tv.mail.ru"
+            ]
+        },
+        {
+            "rule": "mediavitrina\\.ru\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stat-analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mail.ru",
+                "tv.mail.ru"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 4
+    },
+    "nameservers": [
+        "ns1.edgedns.ru",
+        "ns2.edgedns.world"
+    ]
+}

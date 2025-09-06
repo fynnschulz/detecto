@@ -1,0 +1,140 @@
+{
+    "domain": "net-media3.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "cid"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "net-media3\\.com\\/l\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Date.prototype.getTime": 3
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "287ab5fae08b9ae002870693c6b0f7515be994ec11926774e297b4de9a898163"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ted.com",
+                "gamejolt.com",
+                "www.123greetings.com",
+                "www.redcafe.net"
+            ]
+        },
+        {
+            "rule": "net-media3\\.com\\/ted-com\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7f7dd1870889b2ee784984550d124331b336b76c61622d5b2321f4442b595b51"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ted.com",
+                "blog.ted.com"
+            ]
+        },
+        {
+            "rule": "net-media3\\.com\\/sa\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [],
+            "apis": {
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "HTMLCanvasElement.prototype.toDataURL": 1,
+                "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1,
+                "Screen.prototype.colorDepth": 1,
+                "window.devicePixelRatio": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "Navigator.prototype.plugins": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.width": 1,
+                "window.outerWidth": 1,
+                "window.innerWidth": 1,
+                "window.outerHeight": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ted.com",
+                "www.123greetings.com",
+                "www.redcafe.net"
+            ]
+        },
+        {
+            "rule": "net-media3\\.com\\/123greetings-com\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c23af67b6af8771dea6d0072d7102934b1362888f49c66d2bbc767b5299b94e9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "123greetings.com",
+                "www.123greetings.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "kntxy.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Fetch": 4
+    },
+    "nameservers": [
+        "ursula.ns.cloudflare.com",
+        "brodie.ns.cloudflare.com"
+    ]
+}

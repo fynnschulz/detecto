@@ -1,0 +1,100 @@
+{
+    "domain": "optimalpeople.fr",
+    "owner": {
+        "name": "Ano Nymous",
+        "displayName": "Ano Nymous"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "analytics"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "optimalpeople\\.fr\\/js\\/rd-o-sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Document.cookie getter": 4
+            },
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "9500fe535d835dd5e034ee5f0cf6021351ddee821bb9fd8e94e3b5e74a8e6aa9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dekra-norisko.fr",
+                "www.dekra-norisko.fr",
+                "www.france-mineraux.fr",
+                "www.interflora.fr",
+                "www.printemps.com",
+                "www.speedway.fr"
+            ]
+        },
+        {
+            "rule": "optimalpeople\\.fr\\/d\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "ee93adb0d8559d003f6e77c37efda6e59f24dd73fe2c12787ee87bb4f91dfe43",
+                "eca159fe2e6e01593852a099e86955348fd5f20762c21743fde509018f999808",
+                "d9e61cc220847b7ca26b54b7e2f7d23b33d7286d1787f3c8ee322824608f2ac6",
+                "ea51c7177cf873e7c5529d7f0f43215bf974dd497a1113264949028488dc7ce6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dekra-norisko.fr",
+                "www.france-mineraux.fr",
+                "www.interflora.fr",
+                "www.printemps.com",
+                "www.speedway.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.625
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "omnisnippet1.com",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Fetch": 5
+    },
+    "nameservers": [
+        "hal.ns.cloudflare.com",
+        "athena.ns.cloudflare.com"
+    ]
+}

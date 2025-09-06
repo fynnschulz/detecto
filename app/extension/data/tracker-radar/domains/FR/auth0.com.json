@@ -1,0 +1,128 @@
+{
+    "domain": "auth0.com",
+    "owner": {
+        "name": "Auth0, Inc.",
+        "displayName": "Auth0"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "statista.eu",
+        "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu"
+    ],
+    "cnames": [
+        {
+            "original": "auth.happywool.com",
+            "resolved": "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu.auth0.com"
+        },
+        {
+            "original": "login.statista.com",
+            "resolved": "statista.eu.auth0.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "auth0\\.com\\/authorize",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "statista.eu",
+                "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "login.statista.com",
+                    "resolved": "statista.eu.auth0.com"
+                },
+                {
+                    "original": "auth.happywool.com",
+                    "resolved": "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu.auth0.com"
+                }
+            ],
+            "responseHashes": [
+                "00a2a1651adddadaa00633fb8d610940aa4b8d7eba7d00689cd13fcf24ba4afb"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "statista.com",
+                "www.happywool.com",
+                "www.statista.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/login\\/callback",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "statista.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "login.statista.com",
+                    "resolved": "statista.eu.auth0.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "statista.com",
+                "www.statista.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/authorize\\/resume",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "statista.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "login.statista.com",
+                    "resolved": "statista.eu.auth0.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "statista.com",
+                "www.statista.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Document": 7
+    },
+    "nameservers": [
+        "monroe.ns.cloudflare.com",
+        "kolton.ns.cloudflare.com"
+    ]
+}

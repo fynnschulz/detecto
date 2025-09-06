@@ -1,0 +1,110 @@
+{
+    "domain": "funnelback.com",
+    "owner": {
+        "name": "Squiz Australia Pty. Ltd.",
+        "displayName": "Squiz Australia"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "gonzaga-search.clients.us",
+        "lmu-search.clients.us",
+        "monash-search.clients"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "funnelback\\.com\\/stencils\\/resources\\/autocompletion\\/js\\/typeahead\\.bundle-0\\.11\\.1\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gonzaga-search.clients.us",
+                "lmu-search.clients.us"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "456894e2899453bb50d8cdf099140d5bd50be74301e02b9c6d13c26ec42ff97d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gonzaga.edu",
+                "www.gonzaga.edu",
+                "www.lls.edu"
+            ]
+        },
+        {
+            "rule": "funnelback\\.com\\/s\\/resources\\/gonzaga-search\\/_default\\/js\\/typeahead\\.fb-2\\.6\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gonzaga-search.clients.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fc498529fc5af855ba6e32667aebb2dd3428d43149cd31b104ae3cdae8d618f1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gonzaga.edu",
+                "www.gonzaga.edu"
+            ]
+        },
+        {
+            "rule": "funnelback\\.com\\/stencils\\/resources\\/autocompletion\\/js\\/handlebars\\.min-v4\\.0\\.5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "monash-search.clients"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "121c6721805fae5a7c9fb988d9e7ffa92f7daca3102d93fd1c01e89e01bf2cb0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "monash.edu",
+                "www.monash.edu"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 7
+    },
+    "nameservers": [
+        "ns-140.awsdns-17.com",
+        "ns-597.awsdns-10.net",
+        "ns-1282.awsdns-32.org",
+        "ns-1974.awsdns-54.co.uk"
+    ]
+}

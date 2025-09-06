@@ -1,0 +1,661 @@
+{
+    "domain": "typeform.com",
+    "owner": {
+        "name": "Typeform S.L.",
+        "displayName": "Typeform"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000606,
+    "sites": 6,
+    "subdomains": [
+        "embed",
+        "selectra",
+        "images",
+        "renderer-assets",
+        "font",
+        "admin"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "typeform\\.com\\/next\\/embed\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "d7fed716c9d17580a8b340dd3c57e03c5f1af36d38bbaf1141e01b8d4bd8bea6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saint-james.com",
+                "www.lafibreoptique.fr",
+                "www.victronenergy.fr"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/to\\/CYlkooVk",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "selectra"
+            ],
+            "apis": {
+                "Navigator.prototype.onLine": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "PerformanceTiming.prototype.navigationStart": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e595730ed23cdc4c367116d5561a8e980c53fb809509426b248ed6ea4ad75963"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/images\\/2b7aXa2ZEJ37",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "166c86029f7400e454178241775c2d24c49b3a21d7d2725a086253e037abdc12"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/modern-renderer\\.6481694e40131216c9f9\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.language": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.connection": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "36315a02de695ec12cd3bf473d43db545388a3019e1416b853cd986c25bb1dd6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~form~attachment\\.41532ccf18b3cafb0d0b\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "MediaSource.isTypeSupported": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0c35b4497841e2d633306c3d7bf9e3bcdf707b72ce2cc12f060dc52f454230b7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~form~blocks-validation-phone_number\\.d41eb86bd3901c77522a\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b51b7069aa08bbb413bffcfcd78e256eff9bc126d02b97e3f8497763b4abe1d9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~form~uploads\\.63d58972da75f73a7fb8\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "994544efc8f331c4fcd2c9bd562ab761d85941009d97481c5f44536f05a6912b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~form\\.411c32d25351f42146f4\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "21c972129d95d797ba16c271eab391b586276f50c63d08524c76fe341b741a16"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/default~form~attachment\\.f8ea9b820b5687fe30a6\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9f21360fb6aa7fd0737776b1b4621898b7cbc7f1aa951eecdbe7c70db3a6298d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/form\\.913b0d6eeecdc53cda4e\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ee099da928894049c9fe30b729209ebb8a4b71ef24dab7106b6fe7077f1cce62"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/fonts\\/ud7tFohh\\/index\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "font"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ab139a594939c41d457f35fe0582d0c8b23cc2b1c2fced4c9272b9cc4364bd2e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~rating~mc~pc~b-r-nps~b-r-contact_info~blocks-renderer-checkbox~blocks-renderer-opinion_scale~blocks-renderer-dropdown~b-r-yes_no~b-r-legal~b-r-multiple_choice~b-r-phone_number\\.034eb8a703358aaf1e5c\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4d870872a978c50c39296dd2d04a54408b76f3ff6bb0e708aa229a9d733b9622"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~rating~mc~pc~b-r-nps~blocks-renderer-opinion_scale~b-r-yes_no~b-r-legal~b-r-multiple_choice\\.ee85b94933d9360eb602\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fec57485c88a39cb9956a2b2f4b620fb6da2777a65e26b713b5a9cd1eb554fe3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~b-r-yes_no~b-r-legal~b-r-multiple_choice\\.adb781482f329e5ade4f\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0382a8fe9dcefd2c3c9e88c2404ce51198bd0d8280baf2658886ec727b314086"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/default~mc~pc~b-r-yes_no~b-r-legal~b-r-multiple_choice\\.6285a92054d4234e5aaa\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6cb12d0f9ad05a61920e8a8eccce0c86db387f799b4ca842316bc979d423cd98"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/b-r-multiple_choice\\.c86692d260318d9805c9\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "58ae4d8954760dd9712b759cdf48f6724e814e5abf680b22bf01db3738a18fe7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~b-r-ranking~b-r-contact_info~blocks-renderer-dropdown~b-r-multi_format~b-r-phone_number\\.7cb7cb6a1e35ae757ee1\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7ee7cf96fc64d015d91e4e6a28f920e0b49c8eb448b32ac2343b1a6c4494eabb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~b-r-ranking~b-r-contact_info~blocks-renderer-dropdown~b-r-phone_number\\.9cf8834366bec5cf08fd\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1ef52ecec019fcbea33fa09c67bab65e96f4496fa6e26f5f78a9309f19602aad"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~b-r-contact_info~blocks-renderer-dropdown~b-r-phone_number\\.3b163adc19bda1f527e3\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d575c26f1825450708317c6e4799be5f03986288ea530221760f4ab85c749ea3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~blocks-validation-phone_number~b-r-contact_info~b-r-phone_number\\.67777f136787853ae0aa\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3f088966001af4d1a590b5ccd595cbae153fc7a174ea90f3556357869aff53cf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~b-r-contact_info~b-r-phone_number\\.ed220e396d1611fdee5e\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3f381658056a6cdc466036333ee6948199a550ac06ac64538b374d50ccce21fc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/vendors~b-r-contact_info\\.c463eef67e62158e8fc0\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "18ac851bccb18118679106a8d813717843e24c6a50e43640c4518aa95c358601"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/default~b-r-contact_info~blocks-renderer-dropdown~b-r-phone_number\\.92713c4ebbaf5c6876c4\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "77be40bfdc2cdd74aa645d22dc19d0f40bfcde4834417349a92f6a2cd9f84eb3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/b-r-contact_info\\.ecbb666829bf6061025c\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "renderer-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bc0eca55f2270122d0a70be9ee1978be6b0997d0e7f333fe20671197bc1493d0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/forms\\/CYlkooVk\\/insights\\/performance\\/view-form-open",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "selectra"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fournisseurs-electricite.com",
+                "www.fournisseurs-electricite.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/signup",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "admin"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetsuzy.org",
+                "www.planetsuzy.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7857142857142857
+        },
+        {
+            "domain": "korfo.org",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "rudderlabs.com",
+            "prevalence": 0.07142857142857142
+        }
+    ],
+    "types": {
+        "Script": 45,
+        "Document": 2,
+        "Image": 2,
+        "Stylesheet": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-14.awsdns-01.com",
+        "ns-1444.awsdns-52.org",
+        "ns-1725.awsdns-23.co.uk",
+        "ns-788.awsdns-34.net"
+    ]
+}

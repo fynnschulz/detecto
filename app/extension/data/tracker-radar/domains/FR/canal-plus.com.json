@@ -1,0 +1,85 @@
+{
+    "domain": "canal-plus.com",
+    "owner": {
+        "name": "GROUPE CANAL +",
+        "displayName": "Groupe Canal+"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "pass-api-v2"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "canal-plus\\.com\\/provider\\/services\\/fr\\/public\\/createToken",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pass-api-v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e57380b768863fb7efeb0d4dd366878f6486c40a993879da5fef623ef79ab62b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canalplus.com",
+                "client.canalplus.com"
+            ]
+        },
+        {
+            "rule": "canal-plus\\.com\\/provider\\/services\\/cpfra-fr\\/public\\/createToken",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pass-api-v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f9bbc290f0ef3a4b9af52f4404fb4da3b43b9db833ad9ebca1fb7929dac43c2b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canalplus.com",
+                "www.canalplus.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "XHR": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "nsb.perf1.com",
+        "nsc.perf1.com",
+        "nsa.perf1.fr"
+    ]
+}

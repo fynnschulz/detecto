@@ -1,0 +1,141 @@
+{
+    "domain": "calltracks.com",
+    "owner": {
+        "name": "Calltracks Limited",
+        "displayName": "Calltracks"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "lite",
+        "perrys",
+        "renaultretailgroup",
+        "vertu",
+        "rrg"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "calltracks\\.com\\/wnd\\/loader\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "lite",
+                "perrys",
+                "renaultretailgroup",
+                "vertu"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.maxTouchPoints": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "c84fa57b9954587901222c0f8d62d6a0db084188edb8e61fc62661784d8c6179",
+                "872bea3b6bb40970119515b8255c8a6b9c81501fe2ca63e226f1b1cca61970dc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "landc.co.uk",
+                "www.perrys.co.uk",
+                "www.retailgroup.co.uk",
+                "www.vertumotors.com"
+            ]
+        },
+        {
+            "rule": "calltracks\\.com\\/wnd\\/g3\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "lite",
+                "perrys",
+                "rrg",
+                "vertu"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "952ca56deb68707f8f7d41be9333157395a3a829a72e49332cba498a36fb4900",
+                "9508cccb0b25c64076e102a88ddcafa3d3d75f79ab74acd1016e25a1a00163af",
+                "07154d3de1b65389a36d232e81b7c6f6f6cb86e2d6bf5da84694c82a8e1fe034"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "landc.co.uk",
+                "www.perrys.co.uk",
+                "www.retailgroup.co.uk",
+                "www.vertumotors.com"
+            ]
+        },
+        {
+            "rule": "calltracks\\.com\\/wnd\\/pingback\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lite",
+                "perrys",
+                "rrg",
+                "vertu"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "cd49e54988729544c314886ec90b1a2f363356aaebdbbfccf94557facc77341a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "landc.co.uk",
+                "www.perrys.co.uk",
+                "www.retailgroup.co.uk",
+                "www.vertumotors.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2857142857142857
+        }
+    ],
+    "types": {
+        "Script": 12
+    },
+    "nameservers": [
+        "ns-cloud-c1.googledomains.com",
+        "ns-cloud-c2.googledomains.com",
+        "ns-cloud-c3.googledomains.com",
+        "ns-cloud-c4.googledomains.com"
+    ]
+}

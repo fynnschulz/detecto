@@ -1,0 +1,711 @@
+{
+    "domain": "pure.cloud",
+    "owner": {
+        "name": "Genesys Telecommunications Laboratories, Inc.",
+        "displayName": "Genesys Telecommunications Laboratories"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "apps.usw2",
+        "apps.aps1",
+        "api-cdn.usw2"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "pure\\.cloud\\/genesys-bootstrap\\/genesys\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps.usw2",
+                "apps.aps1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.product": 3,
+                "window.localStorage": 3,
+                "window.name": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e8fa0f8b01e1f12ed0fb59df0b47dc7ada0f5de43345d40f4d6c4e551531d99c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.dyson.com",
+                "www.dyson.com.au",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/thirdparty-plugins\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.usw2",
+                "apps.aps1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "10c86b682a565fe7f8f80c75b27c4d8f09c85592a916039a7d5cafbce6f7b7b0"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.dyson.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/cxbus\\/cxbus\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps.usw2",
+                "apps.aps1"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "window.name": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "898fc05a8af15b73c855f86bcc1ef8fb8538f4ca2e87bed44c83db8a68dc5ecf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.churchofjesuschrist.org",
+                "www.dyson.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/thirdpartyplugins\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps.usw2",
+                "apps.aps1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "480935886398c234969b03df3e7238a23cfcd61f687befc2300f15f9391f4e56"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.dyson.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/journey\\/messenger-plugins\\/offersHelper\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.usw2",
+                "apps.aps1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "0f788aa700098930a332bff6fa38f72f825d98bb02231c234a94b93f07b81d9e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.dyson.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/messenger\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps.usw2",
+                "apps.aps1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "151c2408be2bf2ced5914515410f01ddc758b2491e023bf26cf6e8629a116973"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.dyson.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/messenger-renderer\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.usw2",
+                "apps.aps1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "104a214a22a3e9dc6afd272dbf2547e5fd683cf229972bded2d8427143055b67"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.dyson.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/messagingMiddleware\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.usw2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "0a8c640aaf3f28ebde5e996ba7f8ea6df6996cd5f37a1b23d20fd8792929f6f4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.churchofjesuschrist.org",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/defaultVendors\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps.usw2"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "f97f2bdc35da824b76ab5670f9252ba9fb21dc7f3e1584bfefbb3fbac12f2b12"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.churchofjesuschrist.org",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/vendors\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.usw2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "22334123f444a5e40038acf3d814f24f0b923b953ed139bca474a3ac5f730f16"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.churchofjesuschrist.org",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/main\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps.usw2"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.languages": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "956d12555b5c1339f9ae224c2f3e3ef3658f8849891a526bc7ee880d9f3174e2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/engage\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4afce9c37026f67069678aae0e4fdce53f16805c8eb046e5344c42769eca9234"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/broadcast\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps.usw2"
+            ],
+            "apis": {
+                "BroadcastChannel.prototype.constructor": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fcbfead405f8aa09c3a84cf398c0a7a5327480e8d436ddd8fc92a264afa5a339"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/messengerrenderer\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps.usw2"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.maxTouchPoints": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a0694b5ef45886224ff5c53b2c46586ad8c905663f311b35e9060a555f053a5c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/i18n\\/en-us\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "658f6e6e13db5106723d166267cad741e6836bec5dbef8628e8c8598fadbde7a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/messenger\\/i18n\\/vendors\\/date-en\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.usw2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e1558225dd99934bac3980e9e672e391a57c7ff3127b4ad22ff7a3f308825bf6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.churchofjesuschrist.org",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/da\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b72c9c6aab32d89727497058de88c1e9dcc8f31c4525b77e0e5f49c89aadce7b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/nl\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9a8f9710aff56ccb071d12652803efc19963c56906482e6b286e276e4a8aae39"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/fr\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f263a3ee4d87ff21c74c93728c96b88db98a067d1636f9919b5e6dd20a766d3f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/en-us\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "463df092601505877868b39ceff175fd295a970ff8fa65a33dfad190edc2b934"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/fi\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e24f26f71db9ebe3025401b704f39632dbeb67c91e714e712781dee55693b0bf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/de\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9c217a60869e52b8d0ac4e94c24d9de8beadb379feb59fa183dffbd1fc14da40"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/it\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "564a3b19eb74dc4f6b448a73c4d4d404dab93860714bf647d6e5ee9d9ef75651"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/no\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "90919015ec17a4787f6860ee19c3115e2641952e6f51a5cea65f18a4a70e832c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/pt-br\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9c1c3d5961e8ef05e6fb95e8f7b64ac91cd40bd61fad38770e272e848bfdfc21"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/pt-pt\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6af0d27024f4a9bc1e3cd6e658f2aa6b6b096189ec97376fdf74c51edcc35d81"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/es\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0c85a1495cef633b1f1390d853a271d559f2a37a1945094e5b01fc2e914c30ce"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        },
+        {
+            "rule": "pure\\.cloud\\/webdeployments\\/v1\\/deployments\\/09e98885-81fe-4286-8186-cd605f1c9305\\/sv\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-cdn.usw2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "10468266dd58070ecfe6b8235b1d8fc3cad59db6a41c4c3e060f5070be665316"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xerox.com",
+                "www.support.xerox.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.813953488372093
+        },
+        {
+            "domain": "dyson.com.au",
+            "prevalence": 0.16279069767441862
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.023255813953488372
+        }
+    ],
+    "types": {
+        "Script": 34,
+        "Document": 9,
+        "XHR": 26
+    },
+    "nameservers": [
+        "ns-3.awsdns-00.com",
+        "ns-1887.awsdns-43.co.uk",
+        "ns-1522.awsdns-62.org",
+        "ns-915.awsdns-50.net"
+    ]
+}

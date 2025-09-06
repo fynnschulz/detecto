@@ -1,0 +1,103 @@
+{
+    "domain": "mplat-ppcprotect.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000703,
+    "sites": 7,
+    "subdomains": [
+        "client.prod",
+        "click.prod"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "mplat-ppcprotect\\.com\\/bdf2553697a311ef92fb0a387f4e842f_js\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "client.prod"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 3,
+                "Navigator.prototype.platform": 3,
+                "Navigator.prototype.language": 3,
+                "window.devicePixelRatio": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.width": 3,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "64e494f66eae3ae9d40b94135021df85a7fc37e42c8a8f4b5b14b0a23126b114"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "conrad.ch",
+                "www.conrad.de",
+                "www.conrad.ch"
+            ]
+        },
+        {
+            "rule": "mplat-ppcprotect\\.com\\/v2\\/recv",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "click.prod"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [],
+            "responseHashes": [
+                "02c045b5a38b1e9a01bf15ab6d48d526dc60a726bf041fe32d153b4ffd71e761"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "conrad.ch",
+                "www.conrad.de",
+                "www.conrad.ch",
+                "www.fruugoschweiz.com",
+                "www.goethe.de",
+                "www.hilton.com",
+                "www.veed.io"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.625
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 7
+    },
+    "nameservers": [
+        "ns-49.awsdns-06.com",
+        "ns-780.awsdns-33.net",
+        "ns-1740.awsdns-25.co.uk",
+        "ns-1466.awsdns-55.org"
+    ]
+}

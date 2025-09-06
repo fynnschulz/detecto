@@ -1,0 +1,97 @@
+{
+    "domain": "roobrik.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "tools",
+        "widget"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "roobrik\\.com\\/scripts\\/referrertracking\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tools",
+                "widget"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "8e7ad73aeffcba0b38ded4455fb48aacec9e7e8fe2db471b186fb9f6c98d2156"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "roobrikutk": {
+                    "ttl": 63072009,
+                    "length": 43,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "humangood.org",
+                "www.humangood.org",
+                "www.whereyoulivematters.org"
+            ]
+        },
+        {
+            "rule": "roobrik\\.com\\/cookie\\/getusertrackingcookie",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tools"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4b77976d22d65274f8e150e403ae23a5127ba3a35c4861fa9f479e2584b3299a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "leadinsite_client_domain": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "humangood.org",
+                "www.whereyoulivematters.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns10.digicertdns.com",
+        "ns11.digicertdns.com",
+        "ns12.digicertdns.com",
+        "ns13.digicertdns.net",
+        "ns14.digicertdns.net",
+        "ns15.digicertdns.net"
+    ]
+}

@@ -1,0 +1,218 @@
+{
+    "domain": "mparticle.com",
+    "owner": {
+        "name": "mParticle, Inc",
+        "displayName": "mParticle"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.00121,
+    "sites": 12,
+    "subdomains": [
+        "identity",
+        "identity.eu1",
+        "jssdkcdns",
+        "jssdks.eu1",
+        "jssdks"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "mparticle\\.com\\/v1\\/identify",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "identity",
+                "identity.eu1"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000904,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moviesanywhere.com",
+                "reverb.com",
+                "transa.ch",
+                "www.burger-king.ch",
+                "www.cnbc.com",
+                "www.marksandspencer.com",
+                "www.transa.ch",
+                "www.treatwell.ch",
+                "www.westernunion.com"
+            ]
+        },
+        {
+            "rule": "mparticle\\.com\\/v1\\/identify",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "identity",
+                "identity.eu1"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000804,
+            "cnames": [],
+            "responseHashes": [
+                "aa79921aefeb223a46486e50e5c3c918ecc2222e4eb2b5f31afe2d91d28692c0",
+                "fb2eb468f2b7d2eb1a0ff48f3c27e1a91528c6c059da54303f1436fdc0503cef",
+                "4b53457c65313b218f5c59f4e838c77f811e9066c24d0c40b38200475892811b",
+                "a31ccd4732d663a758ca4dc05b73c8442d313e5a7700b4664365666b0fc4b8fb",
+                "cbad4cc31f987f7f8b90b91e388f72a866e2ca6601285b53a39be5ea6df2f165",
+                "14294ed73b20bd534ab322e51b78e84253fbdce5842d81df431d9c6310d83df7",
+                "e2a861ed301b6812388c499c196a3a36b301d517f7ec4d0982860087f9c1abff"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reverb.com",
+                "transa.ch",
+                "www.burger-king.ch",
+                "www.cnbc.com",
+                "www.marksandspencer.com",
+                "www.transa.ch",
+                "www.treatwell.ch",
+                "www.westernunion.com"
+            ]
+        },
+        {
+            "rule": "mparticle\\.com\\/js\\/v2\\/eu1-30ec598088aa8f4f8171565ba6e5cea3\\/mparticle\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "jssdkcdns"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1401232452d1ba0af44f885f410a860078eec2497fb2cc2197104ddd0633f2c0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transa.ch",
+                "www.transa.ch"
+            ]
+        },
+        {
+            "rule": "mparticle\\.com\\/v1\\/JS\\/eu1-4d9fc3be5c3c8146a35db8f2e7290be2\\/Forwarding",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jssdks.eu1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burger-king.ch",
+                "www.burger-king.ch"
+            ]
+        },
+        {
+            "rule": "mparticle\\.com\\/v1\\/JS\\/us1-40566a54a8e0c94093803ba945990495\\/Forwarding",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jssdks"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marksandspencer.com",
+                "www.marksandspencer.com"
+            ]
+        },
+        {
+            "rule": "mparticle\\.com\\/v3\\/JS\\/us1-fdd5f1abc3a1f3499fd53e18a790704f\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jssdks"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "804c42bd1c2fb838e6910b9b7db826fad44cbb0ed50d0a2220524ae332072808"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westernunion.com",
+                "www.westernunion.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000703,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.45098039215686275
+        },
+        {
+            "domain": "reverb-assets.com",
+            "prevalence": 0.39215686274509803
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0392156862745098
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.0392156862745098
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.0196078431372549
+        }
+    ],
+    "types": {
+        "Preflight": 9,
+        "Fetch": 14,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-1447.awsdns-52.org",
+        "ns-1796.awsdns-32.co.uk",
+        "ns-206.awsdns-25.com",
+        "ns-553.awsdns-05.net"
+    ]
+}

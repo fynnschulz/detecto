@@ -1,0 +1,88 @@
+{
+    "domain": "seenthis.se",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "video"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "seenthis\\.se\\/public\\/tag-loader\\/11\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "b7a507c2f0243b8b03cb95725a94501fd4df35d0d0499c51044c640f0d28d644"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamespot.com",
+                "harrypotter.fandom.com",
+                "hollowknight.fandom.com",
+                "lotr.fandom.com",
+                "www.tvguide.com"
+            ]
+        },
+        {
+            "rule": "seenthis\\.se\\/v2\\/player\\/112\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "video"
+            ],
+            "apis": {
+                "HTMLMediaElement.prototype.canPlayType": 1,
+                "URL.createObjectURL": 1,
+                "MediaSource.isTypeSupported": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1,
+                "window.name": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "efa2ab141f5619e8b51f7d4c8db0350c77052a034da0a77f00e2ec7e79fecce2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamespot.com",
+                "www.tvguide.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 7
+    },
+    "nameservers": [
+        "ns-1228.awsdns-25.org",
+        "ns-1662.awsdns-15.co.uk",
+        "ns-415.awsdns-51.com",
+        "ns-606.awsdns-11.net"
+    ]
+}

@@ -19,6 +19,7 @@
   "permissions": [
     "storage",
     "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
     "webRequest",
     "scripting",
     "tabs",
@@ -30,9 +31,9 @@
   "declarative_net_request": {
     "rule_resources": [
       {
-        "id": "base-rules",
+        "id": "static-rules",
         "enabled": true,
-        "path": "src/rules.json"
+        "path": "src/static-rules.json"
       }
     ]
   },

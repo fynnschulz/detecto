@@ -1,0 +1,135 @@
+{
+    "domain": "powr.io",
+    "owner": {
+        "name": "POWR Inc.",
+        "displayName": "POWR"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "www",
+        "outlet"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "powr\\.io\\/powr\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "8358b2ca4ee730f96fef90171121435f6a737b6063b419eda9d569984be8bf77"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "northwestguitars.co.uk",
+                "richtonemusic.co.uk",
+                "www.bonnersmusic.co.uk",
+                "www.fabricsgalore.co.uk",
+                "www.frenchestateagents.com"
+            ]
+        },
+        {
+            "rule": "powr\\.io\\/instagram",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "20b7ef410e4d1db6c10cde548d80c6ede4d13cf0ac047117807ac19f307059cf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "richtonemusic.co.uk",
+                "www.frenchestateagents.com"
+            ]
+        },
+        {
+            "rule": "powr\\.io\\/social-feed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "outlet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "richtonemusic.co.uk",
+                "www.frenchestateagents.com"
+            ]
+        },
+        {
+            "rule": "powr\\.io\\/social-feed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "outlet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3006ddaf318de665785aa67f53074cf643e7f7886a14789478bd8b2df13729ef"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "richtonemusic.co.uk",
+                "www.frenchestateagents.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "powrcdn.com",
+            "prevalence": 0.6428571428571429
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.35714285714285715
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "XHR": 4,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "jill.ns.cloudflare.com",
+        "major.ns.cloudflare.com"
+    ]
+}

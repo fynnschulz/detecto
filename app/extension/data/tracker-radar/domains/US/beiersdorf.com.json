@@ -1,0 +1,201 @@
+{
+    "domain": "beiersdorf.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "tm-eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "beiersdorf\\.com\\/gtm\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tm-eu"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1,
+                "window.name": 3,
+                "Document.cookie setter": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "497bcbccefa1b2952eb9fe4b0a5ac07adf22e7e5a36d898c7f9e7bd93dc9494e",
+                "4c0b2c3e0a8e5540e41521127f9cc97c3a6fdc15d27b2e0949e7dcec67fa9a1f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_uconfig": {
+                    "ttl": 31536004,
+                    "length": 159,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "_sconfig": {
+                    "ttl": 1803,
+                    "length": 538,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eucerin.de",
+                "www.eucerin.de",
+                "www.nivea.co.uk"
+            ]
+        },
+        {
+            "rule": "beiersdorf\\.com\\/gtag\\/js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tm-eu"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "window.name": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0f2c93b74d8d441a86392eb9bbbddf727dcce1a5ac2e3812fd85b1d3f532f7f0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ga_N46D897HRD": {
+                    "ttl": 15552003,
+                    "length": 54,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_ga": {
+                    "ttl": 15552003,
+                    "length": 26,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eucerin.de",
+                "www.nivea.co.uk"
+            ]
+        },
+        {
+            "rule": "beiersdorf\\.com\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tm-eu"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "eucerin.de",
+                "www.eucerin.de",
+                "www.eucerinus.com",
+                "www.nivea.co.uk"
+            ]
+        },
+        {
+            "rule": "beiersdorf\\.com\\/_\\/service_worker\\/5840\\/sw_iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tm-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2ada301d803d8f4b2ba210c9c57091378255ed54b96e4236a9e2ce587a2a4035"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eucerin.de",
+                "www.eucerinus.com"
+            ]
+        },
+        {
+            "rule": "beiersdorf\\.com\\/_\\/service_worker\\/5840\\/sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tm-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eucerin.de",
+                "www.eucerinus.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "consentmanager.net",
+            "prevalence": 0.4166666666666667
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Fetch": 4,
+        "Document": 2,
+        "Other": 2
+    },
+    "nameservers": [
+        "ns5.netnames.net",
+        "ns1.netnames.net",
+        "ns6.netnames.net",
+        "ns2.netnames.net"
+    ]
+}

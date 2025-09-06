@@ -1,0 +1,88 @@
+{
+    "domain": "unzer.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "static",
+        "payment"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "unzer\\.com\\/v1\\/unzer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "4e407dd55fa643bf226be238464ccc84ec30fe8ac4664a6a00fbe8774ce6d587"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "engelhorn.de",
+                "www.krebshilfe.de",
+                "www.stimme.de"
+            ]
+        },
+        {
+            "rule": "unzer\\.com\\/v1\\/cardframe",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "payment"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8d655c949297b5e6eefc62c6e41c747336d8f223caf26ac8cfe6698aca762e9d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stimme.de",
+                "www.stimme.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "consentmanager.net",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-307.awsdns-38.com",
+        "ns-1321.awsdns-37.org",
+        "ns-588.awsdns-09.net",
+        "ns-1661.awsdns-15.co.uk"
+    ]
+}

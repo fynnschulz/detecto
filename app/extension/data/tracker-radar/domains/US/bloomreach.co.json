@@ -1,0 +1,225 @@
+{
+    "domain": "bloomreach.co",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "cme-api",
+        "microcenter-api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "bloomreach\\.co\\/js\\/exponea\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cme-api",
+                "microcenter-api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.maxTouchPoints": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "dd306e1d5d84ed149656f8b26404bf9d54aed11c19bfb993a1595bb3e045c3c5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__exponea_etc__": {
+                    "ttl": 94608009,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "__exponea_time2__": {
+                    "ttl": 3612,
+                    "length": 19,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "net.hr",
+                "www.microcenter.com"
+            ]
+        },
+        {
+            "rule": "bloomreach\\.co\\/bulk",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cme-api",
+                "microcenter-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f3a47fbf203876370623bbc13fbd4650c9b88bde1de67774395a808398cf5714"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "net.hr",
+                "www.microcenter.com"
+            ]
+        },
+        {
+            "rule": "bloomreach\\.co\\/managed-tags\\/show",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cme-api",
+                "microcenter-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5c858b1c80e2a37e46abc26525a908fe14db93ebdce1dbdbdd2828cd180bbeec"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "net.hr",
+                "www.microcenter.com"
+            ]
+        },
+        {
+            "rule": "bloomreach\\.co\\/webxp\\/projects\\/ffcaa020-4381-11ef-9b0e-daafc745905b\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "microcenter-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fa828ddae8a3d8429dfdd4a914d43e1be2357d8b4f129090a3101dbd21601a3b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microcenter.com",
+                "www.microcenter.com"
+            ]
+        },
+        {
+            "rule": "bloomreach\\.co\\/webxp\\/projects\\/ffcaa020-4381-11ef-9b0e-daafc745905b\\/segments",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "microcenter-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__exponea_etc__": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "microcenter.com",
+                "www.microcenter.com"
+            ]
+        },
+        {
+            "rule": "bloomreach\\.co\\/campaigns\\/banners\\/show",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "microcenter-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f5c1388868f22487ce09932804f0203ff0e4821dc325963da6337358b3c6274f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microcenter.com",
+                "www.microcenter.com"
+            ]
+        },
+        {
+            "rule": "bloomreach\\.co\\/optimization\\/recommend\\/user",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "microcenter-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ef51cee56d3dde41e94db0c99f36260c49143a2c05e85bcfed40e3a8f0edc1fe"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microcenter.com",
+                "www.microcenter.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7692307692307693
+        },
+        {
+            "domain": "brcdn.com",
+            "prevalence": 0.15384615384615385
+        },
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 0.07692307692307693
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 12
+    },
+    "nameservers": [
+        "ns-cloud-d1.googledomains.com",
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d4.googledomains.com",
+        "ns-cloud-d2.googledomains.com"
+    ]
+}

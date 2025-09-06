@@ -1,0 +1,237 @@
+{
+    "domain": "deep.bi",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "api",
+        "scoring"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "deep\\.bi\\/v3\\/init\\.js",
+            "cookies": 0.0000342,
+            "fingerprinting": 2,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "Date.prototype.getTimezoneOffset": 5,
+                "window.localStorage": 5,
+                "Screen.prototype.orientation": 5,
+                "Date.prototype.getTime": 5,
+                "Navigator.prototype.doNotTrack": 5,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5,
+                "Screen.prototype.availWidth": 5,
+                "Screen.prototype.availHeight": 5,
+                "Navigator.prototype.mimeTypes": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 5,
+                "Navigator.prototype.cookieEnabled": 5,
+                "Document.cookie setter": 5,
+                "window.innerHeight": 4
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "196f22327d57f74877e2a049e9e0c63955d5415126691dde9a31544909458d8e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "deepbi_user_session": {
+                    "ttl": 1809,
+                    "length": 38,
+                    "prevalence": 0.000034204405527431934,
+                    "uniqueness": 1
+                },
+                "deepbi_firstparty_cookie": {
+                    "ttl": 31536012,
+                    "length": 19,
+                    "prevalence": 0.000034204405527431934,
+                    "uniqueness": 1
+                },
+                "deepbi_user_deepcookie": {
+                    "ttl": null,
+                    "length": 15,
+                    "prevalence": 0.000034204405527431934,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dorzeczy.pl",
+                "smaki.pl",
+                "www.rappler.com",
+                "www.wprost.pl",
+                "zdrowie.wprost.pl"
+            ]
+        },
+        {
+            "rule": "deep\\.bi\\/v1\\/streams\\/j7odeRmIZNFp\\/events",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "bb785e0d153291cce1532fa43aaac012f3a049e5169fccd9cd9faccfc0e941a2",
+                "692e002d3a748e1cd597b601d0104686ceb8a79b4e0763d138cfa5c9d392adda",
+                "91dd85268734db442fc0feca09ca7a66a7e60cadcb0f160c8ca783efe31fbe10"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dorzeczy.pl",
+                "smaki.pl",
+                "www.wprost.pl",
+                "zdrowie.wprost.pl"
+            ]
+        },
+        {
+            "rule": "deep\\.bi\\/v1\\/streams\\/j7odeRmIZNFp\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dorzeczy.pl",
+                "smaki.pl",
+                "www.wprost.pl",
+                "zdrowie.wprost.pl"
+            ]
+        },
+        {
+            "rule": "deep\\.bi\\/v1\\/streams\\/TR8x0HLI2e7B\\/events",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rappler.com",
+                "www.rappler.com"
+            ]
+        },
+        {
+            "rule": "deep\\.bi\\/v1\\/streams\\/TR8x0HLI2e7B\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rappler.com",
+                "www.rappler.com"
+            ]
+        },
+        {
+            "rule": "deep\\.bi\\/score\\/j7odeRmIZNFp\\/cmeczfcm43c3c9ze7pc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "scoring"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "deepbi_firstparty_cookie": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "wprost.pl",
+                "www.wprost.pl"
+            ]
+        },
+        {
+            "rule": "deep\\.bi\\/score\\/j7odeRmIZNFp\\/cmedbwhwy353chh3vmb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "scoring"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "deepbi_firstparty_cookie": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "wprost.pl",
+                "zdrowie.wprost.pl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000041,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9574468085106383
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0425531914893617
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "XHR": 10,
+        "Preflight": 6
+    },
+    "nameservers": [
+        "zoe.ns.cloudflare.com",
+        "matt.ns.cloudflare.com"
+    ]
+}

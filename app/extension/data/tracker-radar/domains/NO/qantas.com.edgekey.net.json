@@ -1,0 +1,66 @@
+{
+    "domain": "qantas.com.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "accounts"
+    ],
+    "cnames": [
+        {
+            "original": "accounts.qantas.com",
+            "resolved": "accounts.qantas.com.edgekey.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "qantas\\.com\\.edgekey\\.net\\/auth\\/member",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "accounts.qantas.com",
+                    "resolved": "accounts.qantas.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "ff3085f5e4ac2e78cbf79fadd2114ff70e1812e2eae3edd27cdac0a0a66438dc"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "qantas.com",
+                "www.qantas.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "qantasloyalty.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 2
+    },
+    "nameservers": []
+}

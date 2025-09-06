@@ -1,0 +1,122 @@
+{
+    "domain": "sixt.com",
+    "owner": {
+        "name": "SIXT SE",
+        "displayName": "SIXT"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "ssgtm-tagging-prod.orange",
+        "grpc-prod.orange"
+    ],
+    "cnames": [
+        {
+            "original": "ssgtm-tagging-prod.sixt.co.uk",
+            "resolved": "ssgtm-tagging-prod.orange.sixt.com"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "sixt\\.com\\/g\\/collect",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssgtm-tagging-prod.orange"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "ssgtm-tagging-prod.sixt.co.uk",
+                    "resolved": "ssgtm-tagging-prod.orange.sixt.com"
+                }
+            ],
+            "responseHashes": [
+                "e022dab0b42de7cfa823f11b0ed555742d62166a36c77eb6eb3c2b38b9fa19f0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "sixt.co.uk",
+                "www.sixt.co.uk"
+            ]
+        },
+        {
+            "rule": "sixt\\.com\\/com\\.sixt\\.service\\.rent_booking\\.api\\.SearchService\\/GetBranchRecommendations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "grpc-prod.orange"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d84f821948f49d7287e198f1c43e8d24edc7899a1c8ec98b4e53f0130a64be2a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sixt.co.uk",
+                "www.sixt.com.au"
+            ]
+        },
+        {
+            "rule": "sixt\\.com\\/com\\.sixt\\.service\\.rent_booking\\.api\\.SearchService\\/GetBranchRecommendations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "grpc-prod.orange"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sixt.co.uk",
+                "www.sixt.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.65
+        },
+        {
+            "domain": "instana.io",
+            "prevalence": 0.3
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "d.ns14.net",
+        "c.ns14.net",
+        "b.ns14.net"
+    ]
+}

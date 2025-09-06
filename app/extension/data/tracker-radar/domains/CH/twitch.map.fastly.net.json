@@ -1,0 +1,105 @@
+{
+    "domain": "twitch.map.fastly.net",
+    "owner": {
+        "name": "Fastly, Inc.",
+        "displayName": "Fastly",
+        "privacyPolicy": "https://www.fastly.com/privacy",
+        "url": "http://fastly.com"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.0001,
+    "sites": 1,
+    "subdomains": [
+        "h2"
+    ],
+    "cnames": [
+        {
+            "original": "gql.twitch.tv",
+            "resolved": "h2.twitch.map.fastly.net"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "twitch\\.map\\.fastly\\.net\\/gql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "gql.twitch.tv",
+                    "resolved": "h2.twitch.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "79a3de1dece2dbc3228e527a82d5300bc55f27e079a1c48010f44937ba880421"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twitch.tv",
+                "www.twitch.tv"
+            ]
+        },
+        {
+            "rule": "twitch\\.map\\.fastly\\.net\\/gql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "gql.twitch.tv",
+                    "resolved": "h2.twitch.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twitch.tv",
+                "www.twitch.tv"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Third-Party Analytics Marketing",
+        "Action Pixels",
+        "CDN",
+        "Embedded Content",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "twitchcdn.net",
+            "prevalence": 0.875
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Preflight": 2
+    },
+    "nameservers": []
+}

@@ -1,0 +1,118 @@
+{
+    "domain": "connectad.io",
+    "owner": {
+        "name": "ConnectAd",
+        "displayName": "ConnectAd",
+        "privacyPolicy": "https://www.connectadrealtime.com",
+        "url": "http://connectadrealtime.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000605,
+    "sites": 6,
+    "subdomains": [
+        "i",
+        "sync"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "connectad\\.io\\/api\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wukihow.com",
+                "de.wukihow.com",
+                "downforeveryoneorjustme.com",
+                "www.iplocation.net"
+            ]
+        },
+        {
+            "rule": "connectad\\.io\\/iFrameSyncer",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wukihow.com",
+                "www.iplocation.net"
+            ]
+        },
+        {
+            "rule": "connectad\\.io\\/umatch\\/1",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "andreas-roth.de",
+                "www.reifen.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "optad360.io",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "hyj.mobi",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "buysellads.net",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.1
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "Document": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "amit.ns.cloudflare.com",
+        "elma.ns.cloudflare.com"
+    ]
+}

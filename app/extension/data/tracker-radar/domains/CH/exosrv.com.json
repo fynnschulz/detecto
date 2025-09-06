@@ -1,0 +1,97 @@
+{
+    "domain": "exosrv.com",
+    "owner": {
+        "name": "ExoClick, S.L.",
+        "displayName": "ExoClick",
+        "privacyPolicy": "https://www.exoclick.com/privacy/",
+        "url": "http://exoclick.com"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000603,
+    "sites": 6,
+    "subdomains": [
+        "a",
+        "ads",
+        "syndication"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "exosrv\\.com\\/ads\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "a",
+                "ads"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "273c95ab65884bfb12154bf674975fa538719d095fcf78c27504e52cb391c68f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "voyeurhit.com",
+                "www.peekvids.com",
+                "www.porntry.com"
+            ]
+        },
+        {
+            "rule": "exosrv\\.com\\/ads-iframe-display\\.php",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "syndication"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "95e1692764debbfd574feddf66af50cbfc785a5734c39c7efbf448a8564e13c3",
+                "101d99d2d77d1822eb4ba5adc241d1f002c7841252b0fbbb175a1243d0452bf2"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "peekvids.com",
+                "www.peekvids.com",
+                "www.porntry.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising"
+    ],
+    "performance": {},
+    "cookies": 0.000402,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Document": 3
+    },
+    "nameservers": [
+        "sec2.rcode0.net",
+        "dns2.cloudns.net",
+        "sec1.rcode0.net",
+        "dns1.cloudns.net"
+    ]
+}

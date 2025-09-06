@@ -1,0 +1,139 @@
+{
+    "domain": "kiwisizing.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "kiwisizing\\.com\\/web\\/js\\/dist\\/kiwiSizing\\/plugin\\/SizingPlugin\\.prod\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0a600512b42d83c6a3bcc738d39f9445dd81e755ecd8f7e212c6bfc7ad8d53e9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ks_scriptVersionChecked": {
+                    "ttl": 86413,
+                    "length": 4,
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 0.5
+                },
+                "kiwi-sizing-token": {
+                    "ttl": 3615,
+                    "length": 188,
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intersport.nl",
+                "www.stretchshop.nl"
+            ]
+        },
+        {
+            "rule": "kiwisizing\\.com\\/kiwiSizing\\/api\\/static\\/scriptVersion\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2af0e94bcdfff06385cbedc5e58d1097ff50ce0387c4ab12a70650611da14b3b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intersport.nl",
+                "www.stretchshop.nl"
+            ]
+        },
+        {
+            "rule": "kiwisizing\\.com\\/api\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intersport.nl",
+                "www.stretchshop.nl"
+            ]
+        },
+        {
+            "rule": "kiwisizing\\.com\\/api\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intersport.nl",
+                "www.stretchshop.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 4,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "amit.ns.cloudflare.com",
+        "ali.ns.cloudflare.com"
+    ]
+}

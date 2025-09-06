@@ -1,0 +1,161 @@
+{
+    "domain": "att.com.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000889,
+    "sites": 13,
+    "subdomains": [
+        "smetrics",
+        "pam"
+    ],
+    "cnames": [
+        {
+            "original": "pam.att.com",
+            "resolved": "pam.att.com.edgekey.net"
+        },
+        {
+            "original": "smetrics.att.com",
+            "resolved": "smetrics.att.com.edgekey.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "att\\.com\\.edgekey\\.net\\/id",
+            "cookies": 0.000041,
+            "fingerprinting": 0,
+            "subdomains": [
+                "smetrics"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [
+                {
+                    "original": "smetrics.att.com",
+                    "resolved": "smetrics.att.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "4879f2653a429efca500fcc88177b7c663702cfb9aeaea41e834f810a883f338",
+                "1c94b7182ca62da126ac2dca8710fcb370a28a11ba6b6a58e9cd6f6599e9d9d4",
+                "c658c601e97b180f1d292898c50781fa9607a75767bc1733f2d6826cd3faef11",
+                "36525debcff48e235dd4b7deb8f92a9ffbf5b0974d19954b334fc40791c007f3",
+                "1d26e9ba0255bc9e1eeabd6efef0172c51d3a0597edae9c07a5fbb559b3fd214"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "att.com",
+                "about.att.com",
+                "more.att.com",
+                "start.att.net",
+                "www.att.com",
+                "www.wireless.att.com"
+            ]
+        },
+        {
+            "rule": "att\\.com\\.edgekey\\.net\\/udash\\/api\\/cookie\\/buuidService\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pam"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "pam.att.com",
+                    "resolved": "pam.att.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "a3c26024fa715e626a05497f2a2189fbb2301e68aba4bef83e2ec1e70fc2728b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "att.com",
+                "www.business.att.com"
+            ]
+        },
+        {
+            "rule": "att\\.com\\.edgekey\\.net\\/udash\\/api\\/cookie\\/buuid\\/",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pam"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "pam.att.com",
+                    "resolved": "pam.att.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "att.com",
+                "www.business.att.com"
+            ]
+        },
+        {
+            "rule": "att\\.com\\.edgekey\\.net\\/udash\\/api\\/cookie\\/buuid\\/",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pam"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "pam.att.com",
+                    "resolved": "pam.att.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "0fd7ccd34b1206fe28df451b1f63d7dd558d9d14e56d005db8bedae8afca4d17"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "att.com",
+                "www.business.att.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000889,
+    "topInitiators": [
+        {
+            "domain": "yimg.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 6,
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": []
+}

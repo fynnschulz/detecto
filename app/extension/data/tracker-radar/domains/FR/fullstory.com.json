@@ -1,0 +1,259 @@
+{
+    "domain": "fullstory.com",
+    "owner": {
+        "name": "FullStory",
+        "displayName": "FullStory",
+        "privacyPolicy": "https://www.fullstory.com/legal/privacy/",
+        "url": "http://fullstory.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00111,
+    "sites": 11,
+    "subdomains": [
+        "edge",
+        "edge.eu1",
+        "rs",
+        "rs.eu1"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "fullstory\\.com\\/s\\/fs\\.js",
+            "cookies": 0.000606,
+            "fingerprinting": 2,
+            "subdomains": [
+                "edge",
+                "edge.eu1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 11,
+                "Navigator.prototype.vendor": 11,
+                "Document.cookie getter": 10,
+                "window.localStorage": 11,
+                "PerformanceTiming.prototype.navigationStart": 9,
+                "Screen.prototype.width": 10,
+                "Screen.prototype.height": 10,
+                "window.sessionStorage": 10,
+                "Document.cookie setter": 6,
+                "Performance.prototype.memory": 7,
+                "window.matchMedia(\"prefers-color-scheme\")": 5,
+                "Navigator.prototype.languages": 7,
+                "window.innerWidth": 7,
+                "window.innerHeight": 7
+            },
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "d4ba09437cb4a8cfe4fec31d9e334a792194fa940f331ec1a59e08db8fd36ece"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fs_lua": {
+                    "ttl": 1811,
+                    "length": 15,
+                    "prevalence": 0.000504999495000505,
+                    "uniqueness": 1
+                },
+                "fs_uid": {
+                    "ttl": 31536011,
+                    "length": 114,
+                    "prevalence": 0.000504999495000505,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendly.com",
+                "giphy.com",
+                "samplefocus.com",
+                "smaaart.fr",
+                "support.hpe.com",
+                "www.beinsports.com",
+                "www.findagrave.com",
+                "www.klarna.com",
+                "www.nba.com",
+                "www.overtake.gg",
+                "www.specialized.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/page",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs",
+                "rs.eu1"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "da5f07ae73ba00964432e81f97f2c62703c64d989646092bb59a22a2091ddefb",
+                "404ccb71c90d833b4a21d1ee2ae8fd4190d0a649e70de68af877dcb54c4845e6",
+                "ce23a4888282586f48709583bda31ccae741843bad79ab25610de630d155cb99",
+                "23063d8c119fa7b3ad8264c8d139fe70e617548ced22f0df98379a18f1577028",
+                "412f4fb553acc99c26334f72378ba9e9171952670d2ad277199c7d127f6c8da5",
+                "79b4b1a0df17a82a2d009153b807ce73b5b1264f14f4cfdf3eb2bfb2b97ac86b",
+                "7f5254b4e9dfa5ce6d483ad2aeb04ea4f0aceefdc31ec343d79f413cdc7d6558",
+                "c97e9e38ee020c4350c47fe3fbdd216197ceffe81a65983fda27f4198c7aedc8",
+                "6367ccc36d200d3e6788395801558ab0ffb89ac176f1bcbe7eaa0d0d1a4a04fc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendly.com",
+                "samplefocus.com",
+                "smaaart.fr",
+                "support.hpe.com",
+                "www.beinsports.com",
+                "www.findagrave.com",
+                "www.klarna.com",
+                "www.nba.com",
+                "www.overtake.gg",
+                "www.specialized.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/bundle\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs",
+                "rs.eu1"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "d835f8822bf311f81ac1e173d62893bd1a1e5dcae5e86ab4f22298f11fa94e13",
+                "a487eb16d009b5a868205d10d40e15f653b6a8afa78d3e61f0341d1cb87010ba",
+                "e00145fd70445f8f9927ced8389378f9e1d6d53d524611e215bc450c0cf6f10a",
+                "0ea657f97618f406351842fb75f446d42e714b40c125d18b5fe1fb47fd8f18b0",
+                "13e52ebbd3512a51b42422765305feff9b8c2a538e46ce489b10f31b6ac02e53",
+                "d367f03723677c1e57c8f95858758ee53bc173b6f75584ff3da7c70536fd4aa7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendly.com",
+                "support.hpe.com",
+                "www.beinsports.com",
+                "www.findagrave.com",
+                "www.klarna.com",
+                "www.nba.com",
+                "www.specialized.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/integrations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs",
+                "rs.eu1"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e1af881c28a7100691c1867bc6364ee8461279daa255d73cc64c099a4cf6bd8b",
+                "81b318516ac1fe16efbb612721802aefab9e32064250d9ddefa3f67d4d15e507"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hpe.com",
+                "www.beinsports.com",
+                "www.nba.com",
+                "www.specialized.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/datalayer\\/v4\\/latest\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge",
+                "edge.eu1"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "38d9c5f094f923cfff59f136a246a9505ed36c42c58589e2338c6b58b20764d4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hpe.com",
+                "www.beinsports.com",
+                "www.nba.com",
+                "www.specialized.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/s\\/settings\\/o-4KC9-eu1\\/v1\\/web",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.eu1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bb9f177ab9ec5d3dc4c7be1e0f3a4e3f4f46f589f4288a8c22ff81b717c74585"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.nba.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Analytics",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000606,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6818181818181818
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2727272727272727
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.045454545454545456
+        }
+    ],
+    "types": {
+        "Script": 19,
+        "XHR": 19
+    },
+    "nameservers": [
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d1.googledomains.com",
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d4.googledomains.com"
+    ]
+}

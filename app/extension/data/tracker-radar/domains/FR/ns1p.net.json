@@ -1,0 +1,95 @@
+{
+    "domain": "ns1p.net",
+    "owner": {
+        "name": "NSONE Inc",
+        "displayName": "NSONE"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "cs",
+        "s",
+        "b"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ns1p\\.net\\/p\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cs"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "3f5479ec31a06584b33450b875452ac3923666e27c87ec472abca67c6dd80212"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agriexpo.online",
+                "www.archiexpo.fr",
+                "www.directindustry.fr",
+                "www.nauticexpo.fr"
+            ]
+        },
+        {
+            "rule": "ns1p\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s",
+                "b"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "e624eb0ebabab15fdfa51c8bbab9d1dea78fe433e6af69abf63dbf054ccda5e1",
+                "b81bbee432bfac2600d7fdb30acf36f4d086ecd189ed0a5c8319be725c6dbf5f",
+                "22aecb42b0da01275ab4c6604a73f0bac45a8c1974f5507600b42e7fcbde777a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agriexpo.online",
+                "www.agriexpo.online",
+                "www.archiexpo.fr",
+                "www.directindustry.fr",
+                "www.nauticexpo.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "virtual-expo.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 5
+    },
+    "nameservers": [
+        "dns2.p07.nsone.net",
+        "dns4.p07.nsone.net",
+        "dns3.p07.nsone.net",
+        "dns1.p07.nsone.net"
+    ]
+}

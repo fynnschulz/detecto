@@ -1,0 +1,284 @@
+{
+    "domain": "drift.com",
+    "owner": {
+        "name": "Drift.com, Inc.",
+        "displayName": "Drift.com"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "metrics.api",
+        "94364-14.chat.api",
+        "presence.api",
+        "1523304-4.chat.api",
+        "47616-16.chat.api",
+        "1421715-15.chat.api",
+        "event.api",
+        "targeting.api"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "drift\\.com\\/monitoring\\/metrics\\/widget\\/init\\/v3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "metrics.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f8c91e009d219173c41b4c0b6e43ad28081f7580df6cb99a76aa0a476390ca47"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trimble.com",
+                "www.dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "drift\\.com\\/ws\\/websocket",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "94364-14.chat.api",
+                "presence.api",
+                "1523304-4.chat.api",
+                "47616-16.chat.api",
+                "1421715-15.chat.api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trimble.com",
+                "sketchup.trimble.com",
+                "www.dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "drift\\.com\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "7048b4d00c7198fd789651acd827e3e4db3e1328dfe3a2558237314377439740",
+                "dd55deff52879a1ae043821275df4aa03954b93d641bfe58cbda5acb60d6c665",
+                "3021cf592740aed1413a9eafda29c9cb5b216ea0016f3a088af7f68fda860ad5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trimble.com",
+                "www.dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "drift\\.com\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trimble.com",
+                "www.dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "drift\\.com\\/monitoring\\/metrics\\/event3\\/bulk",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "metrics.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f8c91e009d219173c41b4c0b6e43ad28081f7580df6cb99a76aa0a476390ca47"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trimble.com",
+                "www.dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "drift\\.com\\/monitoring\\/metrics\\/add\\/bulk\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "metrics.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f8c91e009d219173c41b4c0b6e43ad28081f7580df6cb99a76aa0a476390ca47"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trimble.com",
+                "www.dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "drift\\.com\\/targeting\\/evaluate_with_log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "targeting.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "6a8d4e38c60d98c79dee36d4939c07f9fd2e5c0f9e4bef23e6549324f36bf149",
+                "a0aea113c4ca2f6e429d2f1a45649dea3b7b9f59a007d12aa5ff396b0e85ba59"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "drift\\.com\\/targeting\\/evaluate_with_log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "targeting.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "drift\\.com\\/impressions\\/widget",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "targeting.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        },
+        {
+            "rule": "drift\\.com\\/impressions\\/widget",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "targeting.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dashlane.com",
+                "www.docusign.com",
+                "www.ni.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "driftt.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 22,
+        "WebSocket": 5,
+        "Preflight": 10
+    },
+    "nameservers": [
+        "ns-466.awsdns-58.com",
+        "ns-1271.awsdns-30.org",
+        "ns-808.awsdns-37.net",
+        "ns-1960.awsdns-53.co.uk"
+    ]
+}

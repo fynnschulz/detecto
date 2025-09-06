@@ -1,0 +1,534 @@
+{
+    "domain": "outbrain.com",
+    "owner": {
+        "name": "Outbrain",
+        "displayName": "Outbrain",
+        "privacyPolicy": "https://www.outbrain.com/legal/privacy",
+        "url": "http://outbrain.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00444,
+    "sites": 44,
+    "subdomains": [
+        "amplify",
+        "sync",
+        "widgets",
+        "widget-pixels",
+        "b1sync",
+        "mv",
+        "mcdp-nydc1",
+        "tr",
+        "widgetmonitor"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "outbrain\\.com\\/cp\\/obtp\\.js",
+            "cookies": 0.000404,
+            "fingerprinting": 1,
+            "subdomains": [
+                "amplify"
+            ],
+            "apis": {
+                "Document.cookie getter": 19,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 20,
+            "prevalence": 0.00202,
+            "cnames": [],
+            "responseHashes": [
+                "76099f502226b91de7d2b59da83c72fae49015ca5478a605d63f8ed0d9a75261"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "dicbo_id": {
+                    "ttl": 320,
+                    "length": 39,
+                    "prevalence": 0.0004035919685198265,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestbuyersguide.org",
+                "gesundheitsprodukte-vergleich.com",
+                "november.de",
+                "pflanzmich.de",
+                "seekingalpha.com",
+                "skylum.com",
+                "weather.com",
+                "wowvendor.com",
+                "www.anker.com",
+                "www.btc-echo.de",
+                "www.dictionary.com",
+                "www.doktorabc.com",
+                "www.forum-verlag.com",
+                "www.heimhelden.de",
+                "www.karlsruhe-erleben.de",
+                "www.kopp-verlag.de",
+                "www.radiofrance.fr",
+                "www.thesaurus.com",
+                "www.timesofisrael.com",
+                "www.worldanvil.com"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/cookie-sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elv.com",
+                "www.livingactive.de"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/outbrain\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "widgets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 17,
+                "Navigator.prototype.platform": 17,
+                "window.localStorage": 17,
+                "Document.cookie getter": 17,
+                "Screen.prototype.width": 17,
+                "Screen.prototype.height": 17,
+                "window.devicePixelRatio": 17,
+                "window.name": 17,
+                "Navigator.prototype.language": 17,
+                "Navigator.prototype.maxTouchPoints": 17,
+                "NavigatorUAData.prototype.getHighEntropyValues": 16,
+                "window.innerHeight": 17,
+                "window.innerWidth": 17,
+                "Date.prototype.getTime": 17,
+                "window.matchMedia(\"prefers-color-scheme\")": 13,
+                "Navigator.prototype.deviceMemory": 13,
+                "Screen.prototype.orientation": 13,
+                "Navigator.prototype.hardwareConcurrency": 13,
+                "Navigator.prototype.connection": 13
+            },
+            "sites": 18,
+            "prevalence": 0.00182,
+            "cnames": [],
+            "responseHashes": [
+                "de1bc44fe38b69b53e88c3c9df4a464d85f46ab4b8bab67911930e113c18b038",
+                "a592cf2f87900195859eea74dffb2dc5fa2b8ae74d36bf7e5a955d700ef8a6a0",
+                "af4f8c5da806524a388528bd25283851ccd52c7ccf37f7395e5fdca364bc14e5",
+                "82843578b45f2a7a19e3a426db28e6e5206ab458b74554fb8d65f03857fe1bbe",
+                "0622a45495e52944bac792851639e7a290816c9cdc7eea52415f5ee56cddc396",
+                "155ec99830e9e4c45f7e36f4e32476e04a27f622af027ef6d3d35e3fe37b6ac6",
+                "e8f0bd23c42e3db9bb061ac64739899778bb6de84fbb854550dfa9327402ccba",
+                "0b6ad09519c4ff51bf3b0599c36e9a8afcb06ee3dd4c52471499b3b049f619fc",
+                "eac52b434a268f98f025ea600659421385d9528f8a01abd774f88ce87857a778",
+                "16d07d2a445b153f8105a46ffa73e7c89df52b1e507293d26d6a2a77cbdef12c",
+                "a90261d18551161d6c3571f7458c13bc0fe800430764945916dbc87660f26d1b",
+                "4d81369c4f2a18403a0b3f2a292184b621e54a7bb3dedac82c7ac7e19f48b337",
+                "3d5995f3c6654ef76e8b271e1acdfae9d1b12a95adcfdc9d29f82d7f12a9e0ed",
+                "10d60dd549f84eee25cf4720b8f3ee129ed6241a854a01e4e1dfb04b63f10271",
+                "d457f4ee394d0002ed8428841002277a27bb975f1b1106c779b8ee7608346457",
+                "3badf19b036d8173beafff38144a7bc2b04dba6b02a9ea7a71f43a1402705d15",
+                "5605de68dae98ae16eb01fd0eaf03576f0225a549ff039e600ad5a399ef86bad"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fcbinside.de",
+                "people.com",
+                "weather.com",
+                "www.finanzen100.de",
+                "www.fondsweb.com",
+                "www.fussballdaten.de",
+                "www.gratis-in-berlin.de",
+                "www.hdsports.de",
+                "www.hl-live.de",
+                "www.huffpost.com",
+                "www.jpost.com",
+                "www.n-tv.de",
+                "www.pravda-tv.com",
+                "www.scinexx.de",
+                "www.sport.de",
+                "www.sport1.de",
+                "www.suedtirolnews.it",
+                "www.timesofisrael.com"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/widget\\/detect\\/px\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget-pixels"
+            ],
+            "apis": {},
+            "sites": 17,
+            "prevalence": 0.00172,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fcbinside.de",
+                "people.com",
+                "weather.com",
+                "www.finanzen100.de",
+                "www.fondsweb.com",
+                "www.fussballdaten.de",
+                "www.gratis-in-berlin.de",
+                "www.hdsports.de",
+                "www.huffpost.com",
+                "www.jpost.com",
+                "www.n-tv.de",
+                "www.pravda-tv.com",
+                "www.scinexx.de",
+                "www.sport.de",
+                "www.sport1.de",
+                "www.suedtirolnews.it",
+                "www.timesofisrael.com"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/usersync\\/seedtag",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "b1sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mydramalist.com",
+                "www.vermoegenmagazin.de"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/Multivac\\/api\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mv"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "5fa76039805751efa9248fac6f71edf74c10cc855530c850267162a2355cbddd",
+                "67899f4a94f8f4acdf2191bfeaab5367536c863cc538a87c95e5e1888f26d836",
+                "15f0d6bf3081bb81c5b56c6b4b84aaca753d474d398366e6e45f9497fd5845a9",
+                "04a21737c0df82e00c5373e568ac22a75c0d919d47993713172f88c962e45e5b",
+                "1c582ef50647bef6557cd8e722b9c8085830c6d34e0a9511f96f950ebc1f1243",
+                "f2d23af885ba7546681762bfc3f42e2fd450489249ace1ae7aaf76c7b7af1845",
+                "a9ee5abe0b62a260cf06cc86a8b79ceb715a022cedcc5db6fda97dc5c0b039a4",
+                "a4117127fdfbfe8ee98b5e1408f42086eaee5084261ec240fa961621518eed4f",
+                "ab06a8793bde8a52a459e421b385c2360e3712a93d675995271c03a24ecd9272",
+                "0b56058327fd0cdc0da4811e71d62983e6ee627e6b796a29d571c44755af84e9",
+                "e5d29a8efb48b43516c0359e1d7089c56ee609e126ba6533acf63b8216e00518"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "people.com",
+                "weather.com",
+                "www.finanzen100.de",
+                "www.fondsweb.com",
+                "www.fussballdaten.de",
+                "www.gratis-in-berlin.de",
+                "www.hdsports.de",
+                "www.huffpost.com",
+                "www.n-tv.de",
+                "www.pravda-tv.com",
+                "www.scinexx.de",
+                "www.sport.de"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/l",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mcdp-nydc1"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "people.com",
+                "weather.com",
+                "www.finanzen100.de",
+                "www.fondsweb.com",
+                "www.fussballdaten.de",
+                "www.gratis-in-berlin.de",
+                "www.hdsports.de",
+                "www.huffpost.com",
+                "www.n-tv.de",
+                "www.pravda-tv.com",
+                "www.scinexx.de",
+                "www.sport.de"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/nanoWidget\\/babc931e310_2025-08-12\\/module\\/widgetPredictionBuckets\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "15ef3c3e65e5e2731d93359c204c309db0a670102bfd7c195518a7b3276144a4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "people.com",
+                "www.n-tv.de"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/unifiedPixel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "b51f3497b0a65f1e1e87e75f5e7e823d871c23bcf76a5ee4101783c8f939e553"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pflanzmich.de",
+                "www.anker.com",
+                "www.karlsruhe-erleben.de",
+                "www.timesofisrael.com"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/cachedClickId",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "1d348f9f803c95305f63def9d75fd50e79e54a375e1a4a888edbbea366845580"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pflanzmich.de",
+                "www.anker.com",
+                "www.karlsruhe-erleben.de",
+                "www.timesofisrael.com"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/usersync\\/gumgum\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "b1sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "techcrunch.com",
+                "www.behindthename.com"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/nanoWidget\\/babc931e310_2025-08-12\\/module\\/clip\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgets"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "ecf8e7a68b9462fe935ce6e4a1ac0a258347730754829867b592b9b41f2acb97"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fondsweb.com",
+                "www.hdsports.de",
+                "www.huffpost.com",
+                "www.pravda-tv.com"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/widgetMonitor\\/monitor\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widgets"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "2d58299e8db0adc3b5072d08c1bcd3aa20621fa08cc59945c20aba14afc44c80"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fondsweb.com",
+                "www.hdsports.de",
+                "www.huffpost.com",
+                "www.pravda-tv.com"
+            ]
+        },
+        {
+            "rule": "outbrain\\.com\\/WidgetErrorMonitor\\/api\\/report",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgetmonitor"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffpost.com",
+                "www.pravda-tv.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Third-Party Analytics Marketing"
+    ],
+    "performance": {},
+    "cookies": 0.00101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4189189189189189
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.24324324324324326
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.0945945945945946
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.04054054054054054
+        },
+        {
+            "domain": "adroll.com",
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "vidoomy.com",
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "seedtag.com",
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "gumgum.com",
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.02702702702702703
+        }
+    ],
+    "types": {
+        "Script": 60,
+        "Image": 23,
+        "Fetch": 16,
+        "Document": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "dns1.p07.nsone.net",
+        "dns2.p07.nsone.net",
+        "dns3.p07.nsone.net",
+        "dns4.p07.nsone.net",
+        "ns04.oblookup.com",
+        "ns01.oblookup.com",
+        "ns03.oblookup.com",
+        "ns02.oblookup.com"
+    ]
+}

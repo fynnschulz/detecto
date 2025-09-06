@@ -1,0 +1,554 @@
+{
+    "domain": "kargo.com",
+    "owner": {
+        "name": "Kargo Global, Inc.",
+        "displayName": "Kargo"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.00523,
+    "sites": 52,
+    "subdomains": [
+        "standout-cdn",
+        "socialcanvas-cdn",
+        "socialcanvas-api",
+        "krk2",
+        "crb"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "kargo\\.com\\/js\\/rh\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "standout-cdn",
+                "socialcanvas-cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 8,
+                "Date.prototype.getTime": 8,
+                "Navigator.prototype.userAgent": 8,
+                "window.localStorage": 8,
+                "Document.cookie getter": 3,
+                "window.innerHeight": 1
+            },
+            "sites": 8,
+            "prevalence": 0.000804,
+            "cnames": [],
+            "responseHashes": [
+                "c86ec868fbae9af797ef4af911d5b77689ddf893c4bc838c57aac52551c535f7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westeros.org",
+                "en.uesp.net",
+                "www.distractify.com",
+                "www.goal.com",
+                "www.koreaboo.com",
+                "www.op.gg",
+                "www.solveyourtech.com",
+                "www.sportingnews.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/js\\/scpb8\\.js",
+            "cookies": 0.000603,
+            "fingerprinting": 2,
+            "subdomains": [
+                "standout-cdn"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 6,
+                "NavigatorUAData.prototype.platform": 6,
+                "window.sessionStorage": 7,
+                "Date.prototype.getTime": 6,
+                "Navigator.prototype.cookieEnabled": 6,
+                "Document.cookie getter": 6,
+                "window.localStorage": 6,
+                "Document.cookie setter": 6,
+                "window.innerWidth": 6,
+                "window.innerHeight": 6,
+                "Navigator.prototype.doNotTrack": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Navigator.prototype.language": 6,
+                "Navigator.prototype.webdriver": 6,
+                "Screen.prototype.width": 6,
+                "Screen.prototype.height": 6
+            },
+            "sites": 8,
+            "prevalence": 0.000804,
+            "cnames": [],
+            "responseHashes": [
+                "91b605b2b9f0571995f9756ca199d51f059c479411fe9394617fede341ae3a2c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sharedid": {
+                    "ttl": 2419212,
+                    "length": 36,
+                    "prevalence": 0.0006028938906752412,
+                    "uniqueness": 1
+                },
+                "sharedid_cst": {
+                    "ttl": 2419212,
+                    "length": 16,
+                    "prevalence": 0.0006028938906752412,
+                    "uniqueness": 0.8333333333333334
+                },
+                "pbjs-unifiedid": {
+                    "ttl": 5184016,
+                    "length": 93,
+                    "prevalence": 0.0003014469453376206,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid_cst": {
+                    "ttl": 5184016,
+                    "length": 16,
+                    "prevalence": 0.0003014469453376206,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westeros.org",
+                "en.uesp.net",
+                "www.distractify.com",
+                "www.goal.com",
+                "www.koreaboo.com",
+                "www.op.gg",
+                "www.solveyourtech.com",
+                "www.sportingnews.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000804,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westeros.org",
+                "en.uesp.net",
+                "www.distractify.com",
+                "www.goal.com",
+                "www.koreaboo.com",
+                "www.op.gg",
+                "www.solveyourtech.com",
+                "www.sportingnews.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/request",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000804,
+            "cnames": [],
+            "responseHashes": [
+                "f5ed160df1ebd3a54e1db4368c6340c211baa0dabda1ec3adccb7d90789ed742",
+                "6cb0f768328e8cdb6128ff16225c74322225b91de868db3d0576a9ffc1f2d882",
+                "2c3f85051579dcf97d9ced980252046dcdccee5ed02f631b8a5d492a216b24ab",
+                "b855bfeee8829fe9bbeaa51827d853d55d97a19f50a58ffdfc1287550a659d4f",
+                "cb648234f8b7e4563f6139b34e901709294fd11ce2e3f7e8f40119d4681acb25",
+                "e9b3d6871613a98bf30bcbc5e497e1380d96691f7a913aa26ad422ca34eccb51",
+                "7cd91022d7008ccb3d7958d307ec84b13fea00d01762d0ef5cfd6a672344d381"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westeros.org",
+                "en.uesp.net",
+                "www.distractify.com",
+                "www.goal.com",
+                "www.koreaboo.com",
+                "www.op.gg",
+                "www.solveyourtech.com",
+                "www.sportingnews.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/rlg\\/ev",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westeros.org",
+                "www.distractify.com",
+                "www.goal.com",
+                "www.koreaboo.com",
+                "www.op.gg",
+                "www.solveyourtech.com",
+                "www.sportingnews.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/rlg\\/ev",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [],
+            "responseHashes": [
+                "843ac01149cced785dfebd0028d3b03ba78e286e1c6f9517ebfcdb609d97af4c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westeros.org",
+                "www.distractify.com",
+                "www.goal.com",
+                "www.koreaboo.com",
+                "www.op.gg",
+                "www.solveyourtech.com",
+                "www.sportingnews.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/img\\/close-btn-desktop\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "standout-cdn"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [],
+            "responseHashes": [
+                "85f708d78d1a2f869e8a8f43764a5b74bb376980aaeff9e56a54335b199df048"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westeros.org",
+                "www.distractify.com",
+                "www.goal.com",
+                "www.koreaboo.com",
+                "www.op.gg",
+                "www.solveyourtech.com",
+                "www.sportingnews.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/request\\/adr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westeros.org",
+                "www.distractify.com",
+                "www.goal.com",
+                "www.koreaboo.com",
+                "www.op.gg",
+                "www.solveyourtech.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/v2\\/request\\/adr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socialcanvas-api"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "843ac01149cced785dfebd0028d3b03ba78e286e1c6f9517ebfcdb609d97af4c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westeros.org",
+                "www.distractify.com",
+                "www.goal.com",
+                "www.koreaboo.com",
+                "www.op.gg",
+                "www.solveyourtech.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/prebid",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "krk2"
+            ],
+            "apis": {},
+            "sites": 40,
+            "prevalence": 0.00402,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nypost.com",
+                "screenrant.com",
+                "slate.com",
+                "tvtropes.org",
+                "www.buzzfeed.com",
+                "www.cnbc.com",
+                "www.howtogeek.com",
+                "www.independent.co.uk",
+                "www.makeuseof.com",
+                "www.nbcnews.com",
+                "www.msnbc.com",
+                "www.cbr.com",
+                "www.solveyourtech.com",
+                "www.sportskeeda.com",
+                "fr.motorsport.com",
+                "www.androidpolice.com",
+                "movieweb.com",
+                "www.rottentomatoes.com",
+                "editorial.rottentomatoes.com",
+                "www.koreaboo.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/event\\/timeout",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "krk2"
+            ],
+            "apis": {},
+            "sites": 24,
+            "prevalence": 0.00241,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nypost.com",
+                "screenrant.com",
+                "www.buzzfeed.com",
+                "www.cnbc.com",
+                "www.howtogeek.com",
+                "www.makeuseof.com",
+                "www.nbcnews.com",
+                "expedition33.wiki.fextralife.com",
+                "darksouls3.wiki.fextralife.com",
+                "www.polygon.com",
+                "www.usmagazine.com",
+                "gamerant.com",
+                "www.goal.com",
+                "www.xda-developers.com",
+                "movieweb.com",
+                "www.cbr.com",
+                "pagesix.com",
+                "eldenring.wiki.fextralife.com",
+                "www.androidpolice.com",
+                "collider.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/dsync\\/amazon",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "10f9bfa42bb96c99729c9b2fee669803ad9c6fcd434d8d7d60a8dc8f5f7cc331"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.audible.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/dinitsync",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crb"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ew.com",
+                "www.thedailybeast.com",
+                "www.thespruce.com",
+                "www.usmagazine.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/dsync\\/PulsePoint",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "10f9bfa42bb96c99729c9b2fee669803ad9c6fcd434d8d7d60a8dc8f5f7cc331"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.jetpunk.com",
+                "www.koreaboo.com"
+            ]
+        },
+        {
+            "rule": "kargo\\.com\\/api\\/v1\\/prebid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "krk2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "powershellfaqs.com",
+                "www.complex.com",
+                "www.merriam-webster.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Ad Fraud"
+    ],
+    "performance": {},
+    "cookies": 0.00141,
+    "topInitiators": [
+        {
+            "domain": "adsninja.ca",
+            "prevalence": 0.4764705882352941
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2529411764705882
+        },
+        {
+            "domain": "lngtdv.com",
+            "prevalence": 0.047058823529411764
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.041176470588235294
+        },
+        {
+            "domain": "adthrive.com",
+            "prevalence": 0.029411764705882353
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.029411764705882353
+        },
+        {
+            "domain": "jwpcdn.com",
+            "prevalence": 0.023529411764705882
+        },
+        {
+            "domain": "contextweb.com",
+            "prevalence": 0.01764705882352941
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.01764705882352941
+        },
+        {
+            "domain": "privacy-mgmt.com",
+            "prevalence": 0.011764705882352941
+        }
+    ],
+    "types": {
+        "Script": 16,
+        "Preflight": 21,
+        "XHR": 24,
+        "Image": 12,
+        "Fetch": 64,
+        "Document": 4
+    },
+    "nameservers": [
+        "ns-1512.awsdns-61.org",
+        "ns-1837.awsdns-37.co.uk",
+        "ns-243.awsdns-30.com",
+        "ns-635.awsdns-15.net"
+    ]
+}

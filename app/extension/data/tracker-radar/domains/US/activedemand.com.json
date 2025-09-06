@@ -1,0 +1,107 @@
+{
+    "domain": "activedemand.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "collection",
+        "static"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "activedemand\\.com\\/submit\\/visit\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collection"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "5b704b4cbdbefaccbcdba22790a8b325d51b554b7ebc85d790c0ce705ad69a66",
+                "062a4f7fe3c747e26a86a520205ad7205b318cd4c1d479852ab3040c07e1da52",
+                "6ab95741f1c4d25e398b4e56fc434139d7402c676a06b4655842a6ab1d508cb0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.00004104528663291832,
+                "activedemand_session_guid": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "myequity.com",
+                "preshomes.org",
+                "seniorcarefinder.com",
+                "www.nelottery.com"
+            ]
+        },
+        {
+            "rule": "activedemand\\.com\\/public\\/javascript\\/ad\\.collect\\.min\\.js\\.jgz",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Element.prototype.getClientRects": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "23e3162994272c90edba531f523864681f8e6396c9e6fdf18e24bad7aa49ee25"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "activedemand_session_guid": {
+                    "ttl": 315360006,
+                    "length": 45,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "ad_cid": {
+                    "ttl": 315360009,
+                    "length": 9,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "preshomes.org",
+                "seniorcarefinder.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "staticfiles.io",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 6
+    },
+    "nameservers": [
+        "ns-11.awsdns-01.com",
+        "ns-541.awsdns-03.net",
+        "ns-1992.awsdns-57.co.uk",
+        "ns-1485.awsdns-57.org"
+    ]
+}

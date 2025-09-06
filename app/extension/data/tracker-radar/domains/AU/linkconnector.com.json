@@ -1,0 +1,130 @@
+{
+    "domain": "linkconnector.com",
+    "owner": {
+        "name": "LinkConnector Corporation",
+        "displayName": "LinkConnector"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "linkconnector\\.com\\/uts_lp\\.php",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "247496c83bc25ccc67a904a7493666acabedd703286942946e94907ba91956aa",
+                "b8434bb68bb271e02f58c15be87aec159149b37fa950b001292447fbb695f4d6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "uts_id": {
+                    "ttl": 157680011,
+                    "length": 17,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                },
+                "LCUTS_UID_900133": {
+                    "ttl": 3611,
+                    "length": 6,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {
+                "LCUTS_UID_900133": 0.0002018774603815484,
+                "LCUTS_UID_901209": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "wondershare.com",
+                "videoconverter.wondershare.com",
+                "www.halloweencostumes.com.au"
+            ]
+        },
+        {
+            "rule": "linkconnector\\.com\\/tu\\.php",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "942fa519ebb6234f59c3d8c8c66c6b2671b69364c1c31a6788f722e4baca9a94"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "srcSite": 0.0002018774603815484,
+                "IR_gbd": 0.0002018774603815484
+            },
+            "exampleSites": [
+                "wondershare.com",
+                "videoconverter.wondershare.com"
+            ]
+        },
+        {
+            "rule": "linkconnector\\.com\\/js\\/uts_uid\\.php",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "942fa519ebb6234f59c3d8c8c66c6b2671b69364c1c31a6788f722e4baca9a94"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LCUTS_UID_900133": 0.0002018774603815484
+            },
+            "exampleSites": [
+                "wondershare.com",
+                "videoconverter.wondershare.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Image": 4
+    },
+    "nameservers": [
+        "sri.ns.cloudflare.com",
+        "edna.ns.cloudflare.com"
+    ]
+}

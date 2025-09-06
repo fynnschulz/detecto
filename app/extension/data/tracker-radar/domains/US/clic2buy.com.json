@@ -1,0 +1,89 @@
+{
+    "domain": "clic2buy.com",
+    "owner": {
+        "name": "Market Connect",
+        "displayName": "Market Connect"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "widget",
+        "analytics"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "clic2buy\\.com\\/c2b\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "7eb55a83e8c52aef9f5b4ce20b91b0ee3d95b033e1d008808f329aad06641c78"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bostik.com",
+                "www.continental-reifen.de",
+                "www.continental-tires.com"
+            ]
+        },
+        {
+            "rule": "clic2buy\\.com\\/c2b-analytics\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "8ce7b2d675eae36745d537c189803638c1789c38054ad3d520cac25fc27240d4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bostik.com",
+                "www.continental-reifen.de",
+                "www.continental-tires.com",
+                "www.michelin.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 7
+    },
+    "nameservers": [
+        "ns200.anycast.me",
+        "dns200.anycast.me"
+    ]
+}

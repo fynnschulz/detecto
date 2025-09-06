@@ -1,0 +1,1049 @@
+{
+    "domain": "sfly.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000547,
+    "sites": 8,
+    "subdomains": [
+        "shutterfly",
+        "shutterfly-stage",
+        "snapfish"
+    ],
+    "cnames": [
+        {
+            "original": "gtm-metrics.shutterfly.com",
+            "resolved": "shutterfly.sfly.io"
+        },
+        {
+            "original": "marketing-api3.shutterfly.com",
+            "resolved": "shutterfly.sfly.io"
+        },
+        {
+            "original": "marketing-api3.stage.shutterfly.com",
+            "resolved": "shutterfly-stage.sfly.io"
+        },
+        {
+            "original": "nrd-api3.shutterfly.com",
+            "resolved": "shutterfly.sfly.io"
+        },
+        {
+            "original": "prd-static-1.sf-cdn.com",
+            "resolved": "snapfish.sfly.io"
+        },
+        {
+            "original": "prd-static-2.sf-cdn.com",
+            "resolved": "snapfish.sfly.io"
+        },
+        {
+            "original": "prd-static-default-1.sf-cdn.com",
+            "resolved": "snapfish.sfly.io"
+        },
+        {
+            "original": "prd-static.sf-cdn.com",
+            "resolved": "snapfish.sfly.io"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "sfly\\.io\\/nrd\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shutterfly"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "nrd-api3.shutterfly.com",
+                    "resolved": "shutterfly.sfly.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shutterfly.com",
+                "accounts.shutterfly.com",
+                "www.shutterfly.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/nrd\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shutterfly"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "nrd-api3.shutterfly.com",
+                    "resolved": "shutterfly.sfly.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shutterfly.com",
+                "accounts.shutterfly.com",
+                "www.shutterfly.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/mktg\\/beacon-pixel\\/js\\/pixel_tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shutterfly",
+                "shutterfly-stage"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "marketing-api3.shutterfly.com",
+                    "resolved": "shutterfly.sfly.io"
+                },
+                {
+                    "original": "marketing-api3.stage.shutterfly.com",
+                    "resolved": "shutterfly-stage.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "15ca551ed4b55d7f095fd4224106ec38de05c12cccf3e0f6d2738567c81758b3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shutterfly.com",
+                "support.shutterfly.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shutterfly"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "gtm-metrics.shutterfly.com",
+                    "resolved": "shutterfly.sfly.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shutterfly.com",
+                "support.shutterfly.com",
+                "www.shutterfly.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/data",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shutterfly"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "gtm-metrics.shutterfly.com",
+                    "resolved": "shutterfly.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "6c160dfd015a722ad618ddac3329ac40d84924cd6146df215654eb313927cfec",
+                "11d7f0ab66d452fee5c5ad4f3c467d7bd8ef7ccdb86f3e34b3bd9437abcebf42"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shutterfly.com",
+                "support.shutterfly.com",
+                "www.shutterfly.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/app\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "c43a25b2a88a50c9571ab30aa7c18c1aadd118f2a218eb2e0bc18a7666e793f2"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/bower_components\\/jquery\\/jquery-3\\.6\\.0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-1.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "58ae4f95b13e80b0f60d386cc0a7f87f2c152320523e431ee71d0e5dc34a37d6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/fonts\\/BrandonGrotesque\\/Regular\\/brandon_reg-webfont\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "81c67ce432eca53592c81f06e8fb1bec9ae874e1a9d681efd1997eebbf518342"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/fonts\\/BrandonGrotesque\\/Bold\\/brandon_bld-webfont\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "e021551615697db9a175f1cdc785099fa00329fb9522a75c0de83b73ac228b88"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/bundles\\/common-plugins-new\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-1.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "f8dedb7fe6a5e12c4cabe355b8ff64412f454a2d4f64b2e69610d0ad054bc76c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/bundles\\/app\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-1.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "054b88b1ff03a2cb6d530a1aaffb673170cefb85e067bc74a49c4dd70c252a8f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "async_fl_": {
+                    "ttl": null,
+                    "length": 4,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/platform\\/ot\\/ot\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "39ad6915f566d13ace3befeb2e1bf60b2d60503adbe18860bfeff992c8ac2fa0"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/fonts\\/MarkOT\\/Bold\\/MarkOT-Bold\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "cecaafdefa629f63a9acc0c336e886a26d65071ead24046df3cf41cb203ed729"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/fonts\\/MarkOT\\/Black\\/MarkOT-Black\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "bd573e341f9a73cfdc76196ee41c45006a20c42a737ba2225aba0686a7ccddee"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/header\\/globalheader\\/logo\\/xsf-new-logo\\.png\\.pagespeed\\.ic\\.9_E97rvnf_\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-1.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "fc1b0a8f80430f91d52705f72d113635519cdf9e5b21995291bd2ea9c6074285"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/fonts\\/MarkOT\\/Regular\\/MarkOT\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "dde2e77c06d9861dde02dff735b56a0057aafdb6ad073052d971f4af6656bf8d"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/bundles\\/webaccessibility\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "e86e334caa42ed9cd8cf74f038552e52cf98ac90e80efc3cf60cb825f7ee409e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/scss\\/icons\\/fontello\\/font\\/fontelloicons\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "08109c6faae6736349c2b11b8f5946a8702802f206acb8d5a1fca8568a0c515b"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/library\\/upload_dropdown_widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "00e5d6946bd1f689614c8dc5b8eba48d54f4342f535a16d3d5dbea857e63542b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/fonts\\/BrandonGrotesque\\/Light\\/Brandon_light\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "c712f93749bb57664bdaa404865d09f98802238897a8299bc7f2906cadc14354"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/fonts\\/BrandonGrotesque\\/Black\\/brandon_blk-webfont\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "8b3a8e207ff57f31f4cb7617483f4a1a306ad1a02ef26862c0cbc95f0ce9fdde"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/css\\/fonts\\/BrandonGrotesque\\/Medium\\/brandon_med-webfont\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "83dabd83ff60679444a035f038ea46c5e5ac5987d7ca9187e472cee1bf28bf04"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/library\\/source_status_widget",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "a0f714d013b9d610dd8388f311f614dcc3afea4c805f396ecf6d1103052bff80"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/library\\/release-20250813-0258-9f0bcdd\\/assets\\/source_status_widget_application-680cd27555287d9c2d93a4d979b0fdbcfaa791fa8117afda881d19819e2fa2f0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "680cd27555287d9c2d93a4d979b0fdbcfaa791fa8117afda881d19819e2fa2f0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/store\\/2024\\/60x172\\/Deals_Tab_OpenR1\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-default-1.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "99d94c8427cbde2d80e093d07c78e3b5c3c9b80c764f478fef266657bc344647"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/store\\/2024\\/60x172\\/Deals_Tab_CloseR1\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-default-1.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "70e9357c2ec2f5266c482e8006f401d134482c786bb34df852f792e13d3e7314"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/api\\/v1\\/dynamic-content",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "b9e67b1afdd18b0fe80770ed093624a7c984f90d3ac7892ecaeec26d1ee51225"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/bundles\\/algolialibs-bundle\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "ac627342ce694d848a2ea7ad877d77af513caec9dcd15deca3d72bf1ab326046"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/store\\/2025\\/176x160\\/xAS1210594924318536_Nav_printsstand_176x160\\.webp\\.pagespeed\\.ic\\.miFLyM0YZ3\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-1.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "a1c514620c3775b071bd8280f49aafc2b10f0c0fbf62ec24df88686458ed057f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/store\\/2025\\/192x300\\/xAS1210594924318536_Nav_boardbook_192x300\\.webp\\.pagespeed\\.ic\\.Xmwo8oq5IM\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-1.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "9195a5b5dbe5ad60681a8f347dd7eaaf3160c7b9fdba6a8b4da3e33f6b305dcd"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/store\\/2025\\/192x300\\/xAS1210594924318536_Nav_collageprints_192x300\\.webp\\.pagespeed\\.ic\\.I1TzUnqgjF\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-2.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "7ab8f4f7cf412358ec4bd9506b976b5f54886151312e870f54b2d1047d6ffe58"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/store\\/2025\\/176x160\\/xAS1210594924318536_Nav_gallerytile_176x160\\.webp\\.pagespeed\\.ic\\.pguFMBamNY\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-1.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "5b90acf0f90070b1a1f72d1193f23f2ffa3cc43a0c61a810caa173a05add7600"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/store\\/2025\\/192x300\\/xAS1210594924318536_Nav_photoalbum_192x300\\.webp\\.pagespeed\\.ic\\.6BEpY3t91V\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-2.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "90923bbcc5804122171b1051ed67eda2081545d4b7d201d08d61ad8c13a2465a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/store\\/2025\\/192x300\\/xAS1210594924318536_Nav_pintglasses_192x300\\.webp\\.pagespeed\\.ic\\.JdoHY8PcGU\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-2.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "ea12da2140ce6e1e17ccc97f615483600462a5155bb385718bf51c85fd1494e6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        },
+        {
+            "rule": "sfly\\.io\\/resources\\/images\\/header\\/globalheader\\/logo\\/sf-new-logo\\.png\\.pagespeed\\.ce\\.VgotQ2XKmT\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snapfish"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "prd-static-2.sf-cdn.com",
+                    "resolved": "snapfish.sfly.io"
+                }
+            ],
+            "responseHashes": [
+                "b01cc243b7aaccdcb71856e7dba1102f1b9efeda3194ca8eaff63e5d48931b28"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snapfish.com",
+                "www.snapfish.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000547,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.632183908045977
+        },
+        {
+            "domain": "staticsfly.com",
+            "prevalence": 0.13793103448275862
+        },
+        {
+            "domain": "jscrambler.com",
+            "prevalence": 0.09195402298850575
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.09195402298850575
+        },
+        {
+            "domain": "monetate.net",
+            "prevalence": 0.04597701149425287
+        }
+    ],
+    "types": {
+        "Preflight": 6,
+        "Fetch": 3,
+        "XHR": 7,
+        "Stylesheet": 4,
+        "Script": 16,
+        "Font": 18,
+        "Image": 20
+    },
+    "nameservers": [
+        "a6-64.akam.net",
+        "a18-66.akam.net",
+        "a11-64.akam.net",
+        "a13-65.akam.net",
+        "a1-203.akam.net",
+        "a26-67.akam.net"
+    ]
+}

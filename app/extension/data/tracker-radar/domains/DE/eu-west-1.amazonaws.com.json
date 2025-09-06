@@ -1,0 +1,210 @@
+{
+    "domain": "eu-west-1.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00272,
+    "sites": 27,
+    "subdomains": [
+        "cognito-identity",
+        "q6p3fvajj5b7darbmdq5hkuhzm.appsync-api",
+        "k5kp6ayfrrebnbv3qk4xazbmnq.appsync-api",
+        "site-tenant-configuration.s3",
+        "aljhyxqyfj.execute-api"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "schraub-doc.de",
+                "www.directferries.de",
+                "www.ninjakitchen.de"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "d8458051a883ae62ff66c2ab04507c33f3569dd383525ed462da2160973c01b6",
+                "0da7a65f374076307c6f74bf6872040cdd7de2c0117759dc7ce3296cca157e49"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "schraub-doc.de",
+                "www.directferries.de",
+                "www.ninjakitchen.de"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "q6p3fvajj5b7darbmdq5hkuhzm.appsync-api",
+                "k5kp6ayfrrebnbv3qk4xazbmnq.appsync-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecycleverse.com",
+                "worldathletics.org"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/index\\/production\\/vistaprint\\/de-DE",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-tenant-configuration.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "31b7591edd4658d1a7468d474389d1f0f0f6d3f5fc9e1af9d5780cb3e595b952"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.de",
+                "www.vistaprint.de"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/site-configurations\\/VP-DE",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-tenant-configuration.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1349258e7384c8f06b0ebca7c22487802e96ec8e7cbdd829c69798139a559c39"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.de",
+                "www.vistaprint.de"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/production\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aljhyxqyfj.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "homify.de",
+                "www.homify.de"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7608695652173914
+        },
+        {
+            "domain": "smct.io",
+            "prevalence": 0.06521739130434782
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.043478260869565216
+        },
+        {
+            "domain": "d3odp2r1osuwn0.cloudfront.net",
+            "prevalence": 0.043478260869565216
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.021739130434782608
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.021739130434782608
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.021739130434782608
+        },
+        {
+            "domain": "marker.io",
+            "prevalence": 0.021739130434782608
+        }
+    ],
+    "types": {
+        "Preflight": 5,
+        "XHR": 9
+    },
+    "nameservers": [
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.com",
+        "ns1.amzndns.net",
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
+    ]
+}

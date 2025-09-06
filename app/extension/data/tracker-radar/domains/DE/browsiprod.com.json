@@ -1,0 +1,278 @@
+{
+    "domain": "browsiprod.com",
+    "owner": {
+        "name": "Browsi Mobile LLC",
+        "displayName": "Browsi Mobile LLC"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000807,
+    "sites": 8,
+    "subdomains": [
+        "cdn",
+        "events",
+        "yield-manager"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "browsiprod\\.com\\/bootstrap\\/bootstrap\\.js",
+            "cookies": 0.000504,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 7,
+                "window.localStorage": 7,
+                "Document.cookie getter": 7,
+                "Navigator.prototype.userAgent": 7,
+                "Screen.prototype.width": 7,
+                "Screen.prototype.height": 7,
+                "Document.cookie setter": 5
+            },
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "36209686dbafe448254d09dfa4823688bcc67a46bc257e05eaac36d32aa8ac9b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__browsiSessionID": {
+                    "ttl": 1806,
+                    "length": 71,
+                    "prevalence": 0.000504489960649783,
+                    "uniqueness": 1
+                },
+                "__browsiUID": {
+                    "ttl": 31536006,
+                    "length": 36,
+                    "prevalence": 0.000504489960649783,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fussballdaten.de",
+                "www.glasfaserforum.de",
+                "www.hardreset.info",
+                "www.jpost.com",
+                "www.oracletutorial.com",
+                "www.pythontutorial.net",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/supply",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fussballdaten.de",
+                "www.fussballdaten.de",
+                "www.glasfaserforum.de",
+                "www.hardreset.info",
+                "www.jpost.com",
+                "www.oracletutorial.com",
+                "www.pythontutorial.net",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/supply\\/v5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yield-manager"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "7ce7b6c6f92f696401957a310b41753e1ed38fc50e6497b5a7c06490ea7b239c",
+                "997f14291cafc73d7fb9fe2728cebe85d331b5c0810be76c353e982122a4e21a",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "f65b73804ed385d2defa6abe632bc165b9796fb360ea2dc7e0c516481bb84a0a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fussballdaten.de",
+                "www.glasfaserforum.de",
+                "www.hardreset.info",
+                "www.jpost.com",
+                "www.oracletutorial.com",
+                "www.pythontutorial.net",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/sd\\/apps\\/middy\\/middy-desktop-4\\.46\\.1115\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.availWidth": 5,
+                "Screen.prototype.availHeight": 5,
+                "Date.prototype.getTime": 5,
+                "window.localStorage": 5,
+                "window.innerHeight": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "68462546ef049658b74cf2c802fc4b4af94e20c6508b333712ae56459c6a0dea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fussballdaten.de",
+                "www.glasfaserforum.de",
+                "www.hardreset.info",
+                "www.jpost.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/abd\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "481d713552f587d3bc0e3683557f8541ea69543e4d7abb7e4299c646ab10fd03"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fussballdaten.de",
+                "www.glasfaserforum.de",
+                "www.hardreset.info",
+                "www.jpost.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/web-vitals\\/web-vitals-4\\.2\\.3\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000605,
+            "cnames": [],
+            "responseHashes": [
+                "1cf3e6d0ce85a08fee4fd2a90152a1a50e8b829c10003981d8f79da6cc2e874c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fussballdaten.de",
+                "www.glasfaserforum.de",
+                "www.hardreset.info",
+                "www.jpost.com",
+                "www.pythontutorial.net",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/EquativAdServer_tmzr\\/0\\.4\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8598bc7b4f62b1f1b927da2f4dc8c06f593c8c37e382e2dd1206fca4dc38d80e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "glasfaserforum.de",
+                "www.glasfaserforum.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000504,
+    "topInitiators": [
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.35714285714285715
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "outbrain.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "themoneytizer.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "adpushup.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "insiad.com",
+            "prevalence": 0.07142857142857142
+        }
+    ],
+    "types": {
+        "Script": 23,
+        "XHR": 17
+    },
+    "nameservers": [
+        "ns-1215.awsdns-23.org",
+        "ns-1546.awsdns-01.co.uk",
+        "ns-189.awsdns-23.com",
+        "ns-729.awsdns-27.net"
+    ]
+}

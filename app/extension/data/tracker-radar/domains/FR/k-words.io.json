@@ -1,0 +1,116 @@
+{
+    "domain": "k-words.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00151,
+    "sites": 15,
+    "subdomains": [
+        "sdk",
+        "plausible"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "k-words\\.io\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Document.cookie getter": 15,
+                "window.localStorage": 15,
+                "Navigator.prototype.userAgent": 12,
+                "Navigator.prototype.maxTouchPoints": 12,
+                "window.innerWidth": 12,
+                "Date.prototype.getTime": 9
+            },
+            "sites": 15,
+            "prevalence": 0.00151,
+            "cnames": [],
+            "responseHashes": [
+                "c1a9a6ad8bd46d525bdac21c09979bbd40825ada724fd3be68d27fbe31ebd531"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ayther.fr",
+                "forum.doctissimo.fr",
+                "monjardinmamaison.maison-travaux.fr",
+                "www.aufeminin.com",
+                "www.autoplus.fr",
+                "www.lejournaldelamaison.fr",
+                "www.letudiant.fr",
+                "www.maison-travaux.fr",
+                "www.mesrecettesfaciles.fr",
+                "www.pleinevie.fr",
+                "www.programme-tv.com",
+                "www.supersoluce.com",
+                "www.supertoinette.com",
+                "www.team-aaa.com",
+                "www.topsante.com"
+            ]
+        },
+        {
+            "rule": "k-words\\.io\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "plausible"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ayther.fr",
+                "monjardinmamaison.maison-travaux.fr",
+                "www.aufeminin.com",
+                "www.autoplus.fr",
+                "www.lejournaldelamaison.fr",
+                "www.maison-travaux.fr",
+                "www.mesrecettesfaciles.fr",
+                "www.pleinevie.fr",
+                "www.programme-tv.com",
+                "www.supersoluce.com",
+                "www.supertoinette.com",
+                "www.topsante.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.26666666666666666
+        },
+        {
+            "domain": "do69ll745l27z.cloudfront.net",
+            "prevalence": 0.13333333333333333
+        }
+    ],
+    "types": {
+        "Script": 15,
+        "XHR": 12
+    },
+    "nameservers": [
+        "wanda.ns.cloudflare.com",
+        "kai.ns.cloudflare.com"
+    ]
+}

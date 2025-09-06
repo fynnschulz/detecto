@@ -1,0 +1,301 @@
+{
+    "domain": "adnz.co",
+    "owner": {
+        "name": "audienzz AG",
+        "displayName": "NZZ Management"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00151,
+    "sites": 15,
+    "subdomains": [
+        "api",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "adnz\\.co\\/header\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 2,
+            "subdomains": [],
+            "apis": {
+                "window.localStorage": 7,
+                "window.innerWidth": 7,
+                "URL.createObjectURL": 7,
+                "Navigator.prototype.language": 5,
+                "Date.prototype.getTimezoneOffset": 5,
+                "Screen.prototype.height": 5,
+                "Screen.prototype.width": 5,
+                "window.innerHeight": 5,
+                "NavigatorUAData.prototype.brands": 5,
+                "NavigatorUAData.prototype.platform": 5,
+                "window.sessionStorage": 5,
+                "Date.prototype.getTime": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "eedc70d38cd5ee661a8bd0176720f0fc05cf1e8d44071f2fd5648129fd8b142c",
+                "8d589a75c6b9ea1ab39bde9a794dbe60cb5fcca0b2931576ee6477e65ae9fd42",
+                "80f38f5249e79a8a0fa6b469d115566d3cb9524a05383fadcfd0e6960c712cb3",
+                "1ff8f6419c6ff12449cdb29463226eb14d0b7b4f2bb45fde7f2de48d9bb615c3",
+                "4eb24172d701e59fe0f93d125ce8abf14659a329f2791752dd921be8f1559cfd",
+                "caf25b609c2823dd562dc84f1fe36eb94f3093805e59efbe3e4a8d6e91853488"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_sharedid": {
+                    "ttl": 2592011,
+                    "length": 36,
+                    "prevalence": 0.0003026939763898698,
+                    "uniqueness": 1
+                },
+                "_sharedid_cst": {
+                    "ttl": 2592011,
+                    "length": 17,
+                    "prevalence": 0.0003026939763898698,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid": {
+                    "ttl": 2592016,
+                    "length": 93,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid_cst": {
+                    "ttl": 2592016,
+                    "length": 16,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apollo-news.net",
+                "exxpress.at",
+                "merkurist.de",
+                "weltwoche.ch",
+                "www.finanzen.ch",
+                "www.finanzen.at",
+                "www.pctipp.ch"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/api\\/ws-semantiq\\/page-keywords",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "cabf5609dd3ca129d4a52f774801221dd9715298f4d99d36959ce24dc3c716ad",
+                "5af6472b3f53229c2f1fe4fc45869085edad321c4ee0bb098f435a640e744b03",
+                "05b3b22ff6b9cf897e8bef996da36614077a65007f312b17f7cb2862993b8642"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "exxpress.at",
+                "orf.at",
+                "weltwoche.ch",
+                "www.bluewin.ch",
+                "www.finanzen.at",
+                "www.finanzen.ch",
+                "www.pctipp.ch",
+                "www.schweizer-illustrierte.ch",
+                "www.vielfliegertreff.de"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/api\\/ws-appnexus-proxy\\/creatives\\/mediation-excluded",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "6c8573f44c6de3d613a5b6f95ccc0933c8ef85433812c775be3e9d9e2c2d3244"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "exxpress.at",
+                "weltwoche.ch",
+                "www.finanzen.at",
+                "www.finanzen.ch",
+                "www.pctipp.ch"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/api\\/ws-geodata\\/country",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "9685eb765661ea3b95f31e1bb3c3b5501d0c2acdf353feeaa4d8fe32f95f77fb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "exxpress.at",
+                "weltwoche.ch",
+                "www.finanzen.at",
+                "www.finanzen.ch",
+                "www.pctipp.ch"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/semantiq\\/semantiq\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "6af932658e06bb185f1cf9960ebe6cc13abe484dd8009d1c6963043fc7cdb171"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orf.at",
+                "www.kreuzwortraetsel.de",
+                "www.ruhrnachrichten.de"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/api\\/ws-events-sink\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orf.at",
+                "search.ch",
+                "www.bluewin.ch",
+                "www.kreuzwortraetsel.de",
+                "www.ruhrnachrichten.de",
+                "www.schweizer-illustrierte.ch",
+                "www.vielfliegertreff.de"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/convey-scripts\\/contextual_10\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "a2e601b1bda577e8b24c4913662f4fd907988b8564bcc6227c23dcbec0e34af0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "search.ch",
+                "www.bluewin.ch",
+                "www.schweizer-illustrierte.ch"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/api\\/ws-contextual\\/page-keywords",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "05b3b22ff6b9cf897e8bef996da36614077a65007f312b17f7cb2862993b8642"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bluewin.ch",
+                "www.schweizer-illustrierte.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5217391304347826
+        },
+        {
+            "domain": "ringier-advertising.ch",
+            "prevalence": 0.34782608695652173
+        },
+        {
+            "domain": "netpoint-media.de",
+            "prevalence": 0.08695652173913043
+        },
+        {
+            "domain": "consentmanager.net",
+            "prevalence": 0.043478260869565216
+        }
+    ],
+    "types": {
+        "Script": 13,
+        "Fetch": 19,
+        "Ping": 7,
+        "XHR": 2
+    },
+    "nameservers": [
+        "cheryl.ns.cloudflare.com",
+        "charles.ns.cloudflare.com"
+    ]
+}

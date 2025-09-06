@@ -1,0 +1,105 @@
+{
+    "domain": "natwest.com",
+    "owner": {
+        "name": "The Royal Bank of Scotland Group Plc",
+        "displayName": "The Royal Bank of Scotland Group"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "webserver.chatcora"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "natwest\\.com\\/static\\/ccm\\/ccm\\.init\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "webserver.chatcora"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "BroadcastChannel.prototype.constructor": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "URL.createObjectURL": 1,
+                "SharedWorker.prototype.constructor": 1,
+                "window.name": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a09c4161df349e95407b0d12c4988e985730fed5890990e0df314db1702b7718"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ccmDelayedLoadTime": {
+                    "ttl": 8,
+                    "length": 1,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                },
+                "ccmVisitorId": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "natwestinternational.com",
+                "www.ulsterbank.co.uk"
+            ]
+        },
+        {
+            "rule": "natwest\\.com\\/env\\/main",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webserver.chatcora"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2c8dd8453d97ece4f454498123a3a325d97065aa3a9183390a86185c891353a3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "ccmVisitorId": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "natwestinternational.com",
+                "www.ulsterbank.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "udns1.cscdns.net",
+        "udns2.cscdns.uk"
+    ]
+}

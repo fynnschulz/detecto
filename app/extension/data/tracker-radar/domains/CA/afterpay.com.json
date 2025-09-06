@@ -1,0 +1,88 @@
+{
+    "domain": "afterpay.com",
+    "owner": {
+        "name": "Block, Inc.",
+        "displayName": "Block, Inc."
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000812,
+    "sites": 8,
+    "subdomains": [
+        "portal",
+        "js"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "afterpay\\.com\\/afterpay\\.js",
+            "cookies": 0.000406,
+            "fingerprinting": 1,
+            "subdomains": [
+                "portal"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "18c1065bd0b2ec82c6f52b0ca6e39336b4d5626392da5542caec6fb574c057ef"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dsw.ca",
+                "theshoecompany.ca",
+                "www.dsw.ca",
+                "www.theshoecompany.ca"
+            ]
+        },
+        {
+            "rule": "afterpay\\.com\\/afterpay-1\\.x\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "720379672751d8c94a55cc110cfb82b2eab65ccb06817a2df3ba7f19075de384"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wearpact.com",
+                "www.crocs.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000711,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.1
+        }
+    ],
+    "types": {
+        "Script": 6
+    },
+    "nameservers": [
+        "logan.ns.cloudflare.com",
+        "pat.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,451 @@
+{
+    "domain": "seznam.cz",
+    "owner": {
+        "name": "Seznam.cz, a.s.",
+        "displayName": "Seznam.cz"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000906,
+    "sites": 9,
+    "subdomains": [
+        "ssp",
+        "h",
+        "cmp",
+        "c"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "seznam\\.cz\\/static\\/js\\/ssp\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie setter": 3,
+                "Document.cookie getter": 3,
+                "NavigatorUAData.prototype.getHighEntropyValues": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a5103c85d41538236b99e7dded45617eb3dc21622942999368ad9e02370ab0db"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.csfd.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/js\\/dot-small\\.js",
+            "cookies": 0.000403,
+            "fingerprinting": 2,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "window.name": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Document.cookie setter": 4,
+                "NavigatorUAData.prototype.getHighEntropyValues": 4,
+                "Date.prototype.getTime": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Screen.prototype.colorDepth": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "5d06a42fbe51a489e747bd15ac12b795aee4ac1a549f01e14c15fca727379408"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.csfd.cz",
+                "www.nakluky.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/udid",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.csfd.cz",
+                "www.nakluky.cz",
+                "www.prusa3d.com",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/udid",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "635c78910c4e3b83670a1876d4d4368de99f15c3b0e7cd2a9f56120fc00a4497",
+                "6c3a522b95f6a5f3fc797447eb03bb39149db9502cde6a1768f483c4238276f2",
+                "e8a8fb376a0c70aa782aba4f723dde174131e7694fdfd39315f84c41323212d5",
+                "673a8cdb9d67498a4fa2626573d86c568d2b74a801caac97f6b8e6d8e07f535e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.csfd.cz",
+                "www.nakluky.cz",
+                "www.prusa3d.com",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "alba.rajce.idnes.cz",
+                "www.csfd.cz",
+                "www.nakluky.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "alba.rajce.idnes.cz",
+                "www.csfd.cz",
+                "www.nakluky.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/check-point\\/v1\\/cmp",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cmp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "4d20057cc68a4d82d65ff629b631c274db4d787a899bde01df5b2b654551b6e4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.csfd.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "alba.rajce.idnes.cz",
+                "www.csfd.cz",
+                "www.nakluky.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/v1\\/xhr",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "093f03c32b09813aad1d9637c0767563cda0b01a119da5cbd6da1584cfd43910",
+                "2e0510bdc357806fb6ad36243ad8278a289e6ea50b5f5f7c0048f8df16f24f4b",
+                "2a653651320e94b04e5b28746bf2e41270fb4928cdac38e48c828ef8c67af5d0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "alba.rajce.idnes.cz",
+                "www.csfd.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/v1\\/xhr",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.csfd.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/static\\/html\\/cmp\\.html",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a1f78b0b4e2f1ea79976bad01ea0082b89fbae8fdec6c7dab34046c052a1a5ea"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.csfd.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/static\\/js\\/cmp\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "5562c4672857ac907a7dc895fdb961dea50a8f7dad4621107aefbb817021b173"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.csfd.cz",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/js\\/rc\\.js",
+            "cookies": 0.000503,
+            "fingerprinting": 1,
+            "subdomains": [
+                "c"
+            ],
+            "apis": {
+                "window.name": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 5,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "e2fb283c17181b0b0ca5eca40c843a60e005030ebc28f6b6e5eabfbdbcc8e128"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "udid": {
+                    "ttl": 2592008,
+                    "length": 50,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "prusa3d.com",
+                "help.prusa3d.com",
+                "www.printables.com",
+                "www.prusa3d.com",
+                "www.tamigo.com"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/retargeting",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "prusa3d.com",
+                "help.prusa3d.com",
+                "www.printables.com",
+                "www.prusa3d.com",
+                "www.tamigo.com"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/v1\\/miss",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csfd.cz",
+                "www.rajce.idnes.cz"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000906,
+    "topInitiators": [
+        {
+            "domain": "r2b2.cz",
+            "prevalence": 0.55
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.225
+        },
+        {
+            "domain": "imedia.cz",
+            "prevalence": 0.15
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "trackad.cz",
+            "prevalence": 0.025
+        }
+    ],
+    "types": {
+        "Script": 15,
+        "Preflight": 13,
+        "Fetch": 10,
+        "XHR": 12,
+        "Document": 3,
+        "Image": 7
+    },
+    "nameservers": [
+        "ams.seznam.cz",
+        "ans.seznam.cz"
+    ]
+}

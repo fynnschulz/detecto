@@ -1,0 +1,83 @@
+{
+    "domain": "slgnt.eu",
+    "owner": {
+        "name": "Selligent",
+        "displayName": "Selligent"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "fenix",
+        "nordisk",
+        "unhcr"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "slgnt\\.eu\\/optiext\\/webtracker\\.dll",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "fenix",
+                "nordisk",
+                "unhcr"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "609339ccf75d013c19929ed3a15543e3c37245fa36ad886b9d5c90b27ba25879",
+                "0cdc14231a0971b39bba92cc183ce5d5318b260c92472f5d62aba7651d77830b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "m_ses": {
+                    "ttl": null,
+                    "length": 14,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 1
+                },
+                "m_cnt": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 0.3333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fjallraven.com",
+                "www.nfkino.no",
+                "www.unhcr.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3
+    },
+    "nameservers": [
+        "ns14.dnsmadeeasy.com",
+        "ns12.dnsmadeeasy.com",
+        "ns11.dnsmadeeasy.com",
+        "ns10.dnsmadeeasy.com",
+        "ns13.dnsmadeeasy.com",
+        "ns15.dnsmadeeasy.com"
+    ]
+}

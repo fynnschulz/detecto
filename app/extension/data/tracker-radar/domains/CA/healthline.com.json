@@ -1,0 +1,148 @@
+{
+    "domain": "healthline.com",
+    "owner": {
+        "name": "Healthline",
+        "displayName": "Healthline"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000305,
+    "sites": 3,
+    "subdomains": [
+        "gtm-server",
+        "pavlov-prod"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "healthline\\.com\\/gtm\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "window.name": 3,
+                "Date.prototype.getTimezoneOffset": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "2f37cc1c42424411d886975ea0bd10e6a0a6d097f21d6aa92dd024092e03eea9",
+                "e0a2d56e92a073f63258d44bbf40f90c4ce88488e76665adf0edd6ca8754beae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/gtag\\/js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "window.name": 3,
+                "Navigator.prototype.language": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "88ffa7e26f1e8db2c011e37f2d123a78ee4ee79e13d981c70939748bff31718c",
+                "70808bb0ac19a4fcc8de1de41ebdfba3032ddbd76e2e5245435f04c0b096a9d7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/api\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pavlov-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Ping": 3,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "ns-397.awsdns-49.com",
+        "ns-532.awsdns-02.net",
+        "ns-1494.awsdns-58.org",
+        "ns-1870.awsdns-41.co.uk"
+    ]
+}

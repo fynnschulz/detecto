@@ -1,0 +1,96 @@
+{
+    "domain": "mention-me.com",
+    "owner": {
+        "name": "Mention Me Ltd",
+        "displayName": "Mention Me"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "static",
+        "tag"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "mention-me\\.com\\/dist\\/static\\/js\\/async\\/bootloader-init\\.v2\\.b874a4b9\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "6e12493b0ddaf3cb14ccc7d95c47e7ed23fd224708925504ad4f22ff610229be"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saharalondon.com",
+                "simbasleep.com",
+                "www.joebrowns.co.uk"
+            ]
+        },
+        {
+            "rule": "mention-me\\.com\\/api\\/v2\\/conversionmessage\\/mm6310c64e",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "df0112eabb666321e06281fa23512ad44546588e4ffc66328985b960574363df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "joebrowns.co.uk",
+                "www.joebrowns.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "global-e.com",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Script": 5
+    },
+    "nameservers": [
+        "ns-1427.awsdns-50.org",
+        "ns-18.awsdns-02.com",
+        "ns-1880.awsdns-43.co.uk",
+        "ns-644.awsdns-16.net"
+    ]
+}

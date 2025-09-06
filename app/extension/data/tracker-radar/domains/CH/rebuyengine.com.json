@@ -1,0 +1,305 @@
+{
+    "domain": "rebuyengine.com",
+    "owner": {
+        "name": "Rebuy, LLC",
+        "displayName": "Rebuy, LLC"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000301,
+    "sites": 3,
+    "subdomains": [
+        "cdn",
+        "cached",
+        "geo"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "rebuyengine\\.com\\/onsite\\/js\\/rebuy\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "893f291ffb07a56e3d10510e70c72414b32aa8b01688acb32ff4d005a7b3e0d2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "flyingtiger.com",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/onsite\\/js\\/global\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "aa1a0297a48494bce1d3e15f54620758f1af9458907bffd4a61e6140a4c0afb1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_rsession": {
+                    "ttl": 1813,
+                    "length": 16,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                },
+                "_ruid": {
+                    "ttl": 94608012,
+                    "length": 66,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/onsite\\/css\\/global\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3c5fc0a92beb7f2a5dea37f09a6cf572bd5928d2c05dfeae9d78669ffcc0008"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/api\\/v1\\/user\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cached"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "73e3ca9799bd7e0b7930af4f1f40c07d26d541c45c1cec43cbd957d60eab10c7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/onsite\\/js\\/SmartBanner\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b6c6fd1e89f375cbec010844b35234778a9cacf62104e07fae8cb5c22454c9cf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/api\\/v1\\/user\\/stylesheet",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cached"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3c90261063ec3e256ab46421ea324d8d8ba45cf333762d4bb8538de72dd1ae33"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1e04d25e22c306f82613667bc4f75241dc861d6c0a01e5d8dd6563184f9915ae"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/api\\/v1\\/widgets\\/settings",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cached"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4816f15c002c1cd78a526b9696da9960fddba36d6cb25d0afea730559c4f395d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/onsite\\/js\\/vendors\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9e9b7eaeec8a83fcc9ae7d7c7578536485c1987e5518dbe08115646e8ddf8717"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/onsite\\/js\\/Widget-templates-Widget-recommended-template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2de4358f963da4b344ad5be39cf48bb9a3a46d309ec0328ccddaa37909e77461"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feey.ch",
+                "www.decathlon.com"
+            ]
+        },
+        {
+            "rule": "rebuyengine\\.com\\/api\\/v2\\/analytics\\/event\\/bulk",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e9c2891c066c83b534ee619c4731ea1de8bf1c1b130a0c1d8dc651f35bc5c913"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.com",
+                "www.decathlon.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 11,
+        "Stylesheet": 4,
+        "Fetch": 8
+    },
+    "nameservers": [
+        "lauryn.ns.cloudflare.com",
+        "jakub.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "domain": "intuitiv-tourisme.fr",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "quiberon",
+        "chamonix",
+        "fvt",
+        "pmonew",
+        "laplagne"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "intuitiv-tourisme\\.fr\\/lib-intuitiv\\.min\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "quiberon",
+                "chamonix",
+                "fvt",
+                "pmonew",
+                "laplagne"
+            ],
+            "apis": {
+                "window.localStorage": 5,
+                "window.sessionStorage": 5,
+                "Navigator.prototype.language": 5,
+                "Navigator.prototype.userAgent": 5,
+                "window.innerHeight": 2,
+                "Document.cookie setter": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "4ce402a43cf363fa7317097313e7512ba4d5c02954389012b9db1bcabe27d367"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "intuitivUserId": {
+                    "ttl": null,
+                    "length": 8,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "baiedequiberon.bzh",
+                "www.chamonix.com",
+                "www.francevelotourisme.com",
+                "www.ile-oleron-marennes.com",
+                "www.la-plagne.com"
+            ]
+        },
+        {
+            "rule": "intuitiv-tourisme\\.fr\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "quiberon",
+                "chamonix",
+                "fvt",
+                "pmonew",
+                "laplagne"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "baiedequiberon.bzh",
+                "www.chamonix.com",
+                "www.francevelotourisme.com",
+                "www.ile-oleron-marennes.com",
+                "www.la-plagne.com"
+            ]
+        },
+        {
+            "rule": "intuitiv-tourisme\\.fr\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "quiberon",
+                "chamonix",
+                "fvt",
+                "pmonew",
+                "laplagne"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "baiedequiberon.bzh",
+                "www.chamonix.com",
+                "www.francevelotourisme.com",
+                "www.ile-oleron-marennes.com",
+                "www.la-plagne.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "XHR": 5,
+        "Preflight": 5
+    },
+    "nameservers": [
+        "ns10.ovh.net",
+        "dns10.ovh.net"
+    ]
+}

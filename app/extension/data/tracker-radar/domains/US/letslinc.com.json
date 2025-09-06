@@ -1,0 +1,491 @@
+{
+    "domain": "letslinc.com",
+    "owner": {
+        "name": "Linc Global, Inc",
+        "displayName": "Linc Global"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000109,
+    "sites": 16,
+    "subdomains": [
+        "connect",
+        "care",
+        "web-chat",
+        "event-service"
+    ],
+    "cnames": [
+        {
+            "original": "care.tillys.com",
+            "resolved": "care.letslinc.com"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "letslinc\\.com\\/v1\\/myAccountWidget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b8e6f1ce6eb857826088c1c19e8c62a79e7cd35c4590d008be3fc59e24dd2696"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ezcontacts.com",
+                "www.ezcontacts.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/v1\\/my_account_widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "dd0a1329246784431678549168962fa2c409931cc8160c2b2409eaeb1a8b38a7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ezcontacts.com",
+                "www.ezcontacts.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/v1\\/webChat\\.js",
+            "cookies": 0.0000616,
+            "fingerprinting": 1,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {
+                "Document.cookie getter": 9,
+                "window.innerHeight": 9,
+                "window.innerWidth": 9,
+                "Navigator.prototype.userAgent": 9,
+                "Document.cookie setter": 9
+            },
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "03c5495a608f74024fd54229f41cdc0a851554bf69749749d0b60654ceb2868e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "linc.web_chat.ids.client.development": {
+                    "ttl": 157680012,
+                    "length": 63,
+                    "prevalence": 0.00006156792994937747,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spirithalloween.com",
+                "stores.spirithalloween.com",
+                "tillys.com",
+                "www.airgundepot.com",
+                "www.kindsnacks.com",
+                "www.pureformulas.com",
+                "www.pyramydair.com",
+                "www.spencersonline.com",
+                "www.spirithalloween.com",
+                "www.tillys.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/webchat\\/widget",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "care"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [
+                {
+                    "original": "care.tillys.com",
+                    "resolved": "care.letslinc.com"
+                }
+            ],
+            "responseHashes": [
+                "cf13bd1fb819f52590ba53de32ad3bef265aa4a90dc7d553897283865141be63",
+                "200bbacf916c86c2cf08feb01997805def0dc90fa7b49c5d2142cac5b90f39f0",
+                "8ee49a4700fd350361e30217b443b981a1950dff57fb843509292d7fd4056016",
+                "be54c55d850647f107f622916cdc78ef41937ece1ebd1362554a9176ebb8e03f",
+                "9eaa0df9b6aae35e70933f0053804e81bd846efdecc33831beeb5a098ca9da69",
+                "196e42defb722e4a5cc029867dd7b0de1bbff4aa5d3620afd97df9d3d53e9cf4",
+                "0462ab706b06c13db5ebca531f42f77c0407e9c168c35f83e10fcf9808407e61",
+                "5027e75fff4a26debfd057dedfbfc3f429d96265006a4d9bb43c48703e70715a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "dy_fs_page": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "spirithalloween.com",
+                "stores.spirithalloween.com",
+                "tillys.com",
+                "www.airgundepot.com",
+                "www.pureformulas.com",
+                "www.pyramydair.com",
+                "www.spencersonline.com",
+                "www.spirithalloween.com",
+                "www.tillys.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/r97\\.2-4137-gf81fbb0c\\/webChatClient\\.568578b0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "5ba9a6cdca41fdbd86ae395829f3117518cdfa25f9ab7c6ba8a5349b27916d7b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spirithalloween.com",
+                "stores.spirithalloween.com",
+                "tillys.com",
+                "www.airgundepot.com",
+                "www.pureformulas.com",
+                "www.pyramydair.com",
+                "www.spencersonline.com",
+                "www.spirithalloween.com",
+                "www.tillys.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/r97\\.2-4137-gf81fbb0c\\/158\\.6b844c9d\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 8,
+                "Navigator.prototype.userAgent": 8
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "bb9604e4aadbfc45008c5522d9f0224d67f6e98fd0db45f75fdb1bac41618ac6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spirithalloween.com",
+                "stores.spirithalloween.com",
+                "tillys.com",
+                "www.airgundepot.com",
+                "www.pureformulas.com",
+                "www.pyramydair.com",
+                "www.spencersonline.com",
+                "www.spirithalloween.com",
+                "www.tillys.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/r97\\.2-4137-gf81fbb0c\\/webChatClient\\.568578b0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {
+                "window.localStorage": 8,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 9,
+                "Date.prototype.getTime": 9
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "a5f7d3b5a39cc84668b3caa93471ccf1ed33c0a0a1d6fb9d4111a0a3fe33d7c6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spirithalloween.com",
+                "stores.spirithalloween.com",
+                "tillys.com",
+                "www.airgundepot.com",
+                "www.pureformulas.com",
+                "www.pyramydair.com",
+                "www.spencersonline.com",
+                "www.spirithalloween.com",
+                "www.tillys.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/user\\/init",
+            "cookies": 0.0000616,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-chat"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spirithalloween.com",
+                "stores.spirithalloween.com",
+                "tillys.com",
+                "www.airgundepot.com",
+                "www.pureformulas.com",
+                "www.pyramydair.com",
+                "www.spencersonline.com",
+                "www.spirithalloween.com",
+                "www.tillys.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/event_api",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event-service"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spirithalloween.com",
+                "stores.spirithalloween.com",
+                "tillys.com",
+                "www.airgundepot.com",
+                "www.pureformulas.com",
+                "www.pyramydair.com",
+                "www.spencersonline.com",
+                "www.spirithalloween.com",
+                "www.tillys.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/user\\/init",
+            "cookies": 0.0000616,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-chat"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "b3bd631e9d0688cced5cd9c19773834e1042525ec8884750846683b0ee5ab4e1",
+                "5013f4b99c401c14afa080660bfba0bf4c68021ecdca0d1eec66301616d941a1",
+                "fa939a9f45d529d167e410ad63de6be198f22e945f3fe70ba8b6c321d0379fef",
+                "7ccf2eeb42c2b6c95ebc7b9a59b6c0a47931cc135b3f314a3c7a870b4231abfa",
+                "0801f1c01372dbdd85cf0501ae9bfa05ff57822ef0221cecaa712abc46b0e5bb",
+                "0372dffda63763ade06608bbb064d09e932a54f5460a3d8ba1570431caf0013d",
+                "88aaa37ed9e021c141b4b9a08ec30ca31dec64902c5046d53e8233c466bbd9cd",
+                "11858d52a790e0f1f1b7fca4001115e61195aa42fc36dea2670f7235f2ff4649"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spirithalloween.com",
+                "stores.spirithalloween.com",
+                "tillys.com",
+                "www.airgundepot.com",
+                "www.pureformulas.com",
+                "www.pyramydair.com",
+                "www.spencersonline.com",
+                "www.spirithalloween.com",
+                "www.tillys.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/r97\\.2-4137-gf81fbb0c\\/593\\.face9091\\.chunk\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a1a878c975bec691776f05647ed2319b5cddb92cea87639adcc6e3b4ea793d9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airgundepot.com",
+                "www.airgundepot.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/r97\\.2-4137-gf81fbb0c\\/662\\.0d5bd5cc\\.chunk\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4757c20933cd362f5bb156e5cc903bd178658c74112281f78c21d1a4d0283909"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airgundepot.com",
+                "www.airgundepot.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/r97\\.2-4137-gf81fbb0c\\/272\\.57e2590a\\.chunk\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "dbab0b530e77cf46fb1421c7187cbc14a73e7100997615671f616728caf83789"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airgundepot.com",
+                "www.airgundepot.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/r97\\.2-4137-gf81fbb0c\\/969\\.a89c336a\\.chunk\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c9163ece53b4270ef0805364636d58d84e3b1354d522e67e2d804d28d2b3c550"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airgundepot.com",
+                "www.airgundepot.com"
+            ]
+        },
+        {
+            "rule": "letslinc\\.com\\/r97\\.2-4137-gf81fbb0c\\/969\\.a89c336a\\.chunk\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "952c10b8d40ccceacf8d8b8bda1b1b82d44a6db9f17726460b0a768c0eb7e319"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airgundepot.com",
+                "www.airgundepot.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000889,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7222222222222222
+        },
+        {
+            "domain": "needle.com",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "letslinc.com",
+            "prevalence": 0.08333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.027777777777777776
+        }
+    ],
+    "types": {
+        "Script": 40,
+        "Document": 9,
+        "Stylesheet": 11,
+        "Preflight": 9,
+        "Fetch": 18
+    },
+    "nameservers": [
+        "ns-230.awsdns-28.com",
+        "ns-1000.awsdns-61.net",
+        "ns-1089.awsdns-08.org",
+        "ns-1893.awsdns-44.co.uk"
+    ]
+}

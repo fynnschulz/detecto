@@ -1,0 +1,285 @@
+{
+    "domain": "hextom.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000508,
+    "sites": 5,
+    "subdomains": [
+        "cdn",
+        "fsb",
+        "epb",
+        "qab"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "hextom\\.com\\/js\\/freeshippingbar\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "3aa421502916089d7fd04ac4a6ed45d6659b7346a735506a21d2f4dee8783aec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fsb_previous_pathname": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                },
+                "fsb_total_price_442300": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "fsb_message_one_442300": {
+                    "ttl": 11,
+                    "length": 3,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadesante.com",
+                "www.omfoods.com"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/fsb_get_bars",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fsb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadesante.com",
+                "www.omfoods.com"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/fsb_get_bars",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fsb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a3fed2b8af6a596f58009c500347c123782ecf260c0df574a3d32acd1b44b10a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadesante.com",
+                "www.omfoods.com"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/js\\/eventpromotionbar\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "0014232c40e6430a940f420381071d2cd3033c294d08f95486e7ea2a2684e4a4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "epb_previous_pathname": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bouclair.com",
+                "www.svpsports.ca"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/epb_get_bars",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "epb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bouclair.com",
+                "www.svpsports.ca"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/epb_get_bars",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "epb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "13de291769d9d69ddc145d3e8076931d5d3ef6f194a56b5f7bad9ff1382f4052"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bouclair.com",
+                "www.svpsports.ca"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/js\\/quickannouncementbar\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "50d474738bf17903f5ac7331299af9055010cc034e29a1fa2f1d1e76fe570d21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "qab_previous_pathname": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omfoods.com",
+                "www.svpsports.ca"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/qab_get_bars",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omfoods.com",
+                "www.svpsports.ca"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/qab_get_bars",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "13de291769d9d69ddc145d3e8076931d5d3ef6f194a56b5f7bad9ff1382f4052"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omfoods.com",
+                "www.svpsports.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000406,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7692307692307693
+        },
+        {
+            "domain": "minmaxify.com",
+            "prevalence": 0.23076923076923078
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Preflight": 6,
+        "Fetch": 6
+    },
+    "nameservers": [
+        "ns-1484.awsdns-57.org",
+        "ns-1851.awsdns-39.co.uk",
+        "ns-60.awsdns-07.com",
+        "ns-704.awsdns-24.net"
+    ]
+}

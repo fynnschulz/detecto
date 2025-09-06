@@ -1,0 +1,151 @@
+{
+    "domain": "iesnare.com",
+    "owner": {
+        "name": "TransUnion LLC",
+        "displayName": "TransUnion"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000812,
+    "sites": 8,
+    "subdomains": [
+        "mpsnare"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "iesnare\\.com\\/star",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpsnare"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "godaddy.com",
+                "thepointsguy.com",
+                "vortexoptics.com",
+                "www.kohler.com",
+                "www.mooresclothing.ca",
+                "www.upwork.com"
+            ]
+        },
+        {
+            "rule": "iesnare\\.com\\/general5\\/wdp\\.js",
+            "cookies": 0.000406,
+            "fingerprinting": 3,
+            "subdomains": [
+                "mpsnare"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.plugins": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Screen.prototype.height": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.colorDepth": 4,
+                "Navigator.prototype.appVersion": 4,
+                "Navigator.prototype.appName": 4,
+                "Navigator.prototype.platform": 4,
+                "Navigator.prototype.language": 4,
+                "Navigator.prototype.languages": 4,
+                "Navigator.prototype.cookieEnabled": 4,
+                "Navigator.prototype.hardwareConcurrency": 4,
+                "Navigator.prototype.getBattery": 4,
+                "window.localStorage": 4,
+                "WebGLRenderingContext.prototype.getExtension": 4,
+                "WebGLRenderingContext.prototype.getParameter": 4,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 4,
+                "HTMLCanvasElement.prototype.toDataURL": 4,
+                "OfflineAudioContext.prototype.constructor": 4,
+                "CanvasRenderingContext2D.prototype.measureText": 4,
+                "Navigator.prototype.webkitTemporaryStorage": 4,
+                "AudioBuffer.prototype.getChannelData": 4,
+                "Performance.prototype.memory": 4,
+                "NavigatorUAData.prototype.getHighEntropyValues": 3,
+                "NavigatorUAData.prototype.brands": 3,
+                "DeviceMotionEvent.prototype.accelerationIncludingGravity": 3,
+                "DeviceOrientationEvent.prototype.gamma": 3,
+                "DeviceOrientationEvent.prototype.beta": 3,
+                "DeviceOrientationEvent.prototype.alpha": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "82409e664eedf3a75d5b307a4c0eaf1b9739d488bcb5a0ebd1de13869abb0d90",
+                "6b0f9144adb545bee335e649c49c508d9f4d319e5305ca951dd7415748546715",
+                "e13f0705a0d37b2a127d54aed2c72a85570e4deb42e11e002c597a7a28bc11e7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepointsguy.com",
+                "vortexoptics.com",
+                "www.kohler.com",
+                "www.upwork.com"
+            ]
+        },
+        {
+            "rule": "iesnare\\.com\\/5\\.10\\.0\\/logo\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpsnare"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "5b58f51232a40ddb62a06b1ec0de453dcda65813e26a6d06c664323992464927",
+                "a3025523bef0fdb679c2dcf9c61d086ef73d4090d5e674ac1376907e570044a4",
+                "90bce038f72926b17806c35f74f269d5a55f67fdadbe6e5cafd301dd3d1b440e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepointsguy.com",
+                "vortexoptics.com",
+                "www.kohler.com",
+                "www.upwork.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Fraud Prevention"
+    ],
+    "performance": {},
+    "cookies": 0.000812,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9411764705882353
+        },
+        {
+            "domain": "stripecdn.com",
+            "prevalence": 0.058823529411764705
+        }
+    ],
+    "types": {
+        "WebSocket": 6,
+        "Script": 8
+    },
+    "nameservers": [
+        "dns1.p05.nsone.net",
+        "dns2.p05.nsone.net",
+        "dns3.p05.nsone.net",
+        "dns4.p05.nsone.net"
+    ]
+}

@@ -1,0 +1,912 @@
+{
+    "domain": "piano.io",
+    "owner": {
+        "name": "Piano Software",
+        "displayName": "Piano Software",
+        "privacyPolicy": "https://piano.io/privacy-policy/",
+        "url": "http://piano.io"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00303,
+    "sites": 30,
+    "subdomains": [
+        "experience-eu",
+        "api-esp-eu",
+        "api-esp",
+        "c2",
+        "c2-eu",
+        "cdn-eu",
+        "cdn",
+        "code",
+        "buy-eu",
+        "sandbox-api-esp",
+        "id-eu"
+    ],
+    "cnames": [
+        {
+            "original": "id.dhnet.be",
+            "resolved": "id-eu.piano.io"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "piano\\.io\\/xbuilder\\/experience\\/load",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "experience-eu"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "f991b97740a3286a27f7de49748f971d53fa2c94190eb4a5dd5df23a56217d44",
+                "29dbc531b473c902954ff3e73fbb5e5fc36f577b135f32e8f183dba135216620",
+                "f65af8fa8ef0bd2667b944fbdb51dade0ade4bc2877c05506eef80d5161d4203",
+                "8f1e46288b00a959dcac72c399a1a1bf11b582dec82cb52ba1a3b541a30e2ab2",
+                "ac285c533c2e9979532fed6bfd174e9a1a670bf1e0ba033cfdd254587b95efd4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "automobile-propre.com",
+                "www.archdaily.com",
+                "www.connexionfrance.com",
+                "www.gbnews.com",
+                "www.lexpress.fr",
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/public\\/sdk\\/vx\\/sdk\\.js",
+            "cookies": 0.000707,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api-esp-eu",
+                "api-esp"
+            ],
+            "apis": {
+                "window.localStorage": 7,
+                "Date.prototype.getTime": 7,
+                "Document.cookie setter": 7,
+                "Document.cookie getter": 7,
+                "window.indexedDB": 4
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "dbfdee23861d76abdaf41f4a29d0be42a10a78436251530221feb162e562c9f7",
+                "aa8a2df355579670fdc38838d10f633d31c98c5e2ffdc306718e6790dc21fcf0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "pnespsdk_ssn": {
+                    "ttl": null,
+                    "length": 56,
+                    "prevalence": 0.000504999495000505,
+                    "uniqueness": 1
+                },
+                "pnespsdk_visitor": {
+                    "ttl": 31536009,
+                    "length": 16,
+                    "prevalence": 0.000504999495000505,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "automobile-propre.com",
+                "www.connexionfrance.com",
+                "www.corriere.it",
+                "www.elmundo.es",
+                "www.gbnews.com",
+                "www.lopinion.fr",
+                "www.newsweek.com"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/xbuilder\\/experience\\/execute",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c2",
+                "c2-eu"
+            ],
+            "apis": {},
+            "sites": 27,
+            "prevalence": 0.00273,
+            "cnames": [],
+            "responseHashes": [
+                "39ad1517ed0636ceee566392eea7f97de57cf7a59b31cd9ca0ad8f9b716d5792",
+                "b3921cbd5f0763c6f98048d45b8fd00565b829749002a7df281b695c4a09ae3c",
+                "b0b3b09c060171122f4e1eea44162309511ec616bdaf8f28f687ef09bbccb4d1",
+                "6f61a7dea967953062acfce1b0ad0152b7c4d5672670aa5511aa2099b98ab3e1",
+                "687c0f0308c26e2a7b378ad4589be555b2f11da1e3aa22190ee75033eb279719",
+                "477cee8e93dc4a20d113767c46a0dadaebd3a153b2fe997c93ef835f21616c07",
+                "00f5f3b2793f29743bfe5532353a1df88689e5f31238f0af7c0aa0ee9d332a8d",
+                "255ead1ed6c1a31dc70387dc7d79692395e4913a68c82c0527d0090fa7fc3b4a",
+                "fd40502e63a3d63e4f4c7e8c1df8ed409f097342815b8792f7dea45bec02e84b",
+                "cb7dc98c791f2e954f2743b7a68f3a37430def7477e384f99668e1e6d6baf611",
+                "4bf4439f19fde32ea6582f94638b592324e7fa856ef7e780fb8f409f35617aed",
+                "3fd2fd0a1431a55974a00ace123269c3f32a6b8ec1767ca54f3b29c9246071e1",
+                "6f9f3115728aa31dd8f6427e934d181b87c99dd6a654e2349aa130784852bbdd",
+                "598df5f51d19ec57fcbcc6134acf874a8513e5bef47d0542069ba432024c228e",
+                "50df163cce15d30c6a1cee8173e47540a5fc8e4625ae2a2126ba07307df46296",
+                "2e807d4bf184626c862f8bdc24fe2c0c2aeb61d31ce66234e7301616ded8acb5",
+                "6c4406c75f3466d2e9f2985c135a92f522b532e019b32c82c30cc18a1446fd46",
+                "7e86feb3510f3f24544258e7cd6a1b2d05dce720867161dfe87ee93de37f186c",
+                "99e55ec55287189a12a6243af47cac5ff9cd628732040b0e4e9efd41d97123b0",
+                "4e3d9f5bb3075c6f0d9e1df23b8f1574395070bb4ed1e0fa970ac393d64197d2",
+                "2020f126faf0f0d7897febdbcf410549e212baa6b2a38514a755d0b9a085de74",
+                "4e4a7f184042938ef8c1153fdf66bf0fd4cd56acb6edf2cd25b967bdb27abc49",
+                "9b2bb8b02d76dd21cd7080aec290fd3852dcef93beecd5f168e2864654e75656",
+                "42be44003b7f9ed355454da3b34cbd6d31e4e33405271385cef7c00053590ea6",
+                "9c722fadeb83dab9d0599654f123cb0bde3d2fee7cdf20dd0c817f360ea34cee",
+                "942dc423349093f4206ab94a1e49d32fa1879dab711afc975530e44d5d2f5143"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "variety.com",
+                "www.cnbc.com",
+                "www.npr.org",
+                "www.politico.com",
+                "www.telegraph.co.uk",
+                "www.lalibre.be",
+                "www.ledevoir.com",
+                "www.connexionfrance.com",
+                "www.bbcgoodfood.com",
+                "www.gbnews.com",
+                "www.lavenir.net",
+                "www.corriere.it",
+                "www.hollywoodreporter.com",
+                "www.radiotimes.com",
+                "www.tdg.ch",
+                "www.guideautoweb.com",
+                "www.zeit.de",
+                "www.politico.eu",
+                "www.lopinion.fr",
+                "www.nzz.ch"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/api\\/tinypass\\.min\\.js",
+            "cookies": 0.00131,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn-eu",
+                "cdn",
+                "code"
+            ],
+            "apis": {
+                "window.localStorage": 13,
+                "Date.prototype.getTime": 13,
+                "Document.cookie setter": 13,
+                "Document.cookie getter": 13,
+                "window.name": 13,
+                "Navigator.prototype.userAgent": 13,
+                "Navigator.prototype.platform": 13,
+                "window.sessionStorage": 13,
+                "window.innerWidth": 13,
+                "window.innerHeight": 13,
+                "Notification.permission": 13,
+                "Date.prototype.getTimezoneOffset": 13,
+                "Navigator.prototype.appVersion": 13,
+                "window.screenLeft": 4,
+                "window.screenTop": 4,
+                "window.outerHeight": 4,
+                "Navigator.prototype.doNotTrack": 1
+            },
+            "sites": 13,
+            "prevalence": 0.00131,
+            "cnames": [],
+            "responseHashes": [
+                "0f2181f799b15563a9df690025beae6a3df8715a7b6d988f46dcf09e2b5a3071"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pctx": {
+                    "ttl": 34128004,
+                    "length": 106,
+                    "prevalence": 0.000908999091000909,
+                    "uniqueness": 0.8888888888888888
+                },
+                "_pcid": {
+                    "ttl": 34128004,
+                    "length": 56,
+                    "prevalence": 0.000807999192000808,
+                    "uniqueness": 1
+                },
+                "__pnahc": {
+                    "ttl": 7779606,
+                    "length": 1,
+                    "prevalence": 0.000807999192000808,
+                    "uniqueness": 0.125
+                },
+                "__tbc": {
+                    "ttl": 63072007,
+                    "length": 74,
+                    "prevalence": 0.001312998687001313,
+                    "uniqueness": 1
+                },
+                "__pat": {
+                    "ttl": 2592007,
+                    "length": 7,
+                    "prevalence": 0.001211998788001212,
+                    "uniqueness": 0.25
+                },
+                "__pvi": {
+                    "ttl": 86407,
+                    "length": 98,
+                    "prevalence": 0.001211998788001212,
+                    "uniqueness": 1
+                },
+                "xbc": {
+                    "ttl": 63072007,
+                    "length": 69,
+                    "prevalence": 0.001312998687001313,
+                    "uniqueness": 1
+                },
+                "_pprv": {
+                    "ttl": 34128015,
+                    "length": 364,
+                    "prevalence": 0.000302999697000303,
+                    "uniqueness": 1
+                },
+                "__pid": {
+                    "ttl": 2592011,
+                    "length": 10,
+                    "prevalence": 0.000605999394000606,
+                    "uniqueness": 1
+                },
+                "_pcus": {
+                    "ttl": 34128007,
+                    "length": 229,
+                    "prevalence": 0.000302999697000303,
+                    "uniqueness": 1
+                },
+                "LANG": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                },
+                "__pil": {
+                    "ttl": 2592012,
+                    "length": 5,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "archdaily.com",
+                "www.connexionfrance.com",
+                "www.dhnet.be",
+                "www.gbnews.com",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lexpress.fr",
+                "www.lopinion.fr",
+                "www.nzz.ch",
+                "www.npr.org",
+                "www.politico.eu",
+                "www.politico.com",
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/api\\/v3\\/anon\\/assets\\/sdk-runtime-config\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "6b93b84827d4edfecfad4850a581511e14f91a058d9dfaa8f6365ffebfa33803",
+                "c9554f5d82c52e7a4c3a1b4d2cfc904d9b3c8fe0cd4ab01e9799881fc4dcdca7",
+                "f61d1c51de2b13c2d573ad8ac6011fd00b436369273e5a543438ef79c987d015",
+                "c9e1bf648c3fea6030a49f368c6e454223803af769e6cdf7d3584a6517d19d03",
+                "b75e89314f0ab3e8e2ae889ea9311f73f9bac22796aca0d2185b17507c39f567",
+                "c59af5c3450c2c62734bcd662e8db4b6ecbb1b174b03dcc9d791c19e7c040ef9",
+                "c0be6bfbdc5523c15dc368e789e452affd9c50771b83cc03d645dc020c045799",
+                "e6ced3b26ee594d4bc03eaa96a19cf683c09f765b680e99da72aa82f37fa12e1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "archdaily.com",
+                "www.connexionfrance.com",
+                "www.dhnet.be",
+                "www.gbnews.com",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lexpress.fr",
+                "www.lopinion.fr",
+                "www.nzz.ch",
+                "www.politico.eu",
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/api\\/v3\\/composer\\/logExecutionStats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c2"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.corriere.it",
+                "www.elmundo.es",
+                "www.npr.org"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/public\\/sdk\\/v04\\/sdk\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sandbox-api-esp",
+                "api-esp-eu"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "window.indexedDB": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "dbfdee23861d76abdaf41f4a29d0be42a10a78436251530221feb162e562c9f7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pctx": {
+                    "ttl": 34128006,
+                    "length": 99,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                },
+                "_pcid": {
+                    "ttl": 34128006,
+                    "length": 46,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                },
+                "pnespsdk_ssn": {
+                    "ttl": null,
+                    "length": 56,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                },
+                "pnespsdk_visitor": {
+                    "ttl": 31536007,
+                    "length": 16,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "connexionfrance.com",
+                "www.diverto.tv"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/id\\/api\\/v1\\/identity\\/token\\/verify",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "id.dhnet.be",
+                    "resolved": "id-eu.piano.io"
+                }
+            ],
+            "responseHashes": [
+                "7519c094d0ce6ab870069e6d5f8ede3e93e0ce8982d3fb452378698b1345d506"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__pid": 0.000201999798000202
+            },
+            "exampleSites": [
+                "dhnet.be",
+                "www.nzz.ch"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/checkout\\/template\\/cacheableShow\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "1c574785a3aede0d67a816ada9dd50c0d708f2ea15e6c916aa7a873917fcf52a",
+                "8b6d91033855eb7e7125e1bc400439547d0538607e0fa560a910d0bbe9fb5174",
+                "d486fea3aa271028f2348944d8189781b94c258277cd47efcfafe5627284b149",
+                "4849917098741492d16db282b9cfec9dcc497e66f72490d16faf17ea8bf2b6b9"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__pid": 0.000504999495000505
+            },
+            "exampleSites": [
+                "dhnet.be",
+                "www.dhnet.be",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/api\\/v3\\/anon\\/template\\/loadTemplateContext",
+            "cookies": 0.000505,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "f4072f690210780c6d79e31a8ef2bf0410d9373ee317a846e49ded0343e90919",
+                "ed83870d346862cb5e11d0923d313e3ab4685a15f8bbbd644205f50855cd775f",
+                "e997350d7ac54438da70a045a79932052701eaba9e778999973e5c066768f3d6",
+                "756a22328f6d1e5352701677dcdbc240936383dddfa07b57c366332557448ddf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dhnet.be",
+                "www.dhnet.be",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/widget\\/dist\\/template\\/css\\/template\\.bundle\\.1\\.0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "44a6732bf34a868adcfabf3ea5dc578b7801ac25509aabe2d65e83f54ec7919e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dhnet.be",
+                "www.dhnet.be",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/showtemplate\\/general\\/loadTranslationMap",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "e03d12a6e3acf3ed814b025680fcdbe50b2fb51a05ee3af5eb81f00cf313da3f",
+                "7383ac2a052f5bc95533b95d53fe87b384d0c627aff89a12c1234839fa7b121e",
+                "6bb2b41fa8f7018dadbba86f0c89a094cec2f82e5c24e4fc36a61e5f8ba1ff76",
+                "2c606133a288be191bd3733c569f72eeb8818bca48741525f2569f95fe88da92"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dhnet.be",
+                "www.dhnet.be",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/ng\\/common\\/i18n\\/platform-translation-map_fr_FR\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "8e3eac2951733efcfbb29d15535aa50b853fae81fed650c6a30e950ac53df8c0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dhnet.be",
+                "www.dhnet.be",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/_sam\\/H4sIAAAAAAAA_z3IMQ6AIAwAwA9JG5j8jSlSSUlFQ0v8vhvb5fCTUtmxiDk636-SMzZbhjx7Ud5QJRtSr1NphAgJUkKJe1-nz0nKxzXCNaDZD2hOfIRaAAAA",
+            "cookies": 0.000505,
+            "fingerprinting": 1,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {
+                "window.localStorage": 5,
+                "Document.cookie getter": 5,
+                "Date.prototype.getTime": 5,
+                "Document.cookie setter": 5,
+                "Navigator.prototype.platform": 5,
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "6d851aed26b4638c46dc36c04e63fdbf21926709fe3e41c5e3fedf2e97fac135"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dhnet.be",
+                "www.dhnet.be",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/ng\\/common\\/i18n\\/platform-translation-map_en_US\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "9354be2c05aa4ee314f5cc4ef0f971432de49264aa920d939f96a25470368efd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dhnet.be",
+                "www.dhnet.be",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/widget\\/dist\\/template\\/css\\/img\\/fail-icon\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "3ed2d612d85e582c424cb012116f95cc1fc6217547f920fe78ba0c2f8af04626"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dhnet.be",
+                "www.dhnet.be",
+                "www.lalibre.be",
+                "www.lavenir.net",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/checkout\\/offer\\/show",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2249e9013133587273ec795aac2c7870c47cfc9b36bac3a43d346bbcf23de90c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__pid": 0.000201999798000202,
+                "cX_P": 0.000201999798000202
+            },
+            "exampleSites": [
+                "lopinion.fr",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/ng\\/common\\/pn-spinner\\/pn-spinner\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "35ad9a52f8696356f89ec6cfa987ab2fe0e920745bbf77f10fe24c54bd72fa1d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lopinion.fr",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/widget\\/dist\\/checkout\\/css\\/checkout\\.bundle\\.1\\.1\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8032910d71573ed1c1012befbf60b0a1b8c0343b1f9df063989c5c0dea4e709b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lopinion.fr",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/checkout\\/general\\/loadTranslationMap",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2c606133a288be191bd3733c569f72eeb8818bca48741525f2569f95fe88da92"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lopinion.fr",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/_sam\\/H4sIAAAAAAAA_62YTY_aMBCG_1B3o9JLr122aiu1ElraXquJPQlTHI_lD1j213cSCELaQ_GwN0h47Pl8PabZk-0xN5ZSbswGzZZLvhvYFofN39Q4aiNEwnR_fPau-Q9gIWMgs8V4LZFpqCSg5M2P6ZsQZnstZthbXEXekcWo4AOB52_21QrXbR7RUn5Ci0PIxL6OHqOaVC4Xn-NhjQ5NZo3TLTlHvv9kbcSkMSFASnuO1l3iNVsv2XfUV0abfUKfFebG1xm6Hu6p0-xZQh_BooJMGxCD16VNJpLWaglWJl_w5yYiPq5XJZoNJI05OUzJisOSh0Fly_G1sszEAS69RhrSvrLAQuSBl3yRtKuwruQScZ0h5joQnwNG0R-FbyDZ7SIUu4SQJbO_P9Rt_YpfvIURixuEOF3U-xOCybQDZe0HOAwiFDcYkzEOX0Se1xh3ZDRdAy4i2MNXSJ-M0YmsObadNgot-O0ajZTmjQK_OoZTl4gA7vNzGI-Z5em9JhLTOWsgWrURCnD8rQLjgF72XELSiNYLRtY5ud9APnDZgypV-Cw178H9FkXqyKhbL5LP-rnCnGtEFfr50UMEMUMOvi_MvUMp4BsXfIQMOYJPty54LMaHnxpFCWHaWQUnaUG07vCIHRSX1-JMxv5ww0piya_vEpbhDdbS1KvtyYkNe1DR1KNKU-fCUs9C4XQopeXXKs7OFaje-bzCilPuyIM3ejcQ0mEUOTU_JkBNbx2IVqlxbknNTl0onqfaBJ7BLEMOKmGp9krSHFopNpbxv3bPCzIPtd5O7VnJsMdciaiCuaeI4yxRifU8QuNAZKtRuVbUETK8KUw8Db74Us8V8pbAGD25W2jZEkiL-lZBmg05VLkq-v9C7ga0VdnLjodWmZ0ZDqm2T0ZaLqhFtS1EEfgsp0w1fT6n8l7OWi3cT4NaqNbL8wKz5FbyO3Y91DIUQq3Akm9Bw3TaeBwn13rhs2y4Wv6ES9zl8Qpbe2pNV8W-KPR9YCj6MyFyIK8N7huNc_pBTj2E6cYvHbXS3uQT-9o-fnFkamvvOI2gw_EQrm3O6e_ZeqGVgMwvakeM-S6jlUoModrHk6Xz9D1nM922zGmFI-yoHf-a7IvU5937-8X9YtHQ-4_-_MxJ0zr808W7Lr5rfN-YaZ0m-LskPewxXny8_5v-ATPdE1tPGwAA",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6776146fb21d022006e61a39a67d9ceda6db544c95ee363b56b2a2b16e9be45d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lopinion.fr",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/checkout\\/offer\\/trackShow",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e2d2e7699fc373c17061c7c2e0f10078eb35a77092c873448fb049bebd1ecc72"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lopinion.fr",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/checkout\\/offer\\/getFraudPreventionConfig",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f58fd0a17d0f820ef7d0568464c64881c424175d0c4e87343530fb5e55c5249f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lopinion.fr",
+                "www.lopinion.fr"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/widget\\/dist\\/checkout\\/css\\/img\\/Loader\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7e9e0a2940c44ecfe18c68fa4de5a43f90765909d80196240a3156b31decbe77"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lopinion.fr",
+                "www.lopinion.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00182,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.37037037037037035
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.24074074074074073
+        },
+        {
+            "domain": "tinypass.com",
+            "prevalence": 0.17592592592592593
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.12962962962962962
+        },
+        {
+            "domain": "asadcdn.com",
+            "prevalence": 0.027777777777777776
+        },
+        {
+            "domain": "static-nzz.ch",
+            "prevalence": 0.018518518518518517
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.009259259259259259
+        },
+        {
+            "domain": "piano.io",
+            "prevalence": 0.009259259259259259
+        },
+        {
+            "domain": "cxense.com",
+            "prevalence": 0.009259259259259259
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.009259259259259259
+        }
+    ],
+    "types": {
+        "Script": 54,
+        "XHR": 47,
+        "Ping": 4,
+        "Document": 7,
+        "Stylesheet": 9,
+        "Image": 7
+    },
+    "nameservers": [
+        "ian.ns.cloudflare.com",
+        "emma.ns.cloudflare.com"
+    ]
+}

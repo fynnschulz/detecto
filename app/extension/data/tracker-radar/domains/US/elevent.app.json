@@ -1,0 +1,93 @@
+{
+    "domain": "elevent.app",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "content"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "elevent\\.app\\/embedded-widget\\/elevent-widget\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "49e0668f86f14f78fa96115499a6e2b1020eceeec7cb3d71c1de54448bc3e88d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "siff.net",
+                "www.siff.net"
+            ]
+        },
+        {
+            "rule": "elevent\\.app\\/embedded-widget\\/elevent-widget\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "URL.createObjectURL": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e4921a4a844c7fab5822d34cf53bd7edb4b7d73e24188fb9df86ada7bbb6db3c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "elevent-wuser": {
+                    "ttl": 1802,
+                    "length": 449,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "siff.net",
+                "www.siff.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Stylesheet": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns4.bdm.microsoftonline.com",
+        "ns2.bdm.microsoftonline.com",
+        "ns1.bdm.microsoftonline.com",
+        "ns3.bdm.microsoftonline.com"
+    ]
+}

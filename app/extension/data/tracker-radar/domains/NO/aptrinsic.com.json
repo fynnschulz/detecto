@@ -1,0 +1,202 @@
+{
+    "domain": "aptrinsic.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "web-sdk",
+        "esp"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "aptrinsic\\.com\\/api\\/aptrinsic\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "01e274980eb5baed2ea9c4673e98be15fe8b785b1ebdbe36ad4de6c93f8c7c00"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "apt.uid": {
+                    "ttl": 31536006,
+                    "length": 44,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "apt.sid": {
+                    "ttl": 1807,
+                    "length": 40,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/configuration\\/AP-UNM677VB2XAD-2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "acf570aa687d88bde3043209f01b1304c490788f5ec1538faef47a27eb004cda"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "60ec4783f17368f6f08562b73fe100097a1735289a9de3f154ff98062b6ad7b5"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/command",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "d27f6d7b9fc16632f16df343d9fc670b3244d5527b14d3096354b6498392f714",
+                "f8a07021cd4354c05a603830c40a6ca3f8d9a8201f7e377001f8fd2082a46b7c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apt.sid": 0.00030193236714975844
+            },
+            "exampleSites": [
+                "sketchup.com",
+                "help.sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/api\\/v1\\/feature\\/client",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6cc59a7b772db1cf7c91af1eb6aead29179cf6da2801bcb947f0215c4db39900"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apt.sid": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/inapp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apt.sid": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "trimble.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 9,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "ns34.domaincontrol.com",
+        "ns33.domaincontrol.com"
+    ]
+}

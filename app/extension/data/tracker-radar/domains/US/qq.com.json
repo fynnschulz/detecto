@@ -1,0 +1,632 @@
+{
+    "domain": "qq.com",
+    "owner": {
+        "name": "Tencent Holdings Ltd.",
+        "displayName": "Tencent"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00013,
+    "sites": 19,
+    "subdomains": [
+        "ssl.captcha",
+        "t.captcha",
+        "res.wx",
+        "beacon.cdn",
+        "gatherer.m",
+        "browsertdidticket.m",
+        "otheve.beacon",
+        "snowflake",
+        "h.trace",
+        "cdn.midasbuy.com.tegsea.tc"
+    ],
+    "cnames": [
+        {
+            "original": "cdn.midasbuy.com",
+            "resolved": "cdn.midasbuy.com.tegsea.tc.qq.com"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "qq\\.com\\/TCaptcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ssl.captcha"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3bb218aba6f28f5484752a468d5acba15c7d8776b44a5d4bf9c534b9fb532977"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smzdm.com",
+                "post.smzdm.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/cap_union_prehandle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t.captcha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b9a2725decc406c8bfe578048c8286d6abb58b06e813f15f8ee51f093371becd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smzdm.com",
+                "post.smzdm.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/tdc\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "t.captcha"
+            ],
+            "apis": {
+                "Navigator.prototype.languages": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.userAgent": 2,
+                "RTCPeerConnection.prototype.constructor": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie setter": 2,
+                "RTCPeerConnectionIceEvent.prototype.candidate": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "23e889622723f7e6cd0662e96198429ed4fc09887971faebc56e3b09db724f94"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "TDC_itoken": {
+                    "ttl": 169636219,
+                    "length": 23,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smzdm.com",
+                "post.smzdm.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/cap_union_new_getcapbysig",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t.captcha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "af44d659d47fd14bd95267a19490f0e1cbcc4e3e127f1160d957a4f367c7a445"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smzdm.com",
+                "post.smzdm.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/cap_monitor",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t.captcha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smzdm.com",
+                "post.smzdm.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/open\\/js\\/jweixin-1\\.6\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "res.wx"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "Navigator.prototype.platform": 6,
+                "Date.prototype.getTime": 6
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "solitaires.com",
+                "www.chinadaily.com.cn",
+                "www.cnblogs.com",
+                "www.kimi.com",
+                "www.vivo.com",
+                "www.zeekrlife.com",
+                "z.ai"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/sdk\\/4\\.5\\.30\\/beacon_web\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "beacon.cdn"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.devicePixelRatio": 1,
+                "Navigator.prototype.language": 1,
+                "window.indexedDB": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9adfe04a7eb8b09e3242e59dce71503201d475592bdb1f925cdde2f21edf858f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "163.com",
+                "www.iflix.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/event\\/report",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gatherer.m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "163.com",
+                "www.163.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/event\\/report",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gatherer.m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "163.com",
+                "www.163.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browsertdidticket.m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "163.com",
+                "www.163.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browsertdidticket.m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "163.com",
+                "www.163.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/analytics\\/v2_upload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otheve.beacon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "163.com",
+                "www.163.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/analytics\\/v2_upload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otheve.beacon"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "9b33bb91f34f981002a5fff5a56a6a67984f661fa744834a705360fd8b2c27cb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "163.com",
+                "www.163.com",
+                "www.iflix.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/open\\/js\\/jweixin-1\\.4\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "res.wx"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e16906ca679a580debea3d2c0f6d03503337d85ae3284879dd70a0d5cd1b5efa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globaltimes.cn",
+                "www.tuya.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/ola\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snowflake"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iflix.com",
+                "www.iflix.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/ola\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snowflake"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0c66bebcbf614dc6b9482a657f2193128ddf828a2f2448574714ef41bbd5a3b2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iflix.com",
+                "www.iflix.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/bosskv",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h.trace"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "guid": 0.000027363524421945548,
+                "_qimei_uuid42": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "iflix.com",
+                "www.iflix.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/analytics\\/v2_upload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otheve.beacon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iflix.com",
+                "www.iflix.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/connect\\/zh_CN\\/htmledition\\/js\\/wxLogin\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "res.wx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4a57514d99b367ee8b390dbf3c61199764163864fe0af0053b37860225fd6ea4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kimi.com",
+                "www.zeekrlife.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/oversea_web\\/static\\/js\\/midas\\.runtimev1\\.6\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.midasbuy.com.tegsea.tc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn.midasbuy.com",
+                    "resolved": "cdn.midasbuy.com.tegsea.tc.qq.com"
+                }
+            ],
+            "responseHashes": [
+                "5b7a71fd730c9e8b8befc4ca5b6b0ff6351340b11920f02dfb79c4cd7833883e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "midasbuy.com",
+                "www.midasbuy.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/js\\/x-midas\\/kEc9hjFh5DQJbz_iPEWrfFxadMVk4PbLDS-5P8jE73pfdUuDwNGKNVZjdEztcHdofAVaHXo6zRGXgLwuvsK_afAEj6w_mKyiUmq-7AesIRU~\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn.midasbuy.com.tegsea.tc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn.midasbuy.com",
+                    "resolved": "cdn.midasbuy.com.tegsea.tc.qq.com"
+                }
+            ],
+            "responseHashes": [
+                "2ab08d983fd6007359e6d1ab6c80dc87b34c0d1bccf702dea67e6d20b824a872"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "midasbuy.com",
+                "www.midasbuy.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/oversea_web\\/static\\/js\\/axios\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.midasbuy.com.tegsea.tc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn.midasbuy.com",
+                    "resolved": "cdn.midasbuy.com.tegsea.tc.qq.com"
+                }
+            ],
+            "responseHashes": [
+                "24b7fb13c441efd97f78d07ba6e6d98f8e6d24b11d340c99c3bcf26453ebbdb6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "midasbuy.com",
+                "www.midasbuy.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/images\\/midasbuy_basic_logo_new\\.80b0ef40\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.midasbuy.com.tegsea.tc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn.midasbuy.com",
+                    "resolved": "cdn.midasbuy.com.tegsea.tc.qq.com"
+                }
+            ],
+            "responseHashes": [
+                "22847ed8dbd328676411e5c05b182d9b210a165123dc03252a8e351bdbb87e3d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "midasbuy.com",
+                "www.midasbuy.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.32222222222222224
+        },
+        {
+            "domain": "wetvinfo.com",
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "126.net",
+            "prevalence": 0.17777777777777778
+        },
+        {
+            "domain": "cdn-go.cn",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "gtimg.com",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Script": 25,
+        "Image": 8,
+        "XHR": 6,
+        "Preflight": 6,
+        "Other": 4,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "ns4.qq.com",
+        "ns1.qq.com",
+        "ns3.qq.com",
+        "ns2.qq.com"
+    ]
+}

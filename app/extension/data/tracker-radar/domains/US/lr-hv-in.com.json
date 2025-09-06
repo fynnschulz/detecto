@@ -1,0 +1,112 @@
+{
+    "domain": "lr-hv-in.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "cdn",
+        "r"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "lr-hv-in\\.com\\/logger\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.sessionStorage": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.language": 3,
+                "Navigator.prototype.platform": 3,
+                "Navigator.prototype.appVersion": 3,
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "Performance.prototype.memory": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "324bba8e265a900535586f8bfad1428513a77cc8d8f2bd0ce4f5d22a52a41cb5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ally.com",
+                "secure.ally.com",
+                "www.ally.com"
+            ]
+        },
+        {
+            "rule": "lr-hv-in\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "r"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ally.com",
+                "secure.ally.com",
+                "www.ally.com"
+            ]
+        },
+        {
+            "rule": "lr-hv-in\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "r"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "1d6469535416c751982ea4c689b8f028a332bea5d130d956bf9b53716d8fac76"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ally.com",
+                "secure.ally.com",
+                "www.ally.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Preflight": 3,
+        "XHR": 3
+    },
+    "nameservers": [
+        "dan.ns.cloudflare.com",
+        "rita.ns.cloudflare.com"
+    ]
+}

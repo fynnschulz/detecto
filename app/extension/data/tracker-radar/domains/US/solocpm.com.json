@@ -1,0 +1,92 @@
+{
+    "domain": "solocpm.com",
+    "owner": {
+        "name": "MainADV",
+        "displayName": "MainADV",
+        "privacyPolicy": "http://www.mainad.com/privacy-policy/",
+        "url": "http://mainad.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "secureaud",
+        "ban"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "solocpm\\.com\\/Audience\\.aspx&t=2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secureaud"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trivago.com",
+                "www.trivago.com"
+            ]
+        },
+        {
+            "rule": "solocpm\\.com\\/audit\\.aspx",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ban"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "20dcc8036344b312ab288bcece8b77b791cf9df1531afa638c1ac06dd13b7136"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "woom.com",
+                "www.beefbandits.de"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "mainadv.com",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "preciso.net",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Image": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "coco.ns.cloudflare.com",
+        "gordon.ns.cloudflare.com"
+    ]
+}

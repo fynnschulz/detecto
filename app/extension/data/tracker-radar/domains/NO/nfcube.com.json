@@ -1,0 +1,143 @@
+{
+    "domain": "nfcube.com",
+    "owner": {
+        "name": "Mintt Studio",
+        "displayName": "Mintt Studio"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000906,
+    "sites": 9,
+    "subdomains": [
+        "instafeed",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "nfcube\\.com\\/feed\\/v6",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "instafeed"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "f14b14032f731e61fd41bb5e5c089850769b48aa072c6f098af21642e0b00cc6",
+                "01ea7bca71eae21ee9ea384117b2d005fde591c4a08f1a28540e0bf29964fdda",
+                "034cac3b0c0e02935c4b43ccb8a1b4ce7a58725047744da99d70b9ade7b68638",
+                "ece335dbf38a8736663b5a589284289d8c54a14318ccc783fe9872c65f266087",
+                "a726e14e1f2ddf47e2fb8ddc275942c5c06d96fe83244d011cbca8974512adfc"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lampemagasinet.no",
+                "primusequipment.com",
+                "seatosummit.com",
+                "silvasweden.com",
+                "www.decathlon.com",
+                "www.petiteknit.com"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/assets\\/img\\/placeholder\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "instafeed"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "968b17baf99ffc8097fdbe0d8552113c2f6e7da2a63e3967f24811e2e2e0a312"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lampemagasinet.no",
+                "primusequipment.com",
+                "seatosummit.com",
+                "silvasweden.com",
+                "www.decathlon.com",
+                "www.petiteknit.com"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/cdn\\/instafeed-16\\.4\\.2\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "instafeed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "31383f507825ac9abb23074e8d44326283be8cdb63d1c62c4a25a2575fbc7798"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seatosummit.com",
+                "silvasweden.com"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/instafeed-8cf98a5a67967db58e071fdb98e726b4\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.connection": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "044f37f296da768276ce96963c3de07b6e4952e4da0f1b12e6fbd94e8b19cf28"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.com",
+                "www.decathlon.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 6,
+        "Image": 6,
+        "Stylesheet": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "ivan.ns.cloudflare.com",
+        "pat.ns.cloudflare.com"
+    ]
+}

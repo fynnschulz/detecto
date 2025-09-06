@@ -1,0 +1,133 @@
+{
+    "domain": "yandex.net",
+    "owner": {
+        "name": "Yandex LLC",
+        "displayName": "Yandex",
+        "privacyPolicy": "https://yandex.com/legal/privacy/",
+        "url": "http://yandex.com"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.00131,
+    "sites": 13,
+    "subdomains": [
+        "abt.s3",
+        "avatars.mds",
+        "favicon"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "yandex\\.net\\/expjs\\/latest\\/exp\\.js",
+            "cookies": 0.000502,
+            "fingerprinting": 1,
+            "subdomains": [
+                "abt.s3"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "window.localStorage": 5,
+                "window.sessionStorage": 5,
+                "Document.cookie setter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "4776acad9d8c3dd1b75354e545027100b932fd8dd104e86cbdd42c16f8794b0e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ymab_param": {
+                    "ttl": 31536000,
+                    "length": 91,
+                    "prevalence": 0.0005024115755627009,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "de-academic.com",
+                "fr-academic.com",
+                "ria.ru",
+                "voenhronika.ru",
+                "www.rt.com"
+            ]
+        },
+        {
+            "rule": "yandex\\.net\\/get-direct\\/5173339\\/z6FG6rwVd_3pe1wJSj65xg\\/x80",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "avatars.mds"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "42b7e3395df89635c91848e7c9380e686b1dfb091f2ae55dd20ba365124ced06"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dzen.ru",
+                "voenhronika.ru"
+            ]
+        },
+        {
+            "rule": "yandex\\.net\\/favicon\\/xcraft\\.net",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "favicon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "abf98fb7f3dedd067a7d4bd72196295553a8d67f49ddb660e7296a81d4dd2816"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ria.ru",
+                "www.avito.ru"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN",
+        "Embedded Content",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000603,
+    "topInitiators": [
+        {
+            "domain": "yastatic.net",
+            "prevalence": 0.6376811594202898
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "adfox.ru",
+            "prevalence": 0.028985507246376812
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Image": 4
+    },
+    "nameservers": [
+        "ns1.yandex.ru",
+        "ns2.yandex.ru"
+    ]
+}

@@ -1,0 +1,122 @@
+{
+    "domain": "pingdom.net",
+    "owner": {
+        "name": "Pingdom AB",
+        "displayName": "Pingdom",
+        "privacyPolicy": "https://www.pingdom.com/legal/cookie-policy/",
+        "url": "http://pingdom.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00121,
+    "sites": 12,
+    "subdomains": [
+        "rum-static",
+        "rum-collector-2"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "pingdom\\.net\\/prum\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "rum-static"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "PerformanceTiming.prototype.navigationStart": 4,
+                "Screen.prototype.availWidth": 4,
+                "Screen.prototype.availHeight": 4,
+                "window.innerWidth": 4,
+                "window.innerHeight": 4,
+                "Screen.prototype.pixelDepth": 4,
+                "window.devicePixelRatio": 4,
+                "Screen.prototype.orientation": 4,
+                "Navigator.prototype.appName": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "1d5cfe14d65accc4bd1df0d7c3bb65be70d0f4e94a5f9d40465343a2807548ae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "knowing-jesus.com",
+                "www.chamaeleon-reisen.de",
+                "www.praxisdienst.de",
+                "www.thelancet.com"
+            ]
+        },
+        {
+            "rule": "pingdom\\.net\\/img\\/beacon\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-collector-2"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "knowing-jesus.com",
+                "bible.knowing-jesus.com",
+                "communityarchive.victronenergy.com",
+                "de.minuporno.com",
+                "deine-massanfertigung.de",
+                "office.lexware.de",
+                "www.babyone.de",
+                "www.chamaeleon-reisen.de",
+                "www.lavialla.com",
+                "www.praxisdienst.de",
+                "www.thelancet.com",
+                "www.zurucksetzen.de"
+            ]
+        }
+    ],
+    "categories": [
+        "Analytics",
+        "Audience Measurement",
+        "Action Pixels"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.13333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.13333333333333333
+        },
+        {
+            "domain": "kameleoon.eu",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 12
+    },
+    "nameservers": [
+        "pat.ns.cloudflare.com",
+        "woz.ns.cloudflare.com"
+    ]
+}

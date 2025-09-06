@@ -1,0 +1,168 @@
+{
+    "domain": "marker.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000406,
+    "sites": 4,
+    "subdomains": [
+        "edge",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "marker\\.io\\/latest\\/shim\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "519168dd0b7aa6e5593c5f2ac75c1edcc57f50199282c5c3c906c395d985a318"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecse.com",
+                "www.forksoverknives.com",
+                "www.vch.ca",
+                "www.wpl.ca"
+            ]
+        },
+        {
+            "rule": "marker\\.io\\/latest\\/2\\.v2\\.30\\.0\\.714b4da18575a1ac7d06\\.js",
+            "cookies": 0.000406,
+            "fingerprinting": 1,
+            "subdomains": [
+                "edge"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "Event.prototype.timeStamp": 4,
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "2b90652963f55661863dc50926ee658f83303f600e0c1848ef65fe4abcbca562"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecse.com",
+                "www.forksoverknives.com",
+                "www.vch.ca",
+                "www.wpl.ca"
+            ]
+        },
+        {
+            "rule": "marker\\.io\\/latest\\/3\\.v2\\.30\\.0\\.574dcb3275f221a97ce4\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "edge"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "9db2e8e0cdc7fa307db61ad68d92b8cfffe6d26006824d260969de37313b084d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecse.com",
+                "www.forksoverknives.com",
+                "www.vch.ca",
+                "www.wpl.ca"
+            ]
+        },
+        {
+            "rule": "marker\\.io\\/widget\\/ping",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "b0dda778c3eacf1a5f7ca4873f155e9af4a5ea29614a9bc08e25f2cf6d2a70f2",
+                "81f3ca36b2f039200828b907f3f906028e32a78f5101a4f39465618fd3ca5668",
+                "dbadc5707083e3dc3669e535b13273eb004a404b88d38d00d84d9e8d20f89eb6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecse.com",
+                "www.forksoverknives.com",
+                "www.vch.ca",
+                "www.wpl.ca"
+            ]
+        },
+        {
+            "rule": "marker\\.io\\/widget\\/ping",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecse.com",
+                "www.forksoverknives.com",
+                "www.vch.ca",
+                "www.wpl.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000406,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Script": 12,
+        "Fetch": 4,
+        "Preflight": 4
+    },
+    "nameservers": [
+        "cody.ns.cloudflare.com",
+        "lara.ns.cloudflare.com"
+    ]
+}

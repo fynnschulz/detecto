@@ -1,0 +1,116 @@
+{
+    "domain": "sentinelpro.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00282,
+    "sites": 28,
+    "subdomains": [
+        "cdn",
+        "valnet"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "sentinelpro\\.com\\/valnet\\/sp\\.js",
+            "cookies": 0.00272,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.connection": 27,
+                "Date.prototype.getTime": 27,
+                "Document.cookie setter": 27,
+                "Document.cookie getter": 27,
+                "window.localStorage": 27
+            },
+            "sites": 27,
+            "prevalence": 0.00272,
+            "cnames": [],
+            "responseHashes": [
+                "b922429c02fe083daf82499cc9371bee91cd7e23b5ab68d80785cf95d77e5c2e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sentinelbi_utmData": {
+                    "ttl": 315360002,
+                    "length": 6,
+                    "prevalence": 0.002717391304347826,
+                    "uniqueness": 0.037037037037037035
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "screenrant.com",
+                "www.howtogeek.com",
+                "www.makeuseof.com",
+                "expedition33.wiki.fextralife.com",
+                "xdaforums.com",
+                "www.givemesport.com",
+                "darksouls.wiki.fextralife.com",
+                "eldenring.wiki.fextralife.com",
+                "www.androidpolice.com",
+                "www.thegamer.com",
+                "www.topspeed.com",
+                "simpleflying.com",
+                "darksouls2.wiki.fextralife.com",
+                "www.polygon.com",
+                "darksouls3.wiki.fextralife.com",
+                "movieweb.com",
+                "gamerant.com",
+                "www.pocket-lint.com",
+                "liesofp.wiki.fextralife.com",
+                "www.dualshockers.com"
+            ]
+        },
+        {
+            "rule": "sentinelpro\\.com\\/www\\.fextralife\\.com\\/senp\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "valnet"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "0e5f90a0e73748add4e3e781066682c6f026ad1f1ca4b052ccc0602c07dcc573"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fextralife.com",
+                "darksouls2.wiki.fextralife.com",
+                "darksouls.wiki.fextralife.com",
+                "eldenring.wiki.fextralife.com",
+                "expedition33.wiki.fextralife.com",
+                "liesofp.wiki.fextralife.com",
+                "roguetrader.wiki.fextralife.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00282,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 27,
+        "XHR": 7
+    },
+    "nameservers": [
+        "ns20.digicertdns.com",
+        "ns21.digicertdns.com",
+        "ns24.digicertdns.net",
+        "ns23.digicertdns.net"
+    ]
+}

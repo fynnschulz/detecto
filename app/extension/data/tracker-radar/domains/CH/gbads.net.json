@@ -1,0 +1,236 @@
+{
+    "domain": "gbads.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.001,
+    "sites": 10,
+    "subdomains": [
+        "weather-api.prod",
+        "grapeshot-goldbach.prod",
+        "goldlayer-api.prod",
+        "video"
+    ],
+    "cnames": [
+        {
+            "original": "gs-goldbach.da-services.ch",
+            "resolved": "grapeshot-goldbach.prod.gbads.net"
+        },
+        {
+            "original": "weather.da-services.ch",
+            "resolved": "weather-api.prod.gbads.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "gbads\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "weather-api.prod"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [
+                {
+                    "original": "weather.da-services.ch",
+                    "resolved": "weather-api.prod.gbads.net"
+                }
+            ],
+            "responseHashes": [
+                "83f5dbef60da77b3105e6dabe9e153386e4defee9fd2c6698df162fa82fa7ea9",
+                "1a5a2b395e5fcabcdf0e497f54e0e49014ccafb5739af740d75134c195763e50"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuw.ch",
+                "www.24heures.ch",
+                "www.bernerzeitung.ch",
+                "www.derbund.ch",
+                "www.fuw.ch",
+                "www.tagesanzeiger.ch",
+                "www.tdg.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/grapeshot\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "grapeshot-goldbach.prod"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [
+                {
+                    "original": "gs-goldbach.da-services.ch",
+                    "resolved": "grapeshot-goldbach.prod.gbads.net"
+                }
+            ],
+            "responseHashes": [
+                "4932f97700a4b9aa7cc257b89903e93d27a73ca6a0af4d7f50637f59efcc9c34",
+                "429da169c5903ae08cbdd8bb7e068324091a8c797c93cceb051ee5a194dd4dff",
+                "df640f8b0648c342aec6ff57525618f495f7b40c751bdb270311d72c80681e43",
+                "96bcd7930d985520fa00e179e834294b8838ddba31de3acc1369bf0d02680d40",
+                "76767d41202e1332a8df67d882b65a9775e3132c7503a01a89f50e6b1c3b2369",
+                "ff26920512ecc37ad7ea70e44c73e1b23100de5777ab90686d0ef64d63c96f5e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuw.ch",
+                "www.24heures.ch",
+                "www.bernerzeitung.ch",
+                "www.derbund.ch",
+                "www.fuw.ch",
+                "www.tagesanzeiger.ch",
+                "www.tdg.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/openrtb\\/2\\.5\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "goldlayer-api.prod"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuw.ch",
+                "www.24heures.ch",
+                "www.bernerzeitung.ch",
+                "www.bilan.ch",
+                "www.tagesanzeiger.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/openrtb\\/2\\.5\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "goldlayer-api.prod"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [],
+            "responseHashes": [
+                "cb79febd244c8b8e083726b064d30c1aaf1cc452e987b730277150d30732d6d3",
+                "e872cfd0c99cd2674304651a5beeb323806be469039ea6a39d77aea8c0e189f9",
+                "458b7a8c3a18626ce17f2deb38bfa4339b23a051a41e83c5451042e49f541dc6",
+                "388e66ecb70666e6720aaaec5592c8653ac9027c75310f88fddfd5c886600149"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuw.ch",
+                "www.24heures.ch",
+                "www.bernerzeitung.ch",
+                "www.bilan.ch",
+                "www.derbund.ch",
+                "www.fuw.ch",
+                "www.tagesanzeiger.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/storepal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "4-4-2.com",
+                "www.polizei-schweiz.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/storepal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "4-4-2.com",
+                "www.polizei-schweiz.ch"
+            ]
+        },
+        {
+            "rule": "gbads\\.net\\/openrtb\\/2\\.5\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "goldlayer-api.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "derbund.ch",
+                "www.fuw.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "da-services.ch",
+            "prevalence": 0.7777777777777778
+        },
+        {
+            "domain": "gbucket.ch",
+            "prevalence": 0.2222222222222222
+        }
+    ],
+    "types": {
+        "XHR": 16,
+        "Preflight": 5,
+        "Fetch": 7,
+        "Other": 4
+    },
+    "nameservers": [
+        "ns-178.awsdns-22.com",
+        "ns-741.awsdns-28.net",
+        "ns-1548.awsdns-01.co.uk",
+        "ns-1184.awsdns-20.org"
+    ]
+}

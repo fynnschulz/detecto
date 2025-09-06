@@ -1,0 +1,104 @@
+{
+    "domain": "iris-interactive.fr",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "sentry",
+        "nats"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "iris-interactive\\.fr\\/api\\/26\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "27c948c5b3d34a5e4c256a420172ebc1ffff3d55e41a9cc501d06c319343af02",
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "normandie-tourisme.fr",
+                "de.normandie-tourisme.fr",
+                "nl.normandie-tourisme.fr"
+            ]
+        },
+        {
+            "rule": "iris-interactive\\.fr\\/api\\/68\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "normandie-tourisme.fr",
+                "en.normandie-tourisme.fr",
+                "www.normandie-tourisme.fr"
+            ]
+        },
+        {
+            "rule": "iris-interactive\\.fr\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nats"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "normandie-tourisme.fr",
+                "www.ardeche-guide.com",
+                "www.normandie-tourisme.fr",
+                "www.royanatlantique.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 6,
+        "WebSocket": 4
+    },
+    "nameservers": [
+        "ns-101-b.gandi.net",
+        "ns-209-c.gandi.net",
+        "ns-42-a.gandi.net"
+    ]
+}

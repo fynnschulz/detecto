@@ -1,0 +1,208 @@
+{
+    "domain": "microsoft.com",
+    "owner": {
+        "name": "Microsoft Corporation",
+        "displayName": "Microsoft",
+        "privacyPolicy": "https://privacy.microsoft.com/en-us/privacystatement",
+        "url": "http://microsoft.com"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.00131,
+    "sites": 13,
+    "subdomains": [
+        "wcpstatic",
+        "browser.events.data",
+        "eu-mobile.events.data",
+        "mobile.events.data",
+        "browser.pipe.aria",
+        "get",
+        "minecraftprivacy"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "microsoft\\.com\\/mscc\\/lib\\/v2\\/wcp-consent\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wcpstatic"
+            ],
+            "apis": {
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "c688d3f2135b6b51617a306a0b1a665324402a00a6bceba475881af281503ad9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clipchamp.com",
+                "community.powerplatform.com",
+                "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.events.data",
+                "eu-mobile.events.data",
+                "mobile.events.data"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "be44615a217f11c6e62f7730cb664d77498da7cf93f4679db2e5defa93004363",
+                "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clipchamp.com",
+                "www.minecraft.net",
+                "www.monuta.nl",
+                "www.nhlstenden.com",
+                "www.trekbikes.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.events.data",
+                "eu-mobile.events.data",
+                "mobile.events.data"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clipchamp.com",
+                "www.minecraft.net",
+                "www.monuta.nl",
+                "www.nhlstenden.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.pipe.aria",
+                "eu-mobile.events.data"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clevelandclinic.org",
+                "my.clevelandclinic.org",
+                "www.alkmaar.nl",
+                "www.lynkco.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "get",
+                "minecraftprivacy"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0284036f5b3d66c952020802c2290257659d4230b8f24f83bd2577204c26f116"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vsco.co",
+                "www.minecraft.net"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "azureedge.net",
+            "prevalence": 0.26666666666666666
+        },
+        {
+            "domain": "windows.net",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.06666666666666667
+        },
+        {
+            "domain": "powerapps.com",
+            "prevalence": 0.06666666666666667
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.03333333333333333
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.03333333333333333
+        },
+        {
+            "domain": "dynamics.com",
+            "prevalence": 0.03333333333333333
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "XHR": 9,
+        "Preflight": 4,
+        "Document": 2
+    },
+    "nameservers": [
+        "ns3-39.azure-dns.org",
+        "ns4-39.azure-dns.info",
+        "ns1-39.azure-dns.com",
+        "ns2-39.azure-dns.net"
+    ]
+}

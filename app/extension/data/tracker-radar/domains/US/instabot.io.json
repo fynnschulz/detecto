@@ -1,0 +1,450 @@
+{
+    "domain": "instabot.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000547,
+    "sites": 8,
+    "subdomains": [
+        "widget",
+        "widgetapi",
+        "chat",
+        "static"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "instabot\\.io\\/jsapi\\/bot\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Document.cookie setter": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "871b7d6428b83ce1cbc261c81a5c5e50199288179eeb1aac31bce8e001275360"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "rokoAPISession": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                },
+                "rokoAPI": {
+                    "ttl": 31536002,
+                    "length": 79,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.kubotausa.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/instabot\\/getConversationsStorage",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgetapi"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__tld": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.arthritis.org",
+                "www.draperinc.com",
+                "www.kubotausa.com",
+                "www.newyorkurologyspecialists.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/instabot\\/getConversationsStorage",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgetapi"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "1e3aad757e907d678f6faac2c23e8c047704b7dd191f1af4f62ab560a20c9e91",
+                "48baa94940237e453cffb3471862532903b2b263eb885e81a50870e0d23efc9a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__tld": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.arthritis.org",
+                "www.draperinc.com",
+                "www.kubotausa.com",
+                "www.newyorkurologyspecialists.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/plugins\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgetapi"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "21123e765e8905601fe8e9cf7c36e492b29922299e59c55faa18c9a6e7a13c0d",
+                "604bdd33f0335b9811812fc7ac20a0af1505a96b8ff0805e8972559a99cbeee4",
+                "8bc44374536e0ebd1272d2bd269e8ba681b511b290eea9505e77e8f530a74210",
+                "9b8c6acfc14696fd0c261fd65ee0a7958f99d0d7b74d2c7021cd6857bdaad3a9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.draperinc.com",
+                "www.kubotausa.com",
+                "www.newyorkurologyspecialists.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/jsapi\\/bot-widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 5,
+                "Date.prototype.getTime": 5,
+                "Navigator.prototype.maxTouchPoints": 5,
+                "Navigator.prototype.userAgent": 5
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "dda735b816c6dd077c9bf232b3a42d8dd91d955ec6bac2ec71d696388c53940b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.draperinc.com",
+                "www.kubotausa.com",
+                "www.newyorkurologyspecialists.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/user\\/getClientUserInfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgetapi"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e199507d84f24aea36c9856c6ad6f94611bcb84c598b31e875dae39d0168cef3",
+                "639e036ecac5ba8c90ed84c0b73a06b9283f455565f65de0d2559cbe149b1841",
+                "8d906de2a05c42185eeb204afbe956d5d1a20ef0dda3b4a26f7a7a7dc7a08a4d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.draperinc.com",
+                "www.newyorkurologyspecialists.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/user\\/getClientUserInfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgetapi"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.draperinc.com",
+                "www.newyorkurologyspecialists.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/user\\/trackUserSession",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgetapi"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.draperinc.com",
+                "www.newyorkurologyspecialists.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/user\\/trackUserSession",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgetapi"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "0fb2d9026fd54eff789b8ba2538178b321b44e92bac3adcccd9f52e6284cdb0e",
+                "4707993ebb9f4d49beed0a79ed2f13c284efa7f70404d2ca00ef44e550b8bd0a",
+                "a83d1274292e01e6e59cc356f11da061631bdd092d105c8212899898c9047038"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.draperinc.com",
+                "www.newyorkurologyspecialists.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/clientlogin",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "059bb7434b6c6e46d649a3317201ff81e3dd70907c36824091549c24289f9091",
+                "06a13cce8252967bb053d2db62c72336cedf9e183203d2d27219787de298d038",
+                "883c4424ed6d1be9b20af8a42b26a28186aca8ba59d8e5bfeb9b58d4a9bf2404"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bay.k12.fl.us",
+                "www.draperinc.com",
+                "www.newyorkurologyspecialists.com",
+                "www.trigreenequipment.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/jsapi\\/rokoInstabot\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "window.localStorage": 4,
+                "Document.cookie setter": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Date.prototype.getTime": 4,
+                "Element.prototype.getClientRects": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "871b7d6428b83ce1cbc261c81a5c5e50199288179eeb1aac31bce8e001275360"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "rokoAPISession": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                },
+                "rokoAPI": {
+                    "ttl": 31536007,
+                    "length": 79,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arthritis.org",
+                "www.arthritis.org",
+                "www.draperinc.com",
+                "www.newyorkurologyspecialists.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/storage\\/Tt2IWgldF6fBTMgog4sGbaszS7DibmIPmAn5P7isOyI",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5ed18895b77ab076987cb581518d619c1d8e061e4c7f42062fc8374760ada62c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arthritis.org",
+                "www.arthritis.org"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/storage\\/Tt2IWgldF6fBTMgog4sGbaszS7DibmIPmAn5P7isOyI",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arthritis.org",
+                "www.arthritis.org"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/storage\\/psvqlJY1WDDHh8_5fF2f2NmtRDBYc6tf1jg8KA3Mhkg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newyorkurologyspecialists.com",
+                "www.newyorkurologyspecialists.com"
+            ]
+        },
+        {
+            "rule": "instabot\\.io\\/storage\\/psvqlJY1WDDHh8_5fF2f2NmtRDBYc6tf1jg8KA3Mhkg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newyorkurologyspecialists.com",
+                "www.newyorkurologyspecialists.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000547,
+    "topInitiators": [
+        {
+            "domain": "msecnd.net",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Script": 17,
+        "Preflight": 18,
+        "XHR": 22
+    },
+    "nameservers": [
+        "ns-156.awsdns-19.com",
+        "ns-1294.awsdns-33.org",
+        "ns-1744.awsdns-26.co.uk",
+        "ns-849.awsdns-42.net"
+    ]
+}

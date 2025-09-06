@@ -1,0 +1,243 @@
+{
+    "domain": "auth0.com",
+    "owner": {
+        "name": "Auth0, Inc.",
+        "displayName": "Auth0"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.00173,
+    "sites": 17,
+    "subdomains": [
+        "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2",
+        "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
+        "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca",
+        "ramsey-prod-cd-tznd9ii7nfjea8jb.edge.tenants.us",
+        "sopfeu.ca",
+        "statista.eu",
+        "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+        "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us",
+        "cdn"
+    ],
+    "cnames": [
+        {
+            "original": "auth.androidauthority.com",
+            "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
+        },
+        {
+            "original": "auth.flightcentre.ca",
+            "resolved": "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca.auth0.com"
+        },
+        {
+            "original": "auth.soundguys.com",
+            "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
+        },
+        {
+            "original": "id.ramseysolutions.com",
+            "resolved": "ramsey-prod-cd-tznd9ii7nfjea8jb.edge.tenants.us.auth0.com"
+        },
+        {
+            "original": "login.finder.com",
+            "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
+        },
+        {
+            "original": "login.statista.com",
+            "resolved": "statista.eu.auth0.com"
+        },
+        {
+            "original": "oauth.airmiles.ca",
+            "resolved": "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2.auth0.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "auth0\\.com\\/authorize",
+            "cookies": 0.000609,
+            "fingerprinting": 0,
+            "subdomains": [
+                "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2",
+                "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
+                "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca",
+                "ramsey-prod-cd-tznd9ii7nfjea8jb.edge.tenants.us",
+                "sopfeu.ca",
+                "statista.eu"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [
+                {
+                    "original": "oauth.airmiles.ca",
+                    "resolved": "airmiles-v2-cd-7ftve03wdwpxmvac.edge.airmiles-v2.auth0.com"
+                },
+                {
+                    "original": "login.finder.com",
+                    "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
+                },
+                {
+                    "original": "auth.flightcentre.ca",
+                    "resolved": "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca.auth0.com"
+                },
+                {
+                    "original": "id.ramseysolutions.com",
+                    "resolved": "ramsey-prod-cd-tznd9ii7nfjea8jb.edge.tenants.us.auth0.com"
+                },
+                {
+                    "original": "login.statista.com",
+                    "resolved": "statista.eu.auth0.com"
+                }
+            ],
+            "responseHashes": [
+                "655187ce03fdadb88bbbec0b7c92b93d17d144c043ee18ddc2818efda634128a",
+                "7ab696cd62bddac638760e4b58ec20412d65ff9d70e46e67d53312d3ebe699ce",
+                "c7ed047f3a4b633d8c06e3d9f1a9dc33ef9ef13756fa694545bdc8dd28742dc2"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airmiles.ca",
+                "www.finder.com",
+                "www.flightcentre.ca",
+                "www.ramseysolutions.com",
+                "www.sopfeu.qc.ca",
+                "www.statista.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/user\\/geoloc\\/country",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+                "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "auth.androidauthority.com",
+                    "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
+                },
+                {
+                    "original": "auth.soundguys.com",
+                    "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidauthority.com",
+                "www.soundguys.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/js\\/lock\\/13\\.1\\.0\\/en\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "cfb7df4155a0322b5a7afdebca4b397934de2101fbce7078201eec93a9720c93"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidauthority.com",
+                "www.soundguys.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/user\\/geoloc\\/country",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us",
+                "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "auth.androidauthority.com",
+                    "resolved": "androidauthority-cd-etyu0nxbncph3bfi.edge.tenants.us.auth0.com"
+                },
+                {
+                    "original": "auth.soundguys.com",
+                    "resolved": "soundguys-cd-6hmonyx7zjtu3rrq.edge.tenants.us.auth0.com"
+                }
+            ],
+            "responseHashes": [
+                "b890637e3e879bc5d50f42c1a3931c52cb4a819f9d0038efc7aef3a4a88eda92"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidauthority.com",
+                "www.soundguys.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/js\\/auth0\\/9\\.11\\/auth0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2ae5aed8aab32ad79a23003eee65fec603ddbeed83b296ba4735ff840e12b005"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "firstalert.ca",
+                "www.honeywellhome.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000812,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9285714285714286
+        },
+        {
+            "domain": "flightcentre.com",
+            "prevalence": 0.07142857142857142
+        }
+    ],
+    "types": {
+        "Document": 6,
+        "Preflight": 2,
+        "Script": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "monroe.ns.cloudflare.com",
+        "kolton.ns.cloudflare.com"
+    ]
+}

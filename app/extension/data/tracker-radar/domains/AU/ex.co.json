@@ -1,0 +1,425 @@
+{
+    "domain": "ex.co",
+    "owner": {
+        "name": "EX.CO Technologies Ltd.",
+        "displayName": "EX.CO Technologies"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.00111,
+    "sites": 11,
+    "subdomains": [
+        "player",
+        "motorsport-player",
+        "collector-1",
+        "cdn",
+        "motorsport-cdn",
+        "v",
+        "sync"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "ex\\.co\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player",
+                "motorsport-player"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "d46c51f0103abbd3b1d945bb8fddb20853f88ecb626ffe262b3056f47ac721d4",
+                "76167f26712f848c5af48a3f8c9d96193df62946e3e1efadd682f20032684d2a",
+                "71053374e8e87d478ea44d53526f5c7ec984cdc6d7d517595489317c5f57c776"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "insideevs.com",
+                "www.motorsport.com",
+                "www.sporcle.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/main\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-1"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "cebe87559cf861d01e9c6b1cefd38ab1db9e13c8fe316b85a296b6cf220f883e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "freepages.rootsweb.com",
+                "insideevs.com",
+                "www.motorsport.com",
+                "www.sporcle.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/ads-home\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "aad5319fa68d4ffea7c51f2994cd36ba8a8fb9a460f3a9f54e49efa059e47d3b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "insideevs.com",
+                "www.sporcle.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/ap\\/4\\.158\\.1-be605e6\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "eb6b7b3dfc11d8531f0503329b43176c2c664a88097c95a0434d3b58796547e1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/0\\.0\\.1-5b4f7f3\\/cookie_sync\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn",
+                "motorsport-cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "dcbeff47e97da4c7726e710fdb8aac25df85068c4673e6802764c2587bf6ce6c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "freepages.rootsweb.com",
+                "insideevs.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/pb\\/4\\.9\\.0\\/expb\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "insideevs.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/0\\.0\\.1-5b4f7f3\\/sync-02ecabe5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn",
+                "motorsport-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "insideevs.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/se\\/openrtb\\/hb\\/pbjs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.freeconvert.com",
+                "www.jetpunk.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/event",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "a00fb0c50741f81bb51d35b4475a4357f8039aabd896a21036bc516839401595"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "imageresizer.com",
+                "www.freeconvert.com",
+                "www.jetpunk.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/e15e216-l\\/cookie_sync\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "f6dbb7ef244db6f509111fb2b7db6c49ea5b6bccbdf0a7f6876e79fdcf10fd9b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.freeconvert.com",
+                "www.jetpunk.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/sync\\/e15e216-l\\/sync\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "479ff42ae15a8777a8bef060c1711a6001c722e1391faaf3d5aa554009d7aa26"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "excotest": {
+                    "ttl": -1755396774,
+                    "length": 1,
+                    "prevalence": 0.0003028161905723226,
+                    "uniqueness": 0.3333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.freeconvert.com",
+                "www.jetpunk.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/cookie_sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "f5199f447cf545dfca5914aac20eaa30fda969fff4f9795ab87ca22caaabd459"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.freeconvert.com",
+                "www.jetpunk.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/4e877d53-b58f-4d99-a179-3b51e5eb5572",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.devicePixelRatio": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1d69b3aaf6a7b88ba5d482b3e464e9573e4725997f5d2a9b24c9ebcfb1a7f39b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sporcle.com",
+                "www.sporcle.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/e47bb2eb-7b95-49a0-8fca-ff05b935ae58",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.devicePixelRatio": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "629253ab1422190e34706cc839dddeb699e38634fd180e8f59fcc1a81a847114"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "typingtest.com",
+                "www.typingtest.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.32608695652173914
+        },
+        {
+            "domain": "mediatradecraft.com",
+            "prevalence": 0.06521739130434782
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.06521739130434782
+        },
+        {
+            "domain": "playbuzz.com",
+            "prevalence": 0.021739130434782608
+        },
+        {
+            "domain": "pubmatic.com",
+            "prevalence": 0.021739130434782608
+        }
+    ],
+    "types": {
+        "Fetch": 17,
+        "XHR": 6,
+        "Script": 14,
+        "Document": 7
+    },
+    "nameservers": [
+        "ns-1853.awsdns-39.co.uk",
+        "ns-709.awsdns-24.net",
+        "ns-141.awsdns-17.com",
+        "ns-1048.awsdns-03.org"
+    ]
+}

@@ -1,0 +1,145 @@
+{
+    "domain": "linkconnector.com",
+    "owner": {
+        "name": "LinkConnector Corporation",
+        "displayName": "LinkConnector"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000305,
+    "sites": 3,
+    "subdomains": [
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "linkconnector\\.com\\/uts_lp\\.php",
+            "cookies": 0.000305,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "263c7982d35e1670ba2754367b4d0ee6b5a7c8e2f5b27b1182527e03a147f160",
+                "b7cae032fb95e959c8b65211ac3ef400ac3e4e6564a7d6a702be56d2416dca89"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "uts_id": {
+                    "ttl": 157680006,
+                    "length": 17,
+                    "prevalence": 0.00030453761039488374,
+                    "uniqueness": 1
+                },
+                "LCUTS_UID_900133": {
+                    "ttl": 3611,
+                    "length": 6,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                },
+                "LCUTS_UID_900216": {
+                    "ttl": 3601,
+                    "length": 6,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {
+                "LCUTS_UID_900133": 0.00020302507359658918,
+                "LCUTS_UID_900216": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "wondershare.com",
+                "recoverit.wondershare.com",
+                "www.gunsinternational.com"
+            ]
+        },
+        {
+            "rule": "linkconnector\\.com\\/tu\\.php",
+            "cookies": 0.000305,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "942fa519ebb6234f59c3d8c8c66c6b2671b69364c1c31a6788f722e4baca9a94"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "srcSite": 0.00020302507359658918,
+                "_vwo_uuid": 0.00010151253679829459,
+                "IR_gbd": 0.00020302507359658918,
+                "_ga": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "wondershare.com",
+                "recoverit.wondershare.com",
+                "www.gunsinternational.com"
+            ]
+        },
+        {
+            "rule": "linkconnector\\.com\\/js\\/uts_uid\\.php",
+            "cookies": 0.000305,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "942fa519ebb6234f59c3d8c8c66c6b2671b69364c1c31a6788f722e4baca9a94"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LCUTS_UID_900133": 0.00020302507359658918,
+                "LCUTS_UID_900216": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "wondershare.com",
+                "recoverit.wondershare.com",
+                "www.gunsinternational.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000305,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Image": 6
+    },
+    "nameservers": [
+        "edna.ns.cloudflare.com",
+        "sri.ns.cloudflare.com"
+    ]
+}

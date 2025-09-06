@@ -1,0 +1,97 @@
+[
+  {
+    "id": 100000,
+    "priority": 1,
+    "condition": {
+      "requestDomains": [
+        "googleapis.com"
+      ],
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "script"
+      ]
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/src/stubs/gtm.js"
+      }
+    }
+  },
+  {
+    "id": 100001,
+    "priority": 1,
+    "condition": {
+      "requestDomains": [
+        "googleapis.com"
+      ],
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "image"
+      ]
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
+    }
+  },
+  {
+    "id": 100002,
+    "priority": 1,
+    "condition": {
+      "requestDomains": [
+        "googleapis.com"
+      ],
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "xmlhttprequest"
+      ]
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
+    }
+  },
+  {
+    "id": 100003,
+    "priority": 1,
+    "condition": {
+      "requestDomains": [
+        "googleapis.com"
+      ],
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "fetch"
+      ]
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
+    }
+  },
+  {
+    "id": 100004,
+    "priority": 1,
+    "condition": {
+      "requestDomains": [
+        "googleapis.com"
+      ],
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "ping"
+      ]
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
+    }
+  }
+]

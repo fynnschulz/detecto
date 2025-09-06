@@ -1,0 +1,243 @@
+{
+    "domain": "costco.com.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "ecom-api",
+        "search",
+        "geocodeservice"
+    ],
+    "cnames": [
+        {
+            "original": "ecom-api.costco.com",
+            "resolved": "ecom-api.costco.com.edgekey.net"
+        },
+        {
+            "original": "geocodeservice.costco.com",
+            "resolved": "geocodeservice.costco.com.edgekey.net"
+        },
+        {
+            "original": "search.costco.com",
+            "resolved": "search.costco.com.edgekey.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "costco\\.com\\.edgekey\\.net\\/ebusiness\\/product\\/v1\\/products\\/graphql",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ecom-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "ecom-api.costco.com",
+                    "resolved": "ecom-api.costco.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "d4840141f4f85b490f14c5772489f8638cdab591c2cb60be85b985f2e800c2d6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "costco.com",
+                "www.costco.com"
+            ]
+        },
+        {
+            "rule": "costco\\.com\\.edgekey\\.net\\/warehouseLocatorMobile\\/v1\\/warehouses\\.json",
+            "cookies": 0.000305,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ecom-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [
+                {
+                    "original": "ecom-api.costco.com",
+                    "resolved": "ecom-api.costco.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "40192e04634ceb2a2ab60ee9203dc8c6c698aa2875f3c1859ef5013bd273430b",
+                "15607fe93d8fb6466d89b157d1639b828fa88a6484470283814c2832d208c98c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "costco.com",
+                "www.costco.com",
+                "www.costco.ca"
+            ]
+        },
+        {
+            "rule": "costco\\.com\\.edgekey\\.net\\/api\\/apps\\/www_costco_com\\/query\\/www_costco_com_megamenu",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "search.costco.com",
+                    "resolved": "search.costco.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "costco.com",
+                "www.costco.com"
+            ]
+        },
+        {
+            "rule": "costco\\.com\\.edgekey\\.net\\/api\\/apps\\/www_costco_com\\/query\\/www_costco_com_megamenu",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "search.costco.com",
+                    "resolved": "search.costco.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "ec41e681426ecdeed16ec1e5d4e4086efedbd09fadc5c0336fd81fa7b37562ba"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "costco.com",
+                "www.costco.com"
+            ]
+        },
+        {
+            "rule": "costco\\.com\\.edgekey\\.net\\/Locations",
+            "cookies": 0.000305,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geocodeservice"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [
+                {
+                    "original": "geocodeservice.costco.com",
+                    "resolved": "geocodeservice.costco.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "8647edc882ee2f9bb430c13a757a08e788109968d212b8e24a49e90e06c7d1b9",
+                "d2864c9dcdee6e5c198becd029e09c758697b60b262b37dcef07ddb192144c7d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "costco.com",
+                "www.costco.com",
+                "www.costco.ca"
+            ]
+        },
+        {
+            "rule": "costco\\.com\\.edgekey\\.net\\/ebusiness\\/inventory\\/v1\\/location\\/distributioncenters",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ecom-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "ecom-api.costco.com",
+                    "resolved": "ecom-api.costco.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "invCheckPostalCode": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "costco.com",
+                "www.costco.ca"
+            ]
+        },
+        {
+            "rule": "costco\\.com\\.edgekey\\.net\\/ebusiness\\/inventory\\/v1\\/location\\/distributioncenters",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ecom-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "ecom-api.costco.com",
+                    "resolved": "ecom-api.costco.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "c0c0a8d84976edca4070b8fca6576871def2d29b76ffd493be3f40ca47555ebb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "invCheckPostalCode": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "costco.com",
+                "www.costco.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "transcend-cdn.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 12,
+        "Preflight": 4
+    },
+    "nameservers": []
+}

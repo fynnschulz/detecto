@@ -1,0 +1,180 @@
+{
+    "domain": "friendlyanalytics.ch",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.00111,
+    "sites": 11,
+    "subdomains": [
+        "burgenstock",
+        "app",
+        "wemakeit",
+        "energieschweiz",
+        "stobag",
+        "switch"
+    ],
+    "cnames": [
+        {
+            "original": "data.energieschweiz.ch",
+            "resolved": "energieschweiz.friendlyanalytics.ch"
+        },
+        {
+            "original": "insights.stobag.com",
+            "resolved": "stobag.friendlyanalytics.ch"
+        },
+        {
+            "original": "insights.wemakeit.com",
+            "resolved": "wemakeit.friendlyanalytics.ch"
+        },
+        {
+            "original": "tracker.switch.ch",
+            "resolved": "switch.friendlyanalytics.ch"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "friendlyanalytics\\.ch\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burgenstock",
+                "app",
+                "wemakeit",
+                "energieschweiz",
+                "stobag",
+                "switch"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.001,
+            "cnames": [
+                {
+                    "original": "insights.wemakeit.com",
+                    "resolved": "wemakeit.friendlyanalytics.ch"
+                },
+                {
+                    "original": "data.energieschweiz.ch",
+                    "resolved": "energieschweiz.friendlyanalytics.ch"
+                },
+                {
+                    "original": "insights.stobag.com",
+                    "resolved": "stobag.friendlyanalytics.ch"
+                },
+                {
+                    "original": "tracker.switch.ch",
+                    "resolved": "switch.friendlyanalytics.ch"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burgenstockresort.com",
+                "car-tours.ch",
+                "spitalzollikerberg.ch",
+                "wemakeit.com",
+                "www.caisseavsvaud.ch",
+                "www.energieschweiz.ch",
+                "www.konsumentenschutz.ch",
+                "www.stobag.com",
+                "www.sva-aargau.ch",
+                "www.switch.ch"
+            ]
+        },
+        {
+            "rule": "friendlyanalytics\\.ch\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "e2d4e9817b90dcee173df577aea30465359d771c6a00c5342c5c3787cbbe15e4",
+                "11de0d6c30db361db5f0455fa0e795a164524082bfa7449b8d778fab3da04d3a",
+                "575a213bb522bec604ce324f2f4fb218bc6deca938addd233645f327e6768abd",
+                "252976e0c3d0cd843ec56f31bbec2aff40866e8fba8d5b6d14cef21616d79791",
+                "59fce2c8ae63148dee051d30d7d1ad90aee061b51703f71053b562db542d4eae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "car-tours.ch",
+                "spitalzollikerberg.ch",
+                "www.akbern.ch",
+                "www.caisseavsvaud.ch",
+                "www.konsumentenschutz.ch",
+                "www.sva-aargau.ch"
+            ]
+        },
+        {
+            "rule": "friendlyanalytics\\.ch\\/matomo\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "app",
+                "switch"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie getter": 1,
+                "window.name": 1,
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1,
+                "Navigator.prototype.mimeTypes": 1,
+                "Navigator.prototype.javaEnabled": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "tracker.switch.ch",
+                    "resolved": "switch.friendlyanalytics.ch"
+                }
+            ],
+            "responseHashes": [
+                "a58243db649589e234c0ae0cac82000e337bdaefe4e6a53d865c9d6acb99b281"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "konsumentenschutz.ch",
+                "www.switch.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Ping": 10,
+        "Script": 8
+    },
+    "nameservers": [
+        "elaine.ns.cloudflare.com",
+        "art.ns.cloudflare.com"
+    ]
+}

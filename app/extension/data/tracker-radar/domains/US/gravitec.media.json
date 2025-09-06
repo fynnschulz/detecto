@@ -1,0 +1,140 @@
+{
+    "domain": "gravitec.media",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000547,
+    "sites": 80,
+    "subdomains": [
+        "cdn",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "gravitec\\.media\\/track\\.min\\.js",
+            "cookies": 0.000438,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 64,
+                "Date.prototype.getTime": 64,
+                "Document.cookie setter": 64
+            },
+            "sites": 65,
+            "prevalence": 0.000445,
+            "cnames": [],
+            "responseHashes": [
+                "051d72fee35a1656da7f68a12fce47e0b2a05a77b10feba942f25458955d8487"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "GN_USER_ID_KEY": {
+                    "ttl": 63072006,
+                    "length": 36,
+                    "prevalence": 0.00043781639075112877,
+                    "uniqueness": 1
+                },
+                "GN_SESSION_ID_KEY": {
+                    "ttl": 1806,
+                    "length": 36,
+                    "prevalence": 0.00043781639075112877,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.articulo14.es",
+                "freemasonscommunity.life",
+                "www.indiaglitz.com",
+                "www.rpgstash.com",
+                "www.national-geographic.pl",
+                "cruisefever.net",
+                "www.meteored.cl",
+                "mentalmars.com",
+                "www.bolsamania.com",
+                "www.tameteo.com",
+                "theguyshack.com",
+                "www.vanguardia.com",
+                "www.canonrumors.com",
+                "impactful.ninja",
+                "www.mojegotowanie.pl",
+                "bighomeprojects.com",
+                "azscore.com",
+                "www.tiempo.com",
+                "www.yourweather.co.uk",
+                "www.brainzilla.com"
+            ]
+        },
+        {
+            "rule": "gravitec\\.media\\/api\\/stats\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 64,
+            "prevalence": 0.000438,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "GN_USER_ID_KEY": 0.00043781639075112877,
+                "GN_SESSION_ID_KEY": 0.00043781639075112877,
+                "_li_dcdm_c": 0.000027363524421945548,
+                "lotame_domain_check": 0.000047886167738404704
+            },
+            "exampleSites": [
+                "www.lyreka.com",
+                "www.theweather.com",
+                "www.ecranlarge.com",
+                "gordonua.com",
+                "www.tameteo.com",
+                "www.articulo14.es",
+                "inspiracje.polki.pl",
+                "brickset.com",
+                "www.prensalibre.com",
+                "www.meteored.cl",
+                "www.yourweather.co.uk",
+                "www.bolsamania.com",
+                "thealabamabaptist.org",
+                "www.laprensagrafica.com",
+                "impactful.ninja",
+                "www.pagina12.com.ar",
+                "www.elle.pl",
+                "www.estadiodeportivo.com",
+                "www.algerie360.com",
+                "wizaz.pl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000534,
+    "topInitiators": [
+        {
+            "domain": "gravitec.net",
+            "prevalence": 0.8526315789473684
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.14736842105263157
+        }
+    ],
+    "types": {
+        "Script": 65,
+        "Fetch": 64
+    },
+    "nameservers": [
+        "chan.ns.cloudflare.com",
+        "thomas.ns.cloudflare.com"
+    ]
+}

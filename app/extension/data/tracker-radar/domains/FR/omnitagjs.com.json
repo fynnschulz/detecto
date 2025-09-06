@@ -1,0 +1,334 @@
+{
+    "domain": "omnitagjs.com",
+    "owner": {
+        "name": "Adyoulike",
+        "displayName": "Adyoulike",
+        "privacyPolicy": "https://www.adyoulike.com/privacy_policy.php",
+        "url": "http://adyoulike.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00252,
+    "sites": 25,
+    "subdomains": [
+        "visitor",
+        "hb-api",
+        "fo-api",
+        "fo-static",
+        "tracking.europe-west9.gcp",
+        "visitor-gen01",
+        "visitor-betweenx",
+        "visitor-missena",
+        "fo-ssp.europe-west9.gcp"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "omnitagjs\\.com\\/visitor\\/isync",
+            "cookies": 0.00151,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitor"
+            ],
+            "apis": {},
+            "sites": 17,
+            "prevalence": 0.00172,
+            "cnames": [],
+            "responseHashes": [
+                "863b0e04b9e8af02d763cb98563ca8d9f80c6b99a3ec2eb6395db229bc3f8ba9",
+                "5623f5bac85e27fc1e2e2f779cda23ec0a3038d745c137c6e2dae1bf743dcb4f",
+                "e5ca013ac394b8eee29040face45b7eccdf38aaf0a02f7440434f678a5eacc21"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anniversaire-celebrite.com",
+                "hardwaretester.com",
+                "metabattle.com",
+                "ucngame.com",
+                "wh40k-fr.lexicanum.com",
+                "www.atlasobscura.com",
+                "www.dofusbook.net",
+                "www.emugen.net",
+                "www.haaretz.com",
+                "www.hardreset.info",
+                "www.iplocation.net",
+                "www.lesinrocks.com",
+                "www.marmitedumonde.com",
+                "www.nova.fr",
+                "www.pythontutorial.net",
+                "www.systemrequirementslab.com",
+                "www.topcpu.net"
+            ]
+        },
+        {
+            "rule": "omnitagjs\\.com\\/hb-api\\/prebid\\/v1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hb-api"
+            ],
+            "apis": {},
+            "sites": 13,
+            "prevalence": 0.00131,
+            "cnames": [],
+            "responseHashes": [
+                "c83c3566ad2efb445b347c8a5ed883bd8e68ac61fcafe8e294a9c733c31a7eda",
+                "ce04600806853c8c46173b11ae66fc85eba6bf3ae98af41d1b5b67575602cfdb",
+                "442cfe9407e05bc2d0676bae6cf77697f3e877a660e7cc9120022e085649e275",
+                "3270589b2c98fcfed7efcf06025f14d3a90963a911a14eae54434be1228516db",
+                "8245ab5e7ab8d7d83066c09274aac630083abdca4122d0fabf2dbe50136e3d27",
+                "33c7d9f9f21ea4e57f63fd5d691b5dcf71635894e7e2981f204caa4c98e19d58",
+                "53de664034e36a6ed3285f248f1335941dd7f1357937e86566d538cf7b9fb77a",
+                "6b5ba91b4175345ac447301bf0440bba39c2614e34bedd73d23f27fb744d9187",
+                "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+                "858209b891cb40923749bd7fbc7b8ad1aedbe27fdefd23e7e78d4976302d242e",
+                "d3603dbff363b6b50a96a58b8272f2a055cd5d645e725e0077a8ee5866606d27",
+                "a58ac836cd2ca2c8e9131122dd23aee2acd3a5fcd4fce6fc236af7e0132a7be9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rtl.fr",
+                "astro.rtl.fr",
+                "hardwaretester.com",
+                "metabattle.com",
+                "ucngame.com",
+                "wh40k-fr.lexicanum.com",
+                "www.atlasobscura.com",
+                "www.dofusbook.net",
+                "www.haaretz.com",
+                "www.hardreset.info",
+                "www.iplocation.net",
+                "www.pythontutorial.net",
+                "www.systemrequirementslab.com"
+            ]
+        },
+        {
+            "rule": "omnitagjs\\.com\\/fo-api\\/ot\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fo-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "3526eecd46e5ceea586c4b43e37bedf0a956a27e15fe20775a3ec85ab32e9c6f",
+                "db91917f8cac26310d3a01cff79e4d3179a3851d8033c463155153546937ea88"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dromadaire.com",
+                "www.footmarseille.com",
+                "www.premiere.fr"
+            ]
+        },
+        {
+            "rule": "omnitagjs\\.com\\/fo-static\\/ot_multi_template\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "fo-static"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7ddb2c0bd97c62946a20e88e2b9ab4c7377094adb0908117f67207b586c28b5d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dromadaire.com",
+                "www.footmarseille.com"
+            ]
+        },
+        {
+            "rule": "omnitagjs\\.com\\/tracking\\/pixel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking.europe-west9.gcp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "b79f422fe396f004168faae4424b618ee2024c434c5f78b341c9da42c04db1c5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dromadaire.com",
+                "www.footmarseille.com",
+                "www.premiere.fr"
+            ]
+        },
+        {
+            "rule": "omnitagjs\\.com\\/visitor\\/bsync",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitor-gen01",
+                "visitor-betweenx"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faitsdivers.org",
+                "www.recettesduchef.fr",
+                "www.sitedesmarques.com"
+            ]
+        },
+        {
+            "rule": "omnitagjs\\.com\\/visitor\\/yoururlencoded",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitor-gen01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faitsdivers.org",
+                "www.recettesduchef.fr"
+            ]
+        },
+        {
+            "rule": "omnitagjs\\.com\\/visitor\\/bsync",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitor-missena",
+                "visitor-gen01"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marmitedumonde.com",
+                "www.salaire-brut-en-net.fr",
+                "www.sitedesmarques.com"
+            ]
+        },
+        {
+            "rule": "omnitagjs\\.com\\/fo-ssp\\/marketplace",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fo-ssp.europe-west9.gcp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "218b70bea6b6d6425c1efdbe94dfe848031bb5fd7878dfb84bf82f7cc09f904a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "premiere.fr",
+                "www.premiere.fr"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising"
+    ],
+    "performance": {},
+    "cookies": 0.00192,
+    "topInitiators": [
+        {
+            "domain": "script.ac",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "sparteo.com",
+            "prevalence": 0.10416666666666667
+        },
+        {
+            "domain": "vntsm.com",
+            "prevalence": 0.10416666666666667
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.08333333333333333
+        },
+        {
+            "domain": "moneytadz.com",
+            "prevalence": 0.08333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.08333333333333333
+        },
+        {
+            "domain": "adpushup.com",
+            "prevalence": 0.08333333333333333
+        },
+        {
+            "domain": "m6tech.net",
+            "prevalence": 0.0625
+        },
+        {
+            "domain": "valuad.cloud",
+            "prevalence": 0.041666666666666664
+        },
+        {
+            "domain": "buysellads.net",
+            "prevalence": 0.041666666666666664
+        }
+    ],
+    "types": {
+        "Document": 20,
+        "Fetch": 13,
+        "Script": 5,
+        "Image": 8,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-1215.awsdns-23.org",
+        "ns-1878.awsdns-42.co.uk",
+        "ns-342.awsdns-42.com",
+        "ns-874.awsdns-45.net"
+    ]
+}

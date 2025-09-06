@@ -1,0 +1,211 @@
+{
+    "domain": "gcprivacy.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00181,
+    "sites": 18,
+    "subdomains": [
+        "p",
+        "p2",
+        "analytics"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "gcprivacy\\.com\\/t\\/gcid_s\\.min\\.js",
+            "cookies": 0.00171,
+            "fingerprinting": 1,
+            "subdomains": [
+                "p"
+            ],
+            "apis": {
+                "window.localStorage": 17,
+                "Document.cookie getter": 17,
+                "Date.prototype.getTime": 17,
+                "Document.cookie setter": 17
+            },
+            "sites": 17,
+            "prevalence": 0.00171,
+            "cnames": [],
+            "responseHashes": [
+                "c2534582054f375db85432dc76f08aecd4a20f3d792dbcc8ddfffaa3d4e7897d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "gc_session_id": {
+                    "ttl": 3461,
+                    "length": 22,
+                    "prevalence": 0.001710950080515298,
+                    "uniqueness": 1
+                },
+                "gcid_first": {
+                    "ttl": 7776006,
+                    "length": 36,
+                    "prevalence": 0.001710950080515298,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "attackofthefanboy.com",
+                "progameguides.com",
+                "primagames.com",
+                "twinfinite.net",
+                "www.atlasobscura.com",
+                "www.conversion-metric.org",
+                "www.destructoid.com",
+                "www.gamepur.com",
+                "www.gameskinny.com",
+                "www.gbmb.org",
+                "www.jpost.com",
+                "www.mentalfloss.com",
+                "www.pythontutorial.net",
+                "www.si.com",
+                "www.sqlitetutorial.net",
+                "www.travelgay.com",
+                "www.w3docs.com"
+            ]
+        },
+        {
+            "rule": "gcprivacy\\.com\\/v4\\/sync",
+            "cookies": 0.00181,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p2"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.00181,
+            "cnames": [],
+            "responseHashes": [
+                "926ef59bf7d52a8465be977be5a1e2922a1ba11c535ca845d8bfcc05dfd78baa",
+                "384f325e2283d3b71f8927a5b1c68e9b6a6e30bcf588f8509966bb71d360da1d",
+                "27a243b0251c2cc231989b6911e68866f699aa63942684fab6f33962c1a8de7d",
+                "ebba7a0052cf84ec27c0f41110e1be7dcc32b1b1dc169b745ca3033fc16be9ae",
+                "7461569902a2e905daa6afc2cc543ca5a3b291fe9e20a24eb0ed62f8c8358cd6",
+                "f5a42ceb64fdc7affaa5cc5d876627b62abd2ca0890fb4b01f26f2987a4fc2ff",
+                "1adcac6fae773167a08e176fe80d0ce3706d8307df73bf909bc56e728c51a31c",
+                "904b1e3681bcdf1a6bec0984ccbb75fdd055d902d7b4a68eec4882819597b6fc",
+                "c5eced98a5b6e168a6841b1376f2ac5e88bdd965bc7d5ec41e72a3b90461ade2",
+                "cbbb08ca8677804550bf3aa1a1220b895d1d8469a50dcee0bf4dd9e1507b1e4b",
+                "3804b89b7b8bb7b8ab874da5f198b9a5f76faceebec11375f9c603fa0ea9f251",
+                "239a3333d2bfe2473a93647807006ccc6fda18aae793b51437dc9d0f91174338",
+                "08f376ea6510ceb0047cc5ae249947cc261892d99371afe04d1b383b6071424c",
+                "2d76647b86a9780abf6f016803054d9dbbd079fc9874e623288b17fab4984881",
+                "df92a7c8abe39020848b5d4b2f9be818295d0311d8f96f62d15b369f53b9a520",
+                "3695bfc3ca6ad1ece458bf7f34547c8c932a52316cacd99901cb581b32c121fa",
+                "787c64942bb2556981b273317d4d68b5681cb37cc287daf5b544e50dbcb15f3c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "attackofthefanboy.com",
+                "progameguides.com",
+                "primagames.com",
+                "twinfinite.net",
+                "www.atlasobscura.com",
+                "www.conversion-metric.org",
+                "www.destructoid.com",
+                "www.gamepur.com",
+                "www.gameskinny.com",
+                "www.gbmb.org",
+                "www.jpost.com",
+                "www.mentalfloss.com",
+                "www.pythontutorial.net",
+                "www.si.com",
+                "www.sportskeeda.com",
+                "www.sqlitetutorial.net",
+                "www.travelgay.com",
+                "www.w3docs.com"
+            ]
+        },
+        {
+            "rule": "gcprivacy\\.com\\/v3\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "gcid_first": 0.00030193236714975844
+            },
+            "exampleSites": [
+                "conversion-metric.org",
+                "www.conversion-metric.org",
+                "www.sqlitetutorial.net"
+            ]
+        },
+        {
+            "rule": "gcprivacy\\.com\\/v3\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a86d033791843a930ee7479d9c1de8e2b2a500d0aa1a58c03156e7ce2e811df2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "gcid_first": 0.00030193236714975844
+            },
+            "exampleSites": [
+                "conversion-metric.org",
+                "www.conversion-metric.org",
+                "www.sqlitetutorial.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00181,
+    "topInitiators": [
+        {
+            "domain": "adapex.io",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "mediatradecraft.com",
+            "prevalence": 0.2916666666666667
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "increaserev.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.08333333333333333
+        }
+    ],
+    "types": {
+        "Script": 17,
+        "XHR": 21,
+        "Preflight": 3
+    },
+    "nameservers": [
+        "ns-828.awsdns-39.net",
+        "ns-409.awsdns-51.com",
+        "ns-1134.awsdns-13.org",
+        "ns-1818.awsdns-35.co.uk"
+    ]
+}

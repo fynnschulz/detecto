@@ -1,0 +1,98 @@
+{
+    "domain": "meteofrance.com",
+    "owner": {
+        "name": "Meteo France",
+        "displayName": "Meteo France"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "rwg"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "meteofrance\\.com\\/wsft\\/v3\\/warning\\/currentphenomenons",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rwg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tourisme-occitanie.com",
+                "www.tourisme-occitanie.com"
+            ]
+        },
+        {
+            "rule": "meteofrance\\.com\\/wsft\\/v3\\/warning\\/currentphenomenons",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rwg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "73e5ecca1e9e38a9d6e12fa550e7b56fc1b1af092cc3afd93b1b7621f1422baa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tourisme-occitanie.com",
+                "www.tourisme-occitanie.com"
+            ]
+        },
+        {
+            "rule": "meteofrance\\.com\\/modules\\/custom\\/mf_tools_common_theme_public\\/svg\\/weather\\/i0j\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "975b41bcc1e4dc0050710d64be8b343ad3e7e006902b514b90aa451462bec479"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tourisme-occitanie.com",
+                "www.tourisme-occitanie.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 2,
+        "XHR": 4
+    },
+    "nameservers": [
+        "nscf1.meteo.fr",
+        "nscf2.meteo.fr"
+    ]
+}

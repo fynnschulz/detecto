@@ -1,0 +1,173 @@
+{
+    "domain": "notifpush.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000609,
+    "sites": 6,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "notifpush\\.com\\/scripts\\/nadz-sdk\\.js",
+            "cookies": 0.000508,
+            "fingerprinting": 2,
+            "subdomains": [],
+            "apis": {
+                "Document.cookie getter": 5,
+                "Notification.permission": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.platform": 5,
+                "Document.cookie setter": 5,
+                "window.indexedDB": 5,
+                "Date.prototype.getTime": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "7dbfba9de1383cd821c825203ea7faa2f323866b381307b6d81f4829df019ddf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "nadz_dailyVisits": {
+                    "ttl": 122902,
+                    "length": 1,
+                    "prevalence": 0.000507562683991473,
+                    "uniqueness": 0.2
+                },
+                "SA": {
+                    "ttl": 86408,
+                    "length": 1,
+                    "prevalence": 0.000507562683991473,
+                    "uniqueness": 0.2
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "operationdisclosureofficial.com",
+                "www.futura-sciences.com",
+                "www.paroles.net",
+                "www.pressesante.com",
+                "www.volcanodiscovery.com"
+            ]
+        },
+        {
+            "rule": "notifpush\\.com\\/serviceworker\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [
+                "22ca175e96a4e9f8f0069b6da94c3b9cb8d958f01cb4c0767628b6fe3c3d71f5"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "operationdisclosureofficial.com",
+                "www.futura-sciences.com",
+                "www.marieclaire.fr",
+                "www.paroles.net",
+                "www.pressesante.com",
+                "www.volcanodiscovery.com"
+            ]
+        },
+        {
+            "rule": "notifpush\\.com\\/templates\\/templateoptinboxperso\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.matchMedia(\"prefers-color-scheme\")": 5,
+                "Navigator.prototype.appName": 5,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "80d23760c9d1a812405cce7cd06065209fe53a9cbb0ab5358a9f328f493077d6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "operationdisclosureofficial.com",
+                "www.futura-sciences.com",
+                "www.paroles.net",
+                "www.pressesante.com",
+                "www.volcanodiscovery.com"
+            ]
+        },
+        {
+            "rule": "notifpush\\.com\\/scripts\\/wpn2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Notification.permission": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "6bbee5302a9a0fa953ffa9bb2daf0e647a052c7036220a8d4eb8fc2465e89d0b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "operationdisclosureofficial.com",
+                "www.futura-sciences.com",
+                "www.paroles.net",
+                "www.pressesante.com",
+                "www.volcanodiscovery.com"
+            ]
+        },
+        {
+            "rule": "notifpush\\.com\\/script_parameters\\/p_9248696c97e899b3\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "b28c6cd29039a82a7a29b472328fa75876299313743e6b39b0e14af72e5b1c68"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "futura-sciences.com",
+                "www.futura-sciences.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000508,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 15,
+        "Other": 6,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "bob.ns.cloudflare.com",
+        "melinda.ns.cloudflare.com"
+    ]
+}

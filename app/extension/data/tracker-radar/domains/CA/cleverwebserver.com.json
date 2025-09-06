@@ -1,0 +1,183 @@
+{
+    "domain": "cleverwebserver.com",
+    "owner": {
+        "name": "Clever Advertising",
+        "displayName": "Clever Advertising"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000914,
+    "sites": 9,
+    "subdomains": [
+        "ui",
+        "call",
+        "scripts",
+        "assets"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "cleverwebserver\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ui"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000711,
+            "cnames": [],
+            "responseHashes": [
+                "49cf734db1b7c1bb175aa958da168f2950e9a55e26a2b1f2f746e9a9661746ad",
+                "41aa22e30e932f649312fb3f11924eaa710382a4268570e39995937b0ca5a43a",
+                "4205b7b06e383952e3e41feb49993b0e4884bb0c41f21ed46e9b676f0590aa12",
+                "571ca9c01f51b149666b87428791bc595d70b98d95c075e228f8f3217e53dada",
+                "cf1cf54f914f9ed99da972d8f2c99d2cb9f68651d6ff31af218bd4261d8f83f0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.online",
+                "primagames.com",
+                "www.gsmarena.com",
+                "www.omniglot.com",
+                "www.stocktrades.ca",
+                "www.themarysue.com",
+                "www.usedvictoria.com"
+            ]
+        },
+        {
+            "rule": "cleverwebserver\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "call"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [
+                "25b4ecfd3a740f29d76fe930a4cec9d41afa0cfd2bafa70ca4051bd3d5395d74"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.online",
+                "primagames.com",
+                "www.gsmarena.com",
+                "www.omniglot.com",
+                "www.stocktrades.ca",
+                "www.themarysue.com"
+            ]
+        },
+        {
+            "rule": "cleverwebserver\\.com\\/1dfb15a8ef06a02090ddb11c5d0a0b5a\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.language": 2,
+                "window.innerHeight": 2,
+                "Document.cookie getter": 2,
+                "window.innerWidth": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "f914a2f609641b30ff83378999b1d7b8e9848c902eee7267b743d5949880edf9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "clever-counter-48965": {
+                    "ttl": 72027,
+                    "length": 3,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamerjournalist.com",
+                "primagames.com",
+                "wegotthiscovered.com",
+                "www.themarysue.com"
+            ]
+        },
+        {
+            "rule": "cleverwebserver\\.com\\/Clever\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "primagames.com",
+                "www.themarysue.com"
+            ]
+        },
+        {
+            "rule": "cleverwebserver\\.com\\/Close\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "primagames.com",
+                "www.themarysue.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "script.ac",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2777777777777778
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.05555555555555555
+        }
+    ],
+    "types": {
+        "Script": 11,
+        "Image": 10
+    },
+    "nameservers": [
+        "skip.ns.cloudflare.com",
+        "raphaela.ns.cloudflare.com"
+    ]
+}

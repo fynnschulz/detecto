@@ -1,0 +1,454 @@
+{
+    "domain": "infolinks.com",
+    "owner": {
+        "name": "Infolink Media LLC",
+        "displayName": "Infolink Media"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000604,
+    "sites": 6,
+    "subdomains": [
+        "resources",
+        "router",
+        "rt3028",
+        "rt3019",
+        "rt3039",
+        "rt3069",
+        "rt3007",
+        "rt3034"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "infolinks\\.com\\/js\\/infolinks_main\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "resources"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "Date.prototype.getTime": 6
+            },
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "7fc95536f982812d0dee4a6c7e408014f2df96b3237811b34d0ef5965664eab8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.laweekly.com",
+                "www.manualowl.com",
+                "www.manualshelf.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/js\\/2003\\.005-4\\.011\\/ice\\.js",
+            "cookies": 0.000604,
+            "fingerprinting": 2,
+            "subdomains": [
+                "resources"
+            ],
+            "apis": {
+                "Document.cookie getter": 6,
+                "Document.cookie setter": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Date.prototype.getTime": 6,
+                "window.localStorage": 6,
+                "Navigator.prototype.plugins": 6,
+                "Date.prototype.getTimezoneOffset": 6,
+                "window.sessionStorage": 6,
+                "window.innerWidth": 5,
+                "Navigator.prototype.cookieEnabled": 6,
+                "Screen.prototype.colorDepth": 6,
+                "Screen.prototype.availWidth": 6,
+                "Screen.prototype.availHeight": 6,
+                "NavigatorUAData.prototype.getHighEntropyValues": 6,
+                "window.innerHeight": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "4c6b12207cc90416b68df6b1ac832afa4ea21c2fb95641cd1580b36a4bec607f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "logglytrackingsession": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.0006038647342995169,
+                    "uniqueness": 1
+                },
+                "gCStest": {
+                    "ttl": -808693821,
+                    "length": 8,
+                    "prevalence": 0.0006038647342995169,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.laweekly.com",
+                "www.manualowl.com",
+                "www.manualshelf.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/usync\\/manage",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "router"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.laweekly.com",
+                "www.manualowl.com",
+                "www.manualshelf.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/usync\\/lcmanage",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "router"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.laweekly.com",
+                "www.manualowl.com",
+                "www.manualshelf.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/gsd",
+            "cookies": 0.000604,
+            "fingerprinting": 0,
+            "subdomains": [
+                "router"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "70d660eba9965dddfdcfd4eef737b713d117f60ce7b191a7130af9ee7f63a70b",
+                "96537bf82b47343d50af8c4664903397e2d00f113add97601b0899e61232f1da",
+                "03cd5eba5d373f52d7399dd8e2809f7c69cf9965ab4fe691c5241ac33b425bf2",
+                "e0be847c6a86a04f27da60ab89248ecc8d366c5627465539b86ec90fd2cfead8",
+                "607335fccdca2061303f4cb9c46fba96ee557e5140634c4b18aa0545841d0235"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.laweekly.com",
+                "www.manualowl.com",
+                "www.manualshelf.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/action\\/doq\\.htm",
+            "cookies": 0.000503,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt3028",
+                "rt3019",
+                "rt3039",
+                "rt3069",
+                "rt3007",
+                "rt3034"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "d2a2e26827715061dd217133c081774210b2bfabb431a4b94f824ba893ef9050",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "2c6745b7725cd6feb1a7ce36bf15fae75752886f835dc1ff4da632e004759bf8",
+                "f6c36f9b10ee5aa64bafa609fd806335d42a7534f7deebbc387e2a7516bd075c",
+                "f092b93407e32b57048ddb35f7dfbcd062a337cc18c1fe1fa44c1bea236daf39"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.laweekly.com",
+                "www.manualowl.com",
+                "www.manualshelf.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/js\\/2003\\.005-4\\.011\\/in_top\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "resources"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b787d2d929f4ee384640dc898a6751f3a49a38447bf878ce83f2aff82d51df0e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/js\\/2003\\.005-4\\.011\\/bubble\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "resources"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fbba9fc7ade6d9d4d782f4d656f7e412a71382f37683a9f0bda868312d00c3e8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/static\\/container-4\\.0\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "resources"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "6179f30edd3abb76d431b8d9f38c3c0eb660f75c1ae1a56b55b055409f87248a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.manualowl.com",
+                "www.manualshelf.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/action\\/getads\\.htm",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt3028",
+                "rt3019",
+                "rt3069",
+                "rt3007",
+                "rt3034"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "414640412f7709175709eca7387e9b4d4dcbcb5b3f94d65c037ddb3f734d5748",
+                "0aecf72c123467b7d8c2d901e8e8195925dbfad8369d2093876f6efaca548177",
+                "255560ee88adfaa85ef3a5e3ea38b82d43d560bbbb87c7b04b9149c1f9e1b5df",
+                "e55e6d2f16f3e95c30afad4686c0aeac3dcbe82a02a45533c8069113d8c65f86"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.manualowl.com",
+                "www.manualshelf.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/action\\/adview\\.htm",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt3028",
+                "rt3019",
+                "rt3069",
+                "rt3007"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.manualowl.com",
+                "www.manualshelf.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/static\\/brands\\/TMobile_728x90\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "resources"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "53c14bca2207997153d0aec8df9d70f904193b6e889e8c0cf11a7fab82cc02df"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/action\\/dcl\\.htm",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt3028",
+                "rt3019",
+                "rt3069",
+                "rt3007"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackcitadelrpg.com",
+                "www.eng-tips.com",
+                "www.manualowl.com",
+                "www.manualshelf.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/js\\/2003\\.005-4\\.011\\/in_search\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "resources"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "13f2ed512fe46e9a71badd6bbcb437338e0487a25b83b47b710cc4ae44d65cc1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eng-tips.com",
+                "www.manualowl.com",
+                "www.manualshelf.com",
+                "www.wikifeet.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000604,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Script": 41,
+        "Document": 11,
+        "XHR": 10,
+        "Image": 2
+    },
+    "nameservers": [
+        "bob.ns.cloudflare.com",
+        "lisa.ns.cloudflare.com"
+    ]
+}

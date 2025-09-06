@@ -1,0 +1,88 @@
+{
+    "domain": "skechers.com",
+    "owner": {
+        "name": "Skechers U.S.A., Inc.",
+        "displayName": "Skechers U"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "assets",
+        "images"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "skechers\\.com\\/skccdn\\/vice_release\\/1\\.23\\.8\\.1",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8c96b3f15ddffac2a748e909fd55d1d8e88dc57b7bf61a8e1f6b84bbf25cc5d1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skechers.co.uk",
+                "www.skechers.de"
+            ]
+        },
+        {
+            "rule": "skechers\\.com\\/image",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "c9e0c5f07145d790983012b38abb63ae8a6daa17d5df83c2d3ac2713f63c1963",
+                "a196a72dc07528071eb614a62291cfcf9f6e5fb641ee2e5bafa6affbea3b3e84"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skechers.co.uk",
+                "www.skechers.co.uk",
+                "www.skechers.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Image": 3
+    },
+    "nameservers": [
+        "alan.ns.cloudflare.com",
+        "carol.ns.cloudflare.com"
+    ]
+}

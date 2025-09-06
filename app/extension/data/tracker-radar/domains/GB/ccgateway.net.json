@@ -1,0 +1,368 @@
+{
+    "domain": "ccgateway.net",
+    "owner": {
+        "name": "Clicksco FZ",
+        "displayName": "Clicksco FZ"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00171,
+    "sites": 17,
+    "subdomains": [
+        "carbon-cdn",
+        "script-api",
+        "pb-rtd",
+        "privacy-location-edge",
+        "pogo",
+        "dual-targeting"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ccgateway\\.net\\/script",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "carbon-cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 9,
+                "window.localStorage": 5
+            },
+            "sites": 9,
+            "prevalence": 0.000906,
+            "cnames": [],
+            "responseHashes": [
+                "345adc763309dc80aeff233c8027e1f6f514412385fc0359e035681ea58424a2",
+                "d0f635e0babc53a8f38dd16728ca2c68417c339f74611a8351f5899dacdb0b51",
+                "b144614bc3aa02b6e313c554fc3f199bb1e57aa14db7fd25dc40dbff17fcc2eb",
+                "3eba9e324e2a0d8674dd93c8598cffd1f8974dbae65a450ed483ae1bb36d1f57",
+                "af96e1ad083129aa627506370cf050030593fb9a43802957eb47993935d77119",
+                "41ce9c02090ec05e184f74bdaa86d751b280733c419e68baa6fa7e43b28b3c72",
+                "57719d7e766d8cc6778ffb02c8f5fb91a4021ae2a03ed67abf55feeabae79734",
+                "487934989d63bd17788f730e25224289cbe475b3c0ad2cbc80692f2577615698"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "indiatimes.com",
+                "www.bustle.com",
+                "www.elitedaily.com",
+                "www.followfollow.com",
+                "www.hindustantimes.com",
+                "www.hmfckickback.co.uk",
+                "www.indiatoday.in",
+                "www.inverse.com",
+                "www.wmagazine.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/1\\/userId",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5a362c034b55fca20c744d0e39d65917504003884f3c49b0094535c2a2a7ba1a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/launcher\\/2\\/user\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a11d3b4b6f2902037c365146ff80b5bf95923f3176f1a827355e45177314d423"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/launcher\\/1\\/customevents\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "04c94ecaae50f713607dd45d40c5756d0e6a9e58c6398433ac098bc9bee89f5d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/launcher\\/6\\/api\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "880444af8f79aca9fdb01d819bb615c7d8ce8fb9327df856784f7027819de58b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/setUser",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ae5072e36a1daf15ddc62e9f7d105f39df37e3b310761c4a716f18565a826eb4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "indiatimes.com",
+                "www.hindustantimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/v1\\.0\\/realtime\\/382a96c69b",
+            "cookies": 0.000604,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pb-rtd"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "72254e602a0783726ea0b832910469e9337d31cb5252a2e91cefc4a6e726566a",
+                "4834cf37b32be1497558e36fd46a3374429f5126ba01eb28ef831114bdd1b953",
+                "5f65007f5e239082c5bb4e4379059fb5f3e177fdb361723ab2b6576084e9c73d",
+                "1bd08f7a9ed685029c4cbcb4031f9dea8f440af677e2bc8c6aa42da8924cf6b3",
+                "cf818041baf753d4f31a89da1307557fa3126d3b2a451fbf830af5a3a0c0bf4e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbcgoodfood.com",
+                "www.gardenersworld.com",
+                "www.historyextra.com",
+                "www.madeformums.com",
+                "www.olivemagazine.com",
+                "www.radiotimes.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/privacy\\/location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "privacy-location-edge"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "e7d529decf2effa45e405e83edd0d9b4b82f6ad2a1b95d59feb3874e61c0a619"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.com",
+                "www.followfollow.com",
+                "www.hmfckickback.co.uk",
+                "www.indiatoday.in",
+                "www.timeout.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/v1\\/p\\/67c7fcd8b0\\/classification",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pogo"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "09d76dd5af998ec442379a938b9cfedc9659bd9c581991d1a1f729e2015fafbd",
+                "2c22ddaaddd40c4249b7cb078bdb7a78c110d7c5bb07be29fd018bc9a686d0a6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bustle.com",
+                "www.elitedaily.com",
+                "www.inverse.com",
+                "www.wmagazine.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/v1\\/custom_taxonomy\\/p\\/67c7fcd8b0\\/rules",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pogo"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "a170db1307f0a7d95c2631589bcd2e04504d420230841abfa49548dd6faeb23e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bustle.com",
+                "www.elitedaily.com",
+                "www.inverse.com",
+                "www.wmagazine.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/dual-targeting\\/v1\\/audiences\\/67c7fcd8b0",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dual-targeting"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "a0ee773d39afb6e5d271e61339e36ac68d91ae39e3555e3e40f12481713bd945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bustle.com",
+                "www.elitedaily.com",
+                "www.inverse.com",
+                "www.wmagazine.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00101,
+    "topInitiators": [
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.72
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.16
+        },
+        {
+            "domain": "snack-projects.co.uk",
+            "prevalence": 0.08
+        },
+        {
+            "domain": "snack-media.com",
+            "prevalence": 0.04
+        }
+    ],
+    "types": {
+        "Script": 21,
+        "Fetch": 6,
+        "XHR": 17
+    },
+    "nameservers": [
+        "ns1-05.azure-dns.com",
+        "ns2-05.azure-dns.net",
+        "ns3-05.azure-dns.org",
+        "ns4-05.azure-dns.info"
+    ]
+}

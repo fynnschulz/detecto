@@ -1,0 +1,314 @@
+{
+    "domain": "usonar.jp",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000137,
+    "sites": 20,
+    "subdomains": [
+        "apisonar.go",
+        "cdn.cookie.sync",
+        "cookie.sync",
+        "apisonar-liveaccess.go",
+        "apis"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "usonar\\.jp\\/liveaccess\\/js\\/call\\.js",
+            "cookies": 0.0000342,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apisonar.go"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "Date.prototype.getTime": 5,
+                "Document.cookie setter": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "d5f7de1b632b3c77338a9f52f18823800ea9e06419952825db46f0a987325dba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "usonarid": {
+                    "ttl": 31536011,
+                    "length": 20,
+                    "prevalence": 0.000034204405527431934,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyforward.com",
+                "speedtest.gate02.ne.jp",
+                "www.buffalo.jp",
+                "www.irisohyama.co.jp",
+                "www.livable.co.jp",
+                "www.yayoi-kk.co.jp"
+            ]
+        },
+        {
+            "rule": "usonar\\.jp\\/cookie_sync\\/landscape_cookie_sync\\.js",
+            "cookies": 0.0000547,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.cookie.sync"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 9,
+                "Document.cookie getter": 8,
+                "window.localStorage": 9,
+                "Document.cookie setter": 8
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "c3f66b388febb65b3d0684dd870a756a0699d9e1f26002696a4da73f3c0c8255"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__uuidusoner": {
+                    "ttl": 63072011,
+                    "length": 36,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyforward.com",
+                "jbpress.ismedia.jp",
+                "speedtest.gate02.ne.jp",
+                "www.buffalo.jp",
+                "www.f5.com",
+                "www.irisohyama.co.jp",
+                "www.livable.co.jp",
+                "www.sanwa.co.jp",
+                "www.yayoi-kk.co.jp"
+            ]
+        },
+        {
+            "rule": "usonar\\.jp\\/v1\\/cs",
+            "cookies": 0.0000616,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cookie.sync"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "1e6216b4bb76f557f048d030bfadc693c4d0efce7d935bffc03757499d5800cb",
+                "82a89d0c2946d7989895bfb80395669e2aa25958628640eaba1b4bc609c6078f",
+                "9320e2b0498919e362a56fe3b444155ece4d7a4ba73da2513e855886e901a335",
+                "786a457741bb50d99e15d767a17d663d8fb89a2c6709b8e68266da767a9a6c5b",
+                "a54387ac9f72fc567ad0b3860f32427474b6c26be73fa266512e3bd00b246e74",
+                "75ee64dd4cdc62a7192e9ee99ab29ed0c8f3818d052ba6ed0ec3718c3bc2f6fa",
+                "e3d0d187a8554ca6553b3760cbb95c9a06b9075de5efec019e7f9543ae212ad0",
+                "4025cbd1c36b1a41363653f087825e5ed427da33bceb3daf887b3bd0a8afc268"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_gcl_au": 0.00011629497879326857,
+                "_ga": 0.0001573402654261869,
+                "_fbp": 0.00004104528663291832,
+                "__uuidusoner": 0.00006156792994937747,
+                "tlb_sid": 0.000006840881105486387,
+                "krt.vis": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "moneyforward.com",
+                "jbpress.ismedia.jp",
+                "speedtest.gate02.ne.jp",
+                "www.buffalo.jp",
+                "www.f5.com",
+                "www.irisohyama.co.jp",
+                "www.livable.co.jp",
+                "www.sanwa.co.jp",
+                "www.yayoi-kk.co.jp"
+            ]
+        },
+        {
+            "rule": "usonar\\.jp\\/liveaccess",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apisonar-liveaccess.go"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "70358b772fc9a444816f49f054eb8e785c265815592c3bb474e63eb6bf850be6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyforward.com",
+                "speedtest.gate02.ne.jp",
+                "www.buffalo.jp",
+                "www.irisohyama.co.jp",
+                "www.livable.co.jp",
+                "www.yayoi-kk.co.jp"
+            ]
+        },
+        {
+            "rule": "usonar\\.jp\\/liveaccess",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apisonar-liveaccess.go"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyforward.com",
+                "speedtest.gate02.ne.jp",
+                "www.buffalo.jp",
+                "www.irisohyama.co.jp",
+                "www.livable.co.jp",
+                "www.yayoi-kk.co.jp"
+            ]
+        },
+        {
+            "rule": "usonar\\.jp\\/live_access\\/loglyjuicer_track\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.cookie.sync"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "b321bc9876facc5b7e38a4e4510c569032e28a1498f67ebf31cab917333fe709"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biglobe.ne.jp",
+                "food.biglobe.ne.jp",
+                "hentaitokyo.com",
+                "kurashi.biglobe.ne.jp",
+                "pmall.gpoint.co.jp",
+                "vk.sportsbull.jp",
+                "www.ehonnavi.net",
+                "www.nihontsushin.com",
+                "www.osohshiki.jp",
+                "www.suruga-ya.jp"
+            ]
+        },
+        {
+            "rule": "usonar\\.jp\\/alog\\/js2\\/alog\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apis"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "fafe2c191f197571a052f5bef0507fed35606d86ae63badc859cddeeaa01ba5b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "usonarid": {
+                    "ttl": 31536007,
+                    "length": 20,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hp.com",
+                "speedtest.gate02.ne.jp",
+                "www.sanwa.co.jp"
+            ]
+        },
+        {
+            "rule": "usonar\\.jp\\/alog\\/alog\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apis"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.000013681762210972774,
+                "usonarid": 0.000034204405527431934
+            },
+            "exampleSites": [
+                "hp.com",
+                "jp.ext.hp.com",
+                "speedtest.gate02.ne.jp",
+                "www.sanwa.co.jp"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000684,
+    "topInitiators": [
+        {
+            "domain": "juicer.cc",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.28
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.28
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.04
+        }
+    ],
+    "types": {
+        "Script": 41,
+        "XHR": 6,
+        "Preflight": 6
+    },
+    "nameservers": [
+        "ns-1857.awsdns-40.co.uk",
+        "ns-49.awsdns-06.com",
+        "ns-887.awsdns-46.net",
+        "ns-1474.awsdns-56.org"
+    ]
+}

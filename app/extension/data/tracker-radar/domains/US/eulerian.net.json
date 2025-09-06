@@ -1,0 +1,111 @@
+{
+    "domain": "eulerian.net",
+    "owner": {
+        "name": "Eulerian Technologies",
+        "displayName": "Eulerian"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "bymycar-fr",
+        "idgarages.com",
+        "ioca1"
+    ],
+    "cnames": [
+        {
+            "original": "bum7.bymycar.fr",
+            "resolved": "bymycar-fr.eulerian.net"
+        },
+        {
+            "original": "idg1.idgarages.com",
+            "resolved": "idgarages.com.eulerian.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "eulerian\\.net\\/byB527\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "bymycar-fr",
+                "idgarages.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "bum7.bymycar.fr",
+                    "resolved": "bymycar-fr.eulerian.net"
+                },
+                {
+                    "original": "idg1.idgarages.com",
+                    "resolved": "idgarages.com.eulerian.net"
+                }
+            ],
+            "responseHashes": [
+                "a3d2e7c15b12b4d2c92fd42c6cfafb5c5b193b06852ba0810dd5eb2c2b9d4827"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bymycar.fr",
+                "www.idgarages.com"
+            ]
+        },
+        {
+            "rule": "eulerian\\.net\\/ea\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ioca1"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "window.localStorage": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.plugins": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "25fbd9733a0e18b2db681906c9887a3c853dc71027470ac41eb495a9e06d8804"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "peterthomasroth.com",
+                "www.peterthomasroth.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000342,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns04.eulerian.eu",
+        "ns02.eulerian.fr",
+        "ns03.eulerian.com",
+        "ns01.eulerian.net"
+    ]
+}

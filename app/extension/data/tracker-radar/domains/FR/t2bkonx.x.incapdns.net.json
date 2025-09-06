@@ -1,0 +1,91 @@
+{
+    "domain": "t2bkonx.x.incapdns.net",
+    "owner": {
+        "name": "Imperva Inc.",
+        "displayName": "Imperva"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [],
+    "cnames": [
+        {
+            "original": "api.airtransat.com",
+            "resolved": "t2bkonx.x.incapdns.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "t2bkonx\\.x\\.incapdns\\.net\\/fr-FR\\/Services\\/FlightRoutes\\/GetAirports",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.airtransat.com",
+                    "resolved": "t2bkonx.x.incapdns.net"
+                }
+            ],
+            "responseHashes": [
+                "5f7da0f2e8b49574391626c9c375526dff5b30fbcc528061dec7b1cefc1e85e8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airtransat.com",
+                "www.airtransat.com"
+            ]
+        },
+        {
+            "rule": "t2bkonx\\.x\\.incapdns\\.net\\/fr-FR\\/Services\\/Campaign\\/GetFlights",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.airtransat.com",
+                    "resolved": "t2bkonx.x.incapdns.net"
+                }
+            ],
+            "responseHashes": [
+                "c958fb564cefefeef302aa8b1d2cd6f035b6fb9e76e50d3e6b3f097fa7375bed"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airtransat.com",
+                "www.airtransat.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "noibu.com",
+            "prevalence": 0.2857142857142857
+        }
+    ],
+    "types": {
+        "XHR": 4
+    },
+    "nameservers": []
+}

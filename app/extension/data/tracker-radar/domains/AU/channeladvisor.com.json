@@ -1,0 +1,114 @@
+{
+    "domain": "channeladvisor.com",
+    "owner": {
+        "name": "CommerceHub",
+        "displayName": "CommerceHub"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000707,
+    "sites": 7,
+    "subdomains": [
+        "tracking2",
+        "t"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "channeladvisor\\.com\\/welcome_fp\\.asp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking2"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_caid": 0.0007065711113354194
+            },
+            "exampleSites": [
+                "sony.com.au",
+                "www.carbatec.com.au",
+                "www.dyson.com",
+                "www.dyson.com.au",
+                "www.harveynorman.com.au",
+                "www.radioparts.com.au",
+                "www.westernfilters.net.au"
+            ]
+        },
+        {
+            "rule": "channeladvisor\\.com\\/v2\\/12009500\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5ad8afce72ea26623d0b48fe6648042f3b6691780a649de8495b2fe39adc1a6e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_caid": {
+                    "ttl": 2592031,
+                    "length": 36,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "_cavisit": {
+                    "ttl": 3631,
+                    "length": 12,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dyson.com",
+                "www.dyson.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000707,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7272727272727273
+        },
+        {
+            "domain": "dyson.com.au",
+            "prevalence": 0.18181818181818182
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.09090909090909091
+        }
+    ],
+    "types": {
+        "Script": 9
+    },
+    "nameservers": [
+        "ns-1501.awsdns-59.org",
+        "ns-1919.awsdns-47.co.uk",
+        "ns-26.awsdns-03.com",
+        "ns-697.awsdns-23.net"
+    ]
+}

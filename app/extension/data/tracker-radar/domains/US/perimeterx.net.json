@@ -1,0 +1,514 @@
+{
+    "domain": "perimeterx.net",
+    "owner": {
+        "name": "Human Security, Inc.",
+        "displayName": "Human Security"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000677,
+    "sites": 99,
+    "subdomains": [
+        "collector-pxkdrmolsb",
+        "captcha",
+        "collector-px8fu47ke5",
+        "collector-pxdr7isq2u",
+        "collector-px58c3a4zy",
+        "collector-pxaoit9cn0",
+        "collector-pxtw9vecqb",
+        "collector-pxc3dzkfti",
+        "collector-pxywlropem",
+        "client",
+        "collector-dl82i3ui",
+        "collector-a"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "perimeterx\\.net\\/b\\/g",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-pxkdrmolsb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c33e4662d19fc3307b84337c1b3a85dd1134dcf1ea29071de84367c831e323d0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "pxcts": 0.000013681762210972774,
+                "_pxvid": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "bgov.com",
+                "pro.bloombergtax.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/PX0iiey9LM\\/captcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {
+                "Performance.prototype.memory": 1,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.languages": 2,
+                "URL.createObjectURL": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Date.prototype.getTime": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ee092142392677088baf428fc778dcef0f366985d33b1a28f4f594c0f063fddc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belk.com",
+                "www.belk.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/api\\/v1\\/collector",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-px8fu47ke5",
+                "collector-pxdr7isq2u",
+                "collector-px58c3a4zy",
+                "collector-pxaoit9cn0",
+                "collector-pxtw9vecqb",
+                "collector-pxc3dzkfti",
+                "collector-pxywlropem"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "0636870ba797f284d1d96e6bdb1025b469e7cf38ef4e6bc60b3640809198e0ef",
+                "0b4a08157919a6406752ded89afdb05cd0d0b79c370f99487b6ca5c27b5c814c",
+                "3d5a314fae9702b67a63156d45d8721170840787b07fbc3a69f19d22b606de51",
+                "c73410117673569e92d9a13bf552b7ad1cfcd3164f8c843841da7d50966b1ef1",
+                "1e570c16dfd2901ff09942b9aad6aaa7182eb6c13808327073c92a72120340a8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bonobos.com",
+                "www.7-eleven.com",
+                "www.canstarblue.com.au",
+                "www.jackinthebox.com",
+                "www.liberation.fr",
+                "www.visualcomfort.com",
+                "www.vitals.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/PXVb73hTEg\\/captcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {
+                "Performance.prototype.memory": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.languages": 2,
+                "URL.createObjectURL": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Date.prototype.getTime": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ee092142392677088baf428fc778dcef0f366985d33b1a28f4f594c0f063fddc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flyfrontier.com",
+                "www.flyfrontier.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/PXcfrcFEfA\\/main\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "speechSynthesis.__proto__.getVoices": 2,
+                "Navigator.prototype.permissions": 2,
+                "Notification.permission": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Performance.prototype.memory": 2,
+                "Navigator.prototype.storage": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Screen.prototype.colorDepth": 2,
+                "window.screenX": 2,
+                "window.screenY": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.outerWidth": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appCodeName": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.onLine": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "window.outerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "421556c477248e6ea7a161ddf43e238514203cbb62789e52b98c0fb8d76aad5d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_px3": {
+                    "ttl": 335,
+                    "length": 151,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "pxcts": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "_pxvid": {
+                    "ttl": 31536004,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "_pxttld": {
+                    "ttl": -1755303754,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "__pxvid": {
+                    "ttl": 31622405,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "walmart.com",
+                "corporate.walmart.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/api\\/v1\\/collector\\/pxPixel\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-dl82i3ui"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "c33e4662d19fc3307b84337c1b3a85dd1134dcf1ea29071de84367c831e323d0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ti.com",
+                "e2e.ti.com",
+                "www.ti.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/PX9aTjSd0n\\/captcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {
+                "Performance.prototype.memory": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.innerWidth": 3,
+                "Document.cookie getter": 3,
+                "Navigator.prototype.languages": 3,
+                "URL.createObjectURL": 3,
+                "Navigator.prototype.hardwareConcurrency": 3,
+                "Date.prototype.getTime": 3,
+                "WebGLRenderingContext.prototype.readPixels": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "16d2481354ee4e26ee563b1a4d08855b79e83f80f06f7c91664123c3c6e13fdf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "priceline.com",
+                "www.americanforcestravel.com",
+                "www.priceline.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/PX8T5aKZsq\\/captcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {
+                "Performance.prototype.memory": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.languages": 2,
+                "URL.createObjectURL": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Date.prototype.getTime": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ee092142392677088baf428fc778dcef0f366985d33b1a28f4f594c0f063fddc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pepboys.com",
+                "www.pepboys.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/PX413gkwMT\\/captcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {
+                "Performance.prototype.memory": 30,
+                "Navigator.prototype.userAgent": 33,
+                "window.innerWidth": 33,
+                "Document.cookie getter": 33,
+                "Navigator.prototype.languages": 33,
+                "URL.createObjectURL": 33,
+                "Navigator.prototype.hardwareConcurrency": 33,
+                "Date.prototype.getTime": 33,
+                "WebGLRenderingContext.prototype.readPixels": 33
+            },
+            "sites": 33,
+            "prevalence": 0.000226,
+            "cnames": [],
+            "responseHashes": [
+                "16d2481354ee4e26ee563b1a4d08855b79e83f80f06f7c91664123c3c6e13fdf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smallbusiness.chron.com",
+                "www.sfgate.com",
+                "www.lmtonline.com",
+                "www.sfchronicle.com",
+                "chron.com",
+                "www.thehour.com",
+                "www.mrt.com",
+                "www.seattlepi.com",
+                "www.myplainview.com",
+                "www.manisteenews.com",
+                "www.middletownpress.com",
+                "www.houstonchronicle.com",
+                "www.greenwichtime.com",
+                "www.ctinsider.com",
+                "www.michigansthumb.com",
+                "www.beaumontenterprise.com",
+                "www.theintelligencer.com",
+                "www.ourmidland.com",
+                "www.bigrapidsnews.com",
+                "www.chron.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/PXh1Z8j4kW\\/captcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {
+                "Performance.prototype.memory": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.languages": 2,
+                "URL.createObjectURL": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Date.prototype.getTime": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ee092142392677088baf428fc778dcef0f366985d33b1a28f4f594c0f063fddc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agweb.com",
+                "www.agweb.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/api\\/v2\\/collector\\/clientError",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-a"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "c33e4662d19fc3307b84337c1b3a85dd1134dcf1ea29071de84367c831e323d0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_pxvid": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "sallybeauty.com",
+                "www.sallybeauty.com",
+                "www.sorel.com"
+            ]
+        },
+        {
+            "rule": "perimeterx\\.net\\/PX58Asv359\\/captcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {
+                "Performance.prototype.memory": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.languages": 2,
+                "URL.createObjectURL": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Date.prototype.getTime": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "16d2481354ee4e26ee563b1a4d08855b79e83f80f06f7c91664123c3c6e13fdf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ssense.com",
+                "www.ssense.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Fraud Prevention"
+    ],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8910891089108911
+        },
+        {
+            "domain": "px-cloud.net",
+            "prevalence": 0.07920792079207921
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.019801980198019802
+        },
+        {
+            "domain": "ng2-widgets.global.ssl.fastly.net",
+            "prevalence": 0.009900990099009901
+        }
+    ],
+    "types": {
+        "XHR": 12,
+        "Script": 48,
+        "Image": 3
+    },
+    "nameservers": [
+        "ns-cloud-a1.googledomains.com",
+        "ns-cloud-a2.googledomains.com",
+        "ns-cloud-a3.googledomains.com",
+        "ns-cloud-a4.googledomains.com"
+    ]
+}

@@ -1,0 +1,97 @@
+{
+    "domain": "nunami.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000706,
+    "sites": 7,
+    "subdomains": [
+        "t",
+        "p"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "nunami\\.ai\\/recova_client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {
+                "window.localStorage": 6,
+                "window.sessionStorage": 5
+            },
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "eaf46d77ad4268178250a895b0330324106f5df5099c3d149880f359cbf540aa",
+                "a218fb2d1d7380d17bfe8e8960e5cd0ca51368fb6b8ed5713eb385050236ef7d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "conrad.de",
+                "hilfe.sueddeutsche.de",
+                "ninjakitchen.de",
+                "www.asmc.de",
+                "www.conrad.de",
+                "www.ninjakitchen.de",
+                "www.schuhcenter.de"
+            ]
+        },
+        {
+            "rule": "nunami\\.ai\\/redirect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "16154f0db6234d1296ad6e7def2472ec33ed42e2ef15dcca2bf49585c5458a03",
+                "38913a9902ba1d059af30ae2a7de4a23ec5855ad99d790b0ea2db719fb3776ca",
+                "e30b1215dd72222780a44b04f1154e5d6d0858a12af87bb24a1d16893edbb006",
+                "e36ac4150252c806a178f4e753df23f491a7ea8dd4ad6e52b285ea01f9b7bd4f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "conrad.de",
+                "ninjakitchen.de",
+                "www.conrad.de",
+                "www.ninjakitchen.de",
+                "www.schuhcenter.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "dwin1.com",
+            "prevalence": 0.5555555555555556
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.4444444444444444
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Fetch": 5
+    },
+    "nameservers": [
+        "dns1.registrar-servers.com",
+        "dns2.registrar-servers.com"
+    ]
+}
