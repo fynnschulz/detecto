@@ -211,6 +211,35 @@
   await markLearned(host, id); // { ruleId, ts } kommt aus deiner Persistenz
 }
 
+  // --- Helper für Auto-Tuning (Miss → lernen) -----------------------------
+  /**
+   * maybeLearnFromMiss(host, type)
+   * Wird genutzt, wenn der Service Worker wiederholt eine riskante 3rd‑party
+   * Anfrage ohne DNR‑Treffer sieht ("Miss"). Legt nach TTL/LRU‑Pruning eine
+   * passende Redirect‑Regel an. Gibt true zurück, wenn eine neue Regel
+   * angelegt wurde, sonst false.
+   */
+  async function maybeLearnFromMiss(host, type){
+    try {
+      if (!host) return false;
+      // Whitelist respektieren
+      const { whitelist = [] } = await chrome.storage.sync.get('whitelist');
+      if (Array.isArray(whitelist) && whitelist.includes(host)) return false;
+
+      // Wenn bereits bekannt, nur Timestamp/Typ berühren
+      if (await isAlreadyLearned(host, type)) { await touchLearned(host, type); return false; }
+
+      // Vor dem Anlegen immer aufräumen (TTL/LRU), damit wir im Limit bleiben
+      await pruneLearned();
+
+      await addRedirectRuleForHost(host, type);
+      return true;
+    } catch (e) {
+      console.warn('[Protecto][Adaptive] maybeLearnFromMiss failed for', host, e);
+      return false;
+    }
+  }
+
   // --- Haupt-Entry: ggf. neue Rule für Host anlegen -----------------------
   async function maybeLearnAndRedirectHost(host, type){
     try {
@@ -267,6 +296,7 @@
     // Lernen & Regeln
     maybeLearnAndRedirectHost,
     addRedirectRuleForHost,
+    maybeLearnFromMiss,
     pruneLearned,
     cleanupLearned,
     resetLearned,

@@ -51,6 +51,7 @@ async function setPolicy(policy) {
 
   // Empfehlung neu laden (zeigt aktuelle Policy-Empfehlung/Gründe)
   try { await loadRecommendation(); } catch {}
+  try { await loadRedirectRate(); } catch {}
 
   // Seite nur bei wirkungsrelevanten Modi neu laden (standard/strict)
   try {
@@ -100,6 +101,53 @@ async function loadRecommendation() {
       modeNameEl.textContent = pol ? pol.toUpperCase() : "—";
     }
   }
+}
+
+async function loadRedirectRate() {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true }).catch(() => [null]);
+  if (!tab?.url) return;
+  let domain;
+  try {
+    const u = new URL(tab.url);
+    if (u.protocol !== 'http:' && u.protocol !== 'https:') return;
+    domain = u.hostname.replace(/^www\./, "");
+  } catch { return; }
+
+  // Hole Stats vom Service Worker (risky vs redirected)
+  let stats = await sendMessageP({ type: "adaptive:stats", domain });
+  if (!stats || typeof stats !== 'object') stats = {};
+  const risky = Number(stats.riskyRequests || 0);
+  const redir = Number(stats.redirectedRequests || 0);
+
+  const pct = risky > 0 ? Math.round((redir / risky) * 1000) / 10 : 0; // eine Nachkommastelle
+  const box = document.getElementById("redirectBox");
+  if (box) {
+    const totalTxt = risky > 0 ? `(${redir}/${risky})` : '';
+    box.textContent = `Redirect-Rate: ${pct.toFixed(1)}% ${totalTxt}`;
+  }
+}
+
+// === NEU: Auto-Tuning laden/anzeigen + Toggle ===
+async function loadAutoTuning() {
+  // Flag laden
+  try {
+    const { autoTuningEnabled = true } = await chrome.storage.sync.get("autoTuningEnabled");
+    const toggle = document.getElementById("autoTuningToggle");
+    if (toggle) {
+      toggle.checked = !!autoTuningEnabled;
+    }
+  } catch {}
+
+  // Tages-Stats laden (aus local storage; vom SW/History gepflegt)
+  try {
+    const { protecto_daily = {} } = await chrome.storage.local.get("protecto_daily");
+    const learned = Number(protecto_daily.autoTunedLearnedToday || 0);
+    const misses  = Number(protecto_daily.missesToday || 0);
+    const box = document.getElementById("autoTuningStats");
+    if (box) {
+      box.textContent = `Auto-Tuning: ${learned} Hosts gelernt heute, ${misses} Misses`;
+    }
+  } catch {}
 }
 
 // Init after DOM is ready
@@ -157,6 +205,25 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // Empfehlung laden
   await loadRecommendation();
+  await loadRedirectRate();
+
+  // Auto-Tuning Toggle binden
+  const autoToggle = document.getElementById("autoTuningToggle");
+  if (autoToggle) {
+    autoToggle.addEventListener("change", async (e) => {
+      const enabled = !!e.target.checked;
+      try {
+        await chrome.storage.sync.set({ autoTuningEnabled: enabled });
+      } catch {}
+      // Optional den Service Worker informieren (ignoriert Antwort, falls nicht implementiert)
+      try { await sendMessageP({ type: "adaptive:auto:set", enabled }); } catch {}
+      // UI frisch laden (Stats)
+      try { await loadAutoTuning(); } catch {}
+    });
+  }
+
+  // Auto-Tuning Stats initial laden
+  await loadAutoTuning();
 
   // Telemetrie anzeigen
   try {

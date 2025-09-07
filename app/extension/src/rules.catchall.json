@@ -5,7 +5,7 @@
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["image","ping"],
-      "regexFilter": "(?i)(collect|g/collect|pixel|beacon|track|event|metrics|stats)(\\?|/|$)"
+      "regexFilter": "(collect|g/collect|pixel|beacon|track|event|metrics|stats)(\\?|/|$)"
     },
     "action": {
       "type": "redirect",
@@ -17,8 +17,8 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
-      "regexFilter": "(?i)(collect|g/collect|pixel|beacon|track|event|metrics|stats)(\\?|/|$)"
+      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "regexFilter": "(collect|g/collect|pixel|beacon|track|event|metrics|stats)(\\?|/|$)"
     },
     "action": {
       "type": "redirect",
@@ -31,7 +31,7 @@
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["image","ping"],
-      "regexFilter": "(?i)([?&])(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)="
+      "regexFilter": "([?&])(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)="
     },
     "action": {
       "type": "redirect",
@@ -43,8 +43,8 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
-      "regexFilter": "(?i)([?&])(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)="
+      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "regexFilter": "([?&])(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)="
     },
     "action": {
       "type": "redirect",
@@ -57,7 +57,7 @@
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["script"],
-      "regexFilter": "(?i)/(gtm|gtag|analytics|fbevents|tracker|tracking)\\.(m?js)(\\?|$)"
+      "regexFilter": "/(gtm|gtag|analytics|fbevents|tracker|tracking)\\.(m?js)(\\?|$)"
     },
     "action": {
       "type": "redirect",
@@ -69,22 +69,34 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","xmlhttprequest","ping","other"],
-      "regexFilter": "(?i)(/tr/|/t/collect)(\\?|/|$)"
+      "resourceTypes": ["image","ping"],
+      "regexFilter": "(/tr/|/tr\\?)(\\?|/|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+    }
+  },
+  {
+    "id": 200010,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "regexFilter": "(/tr/|/tr\\?)(\\?|/|$)"
     },
     "action": {
       "type": "redirect",
       "redirect": { "url": "data:application/json,{}" }
     }
-  }
-  ,
+  },
   {
     "id": 200007,
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["sub_frame"],
-      "regexFilter": "(?i)https?:\\/\\/([^\\/]*\\.)?(doubleclick|googlesyndication|criteo|taboola|outbrain|rubiconproject|pubmatic|moatads|quantserve|adnxs|adform)\\.[^\\/]+\\/"
+      "regexFilter": "https?:\\/\\/([^\\/]*\\.)?(doubleclick|googlesyndication|criteo|taboola|outbrain|rubiconproject|pubmatic|moatads|quantserve|adnxs|adform)\\.[^\\/]+\\/"
     },
     "action": {
       "type": "redirect",
@@ -97,7 +109,7 @@
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["stylesheet"],
-      "regexFilter": "(?i)(tagmanager|analytics|ads|adservice|adserver)"
+      "regexFilter": "(tagmanager|analytics|ads|adservice|adserver)"
     },
     "action": {
       "type": "redirect",
@@ -110,14 +122,13 @@
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["font"],
-      "regexFilter": "(?i)(ads|analytics|tracking)"
+      "regexFilter": "(ads|analytics|tracking)"
     },
     "action": {
       "type": "redirect",
       "redirect": { "url": "data:font/woff2;base64," }
     }
-  }
-  ,
+  },
   {
     "id": 400001,
     "priority": 1,
@@ -202,7 +213,7 @@
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["image","ping"],
-      "regexFilter": "(?i)(/track|/collect|/g/collect|/e/collect|/event|/events|/beacon|/log|/pageview|/identify|/measure|/metrics|/stats|/conversion|/convert|/pixel)(\\?|/|$)"
+      "regexFilter": "(\\/track|\\/collect|\\/g\\/collect|\\/e\\/collect|\\/event|\\/events|\\/beacon|\\/log|\\/pageview|\\/identify|\\/measure|\\/metrics|\\/stats|\\/conversion|\\/convert|\\/pixel)(\\?|\\/|$)"
     },
     "action": {
       "type": "redirect",
@@ -215,7 +226,7 @@
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["xmlhttprequest","fetch","other"],
-      "regexFilter": "(?i)(/track|/collect|/g/collect|/e/collect|/event|/events|/beacon|/log|/pageview|/identify|/measure|/metrics|/stats|/conversion|/convert)(\\?|/|$)"
+      "regexFilter": "(\\/track|\\/collect|\\/g\\/collect|\\/e\\/collect|\\/event|\\/events|\\/beacon|\\/log|\\/pageview|\\/identify|\\/measure|\\/metrics|\\/stats|\\/conversion|\\/convert)(\\?|\\/|$)"
     },
     "action": {
       "type": "redirect",
@@ -227,8 +238,21 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping","xmlhttprequest","fetch","other"],
-      "regexFilter": "(?i)([?&])(gclid|fbclid|msclkid|dclid|yclid|utm_[a-z0-9_]+)="
+      "resourceTypes": ["image","ping"],
+      "regexFilter": "([?&])(gclid|fbclid|msclkid|dclid|yclid|utm_[a-z0-9_]+)="
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+    }
+  },
+  {
+    "id": 500007,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "regexFilter": "([?&])(gclid|fbclid|msclkid|dclid|yclid|utm_[a-z0-9_]+)="
     },
     "action": {
       "type": "redirect",
@@ -241,7 +265,7 @@
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["script"],
-      "regexFilter": "(?i)/(gtm|gtag|fbevents|analytics|analytics.js|adsbygoogle|adservice)\\.(m?js)(\\?|$)|(?i)gtag/js(\\?|$)"
+      "regexFilter": "/(gtm|gtag|fbevents|analytics|analytics\\.js|adsbygoogle|adservice)\\.(m?js)(\\?|$)|gtag/js(\\?|$)"
     },
     "action": {
       "type": "redirect",
@@ -254,7 +278,7 @@
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["sub_frame"],
-      "regexFilter": "(?i)https?:\\/\\/([^\\/]*\\.)?(ads|adserver|adservice|analytics|tagmanager|googlesyndication|doubleclick)\\.[^\\/]+\\/"
+      "regexFilter": "https?:\\/\\/([^\\/]*\\.)?(ads|adserver|adservice|analytics|tagmanager|googlesyndication|doubleclick)\\.[^\\/]+\\/"
     },
     "action": {
       "type": "redirect",
@@ -273,43 +297,69 @@
       "type": "redirect",
       "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
     }
+  },
+  {
+    "id": 600001,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "requestDomains": ["adnxs.com"],
+      "resourceTypes": ["image","script","xmlhttprequest","fetch","ping","sub_frame"]
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
+  },
+  {
+    "id": 600002,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "regexFilter": "https?:\\/\\/([^\\/]*\\.)?fastly-insights\\.com\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
+  },
+  {
+    "id": 600003,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "regexFilter": "https?:\\/\\/([^\\/]*\\.)?akamaihd\\.net\\/ads"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } }
+  },
+  {
+    "id": 600004,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "regexFilter": "https?:\\/\\/([^\\/]*\\.)?cloudfront\\.net\\/(pixel|track|collect)"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } }
   }
 ,
-{
-  "id": 600001,
-  "priority": 1,
-  "condition": {
-    "domainType": "thirdParty",
-    "requestDomains": ["adnxs.com"],
-    "resourceTypes": ["image","script","xmlhttprequest","fetch","ping","sub_frame"]
+  {
+    "id": 700010,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["script"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?connect\\.facebook\\.net\\/.*\\/fbevents\\.js(\\?|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "extensionPath": "/src/stubs/fbq.js" }
+    }
   },
-  "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
-},
-{
-  "id": 600002,
-  "priority": 1,
-  "condition": {
-    "domainType": "thirdParty",
-    "regexFilter": "https?:\\/\\/([^\\/]*\\.)?fastly-insights\\.com\\/"
-  },
-  "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
-},
-{
-  "id": 600003,
-  "priority": 1,
-  "condition": {
-    "domainType": "thirdParty",
-    "regexFilter": "https?:\\/\\/([^\\/]*\\.)?akamaihd\\.net\\/ads"
-  },
-  "action": { "type": "redirect", "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } }
-},
-{
-  "id": 600004,
-  "priority": 1,
-  "condition": {
-    "domainType": "thirdParty",
-    "regexFilter": "https?:\\/\\/([^\\/]*\\.)?cloudfront\\.net\\/(pixel|track|collect)"
-  },
-  "action": { "type": "redirect", "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } }
-}
+  {
+    "id": 700011,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["script"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?google-analytics\\.com\\/analytics\\.js(\\?|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "extensionPath": "/src/stubs/ga.js" }
+    }
+  }
 ]

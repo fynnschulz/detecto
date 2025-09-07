@@ -61,13 +61,76 @@ function ensureDomain(d) {
       fingerprintCalls: 0,
       suspiciousHeaders: 0,
       tinyResponses: 0,
+      // NEW: telemetry counters
+      riskyRequests: 0,        // all 3rd‑party requests of risky types
+      redirectedRequests: 0,   // matched DNR redirects
       cmp: { hasLegit: false, onlyNecessary: false }
     };
   }
   return self.domainSignals[d];
 }
+
+// --- Auto‑Tuning (miss detection) -----------------------------------------
+// We mark which requests were redirected (via onRuleMatchedDebug). Any risky
+// 3rd‑party request that completes without a redirect counts as a "miss" for
+// its host. When a host exceeds a threshold within a rolling window, we
+// auto‑learn a dynamic redirect rule for that host.
+const matchedRequestIds = new Set();
+/**
+ * missStats.byHost[host] = { hits: number, times: number[] }
+ *  - times is a list of timestamps (ms) of recent misses for rolling window
+ */
+const missStats = {
+  byHost: {},
+  windowMs: 24 * 60 * 60 * 1000, // 24h window
+  threshold: 10,                 // learn host after >=10 misses in window
+};
+
+function pruneMissTimes(arr, now, windowMs) {
+  while (arr.length && (now - arr[0]) > windowMs) arr.shift();
+  return arr;
+}
+
+async function noteMissForHost(pageHost, reqHost, type) {
+  try {
+    if (!reqHost || !pageHost || reqHost === pageHost) return;
+    if (!isRiskyType(type)) return;
+
+    // Respect user policy: only when not "off"
+    if (self.adaptive) {
+      const active = await self.adaptive.isPolicyActiveFor(pageHost);
+      if (!active) return;
+    }
+
+    const now = Date.now();
+    const entry = (missStats.byHost[reqHost] ||= { hits: 0, times: [] });
+    pruneMissTimes(entry.times, now, missStats.windowMs);
+    entry.times.push(now);
+    entry.hits = entry.times.length;
+
+    if (entry.hits >= missStats.threshold && self.adaptive?.maybeLearnAndRedirectHost) {
+      // Learn dynamic redirect rule for this host (type determines stub vs data URL)
+      try {
+        await self.adaptive.maybeLearnAndRedirectHost(reqHost, type);
+        // reset window for this host after learning to prevent thrashing
+        entry.times = [];
+        entry.hits = 0;
+        console.log("[Protecto][AutoTune] Learned host:", reqHost, "type:", type);
+      } catch (e) {
+        console.warn("[Protecto][AutoTune] learn failed for", reqHost, e);
+      }
+    }
+  } catch (e) {
+    console.warn("[Protecto][AutoTune] noteMissForHost error", e);
+  }
+}
 function hostFromUrl(u) {
   try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; }
+}
+
+function isRiskyType(t) {
+  const k = String(t || "").toLowerCase();
+  return k === "image" || k === "xmlhttprequest" || k === "fetch" || k === "ping" || k === "script";
 }
 
 // Increment selected domain signals in a safe way
@@ -298,6 +361,11 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
       const pageHost = hostFromUrl(initiator || "");
       const reqHost  = hostFromUrl(url);
       if (!reqHost || !pageHost || reqHost === pageHost) return; // only 3rd-party
+      // Count all 3rd‑party requests of risky types
+      if (isRiskyType(type)) {
+        const ref = ensureDomain(pageHost);
+        ref.riskyRequests = (ref.riskyRequests || 0) + 1;
+      }
       if (!self.adaptive) return;
       const active = await self.adaptive.isPolicyActiveFor(pageHost);
       if (!active) return; // only when Standard/Strict
@@ -311,6 +379,35 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
     }
   })();
 }, { urls: ["<all_urls>"] }, []);
+// --- DNR feedback: count redirects matched (requires declarativeNetRequestFeedback) ---
+if (chrome.declarativeNetRequest && chrome.declarativeNetRequest.onRuleMatchedDebug) {
+  try {
+    chrome.declarativeNetRequest.onRuleMatchedDebug.addListener((info) => {
+      try {
+        const req = info.request || {};
+        const action = info.rule && info.rule.action || {};
+        // Only count redirects
+        if ((action.type || "").toLowerCase() !== "redirect") return;
+
+        // Identify page (initiator) domain; fall back to request domain
+        const pageHost = hostFromUrl(req.initiator || req.documentUrl || "");
+        const reqHost  = hostFromUrl(req.url || "");
+        const d = pageHost || reqHost;
+        if (!d) return;
+
+        // Mark this request as redirected (used to detect misses)
+        if (req.requestId) matchedRequestIds.add(req.requestId);
+
+        const ref = ensureDomain(d);
+        ref.redirectedRequests = (ref.redirectedRequests || 0) + 1;
+      } catch (e) {
+        console.warn("[Protecto][Telemetry] onRuleMatchedDebug error", e);
+      }
+    });
+  } catch (e) {
+    console.warn("[Protecto] onRuleMatchedDebug not available", e);
+  }
+}
 
 // --- Passive webRequest Logger (no blocking, only signals) ---
 chrome.webRequest.onHeadersReceived.addListener(
@@ -372,19 +469,57 @@ chrome.webRequest.onCompleted.addListener(
   (details) => {
     try {
       const url = details.url || "";
-      const initiator = hostFromUrl(details.initiator || details.originUrl || "");
-      const target = hostFromUrl(url);
-      const d = initiator || target;
-      if (!d) return;
-      const ref = ensureDomain(d);
+      const type = (details.type || "").toLowerCase();
+      if (!url || !/^https?:/i.test(url)) return;
 
-      // Extra: treat very small transfers (no Content-Length header) as tiny
-      if (details.type === "image" || details.type === "xmlhttprequest" || details.type === "ping") {
-        if ((details.fromCache === false) && (details.statusCode >= 200 && details.statusCode < 400)) {
-          // No size reliably available here; we already counted via headers above.
-        }
+      const pageHost = hostFromUrl(details.initiator || details.originUrl || "");
+      const reqHost  = hostFromUrl(url);
+
+      // If this request matched a redirect rule, remove the marker and do nothing
+      if (details.requestId && matchedRequestIds.has(details.requestId)) {
+        matchedRequestIds.delete(details.requestId);
+        return;
       }
-    } catch (e) {}
+
+      // Count as a "miss" only for risky 3rd‑party types
+      if (reqHost && pageHost && reqHost !== pageHost && isRiskyType(type)) {
+        noteMissForHost(pageHost, reqHost, type);
+      }
+
+      // Maintain per‑domain ref (optional: for future use)
+      const d = pageHost || reqHost;
+      if (!d) return;
+      ensureDomain(d); // touch
+
+    } catch (e) {
+      console.warn("[Protecto][AutoTune] onCompleted error", e);
+    }
+  },
+  { urls: ["<all_urls>"] }
+);
+
+chrome.webRequest.onErrorOccurred.addListener(
+  (details) => {
+    try {
+      const url = details.url || "";
+      const type = (details.type || "").toLowerCase();
+      if (!url || !/^https?:/i.test(url)) return;
+
+      const pageHost = hostFromUrl(details.initiator || details.originUrl || "");
+      const reqHost  = hostFromUrl(url);
+
+      // If a redirect rule matched, it's not a miss
+      if (details.requestId && matchedRequestIds.has(details.requestId)) {
+        matchedRequestIds.delete(details.requestId);
+        return;
+      }
+
+      if (reqHost && pageHost && reqHost !== pageHost && isRiskyType(type)) {
+        noteMissForHost(pageHost, reqHost, type);
+      }
+    } catch (e) {
+      console.warn("[Protecto][AutoTune] onErrorOccurred error", e);
+    }
   },
   { urls: ["<all_urls>"] }
 );
@@ -448,6 +583,27 @@ chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
       }
       try {
         const stats = await self.adaptive.getStats();
+        // also attach per-domain counters if a domain was requested
+        if (msg.domain) {
+          const d = (msg.domain || "").replace(/^www\./, "");
+          const ref = ensureDomain(d);
+          stats.domain = {
+            riskyRequests: ref.riskyRequests || 0,
+            redirectedRequests: ref.redirectedRequests || 0
+          };
+        }
+        // Attach local Auto‑Tuning miss stats
+        try {
+          const totalMissHosts = Object.keys(missStats.byHost || {}).length;
+          let totalMisses = 0;
+          for (const h in missStats.byHost) totalMisses += (missStats.byHost[h]?.times?.length || 0);
+          stats.autoTuning = {
+            threshold: missStats.threshold,
+            windowMs: missStats.windowMs,
+            totalMissHosts,
+            totalMisses
+          };
+        } catch {}
         sendResponse({ ok:true, stats });
       } catch (e) {
         sendResponse({ ok:false, error:String(e) });

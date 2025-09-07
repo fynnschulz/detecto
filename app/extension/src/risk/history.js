@@ -13,10 +13,30 @@
   async function _telemetryLoad() {
     return new Promise((resolve) => {
       storage.local.get(["protecto_telemetry"], (res) => {
-        const t = res.protecto_telemetry || { hist:{}, dynRulesCount:0, dynLimit:DYN_LIMIT_DEFAULT };
+        // base shape
+        const todayStr = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+        const t = res.protecto_telemetry || {
+          hist: {},
+          dynRulesCount: 0,
+          dynLimit: DYN_LIMIT_DEFAULT,
+          date: todayStr,
+          autoTunedLearnedToday: 0,
+          missesToday: 0,
+        };
         if (!t.hist) t.hist = {};
         if (typeof t.dynRulesCount !== 'number') t.dynRulesCount = 0;
         if (typeof t.dynLimit !== 'number') t.dynLimit = DYN_LIMIT_DEFAULT;
+
+        // initialise daily fields if missing
+        if (typeof t.autoTunedLearnedToday !== 'number') t.autoTunedLearnedToday = 0;
+        if (typeof t.missesToday !== 'number') t.missesToday = 0;
+
+        // day rollover: reset daily counters when the stored date != today
+        if (t.date !== todayStr) {
+          t.date = todayStr;
+          t.autoTunedLearnedToday = 0;
+          t.missesToday = 0;
+        }
         resolve(t);
       });
     });
@@ -49,6 +69,20 @@
     await _telemetrySave(t);
   }
 
+  // Tageszähler: Auto-Tuning-Learn-Events
+  async function bumpAutoTunedLearned(n = 1) {
+    const t = await _telemetryLoad();
+    t.autoTunedLearnedToday += Math.max(0, Number(n) || 0);
+    await _telemetrySave(t);
+  }
+
+  // Tageszähler: Misses (verdächtige Requests ohne Redirect-Match)
+  async function bumpMisses(n = 1) {
+    const t = await _telemetryLoad();
+    t.missesToday += Math.max(0, Number(n) || 0);
+    await _telemetrySave(t);
+  }
+
   // Aktuelle Anzahl dynamischer Regeln (Cache fürs Popup)
   async function setDynamicRulesCount(n){
     const t = await _telemetryLoad();
@@ -72,6 +106,16 @@
       perHost
     };
   }
+
+  async function getDaily() {
+    const t = await _telemetryLoad();
+    return {
+      date: t.date,
+      autoTunedLearnedToday: t.autoTunedLearnedToday || 0,
+      missesToday: t.missesToday || 0,
+    };
+  }
+
   function pruneOldEntries(all, cutoffTs){
     let removed = 0;
     try {
@@ -174,5 +218,9 @@
     bumpPruned,
     setDynamicRulesCount,
     getSummary,
+    // Neu: Tageszähler-API
+    bumpAutoTunedLearned,
+    bumpMisses,
+    getDaily,
   };
 })();

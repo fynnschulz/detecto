@@ -3,13 +3,19 @@
 (function(){
   "use strict";
 
-  // Wenn bereits ein kompatibles ga vorhanden ist, nichts überschreiben
-  if (typeof window.ga === 'function' && window.GoogleAnalyticsObject === 'ga') return;
+  // Wenn schon eine "echte" GA-API existiert (mit getAll), nicht überschreiben.
+  // Die reine Queue-Stub (ga.q vorhanden, aber kein getAll) wollen wir ersetzen.
+  if (typeof window.ga === 'function' && typeof window.ga.getAll === 'function') {
+    return;
+  }
 
   const DEBUG = false; // bei Bedarf true schalten für lokale Logs
 
   // Marker wie im Original
   window.GoogleAnalyticsObject = 'ga';
+
+  // Bereits vorhandene Queue-Aufrufe vom GA-Snippet abgreifen
+  const preQueuedCalls = (window.ga && Array.isArray(window.ga.q)) ? window.ga.q.slice() : [];
 
   // Interner Zustand
   const state = {
@@ -154,6 +160,24 @@
   ga.getAll = () => getAllTrackers();
   ga.getByName = (n) => getTrackerByName(n);
 
+  // Zusätzliche No-Ops für Kompatibilität
+  ga.require = function() { return true; };
+  ga.remove = function() { return true; };
+
   // Exponieren
   window.ga = ga;
+
+  // Kompatibilität: ga.q als leeres Array bereitstellen (einige Themes checken das)
+  try { window.ga.q = []; } catch {}
+
+  // Vorher gequeue’te Aufrufe (vom Bootstrap-Snippet) nachträglich abarbeiten
+  (async () => {
+    if (preQueuedCalls && preQueuedCalls.length) {
+      for (const args of preQueuedCalls) {
+        try {
+          await ga.apply(null, args);
+        } catch {}
+      }
+    }
+  })();
 })();
