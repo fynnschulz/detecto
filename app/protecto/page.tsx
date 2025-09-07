@@ -10,33 +10,33 @@ export default function ProtectoPage() {
 
   const features = [
     {
-      title: "Tracker-Block",
-      k: "block",
-      tagline: "Stoppt Werbe- & Analyse-Domains schon im Request.",
+      title: "Tracker-Neutralisierung",
+      k: "neutral",
+      tagline: "Leitet Werbe- & Analyse-Aufrufe frühzeitig um – ohne sichtbare Fehlermeldungen.",
       bullets: [
-        "Declarative Net Rules gegen Ads, Beacons, Fingerprint-CDNs",
-        "3rd‑Party Cookies & Set‑Cookie‑Header blocken/strippen",
-        "Domain‑Listen + Heuristik (Pfad‑Muster, Query‑Parameter)"
-      ],
+         "Deklarative Redirect-Regeln für Ads, Beacons & Tracking-CDNs",
+         "Tracking-Anfragen werden vor Cookie-Setzen umgelenkt.", 
+         "Großes Regelset + Heuristik (Pfade, Parameter, Subdomains)",
+     ],
     },
     {
-      title: "Storage-Isolation",
-      k: "isolate",
-      tagline: "Trennt Tracking‑Speicher von deiner eigentlichen Session.",
+      title: "Adaptive Schutz-Engine",
+      k: "adaptive",
+      tagline: "Lernt live mit und stoppt neue Tracker automatisch.",
       bullets: [
-        "Virtuelle Container pro Seite/Scope",
-        "document.cookie / localStorage / sessionStorage‑Guards",
-        "Nur notwendige Session‑Cookies bleiben erhalten"
-      ],
+         "Erkennt neue Tracker-Hosts durch Heuristiken",
+         "Legt eigene Redirect-Regeln an (bis 5.000 dynamische)",
+         "Zielt auf eine Schutzquote von über 95 % – auch bei neuen Trackern."
+       ],
     },
     {
-      title: "Privacy‑Fake (optional)",
+      title: "Identitätsverschleierung",
       k: "fake",
-      tagline: "Täuscht Tracker – echte Nutzung bleibt privat.",
-      bullets: [
-        "Leichte Randomisierung (UA, Canvas, Audio)",
-        "Kontextsichere Platzhalter‑IDs statt echter Identität",
-        "Site‑Kompatibilität durch Whitelist & Feintuning"
+      tagline: "Verfremdet Fingerprint-Signale dezent, ohne Seiten zu stören.",
+       bullets: [
+         "Leichtes Rauschen für Canvas & Audio, kleine UA-Variationen",
+         "Tracker sehen nur allgemeine Daten, keine eindeutigen Merkmale",
+         "Hohe Kompatibilität dank Whitelist und Modus-Auswahl."
       ],
     },
   ];
@@ -54,16 +54,15 @@ export default function ProtectoPage() {
         <div className="mx-auto max-w-6xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-white/80 backdrop-blur">
             <span className="inline-block h-2 w-2 rounded-full bg-pink-400 animate-pulse" />
-            Neu: Das Herzstück von Detecto
+            Das Herzstück von Protecto
           </div>
 
           <h1 className="mx-auto max-w-4xl bg-gradient-to-br from-white via-pink-100 to-sky-100 bg-clip-text text-4xl font-extrabold leading-tight text-transparent md:text-6xl">
-            Detecto <span className="whitespace-nowrap">Protecto</span>
+            <span className="whitespace-nowrap">Protecto</span>
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-balance text-base text-white/80 md:text-lg">
-            Der ultimative Cookie‑ & Tracking‑Schutz. **Nur notwendige Cookies**, isolierte Sessions, geblockte Fingerprints –
-            und auf Wunsch smarte Privacy‑Fakes. Webseiten glauben, sie dürfen alles. In Wahrheit sammeln sie: fast nichts.
-          </p>
++            Der modernste Tracking-Schutz für deinen Browser. Protecto neutralisiert über 95 % aller Tracker durch Umlenkung und schützt deine Identität mit cleveren Fakes. Webseiten funktionieren normal – ohne sichtbare Fehlermeldungen, weil Anfragen umgeleitet werden.
++          </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
@@ -99,7 +98,7 @@ export default function ProtectoPage() {
           {[
             {
               t: "Cookie‑Banner? Egal.",
-              d: "Akzeptieren klicken ohne Bauchweh: Tracker werden trotzdem blockiert oder isoliert.",
+              d: "Akzeptieren klicken ohne Bauchweh: Tracker-Aufrufe werden umgeleitet – deine Daten bleiben privat.",
               i: (
                 <IconShield/>
               ),
@@ -189,7 +188,7 @@ export default function ProtectoPage() {
             >
               <div className="mb-3 flex items-center justify-between text-xs text-white/70">
                 <span className="font-medium">Live‑Vorschau</span>
-                <span className="rounded-full bg-white/10 px-2 py-0.5">{tab === "block" ? "Requests" : tab === "isolate" ? "Storage" : "Signals"}</span>
+                <span className="rounded-full bg-white/10 px-2 py-0.5">{tab === "block" ? "Umlenkung" : tab === "isolate" ? "Speicher (geplant)" : "Signals"}</span>
               </div>
 
               {tab === "block" && <DemoBlock/>}
@@ -208,10 +207,10 @@ export default function ProtectoPage() {
           </h3>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
-              { n: "01", t: "Filtern", d: "Block‑ & Redirect‑Regeln stoppen Tracker an der Quelle." },
-              { n: "02", t: "Isolieren", d: "Tracking‑Speicher getrennt von deiner Session halten." },
-              { n: "03", t: "Täuschen", d: "Unvermeidbare Abfragen mit harmlosen Platzhalterdaten beantworten." },
-            ].map((s, i) => (
+               { n: "01", t: "Filtern", d: "Redirect-Regeln stoppen Tracker an der Quelle." },
+               { n: "02", t: "Isolieren (geplant)", d: "Tracking-Speicher getrennt von deiner Session halten." },
+               { n: "03", t: "Täuschen", d: "Unvermeidbare Abfragen mit harmlosen Platzhalterdaten beantworten." },
+             ].map((s, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 16 }}
@@ -340,11 +339,11 @@ function IconSpeed() {
 /* ---------- Demo Cards ---------- */
 function DemoBlock() {
   const rows = [
-    { h: "tracker.adservice.com", a: "BLOCKED", d: "Werbe‑Beacon" },
-    { h: "analytics.example.com", a: "BLOCKED", d: "Seitenanalyse" },
-    { h: "cdn.fingerprint.io", a: "BLOCKED", d: "Fingerprint‑Lib" },
-    { h: "images.example.com", a: "ALLOWED", d: "CDN (Media)" },
-    { h: "api.example.com", a: "ALLOWED", d: "1st‑Party API" },
+     { h: "tracker.adservice.com", a: "REDIRECTED", d: "Werbe-Beacon" },
+     { h: "analytics.example.com", a: "REDIRECTED", d: "Seitenanalyse" },
+     { h: "cdn.fingerprint.io", a: "REDIRECTED", d: "Fingerprint-Lib" },
+     { h: "images.example.com", a: "ALLOWED", d: "CDN (Media)" },
+     { h: "api.example.com", a: "ALLOWED", d: "1st‑Party API" },
   ];
   return (
     <div className="overflow-hidden rounded-xl border border-white/10 bg-black/30">
@@ -376,11 +375,11 @@ function DemoBlock() {
 }
 
 function DemoIsolate() {
-  const items = [
-    { k: "document.cookie", v: "(nur notwendige Session‑Cookies)" },
-    { k: "localStorage", v: "isolation: enabled (tracking scope)" },
-    { k: "sessionStorage", v: "isolation: enabled (tracking scope)" },
-  ];
+   const items = [
+     { k: "document.cookie", v: "(Tracking-Speicher durch Umlenkung verhindert)" },
+     { k: "localStorage", v: "(Isolierung geplant)" },
+     { k: "sessionStorage", v: "(Isolierung geplant)" },
+   ];
   return (
     <div className="rounded-xl border border-white/10 bg-black/30 p-4 text-sm">
       <ul className="space-y-2">
