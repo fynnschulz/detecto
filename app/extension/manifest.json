@@ -31,12 +31,12 @@
   "declarative_net_request": {
     "rule_resources": [
       {
-        "id": "static-rules",
+        "id": "static-main",
         "enabled": true,
-        "path": "src/static-rules.json"
+        "path": "src/static-rules.fixed.json"
       },
       {
-        "id": "catchall-rules",
+        "id": "catchall",
         "enabled": true,
         "path": "src/rules.catchall.json"
       }
@@ -56,11 +56,13 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "src/stubs/*.js",
-        "src/stubs/generic.js",
-        "src/stubs/ga.js",
-        "src/stubs/gtm.js",
-        "src/stubs/fbq.js"
+        "stubs/*.js",
+        "stubs/generic.js",
+        "stubs/ga.js",
+        "stubs/gtm.js",
+        "stubs/fbq.js",
+        "assets/blank.gif",
+        "assets/empty.json"
       ],
       "matches": ["<all_urls>"]
     }

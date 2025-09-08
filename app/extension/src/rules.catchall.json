@@ -17,7 +17,7 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "resourceTypes": ["xmlhttprequest","other"],
       "regexFilter": "(collect|g/collect|pixel|beacon|track|event|metrics|stats)(\\?|/|$)"
     },
     "action": {
@@ -43,7 +43,7 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "resourceTypes": ["xmlhttprequest","other"],
       "regexFilter": "([?&])(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)="
     },
     "action": {
@@ -82,7 +82,7 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "resourceTypes": ["xmlhttprequest","other"],
       "regexFilter": "(/tr/|/tr\\?)(\\?|/|$)"
     },
     "action": {
@@ -147,7 +147,7 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "resourceTypes": ["xmlhttprequest","other"],
       "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?(stats|metrics|pixel|ads|adserver)\\.[^\\/]+\\/"
     },
     "action": {
@@ -225,7 +225,7 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "resourceTypes": ["xmlhttprequest","other"],
       "regexFilter": "(\\/track|\\/collect|\\/g\\/collect|\\/e\\/collect|\\/event|\\/events|\\/beacon|\\/log|\\/pageview|\\/identify|\\/measure|\\/metrics|\\/stats|\\/conversion|\\/convert)(\\?|\\/|$)"
     },
     "action": {
@@ -251,7 +251,7 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","fetch","other"],
+      "resourceTypes": ["xmlhttprequest","other"],
       "regexFilter": "([?&])(gclid|fbclid|msclkid|dclid|yclid|utm_[a-z0-9_]+)="
     },
     "action": {
@@ -304,7 +304,7 @@
     "condition": {
       "domainType": "thirdParty",
       "requestDomains": ["adnxs.com"],
-      "resourceTypes": ["image","script","xmlhttprequest","fetch","ping","sub_frame"]
+      "resourceTypes": ["image","script","xmlhttprequest","ping","sub_frame"]
     },
     "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
   },
