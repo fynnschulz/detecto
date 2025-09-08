@@ -43,6 +43,11 @@ export default function ProtectoPage() {
 
   const glow = "before:content-[''] before:absolute before:-inset-1 before:bg-gradient-to-r before:from-pink-500/30 before:via-fuchsia-400/20 before:to-sky-400/30 before:blur-2xl before:rounded-[28px]";
 
+  const current = useMemo(() => {
+    const hit = features.find(x => x.k === tab);
+    return hit ?? features[0];
+  }, [tab]);
+
   return (
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(1200px_600px_at_80%_-10%,rgba(56,189,248,0.06),transparent),radial-gradient(900px_400px_at_10%_10%,rgba(236,72,153,0.05),transparent)]">
       {/* floating background orbs */}
@@ -160,20 +165,18 @@ export default function ProtectoPage() {
               className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] p-5"
             >
               <h3 className="text-lg font-semibold text-white">
-                {features.find((x) => x.k === tab)?.title}
+                {current.title}
               </h3>
               <p className="mt-1 text-sm text-white/80">
-                {features.find((x) => x.k === tab)?.tagline}
+                {current.tagline}
               </p>
               <ul className="mt-4 space-y-2 text-sm text-white/85">
-                {features
-                  .find((x) => x.k === tab)!
-                  .bullets.map((b, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-gradient-to-r from-pink-400 to-sky-400" />
-                      <span>{b}</span>
-                    </li>
-                  ))}
+                {current.bullets.map((b: string, i: number) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-gradient-to-r from-pink-400 to-sky-400" />
+                    <span>{b}</span>
+                  </li>
+                ))}
               </ul>
               <div className="pointer-events-none absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-sky-400/10 blur-2xl" />
             </motion.div>
@@ -188,12 +191,14 @@ export default function ProtectoPage() {
             >
               <div className="mb-3 flex items-center justify-between text-xs text-white/70">
                 <span className="font-medium">Live‑Vorschau</span>
-                <span className="rounded-full bg-white/10 px-2 py-0.5">{tab === "neutral" ? "Umlenkung" : tab === "adaptive" ? "Speicher (geplant)" : "Signals"}</span>
+                <span className="rounded-full bg-white/10 px-2 py-0.5">
+                  {tab === 'neutral' ? 'Umlenkung' : tab === 'adaptive' ? 'Speicher (geplant)' : 'Signals'}
+                </span>
               </div>
 
-              {tab === "neutral" && <DemoBlock/>}
-              {tab === "adaptive" && <DemoIsolate/>}
-              {tab === "fake" && <DemoFake/>}
+              {tab === 'neutral' && <DemoBlock/>}
+              {tab === 'adaptive' && <DemoIsolate/>}
+              {tab === 'fake' && <DemoFake/>}
             </motion.div>
           </div>
         </div>
