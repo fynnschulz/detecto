@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function ProtectoPage() {
-  const [tab, setTab] = useState<"block" | "isolate" | "fake">("block");
+  const [tab, setTab] = useState<"neutral" | "adaptive" | "fake">("neutral");
   const [faqOpen, setFaqOpen] = useState<string | null>(null);
 
   const features = [
@@ -61,8 +61,8 @@ export default function ProtectoPage() {
             <span className="whitespace-nowrap">Protecto</span>
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-balance text-base text-white/80 md:text-lg">
-+            Der modernste Tracking-Schutz für deinen Browser. Protecto neutralisiert über 95 % aller Tracker durch Umlenkung und schützt deine Identität mit cleveren Fakes. Webseiten funktionieren normal – ohne sichtbare Fehlermeldungen, weil Anfragen umgeleitet werden.
-+          </p>
+            Der modernste Tracking-Schutz für deinen Browser. Protecto neutralisiert über 95 % aller Tracker durch Umlenkung und schützt deine Identität mit cleveren Fakes. Webseiten funktionieren normal – ohne sichtbare Fehlermeldungen, weil Anfragen umgeleitet werden.
+          </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
@@ -188,11 +188,11 @@ export default function ProtectoPage() {
             >
               <div className="mb-3 flex items-center justify-between text-xs text-white/70">
                 <span className="font-medium">Live‑Vorschau</span>
-                <span className="rounded-full bg-white/10 px-2 py-0.5">{tab === "block" ? "Umlenkung" : tab === "isolate" ? "Speicher (geplant)" : "Signals"}</span>
+                <span className="rounded-full bg-white/10 px-2 py-0.5">{tab === "neutral" ? "Umlenkung" : tab === "adaptive" ? "Speicher (geplant)" : "Signals"}</span>
               </div>
 
-              {tab === "block" && <DemoBlock/>}
-              {tab === "isolate" && <DemoIsolate/>}
+              {tab === "neutral" && <DemoBlock/>}
+              {tab === "adaptive" && <DemoIsolate/>}
               {tab === "fake" && <DemoFake/>}
             </motion.div>
           </div>
