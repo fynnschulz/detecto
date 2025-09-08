@@ -1,0 +1,76 @@
+{
+    "domain": "httpbin.org",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "httpbin\\.org\\/headers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d65f2e407e2324e5e07caece584069f01b0747f7692ccf5735568e939f9e9cd4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fiverr.com",
+                "www.fiverr.com"
+            ]
+        },
+        {
+            "rule": "httpbin\\.org\\/stream-bytes\\/500000",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f57b3617bee9231c668c6017ffcd2853869d6610296773ecafb1096001e2fa6e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsdirect.com",
+                "www.studio.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 4
+    },
+    "nameservers": [
+        "ns-173.awsdns-21.com",
+        "ns-1053.awsdns-03.org",
+        "ns-1555.awsdns-02.co.uk",
+        "ns-884.awsdns-46.net"
+    ]
+}

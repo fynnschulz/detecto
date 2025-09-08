@@ -1,0 +1,166 @@
+{
+    "domain": "ns1p.net",
+    "owner": {
+        "name": "NSONE Inc",
+        "displayName": "NSONE"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000137,
+    "sites": 20,
+    "subdomains": [
+        "cs",
+        "s",
+        "b",
+        "rt"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ns1p\\.net\\/p\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cs"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 10
+            },
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "3f5479ec31a06584b33450b875452ac3923666e27c87ec472abca67c6dd80212"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ibm.com",
+                "developer.ibm.com",
+                "nation.foxnews.com",
+                "pdf.directindustry.com",
+                "www.aeroexpo.online",
+                "www.agriexpo.online",
+                "www.directindustry.com",
+                "www.fox.com",
+                "www.medicalexpo.com",
+                "www.nauticexpo.com"
+            ]
+        },
+        {
+            "rule": "ns1p\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s",
+                "b"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.0000752,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "49779b5d02e6ce70d8a97ac23e5e2d8d172c76bb97e36a23a0f940b9b9a2c758",
+                "14269c0a85f92307257825f71eaf8bf931481787561fee4ee22c505c08ef069e",
+                "086780a002f535df3f2c188747842265fdf8da2d7f978cc9f7ce16841a255b98",
+                "b57fe45dcd8995e312408399dc95169329b75d9426a2cbc67c7604b31ee699c6",
+                "cf34a634c1ff1de1a760289dd320418079bc2c94959da6dcd4d837bf29a6c4e4",
+                "b4658824dd377471bf9f819fa1201452e222f18b059b83845978033ffc97e1c9",
+                "9585cf29e9182f4a989ef28e0c011505bfa41b42118e7eb117ba3e5141a09302",
+                "c43bbedb7e4599ceae2b1a094cf935fea0a7570bf8eeafb7e3ee77a71d1eebe9",
+                "30c0ed825d0bec54ce1f07e4293f5c2d3f9c201b324c92f2b6d9ffdb9557cc05"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ibm.com",
+                "community.ibm.com",
+                "developer.ibm.com",
+                "nation.foxnews.com",
+                "pdf.directindustry.com",
+                "www.aeroexpo.online",
+                "www.agriexpo.online",
+                "www.directindustry.com",
+                "www.fox.com",
+                "www.medicalexpo.com",
+                "www.nauticexpo.com"
+            ]
+        },
+        {
+            "rule": "ns1p\\.net\\/v1\\/decision",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "history.com",
+                "www.history.com"
+            ]
+        },
+        {
+            "rule": "ns1p\\.net\\/v1\\/decision",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3376bc2805472c8b8891bbd02b1c2dbb4a7b21e24b3c2ec186067a3989f2b021"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "history.com",
+                "www.history.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "virtual-expo.com",
+            "prevalence": 0.6818181818181818
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2727272727272727
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.045454545454545456
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "XHR": 11,
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "dns2.p07.nsone.net",
+        "dns4.p07.nsone.net",
+        "dns3.p07.nsone.net",
+        "dns1.p07.nsone.net"
+    ]
+}

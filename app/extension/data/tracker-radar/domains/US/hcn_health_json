@@ -1,0 +1,509 @@
+{
+    "domain": "hcn.health",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00131,
+    "sites": 191,
+    "subdomains": [
+        "aim-tag"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "hcn\\.health\\/js\\/client\\.js",
+            "cookies": 0.00052,
+            "fingerprinting": 1,
+            "subdomains": [
+                "aim-tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 117,
+                "window.localStorage": 117,
+                "window.sessionStorage": 117,
+                "window.name": 117,
+                "Document.cookie getter": 113,
+                "Document.cookie setter": 76
+            },
+            "sites": 119,
+            "prevalence": 0.000814,
+            "cnames": [],
+            "responseHashes": [
+                "923975913eb650320e8d8f437571a34b2112651f1ae4ad81c1c0fe9f948aa5e3",
+                "5cd8ae46b97e426219434811037188bebe4858ecbfa6f67cb4ab6c986d33f4e8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "dmd-tag": {
+                    "ttl": 315532809,
+                    "length": 36,
+                    "prevalence": 0.0005199069640169654,
+                    "uniqueness": 1
+                },
+                "dmd-sid4": {
+                    "ttl": null,
+                    "length": 118,
+                    "prevalence": 0.0005199069640169654,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhg.com",
+                "people.com",
+                "psychcentral.com",
+                "thespruce.com",
+                "thespruceeats.com",
+                "www.allrecipes.com",
+                "www.drugs.com",
+                "www.healthgrades.com",
+                "www.healthline.com",
+                "www.investopedia.com",
+                "www.mdcalc.com",
+                "www.treehugger.com",
+                "www.shape.com",
+                "www.brides.com",
+                "www.verywellhealth.com",
+                "www.dailypaws.com",
+                "www.cadillacnews.com",
+                "www.thebalancemoney.com",
+                "www.renalandurologynews.com",
+                "www.thespruceeats.com"
+            ]
+        },
+        {
+            "rule": "hcn\\.health\\/iframe\\.html",
+            "cookies": 0.000486,
+            "fingerprinting": 2,
+            "subdomains": [
+                "aim-tag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 85,
+                "window.name": 84,
+                "Document.cookie setter": 71,
+                "window.sessionStorage": 84,
+                "Navigator.prototype.userAgent": 87,
+                "window.localStorage": 79,
+                "Document.cookie getter": 79,
+                "URL.createObjectURL": 57,
+                "CanvasRenderingContext2D.prototype.getImageData": 64
+            },
+            "sites": 118,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "963f3ba75f6f7910976f4aef9be8fdd77f0e509346cecfa775d08dd46421a6b7",
+                "b02f9319d1d26d92ae6edf81e4713904ff186ddf32436a872d71d03dda29e15a",
+                "435bcbda82949a588af02dd61fef2dcbee236340c3df95c47b9217953e104374",
+                "ac61dd56a3742f7cb71d73f8a238c2e290460fc7f6d7a814e8cfdf24c1267773",
+                "68eeb53f63f98ed5b646abc022664663446d9f511a4305d27f57ad32aac002c8",
+                "13c946d7bf5c18a1b9da481b895208a51a0f1c7fc8b611e85817758f3ccc0e09",
+                "431c65ef6a59ad187e21bbcc031ff428baae523eba1e34212668906ae6e5c074",
+                "3023ff684e70cd9b6f4aa5e3b955ff0d355f92fbede1fa4974d19be98efeeed4",
+                "4569a3f40d46ed07debe7a6b1e3bce5b5339a471325b6f2b1af3d9e3528319da",
+                "20bbd9a958a8734a523dec9cab597933b52f9490e50571039ffbe7e20b139660",
+                "6629fd4fdb2d359003ee26154b93d211c41dac07649e1a3d302faa99daf3f934",
+                "fe2c7a45d64101e6d1e53743ce8a78f7bd3e9b19370e1ee079a536835de699e7",
+                "a63d9bbb1ff4a1b0627129f98a6439d98888090be0f680dfb44c3364d0f3121f",
+                "2f0359ae74c2b504444d520e1321a28a08b43e1bd7dcf71f9941cf4da9102501",
+                "b8652dca003f7f60317eae577487f26215991f4f3d4628530e7ea96d00a0dccc",
+                "43c06c8ecb40c7fc0a965212a25a94f41e3d95782600f9750a0fa4e97c26119f",
+                "a59b0b58a9b03ea4738a4f7a40e47e31716b066a42ce945ccf4054fa524b7751",
+                "7aa998ab3e78c5eefe4408402d96772e52dea09ffb218e12f809f5e8a73551f1",
+                "921ef920cbbada4ece86e5ddda660729cd37284527e8139d88d5a7ac6d39c414",
+                "347fb4cec341fe9cda6ac3b85284247c68e50e2566e1cdba95f2b1bff6609e79",
+                "6deb29f1a177ddc4068aacf4d37362ac5e7c721fb128db2b219a66e68aa9e744",
+                "64da66d36312c875dd4781aac58c069a1f841c1dfa651e3334aa80d9a91f80a2",
+                "c63a9b70f582d97a13749780ddaf5035279c7cf530281cb07f8bd4f4ed864476",
+                "63f50d001a09b475cb0d542147ceadd65227a3bbd65809a148e66e1ab0943858",
+                "76eb8e3159d79fdc0e4cf0c0e551d25b94a46c872540e40f8ca896075dfde4ed",
+                "8aea63297bcfaf05d4d802fd4d2dd4110e63e7a634e714f5ae2b7bfeb6b0204e",
+                "5b1dba4be54d5b1a4a2b187196594840ea54385db5ca417889ce2f4fbfd7c931",
+                "cd17a6a35dabd572116c0cd5f62795532d9a0627234501b3590e79e8a5129c60",
+                "d1cf70da919f07f4fa876a76ae34993c7517817043ff3a3d5846da221f722093",
+                "9d45638ff7904382a1b42b946d80ce29ab23675d434ab03788c902eb8ea86995",
+                "b920b62fdbcca87304ce265474d4fa4995afabb9a4f8ef68bdbf310e99ac3192",
+                "760d61e5c24dbe80a5133e54e212c0c44c7fe8c570346b1e866c72f8405d8372",
+                "959f2fcdcaecf49ccf8db8292d1ca159f4d2586d636a07740c7ea11339001dd1",
+                "fba294eae3afc512261b73d84fb0441864353a1d517e1c3fce86d03e43e82001",
+                "ae149f994c8d9658e642da3a2e828b1e46512946cd4ddc2d6791ca7cc9f1fa8e",
+                "4f9666d3cf0940eda4cd7fc6b12f25016295488641bafe88b4cf4591fbe09f1a",
+                "b2eb7d193439cbda421590918a1db06484005dd9224e8ec7450d6e83e0104ea9",
+                "2a3eb66e93d1e9e89fc4f3ae4f23579e3d7b9fd0af1f26b9fbf14e7e639671a6",
+                "833b970c275a910a87b9ef17c5ddebd4980372754f59bf9510a9d4d7d7a81b05",
+                "4d7ae514fc4bae959fad00f96ba40a3a50c0148bee01a1c8f0c4135509518135",
+                "b898ed3124ee6f3c1d6587abdadbac760da98efb1bed78fb409687a797b1d689",
+                "13800a8a36e681d210aa4478877277d2bdc08f1aefd573482730a9bd2bbf3f52",
+                "06878f41ab81e135114e2a3f72114e1010a694f7c4bd8c40b563c52e0ba856d9",
+                "ba7d14ae3e9f4cbc1f6b51aefe2fa93310f579025e1f39eae2c39fa0016184fa",
+                "254852cf6c159f4e5843ea231c08c35277b5be7c9b831516b3ad195be4389289",
+                "5cd20fe033060f5297114e6b87172cdd557d98bead00a2a86dbf532ea9b54727",
+                "15caae5604b78c50b849620540f2a19e04f21a364b87729ae2d1fa33cf9109e9",
+                "12e2ea27ebe8c0e0bb97f4061d1336f962e11f8a29b90d4e2eb716706db2a71b",
+                "ceb540043bef87b1063c3ee9020f5670259c0ada4d71e4894d323c0a02fe4492",
+                "f01ae665e43839ae97600f81323492bd524f27ee3dccd32549565c7b76f9c8ca",
+                "0a2700aeff906b3c9c6f29b5151997226783be10ffe123e70394abf946b5eaf6",
+                "346547574983aeb200981948ba260b0112ca82cd3e71f5614a0a844ecb33c9d0",
+                "9f0ef8d1defd3e134ca84e36bf35f35b0b309fe4f7b29b27767c675466fcaae3",
+                "38f2259ad8c8b2f1ddb65d98c700118cd153230ededaa6f0d1955e8d61a0c7d8"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00033520317416883296,
+                "lotame_domain_check": 0.00027363524421945547
+            },
+            "exampleSites": [
+                "bhg.com",
+                "people.com",
+                "psychcentral.com",
+                "thespruce.com",
+                "thespruceeats.com",
+                "www.allrecipes.com",
+                "www.drugs.com",
+                "www.healthgrades.com",
+                "www.healthline.com",
+                "www.investopedia.com",
+                "diabetesfoodhub.org",
+                "www.treehugger.com",
+                "www.kidneyfund.org",
+                "ew.com",
+                "thesprucepets.com",
+                "www.sharecare.com",
+                "www.thebalancemoney.com",
+                "www.simplyrecipes.com",
+                "www.salemnews.com",
+                "www.researchgate.net"
+            ]
+        },
+        {
+            "rule": "hcn\\.health\\/_itu\\.png",
+            "cookies": 0.000787,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aim-tag"
+            ],
+            "apis": {},
+            "sites": 116,
+            "prevalence": 0.000794,
+            "cnames": [],
+            "responseHashes": [
+                "9807ebcf7003e59145040ba541949458a9463343342a7ce5954efe2e885817ff",
+                "fb5a0fc2af136b1f02369285763fd6303c55cf703a20cb38bc5466f194c710d1",
+                "17dba3bfdb8ef5b76f8234c2a6f959de923951f6c3af05bb9ab38f3903a1d552",
+                "513ca39855a09f93ba578bf7922bb6e445527611331751b9f1bc1c04fd770b3e",
+                "5dd9e74417df906d129c4e8c4dcfa6bf3e1d65a0ca2c113f47b791dd6d7b591d",
+                "56535d0bca70c8b62a8900bdfb3ce190f74153d014f1cada39466eb12a0f6bcf",
+                "26af6c028f4361b83e1bb3d69ddbdd14876f2a5108ed062e887dad22b98fae3e",
+                "9c498998bd4873313494420ac3ee248ed3f94dab0a3947dec74f4fef11f1cf53",
+                "1a2a0e169d5f9edc115f1d493b49c1b337e260452de6028a14fb91687ebc49fd",
+                "a4172546b98e4501a05d841771f10c64adf832da82d1b3b888f55d61562ade11",
+                "ed3f7e03bc4348b6d35e25385ffcd51884ef15e231356b9a469edc90bf599599",
+                "4f8014e708881ac1fc8b530ddc9915c944441dbbf6bf2c9983ec5e254599b17d",
+                "9f330d7fe42eb9c1ec83059ba297aea2992a1eda3fee562fcc5c301d1f4508aa",
+                "f05b9ccf45e414d7113db64d652148f6ac2eaa8428d8ffe94183398c672af923",
+                "39ee9dc9c4ad7f5a14ea412c028d57e55d82112d6d9da24865db856eecec1f9b",
+                "0a6b52d2909596e4d84d1831139604d486b53f93d7a269f6ac6de35f332b84c5",
+                "d60c98be2930d432a4ae8bcdcdc4735837c156e837d3885829522670ad4edb49",
+                "a57d5d6efc4766f5bac151acaaaba454b15788491280291ed09991fc909306aa",
+                "efc6562d57b23089f88a237c3baed72bd81167998ca1da98e90d09462c36518f",
+                "c27031d001cf37b36f2c2687d5ddb59ddeb6b1d69b5187d883d6d31a614bfbd2",
+                "3846dc94b18eedad2b2d11f3a431f5cf6cebfdc094f6bbf53646418b737cb422",
+                "0894ca7efcbc12fe619705fb6260266e3f506a19d276a182ccb9b6dd0a29591f",
+                "90fc020fd69272952fc88ce9f30132329cce29e0a9fb210a8c4ecaba2f74a3c9",
+                "eae3ac7837a67214e686246e773822e25c3e497de6cf4ab30fa80a67bafcef96",
+                "66b52723fc573923bbc96bfee6a92d8c5ea1628207cc8c6841c627715bfb152e",
+                "111401a270ad66474849e6fc47d31d4d5c570236e82b8959f944c3f760040807",
+                "459f1cd13586eaedfbdf9172fb23cac0bbb66352412dd7f15a7def0dd9fd4805",
+                "f75dd6c0460b40b0e6856afdb24e08c870962333c987bc7c84b9f04b1e92b664",
+                "1d4647abe74c87d452cca8b176bd4d6eb6e97f3c47fe6ac35760d68999df9aee",
+                "0f0837489347bbf956a653af93482f7307b4bb8200ab685c1088fbcefa8776da",
+                "7c181d8712850634458926f8405c71335ae9c3dac925cd329b4f0c812076566f",
+                "7c70b25ee2108419f1f57939a84c1128269015bfc265b09e7fb5404f5602631f",
+                "94cad994c44c6d5923fa8a08f6a9ac642731edb6a73a38d793bc0d96c27e3d22",
+                "db28ea03894c12ab2bd5777a96516f0c8860f23de8498c29f796a535aa2cd39b",
+                "4be6435f7d12c0a5dc1197a2a0cfeb0d7c8f3a07f5c026c2c9c6065c041b7e91",
+                "fc4f92b23fa05918e89afb8c06736c3e935e08265ee53126c5f9dd4937d51478",
+                "452ef51777e6c4a87fce94fafd31d04880e4116e6d771b5b7e97d2484ac3e6c4",
+                "6f9c630e83efae3517850edbb8c55fa4f0f50f793e055ec6d0b85f5eed6a6f50",
+                "58026b172c623de3a9c08c45806e19d8c44e7890d2d99728fb1ef9b51bb4a49f",
+                "6d362effb3c73a9177439aa363b479f03d7d9af6d4711da36619e9886367eed9",
+                "d066283c649c2a1ece9ca44ec431ff97c3fbd5f60dba262de543781be86c13d9",
+                "f26763e192adb622d4f53529ecb223f740717113fa1609bf6242466b3d7c03f9",
+                "0394deb4ce0b3a147e2750a1daaf6a5740d0f08c080404662e3976ebe23b8235",
+                "1c8854a7c18f664efaafff236ccf152656abe69d95174530adb859305b8bc69e",
+                "4a4cce3e4ea0a36c8869e53bada0b41eac2aa1d88bb48e8470cd32ac6776091f",
+                "96619daf75f1c41cf17506e7ced217b8eefe1d12b0611e11d692bc25bfe04d69",
+                "95a138d8b65e36304b212aaa99e781ac6c008eaca4c6cf1fd213c724fba0ab63",
+                "68110b3ab43205e062414c2b813e8fb8a5a7d9cdfddf96787837c6483d2318ab",
+                "d6afc8a78cfacc05fb2a4c42d85518dd4be62722a2d1774d7ee65fe017256238",
+                "64957fe4f05f6c2ff5ea22680db77be0ebadb7a4d05d27ee802855888619e112",
+                "75c6d45d4d76c01539e5ba491a2e20f512fc125f4eb1e87ad71677c6833ed436",
+                "8fbf7fac64c5f57b9db6261398cc0153cc4f23f6ae5b27e11cd7d6f77ff3ad61",
+                "1962955c71b443bf83ee2f7c0a997cc12f68f23ed080096951348a9f4f1da7b7",
+                "088cad681bdcf4de378d810be26bd244bf08b1c72270ed40f3033dc502e989ca",
+                "80c9498c90ad6e71aaea018544750982d469f221c36c66cfcfc1c4790a3d6a3f",
+                "dc0fa2f2f6bab354ddcc10a1be88a6a43a392e50936ab27d56ab00465aeb11c1",
+                "0e032212ebe003dbd6c1af62620aec052dd3d039abdab9ef28219586a9560a25",
+                "07a5ecf7e0dab09c5eae1df2e8df93e83ab2110657b761ac1f2bb9130aa13e8d",
+                "6848dfc9b819298aa87624f9b162a6eff0d2766845899204fc3437568cf315b7",
+                "e39785dbba2d5268b6828a452060382609b00e2dd217d0f4f65012c751a641f9",
+                "979f992b396262cf839fde7cd9b36a9c9d0bd0eb45c872c58cbf6e7adf73d927",
+                "9b44630da1f84b6c7b58aba25c7cf2f925713eac09c892de19004e04bbd763d4",
+                "b90f63917c7af358cc1544d5ed658b19f8b94e483fd4a9a49bf971fad1084225",
+                "33a8381785c95afbcacb6bd74df4c43c40756c518b854a9f2cca22a267bcc5f9",
+                "8cb1c98c2860fe5bee09c235871bc89b1cc300085fd7ee7ecfed0a0d03a15a6e",
+                "7b44c86ae73a82aaa6b81d4eaeea90d3c922ecf15d7f60b0bb056d568fbe3366",
+                "495b4df04d7344dc94d0bdd886da5de4e4893a79128d54f5dc0b6b6da3069457",
+                "74ddea579c9f6c36fc371c850a596b128b9701f0f70475150fb2a318045398b2",
+                "8d6be105c341cd2f2acca5d929e35c104ef2bf5bbc36f94e2319e8bdfa802ced",
+                "db5c7026e5304316136974fc4d90e3d4cee3f47efc4a701397de32ae172c7dfd",
+                "93b35796dc76955de321b42b77881005def8fb5f52ba0d82e3e1349550c51aac",
+                "4c006e2b4fa58496cf1ce02d373f7c06f62be9108bf0580caef50ff1a4424a0e",
+                "883abe690939b9fd0f9202059c04bcf231e0d81d56878e86fe7d1f1f132a039a",
+                "11e343720ec8a28d3e3b197cf9f9d26aee96607e914c813471aa82dc7ad07590",
+                "03e85308800fbe8bf876dee098886893f9356434c30576a8625990c392ce5ccb",
+                "1fedd720c6703f3f4f3fd300995618f6127e1e133ef2f760ffa396ba33deb6d6",
+                "f914cdae9ac6c14d71ce9cf11d9df338705ebb3e8d9bbc11d5476db33bb33b35",
+                "42f48636df32c9c07f1e1f98ff295a084cd2615ec5ace2f5a23f1e5306ae667e",
+                "ffa6a3aa64312a1dc651e3f106148207b5c7f4e98c38db5d42e77432dfbf6c0b",
+                "127602f93179f00570e2772c3c47d706399d3a6c46cc10736f1013476f7e729c",
+                "a9145d79753bd808287e715343661aa5ef569cf550e662a04274708fcb527131",
+                "2524e8c5478065e07ec793a98a6836e9545dbf94ab7860800c41a345dd657f6e",
+                "ae41e60742af5c783c55f021fdff6f4c3b095437c7d64b500b1d8be0f8cf4677",
+                "3bb39385764e9cacf5cbdc990c5eff001e0325cb65a582a7dfdc5089dac199af",
+                "1e7a28714235e8bc1b583cb7ebb60251083d5fd50effeced0518e2bba5ffed25",
+                "8acef553b9f2a9c859898249e73603d352c7e11b5bea839adb37abcc837eccce",
+                "0e24502b97ad3e7038383cee0e6e39ac74a784c63b1a1a6ba657d173c597fcad",
+                "ae3ee62500f3ca9e85e4e4c378c14f1fb1f80eb29a0e0a40d3e91de7fdf1fb21"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhg.com",
+                "people.com",
+                "psychcentral.com",
+                "thespruce.com",
+                "thespruceeats.com",
+                "www.allrecipes.com",
+                "www.drugs.com",
+                "www.healthgrades.com",
+                "www.healthline.com",
+                "www.investopedia.com",
+                "www.shape.com",
+                "www.foodandwine.com",
+                "www.thecardiologyadvisor.com",
+                "www.citybeat.com",
+                "www.medicalnewstoday.com",
+                "www.marthastewart.com",
+                "www.intechopen.com",
+                "www.infectiousdiseaseadvisor.com",
+                "practicalneurology.com",
+                "www.renalandurologynews.com"
+            ]
+        },
+        {
+            "rule": "hcn\\.health\\/api\\/v4\\/aim-reader\\/dom-content-loaded",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aim-tag"
+            ],
+            "apis": {},
+            "sites": 91,
+            "prevalence": 0.000623,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bhg.com",
+                "psychcentral.com",
+                "thespruce.com",
+                "www.healthgrades.com",
+                "www.healthline.com",
+                "www.researchgate.net",
+                "www.thespruceeats.com",
+                "www.thoughtco.com",
+                "www.verywellhealth.com",
+                "foodandwine.com",
+                "ce.mayo.edu",
+                "seriouseats.com",
+                "www.medicalnewstoday.com",
+                "www.uclahealth.org",
+                "icdlist.com",
+                "www.thoracic.org",
+                "www.dailypaws.com",
+                "www.buzzrx.com",
+                "www.berkshireeagle.com",
+                "www.marthastewart.com"
+            ]
+        },
+        {
+            "rule": "hcn\\.health\\/api\\/v4\\/aim-reader\\/partner-auth",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aim-tag"
+            ],
+            "apis": {},
+            "sites": 46,
+            "prevalence": 0.000315,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "psychcentral.com",
+                "www.healthgrades.com",
+                "www.healthline.com",
+                "www.researchgate.net",
+                "www.verywellhealth.com",
+                "www.mayoclinichealthsystem.org",
+                "www.myamericannurse.com",
+                "adaa.org",
+                "www.endocrine.org",
+                "journals.sagepub.com",
+                "practicalneurology.com",
+                "www.healio.com",
+                "www.buzzrx.com",
+                "professional.diabetes.org",
+                "www.clinicaladvisor.com",
+                "www.mdvip.com",
+                "www.kidneyfund.org",
+                "bmjopen.bmj.com",
+                "www.mayo.edu",
+                "www.rheumatologyadvisor.com"
+            ]
+        },
+        {
+            "rule": "hcn\\.health\\/api\\/v4\\/partner-tag\\/liveramp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aim-tag"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.000109,
+            "cnames": [],
+            "responseHashes": [
+                "8c6265983c114b0c50ef95a7bbc19a62c037f9c4ecd0c5469e029646d0539ac1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "dmd-tag": 0.00017102202763715965
+            },
+            "exampleSites": [
+                "dermnetnz.org",
+                "greatist.com",
+                "healthprovidersdata.com",
+                "icdlist.com",
+                "journals.sagepub.com",
+                "ndclist.com",
+                "npiprofile.com",
+                "psychcentral.com",
+                "teachmeanatomy.info",
+                "www.abqjournal.com",
+                "www.healio.com",
+                "www.healthgrades.com",
+                "www.healthline.com",
+                "www.intechopen.com",
+                "www.medicalnewstoday.com",
+                "www.sharecare.com"
+            ]
+        },
+        {
+            "rule": "hcn\\.health\\/api\\/v4\\/aim-reader\\/hcp\\/c52cbac0-79e5-11f0-8df1-897303ed42f8\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aim-tag"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "33715d580102bac102f194fdda3820ed66c5f1837a44427c1b3570bfc00a904d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "dmd-tag": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "healio.com",
+                "www.healio.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00116,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3682092555331992
+        },
+        {
+            "domain": "hcn.health",
+            "prevalence": 0.289738430583501
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.10663983903420524
+        },
+        {
+            "domain": "tapnative.com",
+            "prevalence": 0.06438631790744467
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.06438631790744467
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.03219315895372234
+        },
+        {
+            "domain": "healthline.com",
+            "prevalence": 0.02414486921529175
+        },
+        {
+            "domain": "ensighten.com",
+            "prevalence": 0.022132796780684104
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.014084507042253521
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.006036217303822937
+        }
+    ],
+    "types": {
+        "Script": 119,
+        "Document": 118,
+        "XHR": 255,
+        "Image": 16
+    },
+    "nameservers": [
+        "ns-1107.awsdns-10.org",
+        "ns-795.awsdns-35.net",
+        "ns-207.awsdns-25.com",
+        "ns-1554.awsdns-02.co.uk"
+    ]
+}

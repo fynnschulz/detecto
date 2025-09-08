@@ -1,0 +1,853 @@
+{
+    "domain": "imbox.io",
+    "owner": {
+        "name": "ImBox Sweden AB",
+        "displayName": "ImBox Sweden"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00013,
+    "sites": 19,
+    "subdomains": [
+        "files",
+        "widget",
+        "widget-launcher",
+        "triggers-v3",
+        "cdn",
+        "wss",
+        "apiv2"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "imbox\\.io\\/svg\\/Biltema\\/chat\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "files"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "108807e9996142599b75a412368c82e3e23b255efeafed04d33ab5a55e57d48d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biltema.se",
+                "www.biltema.no",
+                "www.biltema.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/app\\/dist\\/initWidget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "files"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 14
+            },
+            "sites": 16,
+            "prevalence": 0.000109,
+            "cnames": [],
+            "responseHashes": [
+                "14a121025eb6dc6431d117be210dc28aad0d7d1ef593d5cdb0b62d20899a3231"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.fastighetsbyran.com",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/widget-v2\\/prod\\/widget\\.js",
+            "cookies": 0.0000547,
+            "fingerprinting": 1,
+            "subdomains": [
+                "files"
+            ],
+            "apis": {
+                "window.name": 15,
+                "Document.cookie getter": 10,
+                "Navigator.prototype.userAgent": 15,
+                "window.sessionStorage": 15,
+                "Navigator.prototype.language": 15,
+                "Date.prototype.getTime": 13,
+                "Document.cookie setter": 8
+            },
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "c502d0af885ccaa7df667c87bcb2c2cc47abcbf85734a734ec0314d689551731"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "imbox": {
+                    "ttl": 2592018,
+                    "length": 52,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/index\\.4216b0a\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "1ede29d89a2b8bcd2b06e453997a81dfc11942f917610fb810b2efc1a9f07c9a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/client\\.788547729fa9e4ad856e\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "bd9ddfc3304167aa2f6d4a5c620cf9953d112701fafa37a7760db9731b7ea678"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/client\\.bundle\\.ae2c69ca7d01a05b6158\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 15,
+                "window.name": 12,
+                "Navigator.prototype.product": 15,
+                "Navigator.prototype.appVersion": 15,
+                "Navigator.prototype.mediaDevices": 11,
+                "Navigator.prototype.appName": 15,
+                "Screen.prototype.width": 12,
+                "Screen.prototype.height": 12,
+                "window.localStorage": 12,
+                "Navigator.prototype.language": 15,
+                "Date.prototype.getTime": 2,
+                "MediaDevices.prototype.enumerateDevices": 2
+            },
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "3736bcb9d79034392e84293751c1b79211b57ff76b06dc089257b87c8a824680"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/client\\.9e8458155ab486f70f32\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget-launcher"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "b27f536319fc5409926c4a43e8a225c80f54ad5eb8bd4cbba645ffbc848f6cf6"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/bundle\\.9e8458155ab486f70f32\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widget-launcher"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 12,
+                "Navigator.prototype.userAgent": 14,
+                "window.name": 11
+            },
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "e83f5eb5d9d7ab8c17c5bc10fb30a34a445e681f27415a61d36f4ecc9587d7c0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/localization-en\\.b6eaff78db3efbaca515\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "2bc6b5a33b4380bdbb8d26a8bc3a4878c709d87a360e81a2fcb69e3801ee72f8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/app\\/static\\/roboto\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "files"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "020945c73e7d52f79490cb2ae61927e22eb9a8346a88a5897588a9446b9b8d77"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/trigger",
+            "cookies": 0.0000889,
+            "fingerprinting": 0,
+            "subdomains": [
+                "triggers-v3"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "4fae8b41fa322876f462cab89215dfc4381823c2f7b663f05b525bfe571c51a7",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "2cd6fe1db8a1bc57ca9af11cccaecb1134f8396ab50a635116fffdd732a7ff65",
+                "96b789cf1f1e27623de55229ed7d49ada5d733da387dfcf0bb4c91fb209bd590",
+                "5dde78566180852c393b59efd813fbdff68b16e8f803175349bea4a3f887b118",
+                "a0f2b96bcb6fdc0cdbdeb93629a0e3941aba727825633681e02a1d2aab89edb3",
+                "aeaef3c06684acf7593e8cc83468f5a8112edc6e46adeecb6588dad1b054311d",
+                "96f15f5ecd56de82175f6ccf043c4e3d6658800b91f1e7bb423c93c7250beb0c",
+                "d8b3da2442c494c5699c4954605da01e5a444f016d22f2e200c4672aff436150",
+                "b48ab2ffef68c9e84c75787629e2ced552fd5e3299c871478e16c227d14b360e",
+                "2e1dbdaa7db9c9d56b904c7bb84facdf438168339e105f5d1dea995e03032668",
+                "363240afe1d1780bd52af1c45278f1623317af4a46c424b06fa432c76c842a7f",
+                "bdfa60b1e61df0263cfbe61e5ba45929af462d2fa7252db5a87abba3dab95578"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/fonts\\/launcher-icon\\.590c11f49c524500c3023d7f1ccfb147\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget-launcher"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "7d1e758f217dc92b6d4d2a593c823b938ff44f9b88b837e941605197c1972e72"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "vparts.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.cancerfonden.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.lager157.com",
+                "www.liseberg.se",
+                "www.vasaloppet.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/flow\\/default\\/images\\/launcher-icon\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "7d1e758f217dc92b6d4d2a593c823b938ff44f9b88b837e941605197c1972e72"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "www.bikester.se",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.elon.se",
+                "www.vasaloppet.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/app\\/static\\/fonts\\/roboto\\/roboto-v27-latin-regular\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "files"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "81d931a8c973b5bc8f9ded86a3440bd247a58e592b3897bf755c1a5d8390d763"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "nordicwellness.se",
+                "www.bikester.se",
+                "www.blomsterlandet.se",
+                "www.ctek.com",
+                "www.cykloteket.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.liseberg.se",
+                "www.vasaloppet.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/widget-app\\.788547729fa9e4ad856e\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "835531c7ef4f8232c212d937627449b0b55b6d8490d103b3c1203657fa7c3816"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "www.dormy.com"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/widget-app\\.fb63098b3611191a02d8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0595b8a6df882fbe72e14fe18cee39458fcae964aaa9b3996a38c0cf7c57cb3e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "www.dormy.com"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/app\\/static\\/material-icons\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "files"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5784af48158b5fdb223ac320b922f4f1e6b576d12dc85007819331ea151cb02c"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "www.dormy.com"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/widget-answers\\.788547729fa9e4ad856e\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ef9574c8def614b9c29154a81435c90792755627f104bb48e3d902b5efbb4790"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "www.dormy.com"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/widget-answers\\.1b975ea1335591538664\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8e66665dc2456bf904e664d8e4ac0aeeb691efe7fdc00f535434316d57518c21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "www.dormy.com"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/widget-formbuilder\\.788547729fa9e4ad856e\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "01e05ba2621e49edfbf31ec0d4c79414c1fc0a1d624fef7105c9af899dec6a6d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "www.dormy.com"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/widget-formbuilder\\.2d0e6374d42ce39295ca\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "94023ba3207c9ccae880e9b999d4507209e78bfb68eb0844821f3409100892b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hedinautomotive.se",
+                "www.dormy.com"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/primus\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Navigator.prototype.onLine": 7,
+                "Navigator.prototype.userAgent": 7
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "13e863852fbc4f714691995c24b778f2be66985cd79d8d19409b190100f83448"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordicwellness.se",
+                "www.bikester.se",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.liseberg.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/primus\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wss"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "0909951a99d420b72e3d74d9a5f0512ed715a0f34d7fda7ca569edc3cab84b80",
+                "bc950fb96ea6931fb61dc79032bc81709e5783ef76f0f1e662d94a2624ab5be4",
+                "2b1ec08911d93edd49f76610be7c11df44357c347ddd537e7a3aa989d616f46e",
+                "3db0c9184cc25293240f22bb2bcd2784de2e84ddd912594bbb3cc777e0d43229",
+                "146a9ce88e2e4fb3346831821b229828ad62aa2a316d8b8ee7e4ab6c2a8dbde4",
+                "5cd0456e931b9d4310dc8ac32f94e125df9b88096e6f5c36797fc1978da05d68"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordicwellness.se",
+                "www.bikester.se",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.liseberg.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/api\\/widgeturl\\/2426",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apiv2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "7acbdfd3ad3c6d4ce5760e942893f1fc005ad626ca49bfb3e6c6446fefcf2763"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikester.se",
+                "www.cykloteket.se",
+                "www.cykelkraft.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/localization-sv\\.b098434b49f9e74b0369\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "7cb60d6c38eff46455135e3e059bf00e6162854b555890774b43eed385d44df6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikester.se",
+                "www.blomsterlandet.se",
+                "www.cykloteket.se",
+                "www.cykelkraft.se",
+                "www.dormy.com",
+                "www.elon.se",
+                "www.willys.se"
+            ]
+        },
+        {
+            "rule": "imbox\\.io\\/api\\/widgeturl\\/2217",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apiv2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7acbdfd3ad3c6d4ce5760e942893f1fc005ad626ca49bfb3e6c6446fefcf2763"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ctek.com",
+                "www.ctek.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000889,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.875
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.08333333333333333
+        },
+        {
+            "domain": "imbox.se",
+            "prevalence": 0.041666666666666664
+        }
+    ],
+    "types": {
+        "Image": 24,
+        "Script": 101,
+        "Document": 15,
+        "Stylesheet": 51,
+        "XHR": 22,
+        "Font": 12
+    },
+    "nameservers": [
+        "tim.ns.cloudflare.com",
+        "sue.ns.cloudflare.com"
+    ]
+}

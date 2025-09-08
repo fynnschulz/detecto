@@ -1,0 +1,815 @@
+{
+    "domain": "aliyuncs.com",
+    "owner": {
+        "name": "Alibaba Group",
+        "displayName": "Alibaba"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000814,
+    "sites": 119,
+    "subdomains": [
+        "ep2x3kiawg-sdk.rum",
+        "eex8nehrx0-sdk.rum",
+        "sdk.rum",
+        "ep2x3kiawg-default-us.rum",
+        "hc16tz0u58-default-us.rum",
+        "eex8nehrx0-default-cn.rum",
+        "j2c03hoppk-default-cn.rum",
+        "s5-cs-pub-std.oss-ap-southeast-1",
+        "pango-virginia-prod-dji-official.us-east-1.log",
+        "p-wonderidea-rdr.us-east-1.log",
+        "arms-retcode",
+        "retcode-us-west-1.arms",
+        "arms-retcode-sg",
+        "s9-cs-pub.oss-eu-central-1",
+        "ideafyi.oss-us-west-1",
+        "wx-analytics.cn-hongkong.log",
+        "k8s-log-custom-gcp-popmart-us-prod.us-west-1.log",
+        "rto-study.oss-us-west-1",
+        "file-attachment.oss-us-west-1",
+        "lvtian-pics-us.oss-us-west-1",
+        "hollyland.oss-us-east-1",
+        "prod-hsm-designs.oss-us-east-1",
+        "gaoding-prod-use.us-east-1.log",
+        "tap-snow-hk.log-global",
+        "nlb-vuyt41vm4ajpnwwimz.cn-shanghai.nlb"
+    ],
+    "cnames": [
+        {
+            "original": "static-uec.wondershare.com",
+            "resolved": "file-attachment.oss-us-west-1.aliyuncs.com"
+        },
+        {
+            "original": "tpm.tuyacn.com",
+            "resolved": "nlb-vuyt41vm4ajpnwwimz.cn-shanghai.nlb.aliyuncs.com"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "aliyuncs\\.com\\/v2\\/browser-sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ep2x3kiawg-sdk.rum",
+                "eex8nehrx0-sdk.rum",
+                "sdk.rum"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Navigator.prototype.connection": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "a47e417b70e9c0c0be41b35d5bb7571b336555bf14c3646fdc38e3688f6953ba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cupshe.com",
+                "www.cupshe.com",
+                "www.echemi.com",
+                "z.ai"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ep2x3kiawg-default-us.rum",
+                "hc16tz0u58-default-us.rum",
+                "eex8nehrx0-default-cn.rum",
+                "j2c03hoppk-default-cn.rum"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cupshe.com",
+                "www.chitubox.com",
+                "www.cupshe.com",
+                "www.echemi.com",
+                "z.ai"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/im_plugin_button_image\\/tid369\\/chat_1690346223186_bid58\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s5-cs-pub-std.oss-ap-southeast-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cupshe.com",
+                "www.cupshe.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-monitor\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pango-virginia-prod-dji-official.us-east-1.log"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "djicdn.com",
+                "dl.djicdn.com",
+                "support.dji.com",
+                "www.dji.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/fh5-logstore\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p-wonderidea-rdr.us-east-1.log"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fliphtml5.com",
+                "online.fliphtml5.com",
+                "www.dlevans.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/r\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arms-retcode",
+                "retcode-us-west-1.arms",
+                "arms-retcode-sg"
+            ],
+            "apis": {},
+            "sites": 13,
+            "prevalence": 0.0000889,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_bl_uid": 0.000047886167738404704,
+                "_uetsid": 0.000006840881105486387,
+                "_uetvid": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "insta360.com",
+                "forums.insta360.com",
+                "hitvweb.com",
+                "home.hitv.vip",
+                "onlinemanual.insta360.com",
+                "picwish.com",
+                "www.easyfun.gg",
+                "www.hitv.vip",
+                "www.homestyler.com",
+                "www.ifoto.ai",
+                "www.lagofast.com",
+                "www.seeedstudio.com",
+                "www.zeekrlife.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/im_plugin_button_image\\/tid15\\/%E5%92%A8%E8%AF%A2icon%E6%96%B02_1716557291792_vpi48_1732193185465_dmpmo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s9-cs-pub.oss-eu-central-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "eb53a82b0733fd2255bf3346578615d7c725db45edf435e712e92b76a8e7d4a7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gofoexpress.com",
+                "www.gofoexpress.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/im_plugin_button_image\\/tid15\\/%E5%92%A8%E8%AF%A2icon%E6%96%B02_1716557291792_vpi48_1732193180470_h8dpu\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s9-cs-pub.oss-eu-central-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "eb53a82b0733fd2255bf3346578615d7c725db45edf435e712e92b76a8e7d4a7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gofoexpress.com",
+                "www.gofoexpress.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/r\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arms-retcode",
+                "retcode-us-west-1.arms",
+                "arms-retcode-sg"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_bl_uid": 0.000047886167738404704
+            },
+            "exampleSites": [
+                "hitvweb.com",
+                "home.hitv.vip",
+                "onlinemanual.insta360.com",
+                "picwish.com",
+                "www.easyfun.gg",
+                "www.hitv.vip",
+                "www.homestyler.com",
+                "www.ifoto.ai",
+                "www.lagofast.com",
+                "www.reelshort.com",
+                "www.seeedstudio.com",
+                "www.zeekrlife.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/js\\/blocker\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ideafyi.oss-us-west-1"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "90b129e1bf10836a497a9daa8b95723b53c68e49009b9c0e1fb8370526d466ea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_idy_cid": {
+                    "ttl": 157680010,
+                    "length": 36,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "holdernessandbourne.com",
+                "hydrangea.com",
+                "www.aneros.com",
+                "www.greatgardenplants.com",
+                "www.nilight.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/hawkeye\\/track_ua\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wx-analytics.cn-hongkong.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "letsview.com",
+                "picwish.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/prod-global-us-raw\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-log-custom-gcp-popmart-us-prod.us-west-1.log"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "popmart.com",
+                "m.popmart.com",
+                "www.popmart.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/prod-global-us-raw\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-log-custom-gcp-popmart-us-prod.us-west-1.log"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "popmart.com",
+                "m.popmart.com",
+                "www.popmart.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/js\\/filter\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ideafyi.oss-us-west-1"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "101c5363ffe3a0d72d5260bae79eb0fe7b66daa96ecd6fe958207ad6d51f0575"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_idy_cid": {
+                    "ttl": 157680024,
+                    "length": 36,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "territorialseed.com",
+                "www.asp-usa.com",
+                "www.masachips.com",
+                "www.sub-shop.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/headless\\/omnitrack-headless\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "rto-study.oss-us-west-1"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "CanvasRenderingContext2D.prototype.measureText": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.webdriver": 2,
+                "window.localStorage": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "6ecf001f55d11bab2e868f66f7c7a434757a53afd66efe0ee66d93a2b35ce365"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_rto_interPlatform": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "rto-new-user": {
+                    "ttl": 31536006,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "rto-customId": {
+                    "ttl": 31536006,
+                    "length": 46,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "rto-finger": {
+                    "ttl": null,
+                    "length": 64,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "rto_session": {
+                    "ttl": 1821,
+                    "length": 46,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "rto_cartToken": {
+                    "ttl": null,
+                    "length": 46,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "__rto_updateToken": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "rto_consentMode": {
+                    "ttl": 36288032,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "shopCurrency": {
+                    "ttl": null,
+                    "length": 3,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "govee.com",
+                "us.govee.com",
+                "www.govee.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/aicrm\\/res\\/1634850289097248782\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "file-attachment.oss-us-west-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "static-uec.wondershare.com",
+                    "resolved": "file-attachment.oss-us-west-1.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [
+                "73ec05f30790861dc50b1d63f701d8104087ff945d1f05d3d98447f236ca7ad3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wondershare.com",
+                "videoconverter.wondershare.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/aicrm\\/res\\/1723667081567019090\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "file-attachment.oss-us-west-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "static-uec.wondershare.com",
+                    "resolved": "file-attachment.oss-us-west-1.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [
+                "e923a172616bb54af69e20dd2620c2c6e4ccc7ee7f799e723abb7388a1ea98c1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wondershare.com",
+                "virbo.wondershare.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/uploads\\/allimg\\/20230530\\/53eb4bc9e2d8e07841933d1cba66c47b\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lvtian-pics-us.oss-us-west-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c1c9d24988811dff84c829a330431b1439e8a44502c56a1b16ad1695e4588388"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greenskybio.com",
+                "www.greenskybio.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/uploads\\/allimg\\/20230519\\/ded367be391054d1ecfb42ca0a99ca0b\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lvtian-pics-us.oss-us-west-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c2b7d7042258c48a75a1713ef3ea0d3ebe82a0eca34b70b87d2a085dda03cfbd"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greenskybio.com",
+                "www.greenskybio.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/official-website\\/guanwang\\/search-logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hollyland.oss-us-east-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2a1370c4a6a4cc74b0094a45259540026b8824336c52872978b47ac333d4ee58"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hollyland.com",
+                "www.hollyland.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/production\\/upload\\/images\\/b13e1012-ff60-4ef5-9b9d-7e9c587e7d9a\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-hsm-designs.oss-us-east-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c7cc72971db76351e3f964de1d80d708bf43fe3baa2ebe2e9ef7f9d91195fec2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "homestyler.com",
+                "www.homestyler.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/gaoding-prod-use-rum-raw\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gaoding-prod-use.us-east-1.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "insmind.com",
+                "www.insmind.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/web-logs\\/track_ua\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tap-snow-hk.log-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "web_app_uuid": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "taptap.io",
+                "www.taptap.io"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/tpm\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nlb-vuyt41vm4ajpnwwimz.cn-shanghai.nlb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "tpm.tuyacn.com",
+                    "resolved": "nlb-vuyt41vm4ajpnwwimz.cn-shanghai.nlb.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [
+                "a9de149501872c7d540b5a9a9ec752837b29be1dfaf091b68be01f562520360e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_tpmGuid": 0.000013681762210972774,
+                "_tpmSeqId": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "tuya.com",
+                "www.tuya.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000547,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6385542168674698
+        },
+        {
+            "domain": "alicdn.com",
+            "prevalence": 0.2063253012048193
+        },
+        {
+            "domain": "djiits.com",
+            "prevalence": 0.0286144578313253
+        },
+        {
+            "domain": "tapimg.com",
+            "prevalence": 0.02108433734939759
+        },
+        {
+            "domain": "wondershare.cc",
+            "prevalence": 0.016566265060240965
+        },
+        {
+            "domain": "cdn5th.com",
+            "prevalence": 0.01355421686746988
+        },
+        {
+            "domain": "bb-os.com",
+            "prevalence": 0.009036144578313253
+        },
+        {
+            "domain": "udesk.cn",
+            "prevalence": 0.009036144578313253
+        },
+        {
+            "domain": "hitvpro.com",
+            "prevalence": 0.009036144578313253
+        },
+        {
+            "domain": "dancf.com",
+            "prevalence": 0.009036144578313253
+        }
+    ],
+    "types": {
+        "Script": 16,
+        "Ping": 10,
+        "Image": 22,
+        "Fetch": 17,
+        "XHR": 20
+    },
+    "nameservers": [
+        "ns3.aliyun.com",
+        "ns4.aliyun.com",
+        "ns5.aliyun.com"
+    ]
+}

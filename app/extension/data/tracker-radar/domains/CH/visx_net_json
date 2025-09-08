@@ -1,0 +1,330 @@
+{
+    "domain": "visx.net",
+    "owner": {
+        "name": "YOC AG",
+        "displayName": "YOC"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000804,
+    "sites": 8,
+    "subdomains": [
+        "s",
+        "t",
+        "sync"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "visx\\.net\\/tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "s"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3,
+                "Screen.prototype.orientation": 3,
+                "Navigator.prototype.languages": 3,
+                "window.localStorage": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "5547e001d9c571b2ce5442e40c1c9170a0ec833ff9ef33dffbe4ddd5f1479307"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "swisshockeynews.ch",
+                "www.kleinreport.ch",
+                "www.swisswebcams.ch",
+                "www.wetter.ch"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/hb_post",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "2a47db61b2f01819c099176e8c65d4db6d5e5b3f723086fa712187d9be2168c1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "affolteranzeiger.ch",
+                "www.codecheck.info",
+                "www.fernsehserien.de",
+                "www.wunschliste.de"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/ul_cb\\/hb_post",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "affolteranzeiger.ch",
+                "www.fernsehserien.de",
+                "www.wunschliste.de"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/push_sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "3f9e9d6ee8991b18b733e58c493575c34faf1af2fde7baa36cf51a3f10e397f6"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "affolteranzeiger.ch",
+                "www.fernsehserien.de",
+                "www.wunschliste.de"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/v1\\/sync",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "238e65a4d9aaaf2ccfefa7f092c48c5d8911e2a8372ec9df2ae38b9a22492b77"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "affolteranzeiger.ch",
+                "www.affolteranzeiger.ch",
+                "www.kleinreport.ch",
+                "www.swisswebcams.ch",
+                "www.wetter.ch"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/sync",
+            "cookies": 0.000502,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "affolteranzeiger.ch",
+                "www.fernsehserien.de",
+                "www.kleinreport.ch",
+                "www.swisswebcams.ch",
+                "www.wetter.ch"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/sync",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "affolteranzeiger.ch",
+                "www.kleinreport.ch",
+                "www.swisswebcams.ch",
+                "www.wetter.ch"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/sync_proxy",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fernsehserien.de",
+                "www.kleinreport.ch",
+                "www.swisswebcams.ch",
+                "www.wetter.ch"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/dmp_sync",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fernsehserien.de",
+                "www.kleinreport.ch",
+                "www.swisswebcams.ch",
+                "www.wetter.ch"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/adj",
+            "cookies": 0.000301,
+            "fingerprinting": 1,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kleinreport.ch",
+                "www.swisswebcams.ch",
+                "www.wetter.ch"
+            ]
+        },
+        {
+            "rule": "visx\\.net\\/ul_cb\\/adj",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "eb346dae55d070692b6d09cb0fd79be00fa0dc9fe04245cfcc58e2b517f75517",
+                "27861fe5536159f639696828f5ea06abc93da4dcea0936f05cc8f6bc8865c7d7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kleinreport.ch",
+                "www.swisswebcams.ch",
+                "www.wetter.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000603,
+    "topInitiators": [
+        {
+            "domain": "yoc.com",
+            "prevalence": 0.40476190476190477
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "connectad.io",
+            "prevalence": 0.09523809523809523
+        },
+        {
+            "domain": "adnz.co",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "adition.com",
+            "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.023809523809523808
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "Fetch": 7,
+        "Document": 7,
+        "Image": 18
+    },
+    "nameservers": [
+        "ns2.variomedia.de",
+        "ns1.variomedia.de"
+    ]
+}

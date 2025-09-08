@@ -1,0 +1,75 @@
+{
+    "domain": "ybn.io",
+    "owner": {
+        "name": "Yodle",
+        "displayName": "Yodle"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "yotrack.cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "ybn\\.io\\/yotrack\\.min\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "yotrack.cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.platform": 1,
+                "Screen.prototype.availHeight": 1,
+                "Screen.prototype.availWidth": 1,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7a087e3d9729e13e04cb3b6d8034fe6d4ed9a6c3bc50de0e0c3739b5a33a213e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "vt": {
+                    "ttl": 1209611,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "budgetblinds.com",
+                "www.carpetone.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2
+    },
+    "nameservers": [
+        "dns4.name-services.com",
+        "dns1.name-services.com",
+        "dns5.name-services.com",
+        "dns2.name-services.com",
+        "dns3.name-services.com"
+    ]
+}

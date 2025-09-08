@@ -1,0 +1,123 @@
+{
+    "domain": "yobi.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000103,
+    "sites": 15,
+    "subdomains": [
+        "pixel"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "yobi\\.ai\\/$web\\/yopixel\\.js",
+            "cookies": 0.0000616,
+            "fingerprinting": 2,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {
+                "Document.cookie getter": 9,
+                "Date.prototype.getTime": 9,
+                "Document.cookie setter": 9,
+                "Screen.prototype.width": 9,
+                "Screen.prototype.height": 9,
+                "window.innerWidth": 9,
+                "window.innerHeight": 9,
+                "Screen.prototype.colorDepth": 9,
+                "Navigator.prototype.userAgent": 9,
+                "Navigator.prototype.maxTouchPoints": 9,
+                "Date.prototype.getTimezoneOffset": 9
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "1fad1b4a784aae1af3e83f019c7d43082967479462b686aed5664eeb6d6f25bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__yopix_uid": {
+                    "ttl": 63072012,
+                    "length": 19,
+                    "prevalence": 0.00006156792994937747,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "merrell.com",
+                "saucony.com",
+                "williams-sonoma.com",
+                "www.experian.com",
+                "www.maccosmetics.com",
+                "www.merrell.com",
+                "www.originalmattress.com",
+                "www.saucony.com",
+                "www.williams-sonoma.com"
+            ]
+        },
+        {
+            "rule": "yobi\\.ai\\/$web\\/pixel\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__yopix_uid": 0.00006156792994937747,
+                "IR_gbd": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "merrell.com",
+                "saucony.com",
+                "williams-sonoma.com",
+                "www.experian.com",
+                "www.maccosmetics.com",
+                "www.merrell.com",
+                "www.originalmattress.com",
+                "www.saucony.com",
+                "www.williams-sonoma.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000103,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6086956521739131
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.34782608695652173
+        },
+        {
+            "domain": "ensighten.com",
+            "prevalence": 0.043478260869565216
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Image": 9
+    },
+    "nameservers": [
+        "ns4-07.azure-dns.info",
+        "ns2-07.azure-dns.net",
+        "ns1-07.azure-dns.com",
+        "ns3-07.azure-dns.org"
+    ]
+}

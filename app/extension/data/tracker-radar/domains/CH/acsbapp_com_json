@@ -1,0 +1,161 @@
+{
+    "domain": "acsbapp.com",
+    "owner": {
+        "name": "accessiBe Inc.",
+        "displayName": "accessiBe"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.00151,
+    "sites": 15,
+    "subdomains": [
+        "eu",
+        "cdn",
+        "eu-cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "acsbapp\\.com\\/apps\\/app\\/dist\\/js\\/app\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "eu"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 14,
+                "Navigator.prototype.maxTouchPoints": 14,
+                "window.devicePixelRatio": 14,
+                "window.localStorage": 9,
+                "NavigatorUAData.prototype.brands": 9
+            },
+            "sites": 14,
+            "prevalence": 0.00141,
+            "cnames": [],
+            "responseHashes": [
+                "8b1bdc957f8e41e36e356f930582c81c1fd442f07c32ba78a7432c72e537e516"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omsystem.com",
+                "metamask.io",
+                "metricool.com",
+                "www.dlink.com",
+                "www.ferrari.com",
+                "www.klapp.pro",
+                "www.lycamobile.ch",
+                "www.mobylines.de",
+                "www.remax.ch",
+                "www.scott-sports.com",
+                "www.serfaus-fiss-ladis.at",
+                "www.shelly.com",
+                "www.swizzonic.ch",
+                "www.wickedweasel.com"
+            ]
+        },
+        {
+            "rule": "acsbapp\\.com\\/cache\\/app\\/wildcards\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn",
+                "eu-cdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "2af2b3ffd2026621f59f88b9af822b702a3c043a991fc7477274dc20530a8153"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omsystem.com",
+                "www.klapp.pro",
+                "www.remax.ch",
+                "www.serfaus-fiss-ladis.at",
+                "www.wickedweasel.com"
+            ]
+        },
+        {
+            "rule": "acsbapp\\.com\\/apps\\/app\\/dist\\/js\\/locale\\/de-app\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "bdd701e816a2f6be76710eb0ac580cc6f4f2b8f565717673b3e9379eb98f83d8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mobylines.de",
+                "www.scott-sports.com",
+                "www.swizzonic.ch"
+            ]
+        },
+        {
+            "rule": "acsbapp\\.com\\/config\\/wickedweasel\\.com\\/config\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bde9c2949e64d059c18d8f93566a64dafc6d2e8e259a70322fb804831dfd0b5b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wickedweasel.com",
+                "www.wickedweasel.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5897435897435898
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3076923076923077
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.05128205128205128
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.05128205128205128
+        }
+    ],
+    "types": {
+        "Script": 14,
+        "Fetch": 10
+    },
+    "nameservers": [
+        "bill.ns.cloudflare.com",
+        "davina.ns.cloudflare.com"
+    ]
+}

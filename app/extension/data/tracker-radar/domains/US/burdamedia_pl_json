@@ -1,0 +1,739 @@
+{
+    "domain": "burdamedia.pl",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "static",
+        "burdaffi",
+        "edicloud",
+        "collector-ext"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "burdamedia\\.pl\\/burdaffi\\/notice\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "14067fb2ced1294a23cb82058cf01d548b0c8ed3d0ce2d39a053ce091ca5bcf0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "mamotoja.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/script\\/init\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 9
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "d6d89a3298e61d2b01d515a218aed54e26a6d43d808b6f7151ccf382a3a4aea8",
+                "b4a45ea3ee4667f5e053fd17035717a14ca271a488d6ea51976e505abd275931"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "mamotoja.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.mojegotowanie.pl",
+                "www.national-geographic.pl",
+                "www.przyslijprzepis.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/videos\\/get-related",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edicloud"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "436a0161a037087c739a8875d9182542bb62de3445ca8f7739a3f6ea4017bbba",
+                "a4294a72cfc9ca93ad03ecd78519ab22c3274b65130157089a48f51ad33201e8",
+                "4fc56994968cff660194e184677b233f0327392e201198f02fbf6c2b816bbb64",
+                "cefa9e7786cdddf0214b04db9f6d05bd2a98047efa6f1cbd528a4f94464637cb",
+                "2c9007788dfec6eaeca592f17d113bdf427342b86594fd716f29e59f5e9ec38d",
+                "bb9adad92712895111d844858e3e16a1711f980f80bca7b871e725b6fdc71ad7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "polki.pl",
+                "mamotoja.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/script\\/242f481d401ac7b2e9eed2a9ed1fbcdc\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "36778f6b6b4ae568f9566da1613f64023b265edc2f9bcaa147515b7f5a96395d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/script\\/0fe59064b8b1b7c9a70b2958cd1a4f7a\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "daccc6f938be040272988c966aa9978b29498bb6674ffc3f2be78f5d8dc62a16"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/location_data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "polki.pl",
+                "mamotoja.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/location_data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "polki.pl",
+                "mamotoja.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/assets\\/css\\/obf5e726d0af5fdc8e8e28a147bc2af1c11\\/layout\\.custom\\.box_desktop_2x2_mobile_2x2\\.polki-pl\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4806de780c759cb324c478f64b48040e8cb5222e22ecaafc0de7d7aba39876b8"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-ext"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "polki.pl",
+                "inspiracje.polki.pl",
+                "mamotoja.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.mojegotowanie.pl",
+                "www.national-geographic.pl",
+                "www.przyslijprzepis.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/resolve\\/cropped\\/rc\\/WeLJCwlo\\/uploads\\/images\\/widgets\\/elements\\/689b22e71cfba620549332\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/resolve\\/cropped\\/rc\\/IDGBy3XP\\/uploads\\/images\\/widgets\\/elements\\/6899dc0c3a3f2192244661\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/resolve\\/cropped\\/rc\\/DqyM73h0\\/uploads\\/images\\/widgets\\/elements\\/689d9ac9860ac709654363\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "126bd6b34005d7de548e5a31ba7056933885d8d640b27e807c2cc419c4d7fc8a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/assets\\/css\\/obf5e726d0af5fdc8e8e28a147bc2af1c11\\/layout\\.custom\\.box_desktop_4x1_mobile_1x3\\.polki-pl\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "db836c163f3e34ba413ee39ab11c2546bf416b57b7eb3db0023951517d19febc"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/resolve\\/cropped\\/rc\\/ETqiztZ9\\/uploads\\/images\\/widgets\\/elements\\/6899d15f1fe8b110809828\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/cropped\\/rc\\/IDGBy3XP\\/uploads\\/images\\/widgets\\/elements\\/6899dc0c3a3f2192244661\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "c0855a60ddfe7e624afb65cc70ab088f005a65311426c7b17bd4905e49845a8b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/cropped\\/rc\\/WeLJCwlo\\/uploads\\/images\\/widgets\\/elements\\/689b22e71cfba620549332\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "9224685a3f49c3f337ecdbedc8e68fc3c51ca68c43f1522e76219fe65ac17e2f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/cropped\\/rc\\/DqyM73h0\\/uploads\\/images\\/widgets\\/elements\\/689d9ac9860ac709654363\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "126bd6b34005d7de548e5a31ba7056933885d8d640b27e807c2cc419c4d7fc8a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/cropped\\/rc\\/ETqiztZ9\\/uploads\\/images\\/widgets\\/elements\\/6899d15f1fe8b110809828\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "57ff8cca6ec5d526547e4390f2d0a367e47a613b727f76907da1cda6b755af0c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "stylzycia.polki.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/resolve\\/cropped\\/rc\\/fEhiMwCi\\/uploads\\/images\\/widgets\\/elements\\/689d0f4b9bcbb453926774\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mamotoja.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/cropped\\/rc\\/fEhiMwCi\\/uploads\\/images\\/widgets\\/elements\\/689d0f4b9bcbb453926774\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bdeaef44386df51feb7fd985ad9c6c42717991141d8e3f8a9fc8ab023bf8a4ca"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mamotoja.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/resolve\\/cropped\\/rc\\/8bF0GvaI\\/uploads\\/images\\/widgets\\/elements\\/67a0c38a34031433060604\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/cropped\\/rc\\/8bF0GvaI\\/uploads\\/images\\/widgets\\/elements\\/67a0c38a34031433060604\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "fe0be92405e3fd1331718d8f042f5590414c1f8b9a683d6b14f634e5c53fd322"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polki.pl",
+                "viva.pl",
+                "wizaz.pl",
+                "www.elle.pl",
+                "www.national-geographic.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/resolve\\/cropped\\/rc\\/RtBgVqzY\\/uploads\\/images\\/widgets\\/elements\\/689d9b3ab92e2941800487\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "viva.pl",
+                "www.elle.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/media\\/cache\\/cropped\\/rc\\/RtBgVqzY\\/uploads\\/images\\/widgets\\/elements\\/689d9b3ab92e2941800487\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "19a2e582598d0de2e93c5f35b6fb446b301e5afdcb9710e16f70458dde5cdfd0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "viva.pl",
+                "www.elle.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/build\\/placement\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e7b043b28b208dfc08d382ad64aab52ed07493aa5df1a168c049841ce74a1e73"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizaz.pl",
+                "www.elle.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/build\\/placement\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3efde48061e9c4260b87a828984bd1a0cd230037e3979845c26149f4edf3c93d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wizaz.pl",
+                "www.elle.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/location\\/data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "wizaz.pl",
+                "www.elle.pl"
+            ]
+        },
+        {
+            "rule": "burdamedia\\.pl\\/location\\/data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "burdaffi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "wizaz.pl",
+                "www.elle.pl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7741935483870968
+        },
+        {
+            "domain": "12341234.pl",
+            "prevalence": 0.22580645161290322
+        }
+    ],
+    "types": {
+        "Script": 21,
+        "XHR": 16,
+        "Preflight": 9,
+        "Stylesheet": 6,
+        "Image": 68
+    },
+    "nameservers": [
+        "ns3.burdanet.pl",
+        "ns2.burdanet.pl",
+        "ns1.burdanet.pl"
+    ]
+}

@@ -1,0 +1,394 @@
+{
+    "domain": "t-mobile.com.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000889,
+    "sites": 13,
+    "subdomains": [
+        "cac-dsg-agw",
+        "web.analytics",
+        "secure.message"
+    ],
+    "cnames": [
+        {
+            "original": "adn.t-mobile.com",
+            "resolved": "cac-dsg-agw.t-mobile.com.edgekey.net"
+        },
+        {
+            "original": "secure.message.t-mobile.com",
+            "resolved": "secure.message.t-mobile.com.edgekey.net"
+        },
+        {
+            "original": "web.analytics.t-mobile.com",
+            "resolved": "web.analytics.t-mobile.com.edgekey.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/guest-auth\\/prd01\\/guest\\/v1\\/tokens",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cac-dsg-agw"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "adn.t-mobile.com",
+                    "resolved": "cac-dsg-agw.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "account.t-mobile.com",
+                "promotions.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/guest-auth\\/prd01\\/guest\\/v1\\/tokens",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cac-dsg-agw"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "adn.t-mobile.com",
+                    "resolved": "cac-dsg-agw.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e7f57a3d3d9b527566dafef3a472dcf41ea0fa2d49fde8fa0e88cc707f5bf4e0",
+                "fc5677c6f8ef96eb97a1596e1c9ead5127036e8df1e0ab982075c2cf5c2084d7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "account.t-mobile.com",
+                "promotions.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/api\\/v1\\/t-life\\/webapp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web.analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "web.analytics.t-mobile.com",
+                    "resolved": "web.analytics.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "fiber.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/api\\/v1\\/t-life\\/webapp",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web.analytics"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [
+                {
+                    "original": "web.analytics.t-mobile.com",
+                    "resolved": "web.analytics.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "fiber.t-mobile.com",
+                "my.t-mobile.com",
+                "prepaid.t-mobile.com",
+                "promotions.t-mobile.com",
+                "www.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/msg\\/v1\\/static-assets\\/ccaas-sdk-wrapper\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "secure.message"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "secure.message.t-mobile.com",
+                    "resolved": "secure.message.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "39b1a9185277a0759ce493e797641975436aa1ffdc79358b24a2ffefd1219a96"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "my.t-mobile.com",
+                "www.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/api\\/v1\\/t-life\\/webapp",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web.analytics"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [
+                {
+                    "original": "web.analytics.t-mobile.com",
+                    "resolved": "web.analytics.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "my.t-mobile.com",
+                "prepaid.t-mobile.com",
+                "promotions.t-mobile.com",
+                "www.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/msg\\/v1\\/static-assets\\/ca-tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure.message"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "secure.message.t-mobile.com",
+                    "resolved": "secure.message.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "my.t-mobile.com",
+                "www.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/msg\\/v1\\/static-assets\\/ca-tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure.message"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "secure.message.t-mobile.com",
+                    "resolved": "secure.message.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "53555ae3657359e53c43f4c54e27144cc15e7626c49937eb6dab7766f77fb5c5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "my.t-mobile.com",
+                "www.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/msg\\/v1\\/static-assets\\/smpd-ca-shared-tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "secure.message"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "secure.message.t-mobile.com",
+                    "resolved": "secure.message.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "my.t-mobile.com",
+                "www.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/msg\\/v1\\/static-assets\\/smpd-ca-shared-tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "secure.message"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "secure.message.t-mobile.com",
+                    "resolved": "secure.message.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "fd7689861256e0ce1172207131c5b6919d82bb3520163282b543f44ef1c61952"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "my.t-mobile.com",
+                "www.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/msg\\/v1\\/static-assets\\/smpd-tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure.message"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "secure.message.t-mobile.com",
+                    "resolved": "secure.message.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "my.t-mobile.com",
+                "www.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\.edgekey\\.net\\/msg\\/v1\\/static-assets\\/smpd-tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure.message"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "secure.message.t-mobile.com",
+                    "resolved": "secure.message.t-mobile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "ce7426647ccf6fddf037274d8b2fcd35a8f981035e368252639a321dcb580b51"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "my.t-mobile.com",
+                "www.t-mobile.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000041,
+    "topInitiators": [
+        {
+            "domain": "quantummetric.com",
+            "prevalence": 0.48
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.28
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.24
+        }
+    ],
+    "types": {
+        "Preflight": 8,
+        "XHR": 3,
+        "Other": 2,
+        "Fetch": 15,
+        "Script": 12
+    },
+    "nameservers": []
+}

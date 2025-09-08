@@ -1,0 +1,401 @@
+{
+    "domain": "cordlessmedia.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000958,
+    "sites": 14,
+    "subdomains": [
+        "cdn",
+        "ads",
+        "srv",
+        "multipass"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "cordlessmedia\\.com\\/meta\\/cmm\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "fdb9d583620a6414ca7df29b45021f3985002434a27102337cb7c4bb0c54ad37"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agreatertown.com",
+                "primemls.com",
+                "www.lakehomes.com",
+                "www.mlslistings.com",
+                "www.realty.com",
+                "www.realtyhop.com",
+                "www.utahrealestate.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/ad-wrapper\\/lib\\/prebid\\/v9\\/prebid\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 7,
+                "NavigatorUAData.prototype.platform": 7,
+                "window.sessionStorage": 7,
+                "Navigator.prototype.userAgent": 7,
+                "Date.prototype.getTime": 5,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5,
+                "window.innerWidth": 5,
+                "window.innerHeight": 5,
+                "Navigator.prototype.doNotTrack": 5,
+                "Navigator.prototype.language": 5,
+                "Navigator.prototype.webdriver": 5,
+                "Navigator.prototype.cookieEnabled": 5,
+                "window.localStorage": 5,
+                "Document.cookie getter": 4,
+                "Navigator.prototype.connection": 4,
+                "window.name": 3,
+                "Document.cookie setter": 1
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "00cbab2c32f8a6fb3a02a5831782d0fe81147da7ddcb9fd79faabd5f7210b73f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cto_bundle": {
+                    "ttl": null,
+                    "length": 308,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agreatertown.com",
+                "primemls.com",
+                "www.lakehomes.com",
+                "www.mlslistings.com",
+                "www.realtyhop.com",
+                "www.utahrealestate.com",
+                "www.valleymls.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/prebid\\/bidder",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "srv"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "4a088ab819246b591abd700d919756c977b645c6d5163d3804565357629186cd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agreatertown.com",
+                "www.lakehomes.com",
+                "www.mlslistings.com",
+                "www.zumperrentals.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/cmdata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "multipass"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agreatertown.com",
+                "www.lakehomes.com",
+                "www.mlslistings.com",
+                "www.realtyhop.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/ad-wrapper\\/56979\\/cm\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4824111475bd152eb076980cf4e9425bdcaa585a0d19be9512ebad51412f355a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_cmmpid": {
+                    "ttl": 31536013,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lakehomes.com",
+                "www.lakehomes.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/additional-services\\/v0\\/widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bfd577557f3734bddb01dbc025ccb403e56af00007fb25f59ad4f8de5f1d5b65"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lakehomes.com",
+                "www.lakehomes.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/ad-wrapper\\/88701\\/cm\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "70131b1d1581bbe521a7b06c3846ebdbff0ac6c32cf9a8994241de1c2063e1ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cmusp": {
+                    "ttl": 31536011,
+                    "length": 4,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "_cmmpid": {
+                    "ttl": 31536011,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mlslistings.com",
+                "www.mlslistings.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/rci",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "multipass"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "d3ff9b7f37d0cfa2efb58457326b1118342d5a928aca3a005ee9e492e04a9eb7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mlslistings.com",
+                "www.mlslistings.com",
+                "www.realty.com",
+                "www.valleymls.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/ad-wrapper\\/61880\\/cm\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b6773383f2c5000d63f4d7f8905db2dc9827de7c69a1b3e86ab23429db35ffc0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "realty.com",
+                "www.realty.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/ad-wrapper\\/lib\\/prebid\\/v7\\/prebid\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTime": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.name": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e7599963f50a376c99c6cb662334e4f895ae378c9ade38b38647aeab988dd0e1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "realty.com",
+                "www.realty.com"
+            ]
+        },
+        {
+            "rule": "cordlessmedia\\.com\\/ad-wrapper\\/53124\\/cm\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fdf3741d508e358085794abdc1733e3c3dfdff8573c1f750d8daafbcc351411d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "utahrealestate.com",
+                "www.utahrealestate.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000616,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.65
+        },
+        {
+            "domain": "requestmetrics.com",
+            "prevalence": 0.13333333333333333
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.06666666666666667
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.03333333333333333
+        },
+        {
+            "domain": "d214hhm15p4t1d.cloudfront.net",
+            "prevalence": 0.016666666666666666
+        }
+    ],
+    "types": {
+        "XHR": 15,
+        "Script": 19,
+        "Fetch": 4
+    },
+    "nameservers": [
+        "violet.ns.cloudflare.com",
+        "quincy.ns.cloudflare.com"
+    ]
+}

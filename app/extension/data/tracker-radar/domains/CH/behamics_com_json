@@ -1,0 +1,331 @@
+{
+    "domain": "behamics.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.001,
+    "sites": 10,
+    "subdomains": [
+        "cdn",
+        "engine5",
+        "recorder"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "behamics\\.com\\/bauhausch\\/behamics\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2fb6cdf4bf840a141a1cf1fd86046182edc6b347d3c37f911838072e64f7a842"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bauhaus.ch",
+                "www.bauhaus.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/gonser\\/behamics\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fbe50e231497a323d0141d678c28e0d74181dc4d6401013539b590ec3c508674"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gonser.ch",
+                "www.gonser.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/gonser\\/behamics\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a82082cd51b2a6442a7e61acb892d9cfdcab93029f5fb105114b3988a0044405"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gonser.ch",
+                "www.gonser.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/api\\/getmessage",
+            "cookies": 0.000804,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engine5"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000804,
+            "cnames": [],
+            "responseHashes": [
+                "2dcfdf014f1bb7de38c006a111f7d5524ed3bbbc321576d66df133a8809c3333",
+                "5afbdf77f11131c1c36b4fcdb374aa0394cf9afd17efc81f71c6a8c493aab079",
+                "a59d771e5b3c61c730491be98aa1b858b02f49860f2b2b722bab9c575bfbfb1e",
+                "44161b9941591f8a8a9adeaa6681b18bf3b6de6b7c0c320dec92cc41c3e9e55b",
+                "8c95658d787ef4f40c39dfcdebe244bbe80265fba86a4ac0624c309d879d342e",
+                "641c5d2b2750f82d5fdead9834b5572b61d3cdf996ed3908db0b1a8d5b6f9568",
+                "2e644a57cc040fd9b3eb15df7b3839441a7677332d3a786ed46f4834b8109a93"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gonser.ch",
+                "micasa.ch",
+                "rrrevolve.ch",
+                "schaefer-shop.ch",
+                "sigg.ch",
+                "www.gonser.ch",
+                "www.micasa.ch",
+                "www.schaefer-shop.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/screenrecording\\/eye\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerHeight": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "window.innerWidth": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f78a23906da5c6d868a2ad718a2bea8a905c382b2480ba67d99a4768e3a9ff25"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gonser.ch",
+                "www.gonser.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recorder"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gonser.ch",
+                "www.gonser.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/api\\/analytics",
+            "cookies": 0.000603,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engine5"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gonser.ch",
+                "micasa.ch",
+                "schaefer-shop.ch",
+                "www.gonser.ch",
+                "www.micasa.ch",
+                "www.schaefer-shop.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/micasa\\/behamics\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3846b495b4ef7f651eb48b75d28c08a6c958264f26293d5ec10eebea320c32a8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "micasa.ch",
+                "www.micasa.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/micasa\\/behamics\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "23a3df3e861c77bbcedb1a309b0c96ae751b2f0563e4e16286564eae87dbf657"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "micasa.ch",
+                "www.micasa.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/schaefershop\\/behamics\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "edad11a321a7a3f9d6e13e3749f344c0e60e0bdfaacc4408c6d42b62314c98a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "schaefer-shop.ch",
+                "www.schaefer-shop.ch"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/schaefershop\\/behamics\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9bd19eec4190cfa714057d77c788f82e8e733c2c07d83771fd2c481df5eca288"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "schaefer-shop.ch",
+                "www.schaefer-shop.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000804,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5714285714285714
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "unpkg.com",
+            "prevalence": 0.09523809523809523
+        },
+        {
+            "domain": "sizekick.io",
+            "prevalence": 0.047619047619047616
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "Stylesheet": 6,
+        "XHR": 8,
+        "WebSocket": 2,
+        "Ping": 6
+    },
+    "nameservers": [
+        "ns.udag.de",
+        "ns.udag.net",
+        "ns.udag.org"
+    ]
+}

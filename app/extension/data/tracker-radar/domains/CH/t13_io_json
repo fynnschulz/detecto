@@ -1,0 +1,94 @@
+{
+    "domain": "t13.io",
+    "owner": {
+        "name": "Publisher First, Inc. dba Freestar",
+        "displayName": "Freestar"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.0001,
+    "sites": 1,
+    "subdomains": [
+        "s2s"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "t13\\.io\\/openrtb2\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s2s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biblegateway.com",
+                "www.biblegateway.com"
+            ]
+        },
+        {
+            "rule": "t13\\.io\\/setuid",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s2s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "eupubconsent-v2": 0.00020096463022508038
+            },
+            "exampleSites": [
+                "biblegateway.com",
+                "www.biblegateway.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "pub.network",
+            "prevalence": 0.625
+        },
+        {
+            "domain": "media.net",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "openx.net",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "yellowblue.io",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns-cloud-a4.googledomains.com",
+        "ns-cloud-a3.googledomains.com",
+        "ns-cloud-a1.googledomains.com",
+        "ns-cloud-a2.googledomains.com"
+    ]
+}

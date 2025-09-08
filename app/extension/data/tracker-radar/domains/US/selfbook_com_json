@@ -1,0 +1,172 @@
+{
+    "domain": "selfbook.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "sdk-v3",
+        "api",
+        "sdk"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "selfbook\\.com\\/widgets\\/floating-search-bar\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk-v3"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9cc0aeaf3e8a079b2b28f53dfe80a4c51d5d2093107868d327ce54b2b4707d60"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dorchestercollection.com",
+                "www.nemacolin.com"
+            ]
+        },
+        {
+            "rule": "selfbook\\.com\\/api\\/v2\\/hotels\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dorchestercollection.com",
+                "www.nemacolin.com"
+            ]
+        },
+        {
+            "rule": "selfbook\\.com\\/api\\/v2\\/hotels\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "46d8e38a1422f61453b4ed3a4a7df9c85a0e4fa40521883835f934bd08d1bccc",
+                "953f9661cf3ad5154b2c9fb13b2fda1a784267d230590c342078acf9606d1fd5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dorchestercollection.com",
+                "www.dorchestercollection.com",
+                "www.nemacolin.com"
+            ]
+        },
+        {
+            "rule": "selfbook\\.com\\/asset-manifest\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-v3",
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9dfb9302da9b75f8e13b614ad63d26849249cb84e38bd85260ad350265a1aba2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dorchestercollection.com",
+                "www.nemacolin.com"
+            ]
+        },
+        {
+            "rule": "selfbook\\.com\\/asset-manifest\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-v3",
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dorchestercollection.com",
+                "www.nemacolin.com"
+            ]
+        },
+        {
+            "rule": "selfbook\\.com\\/static\\/css\\/2\\.8361f079\\.chunk\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-v3",
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "dd01cdf0093e5635f4d4e34de085630566e7d51f861016cf6c23b228918e067e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dorchestercollection.com",
+                "www.nemacolin.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Preflight": 4,
+        "Fetch": 5,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "jack.ns.cloudflare.com",
+        "melina.ns.cloudflare.com"
+    ]
+}

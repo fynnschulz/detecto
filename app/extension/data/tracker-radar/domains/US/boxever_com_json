@@ -1,0 +1,139 @@
+{
+    "domain": "boxever.com",
+    "owner": {
+        "name": "Boxever Limited",
+        "displayName": "Boxever"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "api-us"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "boxever\\.com\\/v2\\/getBucket",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-us"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allenedmonds.com",
+                "www.childrensnational.org",
+                "www.sunriseseniorliving.com"
+            ]
+        },
+        {
+            "rule": "boxever\\.com\\/v2\\/getBucket",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-us"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "b45083e838017fe6312a1fd64f30dc1aeb5f7978e7f5e4224dd7421e5a5d8938",
+                "90d32ea5d2797cb3ff4f008df5cae4d26b8e68d555fe5118d82755f11583b08e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allenedmonds.com",
+                "www.childrensnational.org",
+                "www.sunriseseniorliving.com"
+            ]
+        },
+        {
+            "rule": "boxever\\.com\\/v1\\.2\\/event\\/create\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b8713c1f764656ec00b1ac4eee847b9660856dc5580b1a99fa6d29c135fe58ed"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "bid_co2lsjwdxeoljqoaztmlrbvdcofzf3c3": 0.000006840881105486387,
+                "bid_cnhymwwheiwbjur2uqzyze9hchatd2nn": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "allenedmonds.com",
+                "www.childrensnational.org"
+            ]
+        },
+        {
+            "rule": "boxever\\.com\\/v1\\.2\\/browser\\/create\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fae570d947ef5f2f566b4dd9112a2eed13b08623ed1c07dabe142e8ea4e6fd02"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "childrensnational.org",
+                "www.sunriseseniorliving.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.625
+        },
+        {
+            "domain": "d35vb5cccm4xzp.cloudfront.net",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "d1mj578wat5n4o.cloudfront.net",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Preflight": 3,
+        "Fetch": 3,
+        "Script": 4
+    },
+    "nameservers": [
+        "ns-622.awsdns-13.net",
+        "ns-389.awsdns-48.com",
+        "ns-1198.awsdns-21.org",
+        "ns-1858.awsdns-40.co.uk"
+    ]
+}

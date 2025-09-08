@@ -1,0 +1,183 @@
+{
+    "domain": "com-v1.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000604,
+    "sites": 6,
+    "subdomains": [
+        "assets.toiimg",
+        "jsso.indiatimes",
+        "geo.cnbc"
+    ],
+    "cnames": [
+        {
+            "original": "assets.toiimg.com",
+            "resolved": "assets.toiimg.com-v1.edgekey.net"
+        },
+        {
+            "original": "geo.cnbc.com",
+            "resolved": "geo.cnbc.com-v1.edgekey.net"
+        },
+        {
+            "original": "jsso.indiatimes.com",
+            "resolved": "jsso.indiatimes.com-v1.edgekey.net"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "com-v1\\.edgekey\\.net\\/js\\/til_prebid\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 3,
+            "subdomains": [
+                "assets.toiimg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "assets.toiimg.com",
+                    "resolved": "assets.toiimg.com-v1.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e2256a129cbb34eefad935c7c8ee07089cd73ace978386c26bc8a71b11c82b36"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_sharedid": {
+                    "ttl": 31536002,
+                    "length": 36,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "_sharedid_cst": {
+                    "ttl": 31536002,
+                    "length": 12,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "timesofindia.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "com-v1\\.edgekey\\.net\\/sso\\/crossapp\\/identity\\/web\\/loggedInUser",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jsso.indiatimes"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "jsso.indiatimes.com",
+                    "resolved": "jsso.indiatimes.com-v1.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "ddfd865e7f12769fb2bda5bcaa84657980cae7117acc679be6877a2d318909b5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "timesofindia.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "com-v1\\.edgekey\\.net\\/sso\\/crossapp\\/identity\\/web\\/loggedInUser",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jsso.indiatimes"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "jsso.indiatimes.com",
+                    "resolved": "jsso.indiatimes.com-v1.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "timesofindia.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "com-v1\\.edgekey\\.net\\/info\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo.cnbc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "geo.cnbc.com",
+                    "resolved": "geo.cnbc.com-v1.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "85fb76bfb6a3227f9dfdd16773fb23f5124c77d04a7c372b04e895da3df9d44d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.cnbc.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000604,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9740932642487047
+        },
+        {
+            "domain": "toiimg.com",
+            "prevalence": 0.010362694300518135
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.010362694300518135
+        },
+        {
+            "domain": "usercentrics.eu",
+            "prevalence": 0.0051813471502590676
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2,
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": []
+}

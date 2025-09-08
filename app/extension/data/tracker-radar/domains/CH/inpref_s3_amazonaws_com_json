@@ -1,0 +1,92 @@
+{
+    "domain": "inpref.s3.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "inpref\\.s3\\.amazonaws\\.com\\/frosmo\\.easy\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [],
+            "apis": {
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.vendor": 1,
+                "Element.prototype.getClientRects": 1,
+                "window.innerWidth": 1,
+                "window.sessionStorage": 1,
+                "URL.createObjectURL": 1,
+                "CanvasRenderingContext2D.prototype.getImageData": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e04e878283e1a1aac388ba247478937b614bec6114d85c6921fb7c99d7bd2bf5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "swiss-lotterie.ch",
+                "www.swisslos.ch"
+            ]
+        },
+        {
+            "rule": "inpref\\.s3\\.amazonaws\\.com\\/sites\\/swisslos_ch\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0670e0362cf4581b621c47aa1e83a0a850a3b70f0c4b01b94294c71efdec17bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "swiss-lotterie.ch",
+                "www.swisslos.ch"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns-1573.awsdns-04.co.uk",
+        "ns-299.awsdns-37.com",
+        "ns-687.awsdns-21.net",
+        "ns-1425.awsdns-50.org"
+    ]
+}

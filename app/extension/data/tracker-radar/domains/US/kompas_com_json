@@ -1,0 +1,104 @@
+{
+    "domain": "kompas.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "assets",
+        "apis"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "kompas\\.com\\/data\\/2023\\/sso\\/js\\/sdk-cookie-consent-v2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kontan.co.id",
+                "www.kompasiana.com"
+            ]
+        },
+        {
+            "rule": "kompas\\.com\\/data\\/2023\\/sso\\/css\\/kgm-verify\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "f0fda098b0d7515fd624a7c82d9a4649cd727681c5d8f9afc46dae06258bbf53"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kontan.co.id",
+                "www.kompasiana.com",
+                "www.kompas.tv"
+            ]
+        },
+        {
+            "rule": "kompas\\.com\\/api\\/activity\\/user",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d4ca1006bbcc122bd33a66cbb6670c9e35a7cdaa2b3303d5910da379ed238567"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kompasiana.com",
+                "www.kompas.tv"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Stylesheet": 3,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-538.awsdns-03.net",
+        "ns-1357.awsdns-41.org",
+        "ns-20.awsdns-02.com",
+        "ns-1870.awsdns-41.co.uk"
+    ]
+}

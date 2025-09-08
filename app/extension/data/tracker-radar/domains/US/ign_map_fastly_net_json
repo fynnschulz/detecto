@@ -1,0 +1,137 @@
+{
+    "domain": "ign.map.fastly.net",
+    "owner": {
+        "name": "Fastly, Inc.",
+        "displayName": "Fastly",
+        "privacyPolicy": "https://www.fastly.com/privacy",
+        "url": "http://fastly.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [],
+    "cnames": [
+        {
+            "original": "apps.ign.com",
+            "resolved": "ign.map.fastly.net"
+        },
+        {
+            "original": "mollusk.apis.ign.com",
+            "resolved": "ign.map.fastly.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ign\\.map\\.fastly\\.net\\/video-player\\/fonts\\/Inter\\.var-subset\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "apps.ign.com",
+                    "resolved": "ign.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "7f2ae6ba380d78a5dd08e96ebfb2c2a523f72504551190dcd0537659ce11af21"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ign.com",
+                "in.ign.com",
+                "www.ign.com"
+            ]
+        },
+        {
+            "rule": "ign\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "mollusk.apis.ign.com",
+                    "resolved": "ign.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "172e9f91ec2234e7e696a86b6f8517ed83c87a132639a4c9d70d57bfa1814509",
+                "162bfcd9bc787330ea56289830b0bc468e6f128ae2713c6dfeccf4cd20b7405f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ign.com",
+                "in.ign.com",
+                "www.ign.com"
+            ]
+        },
+        {
+            "rule": "ign\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "mollusk.apis.ign.com",
+                    "resolved": "ign.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ign.com",
+                "in.ign.com",
+                "www.ign.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Third-Party Analytics Marketing",
+        "Action Pixels",
+        "CDN",
+        "Embedded Content",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "mapbox.com",
+            "prevalence": 0.8604651162790697
+        },
+        {
+            "domain": "ignimgs.com",
+            "prevalence": 0.11627906976744186
+        },
+        {
+            "domain": "tinypass.com",
+            "prevalence": 0.023255813953488372
+        }
+    ],
+    "types": {
+        "Font": 3,
+        "Fetch": 3,
+        "Preflight": 3
+    },
+    "nameservers": []
+}

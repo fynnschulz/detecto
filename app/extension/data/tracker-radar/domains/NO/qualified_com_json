@@ -1,0 +1,202 @@
+{
+    "domain": "qualified.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000805,
+    "sites": 8,
+    "subdomains": [
+        "js",
+        "ws3",
+        "ws2",
+        "ws1",
+        "ws",
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "qualified\\.com\\/qualified\\.js",
+            "cookies": 0.000805,
+            "fingerprinting": 2,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 8,
+                "PerformanceTiming.prototype.navigationStart": 8,
+                "Navigator.prototype.platform": 8,
+                "Navigator.prototype.maxTouchPoints": 8,
+                "window.localStorage": 8,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 8,
+                "Document.cookie getter": 7,
+                "Document.cookie setter": 7,
+                "Navigator.prototype.language": 8,
+                "Date.prototype.getTime": 8
+            },
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "bb1da4e828f4931fda45e07b65b23088c9681759207e251b50d9ee2c4786a84b",
+                "04eb4be7c36a9b2bec5235db492f8309b616330fd0b93522622062d267df8b79",
+                "b86abba9e4b3c6d493cb99e3c9f08204cff598af442c288930f2bc5c0810ae76",
+                "5407b130aae09eeada82df0946e7147cd420520bf3a3f3ae7278ba8003f1787f",
+                "d0af4eb02fbbc1224e145d5106e868f6a0706849a414611189b1d98555b2237f",
+                "3d9865b2ea2b5355d98407400ddcdd57d3f9b6673cab376e61fec18cc441e59f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__q_state_2qYJ2dzsqrwWZnjR": {
+                    "ttl": 315360015,
+                    "length": 102,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "__q_state_hhaW6HiVqGA5oJq1": {
+                    "ttl": 315360006,
+                    "length": 102,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "__q_state_QCpwbhBMaAgaarau": {
+                    "ttl": 315360013,
+                    "length": 103,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "__q_state_ZB9yNHnAdpJRvvbF": {
+                    "ttl": 315360007,
+                    "length": 104,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "__q_state_FvGWn26rk1tuEjBR": {
+                    "ttl": 315360001,
+                    "length": 102,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "__q_state_y5gZpv1sRkv2ZBXW": {
+                    "ttl": 315360009,
+                    "length": 106,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickup.com",
+                "learning.postman.com",
+                "muckrack.com",
+                "pitchbook.com",
+                "www.lucidchart.com",
+                "www.netlify.com",
+                "www.optimizely.com",
+                "www.postman.com"
+            ]
+        },
+        {
+            "rule": "qualified\\.com\\/cable",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws3",
+                "ws2",
+                "ws1",
+                "ws"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickup.com",
+                "learning.postman.com",
+                "muckrack.com",
+                "pitchbook.com",
+                "www.lucidchart.com",
+                "www.netlify.com",
+                "www.optimizely.com",
+                "www.postman.com"
+            ]
+        },
+        {
+            "rule": "qualified\\.com\\/w\\/1\\/hhaW6HiVqGA5oJq1\\/visitor_events",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "postman.com",
+                "www.postman.com"
+            ]
+        },
+        {
+            "rule": "qualified\\.com\\/w\\/1\\/hhaW6HiVqGA5oJq1\\/visitor_events",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "postman.com",
+                "www.postman.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000805,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.45454545454545453
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.36363636363636365
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.09090909090909091
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.09090909090909091
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "WebSocket": 8,
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "bart.ns.cloudflare.com",
+        "emma.ns.cloudflare.com"
+    ]
+}

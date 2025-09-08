@@ -1,0 +1,280 @@
+{
+    "domain": "nordcdn.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "sb",
+        "s1"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "nordcdn\\.com\\/m\\/4a802a49d4592056\\/original\\/en-woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e8b5a4392d9fbfe8ff6f036b321cdd6db4cff8d577f92185e6462b93b92cabc6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordaccount.com",
+                "nordvpn.com",
+                "support.nordvpn.com"
+            ]
+        },
+        {
+            "rule": "nordcdn\\.com\\/d\\/consent\\/prod\\/main\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s1"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "d2dbd7721e700ec100a0c7d2bcef5488dae0cef24a70ae69a1a2fcaecb2cd54d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordpass.com",
+                "nordvpn.com",
+                "saily.com",
+                "support.nordvpn.com"
+            ]
+        },
+        {
+            "rule": "nordcdn\\.com\\/d\\/consent\\/prod\\/init\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s1"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "2def644f07566f3a0745eb026eae9e139f87c583982a820c3ff50b14d20d09a7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "consent": {
+                    "ttl": 63072002,
+                    "length": 27,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 0.75
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordpass.com",
+                "nordvpn.com",
+                "saily.com",
+                "support.nordvpn.com"
+            ]
+        },
+        {
+            "rule": "nordcdn\\.com\\/d\\/consent\\/prod\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s1"
+            ],
+            "apis": {
+                "Document.cookie getter": 3
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "f1b431bd4322f674b45d726b2e4ae05ee03d5437096f587c36345deb9fbb1a0a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordpass.com",
+                "nordvpn.com",
+                "saily.com",
+                "support.nordvpn.com"
+            ]
+        },
+        {
+            "rule": "nordcdn\\.com\\/d\\/nordvpn\\/prod\\/index\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "s1"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.matchMedia(\"prefers-color-scheme\")": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c590b8b17a6451c8be512bdd818938d0ad0ac2a22c8ba018bc456ecba8067935"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "nv_tri": {
+                    "ttl": 63072002,
+                    "length": 34,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "nv_trs": {
+                    "ttl": 63072003,
+                    "length": 31,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordvpn.com",
+                "support.nordvpn.com"
+            ]
+        },
+        {
+            "rule": "nordcdn\\.com\\/nordvpn\\/3\\.816\\.0\\/js\\/unsupported-fallback\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "38d18d8c6ab204062eedcb2980b6bfe059578f042c81bd0a17599853a5dd9cc4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordvpn.com",
+                "support.nordvpn.com"
+            ]
+        },
+        {
+            "rule": "nordcdn\\.com\\/nordvpn\\/media\\/1\\.1716\\.0\\/images\\/global\\/button\\/download-app\\/app-store\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4162231352f88f0904675cef19e9b395f0100dca5db6484ea76b3795f7c2a5af"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordvpn.com",
+                "support.nordvpn.com"
+            ]
+        },
+        {
+            "rule": "nordcdn\\.com\\/nordvpn\\/media\\/1\\.1716\\.0\\/images\\/global\\/button\\/download-app\\/google-play\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a6231bb7529593e2a2ae31067363878950393756a285fbc19b8a2f6b53a7d864"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordvpn.com",
+                "support.nordvpn.com"
+            ]
+        },
+        {
+            "rule": "nordcdn\\.com\\/m\\/2a99ab6c9cf051ac\\/original\\/credit-cards\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8fd79e6f23c0335e42a361c852d5c723ddf4caca13d043f8a37d506cfe2be52e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nordvpn.com",
+                "support.nordvpn.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000616,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 3,
+        "Stylesheet": 4,
+        "Script": 12,
+        "Image": 6
+    },
+    "nameservers": [
+        "lily.ns.cloudflare.com",
+        "seth.ns.cloudflare.com"
+    ]
+}

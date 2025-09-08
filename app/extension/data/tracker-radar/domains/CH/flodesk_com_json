@@ -1,0 +1,92 @@
+{
+    "domain": "flodesk.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000402,
+    "sites": 4,
+    "subdomains": [
+        "assets"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "flodesk\\.com\\/universal\\.mjs",
+            "cookies": 0.0001,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "5ee4de3be4d8812fcfe82c058a6cdec868f373d8cfdc30d26071bd10d33e05d4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fdcookietest": {
+                    "ttl": -1755391662,
+                    "length": 1,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "christianpure.com",
+                "swissfamilyfun.com",
+                "www.oma-kocht.de"
+            ]
+        },
+        {
+            "rule": "flodesk\\.com\\/universal\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2d3f7b5c43129944e8c1015b9013ab988e167c27464a1d251369e48140cb08dc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elavegan.com",
+                "swissfamilyfun.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5
+    },
+    "nameservers": [
+        "meadow.ns.cloudflare.com",
+        "kipp.ns.cloudflare.com"
+    ]
+}

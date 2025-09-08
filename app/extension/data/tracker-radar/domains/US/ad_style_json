@@ -1,0 +1,196 @@
+{
+    "domain": "ad.style",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "widgets",
+        "w"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "ad\\.style\\/native\\.js",
+            "cookies": 0.000041,
+            "fingerprinting": 3,
+            "subdomains": [
+                "widgets"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 6,
+                "Navigator.prototype.webdriver": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Screen.prototype.width": 6,
+                "Screen.prototype.height": 6,
+                "Document.cookie getter": 6,
+                "window.localStorage": 6,
+                "Document.cookie setter": 6,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 6,
+                "window.outerWidth": 5,
+                "window.outerHeight": 5,
+                "window.innerWidth": 5,
+                "window.innerHeight": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "8a490232a999e4a487507d8636d10809c3da8c012288320e5af532732927f0e1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1755311737,
+                    "length": 1,
+                    "prevalence": 0.00004104528663291832,
+                    "uniqueness": 0.16666666666666666
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allaboutthetea.com",
+                "canadafreepress.com",
+                "conservativebrief.com",
+                "iotwreport.com",
+                "patriots.win",
+                "wltreport.com"
+            ]
+        },
+        {
+            "rule": "ad\\.style\\/get",
+            "cookies": 0.0000342,
+            "fingerprinting": 0,
+            "subdomains": [
+                "w"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "e922de12b67b18090fb48533f45f55bc034079fe595c4a96cc744eafe3f7efa1",
+                "6730db64a9b655b8fe8cd09be3bc550c907f0bc0c937643ba37885e814eb0cf4",
+                "61ce62d6d2d6503dec820197d24b0f681990f5be959c18bb4204c2649c8e1a1d",
+                "a214c629e6085d3d1eb48ae72697a5aa0a9ef6045cf2b0e914d2231fd42537c1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allaboutthetea.com",
+                "canadafreepress.com",
+                "conservativebrief.com",
+                "iotwreport.com",
+                "patriots.win",
+                "wltreport.com"
+            ]
+        },
+        {
+            "rule": "ad\\.style\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "w"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allaboutthetea.com",
+                "conservativebrief.com",
+                "iotwreport.com",
+                "patriots.win",
+                "wltreport.com"
+            ]
+        },
+        {
+            "rule": "ad\\.style\\/img\\/aslogo\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "w"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "0ead49ad1520351760f2ec83f11a4c74bc9195507839d0424f57d93c46108a30"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allaboutthetea.com",
+                "conservativebrief.com",
+                "iotwreport.com",
+                "patriots.win",
+                "wltreport.com"
+            ]
+        },
+        {
+            "rule": "ad\\.style\\/image\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "w"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "c953488322eafc9c66a147c8464798cc071209a01fb99fdf94b4a48de68e8248",
+                "cf600ce11281332e747fbee8fd9af03b1e8b9aa2292e12051514076393037f2a",
+                "552a51ad01ff0574c89dc3fc137d4f704508fbb21f538f096ec1b21f35d75a5f",
+                "38302844654e2605798797dfcae26a70a1fbd0285596b47dfa4c2a29a7d8b533"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allaboutthetea.com",
+                "conservativebrief.com",
+                "iotwreport.com",
+                "patriots.win",
+                "wltreport.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000479,
+    "topInitiators": [
+        {
+            "domain": "whizzco.com",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2857142857142857
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "XHR": 6,
+        "Preflight": 5,
+        "Image": 10
+    },
+    "nameservers": [
+        "ns51.constellix.net",
+        "ns61.constellix.net",
+        "ns11.constellix.com",
+        "ns21.constellix.com",
+        "ns31.constellix.com",
+        "ns41.constellix.net"
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "domain": "flagsmith.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "edge.api",
+        "realtime"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "flagsmith\\.com\\/api\\/v1\\/flags\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sunrun.com",
+                "pella.com",
+                "www.pella.com"
+            ]
+        },
+        {
+            "rule": "flagsmith\\.com\\/sse\\/environments\\/noF7ZmcLCLxn7D5csG4Xyh\\/stream",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realtime"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "EventSource",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sunrun.com",
+                "my.sunrun.com"
+            ]
+        },
+        {
+            "rule": "flagsmith\\.com\\/api\\/v1\\/flags\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "da8f3f641f605b117cc9beb228b9293c786d04bb49ed60f2cef414e8ae7b51f6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pella.com",
+                "www.pella.com"
+            ]
+        },
+        {
+            "rule": "flagsmith\\.com\\/api\\/v1\\/identities\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "primary.com",
+                "www.rebag.com",
+                "www.shapr3d.com"
+            ]
+        },
+        {
+            "rule": "flagsmith\\.com\\/api\\/v1\\/identities\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a17c09d6c21481c34bd120bd4e088cbe43f79c49062503d7d4423a4f3bd278dc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "primary.com",
+                "www.rebag.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 6,
+        "EventSource": 2,
+        "Fetch": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-47.awsdns-05.com",
+        "ns-864.awsdns-44.net",
+        "ns-1757.awsdns-27.co.uk",
+        "ns-1401.awsdns-47.org"
+    ]
+}

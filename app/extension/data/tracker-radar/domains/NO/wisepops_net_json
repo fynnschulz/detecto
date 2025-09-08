@@ -1,0 +1,163 @@
+{
+    "domain": "wisepops.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000805,
+    "sites": 8,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "wisepops\\.net\\/loader\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [],
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2
+            },
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "4eac35b926b76a8b759f560b1340488c9b181c804e2e57a5d4587626abb7d4cd",
+                "7d121b93396e5e39eab4091733fdcaafcd884d2aff3faf2685023ed713504e45",
+                "d9f342791c40cf3e4bb69e62ac97ca010f34a5c075e954711c8b4ef9a806e39b",
+                "041cfb1ae9093d260e2d1810de0a8a527d41df083d5cbca694b26a15cefbc555"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "wisepops_tld": {
+                    "ttl": 5,
+                    "length": 1,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                },
+                "wisepops": {
+                    "ttl": 63072000,
+                    "length": 145,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "wisepops_session": {
+                    "ttl": null,
+                    "length": 298,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "wisepops_visitor": {
+                    "ttl": 63072000,
+                    "length": 67,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "wisepops_visits": {
+                    "ttl": 63072000,
+                    "length": 40,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shimano.com",
+                "dbjourney.com",
+                "rab.equipment",
+                "www.byggmax.se",
+                "www.coophotellkupp.com",
+                "www.filippa-k.com",
+                "www.purevpn.com",
+                "www.vl.no"
+            ]
+        },
+        {
+            "rule": "wisepops\\.net\\/id",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "5db4a331cfb0211d5a5b9b73d6691a41ed77754c2b25eb7f0f1f30bae2c6fad2",
+                "2cc009bcf653ddf29bcbdd4f5ad4c2d71b4fd53bb65623934bf556baf9a5163f",
+                "17267df96486c2c4d209e82823acd054ac2b59a97cb1c554ca2827cbfe80c567",
+                "a58d6fc9c70166888fdf7c8fe3dfd2369fbcea3316e0f658101374aa7a784137"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shimano.com",
+                "rab.equipment",
+                "www.coophotellkupp.com",
+                "www.purevpn.com",
+                "www.vl.no"
+            ]
+        },
+        {
+            "rule": "wisepops\\.net\\/my-wisepop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "dc83d99ee655c00947313e40bd47ef90c1d2c20d2f00aad0b56342a93ac1dad5",
+                "40be1a5db09f6820495618cdc1a1d0902c3bba5d9407727797e820191640bd8e",
+                "8a28084cd41b2d2f792a9e63fc5465c4ea979fc46409b4bd92bff769b8a679ad",
+                "44b7be39e165c967d354a4e853adc6b23953dbdb94eeaa18a07e86ea6bb38da2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shimano.com",
+                "rab.equipment",
+                "www.coophotellkupp.com",
+                "www.purevpn.com",
+                "www.vl.no"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "wisepops.com",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "Fetch": 5,
+        "XHR": 5
+    },
+    "nameservers": [
+        "wally.ns.cloudflare.com",
+        "marek.ns.cloudflare.com"
+    ]
+}

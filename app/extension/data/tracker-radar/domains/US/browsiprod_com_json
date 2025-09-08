@@ -1,0 +1,4102 @@
+{
+    "domain": "browsiprod.com",
+    "owner": {
+        "name": "Browsi Mobile LLC",
+        "displayName": "Browsi Mobile LLC"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.006,
+    "sites": 877,
+    "subdomains": [
+        "cdn",
+        "events",
+        "yield-manager",
+        "demand-engine",
+        "cdn5"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "browsiprod\\.com\\/bootstrap\\/bootstrap\\.js",
+            "cookies": 0.00248,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 522,
+                "window.localStorage": 522,
+                "Document.cookie getter": 516,
+                "Navigator.prototype.userAgent": 523,
+                "Screen.prototype.width": 523,
+                "Screen.prototype.height": 523,
+                "Document.cookie setter": 363,
+                "window.innerWidth": 3
+            },
+            "sites": 566,
+            "prevalence": 0.00387,
+            "cnames": [],
+            "responseHashes": [
+                "36209686dbafe448254d09dfa4823688bcc67a46bc257e05eaac36d32aa8ac9b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__browsiSessionID": {
+                    "ttl": 1809,
+                    "length": 71,
+                    "prevalence": 0.0024832398412915585,
+                    "uniqueness": 1
+                },
+                "__browsiUID": {
+                    "ttl": 31536009,
+                    "length": 36,
+                    "prevalence": 0.0024832398412915585,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globalnews.ca",
+                "hollywoodlife.com",
+                "itsfoss.com",
+                "pjmedia.com",
+                "townhall.com",
+                "variety.com",
+                "whatismyipaddress.com",
+                "www.foxnews.com",
+                "m-de.marketscreener.com",
+                "utaten.com",
+                "whalewisdom.com",
+                "robbreport.com",
+                "www.cbs8.com",
+                "anyconv.com",
+                "www.hardreset.info",
+                "www.celticquicknews.co.uk",
+                "www.todays-golfer.com",
+                "www.otcmarkets.com",
+                "www.wbir.com",
+                "www.motorsport.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/supply",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 550,
+            "prevalence": 0.00376,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globalnews.ca",
+                "hollywoodlife.com",
+                "itsfoss.com",
+                "pjmedia.com",
+                "townhall.com",
+                "variety.com",
+                "whatismyipaddress.com",
+                "www.foxnews.com",
+                "www.quien.com",
+                "www.todays-golfer.com",
+                "xskt.com.vn",
+                "nongnhat.com",
+                "wwd.com",
+                "www.nikkan-gendai.com",
+                "scienceinfo.com",
+                "www.thedailybeast.com",
+                "www.carscoops.com",
+                "fr.motorsport.com",
+                "tyda.se",
+                "www.stampworld.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/supply\\/v5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yield-manager"
+            ],
+            "apis": {},
+            "sites": 548,
+            "prevalence": 0.00375,
+            "cnames": [],
+            "responseHashes": [
+                "3f3ed305c244ec0f1f9393c2d7a924d47af9a24817e92239f96f90b9623b8838",
+                "07e3149e8eac8a0ab7917d91d50ca619c739b10cc29ed1182bb53980c4f28c5c",
+                "4bdf7001676d028d218c7579db1afb326c6763e4fe94ca5475fe5a16c36624de",
+                "15b61b2d78d286cfa1aa047e1a976e37b8d12bc9c32e6fc948527708b928bc81",
+                "af4f003d1c0f193c3d667ce07a25441d72fe0f2a8f41ab79a01cc1799ba36d77",
+                "975f438aa17b9ca3def4d5ab9496cabe8da11502b00b010708b090c57ab089bd",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "8d5516534e9d1a66fb99add4d331c86f3081edd3d001c56cb031028bfe3d91ce",
+                "ba9dcf3606a9a9647f164cc6c93e6f293d4edeb83d9bde609aa6631901ea460f",
+                "78ab23fb42ffdb89a79233aa400133c637afe3555d8cc7d07d2b19c4de75112c",
+                "edf39fe6991c91d5bc8d7531823192f8c924079462db9b1915f379e0d69b0953",
+                "5af6b16350887e1f8436d4f78becc16c56904df20ea7f3190fafc8b7bf3e1a48",
+                "521922f4ea89122ad78b70ac79bf71670160f5d862e35d1d7bf2c1c86251428b",
+                "9e0f1e37fc0b58b1d0d16e5f540623101ddbd0ecaed4b8f4419ddfad43767c33",
+                "bfdd62c699c9210cce4f1b349caedc197bd5b58182ed7c8dee4f9d2138a29553",
+                "42f4edf28103235ef9dd04f2bf399337bcbfe4a8171ea38962b1c2e0e20aabe6",
+                "f48d68c1999943d945becaf4243c658ec4916f880bc3fd1d75b4d9cdbbe09028",
+                "ad01a7d787be6e4919c1106a6d43e3bd47b22f56a337968d18032488138c41da",
+                "031a72dadcbe94435dfa98af32bbc3a0156261b38ce22e47624ad8b7c14a45b2",
+                "294b00703f797b127f4575e0ffef2dc7508da5336f70caa39499b4a8fccfbd86",
+                "8dad634af48890ba3c11bec5696189ceba7bbb739a1d4010ee1a2d15e5598fd1",
+                "b70bd88f8e5e983a80a5ff376595bdc5c3df5f0610d4267d74c64cd8a5d483d2",
+                "70a874495b2b1ab9d9c63bdce056dbbd2e4003b94b6af4f9870517b0ad0a2f85",
+                "c54910b6613bcaf3e0171f0fd773e73ab3c9dc2ad2a5ec08880f30b1914eea43",
+                "7267e6988a3d515fc6e746900462e6830969b56cf81a4602c3a02ae2fd82ab63",
+                "b04954dd611b69594d449eeca8207e79f67cc98b9065a67b1b0d1a119a8bcf34",
+                "875d5aa6fd0de184b85462594887a9fee4d4fb66d7b75e1b18e216d88165a490",
+                "6d3e5dbbc16e8a75d795b3c8890f4a4246c2a03df048343e9bf9f40a49d0fd9c",
+                "d823126bc054d6493f9692380af3076c85eea6b3c6073704ce171cb842799aa8",
+                "f9017c52666bf3f318f694d9c1a641c1701dfc70d591afa081c7d421271d2e7e",
+                "5a498fdd29259a172a7cb55b68667234947abddc6e9c820bef8a86a3b5d427e5",
+                "5e2b3fc7f8d2e0e39d029f1bd1af5d41d6263bd0b4faf060894ede7a8b39acab",
+                "80f7097a228aaf9ffff560eff94be2ac5cf1afe735c51b4e94856536304ea260",
+                "3a9f5de6723bb559c2f0bcf9be94a0361604b571b2e2fc71692a451996e8256d",
+                "fb2880c045b7f1599378e767786dd505f94c5f5361b0efaade4ed902f1ded682",
+                "02bf5f15b6d948e88fff2f412085ae24162e9f84f60a68846b3ccfc23fe71e65",
+                "ee17daac8edc9f948ea9bebef79bc703dcabfefdd48c8a54a2a81c5645851edb",
+                "d2880b6821d7040d4af41bdd0c1c9d3ced8da827d374726625ddca33f4fbb531",
+                "635dc4a989bac939590cf13f6835640c0192f4257c0869a312b1d29fbe5781c1",
+                "61e38115510c1c2512c49900b4b746253aa51c10f6bbfa121f3581fc1b731bd5",
+                "d5cb3808d20123516fc230bbe9a1647aca989e80bbbf68a1151939de15e91404",
+                "5c6c9a99167b9d3ec6ec630f1c74862634a00ef4e3e4ac15b3918f250cb2fa78",
+                "5945edb19604a60cbd5dabbc18dafd473ee9cefb2678c24d33da45be5aeac84a",
+                "04b95f78386b24c271ffa7332823f0839a43ea3a019c9be7cac5913d198fe750",
+                "2003dfa165930d2363e20b5cdc59f88e6bb50feb03340caf0b15712672d1dfca",
+                "b414d2cbfcb70a200317821393dd92830b3828f8857fe2966e920ef54c83529c",
+                "4bbcf54eb3fe2b1a6c8e8105bd31bf0a38762de5e19f3ff6233a07f60ea6eea8",
+                "40c2bebfe9defa37434ff7b13ad625026b4e0a9b58c8954e13f83307e09551e6",
+                "00e8ec16fc35efcde2492aaf6d0bb5cf2418970e29761d6dd945fe1e0112284b",
+                "2f01f32acceb669e8c2895286cf76a88c4c747fd66d944db349a3edadbe1f381",
+                "732638f27a1bbbad716c4b605ab1daa8be59120ab7abe2b0d6fe27b8ed4d0a46",
+                "1dd7a1f45cf2c0b1d63e225a5f999ee542b513fe3e28156f6709af66411afe75",
+                "1f39f85da35cf3203685ebcd803c24a41f7a421c4b42ed81831fb61f4538f7f0",
+                "7d0f444b7f357d808d1ded5d8ac3a7c658e5afc8db4fc6822f8ae7d6a576fe22",
+                "c2ceac3d2eda678958f7a41834f61f0b890773b567f374992681df6be9d46dad",
+                "f957ad3882c67ed806cbc2e76f4ca5b681a0af8c78238ca031cf2cf06d641a86",
+                "48336f134532e55f350f86a11b002e0862c16bf2cac1198a330401d3a5366c43",
+                "20d9cb16d14f5ffb8d0a0f2014e8f5923f6ba11c8c3b587bd00aa22211598090",
+                "2e6a7cc0aba6c05890e2474350692c0246992ef8979a6224a5d58b503811cead",
+                "a4096442558a837485d80aac849b9394fe6db14daf89762dc0db4cda519beaff",
+                "70f0f891fe7ea1acfa3327194d8d2b885fecd66923e38f282db7c0c0210b5c59",
+                "c505a06d6d8f8520a8c4402960ec47b748ebddbf10d6e431faf085d3cb18c77f",
+                "b3b5c71dc9f0f96267d9ab691c4e68230965050b0f2ab4faf73b3db6ae86812a",
+                "94bafba65c05fe03b543d6489b1d299e628829d68288442e0baae91e7142fd2c",
+                "0bd677660627e963f9711a883b95018b1dc2768555cffab5e8961e5b930c8ca5",
+                "6707d0cfe92334677505540f9e4d120559a87e5eb27ac23583e8c28ddf6fd633",
+                "130b71ce16ac0d3e7a51b9f5525b4f9da67189454fca125dd66b348cd2626194",
+                "58c1e274d58f6de0c21dbfbe77c23715bb905d1c7eca10e282779b355bb61185",
+                "e580519ee9a3ecbc3bc8eec6dedeedcd1e3e63dbdf7cf60f8c61a536c97e5fa6",
+                "ad8d68e76a168e313705904ef28ffa4adc1986dd98184f39ea8c66e801049f5c",
+                "bd7bd0104b92b8bf45a19b3d7d67c504346edba6447d1766fdf7641321add873",
+                "711658ce552bd20a5c559555a5bccffa3f63d61daf98e8ea1a3fa9ab9f7f1cd2",
+                "47eff3a7bc093554b0d0444351d4f16b726dd4753679aea87b4a279c570d4252",
+                "c82322231180ec200318b60525d8dcd35663bccb4e53c8bc9e45ff35393a115d",
+                "b4e31c27eea7fcd08f41c13245a9c26e21623169ad635380596266c6e480f408",
+                "ef7bbe7d1d3fbc8796460e9fc2ec1b3fb9ae4d61988b9be054ad31ced4ec2239",
+                "2cfb7e7c7312fef5aab41ecdb017825430ab42448b64220c3f4c738344529d57",
+                "ca01496b14ce880fa932d0b1a2e5bd8074bdcc6334d8a8be485eab34abc2efa3",
+                "d95b685ae9ce697a31a5a87d6656e5f822a4b754b783dc4051cc7265b3713f51",
+                "80cbf80d9ca14018ed4c444236e086d67ae5ff98c3815c77d3d378a7ce45f13c",
+                "f2400a201a4b896eec1c519104fedaacf3d222673aab38a04c8c83e33def89d1",
+                "ad80311106da512e8bcd621d500d39bc6d6a336fd39195c3c53efae049ffae0e",
+                "32e68a777421aa493f9bcea05f8ca09ca46b61085165ac939bdbff779c397461",
+                "d84beef7c4c85e60d6513cce7a88cd08b88e14d623eb2f782f4ea8ee86b4541c",
+                "2ba85083547fc1b560de899d32da5be16427b15b00acc70d6a09ca5d6f560cdf",
+                "f0db13b3f64aabe6b143f1190d8212189813e821c3d5d188b299e823d8fceb0f",
+                "c9da2efb8071c3c7231a622c289478eccbcd4e489343b231832438be8305b891",
+                "78fbc3ea3b17acc8db05bd8c6743a6763801a255cec75d97423e65eebb663bcb",
+                "5c66ff23f494589dfaa6820f12c49a8d80776fc06fd0e29486732a443c8ad965",
+                "eaba132ff6a5598dc1802011047d9039511ee75401c288057a5df1ea13167a21",
+                "4a81c860e063e73818b52ff6a2db2e1d8cb0ff88c848592981c05168941e4663",
+                "12ad6e6122b006f5f532ad3fae473f04ca1a616a400bf1854576f1d974cf675e",
+                "6b7dbf57d926d187f0e0d8a35f892ea8468f4a6c6e2b4211b19debe1357be39f",
+                "2410bf52918969c4d6cd6fba7e34ba7e1733578dd016840da52537710e495400",
+                "9fa3ca82dd6dd34780aae86e0e913b13f5a0e65a9c12193975a281e91ac65926",
+                "3a062930ff5fabc4e74d373c4e8481a356a224fe4906ce61d07b71ad78e2a7d3",
+                "58478b20adf9abd2eba38fa66e43cd7d5b07377240d4444150b22be9de6f0cb4",
+                "065287459a99b180c7387cde584a04f937924cb494b30f0b3e5cf8b51b04cc1d",
+                "1f1d50bc67c2fe6909125ac51befcc217020d84adef8a4bc1eb210de2a4addd7",
+                "e2436751705d5b9f85662640295be1309a3021313ce6ea60d96fa06d59de9cd1",
+                "ff7823852cba24e358b5563a0f505530b0c2fe7c90d05ccd8aa34dd591aa8adc",
+                "7c7566485f33ddfcaad0359604be581fe198d7dd6cbbf0217d282f11203e700b",
+                "4ede6318c3d79fcea7545be07209fc13f2b91662f26777e6a933aab347fbed62",
+                "8475482b11b59ca044798f9e7af5c889da38c110b278d8171c3ae25c6dd626ab",
+                "f241dbe51ad57271b197d58c5a2a842bf54ad7367d405380ec12b50cebd7ff3f",
+                "925a635b884cc8952b37b4cc0e484f4789436138ceacbb9200539bb0b190d19b",
+                "b3f1a8669afb9ffc98787c7fa0d598ca1a1c086b5150c00e9a0bea5199becfbf",
+                "3e8c2cd4bc9ac1c36e0fd4c05c663f60a437f08013b590a030ed2f512503443c",
+                "c8b8d741fc415c5632bfb93c4750e8031e07acbb03204f9860b6c083b5926aa4",
+                "eb6c95456e06d6d4509d26fa98d135e5f69963fd1e9d36907f083b46d9962f94",
+                "aad668a6d73d3bf310383d4bacbc0885ec9646cd6011964a22ea1150dfc3abbd",
+                "0e3ee47cf89eb41e04d6fbc9657a11631f36571b2638b309000cc60460192d8b",
+                "c456f1f7bc7dcbfba1a82b5bde0ddad2e812ee70b4e6808a7c4730dce62a4ec0",
+                "9723d135a28a41621527bb67f566a90ea01d064b77fdbfd78db18ca256446c6f",
+                "b07ec718de1c99a3b25f981c59013fc1276562580a090ad1afd5d68b87601243",
+                "9f14cecbe41c4fd295bcc83e9bfc143610e5a0f4b767a8e2ccbe4c4a17cdfb79",
+                "a9e37b3aed98988449d9fe47c2afcd9dd7c9c97fba4729da6aca1607fbef6e09",
+                "449ae66024a2aa1bfc05902d7661e38df713076d73a3f44a79c84ee707348e61",
+                "cd0324b7ea1249a147f583be9efa3c850df08a712477a991f336215509246c50",
+                "39a5d9e8bab1177e083826507a4410928cc362814166effcb60416e22fcb0d82",
+                "658e1e71eb886bf018e7ce564d16634dd8867f19e68e912075f2448eb892ed18",
+                "048406b4853cebf4481e872871a871b1c69de5eee24248f78fc05fb7f8d23ffc",
+                "46e9e101892fa4e42eec9e755487d7098f4aa2a2e9d86a8d4529af70ee60011f",
+                "956316714f83b78fe0e50c83d55edea826f5ece67bf8ab1b86d6ff5a02c59854",
+                "8d5858c9d1a7c11752e2f926321bc035fdb8b638adb7b0113b473de88f4e4c75",
+                "50b47f6ef9143c217acb99a81d204648fb242318eb7c090977ae4b0aaf9c3daa",
+                "b8e18f261d0356c4f2968d662de477fb32e438794908c71568a0c064cec7f8ad",
+                "4567c3e9ee295ec9184d9667f2e00427dc3518b5d226b1e98dbdc26166348b66",
+                "10844c6e60286b79b9bb2aaadf81514bd079f21a19ee12b682dac73a9cd2288e",
+                "d4b4171f46ec727b99d1c48628703e4f4288093979bb934f89b3577ba7e366d0",
+                "7f12ac60b9f0355eeac1fe4d7d0bcd0fa765736a4749f14d7eb75ccdc0478187",
+                "20b58a070eb6d1c490f4c5e488b1d54c66239aa033b7a92b47d89f54ef595f2c",
+                "c85f3018f308b7cb77dd495ffa0d7ebe7a2d399baab20d2c17ed7cbffc655293",
+                "d6c6b55fb6c0869908d171729258be5e530d3b41fafd2117f2554974d0237173",
+                "9cd7b917df79a6a90d459643d0352d386ec5589c1be41aefa8a247b680a25958",
+                "727fa83b165f11629f5240089af52c97c5e50669328c161998bad395a7738ce4",
+                "7f216e793386abf003c97fa82c89b1dbd4eb91b750452f1823f0e1724f7bcc6d",
+                "b480d7a503d9ea1fdfb123335707dc1ec27002df873814ea9c9dbd8f20ed8be6",
+                "0a3a750e99c9d88fca4b3776aa0c8aebf29bd39e5b062c992b5e546827e76b3b",
+                "d27501aac1dc8b49599d38485778133f77a264d6c68437dd41be92902f737b58",
+                "7dfdb1fc85001867f5a6630cbd0baf92976b98a42d669bb0900f989337c0e765",
+                "a8d3803167791b1c381a8442b2f64a3bada0b5d02795e1b35445bc88b412c437",
+                "c5b3fd70c9ca8726e9957dcd1b6554f7d82ef9d6b955641abb32fee03adfa7a4",
+                "5dc40f6531612903bcc712ccb9aecbf631a216e6a4077712b4fbaab738b00557",
+                "5be8d52d30dbabbec3103ecbb15febd4b8668922232382a514c332fb840db1f8",
+                "4e44dc1732af2b09fb0247b287415589d418c9957e211faefbb90268e4876e14",
+                "915033ea8731df1f13e631814dea3cc51c7be94fe155e75fdbe9324db037d106",
+                "1e9e54e7386d220dedbf680f3c3579dcb884f9561684ad9dba1b356c49be6f12",
+                "865bfdb141c8e1d4aa6bba8f1f13cdf06d712d955f2b675db2f80c35b9508391",
+                "116ecf9f4fccbe0a3f66b7afb1145d165444f55ac82b271e70831a999ece59a5",
+                "caa19fd2d285380e80080d2673d399b93edb30883abd3407441451b23374f9ec",
+                "e03484d44b789d46eb078d5b2e43cfc1faf45b7a1d134fafe412fc99b066a926",
+                "d6d5f3d5c9a7f02ab20938af030c89e7078e801bea18b3057750d649e28dc480",
+                "9ad6f088ac7cc512b52f7f367db658848436548da51c43d74bd5c8e7638aebf2",
+                "fa61b8125b20aee1f013da4c386244d9684ede7026ad2bdd07b64ec91ae9ffae",
+                "3cce97860b1c6348c2f5e1fa468586a997391f46cebfa99e64605f21c99c677e",
+                "dff9bab5b8633774ff09c0b48481a7b26cc34b3bc2b184a278742ffed07df3cf",
+                "ac66acd41663f2aeeb3f7d167f09d3b43c3e17bd97208c44fdd96f89f6a7d926",
+                "5e6a08a5303ed4bb865c23e03981a69abe14bc811b13d0530ed70328ff6b4823",
+                "65b4343ed6cb2bff9fc4f7e8a81022f0f1dc9acbf231c76394df7eac66e2a1a8",
+                "e208d9fa47be67415092e126fcc8b45b9437e12c2db44eee6d42fe543fcefc77",
+                "f1b970edf3f04b437b3f8c46394e679c54eac624b24131a42a7bd3d5ddea92fa",
+                "14eb8b2a8faad33754d41ff86385ed8949d647491d178874b1758fc479200048",
+                "a3f93c0717fb90dbee0c2f19ceea1a7c65c447c3a103a95d10b8084eb01003a1",
+                "eb7b5c9fcadf43acabf413db26a25bc8c6d9cf1a60d3d35cb0701c75fa0b5b7e",
+                "027d619014adf8a53828ff8ba9f95aaeb7f6e60cb8fd72191c8067c0648ccdc5",
+                "5a6531bf535e4cdaf5ca8cb1403ef8d890a8fab376f434d51a9965542196f489",
+                "ec6658a36ef0900f1f1ac5b0e219c8d087c6dda1771b5d51253ff31ed5051044",
+                "c23285ea092aa53c50c9e87aa73fb171d3f92c47324293d43c4281cb6bcd4cc6",
+                "e107d4d9b461559e09ef52fdfc17ad93f9357bf3bf6e66e8ba1b446dc2d84dfd",
+                "78981300347936c765dc485cde0c54654f60d9e3591bda179add3fa6f97009c3",
+                "aeb7019a803a462c606bffe4b8414b3456fc72cef0b385cbc7fdca5ebf981b74",
+                "fedece9eda8ccfcf130306b8ed7dee5a210ca57f8b821dd9dde6c0aeb99eafc7",
+                "f73e3b2101e33ab4eb155c69d3d542361696c4920be50378c47c9bb3907ed3ac",
+                "9f619a67f2218c5e5b5363e720958e1b807e00e06246a95a6bb7019648e425bb",
+                "1d59d06cdc4c4414c2ce05ae3c9d2bc612785188183435ee04db5b2ab983c3fc",
+                "efe3a0062a1622e8d66f0eaef7d256d9b9befe9c18a0eddd4fffb18f915436d4",
+                "ede01e4cb05f84abe4198243ac2515b54ac0014702ea4079fc5c8e1f5ae63b0e",
+                "a873fba95acf7b57f483ba1e3c4f104760a645aa8c8dc245cf7ab9433d26fefe",
+                "78dc2e67488568a30a3eacef302d1c1f7537d9c2e7d6af157712b70ddb3d35ff",
+                "e9e7ef2e329b040f6d6ac059d08c860f821204102eb82762eb4b7829d4047a26",
+                "d6fbb2822c89074b92b502f97c5db70c0bb075258763a5fdcf73f2f74dd2c9c9",
+                "3b8b0f07a36322ebf2d30849818726b5a07ff2245d40d08f222689e0fbf9f0aa",
+                "eb9e84803fd30b012f9f34a0ea522dfe5376003659c1e494ef9434674ce5b96a",
+                "24d3b14701d863a406d1bf5ea4d25bef260ee294e15e3e30e0c4ed049b77408a",
+                "65a030d32b7a9916a4ea049660042a9e33b9aa75cc7586da02ebfdf0e99d8d28",
+                "eee00f99321fdc0ea0faf91362915c6536c05049bd3670a9fd36ab374b5275c4",
+                "e83751e19f551d263d45c47275f1ccd09aea4df825470d86568f88b16e4e1999",
+                "325b4c5793284c50bec45b91a03168081a68abcf2864a2d689ed485fced2b283",
+                "094923519931a575e78c71abee3c844b495c1bd2ba7ed075e54bcb29c437faf0",
+                "15788744c6f70d059af56d2f412909fcc52d1946f97f4e34651fa846145f4f90",
+                "3052b456643a07a070b69537ff4fc19f8e1294afb46e28d1dae329e6c127b567",
+                "4f1232f495416b578bac146378059dc0b576db03b8349a36c99e0d0973b89e97",
+                "e1c8458b1cb2f2bef74722e522bda21a3cd2848aa78e22e7a81a5d2e06d95110",
+                "e07f27d9e96beb1073d854929967d20ea7c31492c451ab357669b12033f462fb",
+                "84e1882fd61af1d0c3a1ee987848b7e3dba51ea562eb1d3a275fad28efa37b1f",
+                "7135b5b6f6350718dd850906326991bea40c39b69d11b30580eda8520e03a6f0",
+                "3d97e4e87c2d432c1d2c26ad1548f1a48f69c16b2e1f21df7f771462cfb58234",
+                "306d593d61f2692918c6d61ae9e02322f681f83e93f8d210aae672be5e675e62",
+                "93168fa6079e18324fffa0b0eb7ebb07f506bb594c0c40607cc3a5aae1d0a2ba",
+                "ba0ac34e564847dca3b409e291617667aeeaca5db6e5acaa981e796b82af3c67",
+                "c67e9d01d71d8f8a8d89363132167436e805adbddc70b073bfc915626b7a425a",
+                "7a26b492319b73b2fc348b7035678cf3bc7362d15b84875308f922d5f25a7c38",
+                "384d32d282bc7c2cca8a824806db528301d2a482f2846031a2b1d60d5b16b615",
+                "ac37d8ff6d93f9c4515d9798d56a0f64ccd8f65ff227984365d5ce52f8d8043c",
+                "14e0c187462e0f1ad561d44439d063e3239bad7fa1fb9779efcba40f42ca66cf",
+                "ecefb771208497c82bd5338dfe4b9061703870973a9eb9d6488a8fa92a5122cc",
+                "7b8419b710424034a4d04427466972e301b60299d7d413024adf5fdceca07c28",
+                "28c0d63791d754514eebea59d60e3efd4729dd22836721bd38e273e3a56430f0",
+                "17984719bc965ae3c83e79aef3e19e88924c07d92f544cbb65f7fb11db0de62f",
+                "ed8a820182855e939ded01a546a57d36a72158580f58d18c26e362878fb6358b",
+                "2db783fb42b395a98f4da210cac45e78c24f20e69a496be95a8a1ad4c3dbb448",
+                "e92205cf7f08845308c98ead6132472ce79a988521736d021f512288b8148e08",
+                "471bb138eeb0e53cff7201ab2befc570db953f67634a20367d05869f900e49a2",
+                "532900bf38066ccba0ff4af3bd8f0d07e602834dfedf5828ed1cf5cf5292f960",
+                "ef3beecdc1365f6869c16d57108856749d9a4bbf7139691f7c5ccad5d8a9fd7c",
+                "fe1778818b38d79bca6789bb73c71ff38c467d31cbdb81ed728d9ba28b525673",
+                "10a6f4eecf1d625565f03473fb9b372b554755f370d1990c0b31ab45471bb170",
+                "251f0f4ae36a322cd597c595b16bba96ed4a0a887242ea3fea8eaebda046a60a",
+                "b7fcf9ce6da3975946dd832f75341c70c70d76b9ca964a21a520a36ccb1f14a0",
+                "63c3dca62ee8c03d97dab8c73fd13deb427b6bf52be81b61e97291044718297c",
+                "43424aa4f1f5c003da630b48727c46c58359088c85137bbd2cc59e064a610675",
+                "ffa2205256861bd3830ee078f454b4ac4053869b083503e81e5d327570df3e02",
+                "fe24725e2e0870d3c1e391b366137f29ae21535436e2fd40f6c8a18b70f816b1",
+                "92ea2ecf889e625fee253e80198f77fe187ae0505d7f9670e59f86ab562b01cd",
+                "4aac551d24552e35dcfc4c3f0128a163b7ecd7afa3f14f3e5c980d4ca5260681",
+                "a22f04d9b290c1a073bbc1cdb62e5b1db859577545330d4dd73af8eb76f0c744",
+                "c70a30c1355c72d92fb2da5092dc5ce8c6db735eff5421148aa750d25ebd85d6",
+                "1182e15299318ff634da0bdc5ce1e0aa5a888927fc9fd39006df5538f479e424",
+                "6cc3dc8bc5d9a823ee90d1bdcf17c25ce3da3d69f58ab2629f31c061acfe32f3",
+                "5d503b4dd215c4459d40f16367acfbdf75a7636d2b110843f43a7c0d61b06124",
+                "ea248eab35bf8fe4bf22831bc44722d1698c43a4a21fcb5e438241596b1a7984",
+                "3b6f2460ec037069b2884acd59df8dc95f4085cf66f5089a152016cd8fd3d24f",
+                "652a5e0058a5eb02dc9767c4ebe45adf40bdfb2c9733a74484a43f281296a3a9",
+                "3e52b5d1c09a01b204b555444c2dbc8bb11f68ade26d50c9acb3add5518b65ca",
+                "96a5e0417a7d51d99eca477e5b77ebe2408089f77fa6817feae733ad7b0875ef",
+                "660f8035bc76d7ffc69abf3df1c6404b8c1b13f2281bd8e32001da5751185cc4",
+                "a202a8000828d813c3102e369d85cedff9e13f471bdf7265e8929205595eeb93",
+                "b40ca2d8fed4405a1973262d1f775fcd5bd82d5ad3f2ea58ddba4f6f021ad7c4",
+                "ad4b840372b6a66a3feb02dccc3841737b06e6d75725e70a08bd5a7d1fb723b2",
+                "87684f04003b6f84f9d384e189b3b96c72d9e7f774b1ca8cf99980b4ec5e08f4",
+                "aad6cbf914a10bca768ea266cdda3806ad6045c08d72dd90a47553c3c8703dd9",
+                "144fdcd70538784658dd41d060f164ebaff35d5be7f7772b641d5f83ee072652",
+                "1caedaf6ee92328cfa1d1cbed424a80a11c7bf17543a72b818fd0affbca7a328",
+                "524392e61604433c1f8b86fb10b3b81767a1281ad2027eb7040b6a2ef8df0103",
+                "d568cf6eff359192a33619b001d18a0a37fa48c86ec06aa60a0c7b499ad36c73",
+                "c60541fb57c65704f93b6f9431991a55e1845f2954b10020a94efa76300fb84a",
+                "838e7a100ba863cd3d20de8daf0e345c560260fefba45fc4d708a4d1da51cefe",
+                "484f5c5ac9e1929384aea70ec4432d38db7a8070edae1c67b30d3bf8b1e9ba19",
+                "27d2a78334bda692cade3027fa1f1319ccbf48ecc3064a4f274f8de043b44847",
+                "441c0a8fadd736365866a93dc6be216f8535ad09302421fe7f801d036d2fa9d5",
+                "f6220d945005240e349d16de570a9cadd7eb27e280664856483ecad1fcc6da72",
+                "088c63f7bf9d288f5116e887971d36be7dae8f26ef6422b709d490d20bfa6678",
+                "3a0c415ce42f66c14a221d753c89cc4cd2a7ea59910a8a44105c2f1aebc7e4dc",
+                "29fa165d9b67f181200525dd2f548c63d7552da21257399bd30851a67a3afcee",
+                "2fd7bd5a1b9026ef0183f364e814837840adc95274c0b280aa70a7e0eca6e03d",
+                "a51c7838e93ef7e69d661ba734410d1d9c6724e20115a81271ebb8b284c0c469",
+                "9286aa1a94cb968d3dfd7faa069857b112938d81149d27868085913f27068087",
+                "bdf87ac882550ac862b9f0743f8c6f9cd92c3458f0e601bd4b9a03aeb2ee1cc1",
+                "4f12f1ad635f583e753562d08dda160a058154d4a34f7b91faeceda44df7b41c",
+                "fd71691fe734cfddbdfc092eb44ada22e716c93005956cd9b5da89083025fc0e",
+                "88069bfb66cf87a7722b78bbb21f018d25dec1ac940cccd9f4eacb95458afafe",
+                "2ca18e096d53f14df6b81309788efc46abd86eebdd271d91d8d25c01bac5a32d",
+                "f07a895388c1077fbe831f27e7c0399c1dbad1f39e01265297f5aa01894eca2b",
+                "a2b9b91cdc9d185c82da94112d3deb8ea2176ec602292d634e288666113907fc",
+                "e879df2ffcf9cbd44408c34bae6c4bbec62ef9ffa856e603b59b81964c0c0eb2",
+                "97202a239544862dd288ef2683a2cf07e28b691f26f41cc9dde96db21c02fac3",
+                "e85d901513270df40b1e458d8df2ebe2421bbe4ed1e3abc7657a51a82b74bd07",
+                "e9e8ac264879e394d83db8a062184fe7a837817ef982c33d322c6cea29695444",
+                "dd112791e19837f03972172afce763a21cf425e2282d6381965b75f01259384f",
+                "fd778c1dad86bde95f6e8175b3513d58a59616160ce885d1fb35127ed7189108",
+                "3191fd248f1b2f2aef3236edd00eee5421ba24d1c300c139c7fe0400be93c4a4",
+                "933c440f4c09995c6355b14555338a307832a6a36272190b27dc1e66e3813481",
+                "f46b46e601023ebc5e7fd7badf41919a6201067e3edac3e1ff7822faab1a9cd8",
+                "406e1c80cf34f93fdc7dca6febce10e484c2f9b20f89efbee838a76972a77706",
+                "b66755ceebe4f5d54c4edd5011ffa0560585078caf2247f9f31e64a7c32fc272",
+                "e66c5d72fe0de655a4e1d154f658684ed52318799200967f89bafc9dd22757b8",
+                "043b9b3afc3eded135acf9588db833b35c9a0cb0faacae9aa690fedf95a8e624",
+                "7d8b8d6143f3db0c1cc67ef79bca5704652094d4a98188e3f3ed0ab788ecc5e2",
+                "fb61f5013b79d76305514c849d9f3b494ec9188e87949d56133cc8f4f231e8a7",
+                "2befd70f16457eee4d53cbbff82eddd098ca06b088dd8e68380b7e2016dcaf39",
+                "ead81a3dd2f9fa1863070f7ddf80c21ab61d5e358ff3a8fbb6185c07058c21fe",
+                "b0b9ea9745a50d12f6c6ae57e464b83fda13bb2cac0e45330de8bbaf5fc5f0fc",
+                "70cf113cd47cbd6c68c0c91a133829f2b2e837aba17c1fe042d17ba20a957eaf",
+                "09f9efdc82877d3c8c74c7cb447de91101b30a58c491048f4f323c8d8267073c",
+                "10d2dc9341ae68c15ba8b2278969a0f42e56ee620e84f40be647df8a8c947551",
+                "3660f0f09009a3e19ffdacbb8d4216899f59a11cb7cd1974d00675741b2be669",
+                "eaea901ad0d7413a5b0d2d2ff379cf6b9c3f1483521c9fb962f811f06e28e102",
+                "5bcdcba0f694161df9ac6eeb83c81ffff7090f7e3ff8b9da5cdb32b1253f4ab1",
+                "1e02d9a5f76b171d0e6306874ac7538f19e221f2072ac1bcf5fa21094be6f239",
+                "46ee80de045c2d22d936d7c9f8b9692bde0de0fdc737c91c663e01733f716319",
+                "6d7ce4ba01d9fe346aa87a15881b08e4f8664794d0f7794cec4996d644f0d7c4",
+                "3bccf9d8a5fe849b54513ac32b4ee9072ce487ff20a1b91009e07324289d3552",
+                "abf58e8af7f0fc21a7ad9369d582a8014492079fd8a15711323f22ea8211dfbd",
+                "c745fd2fe0ec0c38b12d2b09de0a43851fc27142885d708d3b0f353b9c5dc883",
+                "9b3851275c29e4d7d4635c40a55f83392b2b1d3ff282210dbae44c0e3c4f8aed",
+                "b553b26338c1d04b913a2c6ea5aa01d5a62f3ae8bbd07e81ce469e1576b6cb53",
+                "cad36b2e6eab5c1a8d09cd264475feaf6caaffa0b2c40dda3f5bb4023149c766",
+                "41be482683337220b984fe454a51f15b98f30fbe4bb2813b76095e447bb62d35",
+                "91b23ffb1999c8f5f92f1267df20e57455ba5eb2da8ad659066944d797c52501",
+                "1eff98866dca0808ee080be86e009861da49043c0ccdc56ba867ae4bc6fb6bb7",
+                "8ba4ad1b8c7082d05396812e3cff8605bd078146abe20a695bbc54c274176067",
+                "3de521df350b9a45219fa6dcf0d49fcf451d1387226411126c8d2468c1524bc5",
+                "2f065a4b017d143e247026fd31fd1766f77d33acd2c399d38930fe4fad425c1d",
+                "4cee11413acbdc853279bec43e9bb9941f7008e7f925f3ac733380da243d7531",
+                "cd8c3e22b3c5edf779ab4df785853979e489486e9b3311c1c458a3b55381ef73",
+                "580ad023f25b0e9f269bfae1d9021e44baee4d4a9f1135083ce19b63f95d4b88",
+                "130ea11dcbb310485d7b1c54959725082fe926feb66b3a4e227c11045bdafb74",
+                "037fd8483c0a57818b8d5db3b0bc7a8bd2f8addef9070d8065fad56dce5c4ebe",
+                "1f51af8f642a44e22028c55b7880c591ce650ef62d91a3fabdf8e828c319f10a",
+                "4999834cb012a6430ba9e52b3cf103a7f7f76f96c797a6443231c7d0bed36f8f",
+                "5337b49c70564e6223c0eb6fada0cb4fffbf1fa9921fbd7ef4cb98b8c8624b94",
+                "bf9963fadc0da6fa671f7c0c361b1c6b1c46dfab0d68316720d01371f7ec4632",
+                "4b30c0558f679cbb1150c4270029206a50bdb7dde8788d624d281da1ea2eebb6",
+                "c5af877114c913cd5d0e006c66704689a0246241d4a5f580434de1c540d2e1c5",
+                "0e82066485a60b1d175841d71b5b1a648db7d92b2348ef7428f4e02b7d5857a5",
+                "a64fc284787ad21db5c76498e305ce431433c64c08f19626e6fef74aa72d4e76",
+                "149bf09b0e522b84250e59ea50f35b6ee94f6a0a8e12b33bc9e2a846850572c4",
+                "3bc19eead043780b2e5352fcbabaf877d4aeb3102cda69f3c27494695e723f44",
+                "8c4add6562c1733c8da1b8c3714a1f2ac4d53b3793adc84fcf7f24c9934ff339",
+                "e732eb0f35dec803091879d78ea5d0b73bb2c5fa33863d12ad9cbea781ec9e20",
+                "6656504b91e1f7b76eb8707bdff0a1756c94e278482d3c63667ce21903d52b36",
+                "7c94364b2d891e969cc69f3d9244bc1c754d47b55f43b0ca1ebeadcb51a26daf",
+                "8e10d390a2275a956846db4f4ab2c338ec5f4e880f2bd04089281f1cba1e7046",
+                "fa9eb5c78c335af23b1b1f374565ee4f52f4ef376bea5e34d0f0a80095a535d6",
+                "00781770db0e12f85482848e2ec730f2e7964dfea6cdca7e6305809c51ff2d0e",
+                "2160eacb3c0bd4d78eb7d8e878e46b18d5d9183b67da7472a9fe867a39b002b2",
+                "ae8684f929f352641fd55d9322aab268f85ad29e348170ab23d5c6ac409396ae",
+                "1220e10595df6b3ae299a9c8bc81c0f40789be3f33e98776adf46743ca616f06",
+                "579a08a3c698ff455fdcce04e645be7f42cdb73959293994c292c7d463015c3c",
+                "23c89241471f6427b187c35ecadffb945b5c8a6a289de186fee9a6d206e2cf61",
+                "326a0589de180b3e354c58e9bfd1d722b16d35e5bea4ea173ea2c8ea69d4ecb2",
+                "48b92ee7de8e49ee4f61fa7043f3de2dee2fe9ac03f51df23657c888ecfa1ceb",
+                "6989b06d901aa1ef5e99025f9529c4230a1c9cba741e441d60441721e8f69a7f",
+                "920472c8e187f07969ad61ddd14b5b5c0e46bd80ae891363d15bbda696fa435e",
+                "dd1a948fee69c7fae919a73974bf8a3ea2052c33feb606451c5a1dcd213ccb97",
+                "55a72103b1fe346413c0444fb6c4f5263bb73cc90eb2a0c92149bbacd1c9064c",
+                "d7149d9f0fd93fa348d9730d7faef927560376de65a4cdfaca9fa08f55a4a686",
+                "6d707fb0c62bc43c0a67741466e0330ba53789a2a0914e3a00bbca25846c3ad4",
+                "de2d36948f1345eee4a4501e06e9e780515294500673d75fd81497cd556816e9",
+                "c48f4384d71977bba852c86e83332c3ea5c6eb6b552834f18c1bf6114e57d8ed",
+                "05f91a821a98acae05f909db6de1ae98849ffae2ee782744819b03c9b9bd1833",
+                "0ce74d11fe7773e08bb300b751765a7eb3f29871a5aec637b75b3eaffc04e49a",
+                "42976f31e2257e4389c9c0087799592939f947c5da782b8a05ab14c2b9fe1dbb",
+                "9c4bd5ec67fa93587c92ccf5af7310fb4e6333d5af0f1ab67457ba112418d766",
+                "271b270a31c3f562c716576485a51f51aeacf37c71f352b93dcdec7aad061482",
+                "0c85ed57072cef76be3dad77f103852d13f74c54fb5e94282a389795101deeec",
+                "c7b12be6c0428b8bc4383075e5ec79436aff6971e242182ff53cdceb0bc238c7",
+                "6df818eae5f38f098a7922cbe735171927d2456808c53953119d5ef4b021568c",
+                "75286606c9abf1be528ec12ca7a722764ad312e52c29a0c76181e96680087bd3",
+                "4298d350dc47750ae4ddbca68b46595774b749c4cc94c5a2dfcb44a1b1154d82",
+                "76392a02398552defc1293c83674a34bf5120f416c7b79ac0a39524a6cf86c75",
+                "f0e26e01d4c661a07e7731d8a2d66f0165f795945599942a6fb5de9accf5b014",
+                "c1ff6ad7640c551217a55354f1dc764f76ab44005267cd672abbaef52acc2dfe",
+                "4a10d7b079ef87bb5e289425236955477914f1163e00b8bb224be272e0b919bc",
+                "898dd210173df47d69da68ab12f18e52bd0cba10d05fbf4d72e6578c712ad4ad",
+                "56695bd0e9df686afd4a463b5188534228620ceb4548921b0d372b4914429336",
+                "6d971d64be52a98ab151a27ff1c97324903504e6680c4b3272ccd438b1d5d679",
+                "9e5cb2dbf888e44d7bf64a759efe0f50080b9f3413f05261f27a03eeb7fe5523",
+                "b5ca399efe3c3ecac654722d5ec55e7f2f0b2e59aa61ab34f49de773f226ba82",
+                "1d5cd89fbcd673a42d9b1043ba36bbc858abeee675037b6d910c9fe8ee6bb586",
+                "c22353f7d6ec9b81c1e646dcbc5fb794fe11f1bf94fe1dd1244bdf33f8294fa8",
+                "f1c4f6aca056da9654bbbeac01c50bc58b1da6cc62b8db94e91de73240142d00",
+                "8d31a23d42e93d91ef2b1c47124e9e43f8b6c071b0e48b90df21aea7f46599bf",
+                "c4bd5a8ffcdb66dccc1bd7f655d2ef11d60acd0b5931d72465863df6474959b5",
+                "afc02eabc24bd818684bf42a406d9f53e8a0af8713d88c77dd4dd758b7883de0",
+                "3ec0df993fd5c9db3ce6e877dc18ba479fa2afced2e9f330fac3590d0391f55e",
+                "e61013987dfa9d6b771e0b4b9e2c5d805585c857593b665b45b3c3f7f833dea8",
+                "57039eb46d6dd216583c65c15d66c44be1eecd40a518a6e95635dd66c78baf13",
+                "3d3f8b8c91f4079e1424cb7655565fa5ff9941d6a54dafcf0e423e2813a08409",
+                "b6c1c16a935d8af69b5d71e767633cf9b88d83950609bbd23cedb051b7e35d38"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.0008209057326583664,
+                "lotame_domain_check": 0.0017033793952661103
+            },
+            "exampleSites": [
+                "globalnews.ca",
+                "hollywoodlife.com",
+                "itsfoss.com",
+                "pjmedia.com",
+                "townhall.com",
+                "variety.com",
+                "whatismyipaddress.com",
+                "www.foxnews.com",
+                "sp.uta-net.com",
+                "www.wwltv.com",
+                "www.styleforum.net",
+                "m.marketscreener.com",
+                "interestingengineering.com",
+                "totaljerkface.com",
+                "www.boredteachers.com",
+                "www.datecalculator.org",
+                "www.daysoftheyear.com",
+                "crimegrade.org",
+                "www.chatsfriends.com",
+                "www.thefedoralounge.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/sd\\/apps\\/middy\\/middy-desktop-4\\.46\\.1115\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.availWidth": 281,
+                "Screen.prototype.availHeight": 281,
+                "Date.prototype.getTime": 278,
+                "window.localStorage": 278,
+                "window.innerHeight": 278,
+                "Document.cookie getter": 1,
+                "window.innerWidth": 2
+            },
+            "sites": 353,
+            "prevalence": 0.00241,
+            "cnames": [],
+            "responseHashes": [
+                "68462546ef049658b74cf2c802fc4b4af94e20c6508b333712ae56459c6a0dea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hollywoodlife.com",
+                "itsfoss.com",
+                "pjmedia.com",
+                "variety.com",
+                "whatismyipaddress.com",
+                "www.foxnews.com",
+                "calculat.io",
+                "www.fictiondb.com",
+                "bestneighborhood.org",
+                "www.allthetests.com",
+                "matadornetwork.com",
+                "nlab.itmedia.co.jp",
+                "eigobu.jp",
+                "chinesenewyear.net",
+                "www.channelnewsasia.com",
+                "www.ynet.co.il",
+                "www.crossingbroad.com",
+                "www.islamicfinder.org",
+                "www.13newsnow.com",
+                "www.parkers.co.uk"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/abd\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 300,
+            "prevalence": 0.00205,
+            "cnames": [],
+            "responseHashes": [
+                "481d713552f587d3bc0e3683557f8541ea69543e4d7abb7e4299c646ab10fd03"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hollywoodlife.com",
+                "pjmedia.com",
+                "whatismyipaddress.com",
+                "www.foxnews.com",
+                "www.kcentv.com",
+                "www.placera.se",
+                "www.glasfaserforum.de",
+                "www.viva.co.id",
+                "www.rasmussenreports.com",
+                "bigbrotherjunkies.com",
+                "news.itsfoss.com",
+                "www.fox43.com",
+                "www.kgw.com",
+                "www.fictiondb.com",
+                "emagtrends.com",
+                "m.horoscopovirtual.com.br",
+                "www.islamicfinder.org",
+                "eigobu.jp",
+                "www.anglingtimes.co.uk",
+                "aumo.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/web-vitals\\/web-vitals-4\\.2\\.3\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 371,
+            "prevalence": 0.00254,
+            "cnames": [],
+            "responseHashes": [
+                "1cf3e6d0ce85a08fee4fd2a90152a1a50e8b829c10003981d8f79da6cc2e874c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globalnews.ca",
+                "hollywoodlife.com",
+                "pjmedia.com",
+                "whatismyipaddress.com",
+                "www.foxnews.com",
+                "www.celticquicknews.co.uk",
+                "www.doogal.co.uk",
+                "www.glasfaserforum.de",
+                "www.tvinsider.com",
+                "www.autosport.com",
+                "www.quefaire.be",
+                "finestrainformativa.com",
+                "medicalnote.jp",
+                "www.eplans.com",
+                "www.warrennolan.com",
+                "investorshub.advfn.com",
+                "westchester.news12.com",
+                "archive.thetab.com",
+                "www.prensalibre.com",
+                "www.javascripttutorial.net"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/prebid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yield-manager"
+            ],
+            "apis": {},
+            "sites": 59,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "75752cb61cb2c75800ac85a4ab90c6990adf98b8ca3d01faae59c207f33fadcb",
+                "bc0ea683142ffd1f9b23dc28533a440b8433616ce7014f6e4973ca0180d14605",
+                "c70503e5bcb3a448e11542297a1d9be03cdbde193845119cffcc20c92f11f424",
+                "16c3970121a0725679b6df0b96864c8c38f801b5c4e5a35c94e9c34a8c0e8214",
+                "d91e23dee5942d61eabe75c8b0e0f30dd02792c4d0f058e5408794308311926e",
+                "d881a12f38f94b62ce021e3d0f82e826aa8e252f2c27f1dd488d33eec2c2781b",
+                "fde73b7689ac815409c5d28ac6eae7d0982b0ed76bf821cecce15bc6155bc8c1",
+                "4f3183c03e169e511e59819216a7539887dbc9e47f24aea19c841d541d1026a4",
+                "f7e9e16031673f5d863f813d4b804e120a8fb5e5a89bbfe2f95abdf90ac1601e",
+                "83ea099beeea1240c0d237c397d000ca81676e5dd084588d49b73a759b3568bf",
+                "c6293a98794bbdf13c3e5a7bb373e8cfccc076f163b80c9319c12a8c1f752649",
+                "28c63f6a1d3bc62b0593f12ef1e01e565237409da09518d5e5b473d82de185a5",
+                "b79eadb354bcf25e5715ccda3f082ac520c30e8373434b9cae7af11f9b5cf64c",
+                "0cf10fa7dc791b41626c0f5bfe80d4b858031b50eedd393e390bbc6e17ca3eb0",
+                "caf672343092f5e02b85b674da11418ce9fd5cda4a140cb1f6da472bb0180bfe",
+                "3b71d07e1d2b86af93222fc580d63a927c725cc5d2f7beb1cd5487309de2002f",
+                "a21b72dd6a0893f1580c6958b1c5166d7dd321464216eff45ad8e11cc3265d94",
+                "a8348c98bf599a3446f3777339c7154ff95ce0950d368239324d8b22591cbfe3",
+                "11e073b7f2aa239b6d94b00de3ef360fad99b16b69e75a4611c59a04f941bbe2",
+                "53751611c88fbb7e2d0b3b695ea1de9b4a3494409a15179884139f3af7a26e1c",
+                "80f450cbd2b9ff078d466e4f0834a5d9977b65d367324df0b3aa6d173c9fdbff",
+                "d5ad4e83e3d64f28e36eaf2151c3f78031d137d02802fd347d6878ed429c5601",
+                "1ae7a90da61385581f85bc5bc1d4316f406fa8b5bf1af3522cb38911bd230d7e",
+                "4d8727a6a00e85579a309d42c9bfe6e46f98590799bba37beab0f57dce2a6fb2",
+                "eb7bda4cd12bc40319f6d31f38d951e26c56506fcf6ee385960e6ae0a6edf26d",
+                "2c07c2fbad255cbffd8d9f5ac53b36bab1ee11a43b879e48b8e20d2ea4b2f690",
+                "5c9c78220a8fe59db9140405204d2f3de62a7c483165a348006ccdb940544aa7",
+                "4eb36913db609bfd67b76fe412f494f4d6d5d3bfb7cb73fcb968962cf13d62d4",
+                "bc0036b3614c1ebd9853330b360197852e2d7f4196edf170f125523ea65a8eee",
+                "e506419e37ef3c932e25b8f055784113ef3231f99d3dc3c0c5e86e1a6024fa67",
+                "52c3f6e45465b9a6e09c75adbd72ff6188d7896f8cd37f7a98f70ebb5c3023bd",
+                "ced826022c3c79c08d70faa0d5800445f6636b968b97206bf3b060374ee1b4de",
+                "b1870e90b83cd6e42830d649e7dae3f27c8d045391487f99f2e0c450d9bea75a",
+                "cfc764d88a053e96f1858ef8ed4e695786972984c56e92316e452dc84445d936",
+                "667e77e8c90251f9f756d6de303e8bb0c53a26ce9973ae9478d7d45100557d6a",
+                "620b1bfc2fa2114e393ddf7a07e62e99b0e594bda8a2b2518c2e1e7d8651f1e2",
+                "b97b446c0d431bedf8dd5890f07c802041b873daa257d76adcb44531e10ac985",
+                "e1d8d7b75e7d52dc55824a80d22afcc7c9139ce5025e89a7260aeab3ef6d5fa3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ss_pp_utm": 0.00006840881105486387,
+                "lotame_domain_check": 0.000047886167738404704,
+                "_li_dcdm_c": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "tsurihack.com",
+                "news.tv-asahi.co.jp",
+                "poddtoppen.se",
+                "www.tokyo-sports.co.jp",
+                "www.ac-illust.com",
+                "camphack.nap-camp.com",
+                "kurashi-no.jp",
+                "nikkei225jp.com",
+                "oceans-nadia.com",
+                "natalie.mu",
+                "medicalnote.jp",
+                "www.krysslexikon.se",
+                "www.gp.se",
+                "ciatr.jp",
+                "yamahack.com",
+                "rank-king.jp",
+                "www.verkkouutiset.fi",
+                "folk-media.com",
+                "av.watch.impress.co.jp",
+                "sp.uta-net.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/sra\\/desktop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "demand-engine"
+            ],
+            "apis": {},
+            "sites": 98,
+            "prevalence": 0.00067,
+            "cnames": [],
+            "responseHashes": [
+                "b2fe7d6119eabedb1bffb406f4a800afad45d6bac21affb80dd1dd96cad1bc15",
+                "1eab4ecdde3126242c29573caaaf6d27148242e5fd8b5bbb07e31f12d0bcd24f",
+                "e1a72406d3ef60690b49deda8f6a6a567b498f04ea0a184b46079b5267635aa2",
+                "011721e50fee409e9f8ded99faa48eb6556f3a18ac0e42d7d57d13d8e40ae21d",
+                "39cd13e5893c3f323401c965ab1d2e691396704b109000175c993f2056752b67",
+                "793b0798a78f4de588191585f890b9dd5b89102ab7f6f782a0fc17adc3f4c881",
+                "1c5c04771fb241007d20372cf251090bb8d92374d444fdc37d1e8e6ac6fbcf42",
+                "c33dfedaa133b06a192248c1f8bbff613222434f7b926cbd07bd963338956396",
+                "f09f8ef1938a5f4248113d60853e369d03c106409ae1cac82c464b713b27f2c4",
+                "6ec03e86b76d43fb1af7824f36cae50b86fc146742d7e5166fb16e4df1618e74",
+                "017b3fffa37abe64a75055b6cfd842c8a0b94e59141e3c6b79732acbf1b23f50",
+                "6ef722339deab75c45721715f93ecaac480920650bae7fee0bb8cb725d489bbe",
+                "e9427fb4b337ef9b4021093a7c465a7207d54019f5b0f2d6549f3faf2c6caf69",
+                "b9df17200543a11508a96ba0ad99b494f8ed5d4c26645963f882d53f37d4de32",
+                "5597ac0312115452a3158af5fdb6d345bab815f6fd436f4e13e0d37303094f98",
+                "ffba07eb736cd21ea0eb388bb089f991608dd90fa45ffcc3425bd029432bafb5",
+                "be1c3880b6bf35961ae36086f136df636456103caad61e02ffc4581b427db6f1",
+                "2ef3f17a4d662c874db19eb8436d7bd519edf51230f1fa09bf0899055b124635",
+                "952edfebffe7e5bd69e640fbdf60f0f18dcf96b3fd7430876712cd4635e5b749",
+                "74dfd4c5a2c9144e16bd4627d95a0d75363a01a3d499a8e75d4054c1f1d3cf51",
+                "0e18e65db2ef88cc9602ffcb11535c6fbdc3272c007e0a53ced7ac481780ef78",
+                "6130e928b1be1389a0a576cc46d8fd6d7152c1635bc49dca2b4aac51af9e2d5d",
+                "6d9dfb58f74f2531d4d46836a1854298bdf7f665b2d3f07bc7c3b939138fb180",
+                "a19be2e2949ecbd968fa18836c54b2e185ab11fad2194e35a406ab2d4b14d542",
+                "b99ea51237da97ba9e536ca37aac6a57949a09bc4f43253fbccf2c5134f16b80",
+                "e319e8f394e2c4c64b1be3d3305a69994ebc2a9db0fe59d3b0bb3a07e2577293",
+                "3a712eef678dabd6a2739e86dc8bd3a6f9b708c3ba2658ecbf1e320ba82b6fc3",
+                "50c602fa8106bfe24d117b0764bc6c5bdf453785969ab2a4f4f2a6eaabdc305b",
+                "1326689ca21e669e96b0d1281cffdf8b23ad74f7ecfdc094c5544711e6ab254d",
+                "67697c0dbd04a7cd1dff7a3ee2ab1679369ec9b3474a2b2abec0df22041af124",
+                "3b6002cbcb8ddf9b58b98fadbbb7a2f4a145e93eaf122b35c4de18d7dfa68cf9",
+                "d257380f328946b926e71128200011de9f247dda09c392dbd667e59ca7066a3a",
+                "9f86f4ef00b95db3bf1399cd4e14a06aab28f625e847a0d1fe8dd58be347eeb9",
+                "f84bffe88d2d6d5d96155abaf70e8674df1231e44c0334dc599cd8d91b0afc99",
+                "ce1d9fdc9c091999fec46dd676dd8c42f9dfa15d358ce2cfed0fedfd21e30e35",
+                "9a07883115fe7d5046db3cd5e5c34d2af6b9eb8e1ebd31f12f60b2279b94e621",
+                "875784486a9299006e7f91e84866fa5a33a9abe31da03131b807688b3d190bfc",
+                "044401450e14c80a80be1de5a3f129297786d26157a1299c0580b25400fef033",
+                "7631626eaf18503591e559312a76250707531576e73ce5e1d013c2442bfe379c",
+                "b3464f6fb571fe5c67c9af08f6967d3300bea44ab5122e8c154f1adcfecf61fb",
+                "66428fa1a459f570b2f5f75c03cb100231d032895c89b6b5014763fcad54e179",
+                "a02cdc4a8c5fcdf1708e36b55bbdb9bf4611eca79beca96b5413b8a649f5a181",
+                "726ffca45a417f097eb4836ad6cd946969a1b715d32aa452d524965584d08f1b",
+                "9b097d18aa50518b834b14ef8e9740b5e2589460b71579d87d203818d4653ee2",
+                "842b981f75659265627a8dbcab2bb57bca9db89c3143f281a98db9b531808269",
+                "7e69dd0ed05b3a3245cd113d65d1795854d04374374cd636ed7f125ca6b2995f",
+                "2f48aacc2fe03fbbeaacb90bbec603eb2262bada9bce8f26bda700cd89246997",
+                "585d2c1875d134c4e85930b0882c2bcb5df715d27d3a81f68135a0a367f62537",
+                "560e875fd8d1f03bd4125f95c95b311cd12695b62313435118940ba70a623be4",
+                "c81ebcd6a58a7fe6ace288951027b655185aa38c313dff8c2ce5a9e0308ad2e8",
+                "116c53081a8b3dd76e2c67a118e2ab4cb73eba3c08805ec5fa73eef329884415",
+                "672edfd4a9372357d9c5e9cde9fc928b5e5d64b290770edfb9cc22235c4a212a",
+                "3872ca897ce4577912e06466497c1ead1b20cdabe212a872ffb6589eead3e019",
+                "5cdee680831200fff564288d0ab5b7412480ec29e3a79a879618ba3675bb5013",
+                "a463cf4447978effce6f6c36d9109ec1ba7bdd01ec8233b31d89d74debb4ec40",
+                "5c91b769131c7e0519d107878d3fd2c46fe356e85fa4748fddde142eecd7a968",
+                "1b3b3557cb9ff88be09963577a0133723ce62fe56a0400513c8e10f8546c1993",
+                "49fca7418a63169055bb4dc1fba3affc9cf58bd80ec82b14c9df837dbbe4d21a",
+                "ea83b140f8a9a948abe18c57124bdeb7bdd5b403cb0252ab8e33b7f0855359a7",
+                "c35bd6b67153620c32e5f81f679e43be50703ac280e32c550cf4b5cc5a56dc64",
+                "917660cbe7d440d4aba56d7abc4bf843b63d0a2a1cab0f7c924f1f61989b165c",
+                "2248a795be1231427cd499765fe67d500818953c49fe27465488cfa17ee8b02f",
+                "a4fb241fd14ba1745bdc20e7408034f45f6c77784f9ea675e6af26abf7dcf17e",
+                "b843baaeb2c7a2647161cc3864e3efce8aa807f16a4a2b55cf9ea4b8f9647404",
+                "d92e5d149c52c8959a7619b892d7e26947c8b08dec5f7f75a8edbb6cf49e04e4",
+                "f2fc2a66d59d6d2c94c658ccd0dc1e5a77ce0c297a56d0365352cd674f78f49f",
+                "f4c24159893e22e576bfd097fc1ed32af5d752b9a8d3e248b1336b5b98020ddd",
+                "0df4d97f7e0ffb19dc9aaf5a289144752bab4651ebf693134fdc8022f2fd4cac",
+                "f801f0b830414d7b68674811a586e5f0a15ae100506de28c6c90a0fd6183972b",
+                "1aa7f4ae39914e905e113a7069e905b944858b7b76a5feb18a07c8ff48673004",
+                "b8c0c467b8023fec96a5ede0403e79321463d83b669a016b8cb748f5fe3dfad2",
+                "bdac596ce4b3af324470f120696badc9e8f824ed1b101f22e1264efda7966eff",
+                "24969b09dd68d9ec05b54063f0d9f94b9cf80223201c193b162707c787560b83",
+                "1387d4d29cc717d129155b938fa96c8e3371c43d50a4b1e44546b98f3ad5c913",
+                "5a5be0f6e9ca378fe6eae1879923f8e78c105ac6ddbc6f1c739b4ebc60eb2dea",
+                "c6712fec9fbeeda7f9e4118f5d59f907baa5c5cb7c9b08c2879696d90f8de220",
+                "d3c7c215cea2a01975419e21dba1f04f146e49ed5909eb98cfdf7703fd6fce60",
+                "1ce928a7e769b632a1c43aba597cd268ed2d0c87afe4ec5bb6e8c6ac566cedb6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__browsiUID": 0.0006635654672321795,
+                "_li_dcdm_c": 0.0001026132165822958,
+                "lotame_domain_check": 0.0001573402654261869,
+                "HB2__li_dcdm_c": 0.000006840881105486387,
+                "_td_domain_allthetests.com": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "pjmedia.com",
+                "whatismyipaddress.com",
+                "folk-media.com",
+                "www.jpost.com",
+                "futures.tradingcharts.com",
+                "stockcharts.com",
+                "hellopoetry.com",
+                "www.vibe.com",
+                "www.gpu-monkey.com",
+                "oceans-nadia.com",
+                "tipsfolder.com",
+                "onlinereadfreenovel.com",
+                "www.themix.net",
+                "www.mapple.net",
+                "www.tvonenews.com",
+                "kuruma-news.jp",
+                "ciatr.jp",
+                "www.speedcheck.org",
+                "justthenews.com",
+                "www.achgut.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/flx_twins\\/0\\.9\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "8a0ba79ec02c129b03a4712ae6fc96d5efaa9179a22a17fe751dbb89a674f8ba"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agora-web.jp",
+                "filmarks.com",
+                "ranking.goo.ne.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/demand",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 109,
+            "prevalence": 0.000746,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pjmedia.com",
+                "whatismyipaddress.com",
+                "bikehike.org",
+                "agora-web.jp",
+                "minkabu.jp",
+                "www.whatfinger.com",
+                "kuruma-news.jp",
+                "oceans-nadia.com",
+                "www.vol.at",
+                "cattime.com",
+                "www.vienna.at",
+                "pokemongo.gamewith.jp",
+                "www.gpu-monkey.com",
+                "dogtime.com",
+                "vrcmods.com",
+                "matadornetwork.com",
+                "www.anglingtimes.co.uk",
+                "www.rangersrumours.co.uk",
+                "www.mapple.net",
+                "ciatr.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/flx_twins\\/0\\.9\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "8a0ba79ec02c129b03a4712ae6fc96d5efaa9179a22a17fe751dbb89a674f8ba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agora-web.jp",
+                "filmarks.com",
+                "ranking.goo.ne.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/pub_demand",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 70,
+            "prevalence": 0.000479,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.motor1.com",
+                "www.allthetests.com",
+                "www.daily.co.jp",
+                "www.dreadcentral.com",
+                "www.saveur.com",
+                "themoviespoiler.com",
+                "www.mojo4music.com",
+                "tyda.se",
+                "www.remindmagazine.com",
+                "www.9news.com",
+                "www.vibe.com",
+                "www.tvinsider.com",
+                "mommypoppins.com",
+                "robbreport.com",
+                "www.wltx.com",
+                "www.motorsport.com",
+                "mom.com",
+                "whalewisdom.com",
+                "komachi.yomiuri.co.jp",
+                "www.channelnewsasia.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/prebid\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yield-manager"
+            ],
+            "apis": {},
+            "sites": 34,
+            "prevalence": 0.000233,
+            "cnames": [],
+            "responseHashes": [
+                "7e6a82c78a2eb15918873ef76bf78a42ddf2beb06c8ed9f1cca18b6057644bd2",
+                "314789e07226d810747a9639b4dd0d043d2d032ffd723ab65be84556ca40cf0c",
+                "e64cf286cb8d9233c8318719680bdc74cf3d4aeafdb9fbfe536fd6dd4f86e5d2",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "fdde36c24abcb3be178a69ea83496d3ef34a9a00447394fdbddbf50351ed684e",
+                "78996fc241122dbc186cec0c140d0d627d9d7865ee03514ccecb8977cae75b43",
+                "767f9fa902f562b8d4fa33554a7994b1e6c2a4ebfd6761cc0e2bb264aeaa2d1f",
+                "b66585d52e5d5678f8e61f6e1baaeb2cdc0279e80b8d44c17381004a881a4533",
+                "386ded8567fb2f0c58629a1da7f5556844c39da60af44c23d315fbc88eeaebc2",
+                "873a78c94ed4411fd1ff77e204cd6e40a0cb39dda8395705e0beff88e50feacf",
+                "776ea62f0eeb13b3bed0e3149a1c62266e2e402f9e5afd9bb51550a3eb34a854",
+                "4b4f66a47afa4a09a3f01c2159308082cc7ae4280d284d0fe6cca33eea75ff50",
+                "92685e82786ed156a2a31bbd4b985e81111d3a10fd5b5ccb16aa29aa7631fbe6",
+                "77e49818f26d0bb75e875a8ecc720dc00d552434c134560b6f602815e3d66574",
+                "271632de2f88f99ce92358a930cdcc50e9e293eb313a3df83df4b2040db75e57",
+                "269391c95ddf25852b8ef30de6f78aa3dcab538d6c0504cb8c390fa7fcb7e92b",
+                "698b6c2b950e23f979ee0a2d02be01052b8ed7a8e4602515329a865364252c53",
+                "642baf83d2c2dac079da5547ee51f7e521f82693c9b87392bf50883d39115dab",
+                "ab07dbfbf7735adf00e37b4a040d3cad2dfb8d896208b6ae182a2c947b280635",
+                "d721a47b870511e10b8df0220926e13ada7d57e71003beb918351b5840588709",
+                "9d2bd844e07b6a27a8c94154255e8092a88f649ab674595e26cd13d4ffaec7d3",
+                "2f21c78f4a4ec84b56ced21bdf33a3ffdd4973c6fb73ccf04937799253dbdd58",
+                "5b518409da5754e99fd6e639e7b3028eb307239f7d43daecae124f5666f45b32"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000027363524421945548,
+                "_li_dcdm_c": 0.00004104528663291832,
+                "__browsiUID": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "mlb.com",
+                "nerdable.com",
+                "www.minnesotasportsfan.com",
+                "www.milb.com",
+                "www.roomie.jp",
+                "americancarsandracing.com",
+                "www.whatcar.com",
+                "cleanplates.com",
+                "www.daily.co.jp",
+                "www.autocar.co.uk",
+                "www.gizmodo.jp",
+                "kamigame.jp",
+                "pickuptrucktalk.com",
+                "archive.triblive.com",
+                "www.dreadcentral.com",
+                "vikingsterritory.com",
+                "www.zukan-bouz.com",
+                "steelersnow.com",
+                "www.nikkan-gendai.com",
+                "canningdiva.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/thePublisherDesk\\/0\\.5\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "bd4b7912d22200ee601ce8d99089b95dccae09716e4d46ccd0dddaa3705b90c1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "americancarsandracing.com",
+                "www.minnesotasportsfan.com",
+                "www.rasmussenreports.com",
+                "www.themix.net"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/engineError",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestneighborhood.org",
+                "www.edhat.com",
+                "www.latest-hairstyles.com",
+                "www.motor1.com",
+                "www.roomie.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/EquativAdServer_tmzr\\/0\\.4\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "8598bc7b4f62b1f1b927da2f4dc8c06f593c8c37e382e2dd1206fca4dc38d80e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikehike.org",
+                "emagtrends.com",
+                "onlinereadfreenovel.com",
+                "tipsfolder.com",
+                "www.glasfaserforum.de",
+                "www.microbiologiaitalia.it"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/EquativAdServer_tmzr\\/0\\.4\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "8598bc7b4f62b1f1b927da2f4dc8c06f593c8c37e382e2dd1206fca4dc38d80e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikehike.org",
+                "emagtrends.com",
+                "onlinereadfreenovel.com",
+                "tipsfolder.com",
+                "www.glasfaserforum.de",
+                "www.microbiologiaitalia.it"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/advertisers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.0000752,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikehike.org",
+                "closeronline.co.uk",
+                "gpacalculator.io",
+                "howtocook-guide.com",
+                "razzball.com",
+                "sunrise-sunset.org",
+                "www.caffeineinformer.com",
+                "www.mojo4music.com",
+                "www.rappad.co",
+                "www.redcafe.net",
+                "www.timecalculator.net"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/freestar\\/0\\.2\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "f1578032daeed19e72aae07428869eda1ccec4ec4c89796baa2df356029fc1f8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "box.live",
+                "chinesenewyear.net",
+                "dogtime.com",
+                "levvvel.com",
+                "matadornetwork.com",
+                "nameberry.com",
+                "news.itsfoss.com",
+                "www.gradesaver.com",
+                "www.mapsofworld.com",
+                "www.realitytea.com",
+                "www.stampworld.com",
+                "www.thefedoralounge.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/altice\\/news12\\/PreEngine_desktop_2025-07-08T12:59:14\\.241\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "eb844c43c8faa03a8ef6b1d8f50f4300adc7205ed9441ee14874bf43ea664763"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "news12.com",
+                "bronx.news12.com",
+                "brooklyn.news12.com",
+                "connecticut.news12.com",
+                "hudsonvalley.news12.com",
+                "longisland.news12.com",
+                "newjersey.news12.com",
+                "newyork.news12.com",
+                "westchester.news12.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/freestar\\/0\\.2\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "f1578032daeed19e72aae07428869eda1ccec4ec4c89796baa2df356029fc1f8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chinesenewyear.net",
+                "dogtime.com",
+                "matadornetwork.com",
+                "nameberry.com",
+                "news.itsfoss.com",
+                "www.gradesaver.com",
+                "www.realitytea.com",
+                "www.stampworld.com",
+                "www.thefedoralounge.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/coxautomotive\\/autotradercom\\/PreEngine_desktop_2024-10-22T13:12:56\\.431\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "37f21cb789fca9b1a5fa822732cd9f648a7974fea4214ad4489b1defb34768c9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autotrader.com",
+                "classics.autotrader.com",
+                "motorcycles.autotrader.com",
+                "rvs.autotrader.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/bootstrap\\/bootstrap\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 4,
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "36209686dbafe448254d09dfa4823688bcc67a46bc257e05eaac36d32aa8ac9b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {
+                "__browsiSessionID": {
+                    "ttl": 1819,
+                    "length": 71,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 0.75
+                },
+                "__browsiUID": {
+                    "ttl": 31536019,
+                    "length": 36,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 0.75
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autotrader.com",
+                "classics.autotrader.com",
+                "motorcycles.autotrader.com",
+                "rvs.autotrader.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/assertiveYield\\/0\\.1\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "closeronline.co.uk",
+                "www.anglingtimes.co.uk",
+                "www.mojo4music.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/assertiveYield\\/0\\.1\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "closeronline.co.uk",
+                "www.anglingtimes.co.uk"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/refreshrate\\/single\\/desktop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "demand-engine"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "d3b0e9d15fb377beffea313d01c9daa015a7e78ee5275fddf910f66bd358ad8c",
+                "564e2f7f0a2580003d7dc508819f056d0e0b502014cf0e6f36d43593f2dc2e24"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "closeronline.co.uk",
+                "www.channelnewsasia.com",
+                "www.mojo4music.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/refreshrate\\/sra\\/desktop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "demand-engine"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "d2cac299b729c87aa3319513aa89c481b9e1e05b20d08cd5dbe5247172d70276",
+                "6b622441998b25a384f03fae05f63103ddf3c9f4fd1dbc05fa71139202dcff29"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "closeronline.co.uk",
+                "heatworld.com",
+                "www.anglingtimes.co.uk",
+                "www.carmagazine.co.uk",
+                "www.channelnewsasia.com",
+                "www.mojo4music.com",
+                "www.yours.co.uk"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/refresh",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "closeronline.co.uk",
+                "heatworld.com",
+                "www.carmagazine.co.uk",
+                "www.mojo4music.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/video\\/player",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 19,
+            "prevalence": 0.00013,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "concepto.de",
+                "dejure.org",
+                "dic.pixiv.net",
+                "drriders.com",
+                "humanidades.com",
+                "kerrydalestreet.co.uk",
+                "utaten.com",
+                "vetsbenefits.net",
+                "www.bimmerforums.com",
+                "www.daily.co.jp",
+                "www.ejemplos.co",
+                "www.fordfe.com",
+                "www.kookfans.nl",
+                "www.salaire-brut-en-net.fr",
+                "www.sanier.de",
+                "www.tapatalk.com",
+                "www.targatocn.it",
+                "www.toptenz.net",
+                "www.washingtonian.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/style\\/video-js-8_3_0\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn5"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "f40ebf82748661fad266146bb983ef8084e04f9930b854d48b85a12041b6676b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "concepto.de",
+                "humanidades.com",
+                "www.salaire-brut-en-net.fr",
+                "www.toptenz.net",
+                "www.washingtonian.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/video\\/player",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "concepto.de",
+                "dejure.org",
+                "humanidades.com",
+                "www.daily.co.jp",
+                "www.salaire-brut-en-net.fr",
+                "www.targatocn.it",
+                "www.toptenz.net",
+                "www.washingtonian.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/video\\/dynamic",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "concepto.de",
+                "dejure.org",
+                "humanidades.com",
+                "www.salaire-brut-en-net.fr",
+                "www.targatocn.it",
+                "www.toptenz.net",
+                "www.washingtonian.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/InvestingChannel\\/marketscreener\\/PreEngine_desktop_2024-09-02T12:20:00\\.333\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "29a368e009fb3df4c2061fc820cff60b43d65cba7a35209f084f6adb499b5378"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marketscreener.com",
+                "es.marketscreener.com",
+                "it.marketscreener.com",
+                "m-de.marketscreener.com",
+                "m.marketscreener.com",
+                "nl.marketscreener.com",
+                "www.marketscreener.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/video\\/demand",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dejure.org",
+                "humanidades.com",
+                "www.salaire-brut-en-net.fr",
+                "www.toptenz.net"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/js\\/video-loader2\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn5"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "99aee740045aec1b08f9b7ff289ca63fc262bc6d77b4000679a1cf5ed622bfe3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drriders.com",
+                "www.fordfe.com",
+                "www.sanier.de"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/video-rules\\/24351293-eb5a-4067-9beb-546c7592c13e\\/f6685dd6-d8bd-48a2-81af-2e34856a89af1750600378521\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "8badf8c2b4a0f6f786b2df8f3947826f602c35fbaef1cf1506170c7093a089b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drriders.com",
+                "kerrydalestreet.co.uk",
+                "vetsbenefits.net",
+                "www.fordfe.com",
+                "www.tapatalk.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/teal_mgid\\/0\\.1\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "032385e96965d9eecf35bca91f2be05cb4d48a57906463d7b9b82be507b8ffd0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "expansion.mx",
+                "m.beforeitsnews.com",
+                "www.las2orillas.co"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/teal_mgid\\/0\\.1\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "032385e96965d9eecf35bca91f2be05cb4d48a57906463d7b9b82be507b8ffd0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "expansion.mx",
+                "m.beforeitsnews.com",
+                "www.las2orillas.co"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/single\\/desktop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "demand-engine"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "a540fbca5c0ac49b54598b9ab912c72bf18fa782b7f5008813ec12690a67b773",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "336753946efa76449278c63594c28ee0167742f547eac2f922e251826ad1e5c1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__browsiUID": 0.00008209057326583664,
+                "lotame_domain_check": 0.000013681762210972774,
+                "_li_dcdm_c": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "filmarks.com",
+                "m.beforeitsnews.com",
+                "trilltrill.jp",
+                "www.achgut.com",
+                "www.daily.co.jp",
+                "www.finance-monthly.com",
+                "www.las2orillas.co",
+                "www.mapion.co.jp",
+                "www.minnesotasportsfan.com",
+                "www.rangersrumours.co.uk",
+                "www.realitytea.com",
+                "www.thefedoralounge.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/freestar\\/0\\.1\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "b0cb0f41037b529571059ed4be692fcd02319510101a1ea71d0ac79fd9bebaec"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hellopoetry.com",
+                "uni-watch.com",
+                "vrcmods.com",
+                "www.globalsecurity.org",
+                "www.gpu-monkey.com",
+                "www.rappad.co",
+                "www.stampworld.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/freestar\\/0\\.1\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "b0cb0f41037b529571059ed4be692fcd02319510101a1ea71d0ac79fd9bebaec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hellopoetry.com",
+                "vrcmods.com",
+                "www.globalsecurity.org",
+                "www.gpu-monkey.com",
+                "www.rappad.co",
+                "www.stampworld.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/flx_twins\\/0\\.11\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ad18cd4148e04058ca26643672704311765b361203ef403f895d5b4957814c6f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itojisan.xyz",
+                "onsen.nifty.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/flx_twins\\/0\\.11\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ad18cd4148e04058ca26643672704311765b361203ef403f895d5b4957814c6f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itojisan.xyz",
+                "onsen.nifty.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/sd\\/apps\\/middy\\/middy-desktop-4\\.46\\.1115\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availHeight": 1,
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "68462546ef049658b74cf2c802fc4b4af94e20c6508b333712ae56459c6a0dea"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autotrader.com",
+                "motorcycles.autotrader.com",
+                "rvs.autotrader.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/flx\\/0\\.19\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "9e2a4db6788f157d10b1cb06cb37112cdfa54e3cb72159334f8f1df66951e660"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nifty.com",
+                "onsen.nifty.com",
+                "pokemongo.gamewith.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/flx\\/0\\.19\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9e2a4db6788f157d10b1cb06cb37112cdfa54e3cb72159334f8f1df66951e660"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nifty.com",
+                "pokemongo.gamewith.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/mgid\\/0\\.2\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e6b7625968cbea002a0e8eed1c6d0a8e51bade12a6b5ad2c74491a2eae1029bf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pjmedia.com",
+                "www.finance-monthly.com",
+                "www.tvonenews.com",
+                "www.whatfinger.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/mgid\\/0\\.2\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e6b7625968cbea002a0e8eed1c6d0a8e51bade12a6b5ad2c74491a2eae1029bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pjmedia.com",
+                "www.finance-monthly.com",
+                "www.tvonenews.com",
+                "www.whatfinger.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/flx\\/0\\.24\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.availWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "557c3722cdfc0c2ad3e21ea8c807ed9952d2988b493b7896966718b662c06adc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamewith.jp",
+                "pokemongo.gamewith.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/flx\\/0\\.21\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4033ecbfdd521d12dcc3cd0a8921638de37bb5e8602ab9044c24d6ce625ac4c8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamewith.jp",
+                "pokemongo.gamewith.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/atlas\\/0\\.2\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "12d4bf28464e351dd54b481ec5590ece0e905e1880630b41be429beaaa654baf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "robbreport.com",
+                "www.vibe.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/atlas\\/0\\.2\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "12d4bf28464e351dd54b481ec5590ece0e905e1880630b41be429beaaa654baf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "robbreport.com",
+                "www.vibe.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/adPushup\\/0\\.2\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smallseotools.com",
+                "www.carscoops.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/pageone\\/utanet\\/PreEngine_desktop_2024-09-05T12:24:55\\.507\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9913b292ca029c2b83c60618fefcd3439ec1d752612d77a5d1137e4cff31f166"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uta-net.com",
+                "www.uta-net.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/analytic",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "whatismyipaddress.com",
+                "www.channelnewsasia.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/10tv\\/PreEngine_desktop_2025-06-16T06:53:19\\.578\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a8dad2703acccb52fa0cd179a7271265ce0ade13907e050de4486e25c46830d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "10tv.com",
+                "www.10tv.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/10tv\\/desktop_2025-06-16T06:53:19\\.949\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "10tv.com",
+                "www.10tv.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/11alive\\/PreEngine_desktop_2025-06-09T14:29:10\\.729\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "11alive.com",
+                "www.11alive.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/11alive\\/desktop_2025-06-09T14:29:10\\.880\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "11alive.com",
+                "www.11alive.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/12newsnow\\/PreEngine_desktop_2025-06-22T10:47:35\\.822\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a8dad2703acccb52fa0cd179a7271265ce0ade13907e050de4486e25c46830d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "12newsnow.com",
+                "www.12newsnow.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/12newsnow\\/desktop_2025-06-22T10:47:36\\.198\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "12newsnow.com",
+                "www.12newsnow.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/13newsnow\\/PreEngine_desktop_2025-06-19T11:05:46\\.108\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "13newsnow.com",
+                "www.13newsnow.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/13newsnow\\/desktop_2025-06-19T11:05:46\\.458\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "13newsnow.com",
+                "www.13newsnow.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/13wmaz\\/PreEngine_desktop_2025-06-19T07:37:15\\.822\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "13wmaz.com",
+                "www.13wmaz.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/13wmaz\\/desktop_2025-06-19T07:37:16\\.182\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "13wmaz.com",
+                "www.13wmaz.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/5newsonline\\/PreEngine_desktop_2025-06-22T12:25:33\\.240\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a8dad2703acccb52fa0cd179a7271265ce0ade13907e050de4486e25c46830d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "5newsonline.com",
+                "www.5newsonline.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/5newsonline\\/desktop_2025-06-22T12:25:33\\.618\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "5newsonline.com",
+                "www.5newsonline.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/webmd\\/0\\.4\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2ecaa314b27b30d29fafae4e935714d002ac1dcee828857e1ffc6305f3a690fd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "additudemag.com",
+                "www.additudemag.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/outbrain\\/ob_asiaone\\/PreEngine_desktop_2025-01-12T16:26:47\\.043\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cd385359ace7a664c76781fe3696923ebcd7288db8662e9e6563a86671b0dd21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiaone.com",
+                "www.asiaone.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/snackMedia\\/0\\.4\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "2ddc0e592692d3318d9bc24e06489e13ad09f450d58c8da113d66feb4f7b7f34"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "audi-sport.net",
+                "www.celticquicknews.co.uk",
+                "www.followfollow.com",
+                "www.rangersrumours.co.uk"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/snackMedia\\/0\\.4\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "2ddc0e592692d3318d9bc24e06489e13ad09f450d58c8da113d66feb4f7b7f34"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "audi-sport.net",
+                "www.celticquicknews.co.uk",
+                "www.followfollow.com",
+                "www.rangersrumours.co.uk"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/cbs19\\/PreEngine_desktop_2025-06-22T14:21:58\\.473\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbs19.tv",
+                "www.cbs19.tv"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/cbs19\\/desktop_2025-06-22T14:21:58\\.836\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbs19.tv",
+                "www.cbs19.tv"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/cbs8\\/PreEngine_desktop_2025-06-18T14:21:35\\.404\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7db436bc85aab55daa604103756861922fc0062a23b07a05b32afa477ea2fb21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbs8.com",
+                "www.cbs8.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/cbs8\\/desktop_2025-06-18T14:21:35\\.760\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbs8.com",
+                "www.cbs8.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/fox43\\/PreEngine_desktop_2025-06-22T09:57:32\\.842\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7db436bc85aab55daa604103756861922fc0062a23b07a05b32afa477ea2fb21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fox43.com",
+                "www.fox43.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/fox43\\/desktop_2025-06-22T09:57:32\\.999\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fox43.com",
+                "www.fox43.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/outbrain\\/ob_foxnews\\/PreEngine_desktop_2024-11-27T10:58:56\\.913\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "dca24929f6f4350d3727280ae0002044018c3cbf60bcb43327f29ad9cdf361f1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/outbrain\\/foxweather\\/PreEngine_desktop_2025-07-28T07:28:50\\.958\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4d72fbf5ed10820d9606b6c3216413dd6240be14e9fbb7ba090975eb5b42abd3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxweather.com",
+                "www.foxweather.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/outbrain\\/0\\.6\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "236029eaed03ea0b4147651165c1c89be1e447fc24ae3b9cb4f369c5e2b68581"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxweather.com",
+                "www.gazzettadiparma.it",
+                "www.mrfood.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/outbrain\\/0\\.6\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "236029eaed03ea0b4147651165c1c89be1e447fc24ae3b9cb4f369c5e2b68581"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxweather.com",
+                "www.gazzettadiparma.it"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/outbrain\\/gbnews\\/PreEngine_desktop_2025-02-16T15:59:51\\.905\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gbnews.com",
+                "www.gbnews.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/PMC\\/indiewirenew\\/PreEngine_desktop_2025-05-13T14:02:15\\.500\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "64eed76709a191c3ebca417de9876797c95e19e260d9899960e315dd27a99d27"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiewire.com",
+                "www.indiewire.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/freestar\\/jalopyjournal\\/PreEngine_desktop_2025-02-03T13:18:01\\.048\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopyjournal.com",
+                "www.jalopyjournal.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/totalmedia\\/tms-jpost\\/PreEngine_desktop_2025-07-29T12:36:19\\.816\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4a9a9688c445f7537f0004e2be703c883ee2534b8ca5b889ba6b97bcae90fa7c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jpost.com",
+                "www.jpost.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/totalmedia\\/tms-jpost\\/desktop_2025-07-29T12:36:19\\.972\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8dba7be03820daa700d9dbce6f7c64b610f3c9b7be59a837a11f68071ffbcfc0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jpost.com",
+                "www.jpost.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/kcentv\\/PreEngine_desktop_2025-06-23T10:42:16\\.080\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kcentv.com",
+                "www.kcentv.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/kcentv\\/desktop_2025-06-23T10:42:16\\.429\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kcentv.com",
+                "www.kcentv.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/kens5\\/PreEngine_desktop_2025-06-19T06:49:21\\.595\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7db436bc85aab55daa604103756861922fc0062a23b07a05b32afa477ea2fb21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kens5.com",
+                "www.kens5.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/kens5\\/desktop_2025-06-19T06:49:21\\.974\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kens5.com",
+                "www.kens5.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/kiiitv\\/PreEngine_desktop_2025-06-22T14:05:49\\.390\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kiiitv.com",
+                "www.kiiitv.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/kiiitv\\/desktop_2025-06-22T14:05:49\\.759\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kiiitv.com",
+                "www.kiiitv.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/king5\\/PreEngine_desktop_2025-06-15T10:51:00\\.072\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a8dad2703acccb52fa0cd179a7271265ce0ade13907e050de4486e25c46830d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "king5.com",
+                "www.king5.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/king5\\/desktop_2025-06-15T10:51:00\\.415\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "king5.com",
+                "www.king5.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/localmemphis\\/PreEngine_desktop_2025-06-23T08:54:44\\.255\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "localmemphis.com",
+                "www.localmemphis.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/localmemphis\\/desktop_2025-06-23T08:54:44\\.621\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "localmemphis.com",
+                "www.localmemphis.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/fct\\/0\\.5\\/template\\.txt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5fec0d46dc6f35f9e3578dde77c7af7edc465675b759b5e7c715eb086ca42b5d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapion.co.jp",
+                "www.mapion.co.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/fct_twins_dfp_hb\\/0\\.8\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "41c86af2cd8a5a6815fce50f6ca554e294b43615e2f66320da27b85a6df04d96"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapion.co.jp",
+                "www.mapion.co.jp"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/thepublisherdesk\\/minnesotasportsfan\\/desktop_2025-07-27T09:01:07\\.645\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "328a5ef58c2793dc69cdb29170ed0a7a9bc22a95ccdceb9d94cf79813532024a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minnesotasportsfan.com",
+                "www.minnesotasportsfan.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/thePublisherDesk\\/0\\.5\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "bd4b7912d22200ee601ce8d99089b95dccae09716e4d46ccd0dddaa3705b90c1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minnesotasportsfan.com",
+                "www.minnesotasportsfan.com",
+                "www.rasmussenreports.com",
+                "www.themix.net"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/bauermedia\\/mojo4music\\/PreEngine_desktop_2025-06-18T14:10:42\\.664\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "413f456c5f804493c557c9f950814bd64ebf4dfbb691e2156e9ef409d8925a34"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mojo4music.com",
+                "www.mojo4music.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/bauermedia\\/motherandbaby\\/PreEngine_desktop_2025-06-18T14:11:22\\.980\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f840a610770c17d806c95e0c670e3d0594cd9454ce13e36246f1527ba6fa5a1a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "motherandbaby.com",
+                "www.motherandbaby.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/newswest9\\/PreEngine_desktop_2025-06-23T10:16:46\\.728\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newswest9.com",
+                "www.newswest9.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/newswest9\\/desktop_2025-06-23T10:16:47\\.102\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newswest9.com",
+                "www.newswest9.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/hb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rangersrumours.co.uk",
+                "www.rangersrumours.co.uk"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/rocketcitynow\\/PreEngine_desktop_2025-06-23T12:38:30\\.600\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rocketcitynow.com",
+                "www.rocketcitynow.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/rocketcitynow\\/desktop_2025-06-23T12:38:30\\.967\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rocketcitynow.com",
+                "www.rocketcitynow.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/organicly\\/saveurly\\/desktop_2024-03-28T15:52:59\\.519\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b1a61a1e3de6c28da9727380f464a955128ec77c692a1ec1040f964db29b02cc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saveur.com",
+                "www.saveur.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/adapex\\/sweetyhigh\\/desktop_2024-08-26T08:28:04\\.998\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3e5a63be9e51d1b9ea4e37a471251b5385b1548a15d28674ca3dcd9c959247db"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sweetyhigh.com",
+                "www.sweetyhigh.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/dailybeast\\/thedailybeast\\/PreEngine_desktop_2025-02-16T15:39:28\\.621\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bb80c430c2b5832a2f537c00474129ce93d5c72a6c84cb39c6add11537ceb811"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thedailybeast.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/dailybeast\\/thedailybeast\\/desktop_2025-02-16T15:39:28\\.980\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thedailybeast.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/thepublisherdesk\\/themix\\/PreEngine_desktop_2025-07-21T09:47:05\\.355\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3d499f9cd588aacadc4f70538639a1128b82e82c26227ba820c87cd74bf2cb82"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "themix.net",
+                "www.themix.net"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/thepublisherdesk\\/themix\\/desktop_2025-07-21T09:47:05\\.711\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bc3156bcd423a7a7c2386281d0d00e782a32cc266494904110083961bb458ddf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "themix.net",
+                "www.themix.net"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/thv11\\/PreEngine_desktop_2025-06-22T12:27:20\\.493\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thv11.com",
+                "www.thv11.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/bauermedia\\/todaysgolfer\\/PreEngine_desktop_2025-02-06T13:28:30\\.919\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3cb84809129485d36e25d8eb2fc8a737f24c36520b4b418ada47ded0b2a7d517"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "todays-golfer.com",
+                "www.todays-golfer.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/PMC\\/vibe\\/PreEngine_desktop_2025-07-09T08:24:11\\.830\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "96cb79e7dd5f17be5817d116ab422895d7fbb64c09b1774c499e648a36787fe0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vibe.com",
+                "www.vibe.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/thepublisherdesk\\/washingtonexaminercom\\/PreEngine_desktop_2025-08-03T09:26:35\\.778\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c341ec1cae6b3e41aea709f21bd9d76db1369158aa512b2460564e75411718f2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "washingtonexaminer.com",
+                "www.washingtonexaminer.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wcnc\\/PreEngine_desktop_2025-06-19T12:15:08\\.809\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7db436bc85aab55daa604103756861922fc0062a23b07a05b32afa477ea2fb21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wcnc.com",
+                "www.wcnc.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wcnc\\/desktop_2025-06-19T12:15:09\\.208\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wcnc.com",
+                "www.wcnc.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/weareiowa\\/PreEngine_desktop_2025-06-23T06:47:19\\.441\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weareiowa.com",
+                "www.weareiowa.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/weareiowa\\/desktop_2025-06-23T06:47:19\\.814\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weareiowa.com",
+                "www.weareiowa.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wfaa\\/PreEngine_desktop_2025-06-11T10:30:42\\.195\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "848239779c8a177fef8e066c55387a733a2d7fbd708573c3d90dd47897556a4f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wfaa.com",
+                "www.wfaa.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wfaa\\/desktop_2025-06-11T10:30:42\\.558\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wfaa.com",
+                "www.wfaa.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wfmynews2\\/PreEngine_desktop_2025-06-19T11:43:27\\.415\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wfmynews2.com",
+                "www.wfmynews2.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wfmynews2\\/desktop_2025-06-19T11:43:27\\.795\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wfmynews2.com",
+                "www.wfmynews2.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wgrz\\/PreEngine_desktop_2025-06-19T08:28:15\\.606\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a8dad2703acccb52fa0cd179a7271265ce0ade13907e050de4486e25c46830d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wgrz.com",
+                "www.wgrz.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wgrz\\/desktop_2025-06-19T08:28:15\\.982\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wgrz.com",
+                "www.wgrz.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wltx\\/PreEngine_desktop_2025-06-18T12:39:10\\.172\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wltx.com",
+                "www.wltx.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wltx\\/desktop_2025-06-18T12:39:10\\.537\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wltx.com",
+                "www.wltx.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wnep\\/PreEngine_desktop_2025-06-22T10:00:45\\.396\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wnep.com",
+                "www.wnep.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wqad\\/PreEngine_desktop_2025-06-22T14:40:21\\.562\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wqad.com",
+                "www.wqad.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wqad\\/desktop_2025-06-22T14:40:21\\.938\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wqad.com",
+                "www.wqad.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wthr\\/PreEngine_desktop_2025-06-16T08:06:58\\.243\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a8dad2703acccb52fa0cd179a7271265ce0ade13907e050de4486e25c46830d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wthr.com",
+                "www.wthr.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wthr\\/desktop_2025-06-16T08:06:58\\.588\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wthr.com",
+                "www.wthr.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wtol\\/PreEngine_desktop_2025-06-18T14:57:07\\.192\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a8dad2703acccb52fa0cd179a7271265ce0ade13907e050de4486e25c46830d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wtol.com",
+                "www.wtol.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wtol\\/desktop_2025-06-18T14:57:07\\.540\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wtol.com",
+                "www.wtol.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wtsp\\/PreEngine_desktop_2025-06-22T09:30:44\\.387\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a8dad2703acccb52fa0cd179a7271265ce0ade13907e050de4486e25c46830d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wtsp.com",
+                "www.wtsp.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wtsp\\/desktop_2025-06-22T09:30:44\\.748\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wtsp.com",
+                "www.wtsp.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wwltv\\/PreEngine_desktop_2025-06-19T09:10:08\\.027\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "749ccfee16d21ec51b7650e34f1128b40fa0d719bdd74886056e667d7c9df98c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wwltv.com",
+                "www.wwltv.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wwltv\\/desktop_2025-06-19T09:10:08\\.403\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wwltv.com",
+                "www.wwltv.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/static_js\\/tegna\\/wzzm13\\/PreEngine_desktop_2025-06-18T12:53:35\\.129\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0a8dad2703acccb52fa0cd179a7271265ce0ade13907e050de4486e25c46830d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wzzm13.com",
+                "www.wzzm13.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/dcs-scripts\\/tegna\\/wzzm13\\/desktop_2025-06-18T12:53:35\\.506\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6964ea2a9a72b5a4f27f5ee9ebf591e634f90926ca79202026e932bdf3b4d278"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wzzm13.com",
+                "www.wzzm13.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00353,
+    "topInitiators": [
+        {
+            "domain": "webcontentassessor.com",
+            "prevalence": 0.2236328125
+        },
+        {
+            "domain": "pub.network",
+            "prevalence": 0.1142578125
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.0849609375
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.07958984375
+        },
+        {
+            "domain": "ay.delivery",
+            "prevalence": 0.05859375
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.04296875
+        },
+        {
+            "domain": "flux-cdn.com",
+            "prevalence": 0.04150390625
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.03857421875
+        },
+        {
+            "domain": "insiad.com",
+            "prevalence": 0.03564453125
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.0322265625
+        }
+    ],
+    "types": {
+        "Script": 1825,
+        "XHR": 1513,
+        "Fetch": 93,
+        "Ping": 21,
+        "Stylesheet": 5
+    },
+    "nameservers": [
+        "ns-729.awsdns-27.net",
+        "ns-189.awsdns-23.com",
+        "ns-1546.awsdns-01.co.uk",
+        "ns-1215.awsdns-23.org"
+    ]
+}

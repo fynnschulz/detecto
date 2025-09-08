@@ -1,0 +1,92 @@
+{
+    "domain": "amap.com",
+    "owner": {
+        "name": "Alibaba Group",
+        "displayName": "Alibaba"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "webapi"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "amap\\.com\\/maps",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "webapi"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.devicePixelRatio": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "URL.createObjectURL": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "92f53e95c7f1de47a6a169c58b1e0ee275f59091f4fb44489c15f170f64197b5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cgtn.com",
+                "www.zeekrlife.com"
+            ]
+        },
+        {
+            "rule": "amap\\.com\\/mapsplugin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fa3f8799497929c0a7109ad92da7a836a9c50a5f43ab1e17abbe11186e0e4393"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zeekrlife.com",
+                "www.zeekrlife.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns5.aliyun.com",
+        "ns3.aliyun.com",
+        "ns4.aliyun.com"
+    ]
+}

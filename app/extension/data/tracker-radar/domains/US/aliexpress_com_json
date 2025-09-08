@@ -1,0 +1,130 @@
+{
+    "domain": "aliexpress.com",
+    "owner": {
+        "name": "Alibaba Group",
+        "displayName": "Alibaba"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "best",
+        "ase"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "aliexpress\\.com\\/",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "best"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "3faf94ce5b99ed63cb462deff248969666e8d3af9f22b016d93c97ed7da01557"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allhiphop.com",
+                "www.nude.hu",
+                "you-stories.com"
+            ]
+        },
+        {
+            "rule": "aliexpress\\.com\\/upload\\/web\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ase"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "daraz.com.np",
+                "www.daraz.pk",
+                "www.daraz.com.bd",
+                "www.daraz.lk",
+                "you-stories.com"
+            ]
+        },
+        {
+            "rule": "aliexpress\\.com\\/upload\\/web\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ase"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "2cad2325209fa681ab5f6b8ad8826f1d332db8048daa5857c4ad2d396e649e62",
+                "b4f7f2e8bd5b809c25dd0e818129073de07ec232c90e0cacb188d50620e3e113",
+                "82d2b8ef38a9180c85cc11bdcab0e8e12e2f1c1662c0b9e499ec6468c87e6315",
+                "b3341d96eb8f6fc3daf030d597c1866e840d004f0c25bd886258cdfa739d765e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "daraz.com.np",
+                "www.daraz.pk",
+                "www.daraz.com.bd",
+                "www.daraz.lk",
+                "you-stories.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "aliexpress-media.com",
+            "prevalence": 0.5925925925925926
+        },
+        {
+            "domain": "alicdn.com",
+            "prevalence": 0.25925925925925924
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "lazcdn.com",
+            "prevalence": 0.037037037037037035
+        }
+    ],
+    "types": {
+        "Document": 3,
+        "Preflight": 5,
+        "XHR": 5
+    },
+    "nameservers": [
+        "ns1.alibabadns.com",
+        "ns2.alibabadns.com"
+    ]
+}

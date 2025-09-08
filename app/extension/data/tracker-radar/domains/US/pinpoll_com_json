@@ -1,0 +1,294 @@
+{
+    "domain": "pinpoll.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000684,
+    "sites": 10,
+    "subdomains": [
+        "tools",
+        "cdn",
+        "static",
+        "api.dmp",
+        "pa",
+        "api.embed"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "pinpoll\\.com\\/global\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tools",
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 8,
+                "Navigator.prototype.cookieEnabled": 8,
+                "Navigator.prototype.userAgent": 8,
+                "Date.prototype.getTimezoneOffset": 8,
+                "Navigator.prototype.doNotTrack": 8,
+                "Screen.prototype.width": 8,
+                "Screen.prototype.height": 8,
+                "Screen.prototype.colorDepth": 8,
+                "Screen.prototype.orientation": 8,
+                "window.innerWidth": 4,
+                "window.innerHeight": 4,
+                "Date.prototype.getTime": 5
+            },
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "55013258fc7818651e3346b1afd351cc459de655f151a6274463300178795274"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orf.at",
+                "www.alpin.de",
+                "www.costanachrichten.com",
+                "www.entertainmentdaily.com",
+                "www.nw.de",
+                "www.pnp.de",
+                "www.vienna.at",
+                "www.vol.at"
+            ]
+        },
+        {
+            "rule": "pinpoll\\.com\\/static\\/start\\.html",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Document.cookie setter": 3
+            },
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "38dfcfd29e5bc35eabebb6db93870261846cb9fa1bcd1631c1a7aef3114de24b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "thirdparty": {
+                    "ttl": null,
+                    "length": 3,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 0.3333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orf.at",
+                "www.alpin.de",
+                "www.costanachrichten.com",
+                "www.entertainmentdaily.com",
+                "www.nw.de",
+                "www.pnp.de",
+                "www.vienna.at",
+                "www.vol.at"
+            ]
+        },
+        {
+            "rule": "pinpoll\\.com\\/public\\/remarketing",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.dmp"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "20bc1392a17b383b46fffc33c8e796755452883bfcfc2d33c90342ea70227639"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orf.at",
+                "www.alpin.de",
+                "www.costanachrichten.com",
+                "www.entertainmentdaily.com",
+                "www.nw.de",
+                "www.pnp.de",
+                "www.vienna.at",
+                "www.vol.at"
+            ]
+        },
+        {
+            "rule": "pinpoll\\.com\\/public\\/remarketing",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.dmp"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orf.at",
+                "www.alpin.de",
+                "www.costanachrichten.com",
+                "www.entertainmentdaily.com",
+                "www.nw.de",
+                "www.pnp.de",
+                "www.vienna.at",
+                "www.vol.at"
+            ]
+        },
+        {
+            "rule": "pinpoll\\.com\\/static\\/complete\\.html",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "6415cb12c174f6986037af95933f36db85e7efdee5f4fea96f9804cb89d3d190"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orf.at",
+                "www.alpin.de",
+                "www.costanachrichten.com",
+                "www.entertainmentdaily.com",
+                "www.nw.de",
+                "www.pnp.de",
+                "www.vienna.at",
+                "www.vol.at"
+            ]
+        },
+        {
+            "rule": "pinpoll\\.com\\/v1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pa"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "c48b5b1a9776c84602de2306d7903a7241158a5077e7a8519af75c33441b8334"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orf.at",
+                "www.alpin.de",
+                "www.costanachrichten.com",
+                "www.entertainmentdaily.com",
+                "www.nw.de",
+                "www.pnp.de",
+                "www.vienna.at",
+                "www.vol.at"
+            ]
+        },
+        {
+            "rule": "pinpoll\\.com\\/v1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pa"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orf.at",
+                "www.alpin.de",
+                "www.costanachrichten.com",
+                "www.entertainmentdaily.com",
+                "www.nw.de",
+                "www.pnp.de",
+                "www.vienna.at",
+                "www.vol.at"
+            ]
+        },
+        {
+            "rule": "pinpoll\\.com\\/aipolls\\/search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.embed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "86f514e652cf44fc9799f53ad181afc56a7373d87f7ec20ceacd050c35750586"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vienna.at",
+                "www.vol.at"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "mocafirst.at",
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "stol.it",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "Document": 16,
+        "Fetch": 18,
+        "Preflight": 16
+    },
+    "nameservers": [
+        "ns4-04.azure-dns.info",
+        "ns3-04.azure-dns.org",
+        "ns2-04.azure-dns.net",
+        "ns1-04.azure-dns.com"
+    ]
+}

@@ -1,0 +1,110 @@
+{
+    "domain": "thetreeapp.org",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "www",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "thetreeapp\\.org\\/assets\\/js\\/tree-counter-widget\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6ab9565993ae7ff0d2f522c748970e17749013b6cb62c8bb237246be93ace9f9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "taw_cache": {
+                    "ttl": 86400,
+                    "length": 40,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessofapps.com",
+                "www.businessofapps.com"
+            ]
+        },
+        {
+            "rule": "thetreeapp\\.org\\/v1\\/impacts\\/trees",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessofapps.com",
+                "www.businessofapps.com"
+            ]
+        },
+        {
+            "rule": "thetreeapp\\.org\\/v1\\/impacts\\/trees",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b2689bd17d6e0b76c45542662af018831f4692ab69245d8bdd0b8df46cf341fe"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessofapps.com",
+                "www.businessofapps.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "monroe.ns.cloudflare.com",
+        "rocco.ns.cloudflare.com"
+    ]
+}

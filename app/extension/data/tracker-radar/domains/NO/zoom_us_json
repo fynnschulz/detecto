@@ -1,0 +1,107 @@
+{
+    "domain": "zoom.us",
+    "owner": {
+        "name": "Zoom Video Communications, Inc.",
+        "displayName": "Zoom Video Communications"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "us01ccistatic"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "zoom\\.us\\/us01cci\\/web-sdk\\/cross-storage\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "us01ccistatic"
+            ],
+            "apis": {
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "eeb0a0d6efcf01c4f48dd7c16d7779fc2103191caa04de1afbb4c0504d2e2f23"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "broadcom.com",
+                "knowledge.broadcom.com",
+                "support.zoom.com"
+            ]
+        },
+        {
+            "rule": "zoom\\.us\\/us01cci\\/web-sdk\\/web-campaign\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "us01ccistatic"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.language": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "URL.createObjectURL": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "32c4f4392ead204a92241b0ac1c4899ebd8e89c8968d3ccc5351fbc97d25ba01"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "broadcom.com",
+                "support.zoom.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "zoom_support_header.js",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Document": 3,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-1137.awsdns-14.org",
+        "ns-1772.awsdns-29.co.uk",
+        "ns-387.awsdns-48.com",
+        "ns-888.awsdns-47.net"
+    ]
+}

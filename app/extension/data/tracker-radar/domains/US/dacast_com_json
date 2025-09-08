@@ -1,0 +1,163 @@
+{
+    "domain": "dacast.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "player",
+        "prod-nplayer",
+        "iframe",
+        "video-download"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "dacast\\.com\\/js\\/player\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "HTMLMediaElement.prototype.canPlayType": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.language": 2,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "URL.createObjectURL": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.onLine": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "75b04088ab4ad8f3dbbe5f426bdf0968953698f1845a4ec2bd33998e6442db4a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lci1.com",
+                "www.andrewchristian.com"
+            ]
+        },
+        {
+            "rule": "dacast\\.com\\/locales\\/en\\/translation\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-nplayer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "485357e6432542f5f3e0e885a785c0fb3869e3b68d2b4d1aff89c5019c1cfd53"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lci1.com",
+                "www.andrewchristian.com"
+            ]
+        },
+        {
+            "rule": "dacast\\.com\\/vod\\/a602531b3c2f098ab7798313f25dd800\\/de1e13d2-567b-4d75-abfc-d6e45d919c8a",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "iframe"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c5ecd4db22bb8192cfdeac531237a9ffa228ed3a86d90266e4cbadbf12c3ffdf"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "andrewchristian.com",
+                "www.andrewchristian.com"
+            ]
+        },
+        {
+            "rule": "dacast\\.com\\/wsb\\/universe-vod-storage\\/289c9a4b-581b-e0db-677c-cf368cdcb198\\/14b701c3-86ec-4735-9601-202149d2eac2\\/ed80ac04-23c5-9c5a-440d-6118535737e6_rendition\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video-download"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "astonmartin.com",
+                "www.astonmartin.com"
+            ]
+        },
+        {
+            "rule": "dacast\\.com\\/wsb\\/universe-vod-storage\\/289c9a4b-581b-e0db-677c-cf368cdcb198\\/72de2871e0317f38dccd55f3f8989191\\/15794d95-aed6-773e-884f-a65e4cf37d0c_rendition\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video-download"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "astonmartin.com",
+                "www.astonmartin.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "vzaar.com",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2,
+        "Document": 2,
+        "Media": 4
+    },
+    "nameservers": [
+        "ns-1453.awsdns-53.org",
+        "ns-1862.awsdns-40.co.uk",
+        "ns-592.awsdns-10.net",
+        "ns-139.awsdns-17.com"
+    ]
+}

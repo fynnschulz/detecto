@@ -1,0 +1,135 @@
+{
+    "domain": "sprinklr.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000301,
+    "sites": 3,
+    "subdomains": [
+        "prod19-live-chat",
+        "prod18-live-chat",
+        "prod19-lc-mqtt",
+        "prod18-live-chat-emqx"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "sprinklr\\.com\\/api\\/livechat\\/handshake\\/appHandshake",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod19-live-chat",
+                "prod18-live-chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a00cb3aef9dd1a9ed4e87bc0754dded3227e7326e0be40f43d4e7186bd337fc2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telekom.de",
+                "www.sunrise.ch"
+            ]
+        },
+        {
+            "rule": "sprinklr\\.com\\/api\\/livechat\\/event\\/fetch-notifications",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod19-live-chat",
+                "prod18-live-chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6c6785bae6eda395e0795393f03d43547b84a90107d033b3b793380edee43b82"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telekom.de",
+                "www.sunrise.ch"
+            ]
+        },
+        {
+            "rule": "sprinklr\\.com\\/mqtt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod19-lc-mqtt",
+                "prod18-live-chat-emqx"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telekom.de",
+                "www.sunrise.ch"
+            ]
+        },
+        {
+            "rule": "sprinklr\\.com\\/api\\/livechat\\/prompt\\/browse\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod18-live-chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sunrise.ch",
+                "www.sunrise.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9047619047619048
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.047619047619047616
+        }
+    ],
+    "types": {
+        "XHR": 6,
+        "WebSocket": 2
+    },
+    "nameservers": [
+        "ns-1627.awsdns-11.co.uk",
+        "ns-233.awsdns-29.com",
+        "ns-886.awsdns-46.net",
+        "ns-1489.awsdns-58.org"
+    ]
+}

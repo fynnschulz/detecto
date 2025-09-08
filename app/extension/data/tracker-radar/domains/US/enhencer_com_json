@@ -1,0 +1,113 @@
+{
+    "domain": "enhencer.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "cdn",
+        "collect"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "enhencer\\.com\\/scripts\\/shopify_v2\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "761ca09c0ceb4ce41be4603d6bbb7fd998e54980596ba967c1a40187f8e54e21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "enh_visitor_session": {
+                    "ttl": 10368014,
+                    "length": 10,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "enh_token": {
+                    "ttl": 10368014,
+                    "length": 24,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "enh_last_access": {
+                    "ttl": 10368014,
+                    "length": 13,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "enh_info_ex": {
+                    "ttl": 604815,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {
+                "enh_token": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "vitalsleep.com",
+                "www.vitalsleep.com"
+            ]
+        },
+        {
+            "rule": "enhencer\\.com\\/api\\/getaninfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "29cd6a927cb6f30bfb32ea9b9695b80c6dce90d8114dfd258a18e02c6c41860c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "enh_token": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "vitalsleep.com",
+                "www.vitalsleep.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-1126.awsdns-12.org",
+        "ns-715.awsdns-25.ne"
+    ]
+}

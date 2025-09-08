@@ -1,0 +1,226 @@
+{
+    "domain": "healthline.com",
+    "owner": {
+        "name": "Healthline",
+        "displayName": "Healthline"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "gtm-server",
+        "pavlov-prod"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "healthline\\.com\\/gtm\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "window.name": 3,
+                "Date.prototype.getTimezoneOffset": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "c01e46cd0423401c4afda3ac810a9e1af38a52ccc66800a0ca8b753c2ec481d0",
+                "aa8cc42cce891bc560c4648bf370b9bd0b07a3a9b718d97f80ae17912de4baa7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/gtag\\/js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "window.name": 3,
+                "Navigator.prototype.language": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "d027cfdc513a872f707d0f52f24f0252215fb60c295857cc1027814ebfeb3c77",
+                "ef5c8ac6e6ab6c29bdc41850d01f6d72f87c1bbe05fbd4b2894bade6ae1e9ec9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ga_2DMG0QNTVL": {
+                    "ttl": 63072005,
+                    "length": 53,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_ga": {
+                    "ttl": 63072005,
+                    "length": 27,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                },
+                "_ga_RM4HVRMNXS": {
+                    "ttl": 63072004,
+                    "length": 53,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_ga_930KV6HDTB": {
+                    "ttl": 63072005,
+                    "length": 54,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/api\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pavlov-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/g\\/collect",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c",
+                "6e3b4c7eab282c09be3b5d037f1968260f3b56f7112a039317c75e22e134c3a9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "OTGPPConsent": 0.00002052264331645916,
+                "_ga": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/_\\/service_worker\\/5840\\/sw_iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "2ada301d803d8f4b2ba210c9c57091378255ed54b96e4236a9e2ce587a2a4035"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/_\\/service_worker\\/5840\\/sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "da7281e49859a7f0cc75fab5f0e256775e20fed461502cc86321d55ad5be7084"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com",
+                "www.medicalnewstoday.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000041,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Ping": 3,
+        "Fetch": 3,
+        "Document": 3,
+        "Other": 3
+    },
+    "nameservers": [
+        "ns-1494.awsdns-58.org",
+        "ns-1870.awsdns-41.co.uk",
+        "ns-397.awsdns-49.com",
+        "ns-532.awsdns-02.net"
+    ]
+}

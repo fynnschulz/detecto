@@ -1,0 +1,115 @@
+{
+    "domain": "fedex.com.akadns.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "api"
+    ],
+    "cnames": [
+        {
+            "original": "api.fedex.com",
+            "resolved": "api.fedex.com.akadns.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "fedex\\.com\\.akadns\\.net\\/user\\/v4\\/login\\/validate",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.fedex.com",
+                    "resolved": "api.fedex.com.akadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fedex.com",
+                "www.fedex.com"
+            ]
+        },
+        {
+            "rule": "fedex\\.com\\.akadns\\.net\\/auth\\/oauth\\/v2\\/token",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.fedex.com",
+                    "resolved": "api.fedex.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "bf6640dc5f304a398fcc84b419db6c94e4c3e3ab671736525ccddb967c6f3e00"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fedex.com",
+                "www.fedex.com"
+            ]
+        },
+        {
+            "rule": "fedex\\.com\\.akadns\\.net\\/user\\/v4\\/login\\/validate",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.fedex.com",
+                    "resolved": "api.fedex.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "cade4e1b1a0d7435a3a5768d8c2915b379515055b9e2b63672eca6c1fc11fe3d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fedex.com",
+                "www.fedex.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.0000137,
+    "types": {
+        "Preflight": 2,
+        "XHR": 4
+    },
+    "nameservers": []
+}

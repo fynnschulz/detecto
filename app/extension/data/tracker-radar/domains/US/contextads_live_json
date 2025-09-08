@@ -1,0 +1,304 @@
+{
+    "domain": "contextads.live",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000889,
+    "sites": 13,
+    "subdomains": [
+        "cdn",
+        "cengineapi",
+        "delivery"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "contextads\\.live\\/publishers\\/cads-generic\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 11,
+                "window.localStorage": 5,
+                "Document.cookie getter": 5
+            },
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "5a2e6c87b29a0eca4541b598eed2d0d2e05e259f309fbb15eed221c28734a9e8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "viva.co.id",
+                "gadget.viva.co.id",
+                "in.mashable.com",
+                "inet.detik.com",
+                "me.mashable.com",
+                "siap.viva.co.id",
+                "sulsel.idntimes.com",
+                "www.idntimes.com",
+                "www.kompas.tv",
+                "www.popmama.com",
+                "www.tvonenews.com",
+                "www.viva.co.id"
+            ]
+        },
+        {
+            "rule": "contextads\\.live\\/client",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cengineapi"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "bb830f9e39c44fdfec71704d1905c05ca00a94164e75cfe821550455e56e619c",
+                "f7bd69958b4b6ecb7b69ff10f3842fe09c0284aec7427c441b07fe74b8ef6cae",
+                "b551872ed257fc4458ebd0fdb0138351c30b011aa788f4f59b8206932ae9c1e9",
+                "25440946e0a377ab5013d3795f60a54e5f4e683a3b4322b0c7851380203ead8f",
+                "b4603338b9d75c6c5ceb2c96603a6353554d6ac8e5c62e09d472431435681bf9",
+                "1b781fd2a469481597fa0032c7e033d8a8ba8cf308c987848ea509cea0f6e252"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000054727048843891096,
+                "__dtmids": 0.000006840881105486387,
+                "_li_dcdm_c": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "viva.co.id",
+                "gadget.viva.co.id",
+                "in.mashable.com",
+                "inet.detik.com",
+                "me.mashable.com",
+                "siap.viva.co.id",
+                "sulsel.idntimes.com",
+                "www.idntimes.com",
+                "www.kompas.tv",
+                "www.popmama.com",
+                "www.tvonenews.com",
+                "www.viva.co.id"
+            ]
+        },
+        {
+            "rule": "contextads\\.live\\/client\\/process-article",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cengineapi"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "viva.co.id",
+                "gadget.viva.co.id",
+                "siap.viva.co.id",
+                "sulsel.idntimes.com",
+                "www.kompas.tv"
+            ]
+        },
+        {
+            "rule": "contextads\\.live\\/client\\/process-article",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cengineapi"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "6543ff0ded2be31f2a131e645d91a14d45d3282c2a568b5edb4b1427b40eb865",
+                "70866f6d9f708d0e6479b0791d0a735dad48b89752bbf656e49ed0f60b9e3593"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "viva.co.id",
+                "gadget.viva.co.id",
+                "siap.viva.co.id",
+                "sulsel.idntimes.com",
+                "www.kompas.tv"
+            ]
+        },
+        {
+            "rule": "contextads\\.live\\/www\\/delivery\\/rtb\\/rtb_ajs\\.php",
+            "cookies": 0.000041,
+            "fingerprinting": 0,
+            "subdomains": [
+                "delivery"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "f007dceeaf2cdf2efce44638b02feb0952c8eb8760a0e52fd409bfbc0baf4224",
+                "76d99cff7d4b45ab9f574537070e28f98bc7c98fb46bd8c151df295ab7eb99e9",
+                "a0f1ffd118cbeaaa65723f7c5ce94792a0c948b560ba27c4774fa1bb15d7eac7",
+                "560848890153bcffac2ebf7f0eaf35246260ce89c9dcf79c77a0fda4ce112235"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000034204405527431934,
+                "_li_dcdm_c": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "viva.co.id",
+                "gadget.viva.co.id",
+                "siap.viva.co.id",
+                "www.idntimes.com",
+                "www.tvonenews.com",
+                "www.viva.co.id"
+            ]
+        },
+        {
+            "rule": "contextads\\.live\\/www\\/delivery\\/Outstream\\/delivery\\/article\\.php",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "delivery"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "3643475ffefeb26203e79f731c2d1813e02cd69465d1921f7637f49a6a836804",
+                "e6ae7244e14679f8d2cd3e731a05a8d16b9950c92d343596ee4c6a113f571739"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00002052264331645916,
+                "_li_dcdm_c": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "viva.co.id",
+                "siap.viva.co.id",
+                "www.tvonenews.com",
+                "www.viva.co.id"
+            ]
+        },
+        {
+            "rule": "contextads\\.live\\/www\\/delivery\\/rtb\\/rtb_ajs_l\\.php",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "delivery"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "272d9261cf78dac0a57a11fb970a14e180d5f88317bae5d66c579b3634fbe79d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "viva.co.id",
+                "siap.viva.co.id"
+            ]
+        },
+        {
+            "rule": "contextads\\.live\\/www\\/delivery\\/lg\\.php",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "delivery"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "viva.co.id",
+                "siap.viva.co.id"
+            ]
+        },
+        {
+            "rule": "contextads\\.live\\/publishers\\/v3\\/idntimes\\.com\\/cads-idntimes\\.com\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.availWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1f36aaff2cdc64d9e0e077cfc85995f81034ca571f7f652d862a6309c70d3fc1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "idntimes.com",
+                "www.idntimes.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000342,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6153846153846154
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.38461538461538464
+        }
+    ],
+    "types": {
+        "Script": 24,
+        "XHR": 14,
+        "Preflight": 5,
+        "Fetch": 5,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns-460.awsdns-57.com",
+        "ns-894.awsdns-47.net",
+        "ns-1115.awsdns-11.org",
+        "ns-1916.awsdns-47.co.uk"
+    ]
+}

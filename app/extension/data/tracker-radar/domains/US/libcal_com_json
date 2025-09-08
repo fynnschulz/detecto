@@ -1,0 +1,465 @@
+{
+    "domain": "libcal.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000103,
+    "sites": 15,
+    "subdomains": [
+        "secure-us",
+        "api3",
+        "houstonlibrary",
+        "tamu",
+        "region-us",
+        "syr",
+        "duke",
+        "brunsco",
+        "scottlib",
+        "static-assets-us"
+    ],
+    "cnames": [
+        {
+            "original": "calendar.boulderlibrary.org",
+            "resolved": "secure-us.libcal.com"
+        },
+        {
+            "original": "calendar.houstonlibrary.org",
+            "resolved": "houstonlibrary.libcal.com"
+        },
+        {
+            "original": "calendar.libraryweb.org",
+            "resolved": "region-us.libcal.com"
+        },
+        {
+            "original": "libevents.abqlibrary.org",
+            "resolved": "secure-us.libcal.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "libcal\\.com\\/api_events\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure-us",
+                "api3",
+                "houstonlibrary",
+                "tamu",
+                "region-us"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [
+                {
+                    "original": "libevents.abqlibrary.org",
+                    "resolved": "secure-us.libcal.com"
+                },
+                {
+                    "original": "calendar.houstonlibrary.org",
+                    "resolved": "houstonlibrary.libcal.com"
+                },
+                {
+                    "original": "calendar.libraryweb.org",
+                    "resolved": "region-us.libcal.com"
+                }
+            ],
+            "responseHashes": [
+                "7f3dad66e6b2cb27ceb20158cb054f11777904c70f9d8a0c644f743368712e88",
+                "cecfcc9b3c39794580a2b1da27d45ab7335275cadd72e9eacad0f0a8343ddb5b",
+                "d1686f5cf3d441c9c190b6d23fe1bd5a4cfee930a5db4e31f39321472d4da1aa",
+                "3bce65977b3e6a289ff97c654c2aebb7136f01bb4b280be7f618b0285fc80be4",
+                "d84ce537db779a57e36f4a465919257d0c751b449a5ddf574f8b17c11a5f1e3c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abqlibrary.org",
+                "boulderlibrary.org",
+                "houstonlibrary.org",
+                "library.tamu.edu",
+                "libraryweb.org",
+                "www.lib.uidaho.edu"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/api_hours_today\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure-us",
+                "syr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "calendar.boulderlibrary.org",
+                    "resolved": "secure-us.libcal.com"
+                }
+            ],
+            "responseHashes": [
+                "c261cbb47dab26e9915ea91d18b8db506a9e2ffaa0d558e0d55428fc708b26ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boulderlibrary.org",
+                "library.syracuse.edu"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/api\\/1\\.1\\/hours\\/11088,13162",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "duke"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b94b3713fccefd45348ea75272ff373fefd04b3e14ac8fcb9248d371d1214008"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "duke.edu",
+                "library.duke.edu"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/embed_calendar\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "brunsco",
+                "scottlib"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1b2ffe0b4ddd24088af33d4f0c5f0bd548df92e4eddf45e18758941b0365d1ad"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/bootstrap_13\\/bootstrap3\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "6d92dfc1700fd38cd130ad818e23bc8aef697f815b2ea5face2b5dfad22f2e11"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.onlib.org",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/css_808\\/LibCal_public\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "7a76196d38b1f0b5dba987e6f318781645987b15758b00c299d5f138abf850f1"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.onlib.org",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/fullcalendar_14\\/fullcalendar\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c44e3b795177a9ea9af673fec7237800ac1142e8c9fbe72c0c2d17f546aeeb81"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/jquery_16\\/jquery\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.onlib.org",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/bootstrap_13\\/bootstrap3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "9ee2fcff6709e4d0d24b09ca0fc56aade12b4961ed9c43fd13b03248bfb57afe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.onlib.org",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/js_808\\/LibCal_public\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "ff59d8288bb0043011b3f27ffd92913d3addd5232779dc006ae3f31970ea75db"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.onlib.org",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/js_808\\/selectpicker\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "0a27cc1becba918636879e5718817f78bb01d041e560d67cb26cb745ac404690"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.onlib.org",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/fullcalendar_14\\/fullcalendar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "43522d5d254a537a1d3bfd3b688e514ed05fae460b20a6c78a689aa56bdadd78"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/js_808\\/direct\\/full-calendar-common\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "545bba8e6d79c55e2cab70da656c0c1452fb35244b4438e1ee4de6ccfa731b05"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/css_808\\/print\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-assets-us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "16e84eb5cc6819dcc02cbefa5ab058e6a6506df48155f9e20b00f10f5cc7d023"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/widget\\/events\\/calendar\\/list",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "brunsco",
+                "scottlib"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b1e12dd5f89f6d0364484fa52ae453ca3378db1c9995ff62f1fbdb88e18a8908"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brunswickcountync.gov",
+                "www.scottcountymn.gov"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/js\\/myscheduler\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "93798c17b308ee8907910310ebec5b46e99245684fc83fd4f4074baa8db33b32"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uchicago.edu",
+                "www.library.upenn.edu"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9285714285714286
+        },
+        {
+            "domain": "sirsi.net",
+            "prevalence": 0.07142857142857142
+        }
+    ],
+    "types": {
+        "Script": 26,
+        "XHR": 4,
+        "Document": 2,
+        "Stylesheet": 10
+    },
+    "nameservers": [
+        "ns-220.awsdns-27.com",
+        "ns-834.awsdns-40.net",
+        "ns-1606.awsdns-08.co.uk",
+        "ns-1465.awsdns-55.org"
+    ]
+}

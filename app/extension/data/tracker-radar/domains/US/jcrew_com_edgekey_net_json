@@ -1,0 +1,171 @@
+{
+    "domain": "jcrew.com.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "chat",
+        "proxy.factory",
+        "proxy"
+    ],
+    "cnames": [
+        {
+            "original": "chat.jcrew.com",
+            "resolved": "chat.jcrew.com.edgekey.net"
+        },
+        {
+            "original": "proxy.factory.jcrew.com",
+            "resolved": "proxy.factory.jcrew.com.edgekey.net"
+        },
+        {
+            "original": "proxy.jcrew.com",
+            "resolved": "proxy.jcrew.com.edgekey.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "jcrew\\.com\\.edgekey\\.net\\/api\\/v2\\/Agent\\/CheckSkillStatus",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "chat.jcrew.com",
+                    "resolved": "chat.jcrew.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jcrew.com",
+                "factory.jcrew.com"
+            ]
+        },
+        {
+            "rule": "jcrew\\.com\\.edgekey\\.net\\/mt\\/engine\\/api\\/engine\\/v1\\/decide\\/j-crew",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proxy.factory",
+                "proxy"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "proxy.factory.jcrew.com",
+                    "resolved": "proxy.factory.jcrew.com.edgekey.net"
+                },
+                {
+                    "original": "proxy.jcrew.com",
+                    "resolved": "proxy.jcrew.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "91e98b3e2e4f7f772388d368bbb9a147f8ad0a72277da98d78cfcb56283e18bf",
+                "758a22c231f6b27c84e0a38e2c36635fb81fd20f4d26324ac1f759e2aada814d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jcrew.com",
+                "factory.jcrew.com",
+                "www.jcrew.com"
+            ]
+        },
+        {
+            "rule": "jcrew\\.com\\.edgekey\\.net\\/mt\\/engine\\/api\\/engine\\/v1\\/decide\\/j-crew",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proxy.factory",
+                "proxy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "proxy.factory.jcrew.com",
+                    "resolved": "proxy.factory.jcrew.com.edgekey.net"
+                },
+                {
+                    "original": "proxy.jcrew.com",
+                    "resolved": "proxy.jcrew.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jcrew.com",
+                "www.jcrew.com"
+            ]
+        },
+        {
+            "rule": "jcrew\\.com\\.edgekey\\.net\\/mt\\/se\\/js\\/2\\/a-088824c9\\/p\\/m\\.jcrew\\.com\\/custom\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "proxy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "proxy.jcrew.com",
+                    "resolved": "proxy.jcrew.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "0a27cc300a6104884cb1801616dd9e456ef1e8b8a2b42c7f3c4833b9b37e90c3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jcrew.com",
+                "www.jcrew.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.6428571428571429
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.35714285714285715
+        }
+    ],
+    "types": {
+        "Fetch": 5,
+        "Preflight": 2,
+        "Script": 2
+    },
+    "nameservers": []
+}

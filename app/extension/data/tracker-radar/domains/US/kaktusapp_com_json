@@ -1,0 +1,208 @@
+{
+    "domain": "kaktusapp.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00013,
+    "sites": 19,
+    "subdomains": [
+        "qr",
+        "coupon",
+        "hotspot",
+        "bot",
+        "vd"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "kaktusapp\\.com\\/css\\/show-popup\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qr",
+                "coupon",
+                "hotspot"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "cba3112ff3fa35064957a12875296ce56f8269c13e52360438ab64a1ba49d357"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "broadway-limited.com",
+                "www.birdfy.com",
+                "www.thewoolroom.com"
+            ]
+        },
+        {
+            "rule": "kaktusapp\\.com\\/api\\/front\\/offers",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qr",
+                "coupon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "broadway-limited.com",
+                "www.birdfy.com"
+            ]
+        },
+        {
+            "rule": "kaktusapp\\.com\\/api\\/front\\/offers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qr",
+                "coupon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "broadway-limited.com",
+                "www.birdfy.com"
+            ]
+        },
+        {
+            "rule": "kaktusapp\\.com\\/\\/storage\\/FswTEkurVFz0xxaTHCJNkDfpjQ7YuGOJ7t54rlh2\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "coupon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "daf07a275b610bf519d190fe85128ce5cb327160c3a2c83d19c21de060e60ebe"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "birdfy.com",
+                "www.birdfy.com"
+            ]
+        },
+        {
+            "rule": "kaktusapp\\.com\\/storage\\/js\\/kaktus_bot-998c58-85\\.myshopify\\.com\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "bot"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0f95a06b219c961cb9e44642566a2851541fb8874c78d3b89d950beb53df35df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "kaktusbotCurrentShownPerMonth": {
+                    "ttl": 2160003,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "kaktusbotStartDatePerMonth": {
+                    "ttl": 2160003,
+                    "length": 45,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "kaktusbotCurrentShownPerDay": {
+                    "ttl": 86403,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "kaktusbotStartDatePerDay": {
+                    "ttl": 86403,
+                    "length": 45,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "froggtoggs.com",
+                "www.froggtoggs.com"
+            ]
+        },
+        {
+            "rule": "kaktusapp\\.com\\/storage\\/js\\/kaktus_volume_discount-linsoul\\.myshopify\\.com\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ff4f21c43867a7eeeb84eb501dabe0d8538aa67030536f1b6ea4825e0422c4c1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "linsoul.com",
+                "www.linsoul.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000547,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7857142857142857
+        },
+        {
+            "domain": "bestfreecdn.com",
+            "prevalence": 0.21428571428571427
+        }
+    ],
+    "types": {
+        "Stylesheet": 3,
+        "Fetch": 2,
+        "Preflight": 2,
+        "Image": 2,
+        "Script": 4
+    },
+    "nameservers": [
+        "roan.ns.cloudflare.com",
+        "kate.ns.cloudflare.com"
+    ]
+}

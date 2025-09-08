@@ -1,0 +1,144 @@
+{
+    "domain": "archive.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "shoppables-api",
+        "shoppables"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "archive\\.com\\/public_graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shoppables-api"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "americantall.com",
+                "fluxfootwear.com",
+                "mitohealth.com",
+                "perfectketo.com",
+                "rollerrabbit.com",
+                "saltwrap.com",
+                "shefit.com"
+            ]
+        },
+        {
+            "rule": "archive\\.com\\/public_graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shoppables-api"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "cb9d0e7bdf8812d80203382181d8a413e7b37e16780b56a6855a591e5fe61e83",
+                "88ded60aa2b2c98b5b9773fc0569b11512a0ee51210a70c5e194c5f774db8a3a",
+                "256dddcfa6252823fddb2f04dfb992ce9ffc5313643d407fe736b07ad3573ec1",
+                "35aa6b7c93544d4a5e3be29991b8e6efcd6949dcffdd71e38faef4f7eb0a8016",
+                "a42e413c8654918188af44ae075dd3a906d82e583405646e8c892e7e4e19645a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "americantall.com",
+                "fluxfootwear.com",
+                "mitohealth.com",
+                "perfectketo.com",
+                "rollerrabbit.com",
+                "saltwrap.com",
+                "shefit.com"
+            ]
+        },
+        {
+            "rule": "archive\\.com\\/ugc_feed\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shoppables"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "3395d4189dab467aaf060ac11524e3fd10e0c4183484ce326ee60bb66d11aec3"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mitohealth.com",
+                "perfectketo.com",
+                "shefit.com"
+            ]
+        },
+        {
+            "rule": "archive\\.com\\/ugc_feed\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "shoppables"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.language": 3,
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "87a45d70442800368bea922b691f8d0f3de72629d20f1386160fca5aa5cc4af2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mitohealth.com",
+                "perfectketo.com",
+                "shefit.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 7,
+        "Fetch": 7,
+        "Stylesheet": 3,
+        "Script": 3
+    },
+    "nameservers": [
+        "shane.ns.cloudflare.com",
+        "aliza.ns.cloudflare.com"
+    ]
+}

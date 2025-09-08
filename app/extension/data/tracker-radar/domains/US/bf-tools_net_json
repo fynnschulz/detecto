@@ -1,0 +1,145 @@
+{
+    "domain": "bf-tools.net",
+    "owner": {
+        "name": "BurdaForward GmbH",
+        "displayName": "BurdaForward"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000192,
+    "sites": 28,
+    "subdomains": [
+        "a",
+        "mds"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "bf-tools\\.net\\/de\\/de\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "a"
+            ],
+            "apis": {
+                "window.localStorage": 24,
+                "Document.cookie getter": 19
+            },
+            "sites": 25,
+            "prevalence": 0.000171,
+            "cnames": [],
+            "responseHashes": [
+                "b74850e5da2fc331e19521edac63d80276452af54d573abad5dc97cdf689275a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
+                "praxistipps.chip.de",
+                "www.chip.de",
+                "www.onvista.de",
+                "www.focus-gesundheit.de",
+                "www.netmoms.de",
+                "praxistipps.focus.de",
+                "www.tvspielfilm.de",
+                "www.einfachkochen.de",
+                "www.instyle.de",
+                "www.bunte.de",
+                "www.haus.de",
+                "www.netdoktor.at",
+                "www.playboy.de",
+                "www.netdoktor.de",
+                "www.harpersbazaar.de",
+                "www.eatbetter.de",
+                "www.finanzen100.de",
+                "www.mein-schoener-garten.de",
+                "www.esquire.de"
+            ]
+        },
+        {
+            "rule": "bf-tools\\.net\\/api\\/v1\\/getMetadata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mds"
+            ],
+            "apis": {},
+            "sites": 21,
+            "prevalence": 0.000144,
+            "cnames": [],
+            "responseHashes": [
+                "0838e4cf114a8284f90a1453340ae0a3e5e768c44208a99051dbd043f76461ad",
+                "b5fa1ffe910f59f9b9f86064f2a0ea9874cf12a3802fec904f8b0b10ebd92b7e",
+                "ae3b57ea685fdaa0b8207cbeff2a04a72e670788e6768ada6c35f8bbf048e7fe",
+                "5dd911c216f81de0f48e82b2a36156b366a347f06fdeae28db08f60d33ac8eac",
+                "2f8a3b3a90195bd2b861138061e584ff70e58dc44cbe396f2a3a96fcf80cbae5",
+                "ea0782a30df264bf411ff5a0668c68fdace647d70e66d70f978513d9592a89b6",
+                "fc0be70605298b884d07e18ff34de142ade3d2d5acd5ff0266d6fa1005eeca00",
+                "cd0fe2a0842a35e088c0a72d066628aa24e86ebeb96f9548ec30882fe2063739",
+                "bb85ac794a7de0ea516f7b60ca42981cfc5fbbf0a865e5327aaced032e07e3ae",
+                "510f536ed26eda6d693b70ebceecece13af63dbe4c765b374c8aa725f6cf443a",
+                "21882f510abdbdf2746497394139946a10a818da499bb56457ea2c443fc0dec2",
+                "5c934f3c39aa574257ca83618345288a2188c9973ca36d909593a456f735dca2",
+                "3c3af1dd0104218893108ff0cb7374691dd67a9e7acce42fb70e95ae9bc3a35a",
+                "12439b9fbf1548d447c866ce51c725493f6255832118f4eeaa48add790f98ca6",
+                "c831308704f9c7fcb0cc053c5d2b4e6623b2462620aa5a0668727bd2f359b6e6",
+                "cfe82361b0be05d9c80d2e1a80e3d708379a12ee0e0c67ad55663ef00ff4d6da",
+                "620a351d9e20c6e89b78c450295e5b2b5a1fd880f3ac726b0d66fd262f65f2af",
+                "1d86d5947f5b11e6983cc883de83f647c8e838ac82ac1f4f181f918be2a5fee7",
+                "0b10dfb0a3a94c0986bf1c20cf5988156d90a2f3a8350075cebd25488c43cd39",
+                "c402fcf55622bb1edcdced7b2d6384cc39a01b6b1110b1b4b95a371a69a4a7ec"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "focus.de",
+                "praxistipps.chip.de",
+                "www.chip.de",
+                "www.bunte.de",
+                "www.esquire.de",
+                "www.focus-gesundheit.de",
+                "www.mein-schoener-garten.de",
+                "www.daskochrezept.de",
+                "www.netdoktor.at",
+                "www.freundin.de",
+                "www.harpersbazaar.de",
+                "www.instyle.de",
+                "www.finanzen100.de",
+                "www.eatbetter.de",
+                "www.playboy.de",
+                "www.netdoktor.de",
+                "www.einfachkochen.de",
+                "ratgeber.bunte.de",
+                "www.elle.de",
+                "www.haus.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 25,
+        "Fetch": 21
+    },
+    "nameservers": [
+        "a7-64.akam.net",
+        "a11-64.akam.net",
+        "a1-195.akam.net",
+        "a26-67.akam.net",
+        "a18-65.akam.net",
+        "a20-66.akam.net"
+    ]
+}

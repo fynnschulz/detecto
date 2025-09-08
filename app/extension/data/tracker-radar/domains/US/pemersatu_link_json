@@ -1,0 +1,101 @@
+{
+    "domain": "pemersatu.link",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "fem",
+        "vid"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "pemersatu\\.link\\/play\\.php",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "fem",
+                "vid"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "window.sessionStorage": 2,
+                "HTMLMediaElement.prototype.canPlayType": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "5dd7ac9fc86491f98a371918f5c47d538eecb3ac4720be6f8bdd578e123f753f",
+                "0fad101deb0fb8469d890d9fe5c3bfaa1b2130153fd70f3ee3d128e237b185cb"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bokepindo.skin",
+                "drbokep.asia",
+                "www.doodav.com"
+            ]
+        },
+        {
+            "rule": "pemersatu\\.link\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fem",
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drbokep.asia",
+                "www.doodav.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5555555555555556
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "pemersatu.link",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Document": 3,
+        "XHR": 2
+    },
+    "nameservers": [
+        "tori.ns.cloudflare.com",
+        "carl.ns.cloudflare.com"
+    ]
+}

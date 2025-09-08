@@ -1,0 +1,403 @@
+{
+    "domain": "accuweather.com",
+    "owner": {
+        "name": "Accuweather, Inc.",
+        "displayName": "Accuweather"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000144,
+    "sites": 21,
+    "subdomains": [
+        "api",
+        "oap",
+        "vortex",
+        "www",
+        "commonitor",
+        "nnegazett5",
+        "nnevnews5"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "accuweather\\.com\\/locations\\/v1\\/search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "633cdf507f35198af35e70f8b09bf89c21da47d15331ab15bd5188480dbd61d5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abplive.com",
+                "news.abplive.com",
+                "www.abplive.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/currentconditions\\/v1\\/893664\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "fc8f558a03d05404c15dbe3eca73e1e29375c826b73e0fb9fb0a89a1e209bc71",
+                "38413a6324439b8e642c7d24bd740286c7ec9ebc79e7a520539113a338b6b5f4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abplive.com",
+                "news.abplive.com",
+                "www.abplive.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/launch\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "oap"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "640c9cbb97ba18dc1bcde7f36eed441db79a02b0912d0f4325d4b475d3b84565"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orleanshub.com",
+                "www.hamsterwatch.com",
+                "www.marklevinshow.com",
+                "www.parkrecord.com",
+                "www.tonyskansascity.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/adc2010\\/oap\\/javascript\\/jquery-1\\.9\\.1\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "vortex"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 5
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "c12f6098e641aaca96c60215800f18f5671039aecf812217fab3c0d152f6adb4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orleanshub.com",
+                "www.hamsterwatch.com",
+                "www.marklevinshow.com",
+                "www.parkrecord.com",
+                "www.tonyskansascity.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/adc2010\\/oap\\/stylesheets\\/widgets-20170109\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vortex"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "19f4edf9189f8d003c27b29fcb6f1f1085660470101374fda6648c41d4280a60"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orleanshub.com",
+                "www.hamsterwatch.com",
+                "www.marklevinshow.com",
+                "www.parkrecord.com",
+                "www.tonyskansascity.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/ajax-service\\/oap\\/current",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "4d5d02510674bf3b04c452349c587286a6149fdb57ea583630aa5ed6ac08f9b2",
+                "663ecf80d917a5ecb2d27ebc9a636a344da327b8730cd17ec1d67938ea68d8d3",
+                "279c4c2669c23bfde24c0b33d546a4220d71f700c72325f4ed9804801e718005"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orleanshub.com",
+                "www.hamsterwatch.com",
+                "www.marklevinshow.com",
+                "www.parkrecord.com",
+                "www.tonyskansascity.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/adc2010\\/images\\/icons-numbered\\/34-xl\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vortex"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "90edf6aeb442e544051ad7149f9a10672f6b23da9b8952a1dacdc407e10ac181"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orleanshub.com",
+                "www.tonyskansascity.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/adc2010\\/oap\\/images\\/icon-get-widget-blue\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vortex"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "d9f0fbf590b771fe9e61a3ea8a616dfbcec27d3016f27c1f01179bf9c49ed181"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orleanshub.com",
+                "www.hamsterwatch.com",
+                "www.marklevinshow.com",
+                "www.parkrecord.com",
+                "www.tonyskansascity.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/hostedpages\\/widget\\/v2\\/commonitor\\/current-weather\\/concord,nh\\/conmon",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "commonitor"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "901c327e2abd9f89fd719c508459683d4ec7f5b26bfb31b7a0f759e609feabbb"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "concordmonitor.com",
+                "www.concordmonitor.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/adc2010\\/images\\/icons-numbered\\/01-s\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vortex"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "4f6670ff2c6df9b13934972be4983c732ea4ecd3328319a3d900cd94e9c062f4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "concordmonitor.com",
+                "www.gazettenet.com",
+                "www.vnews.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/adc2010\\/images\\/icons-numbered\\/33-s\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vortex"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "04da01b926713d79f25a2c70a31a06a06a1d1f769028469404477cd9562b87ea"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "concordmonitor.com",
+                "www.gazettenet.com",
+                "www.vnews.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/hostedpages\\/widget\\/v2\\/NNEgazett5\\/current-weather\\/northampton,ma\\/conmon",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nnegazett5"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "85779f43386be612850fdfe8dfad1f6702ed4772c61845eda01ec3930ff914a0"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gazettenet.com",
+                "www.gazettenet.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/adc2010\\/images\\/icons-numbered\\/38-xl\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vortex"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fc9b0406824727415cfc2cdeba53c11b576c991accdb47b1995d99986a1018c1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marklevinshow.com",
+                "www.parkrecord.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/adc2010\\/images\\/icons-numbered\\/38-l\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vortex"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "36ebcfec263eb83340fad1bab4262f3086c3141445662459a4a1d7f0e3c65cdf"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marklevinshow.com",
+                "www.parkrecord.com"
+            ]
+        },
+        {
+            "rule": "accuweather\\.com\\/hostedpages\\/widget\\/v2\\/NNEvnews5\\/current-weather\\/lebanon,nh\\/conmon",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nnevnews5"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3c527eeae9cb0ba95826aa423cfbf1bab84f7c64febd3e988ce010da0309ed4c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vnews.com",
+                "www.vnews.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000889,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 6,
+        "Script": 15,
+        "Stylesheet": 5,
+        "Image": 17,
+        "Document": 6
+    },
+    "nameservers": [
+        "a1-82.akam.net",
+        "a9-65.akam.net",
+        "a28-66.akam.net",
+        "a7-64.akam.net",
+        "a6-67.akam.net",
+        "a18-65.akam.net"
+    ]
+}

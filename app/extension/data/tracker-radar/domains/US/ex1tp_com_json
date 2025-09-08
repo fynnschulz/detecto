@@ -1,0 +1,155 @@
+{
+    "domain": "ex1tp.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "widget"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ex1tp\\.com\\/js\\/ep\\/v2\\/ep\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "09e676782e811ca48e4db375534b5b437d16700dee2db1d55b0377740b24debe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agroinform.hu",
+                "www.egeszsegkalauz.hu",
+                "www.nemzetisport.hu"
+            ]
+        },
+        {
+            "rule": "ex1tp\\.com\\/epconf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "9a77995ed89df06b26e536972cf9d248fbab4d0213964226bd104f9cb5e447bb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agroinform.hu",
+                "www.egeszsegkalauz.hu",
+                "www.nemzetisport.hu"
+            ]
+        },
+        {
+            "rule": "ex1tp\\.com\\/js\\/ep\\/v2\\/widget\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8d627c1deb8fd503339b7631f4ec851f6ba55b9a8a8b0d457cc4c7dd6537de52"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "r_uid": {
+                    "ttl": 5184004,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blikk.hu",
+                "www.egeszsegkalauz.hu"
+            ]
+        },
+        {
+            "rule": "ex1tp\\.com\\/css\\/widget\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fdc8b09e8de40b7516504ba7f0f8f1573729fa8116a520518430325ef4669d3e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blikk.hu",
+                "www.egeszsegkalauz.hu"
+            ]
+        },
+        {
+            "rule": "ex1tp\\.com\\/items",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b6d5334e784cc7537200afd80af6b7b58bcb4cafd12b3af0316c695a37c3e4cd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blikk.hu",
+                "www.egeszsegkalauz.hu"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "XHR": 5,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "tom.ns.cloudflare.com",
+        "sue.ns.cloudflare.com"
+    ]
+}

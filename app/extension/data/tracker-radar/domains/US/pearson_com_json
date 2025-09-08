@@ -1,0 +1,93 @@
+{
+    "domain": "pearson.com",
+    "owner": {
+        "name": "Pearson Education, Inc.",
+        "displayName": "Pearson Education"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "login",
+        "k244"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "pearson\\.com\\/v1\\/piapi\\/login\\/js\\/v2\\/session\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "91e8855fc362903d6161be28bb04d780ff3d022c38c4627ea7de973a2a85782d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pearsonassessments.com",
+                "www.pearsonhighered.com"
+            ]
+        },
+        {
+            "rule": "pearson\\.com\\/DG\\/DEFAULT\\/rest\\/rpc\\/291",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k244"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ecc976a098c770ef32a2892789ab173d4db2fe058ba029978090a0597e61b2a2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "https://www.googletagmanager.com/static/service_worker/5840/sw_iframe.html?origin": 0.000013681762210972774,
+                "https://k244.pearson.com/DG/DEFAULT/rest/rpc/291?referer": 0.000013681762210972774,
+                "https://k244.pearson.com/DG/DEFAULT/rest/rpc/291/LB-Zone-2?referer": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "pearsonhighered.com",
+                "www.pearsonhighered.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "btttag.com",
+            "prevalence": 0.7333333333333333
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.26666666666666666
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "dns-apac-1.ptns.pearson.com",
+        "dns-emea-1.ptns.pearson.com",
+        "dns-amer-2.ptns.pearson.com"
+    ]
+}

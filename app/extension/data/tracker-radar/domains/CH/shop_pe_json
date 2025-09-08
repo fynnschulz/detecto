@@ -1,0 +1,153 @@
+{
+    "domain": "shop.pe",
+    "owner": {
+        "name": "Add Shoppers",
+        "displayName": "Add Shoppers"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000502,
+    "sites": 5,
+    "subdomains": [
+        "shopper",
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "shop\\.pe\\/widget\\/widget_async\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "picsart.com",
+                "www.anker.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/widget\\/main\\/init\\/params",
+            "cookies": 0.000502,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "77d5663bf7d547c3e3cb7818a7eb94b1e9353f7fbef9d71dbcc314ac92a94c0f",
+                "695a145fd2e0c8e75c93b11137a2934b19b435d74bd70ee21e06ec30d29976d6",
+                "32feee8d24a86a83f5b67ac3d07fddd5e40cde1e08909b4f30b3d3dc84d02e04",
+                "4c0c13d65bd944d0d43626b2f582ecdf3fb2c74924e53c5e1923a42b4557c2fb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ju_dm": 0.00010048231511254019,
+                "IR_gbd": 0.00010048231511254019
+            },
+            "exampleSites": [
+                "draxe.com",
+                "picsart.com",
+                "www.anker.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/input\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "shopper"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 4,
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "a60b91c0826c2f6e38d6d42a608764f34cfe6ea7419b69770b47463d9d962ce7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "picsart.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/app\\/datapartners\\/status",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "b4435b5ac2f1916ed1135fb1738a1cef87cb666f4356a6678fb1c77e1273f9e1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "picsart.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000502,
+    "topInitiators": [
+        {
+            "domain": "d2mjzob2nc713b.cloudfront.net",
+            "prevalence": 0.7391304347826086
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.13043478260869565
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.08695652173913043
+        },
+        {
+            "domain": "impactcdn.com",
+            "prevalence": 0.043478260869565216
+        }
+    ],
+    "types": {
+        "Script": 14,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-1375.awsdns-43.org",
+        "ns-601.awsdns-11.net",
+        "ns-482.awsdns-60.com",
+        "ns-1678.awsdns-17.co.uk"
+    ]
+}

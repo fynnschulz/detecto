@@ -1,0 +1,166 @@
+{
+    "domain": "inmar.com",
+    "owner": {
+        "name": "Inmar, Inc.",
+        "displayName": "Inmar"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "www",
+        "c.retailcloud",
+        "x.retailcloud"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "inmar\\.com\\/sso-content\\/css\\/main\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2ee8995b98fe8a3605823bba0a91ebca56c39a9bcb4573302950df8921e39239"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clsnetlink.com",
+                "www.clsnetlink.com"
+            ]
+        },
+        {
+            "rule": "inmar\\.com\\/SiteAssets\\/web-fonts\\/function-pro\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ad420db6ae5ff05008e22d98b074c9cec3eb515a1bbf3e51bfa343892fa3af0e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clsnetlink.com",
+                "www.clsnetlink.com"
+            ]
+        },
+        {
+            "rule": "inmar\\.com\\/10058372\\/tracker\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "c.retailcloud"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1e60e430fdb2e13f32c75d4bc49afaaae57652bc1caaab3ff43f996e69f0e0f4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pricechopper.com",
+                "www.topsmarkets.com"
+            ]
+        },
+        {
+            "rule": "inmar\\.com\\/10058372\\/sdk\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "c.retailcloud"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "60ee0ce27e5e36e88cb8cba7bde7542fb92fc607f312253f1e75060ef5ca8505"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ubid": {
+                    "ttl": 31536000,
+                    "length": 36,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pricechopper.com",
+                "www.topsmarkets.com"
+            ]
+        },
+        {
+            "rule": "inmar\\.com\\/bsda",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "x.retailcloud"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "96c4eafc7f9f5ee4f66cd4e0f241582e591bc78bb1132ce1fcc7013a097b151d",
+                "3a2f56774a72780867c37858cd09e5120f11bcdcc0e7ba0303d21828e4b6ce20"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pricechopper.com",
+                "www.pricechopper.com",
+                "www.topsmarkets.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Stylesheet": 4,
+        "Script": 4,
+        "XHR": 3
+    },
+    "nameservers": [
+        "ns-372.awsdns-46.com",
+        "ns-553.awsdns-05.net",
+        "ns-1182.awsdns-19.org",
+        "ns-2015.awsdns-59.co.uk"
+    ]
+}

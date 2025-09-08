@@ -1,0 +1,150 @@
+{
+    "domain": "tiaa.org",
+    "owner": {
+        "name": "Teachers Insurance and Annuity Association of America",
+        "displayName": "Teachers Insurance and Annuity Association of America"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "www",
+        "smetrics"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "tiaa\\.org\\/content\\/dam\\/tiaa\\/public\\/docs\\/boomerang\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "ccde3bfe20979e058d91f0281119bf55d660ef3264b89d6e52f73e8cc70d255d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brightstart.com",
+                "www.path2college529.com",
+                "www.scholarshare529.com"
+            ]
+        },
+        {
+            "rule": "tiaa\\.org\\/id",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "smetrics"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "42d44e31c38811b70fde8210842a53348022d4afadfbf85d9a30e960b47857c4",
+                "a04d75fb5749ac3e734cbb658de90bcf61eb19e0b004f8513065acd6a16ab298",
+                "b1d4d6261ac9ca03f04eb3f3b7f47e40d2ca99c7a2d4c2bd371b959875dff894"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brightstart.com",
+                "www.misaves.com",
+                "www.path2college529.com",
+                "www.scholarshare529.com"
+            ]
+        },
+        {
+            "rule": "tiaa\\.org\\/content\\/dam\\/tiaa\\/global\\/js\\/at\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.orientation": 2,
+                "Screen.prototype.colorDepth": 2,
+                "window.devicePixelRatio": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d49382bbfcc00536f964063a25055342e69de8923d8f90737f023c951f1afb50"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "mbox": {
+                    "ttl": 63244816,
+                    "length": 103,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "mboxEdgeCluster": {
+                    "ttl": 1875,
+                    "length": 2,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cefconnect.com",
+                "www.nuveen.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000041,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.7272727272727273
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.2727272727272727
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "XHR": 4
+    },
+    "nameservers": [
+        "denpdaieblx01.lan.tiaa-cref.org",
+        "a12-64.akam.net",
+        "chapdbieblx01.lan.tiaa-cref.org",
+        "a28-65.akam.net",
+        "a10-67.akam.net",
+        "a5-66.akam.net",
+        "a9-67.akam.net",
+        "chapdaieblx01.lan.tiaa-cref.org",
+        "a1-88.akam.net"
+    ]
+}

@@ -1,0 +1,167 @@
+{
+    "domain": "shopping-behaviour-interest-data.s3.us-west-2.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000178,
+    "sites": 26,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "shopping-behaviour-interest-data\\.s3\\.us-west-2\\.amazonaws\\.com\\/shopping-behaviour\\.js",
+            "cookies": 0.0000479,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Document.cookie setter": 7
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "c6d3151fbac2a0f94470f8d2bfe330b7f3746c1c1767d9a61327249dd4493095"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "customer_email": {
+                    "ttl": null,
+                    "length": 9,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "shop_name": {
+                    "ttl": null,
+                    "length": 9,
+                    "prevalence": 0.000047886167738404704,
+                    "uniqueness": 1
+                },
+                "customer_phone": {
+                    "ttl": null,
+                    "length": 9,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {
+                "shop_name": 0.00006840881105486387
+            },
+            "exampleSites": [
+                "burrow.com",
+                "casper.com",
+                "tomboyx.com",
+                "verabradley.com",
+                "verabradleyoutlet.com",
+                "www.bludot.com",
+                "www.clarev.com",
+                "www.paulfredrick.com",
+                "www.untuckit.com"
+            ]
+        },
+        {
+            "rule": "shopping-behaviour-interest-data\\.s3\\.us-west-2\\.amazonaws\\.com\\/gtm-shopping-behaviour-hermanmiller\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3909f92c0b0ab70a7083d7f4e9a5f87decf67f2dcb6ad3900a98eba5624a2722"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hermanmiller.com",
+                "store.hermanmiller.com"
+            ]
+        },
+        {
+            "rule": "shopping-behaviour-interest-data\\.s3\\.us-west-2\\.amazonaws\\.com\\/gtm-shopping-behaviour-worldmarket\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a8f2da1d353256d9acfdf127056145557c570ac34b4e0d571e87c9fa61140e5d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "worldmarket.com",
+                "www.worldmarket.com"
+            ]
+        },
+        {
+            "rule": "shopping-behaviour-interest-data\\.s3\\.us-west-2\\.amazonaws\\.com\\/gtm-shopping-behaviour-dwr\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7c1dbf394152019067446245f58261435e862958eda9a6fe41293cba4fc754fe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dwr.com",
+                "www.dwr.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.0000752,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6071428571428571
+        },
+        {
+            "domain": "ensighten.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "kustomerapp.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.07142857142857142
+        }
+    ],
+    "types": {
+        "Script": 15
+    },
+    "nameservers": [
+        "ns-1144.awsdns-15.org",
+        "ns-1997.awsdns-57.co.uk",
+        "ns-352.awsdns-44.com",
+        "ns-546.awsdns-04.net"
+    ]
+}

@@ -1,0 +1,620 @@
+{
+    "domain": "jebbit.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000335,
+    "sites": 49,
+    "subdomains": [
+        "js",
+        "external-api",
+        "moments-api.us",
+        "i",
+        "unileverhellmanns",
+        "ceraveusa",
+        "wgu"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "jebbit\\.com\\/companion\\/v1\\/widget\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "window.localStorage": 28,
+                "Document.cookie getter": 28,
+                "window.sessionStorage": 2,
+                "Document.cookie setter": 3
+            },
+            "sites": 29,
+            "prevalence": 0.000198,
+            "cnames": [],
+            "responseHashes": [
+                "9483aa3481f08c442c4b4afd836e8505e41f268dfd7048c554fb099d401375ab"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_jebbvisit_mqmafaqk": {
+                    "ttl": null,
+                    "length": 29,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_jebbvisit_2hxrcrjs": {
+                    "ttl": null,
+                    "length": 29,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_jebbvisit_qnvc33pk": {
+                    "ttl": null,
+                    "length": 29,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "maybelline.com",
+                "www.saatva.com",
+                "www.makeup.com",
+                "www.tomsofmaine.com",
+                "www.garnierusa.com",
+                "www.intelycare.com",
+                "oralb.com",
+                "www.golfdigest.com",
+                "www.shaneco.com",
+                "www.chubbiesshorts.com",
+                "www.essie.com",
+                "crest.com",
+                "www.skincare.com",
+                "elfcosmetics.com",
+                "saatva.com",
+                "www.maybelline.com",
+                "applegate.com",
+                "www.elfcosmetics.com",
+                "lorealparisusa.com",
+                "oldspice.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/companion\\/v1\\/widget\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {},
+            "sites": 28,
+            "prevalence": 0.000192,
+            "cnames": [],
+            "responseHashes": [
+                "ed8d9b72f19e860f340ab189016769feb18edf724c24bc2ffab1417bac1b9a05"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.narscosmetics.com",
+                "www.matrix.com",
+                "www.chubbiesshorts.com",
+                "applegate.com",
+                "saatva.com",
+                "www.essie.com",
+                "www.elfcosmetics.com",
+                "luckybrand.com",
+                "getsunmed.com",
+                "www.saatva.com",
+                "www.lorealparisusa.com",
+                "maybelline.com",
+                "lorealparisusa.com",
+                "www.skincare.com",
+                "www.cerave.com",
+                "www.maybelline.com",
+                "oldspice.com",
+                "crest.com",
+                "www.tomsofmaine.com",
+                "www.garnierusa.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/moments\\/v2\\/launcher_configs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "external-api"
+            ],
+            "apis": {},
+            "sites": 28,
+            "prevalence": 0.000192,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "7a66f346f29ec1ab203e3a295608e6d64c55e9487f229c13660e115cb638e0b2",
+                "58c85f865ecde4bb29acab61b1804690064718e0d74d78c89f96858628558859",
+                "6a2efc7fbb72ef6683bf7db9ec4a86308e79824b7e6be9393887505107ba1a7b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.maybelline.com",
+                "saatva.com",
+                "www.elfcosmetics.com",
+                "www.matrix.com",
+                "www.saatva.com",
+                "www.shaneco.com",
+                "www.makeup.com",
+                "www.garnierusa.com",
+                "luckybrand.com",
+                "www.essie.com",
+                "getsunmed.com",
+                "www.intelycare.com",
+                "www.luckybrand.com",
+                "crest.com",
+                "www.cerave.com",
+                "www.skincare.com",
+                "www.narscosmetics.com",
+                "maybelline.com",
+                "applegate.com",
+                "elfcosmetics.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/moments\\/v2\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "moments-api.us"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestfoods.com",
+                "hellmanns.com",
+                "innersensebeauty.com",
+                "knorr.com",
+                "www.cerave.com",
+                "www.hellmanns.com",
+                "www.matrix.com",
+                "www.tomsofmaine.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/moments\\/v2\\/sessions",
+            "cookies": 0.0000547,
+            "fingerprinting": 0,
+            "subdomains": [
+                "moments-api.us"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "096d0a35fcb7b6a58370270a23ff429849bca5347ace5eddced976a516312ea9",
+                "974b08e62825f39e7e9beb9b94458f69caf69375e661cb6bac11dc737b30469d",
+                "d535692c7b2d54db682c12b3471b618af6e725e6203a5848540705dc10290739",
+                "0092b378514fa703ac39a1552bca1ec2db378cb8498459af2879327e42096116",
+                "22e120765f3c1d8bd238f91827d38db0cbada628ccf0e18964e5d3f692daf168",
+                "c2296fb39794472edd045d9450cf1d921271dc5a224eedf4193215a74ffd81a2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestfoods.com",
+                "hellmanns.com",
+                "innersensebeauty.com",
+                "knorr.com",
+                "www.cerave.com",
+                "www.hellmanns.com",
+                "www.matrix.com",
+                "www.skincare.com",
+                "www.tomsofmaine.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/images\\/9tsovEpz\\/business-images\\/3rt0N9S1SMusqrRbIUHw_Main_Image_Background_960x1080\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "004a107f54503816ccddb73e33579b802a0d137523d0fd59e25fe5e33465cc76"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestfoods.com",
+                "hellmanns.com",
+                "www.hellmanns.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/89rsrOHmQlOgSx7kib0R_DollopSerif-Expanded\\.ttf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e04da6c812425be6b11b2401e7db2e7918a387bd9283257b785c4717995e123d"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestfoods.com",
+                "hellmanns.com",
+                "www.hellmanns.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/fonts\\/default\\/TimesNewRoman-regular\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7e7d65f1d8ec9f0f353cc132582a7150df4755edb3d77ef8859f65c2b903f77d"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestfoods.com",
+                "www.tomsofmaine.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/javascripts\\/9tsovEpz\\/m3mhgzdr\\/hooks-71TEFJBk\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9f33977dc2f4e3b45c66062739089b150c1cedbaeb3d11ac49c17405e1c707a4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hellmanns.com",
+                "www.hellmanns.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/8wklmhuj",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "unileverhellmanns"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c3983d11d9fdb2738afe908a99f7d5b981cc2c351970b851c4109ab3b94d6ce9"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hellmanns.com",
+                "www.hellmanns.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/javascripts\\/9tsovEpz\\/8wklmhuj\\/hooks-uFWxSy1O\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5ecf2f4d83e6260dabd6ec48e76d8ddebccf956563f34072221bf960d3b8c255"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hellmanns.com",
+                "www.hellmanns.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/images\\/9tsovEpz\\/business-images\\/DJgh7TXYSjGKOWUjGIob_2025_Hellmanns_EatYourWords_HellmannsPattern_Background_1920__1080_1_CUST_N_A_N_A_na_na_na_1\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fcd66ef6e80d10cd5fcd35b343c99b2fde0bd0bdbc08edd50c43d922075cb6d4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hellmanns.com",
+                "www.hellmanns.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/fonts\\/default\\/open-sans-v27-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "16a1ce1e97bad4bcbec7fccde14195943b3cfd4310121d373b7c968b117d6a36"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hellmanns.com",
+                "www.hellmanns.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/images\\/9tsovEpz\\/business-images\\/Mx2e9gt8TumHvkYUVvQf_UK_Hellmanns_logo_white\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cf86136194a7748114074a811f799c0050f1ae116380f9d79753916c45c68a69"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hellmanns.com",
+                "www.hellmanns.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/mqmafaqk",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ceraveusa"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ae5ad3fb2913a69c4ecc821ceaae7dca87a5ac021232d6164fd60148e3124d82"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cerave.com",
+                "www.cerave.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/images\\/undefined\\/business-images\\/fWJZdZLmS1qOakGfQz8b_CERAVE-MOISTURIZE-LOTION-ICON_green_v1-fotor-bg-remover-20230626152629\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f147ad420be71efbd6e6730c356bf418c16862fe2c4171f02b8371126922fca6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cerave.com",
+                "www.cerave.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/javascripts\\/sTsvamHQ\\/mqmafaqk\\/hooks-sN3WlInE\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "af630c956525b2e73bd4862247df9fd69e944b85fc90cdc83f1dbe1b1675f9d8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cerave.com",
+                "www.cerave.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/images\\/NJRIeAS4\\/business-images\\/1JGJjjQS0y3DEblmEZCB_logowedge\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cfa46b53534b67197429bb100717af58a555970a07774c4674b78682bab7764a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cerave.com",
+                "www.cerave.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/moments\\/v2\\/sessions\\/5a60244c-be5e-488d-801f-a873c543bb79",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "moments-api.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "22fb70d74dc6c7659dab4cb46b2e392e6703185accef78709468e779a8a21d91"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomsofmaine.com",
+                "www.tomsofmaine.com"
+            ]
+        },
+        {
+            "rule": "jebbit\\.com\\/9cswfe0w",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wgu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wgu.edu",
+                "www.wgu.edu"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000616,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.31
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.23
+        },
+        {
+            "domain": "d2wy8f7a9ursnm.cloudfront.net",
+            "prevalence": 0.17
+        },
+        {
+            "domain": "d2genwge1af44w.cloudfront.net",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "yottaa.com",
+            "prevalence": 0.04
+        },
+        {
+            "domain": "bolt.com",
+            "prevalence": 0.03
+        },
+        {
+            "domain": "instana.io",
+            "prevalence": 0.02
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.02
+        },
+        {
+            "domain": "506.io",
+            "prevalence": 0.01
+        }
+    ],
+    "types": {
+        "Script": 35,
+        "Stylesheet": 28,
+        "XHR": 28,
+        "Preflight": 8,
+        "Fetch": 11,
+        "Image": 11,
+        "Font": 7,
+        "Document": 6
+    },
+    "nameservers": [
+        "ns-177.awsdns-22.com",
+        "ns-945.awsdns-54.net",
+        "ns-1057.awsdns-04.org",
+        "ns-1820.awsdns-35.co.uk"
+    ]
+}

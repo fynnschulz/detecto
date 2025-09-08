@@ -1,0 +1,124 @@
+{
+    "domain": "afsanalytics.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "code",
+        "www7",
+        "www3"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "afsanalytics\\.com\\/js2\\/analytics\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "code"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8ce6ba15ba1fc7a0fe3cab9bd50ae6b9857b3fb7d23808c5dda6b6ec13b68186"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "aa_country": {
+                    "ttl": 15552015,
+                    "length": 2,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thehoroscopejunkie.ca",
+                "www.realitytvworld.com"
+            ]
+        },
+        {
+            "rule": "afsanalytics\\.com\\/cgi-bin\\/connect\\.cgi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www7",
+                "www3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "06b9850bae50fc1d74105c752d36e9bd1422c748f30b08f96d30cc02ee63f8b2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "thehoroscopejunkie.ca",
+                "www.realitytvworld.com"
+            ]
+        },
+        {
+            "rule": "afsanalytics\\.com\\/cgi-bin\\/iplight\\.cgi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "code"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1ec79773b228398d1bee38ee41862f83e74233ecf96c0d9280762f2ee65392c4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "realitytvworld.com",
+                "www.realitytvworld.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns1.3dfreestats.com",
+        "ns2.eaglesland.com",
+        "ns1.eaglesland.com",
+        "ns2.3dfreestats.com"
+    ]
+}

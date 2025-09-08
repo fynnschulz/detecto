@@ -1,0 +1,83 @@
+{
+    "domain": "506.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "cdn",
+        "aca"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "506\\.io\\/eg\\/script\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d38b42beb9159e2d67a08815e24cb3a12017d99f3787ffe1f220032b4535a201"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dbjourney.com",
+                "primusequipment.com"
+            ]
+        },
+        {
+            "rule": "506\\.io\\/public\\/store",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aca"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a840da817e1b8524ba5eb39fab5a29af25900f2da2178e7f84712f1940730b26"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dbjourney.com",
+                "primusequipment.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns2.digitalocean.com",
+        "ns3.digitalocean.com",
+        "ns1.digitalocean.com"
+    ]
+}

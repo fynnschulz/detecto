@@ -1,0 +1,186 @@
+{
+    "domain": "enzymic.co",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "static",
+        "staticcdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "enzymic\\.co\\/get_client_ip",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "c4c81548168adb13c829ffeb923178c9772ca481a5a6fdf8441f80b7eb00eeab"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coles.com.au",
+                "www.mewatch.sg",
+                "www.suncommunities.com",
+                "www.sunoutdoors.com"
+            ]
+        },
+        {
+            "rule": "enzymic\\.co\\/set_third_party_cookie",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "b2ba48f91d1595384ea9dc638eb40268423367787ecc5bf605ea2023ec4e75ca",
+                "a756eedaa2f8699b97277897380b487b069991f99f9f33536f01b88214aa1708",
+                "5670896c60787d645c09785e8460077237396bab280c18b40c8a167663f1ab62"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coles.com.au",
+                "www.mewatch.sg",
+                "www.suncommunities.com",
+                "www.sunoutdoors.com"
+            ]
+        },
+        {
+            "rule": "enzymic\\.co\\/check_third_party_cookie",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "b2ba48f91d1595384ea9dc638eb40268423367787ecc5bf605ea2023ec4e75ca",
+                "a756eedaa2f8699b97277897380b487b069991f99f9f33536f01b88214aa1708",
+                "5670896c60787d645c09785e8460077237396bab280c18b40c8a167663f1ab62"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coles.com.au",
+                "www.mewatch.sg",
+                "www.suncommunities.com",
+                "www.sunoutdoors.com"
+            ]
+        },
+        {
+            "rule": "enzymic\\.co\\/ast_events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coles.com.au",
+                "www.mewatch.sg",
+                "www.suncommunities.com",
+                "www.sunoutdoors.com"
+            ]
+        },
+        {
+            "rule": "enzymic\\.co\\/smart_tags\\/lXvqma96QbpKLJWk\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "staticcdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b87b3872b7421d1a974bf6fc2538f5bc78dfc5ffb5425660810248c67973f4f1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sunoutdoors.com",
+                "www.sunoutdoors.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000342,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4444444444444444
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "XHR": 12,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-1016.awsdns-63.net",
+        "ns-221.awsdns-27.com",
+        "ns-1427.awsdns-50.org",
+        "ns-1569.awsdns-04.co.uk"
+    ]
+}

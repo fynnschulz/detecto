@@ -1,0 +1,88 @@
+{
+    "domain": "pepper.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.0001,
+    "sites": 1,
+    "subdomains": [
+        "collecty.prod-eks-new",
+        "faye.prod-eks"
+    ],
+    "cnames": [
+        {
+            "original": "ocular.mydealz.de",
+            "resolved": "collecty.prod-eks-new.pepper.com"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "pepper\\.com\\/uTAmKhtI\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collecty.prod-eks-new"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "ocular.mydealz.de",
+                    "resolved": "collecty.prod-eks-new.pepper.com"
+                }
+            ],
+            "responseHashes": [
+                "0f34b2d286b9bb1604c8ce897abf95a23a106d57c9f59f7de1ff133b7047c99d"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mydealz.de",
+                "www.mydealz.de"
+            ]
+        },
+        {
+            "rule": "pepper\\.com\\/faye",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "faye.prod-eks"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3bf8f4c93699ebf3f184d56a70efd6ac36cfafbd2afe956a57ceb684ad1a62a5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mydealz.de",
+                "www.mydealz.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Ping": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "tara.ns.cloudflare.com",
+        "drew.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,278 @@
+{
+    "domain": "youku.com",
+    "owner": {
+        "name": "Alibaba Group",
+        "displayName": "Alibaba"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "player",
+        "v",
+        "www",
+        "acs",
+        "un-acs",
+        "adx-open-service",
+        "missile"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "youku\\.com\\/jsapi",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7256344ac8f0ed368807df35e3fb967c0f7a5c770a9568ffff820f2b5b8a0c05"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shimano.com",
+                "www.ayaneo.com"
+            ]
+        },
+        {
+            "rule": "youku\\.com\\/unifull\\/css\\/unifull\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c7539d58f2c80f089c91d64c03071ad3abfbffeb621c0d4723ba56ec5a02e875"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shimano.com",
+                "www.ayaneo.com"
+            ]
+        },
+        {
+            "rule": "youku\\.com\\/",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v",
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cambridgeinternational.org",
+                "www.cambridgeinternational.org"
+            ]
+        },
+        {
+            "rule": "youku\\.com\\/ku\\/webhome",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cambridgeinternational.org",
+                "www.cambridgeinternational.org"
+            ]
+        },
+        {
+            "rule": "youku\\.com\\/h5\\/mtop\\.ykrec\\.recommendservice\\.recommend\\/1\\.0\\/",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "acs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b666728d97737c334a203ecb68b6e0bbc149182f2aeab554111333b032656cf0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "youku.help",
+                "www.youku.help"
+            ]
+        },
+        {
+            "rule": "youku\\.com\\/h5\\/mtop\\.youku\\.aio\\.collector\\.alarm\\/1\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "acs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a74e26f68cf42b2ea1eeda5a822d943e95d35c81e5480bee626b273093c8e6c8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "youku.help",
+                "www.youku.help"
+            ]
+        },
+        {
+            "rule": "youku\\.com\\/h5\\/mtop\\.youku\\.play\\.ups\\.appinfo\\.get\\/1\\.1\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "un-acs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "363f2f5f98b2881fd3d0c844636855bb5831e0da79b92f89ecdfbb02913d0fdd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "cna": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "youku.help",
+                "www.youku.help"
+            ]
+        },
+        {
+            "rule": "youku\\.com\\/h5\\/mtop\\.youku\\.xmop\\.strategyfacadeservice\\.getcontent\\/1\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "acs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "df34e76532c558016cb14a6e3764a6a5744e211c30cf1e4b2feaf667ea1ab0a4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "cna": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "youku.help",
+                "www.youku.help"
+            ]
+        },
+        {
+            "rule": "youku\\.com\\/adx\\/feedback",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adx-open-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "youku.help",
+                "www.youku.help"
+            ]
+        },
+        {
+            "rule": "youku\\.com\\/missile\\/feedback",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "missile"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "youku.help",
+                "www.youku.help"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "alicdn.com",
+            "prevalence": 0.6896551724137931
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.27586206896551724
+        },
+        {
+            "domain": "adsrvr.cn",
+            "prevalence": 0.034482758620689655
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Stylesheet": 2,
+        "Fetch": 4,
+        "XHR": 6,
+        "Image": 4
+    },
+    "nameservers": [
+        "dns2.youku.com",
+        "dns4.youku.com",
+        "dns1.youku.com",
+        "dns3.youku.com"
+    ]
+}

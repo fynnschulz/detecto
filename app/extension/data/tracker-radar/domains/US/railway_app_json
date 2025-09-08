@@ -1,0 +1,166 @@
+{
+    "domain": "railway.app",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00013,
+    "sites": 19,
+    "subdomains": [
+        "umami-production-ca35d.up",
+        "redux-docs-umami.up",
+        "shipaid-api.up",
+        "medishare-grace-prod.up"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "railway\\.app\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "umami-production-ca35d.up",
+                "redux-docs-umami.up"
+            ],
+            "apis": {
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.language": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "56e70678cbf7e8c157c423bac4d2872f3b384a1784f43b1126ae5e59fd45d144"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fapinstructor.com",
+                "redux-toolkit.js.org"
+            ]
+        },
+        {
+            "rule": "railway\\.app\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "umami-production-ca35d.up",
+                "redux-docs-umami.up"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fapinstructor.com",
+                "redux-toolkit.js.org"
+            ]
+        },
+        {
+            "rule": "railway\\.app\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "umami-production-ca35d.up",
+                "redux-docs-umami.up"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a5e6dd01f3f02a62587b9dfc1d948177a289c7b210fe215ab532956d496d1ff5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fapinstructor.com",
+                "redux-toolkit.js.org"
+            ]
+        },
+        {
+            "rule": "railway\\.app\\/shipaid-widget-script-tag\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shipaid-api.up"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "864ee0389b061901144de8c36c45dabb491c3efa932d5c8876d1e5f2eba191f0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hatch-green-chile.com",
+                "www.hatch-green-chile.com",
+                "www.retromodding.com"
+            ]
+        },
+        {
+            "rule": "railway\\.app\\/grace-embed-chat\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "medishare-grace-prod.up"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7e24e09ba2b9ba6b97eb7617d0b9e5a8bbbf75c26e3c5c2296094d22906cecf6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "medishare.com",
+                "www.medishare.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.85
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "blue.foundationdns.net",
+        "blue.foundationdns.com",
+        "blue.foundationdns.org"
+    ]
+}

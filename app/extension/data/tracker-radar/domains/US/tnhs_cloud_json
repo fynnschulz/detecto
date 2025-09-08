@@ -1,0 +1,301 @@
+{
+    "domain": "tnhs.cloud",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000752,
+    "sites": 11,
+    "subdomains": [
+        "frts-tnew-prod",
+        "capa-tnew-prod",
+        "fath-tnew-prod",
+        "natt-tnew-prod",
+        "ntny-tnew-prod",
+        "ocen-tnew-prod",
+        "smre-tnew-prod",
+        "cmoa-tnew-prod"
+    ],
+    "cnames": [
+        {
+            "original": "my.5thavenue.org",
+            "resolved": "fath-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "my.92ny.org",
+            "resolved": "ntny-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "secure.strathmore.org",
+            "resolved": "smre-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "secure.thefreight.org",
+            "resolved": "frts-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "ticketing.clevelandart.org",
+            "resolved": "cmoa-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "tickets.capa.com",
+            "resolved": "capa-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "tickets.nationaltheatre.org.uk",
+            "resolved": "natt-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "tickets.overture.org",
+            "resolved": "ocen-tnew-prod.tnhs.cloud"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "tnhs\\.cloud\\/api\\/session\\/sessionkey\\/",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "frts-tnew-prod",
+                "capa-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "secure.thefreight.org",
+                    "resolved": "frts-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "tickets.capa.com",
+                    "resolved": "capa-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [
+                "b10fae5da8fe22d7c65b84cb36d6c9ba281977f94fd34a0339954e58e49622de"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefreight.org",
+                "www.capa.com"
+            ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/api\\/session\\/sessionkey\\/",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "frts-tnew-prod",
+                "capa-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "secure.thefreight.org",
+                    "resolved": "frts-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "tickets.capa.com",
+                    "resolved": "capa-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefreight.org",
+                "www.capa.com"
+            ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/api\\/session\\/sessionkey",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fath-tnew-prod",
+                "natt-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "my.5thavenue.org",
+                    "resolved": "fath-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "tickets.nationaltheatre.org.uk",
+                    "resolved": "natt-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [
+                "ecff68834c62563843437d7f1a6426c7b225a5829ff7ef683d564a2b154ed863"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "5thavenue.org",
+                "www.nationaltheatre.org.uk"
+            ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/components\\/sharedsession",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ntny-tnew-prod",
+                "ocen-tnew-prod",
+                "smre-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "my.92ny.org",
+                    "resolved": "ntny-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "tickets.overture.org",
+                    "resolved": "ocen-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "secure.strathmore.org",
+                    "resolved": "smre-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [
+                "dcc0fe97175d88f91ebb44bada83a9a750fe53a2569b0b2d09dde4a80066c00a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "92ny.org",
+                "www.overture.org",
+                "www.strathmore.org"
+            ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/utate-and-Angue-That-my-wouldst-When-inhabid-all",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ntny-tnew-prod",
+                "smre-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "my.92ny.org",
+                    "resolved": "ntny-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "secure.strathmore.org",
+                    "resolved": "smre-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [
+                "b471cd8095b6096ebc72664d7e4546f17c5248839ca30dc342d7b2026126fd70"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "92ny.org",
+                "www.strathmore.org"
+            ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/_Incapsula_Resource",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ntny-tnew-prod",
+                "ocen-tnew-prod",
+                "smre-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "my.92ny.org",
+                    "resolved": "ntny-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "tickets.overture.org",
+                    "resolved": "ocen-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "secure.strathmore.org",
+                    "resolved": "smre-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [
+                "61625ac93122966d2d86be4d17b50d5455035e14cc42c535a6ab3067b52443b5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "92ny.org",
+                "www.overture.org",
+                "www.strathmore.org"
+            ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/api\\/Session\\/SessionKey",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cmoa-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "ticketing.clevelandart.org",
+                    "resolved": "cmoa-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [
+                "8cf4a3d95674012c569dc3400c50087a08395724cbe9d714f8d0e9f3451570ad"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clevelandart.org",
+                "www.clevelandart.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000752,
+    "types": {
+        "XHR": 4,
+        "Preflight": 2,
+        "Fetch": 2,
+        "Document": 3,
+        "Script": 5
+    },
+    "nameservers": [
+        "ns-477.awsdns-59.com",
+        "ns-1438.awsdns-51.org",
+        "ns-885.awsdns-46.net",
+        "ns-1737.awsdns-25.co.uk"
+    ]
+}

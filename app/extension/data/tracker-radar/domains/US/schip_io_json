@@ -1,0 +1,183 @@
+{
+    "domain": "schip.io",
+    "owner": {
+        "name": "Schibsted Media Group",
+        "displayName": "Schibsted Media Group"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "tweedehands.sgtm-pro",
+        "marktplaats.sgtm-pro"
+    ],
+    "cnames": [
+        {
+            "original": "server.sgtm.2dehands.be",
+            "resolved": "tweedehands.sgtm-pro.schip.io"
+        },
+        {
+            "original": "server.sgtm.2ememain.be",
+            "resolved": "tweedehands.sgtm-pro.schip.io"
+        },
+        {
+            "original": "server.sgtm.marktplaats.nl",
+            "resolved": "marktplaats.sgtm-pro.schip.io"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "schip\\.io\\/gtm\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tweedehands.sgtm-pro",
+                "marktplaats.sgtm-pro"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "server.sgtm.2ememain.be",
+                    "resolved": "tweedehands.sgtm-pro.schip.io"
+                },
+                {
+                    "original": "server.sgtm.marktplaats.nl",
+                    "resolved": "marktplaats.sgtm-pro.schip.io"
+                }
+            ],
+            "responseHashes": [
+                "7e5d42e198088b654b8ab103f29d84c04f4d3e47133e526318d1dacc2801e7b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "2ememain.be",
+                "www.marktplaats.nl"
+            ]
+        },
+        {
+            "rule": "schip\\.io\\/g\\/collect",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tweedehands.sgtm-pro",
+                "marktplaats.sgtm-pro"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "server.sgtm.2dehands.be",
+                    "resolved": "tweedehands.sgtm-pro.schip.io"
+                },
+                {
+                    "original": "server.sgtm.marktplaats.nl",
+                    "resolved": "marktplaats.sgtm-pro.schip.io"
+                }
+            ],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "2dehands.be",
+                "www.2dehands.be",
+                "www.marktplaats.nl"
+            ]
+        },
+        {
+            "rule": "schip\\.io\\/_\\/service_worker\\/5840\\/sw_iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "marktplaats.sgtm-pro"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "server.sgtm.marktplaats.nl",
+                    "resolved": "marktplaats.sgtm-pro.schip.io"
+                }
+            ],
+            "responseHashes": [
+                "2ada301d803d8f4b2ba210c9c57091378255ed54b96e4236a9e2ce587a2a4035"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marktplaats.nl",
+                "www.marktplaats.nl"
+            ]
+        },
+        {
+            "rule": "schip\\.io\\/_\\/service_worker\\/5840\\/sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "marktplaats.sgtm-pro"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "server.sgtm.marktplaats.nl",
+                    "resolved": "marktplaats.sgtm-pro.schip.io"
+                }
+            ],
+            "responseHashes": [
+                "da7281e49859a7f0cc75fab5f0e256775e20fed461502cc86321d55ad5be7084"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marktplaats.nl",
+                "www.marktplaats.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.7777777777777778
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "hzcdn.io",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 3,
+        "Document": 2,
+        "Other": 2
+    },
+    "nameservers": [
+        "ns-1356.awsdns-41.org",
+        "ns-1999.awsdns-57.co.uk",
+        "ns-100.awsdns-12.com",
+        "ns-588.awsdns-09.net"
+    ]
+}

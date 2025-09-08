@@ -1,0 +1,116 @@
+{
+    "domain": "xfinity.com",
+    "owner": {
+        "name": "Comcast Corporation",
+        "displayName": "Comcast",
+        "privacyPolicy": "https://www.xfinity.com/Corporate/Customers/Policies/CustomerPrivacy",
+        "url": "http://xfinity.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "xchat",
+        "dl.cws"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "xfinity\\.com\\/chatskins\\/launch\\/inqChatLaunch10006690\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "xchat"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "48757752a0092202a0e1b580fc2a962917834fbacb4d1ce779cafe0f8e052e1a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xumo.com",
+                "www.xumo.com"
+            ]
+        },
+        {
+            "rule": "xfinity\\.com\\/event\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dl.cws"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xumo.com",
+                "support.xumo.com",
+                "www.xumo.com"
+            ]
+        },
+        {
+            "rule": "xfinity\\.com\\/event\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dl.cws"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "827cd83d89ede4598dd0203c3b4cbf99ca91678f5b9bc03bbebf5fe93e6a2c4a",
+                "9f7427bcfcf1ab180fe880765a4c3736e3abfe81f9e3eadb611e021cfb2c7bd7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xumo.com",
+                "support.xumo.com",
+                "www.xumo.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "cimcontent.net",
+            "prevalence": 0.9591836734693877
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.04081632653061224
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Preflight": 3,
+        "XHR": 3
+    },
+    "nameservers": [
+        "dns101.comcast.net",
+        "dns102.comcast.net",
+        "dns103.comcast.net",
+        "dns104.comcast.net",
+        "dns105.comcast.net"
+    ]
+}

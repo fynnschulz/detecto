@@ -1,0 +1,144 @@
+{
+    "domain": "thecontentserver.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "cd",
+        "cds",
+        "tr"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "thecontentserver\\.com\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "50a2fad462dc1919779d90cd7526a8668b7427a41217afe39aa155ee739af90d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffpost.com",
+                "www.miamiherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/603631\\/elLoader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0fedfe67c41b23bff8038fae223573d0c5c98cce22501c1a9c297bb00f62c641"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffpost.com",
+                "www.miamiherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/603631\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Navigator.prototype.connection": 1,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a32c26d1f18636349ac34bab417dc7a4e1abadd4a63b23703a75af32e8dc1bb3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffpost.com",
+                "www.miamiherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/tr\\/st",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffpost.com",
+                "www.huffpost.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9541984732824428
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.030534351145038167
+        },
+        {
+            "domain": "connatix.com",
+            "prevalence": 0.007633587786259542
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.007633587786259542
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-52.awsdns-06.com",
+        "ns-592.awsdns-10.net",
+        "ns-1602.awsdns-08.co.uk",
+        "ns-1513.awsdns-61.org"
+    ]
+}

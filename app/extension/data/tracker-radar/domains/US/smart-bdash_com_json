@@ -1,0 +1,380 @@
+{
+    "domain": "smart-bdash.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000103,
+    "sites": 15,
+    "subdomains": [
+        "cdn.activity",
+        "tracker",
+        "receptions",
+        "recommendserveweb",
+        "tracker-rec"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "smart-bdash\\.com\\/tracking-script\\/bdash_log\\.js",
+            "cookies": 0.0000821,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.activity"
+            ],
+            "apis": {
+                "Document.cookie getter": 12,
+                "Date.prototype.getTime": 12,
+                "Document.cookie setter": 12,
+                "Navigator.prototype.userAgent": 12
+            },
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "6258355e386deb41b5b8d8d3141c09a3da89a4fa6fc8eeba9132e426ff0b8f87"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_bd_prev_page": {
+                    "ttl": 1809,
+                    "length": 92,
+                    "prevalence": 0.00008209057326583664,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.jp",
+                "iko-yo.net",
+                "report.iko-yo.net",
+                "www.buyma.com",
+                "www.cainz.com",
+                "www.dospara.co.jp",
+                "www.e-earphone.jp",
+                "www.hasegawa.jp",
+                "www.melonbooks.co.jp",
+                "www.mod.go.jp",
+                "www.ozmall.co.jp",
+                "www.rehouse.co.jp"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/reception-script\\/reception\\.js",
+            "cookies": 0.0000479,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.activity"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 7,
+                "Document.cookie getter": 7,
+                "Document.cookie setter": 7,
+                "window.innerHeight": 3,
+                "window.innerWidth": 2
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "15d182d9c520c15a096d15fbabbd16b7823c8d685ee51c543688cd197ee2e3b1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_bd_reception_request_timestamp": {
+                    "ttl": null,
+                    "length": 26,
+                    "prevalence": 0.000047886167738404704,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.jp",
+                "iko-yo.net",
+                "report.iko-yo.net",
+                "www.buyma.com",
+                "www.e-earphone.jp",
+                "www.hasegawa.jp",
+                "www.ozmall.co.jp"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/tracking",
+            "cookies": 0.0000821,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracker"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "c40113e7f2087122cd3b10e61475655f83afa7ebdb06afa0d39858ec2558b3c0",
+                "1beb9a8c3c3a98cfda9280dbfb649f02d2fba588a234cae7fe580cabd46fbbc8",
+                "06f77c2a0063fed41116200dc38f6ea88c725a4c62abad0688e09f223e23fd9a",
+                "ef9b9caa72b3d71deb10584f9369a17830ff7ea80fb6fd5239eea9b18ee52a08",
+                "8fe15be87714ce5e8589ba10d237c65b74cc850b446305214f19ef9c5dd94e2a",
+                "6d27c6eaaf619f3fe889d039bfbac7dbf2278920662c8f627106092bdf574687",
+                "a8a70df9c2fedef425b21bfa7e1b44d056b76dfe4a68fb7c80b16e76445a2de8",
+                "ab8f71c60d2b9e4156f123130e0315f52eecc2a50be68e9f8e90c3f928a5f1a2",
+                "2205096c6340a860c17d71b1a5b69d6710f631344f9525221a5e3bde1b523c12",
+                "b78046583cfad6e5713519bd568cb8337e91f0658d8a603dc01aed4a741c802c",
+                "76cba327b477b6ed4db5bd3001d3a1c75717a2d013b238c9cb28d8fb97da51f0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.jp",
+                "iko-yo.net",
+                "report.iko-yo.net",
+                "www.buyma.com",
+                "www.cainz.com",
+                "www.dospara.co.jp",
+                "www.e-earphone.jp",
+                "www.hasegawa.jp",
+                "www.melonbooks.co.jp",
+                "www.mod.go.jp",
+                "www.ozmall.co.jp",
+                "www.rehouse.co.jp"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/receptions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "receptions"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "dabf547c6927d8c266eac16164e75c276cfccd133aa7aea67fe8bed6cf664750",
+                "60e2bc2488ecab662e2aeaa7b004f297b6bf2bcb0fb32a986e58cd0733840c9b",
+                "f54d63fceb792c815e47c533f3def149f02c41828780928b0625095cb80f9021",
+                "0793fc020591367e7931a170fbea773442b210f5c599cfb748a40e2e9ba6d9f2",
+                "418c5b677d68c51d72f1ed91b790bdac3c7c5bb4700ef8d1ac6db5fbed330895",
+                "59cf31d3e125d63eefda9b689ad276b30b987441908e6e358a618d6ce851de59"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.jp",
+                "iko-yo.net",
+                "report.iko-yo.net",
+                "www.buyma.com",
+                "www.e-earphone.jp",
+                "www.hasegawa.jp",
+                "www.ozmall.co.jp"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/receptions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "receptions"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.jp",
+                "iko-yo.net",
+                "report.iko-yo.net",
+                "www.buyma.com",
+                "www.e-earphone.jp",
+                "www.hasegawa.jp",
+                "www.ozmall.co.jp"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/tag-manager\\/bd-wm97uf\\/btm\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.activity"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "380eac97f28aa08f29df9fb284f95feb883d7d65a2e1cbb067fb132eb308bc44"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_bdck": {
+                    "ttl": 63072009,
+                    "length": 19,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "_bdsid": {
+                    "ttl": 1809,
+                    "length": 33,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "_bdnvf": {
+                    "ttl": 63072009,
+                    "length": 54,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iko-yo.net",
+                "report.iko-yo.net"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/receptions\\/action\\/impression",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "receptions"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buyma.com",
+                "www.e-earphone.jp"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/receptions\\/action\\/impression",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "receptions"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buyma.com",
+                "www.e-earphone.jp"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/out\\/getRecs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recommendserveweb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "17062d32cbf22e866ee8ce6619c7c5e06630cd652c0d72b91f65b6a56889258a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e-earphone.jp",
+                "www.ozmall.co.jp"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/out\\/multi_recommendations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recommendserveweb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ba6fe8461cae2444108c9aa45e27a768ae0460404f2249b9272610cc6dcbabc0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e-earphone.jp",
+                "www.ozmall.co.jp"
+            ]
+        },
+        {
+            "rule": "smart-bdash\\.com\\/activity",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracker-rec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e-earphone.jp",
+                "www.e-earphone.jp"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000958,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5357142857142857
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.4642857142857143
+        }
+    ],
+    "types": {
+        "Script": 21,
+        "XHR": 27,
+        "Preflight": 9
+    },
+    "nameservers": [
+        "ns-1069.awsdns-05.org",
+        "ns-864.awsdns-44.net",
+        "ns-260.awsdns-32.com",
+        "ns-1638.awsdns-12.co.uk"
+    ]
+}

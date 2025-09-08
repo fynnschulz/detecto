@@ -1,0 +1,128 @@
+{
+    "domain": "hextom.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "cdn",
+        "fsb"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "hextom\\.com\\/js\\/freeshippingbar\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "3aa421502916089d7fd04ac4a6ed45d6659b7346a735506a21d2f4dee8783aec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fsb_previous_pathname": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                },
+                "fsb_total_price_488484": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "fsb_message_one_488484": {
+                    "ttl": 7,
+                    "length": 3,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moomin.no",
+                "samlaget.no",
+                "skomakerdagestad.no"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/fsb_get_bars",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fsb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d0a815f368c118e182d297e05d5358452766a421f708c8f39fa66fd52a240a6f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moomin.no",
+                "skomakerdagestad.no"
+            ]
+        },
+        {
+            "rule": "hextom\\.com\\/fsb_get_bars",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fsb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moomin.no",
+                "skomakerdagestad.no"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-1484.awsdns-57.org",
+        "ns-1851.awsdns-39.co.uk",
+        "ns-704.awsdns-24.net",
+        "ns-60.awsdns-07.com"
+    ]
+}

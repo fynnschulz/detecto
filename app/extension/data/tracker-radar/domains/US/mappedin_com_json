@@ -1,0 +1,181 @@
+{
+    "domain": "mappedin.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "cdn",
+        "auth",
+        "api-gateway"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "mappedin\\.com\\/minimap2\\/release\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.userAgent": 2,
+                "URL.createObjectURL": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2,
+                "window.devicePixelRatio": 2,
+                "WebGL2RenderingContext.prototype.getExtension": 2,
+                "WebGL2RenderingContext.prototype.getShaderPrecisionFormat": 2,
+                "WebGL2RenderingContext.prototype.getParameter": 2,
+                "WebGL2RenderingContext.prototype.getContextAttributes": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ccadca6681d8d1d01a987c3887a3fd01b32cbc7c7e34868334e8a5e00228edb6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "premiumoutlets.com",
+                "www.simon.com"
+            ]
+        },
+        {
+            "rule": "mappedin\\.com\\/oauth2\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "65dc16d472cad098e21504b8af1dfc81243ca8a6b6412a889ecd2df455fb7864"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "premiumoutlets.com",
+                "www.simon.com"
+            ]
+        },
+        {
+            "rule": "mappedin\\.com\\/oauth2\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "premiumoutlets.com",
+                "www.simon.com"
+            ]
+        },
+        {
+            "rule": "mappedin\\.com\\/exports\\/mvf2\\/1\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-gateway"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f14b28955cb8f4af9482ccf878aef7092ad47b6e1cf84540723514b748b64eda"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "premiumoutlets.com",
+                "www.simon.com"
+            ]
+        },
+        {
+            "rule": "mappedin\\.com\\/exports\\/mvf2\\/1\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-gateway"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "premiumoutlets.com",
+                "www.simon.com"
+            ]
+        },
+        {
+            "rule": "mappedin\\.com\\/minimap2\\/release\\/fonts\\/Roboto-Regular\\.ttf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f822e3874d24c7a714b757c89afb3029690f862397d37fc500d480506c24c75a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "premiumoutlets.com",
+                "www.simon.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "d1p5cqqchvbqmy.cloudfront.net",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 4,
+        "Preflight": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "will.ns.cloudflare.com",
+        "kayleigh.ns.cloudflare.com"
+    ]
+}

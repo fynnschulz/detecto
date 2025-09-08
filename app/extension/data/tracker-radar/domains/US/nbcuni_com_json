@@ -1,0 +1,282 @@
+{
+    "domain": "nbcuni.com",
+    "owner": {
+        "name": "Comcast Corporation",
+        "displayName": "Comcast",
+        "privacyPolicy": "https://www.xfinity.com/Corporate/Customers/Policies/CustomerPrivacy",
+        "url": "http://xfinity.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000109,
+    "sites": 16,
+    "subdomains": [
+        "id",
+        "mps",
+        "cdn2",
+        "api.mp"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "nbcuni\\.com\\/websdk\\/v2\\/identity-sdk\\.min\\.js",
+            "cookies": 0.0000479,
+            "fingerprinting": 1,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 7,
+                "Document.cookie getter": 7,
+                "Document.cookie setter": 7,
+                "Date.prototype.getTime": 7,
+                "Navigator.prototype.doNotTrack": 7
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "8fdab807ffbfde8c6103d31825ee5826830a656f5fd3a6d9c5f999a2d0c744b6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nbcboston.com",
+                "www.nbcboston.com",
+                "www.nbcsportsbayarea.com",
+                "www.nbcsportsboston.com",
+                "www.nbcsportsphiladelphia.com",
+                "www.telemundopr.com",
+                "www.usanetwork.com"
+            ]
+        },
+        {
+            "rule": "nbcuni\\.com\\/websdk\\/config\\/localstationsweb\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c26c4ea9ae34d1fd7c9874887dd173a03155995bb407ba27801c4d5aeb531882"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nbcboston.com",
+                "www.nbcboston.com"
+            ]
+        },
+        {
+            "rule": "nbcuni\\.com\\/fetch\\/ext\\/load-olympics-tokyo-web\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "mps"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.appVersion": 2,
+                "window.innerWidth": 2,
+                "Document.cookie setter": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5b1f5f0a28714818500295b4e3f4f524f728845dcf59697a527685a2d0852bc2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1755335176,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nbcolympics.com",
+                "www.nbcolympics.com"
+            ]
+        },
+        {
+            "rule": "nbcuni\\.com\\/request\\/page\\/json\\/params\\/",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mps"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "a5d2c0247d40bbfbac7b1480c9597827a0b4e30ffa449a22078067f467e7b445",
+                "febf97a448d493f8465bb87712d5a35213c6cfad2210d0b048123cd2a9d075e4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nbcolympics.com",
+                "www.nbcolympics.com",
+                "www.usanetwork.com"
+            ]
+        },
+        {
+            "rule": "nbcuni\\.com\\/websdk\\/config\\/rsnsweb\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "638bc517f32fdd2463cab7ba214f4ac0e4a4edd52ef6e27acdc4fbdefbf81b7e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nbcsportsbayarea.com",
+                "www.nbcsportsbayarea.com",
+                "www.nbcsportsboston.com",
+                "www.nbcsportsphiladelphia.com"
+            ]
+        },
+        {
+            "rule": "nbcuni\\.com\\/NBCUniversal\\/2025-08\\/Paper-7s\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "185a5e06b2e0bc3f5d80eadf8342bb856491faa724b40ea8b734e75f0427c1b7"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nbcuniversal.com",
+                "www.nbcuniversal.com"
+            ]
+        },
+        {
+            "rule": "nbcuni\\.com\\/NBCUniversal\\/2025-06\\/JWR-9s\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "57924ed494e6d3685239ccdbb1f75b9dcd63d94afd0073489ae607dba1a121da"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nbcuniversal.com",
+                "www.nbcuniversal.com"
+            ]
+        },
+        {
+            "rule": "nbcuni\\.com\\/webevents\\/v1\\/JS\\/us1-879680b8eb43f24f8c0701a06aa3b13a\\/Forwarding",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.mp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usanetwork.com",
+                "www.usanetwork.com"
+            ]
+        },
+        {
+            "rule": "nbcuni\\.com\\/webevents\\/v3\\/JS\\/us1-879680b8eb43f24f8c0701a06aa3b13a\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.mp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "77186087e545e63a7c16015a0778886bc4e88a6749c869f28cb0d1ccbf7003c5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usanetwork.com",
+                "www.usanetwork.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000958,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9354838709677419
+        },
+        {
+            "domain": "mparticle.com",
+            "prevalence": 0.06451612903225806
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Fetch": 10,
+        "XHR": 3,
+        "Media": 4
+    },
+    "nameservers": [
+        "asia2.akam.net",
+        "usw1.akam.net",
+        "eur3.akam.net",
+        "use3.akam.net",
+        "asia3.akam.net",
+        "aus1.akam.net",
+        "eur4.akam.net",
+        "ns1-161.akam.net",
+        "ns1-102.akam.net"
+    ]
+}

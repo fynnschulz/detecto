@@ -1,0 +1,118 @@
+{
+    "domain": "routingapi.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "dist",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "routingapi\\.com\\/jsapi\\/v1\\/retreaver\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dist"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b4c280caea8b2cd74b2f6637e45ce12b080bda185f96295e4918dd1e19de100c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "CallPixels-ou": {
+                    "ttl": null,
+                    "length": 103,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "CallPixels-vid": {
+                    "ttl": null,
+                    "length": 32,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usmoneyreserve.com",
+                "www.usmoneyreserve.com"
+            ]
+        },
+        {
+            "rule": "routingapi\\.com\\/api\\/v1\\/numbers",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3795bc2f42ef2e15cd58d20291417ac8d69bf48fd3dd5d6430c385061b809e0f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usmoneyreserve.com",
+                "www.usmoneyreserve.com"
+            ]
+        },
+        {
+            "rule": "routingapi\\.com\\/api\\/v1\\/numbers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usmoneyreserve.com",
+                "www.usmoneyreserve.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-954.awsdns-55.net",
+        "ns-1817.awsdns-35.co.uk",
+        "ns-274.awsdns-34.com",
+        "ns-1174.awsdns-18.org"
+    ]
+}

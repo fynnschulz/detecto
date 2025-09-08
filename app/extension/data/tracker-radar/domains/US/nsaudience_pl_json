@@ -1,0 +1,420 @@
+{
+    "domain": "nsaudience.pl",
+    "owner": {
+        "name": "nazwa.pl sp. z o.o.",
+        "displayName": "nazwa.pl"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000376,
+    "sites": 55,
+    "subdomains": [
+        "id",
+        "atm.api.dmp",
+        "interia.api.dmp",
+        "rmf.api.dmp"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "nsaudience\\.pl\\/getId\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {
+                "Document.cookie getter": 39,
+                "Navigator.prototype.userAgent": 33,
+                "NavigatorUAData.prototype.getHighEntropyValues": 31,
+                "NavigatorUAData.prototype.brands": 31
+            },
+            "sites": 41,
+            "prevalence": 0.00028,
+            "cnames": [],
+            "responseHashes": [
+                "f8541f9ffe36094f6f29830557a527bd9ad42426878e54cc5a637809d1fcdbc1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "placowki.mp.pl",
+                "android.com.pl",
+                "www.msze.info",
+                "shinden.pl",
+                "www.gazetaprawna.pl",
+                "www.auto1.fi",
+                "www.telsu.fi",
+                "www.ortograf.pl",
+                "www.mniammniam.com",
+                "gospodarka.dziennik.pl",
+                "www.mp.pl",
+                "m.jbzd.com.pl",
+                "www.verkkouutiset.fi",
+                "ksiegowosc.infor.pl",
+                "opoka.org.pl",
+                "www.olgasmile.com",
+                "www.foreca.com",
+                "samequizy.pl",
+                "niezalezna.pl",
+                "zielonyogrodek.pl"
+            ]
+        },
+        {
+            "rule": "nsaudience\\.pl\\/getIdConfig\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {},
+            "sites": 40,
+            "prevalence": 0.000274,
+            "cnames": [],
+            "responseHashes": [
+                "23af58a33e6bd5ce3005f4e822f8888ff7cd83fdf4116b7320e1604acad0b4c4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000034204405527431934
+            },
+            "exampleSites": [
+                "wiadomosci.dziennik.pl",
+                "www.oglaszamy24.pl",
+                "android.com.pl",
+                "wyznacz.pl",
+                "kadry.infor.pl",
+                "ksiegowosc.infor.pl",
+                "gol24.pl",
+                "www.mniammniam.com",
+                "freedisc.pl",
+                "www.foreca.com",
+                "samequizy.pl",
+                "www.mp.pl",
+                "opoka.org.pl",
+                "www.auto1.fi",
+                "www.telsu.fi",
+                "moto.infor.pl",
+                "www.olgasmile.com",
+                "www.msze.info",
+                "samorzad.infor.pl",
+                "shinden.pl"
+            ]
+        },
+        {
+            "rule": "nsaudience\\.pl\\/getId",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "doci.pl",
+                "natemat.pl",
+                "www.fronda.pl",
+                "www.helsinginuutiset.fi",
+                "www.ksml.fi",
+                "www.rmf.fm",
+                "www.rmf24.pl",
+                "www.tamperelainen.fi"
+            ]
+        },
+        {
+            "rule": "nsaudience\\.pl\\/getId",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "doci.pl",
+                "natemat.pl",
+                "www.fronda.pl",
+                "www.helsinginuutiset.fi",
+                "www.ksml.fi",
+                "www.rmf.fm",
+                "www.rmf24.pl",
+                "www.tamperelainen.fi"
+            ]
+        },
+        {
+            "rule": "nsaudience\\.pl\\/atm\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "atm.api.dmp"
+            ],
+            "apis": {
+                "Document.cookie getter": 17,
+                "Navigator.prototype.userAgent": 15,
+                "NavigatorUAData.prototype.getHighEntropyValues": 15,
+                "NavigatorUAData.prototype.brands": 15,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 18,
+            "prevalence": 0.000123,
+            "cnames": [],
+            "responseHashes": [
+                "04d8493ff7a9f7040ca529d930f94942ff4ec414ea50b86b85de79563f5e56e5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__jtuid": {
+                    "ttl": 31536013,
+                    "length": 95,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "__jtut": {
+                    "ttl": 31536013,
+                    "length": 13,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gazetawroclawska.pl",
+                "gol24.pl",
+                "kobieta.interia.pl",
+                "sprzedajemy.pl",
+                "stronazdrowia.pl",
+                "www.asiakastieto.fi",
+                "www.auto1.fi",
+                "www.foreca.fi",
+                "www.helsinginuutiset.fi",
+                "www.huuto.net",
+                "www.interia.pl",
+                "www.karjalainen.fi",
+                "www.ksml.fi",
+                "www.rmf.fm",
+                "www.rmf24.pl",
+                "www.tamperelainen.fi",
+                "www.telsu.fi",
+                "www.verkkouutiset.fi"
+            ]
+        },
+        {
+            "rule": "nsaudience\\.pl\\/atmConfig\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "atm.api.dmp"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.000123,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gazetawroclawska.pl",
+                "gol24.pl",
+                "kobieta.interia.pl",
+                "sprzedajemy.pl",
+                "stronazdrowia.pl",
+                "www.asiakastieto.fi",
+                "www.auto1.fi",
+                "www.foreca.fi",
+                "www.helsinginuutiset.fi",
+                "www.huuto.net",
+                "www.interia.pl",
+                "www.karjalainen.fi",
+                "www.ksml.fi",
+                "www.rmf.fm",
+                "www.rmf24.pl",
+                "www.tamperelainen.fi",
+                "www.telsu.fi",
+                "www.verkkouutiset.fi"
+            ]
+        },
+        {
+            "rule": "nsaudience\\.pl\\/atmConfig\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "atm.api.dmp"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.000123,
+            "cnames": [],
+            "responseHashes": [
+                "ebbdb2fe4d0d431c2283dc282a5be69459bb2963b440c1c82de685f5359a0aa7",
+                "ea6225872b998fe187545a56bdaa2d47671bad5ffa14874a687e679d8cce6d6b",
+                "75e72cd8b34c6ceb1d5f72bf619a5c9c8a744f1222c30968f0b1753e70efcea3",
+                "952c083167bd0ee19d667d70e752ccad1aeffe9f355dcee907062dec600e6cd5",
+                "699576bd0fd9a2e6f9657e5855ca79101898bd1451ce96d1ca294609e2b294c0",
+                "355d3aaf83fcd07b460f217029bf040d71dc07e978fd9c7c0e6888a101cf4f30",
+                "e064ae93ba5d75bc0f798d486e4189e152f7203b8b6ef8bfec1e2a1539ec2b28",
+                "4578f8b31b897d984c0bc7c369108ac1531c21c2c616aa37cc2e5d6cc8579eb0",
+                "251404f81cf2c3274b61ac5e5cfea79bd3da46ab62c27f395feda2486218a540",
+                "85b8287dec80ef62574a05555169541d39094504876c72d72a3ba05eea6becf8",
+                "54754bf1dec24f295cbc73b80f4f618cb3d63f17a4af5435e574685153419f33",
+                "0ad069e1e831614bf8b4442f860e01c368b0c7065ff854635c38d4ce53b06878",
+                "1a850459f404247ca638a2e97da187c1aebcb53f9a8af9249796f21a246b0604",
+                "3a3658df77f901357a655b779f4738ecb9073011d655c500a673364dc3081284",
+                "8e5501bbd0cd597a6ffe700f58617e999a242f91c652353d0255edd39accdb21",
+                "20ff213cc52b10f8ab942c875d35814cc8bb5c38208bce5bd096734a12b1d870",
+                "b19d82bce6e1556176e861648be1ba3625851bb0b1780c478883076e655f5abb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gazetawroclawska.pl",
+                "gol24.pl",
+                "kobieta.interia.pl",
+                "sprzedajemy.pl",
+                "stronazdrowia.pl",
+                "www.asiakastieto.fi",
+                "www.auto1.fi",
+                "www.foreca.fi",
+                "www.helsinginuutiset.fi",
+                "www.huuto.net",
+                "www.interia.pl",
+                "www.karjalainen.fi",
+                "www.ksml.fi",
+                "www.rmf.fm",
+                "www.rmf24.pl",
+                "www.tamperelainen.fi",
+                "www.telsu.fi",
+                "www.verkkouutiset.fi"
+            ]
+        },
+        {
+            "rule": "nsaudience\\.pl\\/frontend\\/api\\/matchMainScript\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "interia.api.dmp",
+                "rmf.api.dmp"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.appVersion": 2
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "6e6731c77fdda6bc4cae47ce11d16610deaf590f5ae97a9bcbcbb295ff58b27b",
+                "57a24f924efde35ec8eec58dbb892ee0eee03034a92e5a7c35f3db2130b4cf86",
+                "a650e21f87d5c46ff45792f583ad665ab23df34915910ec433469b222ce0b7ef"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "interia.pl",
+                "kobieta.interia.pl",
+                "www.rmf.fm",
+                "www.rmf24.pl"
+            ]
+        },
+        {
+            "rule": "nsaudience\\.pl\\/frontend\\/api\\/sendData\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "interia.api.dmp",
+                "rmf.api.dmp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "879c05cee4ebdd101f344d1d9e11e4c579403aa224ed847c197dc11f291cfc44"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "interia.pl",
+                "www.rmf.fm",
+                "www.rmf24.pl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.2318840579710145
+        },
+        {
+            "domain": "spolecznosci.net",
+            "prevalence": 0.2028985507246377
+        },
+        {
+            "domain": "wtg-ads.com",
+            "prevalence": 0.18840579710144928
+        },
+        {
+            "domain": "qwtag.com",
+            "prevalence": 0.13043478260869565
+        },
+        {
+            "domain": "relevant-digital.com",
+            "prevalence": 0.057971014492753624
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.057971014492753624
+        },
+        {
+            "domain": "vidoomy.com",
+            "prevalence": 0.043478260869565216
+        },
+        {
+            "domain": "ppstatic.pl",
+            "prevalence": 0.043478260869565216
+        },
+        {
+            "domain": "justid.io",
+            "prevalence": 0.028985507246376812
+        },
+        {
+            "domain": "iplsc.com",
+            "prevalence": 0.014492753623188406
+        }
+    ],
+    "types": {
+        "Script": 66,
+        "XHR": 66,
+        "Preflight": 26
+    },
+    "nameservers": [
+        "ns200.anycast.me",
+        "dns200.anycast.me"
+    ]
+}

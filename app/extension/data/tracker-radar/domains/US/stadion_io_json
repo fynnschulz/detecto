@@ -1,0 +1,90 @@
+{
+    "domain": "stadion.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "widgets.itf-production.sports-data",
+        "api.itf-production.sports-data"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "stadion\\.io\\/itf-widget-sdk\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "widgets.itf-production.sports-data"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b48f6e6514e38da083c0a1f3f0ddb8d24a3c126d6aaf0a5bec393770220c6d42"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itftennis.com",
+                "www.itftennis.com"
+            ]
+        },
+        {
+            "rule": "stadion\\.io\\/custom\\/matchRibbon\\/2025-08-16\\/wtt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.itf-production.sports-data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e673a64a137be673bbe42a5b2ead8aef6f3e6a48cb9a5f6d7667c47b255a0e06"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itftennis.com",
+                "www.itftennis.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "unpkg.com",
+            "prevalence": 0.6206896551724138
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3793103448275862
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "tina.ns.cloudflare.com",
+        "dave.ns.cloudflare.com"
+    ]
+}

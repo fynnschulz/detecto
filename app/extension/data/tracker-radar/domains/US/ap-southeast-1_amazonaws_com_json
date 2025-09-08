@@ -1,0 +1,645 @@
+{
+    "domain": "ap-southeast-1.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000301,
+    "sites": 44,
+    "subdomains": [
+        "kgdata-cdn.s3",
+        "firehose",
+        "tagalys-assets.s3",
+        "s3",
+        "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb",
+        "k8s-arkmiddl-apisixse-b7849cdf26-2fd43480e8f4990f.elb",
+        "vj-prod-website-cms.s3"
+    ],
+    "cnames": [
+        {
+            "original": "arms.bitauto.com",
+            "resolved": "k8s-arkmiddl-apisixse-b7849cdf26-2fd43480e8f4990f.elb.ap-southeast-1.amazonaws.com"
+        },
+        {
+            "original": "global-api.bitauto.com",
+            "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+        },
+        {
+            "original": "loghw.bitauto.com",
+            "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/tracker\\/p\\/kompasreco\\/oval_web_analytics_latest\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kgdata-cdn.s3"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kompas.com",
+                "denpasar.kompas.com",
+                "health.kompas.com",
+                "internasional.kompas.com",
+                "megapolitan.kompas.com",
+                "regional.kompas.com",
+                "surabaya.kompas.com",
+                "tekno.kompas.com",
+                "www.kompas.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "0e39cc66944244647d151807568c138f4198e5ebc011845381a2fe482b81058f",
+                "3377ac0a8196acfd9b60dcc1f85743ecc57b079e3d452fc3355e2f3de29c9879",
+                "2bea8e2a980fb25291f5c7cc4da29a61db0319203791a5ec8426d021082a3ee8",
+                "09b23218f14740201575cf4683c3ff9aa8a62f391e4509393369dfe35bda863d",
+                "116ddd520c4cb12689897931070b5f4b9aca97aaa232104997fa14e2c025a58b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "czbooks.net",
+                "jalantikus.com",
+                "thanhnien.vn",
+                "www.bola.net",
+                "www.chinatimes.com",
+                "www.ltn.com.tw"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "czbooks.net",
+                "jalantikus.com",
+                "thanhnien.vn",
+                "www.bola.net",
+                "www.chinatimes.com",
+                "www.ltn.com.tw"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/tagalys-analytics-r20240718\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tagalys-assets.s3"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "24092cd8878599b798a37be7d6bf9041fe294c4f11b85cd0dd125a261b39dfac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__ta_device": {
+                    "ttl": 63072020,
+                    "length": 32,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "__ta_visit": {
+                    "ttl": 1820,
+                    "length": 32,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "__ta_last_pa_time": {
+                    "ttl": 1221,
+                    "length": 6,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skims.com",
+                "www.pavers.co.uk"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/wiimhome\\.homepage\\.test\\/marked\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8b10a6173d524fc6c97bc9589ba8383e0212d5c0d617e1519e5f4e6a0c9f224f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wiimhome.com",
+                "www.wiimhome.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/ip\\/position",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/ip\\/position",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/statistics\\/EventAgent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "loghw.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "b80c4630301f8b9ae47f24d1a8b442b2c31d282f5ea0b26c1b3d682ad01af6b0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/web\\/old\\/api\\/batch_web_client",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-b7849cdf26-2fd43480e8f4990f.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "arms.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-b7849cdf26-2fd43480e8f4990f.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/page\\/point\\/v1\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "b603ea1d796dcbb9f0178fdcb62d597983472cc106a01f231700fc82a025a23e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/page\\/point\\/v1\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/page\\/point\\/v1\\/getprotocol",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7de97bc68bb056363ab31a82d9edab9a5f7d195e53275a1ab46318d92ba630a5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/page\\/point\\/v1\\/getprotocol",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/common\\/v1\\/whatsapp_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "44d492ecb2f8cb09ff664f0c5de860889972ae35beb8330cfbeb5f3482888c1a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/common\\/v1\\/whatsapp_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/search\\/v1\\/topserials",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "98bed085c0cab8f6d719c213742890c10255a8d810f3200d00956dafa625a663"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/caroverseasapi\\/search\\/v1\\/topserials",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "global-api.bitauto.com",
+                    "resolved": "k8s-arkmiddl-apisixse-6efc3ac200-ca7f7fc3c8f500c2.elb.ap-southeast-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitauto.com",
+                "www.bitauto.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/zeenews\\.india\\.com\\/static\\/public\\/images\\/Twitter_Header\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ce7371c39b9dc03b43fbdb430ca8af9c6c9d2ebbd20d818b58b7db3ee5ea4ef4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dnaindia.com",
+                "www.dnaindia.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/biz\\.thestar\\.com\\.my\\/json\\/stocklookup\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cd3d8ef8fe7bd344658bac88559debf313aef1fb60b081693b65cdf6bbb7cb67"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thestar.com.my",
+                "www.thestar.com.my"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/350x151transparent-1754540731512\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vj-prod-website-cms.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2c574232adb6b71db513e177aca8cad2a79b16b4e84cd13d15cb673766008c52"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vietjetair.com",
+                "www.vietjetair.com"
+            ]
+        },
+        {
+            "rule": "ap-southeast-1\\.amazonaws\\.com\\/files\\/flywithvietjeten-1602759084218\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vj-prod-website-cms.s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9fa4f75e82d97c1ae5bfd9dd1836e12c2036f38f1179f5435f30105e2f43adf7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vietjetair.com",
+                "www.vietjetair.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8191489361702128
+        },
+        {
+            "domain": "likr.tw",
+            "prevalence": 0.07446808510638298
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.031914893617021274
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.02127659574468085
+        },
+        {
+            "domain": "vidgyor.com",
+            "prevalence": 0.02127659574468085
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.010638297872340425
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.010638297872340425
+        },
+        {
+            "domain": "d2af6nbvwb28pg.cloudfront.net",
+            "prevalence": 0.010638297872340425
+        }
+    ],
+    "types": {
+        "Script": 15,
+        "Fetch": 6,
+        "Preflight": 16,
+        "XHR": 14,
+        "Image": 6
+    },
+    "nameservers": [
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.com",
+        "ns1.amzndns.net",
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
+    ]
+}

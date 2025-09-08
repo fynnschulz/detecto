@@ -1,0 +1,204 @@
+{
+    "domain": "newsbreak.com",
+    "owner": {
+        "name": "Particle Media, Inc.",
+        "displayName": "Particle Media"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000472,
+    "sites": 69,
+    "subdomains": [
+        "static",
+        "id-msp",
+        "business"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "newsbreak\\.com\\/business\\/tracking\\/nbpixel\\.js",
+            "cookies": 0.000294,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Document.cookie getter": 43,
+                "Date.prototype.getTime": 46,
+                "Document.cookie setter": 43,
+                "Screen.prototype.width": 46,
+                "Screen.prototype.height": 46,
+                "window.innerWidth": 46,
+                "window.innerHeight": 46,
+                "Screen.prototype.colorDepth": 46,
+                "Navigator.prototype.userAgent": 46,
+                "Date.prototype.getTimezoneOffset": 46
+            },
+            "sites": 47,
+            "prevalence": 0.000322,
+            "cnames": [],
+            "responseHashes": [
+                "06b4333c53a996789355c814092635666ab034bd14dbf239790a316ec1d22fe6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__nbpix_uid": {
+                    "ttl": 63072004,
+                    "length": 32,
+                    "prevalence": 0.00029415788753591463,
+                    "uniqueness": 1
+                },
+                "__nbpix_utm": {
+                    "ttl": null,
+                    "length": 45,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.vivaia.com",
+                "www.nugenix.com",
+                "lightinthebox.com",
+                "healthinsider.news",
+                "www.hometitlelock.com",
+                "www.reviews.org",
+                "www.boschautoparts.com",
+                "popado.net",
+                "avasreview.com",
+                "hallow.com",
+                "vivaia.com",
+                "www.vpm.org",
+                "geekompc.com",
+                "www.primeprometics.com",
+                "twc.health",
+                "rockchasing.com",
+                "www.acegolfs.com",
+                "humehealth.com",
+                "tryfum.com",
+                "www.netspend.com"
+            ]
+        },
+        {
+            "rule": "newsbreak\\.com\\/sync-nbu",
+            "cookies": 0.000322,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id-msp"
+            ],
+            "apis": {},
+            "sites": 47,
+            "prevalence": 0.000322,
+            "cnames": [],
+            "responseHashes": [
+                "166a4ec3cb90d525f7f744c7616c01b36bebd6dcecd486c8f5be14ccc0a7b3da"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.000027363524421945548,
+                "_li_dcdm_c": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "weather.com",
+                "checkpeople.com",
+                "collarsandco.com",
+                "ketocycle.diet",
+                "www.laragreenjewelry.com",
+                "twopagescurtains.com",
+                "www.reviews.org",
+                "www.nugenix.com",
+                "www.enjerr.com",
+                "geekompc.com",
+                "www.drinkbrez.com",
+                "www.hometitlelock.com",
+                "vivaia.com",
+                "lightinthebox.com",
+                "www.vpm.org",
+                "hallow.com",
+                "popado.net",
+                "iverpure.com",
+                "avasreview.com",
+                "dietvsdisease.com"
+            ]
+        },
+        {
+            "rule": "newsbreak\\.com\\/tracking\\/pixelv2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "business"
+            ],
+            "apis": {},
+            "sites": 46,
+            "prevalence": 0.000315,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.enjerr.com",
+                "audienhearing.com",
+                "rexmd.com",
+                "ketocycle.diet",
+                "dietvsdisease.com",
+                "www.laragreenjewelry.com",
+                "geekompc.com",
+                "healthinsider.news",
+                "twopagescurtains.com",
+                "peak-footwear.com",
+                "avasreview.com",
+                "www.drinkbrez.com",
+                "www.safewise.com",
+                "www.vivaia.com",
+                "twc.health",
+                "www.netspend.com",
+                "www.vevor.com",
+                "checkpeople.com",
+                "www.geekompc.com",
+                "omniluxled.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000465,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6068376068376068
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3076923076923077
+        },
+        {
+            "domain": "hyros.com",
+            "prevalence": 0.03418803418803419
+        },
+        {
+            "domain": "visually-io.com",
+            "prevalence": 0.03418803418803419
+        },
+        {
+            "domain": "runconverge.com",
+            "prevalence": 0.017094017094017096
+        }
+    ],
+    "types": {
+        "Script": 47,
+        "Document": 47,
+        "Ping": 46
+    },
+    "nameservers": [
+        "ns-1031.awsdns-00.org",
+        "ns-148.awsdns-18.com",
+        "ns-1551.awsdns-01.co.uk",
+        "ns-927.awsdns-51.net"
+    ]
+}

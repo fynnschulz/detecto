@@ -1,0 +1,89 @@
+{
+    "domain": "ftd.agency",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "cdn",
+        "z.cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "ftd\\.agency\\/libs\\/e\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.hardwareConcurrency": 3,
+                "WebGLRenderingContext.prototype.getExtension": 3,
+                "WebGLRenderingContext.prototype.getParameter": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Navigator.prototype.plugins": 3,
+                "Navigator.prototype.mimeTypes": 3,
+                "Navigator.prototype.deviceMemory": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "796417b50e62fb7e68c0da9cccd869a33e9100d9e7ee43be2e9234137e91f27a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "djmwanga.com",
+                "ugandanporn.com",
+                "www.febspot.com"
+            ]
+        },
+        {
+            "rule": "ftd\\.agency\\/load",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "z.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "djmwanga.com",
+                "ugandanporn.com",
+                "www.febspot.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 6
+    },
+    "nameservers": [
+        "fay.ns.cloudflare.com",
+        "apollo.ns.cloudflare.com"
+    ]
+}

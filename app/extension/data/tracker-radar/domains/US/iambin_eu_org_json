@@ -1,0 +1,107 @@
+{
+    "domain": "iambin.eu.org",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "webanalysis"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "iambin\\.eu\\.org\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "webanalysis"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.language": 3,
+                "window.localStorage": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "56e70678cbf7e8c157c423bac4d2872f3b384a1784f43b1126ae5e59fd45d144"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aitoolnet.com",
+                "www.aitoolnet.com",
+                "www.theflowerwiki.com"
+            ]
+        },
+        {
+            "rule": "iambin\\.eu\\.org\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webanalysis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "c80c4d6ed7980815bc714964d1fe7ae837044dd710c5d1f476b9c604a7b4e0f6",
+                "5a930ff1ffcb04184e713f964d5188e58e75a6c1205325920de726a921be8657"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aitoolnet.com",
+                "www.aitoolnet.com",
+                "www.theflowerwiki.com"
+            ]
+        },
+        {
+            "rule": "iambin\\.eu\\.org\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webanalysis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aitoolnet.com",
+                "www.aitoolnet.com",
+                "www.theflowerwiki.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 3,
+        "Preflight": 3
+    },
+    "nameservers": [
+        "kip.ns.cloudflare.com",
+        "hope.ns.cloudflare.com"
+    ]
+}

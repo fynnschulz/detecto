@@ -1,0 +1,164 @@
+{
+    "domain": "useinsider.com",
+    "owner": {
+        "name": "Sosyo Plus Bilgi Bilişim Tekn. Dan. Hiz. Tic. A.Ş.",
+        "displayName": "Insider"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000502,
+    "sites": 5,
+    "subdomains": [
+        "chargemap.api",
+        "euronewsfr.api",
+        "thy.api",
+        "locationv2.api",
+        "hit.api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "useinsider\\.com\\/ins\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "chargemap.api",
+                "euronewsfr.api",
+                "thy.api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.vendor": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Date.prototype.getTime": 5,
+                "Navigator.prototype.permissions": 2,
+                "Notification.permission": 2,
+                "window.sessionStorage": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Document.cookie getter": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.webkitTemporaryStorage": 1,
+                "Performance.prototype.memory": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "b7ae78b234aaeb27f99f8f711159f2215a0881727739c99dca9d29a185eeacef",
+                "663eadccce6511b3c2af4990b2def71bbf0c33f76c2e64eaf73d784888551def"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "de.euronews.com",
+                "fr.euronews.com",
+                "www.euronews.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/worker-new\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "chargemap.api",
+                "euronewsfr.api",
+                "thy.api"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.userAgent": 3,
+                "window.name": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "d84976707d45c775e06064fa2fc8af50bc7e95a925e9336130c304769788d0ba"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "de.euronews.com",
+                "fr.euronews.com",
+                "www.euronews.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "locationv2.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "13cb5961abf9f9ebb6834bf2aba48b6e0dadde4690dd9db22f11e182ac0d870d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/hit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hit.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chargemap.com",
+                "de.chargemap.com",
+                "www.turkishairlines.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Document": 5,
+        "XHR": 5
+    },
+    "nameservers": [
+        "eric.ns.cloudflare.com",
+        "eva.ns.cloudflare.com"
+    ]
+}

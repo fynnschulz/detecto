@@ -1,0 +1,154 @@
+{
+    "domain": "crazyrocket.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000752,
+    "sites": 11,
+    "subdomains": [
+        "cdn",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "crazyrocket\\.io\\/widget\\/scripts\\/crazyrocket\\.start-cdn\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "0a55ea8f72702f9a7c633869a62719f75b887cb74862186e76729ee43b42ea45"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acmejoy.com",
+                "edikted.com",
+                "us.princesspolly.com",
+                "wolfbox.com",
+                "www.harveywoodworking.com",
+                "www.karenkane.com",
+                "www.tesery.com"
+            ]
+        },
+        {
+            "rule": "crazyrocket\\.io\\/widget\\/scripts\\/crazyrocket\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "e869e72f985acd8393b5604ddbd3a2a96df25a3c146938ab67f3bbc2f0117ceb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acmejoy.com",
+                "edikted.com",
+                "us.princesspolly.com",
+                "wolfbox.com",
+                "www.harveywoodworking.com",
+                "www.karenkane.com"
+            ]
+        },
+        {
+            "rule": "crazyrocket\\.io\\/api\\/token\\/auth",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "1c3512d4221a1bc4976794d5334ca95ce1260f511cceb5986f87006ac46b95be",
+                "bb555f5048d2fd7320217434b3dd527a65b1b7ab0abb6c546de0261411e6d6d2",
+                "5ef943124cc022ebf0ab3ded613724fdc2ec8c3216f7948df542ddc30663effc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acmejoy.com",
+                "edikted.com",
+                "wolfbox.com",
+                "www.harveywoodworking.com",
+                "www.karenkane.com"
+            ]
+        },
+        {
+            "rule": "crazyrocket\\.io\\/api\\/campaign\\/check",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "dcc7b68b350a7bd38a4dd6bb0ecb575c3cf3bf2148fcd25a5747a5311763b063"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.000006840881105486387,
+                "dy_fs_page": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "acmejoy.com",
+                "edikted.com",
+                "wolfbox.com",
+                "www.harveywoodworking.com",
+                "www.karenkane.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8148148148148148
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.14814814814814814
+        },
+        {
+            "domain": "cookiepro.com",
+            "prevalence": 0.037037037037037035
+        }
+    ],
+    "types": {
+        "Script": 13,
+        "XHR": 10
+    },
+    "nameservers": [
+        "ns-44.awsdns-05.com",
+        "s-1732.awsdns-24.co.uk",
+        "ns-693.awsdns-22.net",
+        "ns-1042.awsdns-02.org"
+    ]
+}

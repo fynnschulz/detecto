@@ -1,0 +1,124 @@
+{
+    "domain": "yandex.net",
+    "owner": {
+        "name": "Yandex LLC",
+        "displayName": "Yandex",
+        "privacyPolicy": "https://yandex.com/legal/privacy/",
+        "url": "http://yandex.com"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.00201,
+    "sites": 20,
+    "subdomains": [
+        "static-mon",
+        "abt.s3"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "yandex\\.net\\/static\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-mon"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "45e4b4c2874858762661a43c5112ac6516abc6c4220beabe6a023923a4e8dc97",
+                "80a53754472e7f943204fed19b215991de711427f5a0c01ee33b6cc8d674a918"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "livejournal.com",
+                "dzen.ru",
+                "www.drive2.ru"
+            ]
+        },
+        {
+            "rule": "yandex\\.net\\/expjs\\/latest\\/exp\\.js",
+            "cookies": 0.000503,
+            "fingerprinting": 1,
+            "subdomains": [
+                "abt.s3"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "window.localStorage": 5,
+                "window.sessionStorage": 5,
+                "Document.cookie setter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "4776acad9d8c3dd1b75354e545027100b932fd8dd104e86cbdd42c16f8794b0e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ymab_param": {
+                    "ttl": 31536000,
+                    "length": 91,
+                    "prevalence": 0.000503220611916264,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lumpics.ru",
+                "www.championat.com",
+                "www.playground.ru",
+                "www.rt.com",
+                "www.sports.ru"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN",
+        "Embedded Content",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000503,
+    "topInitiators": [
+        {
+            "domain": "yastatic.net",
+            "prevalence": 0.5324675324675324
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.4025974025974026
+        },
+        {
+            "domain": "adfox.ru",
+            "prevalence": 0.025974025974025976
+        },
+        {
+            "domain": "livejournal.net",
+            "prevalence": 0.012987012987012988
+        },
+        {
+            "domain": "luxcdn.com",
+            "prevalence": 0.012987012987012988
+        },
+        {
+            "domain": "yandex.ru",
+            "prevalence": 0.012987012987012988
+        }
+    ],
+    "types": {
+        "XHR": 3,
+        "Script": 5
+    },
+    "nameservers": [
+        "ns2.yandex.ru",
+        "ns1.yandex.ru"
+    ]
+}

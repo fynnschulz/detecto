@@ -1,0 +1,80 @@
+{
+    "domain": "keurig.com",
+    "owner": {
+        "name": "Keurig Green Mountain, Inc.",
+        "displayName": "Keurig Green Mountain"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00000684,
+    "sites": 1,
+    "subdomains": [
+        "api-dep"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "keurig\\.com\\/rest\\/v2\\/cab2c\\/cms\\/components",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-dep"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "keurig.ca",
+                "www.keurig.ca"
+            ]
+        },
+        {
+            "rule": "keurig\\.com\\/rest\\/v2\\/cab2c\\/cms\\/components",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-dep"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7aa64cbdb64419b4cead6501180335ba65e972137bd43b03b5567e512c334ecb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "keurig.ca",
+                "www.keurig.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "pdns109.ultradns.net",
+        "pdns109.ultradns.com",
+        "pdns109.ultradns.biz",
+        "pdns109.ultradns.org"
+    ]
+}

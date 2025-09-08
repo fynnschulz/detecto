@@ -1,0 +1,351 @@
+{
+    "domain": "clicktripz.com",
+    "owner": {
+        "name": "Clicktripz",
+        "displayName": "Clicktripz"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000703,
+    "sites": 7,
+    "subdomains": [
+        "static",
+        "compare-static.flightconnections.com",
+        "compare-static.klimatabelle.info",
+        "compare-static.thecrazytourist.com",
+        "www",
+        "compare.flightconnections.com",
+        "compare.klimatabelle.info",
+        "api",
+        "compare.thecrazytourist.com"
+    ],
+    "cnames": [
+        {
+            "original": "compare-static.flightconnections.com",
+            "resolved": "compare-static.flightconnections.com.clicktripz.com"
+        },
+        {
+            "original": "compare-static.klimatabelle.info",
+            "resolved": "compare-static.klimatabelle.info.clicktripz.com"
+        },
+        {
+            "original": "compare-static.thecrazytourist.com",
+            "resolved": "compare-static.thecrazytourist.com.clicktripz.com"
+        },
+        {
+            "original": "compare.flightconnections.com",
+            "resolved": "compare.flightconnections.com.clicktripz.com"
+        },
+        {
+            "original": "compare.klimatabelle.info",
+            "resolved": "compare.klimatabelle.info.clicktripz.com"
+        },
+        {
+            "original": "compare.thecrazytourist.com",
+            "resolved": "compare.thecrazytourist.com.clicktripz.com"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "clicktripz\\.com\\/tag\\.js",
+            "cookies": 0.000603,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static",
+                "compare-static.flightconnections.com",
+                "compare-static.klimatabelle.info",
+                "compare-static.thecrazytourist.com"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 3,
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [
+                {
+                    "original": "compare-static.flightconnections.com",
+                    "resolved": "compare-static.flightconnections.com.clicktripz.com"
+                },
+                {
+                    "original": "compare-static.klimatabelle.info",
+                    "resolved": "compare-static.klimatabelle.info.clicktripz.com"
+                },
+                {
+                    "original": "compare-static.thecrazytourist.com",
+                    "resolved": "compare-static.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "cbcf7f92e70f8e5870f23a2ae21e4d6157bdf0e497eac65a7bcb60ee72a06724",
+                "42bc5b97f5e2dccab1c2ddd743cfc726260212726677e129a655a15dad588427"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ctpuid": {
+                    "ttl": 7779608,
+                    "length": 36,
+                    "prevalence": 0.0003014469453376206,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "generationvoyage.fr",
+                "www.flightconnections.com",
+                "www.klimatabelle.info",
+                "www.mapquest.com",
+                "www.thecrazytourist.com",
+                "www.travelgay.com",
+                "www.trivago.ch"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/api\\/integrations\\/v1\\/constrain",
+            "cookies": 0.000603,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "6de053feb004625b419f8ef9bc4e849ec356c8994a50b1a95cd94dca401e6a12",
+                "69223f3149c43bbc10a757c1554e091b084119b0230dd2df9b6d7c4eed3b8009",
+                "572a979e7aa5ab80d907c86deea568086f01b42963e436711c694344855e20b8",
+                "62bb8d6ab504ef58a9ee9245c6f670d97f800cd8e74fdb64b1f716a1ba910e68",
+                "50c4cdda1f842d74eb15ef31b79c045ca28215607e8e4a532037dc80e4041910"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00010048231511254019
+            },
+            "exampleSites": [
+                "generationvoyage.fr",
+                "www.flightconnections.com",
+                "www.klimatabelle.info",
+                "www.mapquest.com",
+                "www.thecrazytourist.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/b9s\\/v0\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "compare.flightconnections.com",
+                "compare.klimatabelle.info",
+                "api",
+                "compare.thecrazytourist.com"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [
+                {
+                    "original": "compare.flightconnections.com",
+                    "resolved": "compare.flightconnections.com.clicktripz.com"
+                },
+                {
+                    "original": "compare.klimatabelle.info",
+                    "resolved": "compare.klimatabelle.info.clicktripz.com"
+                },
+                {
+                    "original": "compare.thecrazytourist.com",
+                    "resolved": "compare.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flightconnections.com",
+                "www.flightconnections.com",
+                "www.klimatabelle.info",
+                "www.mapquest.com",
+                "www.thecrazytourist.com",
+                "www.travelgay.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/x\\/pas",
+            "cookies": 0.000502,
+            "fingerprinting": 0,
+            "subdomains": [
+                "compare.flightconnections.com",
+                "compare.klimatabelle.info",
+                "www",
+                "compare.thecrazytourist.com"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [
+                {
+                    "original": "compare.flightconnections.com",
+                    "resolved": "compare.flightconnections.com.clicktripz.com"
+                },
+                {
+                    "original": "compare.klimatabelle.info",
+                    "resolved": "compare.klimatabelle.info.clicktripz.com"
+                },
+                {
+                    "original": "compare.thecrazytourist.com",
+                    "resolved": "compare.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "c38d0b7d62b45827697f63bea21f769b8aaa6d842066abc2d2afac7e620ebeae",
+                "5c89df6a40bb5c51ef2e66a6ac99161735a8e4746d35b48359248b84802ca74d",
+                "5739885ada21dd1babf3776283f5ca6c4d545251440988b4b9a1952077d09939",
+                "c0e61ef01d7b2e801cf4c0829322eb9d23947f316b14b2c64f99b548103d735a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ctpuid": 0.00010048231511254019
+            },
+            "exampleSites": [
+                "flightconnections.com",
+                "www.flightconnections.com",
+                "www.klimatabelle.info",
+                "www.mapquest.com",
+                "www.thecrazytourist.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/p7c\\/v1\\/pixel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "compare.flightconnections.com",
+                "compare.klimatabelle.info",
+                "api",
+                "compare.thecrazytourist.com"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [
+                {
+                    "original": "compare.flightconnections.com",
+                    "resolved": "compare.flightconnections.com.clicktripz.com"
+                },
+                {
+                    "original": "compare.klimatabelle.info",
+                    "resolved": "compare.klimatabelle.info.clicktripz.com"
+                },
+                {
+                    "original": "compare.thecrazytourist.com",
+                    "resolved": "compare.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "8e5db8cb545e7e3a97b1a02368802806a7abfb534594d16dcc8351c326444c73"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ctpuid": 0.00010048231511254019
+            },
+            "exampleSites": [
+                "flightconnections.com",
+                "www.flightconnections.com",
+                "www.klimatabelle.info",
+                "www.mapquest.com",
+                "www.thecrazytourist.com"
+            ]
+        },
+        {
+            "rule": "clicktripz\\.com\\/asset\\/__adslot-bundle\\/b656472c045b7e29083c62c9539e1a82db4c56ad\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "compare-static.klimatabelle.info",
+                "compare-static.thecrazytourist.com",
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.appVersion": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Navigator.prototype.plugins": 1,
+                "Document.cookie getter": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Navigator.prototype.languages": 1,
+                "window.localStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "compare-static.klimatabelle.info",
+                    "resolved": "compare-static.klimatabelle.info.clicktripz.com"
+                },
+                {
+                    "original": "compare-static.thecrazytourist.com",
+                    "resolved": "compare-static.thecrazytourist.com.clicktripz.com"
+                }
+            ],
+            "responseHashes": [
+                "a55730228a92f75dbd0c3397fdaa8e3b6dd4e52cc5c0c48dfad1a27b935b2f63"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klimatabelle.info",
+                "www.thecrazytourist.com",
+                "www.travelgay.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000603,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6363636363636364
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2727272727272727
+        },
+        {
+            "domain": "ay.delivery",
+            "prevalence": 0.09090909090909091
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "Fetch": 11,
+        "Ping": 6,
+        "Image": 5
+    },
+    "nameservers": [
+        "ns-1486.awsdns-57.org",
+        "ns-1631.awsdns-11.co.uk",
+        "ns-300.awsdns-37.com",
+        "ns-940.awsdns-53.net"
+    ]
+}

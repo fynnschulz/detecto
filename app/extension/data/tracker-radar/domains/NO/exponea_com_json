@@ -1,0 +1,183 @@
+{
+    "domain": "exponea.com",
+    "owner": {
+        "name": "Bloomreach, Inc.",
+        "displayName": "Bloomreach"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "api.eu1",
+        "api.uk",
+        "api.us1"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "exponea\\.com\\/js\\/exponea\\.min\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api.eu1",
+                "api.uk",
+                "api.us1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.vendor": 5,
+                "window.localStorage": 5,
+                "window.sessionStorage": 5,
+                "Date.prototype.getTime": 3,
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.maxTouchPoints": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "b63da26b63b8f21eac6893a5d11a705fd4feecfc6a1bea18ef7f3c358bd4dbad",
+                "874bc2f95e1f6a8fe5ba5b2e291eb2a1f57b36bf5651b44119c9ce744ba0ef24",
+                "29e7ba853a7b431baeeb7165fed40ea204e22cbd49e785fc3ea6a25fefb3ab56"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__exponea_etc__": {
+                    "ttl": 94608004,
+                    "length": 36,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "__exponea_time2__": {
+                    "ttl": 3604,
+                    "length": 20,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fairphone.com",
+                "www.atptour.com",
+                "www.careofcarl.no",
+                "www.fairphone.com",
+                "www.sheetmusicplus.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/cfd05462-a9e3-11ec-a21a-5e1648be9a10\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.eu1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "81d99250b0169394ca3d1418dd875943751ac76415237b2641ac872116c664e9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "careofcarl.no",
+                "www.careofcarl.no"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/bulk",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.eu1",
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "bf531fcc3f9c81dd7ab24c77a1708d992e9d7a92f86a22cc5ba8bac5b247637f",
+                "b80b94b71a71ddf964e81ba971a0c725e8493f6bdfc963430e50d6408879d7d4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "careofcarl.no",
+                "www.careofcarl.no",
+                "www.sheetmusicplus.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/managed-tags\\/show",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.eu1",
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5c858b1c80e2a37e46abc26525a908fe14db93ebdce1dbdbdd2828cd180bbeec"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "careofcarl.no",
+                "www.sheetmusicplus.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/5ecc4afa-dabd-11eb-9bcf-a2a41a4e8acb\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0bb3f647fdc772cc5b0c8c0eb9eb3463751e270c09ab409bed832c7109481c36"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sheetmusicplus.com",
+                "www.sheetmusicplus.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Fetch": 9
+    },
+    "nameservers": [
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
+    ]
+}

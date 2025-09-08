@@ -1,0 +1,198 @@
+{
+    "domain": "imedia.cz",
+    "owner": {
+        "name": "Seznam.cz, a.s.",
+        "displayName": "Seznam.cz"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000103,
+    "sites": 15,
+    "subdomains": [
+        "23.c-ng",
+        "62.c-ko",
+        "2.c-ko",
+        "76.c-ng",
+        "33.c-ng",
+        "53.c-ng",
+        "c",
+        "66.c-oa",
+        "48.c-oa",
+        "95.c-ko",
+        "1.c-ko",
+        "37.c-ng",
+        "77.c-ko",
+        "5.c-ng",
+        "ssp"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "imedia\\.cz\\/sklik\\/imp",
+            "cookies": 0.000041,
+            "fingerprinting": 0,
+            "subdomains": [
+                "23.c-ng",
+                "62.c-ko",
+                "2.c-ko",
+                "76.c-ng",
+                "33.c-ng",
+                "53.c-ng"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "3e131f0f0f85f28f1db5f64370582203ba9cbbe164ac792096949cc6092c2972",
+                "0122f12541517edeb3fb7b9ca431def23ee59dc81264b18685ad3b6f9619babd",
+                "e2165aa0f665a06c35e22699ca197072195c774c01fc65e888740ea2beaccbfb",
+                "84936c8805a6a2e754c3075338c1af531e6938c18d0669c5793c10231ede8a0b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idnes.cz",
+                "www.kupi.cz",
+                "www.meteocentrum.cz",
+                "www.mesec.cz",
+                "www.parlamentnilisty.cz",
+                "zdravi.euro.cz"
+            ]
+        },
+        {
+            "rule": "imedia\\.cz\\/js\\/retargeting\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "c"
+            ],
+            "apis": {
+                "window.name": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aukro.cz",
+                "www.cd.cz",
+                "www.emimino.cz",
+                "www.menicka.cz",
+                "www.mesec.cz"
+            ]
+        },
+        {
+            "rule": "imedia\\.cz\\/sklik\\/imp",
+            "cookies": 0.0000479,
+            "fingerprinting": 0,
+            "subdomains": [
+                "66.c-oa",
+                "48.c-oa",
+                "95.c-ko",
+                "1.c-ko",
+                "37.c-ng",
+                "77.c-ko",
+                "5.c-ng"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "2f401732ee6f6ca84880159d014a8d5a9954d9446f30fb79aded111ef7af2719",
+                "28898c0d4c36dc580855780447c9d2323aaf32c7d350c1589f7a1cd5b4ad1594",
+                "f1837c4d7da7948abf9e6d73769c677364a496432fddd78dcfab7cc7036f0435",
+                "20cd25766affaff992b0b6a5d9ff0d4347a0e48218070998256af73b93ee3aa9",
+                "7966cfe52cd6fe6b070e3a3d3f76fbbae118278f2d26d00cc7f09aa6ef927222"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kurzy.cz",
+                "rejstrik-firem.kurzy.cz",
+                "www.kupi.cz",
+                "www.kurzy.cz",
+                "www.penize.cz",
+                "www.vareni.cz",
+                "zpravy.aktualne.cz"
+            ]
+        },
+        {
+            "rule": "imedia\\.cz\\/static\\/js\\/ssp\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a5103c85d41538236b99e7dded45617eb3dc21622942999368ad9e02370ab0db"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vareni.cz",
+                "zpravy.aktualne.cz"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000752,
+    "topInitiators": [
+        {
+            "domain": "seznam.cz",
+            "prevalence": 0.5185185185185185
+        },
+        {
+            "domain": "r2b2.cz",
+            "prevalence": 0.18518518518518517
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "i0.cz",
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "trackad.cz",
+            "prevalence": 0.037037037037037035
+        }
+    ],
+    "types": {
+        "XHR": 6,
+        "Script": 7,
+        "Document": 7
+    },
+    "nameservers": [
+        "ams.seznam.cz",
+        "ans.seznam.cz"
+    ]
+}

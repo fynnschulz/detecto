@@ -1,0 +1,430 @@
+{
+    "domain": "audioeye.com",
+    "owner": {
+        "name": "AudioEye, Inc.",
+        "displayName": "AudioEye"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "wsmcdn",
+        "wsv3cdn",
+        "report-prod"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "audioeye\\.com\\/aem\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wsmcdn"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a76a30b6e7616b79899b1b5b69b0c43733957e3669c7920c821d8cfbdbcdb8c8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yamaha.com",
+                "www.intimissimi.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/bootstrap\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e710b3a8d2b9ed34998e06cb6ce9fc87ef78a6bfccbe6f28c367e153b366e1e1",
+                "435aef944c02490320283b9e376e736a7400b04eb30a3861d7e2c6fbe6971be7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/v2\\/scripts\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "07dc2936c473891cbab2da1b25f9b8c9719398923389274b090af5fbac8231fc",
+                "8cbe17db0ed12e35220b6112598b9a92390bc02268234532b9cadcc638c04f92"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/v2\\/2025-08-15\\/startup\\.bundle\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "2569984b6331892c104d850d03660359c5d090cacd6b93fbe89c4664fb57ad35"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_aeaid": {
+                    "ttl": 31536013,
+                    "length": 36,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 1
+                },
+                "aelastsite": {
+                    "ttl": 34560014,
+                    "length": 69,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 1
+                },
+                "aelreadersettings": {
+                    "ttl": 34560014,
+                    "length": 315,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 0.3333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/v2\\/2025-08-15\\/cookieStorage\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "ac3cfaaa8679659e604674c5ac9285eda42a6b82cd41dca9a4289f03b78766fa"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/v1\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "report-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/v2\\/2025-08-15\\/launcher\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "0ca7b24eed0f4a2b07471901a20b6e8825c6aa4242574a647563a8cdec38b08c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/v2\\/2025-08-15\\/compliance\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "78b8e92a560933a581b06e591e2a52e6f74758a88f1bbd3d7252b37ab8bdcd47"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/v2\\/2025-08-15\\/compliance\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "ff50719cc02c699aff122a8e64ede250202d6da5057a416bcb0d10074ed256b4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/v2\\/2025-08-15\\/cookieStorage\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "35b4231f3db71b25e5a54bd931746129db82eb13b9bb1876750f969ed0930479"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/v2\\/2025-08-15\\/fullCSS\\.bundle\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "d1f2da39be64ca47b60ecdfa6b4f220d5b484795f111619947c1fcc42ae6c066"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/m\\/audioeye-scanner-rte\\/v10\\.0\\.32\\/audioeye-scanner-rte\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "143e0b4853e92e6d2dde3a1a5c7c5de8ab8bf65ce948b45d9428fa1ede92189b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/m\\/audioeye-scanner-esm\\/v10\\.0\\.32\\/audioeye-scanner-esm\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "044aabde45a4f807f132ceca1ce8f5fe91267d22a3afbfdbc9c6710b656a0ad6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intimissimi.com",
+                "www.kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/v2\\/2025-08-15\\/site-menu\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8c5fa0cb0decf334385070ed4a34304aa42e6bc5823b8a1d738db1ede9825bfd"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        },
+        {
+            "rule": "audioeye\\.com\\/static-scripts\\/v2\\/2025-08-15\\/site-menu\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wsv3cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4a1f237761616a01e59b4504a46b911e159bc05dc05e49fbd50867261a92b791"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kbb.com",
+                "www.muscleandfitness.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4666666666666667
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.4666666666666667
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Script": 29,
+        "Document": 3,
+        "Ping": 3,
+        "Stylesheet": 8
+    },
+    "nameservers": [
+        "ns-221.awsdns-27.com",
+        "ns-885.awsdns-46.net",
+        "ns-1086.awsdns-07.org",
+        "ns-1995.awsdns-57.co.uk"
+    ]
+}

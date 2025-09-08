@@ -1,0 +1,104 @@
+{
+    "domain": "spamkill.dev",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "protect"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "spamkill\\.dev\\/v1\\/jscript\\.php",
+            "cookies": 0.0000205,
+            "fingerprinting": 3,
+            "subdomains": [
+                "protect"
+            ],
+            "apis": {
+                "Navigator.prototype.mediaDevices": 3,
+                "MediaDevices.prototype.enumerateDevices": 3,
+                "Sensor.prototype.start": 3,
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "fdbdbb0e58cde6e98311c712c56d425bfcdb7a0fd08e75900fd18b002168c299"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greensmoothiegirl.com",
+                "www.muscleandfitness.com",
+                "www.patriotacademy.com"
+            ]
+        },
+        {
+            "rule": "spamkill\\.dev\\/v1\\/emailverify\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "protect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fc1fd7c4a2a658f2dee624c613bc8a028a194820db8f9183265ef3b3fdb0d0de"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drlamcoaching.com",
+                "www.drlamcoaching.com"
+            ]
+        },
+        {
+            "rule": "spamkill\\.dev\\/v1\\/js\\/sodium-plus\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "protect"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "muscleandfitness.com",
+                "www.muscleandfitness.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000479,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 7
+    },
+    "nameservers": [
+        "duke.ns.cloudflare.com",
+        "lola.ns.cloudflare.com"
+    ]
+}

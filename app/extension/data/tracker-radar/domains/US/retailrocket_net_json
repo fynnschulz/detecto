@@ -1,0 +1,86 @@
+{
+    "domain": "retailrocket.net",
+    "owner": {
+        "name": "Retail Rocket",
+        "displayName": "Retail Rocket"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "retailrocket\\.net\\/content\\/javascript\\/tracking\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "99ac01e9dd68ce7c450b0a5c5f5d6d720df516f7f176ecf39645fb69b48f3e43"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "rr-testCookie": {
+                    "ttl": 15,
+                    "length": 9,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "rrpvid": {
+                    "ttl": 31536006,
+                    "length": 15,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "rcuid": {
+                    "ttl": 31536006,
+                    "length": 24,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arenal.com",
+                "www.welkoop.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "retailrocket.ru",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Script": 2
+    },
+    "nameservers": [
+        "ullis.ns.cloudflare.com",
+        "alaric.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,515 @@
+{
+    "domain": "hubspot.com",
+    "owner": {
+        "name": "HubSpot, Inc.",
+        "displayName": "HubSpot",
+        "privacyPolicy": "https://legal.hubspot.com/privacy-policy",
+        "url": "http://hubspot.com"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.00855,
+    "sites": 85,
+    "subdomains": [
+        "app-eu1",
+        "app",
+        "js-eu1",
+        "js",
+        "cta-eu1",
+        "cta-service-cms2",
+        "exceptions-eu1",
+        "exceptions",
+        "track-eu1",
+        "track",
+        "track-na2",
+        "api-eu1",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "hubspot\\.com\\/content-tools-menu\\/api\\/v1\\/tools-menu\\/has-permission-json",
+            "cookies": 0.000805,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app-eu1",
+                "app"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000906,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24sevenoffice.com",
+                "beritnordstrand.no",
+                "event.checkin.no",
+                "vaadin.com",
+                "www.advania.no",
+                "www.mews.com",
+                "www.simployer.com",
+                "www.sticos.no",
+                "www.tamigo.com"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/web-interactives-embed\\.js",
+            "cookies": 0.00493,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js-eu1",
+                "js"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 49,
+                "Document.cookie getter": 44,
+                "Date.prototype.getTime": 49,
+                "window.innerHeight": 1
+            },
+            "sites": 49,
+            "prevalence": 0.00493,
+            "cnames": [],
+            "responseHashes": [
+                "c2962690e550cbc0aa774180d632028b5603ff62771e2efa2f1fd0e27be1ec59"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seekingalpha.com",
+                "techcrunch.com",
+                "odinfond.no",
+                "bigthink.com",
+                "www.eliteprospects.com",
+                "www.floyen.no",
+                "www.searchenginejournal.com",
+                "www.mazemap.com",
+                "www.eventbrite.com",
+                "www.anydesk.com",
+                "www.buypass.com",
+                "www.simployer.com",
+                "www.basketball-reference.com",
+                "riverside.com",
+                "docs.pytorch.org",
+                "www.glasspaper.no",
+                "www.altinget.no",
+                "www.sparkfun.com",
+                "doc.traefik.io",
+                "www.ionos.com"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/web-interactives\\/public\\/v1\\/embed\\/combinedConfigs",
+            "cookies": 0.00483,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cta-eu1",
+                "cta-service-cms2"
+            ],
+            "apis": {},
+            "sites": 48,
+            "prevalence": 0.00483,
+            "cnames": [],
+            "responseHashes": [
+                "904a6deee448a7e3ac581fb536bcab06c265bd762d039c941a32dc7b99c5c9b8",
+                "8f9628bb43d1418f69c3a40e45446e58714b9a3c799b9f3ed91a00963af89ce5",
+                "a28deaa9e5c9d077fdb01e3f307507642a2a02df52f191cae2592fea1d23f6e9",
+                "85cfbf2d792ac32dceb461b04717f82464d5866413fa4f564ed8e1c9e6137dc4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__hstc": 0.000503220611916264,
+                "hubspotutk": 0.000503220611916264,
+                "__hssc": 0.000503220611916264,
+                "_li_dcdm_c": 0.00010064412238325282,
+                "referrer66_009": 0.00010064412238325282,
+                "IR_gbd": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "seekingalpha.com",
+                "techcrunch.com",
+                "www.basketball-reference.com",
+                "bate.no",
+                "beritnordstrand.no",
+                "www.altinget.no",
+                "odinfond.no",
+                "doc.traefik.io",
+                "mxtoolbox.com",
+                "www.dagogtid.no",
+                "www.eventbrite.com",
+                "www.searchenginejournal.com",
+                "www.semanticscholar.org",
+                "www.eliteprospects.com",
+                "www.buypass.com",
+                "ipinfo.io",
+                "www.tamigo.com",
+                "devzone.nordicsemi.com",
+                "www.advania.no",
+                "www.netlify.com"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/frontend\\/observability\\/page-tracking\\/store\\/",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [
+                "exceptions-eu1",
+                "exceptions"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24sevenoffice.com",
+                "allvit.no",
+                "www.epubor.com",
+                "www.mazemap.com"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/api\\/cartographer\\/v1\\/rhumb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app-eu1",
+                "app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24sevenoffice.com",
+                "allvit.no",
+                "www.epubor.com",
+                "www.mazemap.com"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/api\\/cartographer\\/v1\\/ipl",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24sevenoffice.com",
+                "www.epubor.com",
+                "www.mazemap.com"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/__ptq\\.gif",
+            "cookies": 0.00705,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track-eu1",
+                "track",
+                "track-na2"
+            ],
+            "apis": {},
+            "sites": 77,
+            "prevalence": 0.00775,
+            "cnames": [],
+            "responseHashes": [
+                "0a69df186e87eefe39139e5cb6d26c2883c6561771cb4d1cb1abcf661a5b2840"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__hstc": 0.0053341384863124,
+                "hubspotutk": 0.006340579710144928,
+                "__hssc": 0.005233494363929146,
+                "_li_dcdm_c": 0.00010064412238325282,
+                "referrer66_009": 0.00010064412238325282,
+                "IR_gbd": 0.00020128824476650564,
+                "tisestart": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "techcrunch.com",
+                "www.epubor.com",
+                "etcher.balena.io",
+                "oslonyehoyskole.no",
+                "kampanje.com",
+                "bigthink.com",
+                "www.mazemap.com",
+                "www.mews.com",
+                "www.topazlabs.com",
+                "gptzero.me",
+                "www.linux.com",
+                "safedrive.no",
+                "www.glasspaper.no",
+                "www.eliteprospects.com",
+                "www.ionos.com",
+                "www.enova.no",
+                "devzone.nordicsemi.com",
+                "element.io",
+                "www.havilavoyages.com",
+                "www.netlify.com"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/livechat-public\\/v1\\/message\\/public",
+            "cookies": 0.00282,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-eu1",
+                "api"
+            ],
+            "apis": {},
+            "sites": 28,
+            "prevalence": 0.00282,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "messagesUtk": 0.00020128824476650564,
+                "__hstc": 0.00010064412238325282,
+                "hubspotutk": 0.00010064412238325282,
+                "__hssc": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "seekingalpha.com",
+                "www.dagogtid.no",
+                "www.mazemap.com",
+                "enova.no",
+                "www.eventbrite.com",
+                "devzone.nordicsemi.com",
+                "skole.aschehoug.no",
+                "docs.pytorch.org",
+                "www.jamesedition.com",
+                "www.supermicro.com",
+                "www.havilavoyages.com",
+                "pytorch.org",
+                "hybel.no",
+                "www.animalia.no",
+                "docs.cypress.io",
+                "forums.truenas.com",
+                "www.enova.no",
+                "www.hvakosterstrommen.no",
+                "www.linux.com",
+                "mxtoolbox.com"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/livechat-public\\/v1\\/message\\/public",
+            "cookies": 0.00282,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-eu1",
+                "api"
+            ],
+            "apis": {},
+            "sites": 28,
+            "prevalence": 0.00282,
+            "cnames": [],
+            "responseHashes": [
+                "e8b1c254f47d864c287ecd07091847a8dd50a1b36aea7e283f97dfb8778cad29",
+                "f8b8dc260b63648369b6a3838489f5b76e5ce55d7d68d757c76b18ad8359e4c1",
+                "f588babf89f6559cb9fd2376da2872d7e6ec42c7fb90995b84d5748d760fd17a",
+                "41c40e38ee3eb5e0f078de6d39839820bef73d72ab4cb62528e104ac424bade1",
+                "0a6cf097a86887d87137314a3b784d32b931e60d11871675b35ced62082903ef",
+                "a499dc1040073dba8e94902c1742ef3049fe3a2f7094ee6c6da476254a1f84c2",
+                "9fcb39f42ea433b7d4cadacc941c6026af869344eb9ee026d9077e49c8109941",
+                "316ef6fcd0c588c0625253deed54c7dba183fc360e003a2cda56a2561fd95a8c",
+                "ea224fcf69ec8d0b05cbc82570addddb847108ca78e32f15e69b9cdcd0e3dbc9",
+                "3f613d146a9355881500c9ee588e0fdd054421df3e85f6bc4270530a3837cb3e",
+                "fa0098c2fed8d2db40e2b6e92b15b9be217625a6e2859a5a41dfa85125d17f08",
+                "1fb133e104c685116e84df708fa35f7c6b952c4ab3615852f93652e2dbaceafc",
+                "ef3b659ce68c394257dd57bae604508bbdb97ae982eef448da221fc4a49079e6",
+                "a0a7dcb29110776cbbaeeb08c5fc96dbb4ac348d6ceca64b2c673ca54892617a",
+                "4492b9d4cefd828cda2dc9a80bb43177f8938cb2685697348acdbe89dac79774",
+                "b88baaed29e440b8252eef59ee46ab1ab1a2b20a9ca85da75b7149e9cd5700ea",
+                "c753dd47aa7ff2633f259ccbab9dd171ca675cbe0cd4dde364d9b2a770ab5520",
+                "38ca591e37aab472649f3f26c179afc9539e43542348ac6cf9fa44627373726d",
+                "aa6990f1447b9df56e88a5251587a3948ab3a77209cb1a4ef9925fa43541d7f1",
+                "14124ada22a3659a44cdfca87a31de527c8d55e7ca619f3912d669ca15f07cc7",
+                "ff4c80576598a700c68a3d69ff9b021a7bd44dc327aea7f78da7b62c2ac63ac6",
+                "8613f862620ff976fc2ad746d54615aad7f9a477a762d16d3a5748de59519d15",
+                "0686fc134eafc449b85ec77e8f86bfd127d979835fcc09ca7ce56d4e9272ef6a",
+                "8acd88023c68aecdb4b9d89f3ebc78bd9fbecadb6b7e356a416755195b6dd14d",
+                "02331b6a4d22b68aeb49c76f106ab6337d66800068582f1e625debf261f774e0",
+                "e65dfea9a478bda4b7c7949c1d6bb1c96fbf7d9d1a621d4273354934b566eff6",
+                "68a467dcf92c5adfe16da230c72562f1fb581aefe9b8ea2b9024f4513db6e5d4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "messagesUtk": 0.00020128824476650564,
+                "__hstc": 0.00010064412238325282,
+                "hubspotutk": 0.00010064412238325282,
+                "__hssc": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "seekingalpha.com",
+                "www.truenas.com",
+                "vikingfootwear.com",
+                "www.sparkfun.com",
+                "www.dagogtid.no",
+                "mxtoolbox.com",
+                "www.havilavoyages.com",
+                "pytorch.org",
+                "allvit.no",
+                "www.jamesedition.com",
+                "www.linux.com",
+                "enova.no",
+                "www.eventbrite.com",
+                "devzone.nordicsemi.com",
+                "www.animalia.no",
+                "www.hvakosterstrommen.no",
+                "www.supermicro.com",
+                "www.epubor.com",
+                "hybel.no",
+                "bate.no"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/__ptbe\\.gif",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "0a69df186e87eefe39139e5cb6d26c2883c6561771cb4d1cb1abcf661a5b2840"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__hstc": 0.00030193236714975844,
+                "hubspotutk": 0.00030193236714975844,
+                "__hssc": 0.00030193236714975844
+            },
+            "exampleSites": [
+                "graphite.dev",
+                "www.netlify.com",
+                "www.searchenginejournal.com"
+            ]
+        },
+        {
+            "rule": "hubspot\\.com\\/web-interactives-container\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js-eu1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b0e25078771109523c39a605dd5895dfc03e4bb7a154a651020b0c20d00242ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sticos.no",
+                "www.sticos.no"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Third-Party Analytics Marketing",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.00855,
+    "topInitiators": [
+        {
+            "domain": "hs-analytics.net",
+            "prevalence": 0.4936708860759494
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.15611814345991562
+        },
+        {
+            "domain": "hs-scripts.com",
+            "prevalence": 0.1518987341772152
+        },
+        {
+            "domain": "usemessages.com",
+            "prevalence": 0.10548523206751055
+        },
+        {
+            "domain": "hsappstatic.net",
+            "prevalence": 0.046413502109704644
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.012658227848101266
+        },
+        {
+            "domain": "otovo.com",
+            "prevalence": 0.012658227848101266
+        },
+        {
+            "domain": "hubspotfeedback.com",
+            "prevalence": 0.004219409282700422
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.004219409282700422
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.004219409282700422
+        }
+    ],
+    "types": {
+        "XHR": 41,
+        "Script": 51,
+        "Fetch": 48,
+        "Ping": 7,
+        "Image": 80,
+        "Preflight": 28
+    },
+    "nameservers": [
+        "jerry.ns.cloudflare.com",
+        "yolanda.ns.cloudflare.com"
+    ]
+}

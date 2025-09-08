@@ -1,0 +1,101 @@
+{
+    "domain": "glean.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00000684,
+    "sites": 1,
+    "subdomains": [
+        "sony-support-external-be",
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "glean\\.com\\/api\\/v1\\/createanonymoustoken",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sony-support-external-be"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3a9e2535f1987ee48819a2d1ee1f96fa999f9ad7354cafb49bc27c7d60c28f84"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.com",
+                "www.sony.com"
+            ]
+        },
+        {
+            "rule": "glean\\.com\\/api\\/v1\\/createanonymoustoken",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sony-support-external-be"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.com",
+                "www.sony.com"
+            ]
+        },
+        {
+            "rule": "glean\\.com\\/static\\/i18n-en-messages-po-7fe913edb4508bde\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a1ee3457c3e30882d3d69a722dd6df4b09c9a7c14a8264f6e341f836dec403d9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.com",
+                "www.sony.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Preflight": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-cloud-b4.googledomains.com",
+        "ns-cloud-b2.googledomains.com",
+        "ns-cloud-b1.googledomains.com",
+        "ns-cloud-b3.googledomains.com"
+    ]
+}

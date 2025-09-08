@@ -1,0 +1,496 @@
+{
+    "domain": "maestra.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000157,
+    "sites": 23,
+    "subdomains": [
+        "api",
+        "web-static",
+        "quizzes",
+        "personalization-speedtest"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "maestra\\.io\\/scripts\\/v1\\/tracker\\.js",
+            "cookies": 0.0000752,
+            "fingerprinting": 2,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "console.memory": 12,
+                "Navigator.prototype.userAgent": 12,
+                "Navigator.prototype.cookieEnabled": 12,
+                "Document.cookie setter": 11,
+                "Document.cookie getter": 11,
+                "window.localStorage": 11,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 11,
+                "Screen.prototype.width": 12,
+                "Screen.prototype.height": 12,
+                "Navigator.prototype.maxTouchPoints": 11,
+                "window.sessionStorage": 10,
+                "window.innerHeight": 8,
+                "window.innerWidth": 8,
+                "window.indexedDB": 8,
+                "Date.prototype.getTime": 8,
+                "Date.prototype.getTimezoneOffset": 8,
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "87a793cf1c07729ae86dfb6f0b592a5c9e9f1bfd749607a42f256cdab242289a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "maestraDeviceUUID": {
+                    "ttl": 394845770,
+                    "length": 36,
+                    "prevalence": 0.00007524969216035026,
+                    "uniqueness": 1
+                },
+                "directCrm-session": {
+                    "ttl": 63042084,
+                    "length": 67,
+                    "prevalence": 0.00007524969216035026,
+                    "uniqueness": 1
+                },
+                "popmechanic_sbjs_migrations": {
+                    "ttl": 15552008,
+                    "length": 81,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 0.125
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blossomflowerdelivery.com",
+                "coolibar.com",
+                "engelcoolers.com",
+                "enlightenedequipment.com",
+                "furniturefair.net",
+                "mitoredlight.com",
+                "www.bazaraki.com",
+                "www.coolibar.com",
+                "www.playpickleball.com",
+                "www.selkirk.com",
+                "www.sena.com",
+                "www.urbanarmorgear.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/v1\\.1\\/customer\\/track-visit",
+            "cookies": 0.000103,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.000103,
+            "cnames": [],
+            "responseHashes": [
+                "122523a8d45f877f2d9b3a0cd009c49fc1fa0eee2418555dcb11c07cc8a6d567",
+                "35d129c2426dd9f06ecb4840e0a2049a052ef91917c988a8e9ea17ffe9d04680",
+                "4ff2aca84d862878c6b4fc9208965a281bfe000b3154c7135dae9e93cf00edf5",
+                "0778e090f626fe316790e002b5f53b17111426e8a94e8f2d634de4c93c5f72e7",
+                "b0d8869246eaa1bb99fe423f32417f9b4110b463670e05d5c8f8b8de33f36c61",
+                "a2adcbfc3cac6ca93bb4263731088b15dea4a1af4072f383d366028b91c35299",
+                "1be5720ce2b4117da392f447bd5c6cc492038d3e11dccc392c698fefce6692cf",
+                "5216723506772af8a8690a4a194e004d19fcac31c956f99be029ce4c528812d2",
+                "b0ee06edefd6bf8dfa2714be6a66f44fb89f2ee4cbec5e1c79ae5f6a36628434",
+                "a8ae70a865b6f48e5280b5797de1058f770eacae501449dc54cf8ac35df8ce4f",
+                "3b09c72015c3788d52bc32631d3741c5a4cf8cc2b5ed2141ed1858e5955a19b7",
+                "86a2239efe97feaa005e38b67bd6095e250d1eee80b796737faeb7224da32ed5",
+                "8288cdd9b4719ad563c72a1b689cde58ca5fbd123f2bc89546919cf7410311d0",
+                "804baf81cd4149aaef59133e5d6dab6a337e90ba653f69fd801999155348adcf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blossomflowerdelivery.com",
+                "coolibar.com",
+                "engelcoolers.com",
+                "enlightenedequipment.com",
+                "furniturefair.net",
+                "mitoredlight.com",
+                "movavi.com",
+                "overgear.com",
+                "www.bazaraki.com",
+                "www.coolibar.com",
+                "www.movavi.com",
+                "www.playpickleball.com",
+                "www.selkirk.com",
+                "www.sena.com",
+                "www.urbanarmorgear.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/quizzes\\/omega\\/quizzes\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "web-static"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e6866f1abaa69f8ec4830ffcb66968f124c909a6e58e03a1dbe3f0a371a4755b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_qz_sess": {
+                    "ttl": 86424,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blossomflowerdelivery.com",
+                "engelcoolers.com",
+                "enlightenedequipment.com",
+                "furniturefair.net"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/geo\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "08b1979056bd6843cee54aa0b70db59ca39354e3f232e9b3b1b9a9ca75b59d37"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blossomflowerdelivery.com",
+                "coolibar.com",
+                "furniturefair.net",
+                "mitoredlight.com",
+                "www.coolibar.com",
+                "www.sena.com",
+                "www.urbanarmorgear.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/v3\\/js\\/operations\\/sync",
+            "cookies": 0.0000479,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "d7c0f24f0e476acffc89d53dd7888fc4b58902b60d70bffd3dfa598b1a65535c",
+                "6eff08a4a15a36407b3cf064ce831fe5b6bf8899a5e152895df7ec86780b671f",
+                "ef0f967ad1e8165b1e4ecb1614fca8fb8c48a03c1782f918ef940d905228c057"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blossomflowerdelivery.com",
+                "coolibar.com",
+                "engelcoolers.com",
+                "enlightenedequipment.com",
+                "furniturefair.net",
+                "www.coolibar.com",
+                "www.sena.com",
+                "www.urbanarmorgear.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/api\\/v0\\/init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "quizzes"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a9d56d7c821e4dbe29e8a3d13a7be107e59cd2842a6297ff5d5806f1cc8ddeaa"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blossomflowerdelivery.com",
+                "furniturefair.net"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/api\\/v0\\/init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "quizzes"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blossomflowerdelivery.com",
+                "furniturefair.net"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/v3\\/js\\/operations\\/async",
+            "cookies": 0.0000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blossomflowerdelivery.com",
+                "coolibar.com",
+                "engelcoolers.com",
+                "furniturefair.net",
+                "mitoredlight.com",
+                "movavi.com",
+                "www.coolibar.com",
+                "www.movavi.com",
+                "www.sena.com",
+                "www.urbanarmorgear.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/client-stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "personalization-speedtest"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blossomflowerdelivery.com",
+                "furniturefair.net",
+                "www.coolibar.com",
+                "www.urbanarmorgear.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/js\\/byendpoint\\/coolibar\\.website\\.shopify\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coolibar.com",
+                "www.coolibar.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/check-reco",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "personalization-speedtest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "furniturefair.net",
+                "www.urbanarmorgear.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/js\\/byendpoint\\/movavi\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "movavi.com",
+                "www.movavi.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/js\\/byendpoint\\/selkirkcom\\.website\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "selkirk.com",
+                "www.selkirk.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/js\\/byendpoint\\/sena\\.website\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sena.com",
+                "www.sena.com"
+            ]
+        },
+        {
+            "rule": "maestra\\.io\\/js\\/byendpoint\\/urbanarmorgear\\.website\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "urbanarmorgear.com",
+                "www.urbanarmorgear.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000157,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7352941176470589
+        },
+        {
+            "domain": "intiaro.com",
+            "prevalence": 0.09803921568627451
+        },
+        {
+            "domain": "staticont.net",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "mindbox.cloud",
+            "prevalence": 0.049019607843137254
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.029411764705882353
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.029411764705882353
+        }
+    ],
+    "types": {
+        "Script": 16,
+        "XHR": 30,
+        "Fetch": 12,
+        "Preflight": 2,
+        "Ping": 10,
+        "Image": 6
+    },
+    "nameservers": [
+        "ns-1898.awsdns-45.co.uk",
+        "ns-1005.awsdns-61.net",
+        "ns-1236.awsdns-26.org",
+        "ns-210.awsdns-26.com"
+    ]
+}

@@ -1,0 +1,192 @@
+{
+    "domain": "skcrtxr.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000301,
+    "sites": 3,
+    "subdomains": [
+        "cdn",
+        "cdn-c",
+        "rpc",
+        "openrtb"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "skcrtxr\\.com\\/roxot-wrapper\\/js\\/roxot-manager\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "54881600ce1773b19273bae39aa1a169d92c19c154d8c336c3baa9787a033e0a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "habr.com",
+                "symbl.cc"
+            ]
+        },
+        {
+            "rule": "skcrtxr\\.com\\/wrapper\\/js\\/common-engine\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-c"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.product": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.language": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "3b266515ee7b3950b4ce03c57bf8ec1465e5d095862cd24a88e3b699e048be1c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "habr.com",
+                "symbl.cc",
+                "www.rt.com"
+            ]
+        },
+        {
+            "rule": "skcrtxr\\.com\\/user-sync-api\\/sync",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "c774255f3fde88a1de6f8bbb4cabb46189bb48499994d7f8c18adb165fe49704",
+                "3b5cc37c20a28ce946362bec955d86ce2211dccaf473592daf8eac973d9f0c5d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "habr.com",
+                "symbl.cc",
+                "www.rt.com"
+            ]
+        },
+        {
+            "rule": "skcrtxr\\.com\\/cf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rpc"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "habr.com",
+                "symbl.cc",
+                "www.rt.com"
+            ]
+        },
+        {
+            "rule": "skcrtxr\\.com\\/cf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rpc"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "habr.com",
+                "symbl.cc",
+                "www.rt.com"
+            ]
+        },
+        {
+            "rule": "skcrtxr\\.com\\/def-g",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openrtb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6a5666da0da7c4c2226c26b0d85edd7135fb1b88f3f6a407fee4c3ca60b05544"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "habr.com",
+                "symbl.cc"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000301,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7368421052631579
+        },
+        {
+            "domain": "ad-pixel.ru",
+            "prevalence": 0.15789473684210525
+        },
+        {
+            "domain": "yastatic.net",
+            "prevalence": 0.05263157894736842
+        },
+        {
+            "domain": "dmtgvn.com",
+            "prevalence": 0.05263157894736842
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "XHR": 3,
+        "Preflight": 3,
+        "Fetch": 5
+    },
+    "nameservers": [
+        "ns1.yandexcloud.net",
+        "ns2.yandexcloud.net"
+    ]
+}

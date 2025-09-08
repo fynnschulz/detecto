@@ -1,0 +1,93 @@
+{
+    "domain": "taskanalytics.com",
+    "owner": {
+        "name": "Task Analytics",
+        "displayName": "Task Analytics"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.00111,
+    "sites": 11,
+    "subdomains": [
+        "in2",
+        "in3"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "taskanalytics\\.com\\/tm\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "in2",
+                "in3"
+            ],
+            "apis": {
+                "window.sessionStorage": 6
+            },
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "84b0d90a518e353080c0d6584433782483ab7f66d43358c068c4ef24a186951e",
+                "7fdd3f77aa3b6edf1d4d2736530837173b7e8f5143ee52447cc7f3c908be21c6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nmbu.no",
+                "naturvernforbundet.no",
+                "www.arbeidstilsynet.no",
+                "www.fjellrevenshop.no",
+                "www.gaus.no",
+                "www.nmbu.no"
+            ]
+        },
+        {
+            "rule": "taskanalytics\\.com\\/03234",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "in2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "50920381c288cc4b29b5e2a0b0f067a0f44827841c0252bc317c1d32ea4e41fb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nmbu.no",
+                "www.nmbu.no"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5294117647058824
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.47058823529411764
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "betty.ns.cloudflare.com",
+        "hans.ns.cloudflare.com"
+    ]
+}

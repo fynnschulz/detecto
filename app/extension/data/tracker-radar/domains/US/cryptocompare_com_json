@@ -1,0 +1,100 @@
+{
+    "domain": "cryptocompare.com",
+    "owner": {
+        "name": "Crypto Coin Comparison Ltd",
+        "displayName": "Crypto Coin Comparison"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "data-streamer",
+        "data-api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "cryptocompare\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data-streamer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coindesk.com",
+                "www.coindesk.com"
+            ]
+        },
+        {
+            "rule": "cryptocompare\\.com\\/asset\\/v2\\/metadata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "266ad12a989bc7e37925f8e0d92ef1f0fbe16d2f060b2660b2be599780dc0535"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coindesk.com",
+                "www.coindesk.com"
+            ]
+        },
+        {
+            "rule": "cryptocompare\\.com\\/asset\\/v2\\/metadata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coindesk.com",
+                "www.coindesk.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "WebSocket": 2,
+        "Fetch": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "elmo.ns.cloudflare.com",
+        "brit.ns.cloudflare.com"
+    ]
+}
