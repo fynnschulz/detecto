@@ -4,12 +4,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping"],
+      "resourceTypes": [
+        "image",
+        "ping"
+      ],
       "regexFilter": "(collect|g/collect|pixel|beacon|track|event|metrics|stats)(\\?|/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
     }
   },
   {
@@ -17,12 +22,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
+      "resourceTypes": [
+        "xmlhttprequest",
+        "other"
+      ],
       "regexFilter": "(collect|g/collect|pixel|beacon|track|event|metrics|stats)(\\?|/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:application/json,{}" }
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
     }
   },
   {
@@ -30,12 +40,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping"],
+      "resourceTypes": [
+        "image",
+        "ping"
+      ],
       "regexFilter": "([?&])(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)="
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
     }
   },
   {
@@ -43,12 +58,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
+      "resourceTypes": [
+        "xmlhttprequest",
+        "other"
+      ],
       "regexFilter": "([?&])(utm_[a-z]+|fbclid|gclid|msclkid|yclid|dclid)="
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:application/json,{}" }
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
     }
   },
   {
@@ -56,12 +76,16 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["script"],
+      "resourceTypes": [
+        "script"
+      ],
       "regexFilter": "/(gtm|gtag|analytics|fbevents|tracker|tracking)\\.(m?js)(\\?|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/stubs/gtm.js" }
+      "redirect": {
+        "extensionPath": "/stubs/gtm.js"
+      }
     }
   },
   {
@@ -69,12 +93,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping"],
+      "resourceTypes": [
+        "image",
+        "ping"
+      ],
       "regexFilter": "(/tr/|/tr\\?)(\\?|/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
     }
   },
   {
@@ -82,25 +111,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
+      "resourceTypes": [
+        "xmlhttprequest",
+        "other"
+      ],
       "regexFilter": "(/tr/|/tr\\?)(\\?|/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:application/json,{}" }
-    }
-  },
-  {
-    "id": 200007,
-    "priority": 1,
-    "condition": {
-      "domainType": "thirdParty",
-      "resourceTypes": ["sub_frame"],
-      "regexFilter": "https?:\\/\\/([^\\/]*\\.)?(doubleclick|googlesyndication|criteo|taboola|outbrain|rubiconproject|pubmatic|moatads|quantserve|adnxs|adform)\\.[^\\/]+\\/"
-    },
-    "action": {
-      "type": "redirect",
-      "redirect": { "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>" }
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
     }
   },
   {
@@ -108,12 +129,16 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["stylesheet"],
+      "resourceTypes": [
+        "stylesheet"
+      ],
       "regexFilter": "(tagmanager|analytics|ads|adservice|adserver)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:text/css,/*noop*/" }
+      "redirect": {
+        "url": "data:text/css,/*noop*/"
+      }
     }
   },
   {
@@ -121,12 +146,16 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["font"],
+      "resourceTypes": [
+        "font"
+      ],
       "regexFilter": "(ads|analytics|tracking)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:font/woff2;base64," }
+      "redirect": {
+        "url": "data:font/woff2;base64,"
+      }
     }
   },
   {
@@ -134,12 +163,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping"],
+      "resourceTypes": [
+        "image",
+        "ping"
+      ],
       "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?(stats|metrics|pixel|ads|adserver)\\.[^\\/]+\\/"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
     }
   },
   {
@@ -147,12 +181,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
+      "resourceTypes": [
+        "xmlhttprequest",
+        "other"
+      ],
       "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?(stats|metrics|pixel|ads|adserver)\\.[^\\/]+\\/"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:application/json,{}" }
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
     }
   },
   {
@@ -160,12 +199,16 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["script"],
+      "resourceTypes": [
+        "script"
+      ],
       "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?(stats|metrics|pixel|ads|adserver)\\.[^\\/]+\\/"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/stubs/gtm.js" }
+      "redirect": {
+        "extensionPath": "/stubs/gtm.js"
+      }
     }
   },
   {
@@ -173,12 +216,16 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["sub_frame"],
+      "resourceTypes": [
+        "sub_frame"
+      ],
       "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?(stats|metrics|pixel|ads|adserver)\\.[^\\/]+\\/"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>" }
+      "redirect": {
+        "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>"
+      }
     }
   },
   {
@@ -186,12 +233,16 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["stylesheet"],
+      "resourceTypes": [
+        "stylesheet"
+      ],
       "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?(stats|metrics|pixel|ads|adserver)\\.[^\\/]+\\/"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:text/css,/*noop*/" }
+      "redirect": {
+        "url": "data:text/css,/*noop*/"
+      }
     }
   },
   {
@@ -199,12 +250,16 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["font"],
+      "resourceTypes": [
+        "font"
+      ],
       "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?(stats|metrics|pixel|ads|adserver)\\.[^\\/]+\\/"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:font/woff2;base64," }
+      "redirect": {
+        "url": "data:font/woff2;base64,"
+      }
     }
   },
   {
@@ -212,12 +267,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping"],
+      "resourceTypes": [
+        "image",
+        "ping"
+      ],
       "regexFilter": "(\\/track|\\/collect|\\/g\\/collect|\\/e\\/collect|\\/pixel)(\\?|\\/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
     }
   },
   {
@@ -225,12 +285,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping"],
+      "resourceTypes": [
+        "image",
+        "ping"
+      ],
       "regexFilter": "(\\/event|\\/events|\\/pageview|\\/identify|\\/measure)(\\?|\\/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
     }
   },
   {
@@ -238,12 +303,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping"],
+      "resourceTypes": [
+        "image",
+        "ping"
+      ],
       "regexFilter": "(\\/metrics|\\/stats|\\/conversion|\\/convert)(\\?|\\/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
     }
   },
   {
@@ -251,12 +321,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
+      "resourceTypes": [
+        "xmlhttprequest",
+        "other"
+      ],
       "regexFilter": "(\\/track|\\/collect|\\/g\\/collect|\\/e\\/collect|\\/pixel)(\\?|\\/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:application/json,{}" }
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
     }
   },
   {
@@ -264,12 +339,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
+      "resourceTypes": [
+        "xmlhttprequest",
+        "other"
+      ],
       "regexFilter": "(\\/event|\\/events|\\/pageview|\\/identify|\\/measure)(\\?|\\/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:application/json,{}" }
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
     }
   },
   {
@@ -277,12 +357,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
+      "resourceTypes": [
+        "xmlhttprequest",
+        "other"
+      ],
       "regexFilter": "(\\/metrics|\\/stats|\\/conversion|\\/convert)(\\?|\\/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:application/json,{}" }
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
     }
   },
   {
@@ -290,12 +375,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping"],
+      "resourceTypes": [
+        "image",
+        "ping"
+      ],
       "regexFilter": "([?&])(gclid|fbclid|msclkid|dclid|yclid|utm_[a-z0-9_]+)="
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
     }
   },
   {
@@ -303,12 +393,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["xmlhttprequest","other"],
+      "resourceTypes": [
+        "xmlhttprequest",
+        "other"
+      ],
       "regexFilter": "([?&])(gclid|fbclid|msclkid|dclid|yclid|utm_[a-z0-9_]+)="
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:application/json,{}" }
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
     }
   },
   {
@@ -316,12 +411,16 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["script"],
+      "resourceTypes": [
+        "script"
+      ],
       "regexFilter": "/(gtm|gtag|fbevents|analytics|analytics\\.js|adsbygoogle|adservice)\\.(m?js)(\\?|$)|gtag/js(\\?|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/stubs/gtm.js" }
+      "redirect": {
+        "extensionPath": "/stubs/gtm.js"
+      }
     }
   },
   {
@@ -329,12 +428,16 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["sub_frame"],
+      "resourceTypes": [
+        "sub_frame"
+      ],
       "regexFilter": "https?:\\/\\/([^\\/]*\\.)?(ads|adserver|adservice|analytics|tagmanager|googlesyndication|doubleclick)\\.[^\\/]+\\/"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>" }
+      "redirect": {
+        "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>"
+      }
     }
   },
   {
@@ -342,12 +445,17 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","ping"],
+      "resourceTypes": [
+        "image",
+        "ping"
+      ],
       "regexFilter": "(?i)(/tr\\?|/tr/)(\\?|/|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
     }
   },
   {
@@ -355,10 +463,23 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "requestDomains": ["adnxs.com"],
-      "resourceTypes": ["image","script","xmlhttprequest","ping","sub_frame"]
+      "requestDomains": [
+        "adnxs.com"
+      ],
+      "resourceTypes": [
+        "image",
+        "script",
+        "xmlhttprequest",
+        "ping",
+        "sub_frame"
+      ]
     },
-    "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
+    }
   },
   {
     "id": 600002,
@@ -367,7 +488,12 @@
       "domainType": "thirdParty",
       "regexFilter": "https?:\\/\\/([^\\/]*\\.)?fastly-insights\\.com\\/"
     },
-    "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:application/json,{}"
+      }
+    }
   },
   {
     "id": 600003,
@@ -376,7 +502,12 @@
       "domainType": "thirdParty",
       "regexFilter": "https?:\\/\\/([^\\/]*\\.)?akamaihd\\.net\\/ads"
     },
-    "action": { "type": "redirect", "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } }
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
+    }
   },
   {
     "id": 600004,
@@ -385,20 +516,28 @@
       "domainType": "thirdParty",
       "regexFilter": "https?:\\/\\/([^\\/]*\\.)?cloudfront\\.net\\/(pixel|track|collect)"
     },
-    "action": { "type": "redirect", "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } }
-  }
-,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA"
+      }
+    }
+  },
   {
     "id": 700010,
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["script"],
+      "resourceTypes": [
+        "script"
+      ],
       "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?connect\\.facebook\\.net\\/.*\\/fbevents\\.js(\\?|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/stubs/fbq.js" }
+      "redirect": {
+        "extensionPath": "/stubs/fbq.js"
+      }
     }
   },
   {
@@ -406,12 +545,50 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["script"],
+      "resourceTypes": [
+        "script"
+      ],
       "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?google-analytics\\.com\\/analytics\\.js(\\?|$)"
     },
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/stubs/ga.js" }
+      "redirect": {
+        "extensionPath": "/stubs/ga.js"
+      }
+    }
+  },
+  {
+    "id": 200107,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "regexFilter": "https?:\\/\\/([^\\/]*\\.)?(doubleclick|googlesyndication|criteo|taboola|outbrain)\\.[^\\/]+\\/"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:text/html,<html><head><meta charset=\\utf-8></head><body></body></html>"
+      }
+    }
+  },
+  {
+    "id": 200108,
+    "priority": 1,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": [
+        "sub_frame"
+      ],
+      "regexFilter": "https?:\\/\\/([^\\/]*\\.)?(rubiconproject|pubmatic|moatads|quantserve|adnxs|adform)\\.[^\\/]+\\/"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "url": "data:text/html,<html><head><meta charset=\\utf-8></head><body></body></html>"
+      }
     }
   }
 ]
