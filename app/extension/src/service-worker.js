@@ -139,7 +139,7 @@ function hostFromUrl(u) {
 
 function isRiskyType(t) {
   const k = String(t || "").toLowerCase();
-  return k === "image" || k === "xmlhttprequest" || k === "fetch" || k === "ping" || k === "script";
+  return k === "image" || k === "xmlhttprequest" || k === "ping" || k === "script";
 }
 
 // Increment selected domain signals in a safe way
@@ -631,7 +631,10 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 // --- Protecto rules: reusable function for session rules ---
 function applyProtectoRules() {
   chrome.declarativeNetRequest.updateSessionRules({
-    removeRuleIds: [1000, 1001, 1002, 1003, 1004, 1005, 1006],
+    removeRuleIds: [
+      1000, 1001, 1002, 1003, 1004, 1005, 1006,
+      1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015
+    ],
     addRules: [
       // --- Big 4 ---
       {
@@ -687,7 +690,7 @@ function applyProtectoRules() {
         }
       },
       {
-        id: 1007,
+        id: 1015,
         priority: 2,
         action: { type: "redirect", redirect: { url: "data:text/javascript,/*noop*/" } },
         condition: {

@@ -4,7 +4,7 @@
     "priority": 1,
     "condition": {
       "domainType": "thirdParty",
-      "resourceTypes": ["image","xmlhttprequest","ping","fetch"],
+      "resourceTypes": ["image","xmlhttprequest","ping"],
       "regexFilter": "https?:\\/\\/[^\\/]+\\/(collect|g\\/collect|pixel|beacon|track|event|measure|metrics|stats|log)(\\?|\\/|$)"
     },
     "action": {
@@ -22,7 +22,7 @@
     },
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/src/stubs/gtm.js" }
+      "redirect": { "extensionPath": "/stubs/gtm.js" }
     }
   },
   {
@@ -264,7 +264,7 @@
     "priority": 1,
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/src/stubs/ga.js" }
+      "redirect": { "extensionPath": "/stubs/ga.js" }
     },
     "condition": { "urlFilter": "google-analytics.com/analytics.js", "resourceTypes": ["script"] }
   },
@@ -273,7 +273,7 @@
     "priority": 1,
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/src/stubs/gtm.js" }
+      "redirect": { "extensionPath": "/stubs/gtm.js" }
     },
     "condition": { "urlFilter": "googletagmanager.com/gtm.js", "resourceTypes": ["script"] }
   },
@@ -282,7 +282,7 @@
     "priority": 1,
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/src/stubs/gtm.js" }
+      "redirect": { "extensionPath": "/stubs/gtm.js" }
     },
     "condition": { "urlFilter": "googletagmanager.com/gtag/js", "resourceTypes": ["script"] }
   },
@@ -291,7 +291,7 @@
     "priority": 1,
     "action": {
       "type": "redirect",
-      "redirect": { "extensionPath": "/src/stubs/fbq.js" }
+      "redirect": { "extensionPath": "/stubs/fbq.js" }
     },
     "condition": { "urlFilter": "connect.facebook.net", "resourceTypes": ["script"] }
   },
