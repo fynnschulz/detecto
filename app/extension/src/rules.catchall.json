@@ -714,5 +714,31 @@
     },
     "action": { "type": "redirect", "redirect": { "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>" } }
   }
-
+  ,
+  {
+    "id": 200151,
+    "priority": 3,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["script"],
+      "regexFilter": "https?:\\/\\/[^\\/]+\\/(gtm\\.js|gtag\\/js|analytics\\.js|fbevents\\.js|adsbygoogle\\.js|adservice|adloader)(\\?|\\/|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "extensionPath": "/stubs/generic.js" }
+    }
+  },
+  {
+    "id": 200152,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["image","xmlhttprequest","ping"],
+      "regexFilter": "https?:\\/\\/[^\\/]+\\/(collect|g\\/collect|e\\/collect|pixel|beacon|track|event|pageview|identify|measure|conversion|convert)(\\?|\\/|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" }
+    }
+  }
 ]

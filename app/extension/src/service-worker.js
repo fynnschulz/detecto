@@ -170,6 +170,28 @@ async function applyPolicyForDomain(domain, policy) {
   const GTM_STUB  = "/src/stubs/gtm.js";  // googletagmanager
   const FBQ_STUB  = "/src/stubs/fbq.js";  // facebook pixel
 
+  // ---- Allowlist: echte Framework/CDN-Libs nicht umleiten (höhere Priorität gewinnt) ----
+  const ALLOWLIST = [
+    { urlFilter: "cdn.jsdelivr.net/npm/react" },
+    { urlFilter: "cdn.jsdelivr.net/npm/react-dom" },
+    { urlFilter: "cdn.jsdelivr.net/npm/vue" },
+    { urlFilter: "cdn.jsdelivr.net/npm/angular" },
+    { urlFilter: "cdn.jsdelivr.net/npm/stripe" },
+    { urlFilter: "cdn.jsdelivr.net/npm/mapbox-gl" },
+    { urlFilter: "unpkg.com/react" },
+    { urlFilter: "unpkg.com/vue" },
+    { urlFilter: "kit.fontawesome.com" },
+    { urlFilter: "cdn.tailwindcss.com" }
+  ];
+  for (const a of ALLOWLIST) {
+    addRules.push({
+      id: 20090 + addRules.length % 10, // deterministic enough per domain apply
+      priority: 10, // höher als Redirects
+      action: { type: "allow" },
+      condition: { initiatorDomains: [domain], urlFilter: a.urlFilter, resourceTypes: ["script"] }
+    });
+  }
+
   // --- STRICT: aggressiv + generisch ---
   if (policy === "strict") {
     // Google Analytics (analytics.js, gtag.js)
@@ -194,12 +216,35 @@ async function applyPolicyForDomain(domain, policy) {
     addRules.push({
       id: 2004, priority: 1,
       action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net", resourceTypes: ["script"] }
+      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
     });
     addRules.push({
       id: 2005, priority: 1,
       action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "googlesyndication.com", resourceTypes: ["script"] }
+      condition: { initiatorDomains: [domain], urlFilter: "googlesyndication.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
+    });
+
+    // Adservice & Tagservices – schließen weitere JS/XHR Lücken (STRICT)
+    addRules.push({
+      id: 2006, priority: 1,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: { initiatorDomains: [domain], urlFilter: "adservice.google.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
+    });
+    addRules.push({
+      id: 2007, priority: 1,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: { initiatorDomains: [domain], urlFilter: "googletagservices.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
+    });
+
+    // NOOP-Fallback für Loader, die SRI/Integrität o.ä. erzwingen (überstimmt Stubs)
+    addRules.push({
+      id: 2015, priority: 2,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: {
+        initiatorDomains: [domain],
+        regexFilter: "(adsbygoogle\\.js|fbevents\\.js|gtag\\/js)(\\?|/|$)",
+        resourceTypes: ["script"]
+      }
     });
 
     // Generische Pixel/Collect/Beacon (image/xhr/ping) → 1x1
@@ -307,12 +352,12 @@ async function applyPolicyForDomain(domain, policy) {
     addRules.push({
       id: 2026, priority: 1,
       action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net", resourceTypes: ["script"] }
+      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
     });
     addRules.push({
       id: 2027, priority: 1,
       action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "googlesyndication.com", resourceTypes: ["script"] }
+      condition: { initiatorDomains: [domain], urlFilter: "googlesyndication.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
     });
 
     // Zusätzliche generische Beacons (einige Anbieter weichen /collect aus)
@@ -325,6 +370,29 @@ async function applyPolicyForDomain(domain, policy) {
       id: 2029, priority: 1,
       action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
       condition: { initiatorDomains: [domain], urlFilter: "/event", resourceTypes: ["image","xmlhttprequest","ping"] }
+    });
+
+    // NOOP-Fallback (STANDARD) – überstimmt Stubs für knifflige Loader
+    addRules.push({
+      id: 2033, priority: 2,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: {
+        initiatorDomains: [domain],
+        regexFilter: "(adsbygoogle\\.js|fbevents\\.js|gtag\\/js)(\\?|/|$)",
+        resourceTypes: ["script"]
+      }
+    });
+
+    // Adservice & Tagservices – schließen weitere JS/XHR Lücken (STANDARD)
+    addRules.push({
+      id: 2037, priority: 1,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: { initiatorDomains: [domain], urlFilter: "adservice.google.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
+    });
+    addRules.push({
+      id: 2038, priority: 1,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: { initiatorDomains: [domain], urlFilter: "googletagservices.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
     });
   }
 

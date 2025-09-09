@@ -2,8 +2,35 @@
 // Ziel: Cookie-Banner automatisch auf "Ablehnen/Nur notwendig" stellen (wenn möglich)
 // Stealth: keine sichtbaren Fehler, vorsichtige DOM-Interaktion, nur 1x pro Seite
 
+// Früh-Injektion: Stubs für gtag/ga/fbq/dataLayer, damit sie sofort verfügbar sind
+'use strict';
+
+(() => {
+  const stubScripts = [
+    'src/stubs/generic.js',
+    'src/stubs/gtm.js',
+    'src/stubs/ga.js',
+    'src/stubs/fbq.js'
+  ];
+  for (const stubPath of stubScripts) {
+    try {
+      const s = document.createElement('script');
+      s.src = chrome.runtime.getURL(stubPath);
+      s.async = false;
+      // Fügt das Script ins <html> ein, entfernt es danach
+      (document.documentElement || document.head || document.body).appendChild(s);
+      s.addEventListener('load', () => s.remove(), { once: true });
+      // Optionales Debug-Logging
+      if (typeof console !== 'undefined' && typeof console.debug === 'function') {
+        console.debug('[Protecto][Stub Injection]', 'Injected:', stubPath);
+      }
+    } catch (e) {
+      // Fehler ignorieren, damit keine Störung entsteht
+    }
+  }
+})();
+
 (function () {
-  'use strict';
 
   // Nur im Top-Frame ausführen (nicht in eingebetteten iframes)
   try { if (window.top !== window) return; } catch { /* cross-origin, sicherheitshalber beenden */ return; }
