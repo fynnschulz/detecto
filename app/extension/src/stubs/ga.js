@@ -20,7 +20,7 @@
   const DEBUG = false; // bei Bedarf true schalten für lokale Logs
 
   // Marker wie im Original
-  window.GoogleAnalyticsObject = 'ga';
+  defGlobal(window, 'GoogleAnalyticsObject', 'ga');
 
   // Bereits vorhandene Queue-Aufrufe vom GA-Snippet abgreifen
   const preQueuedCalls = [];
@@ -95,7 +95,11 @@
         return true;
       }
     };
-
+    try {
+      tracker.set.toString = nativeFn('set');
+      tracker.get.toString = nativeFn('get');
+      tracker.send.toString = nativeFn('send');
+    } catch {}
     state.trackers.set(name, tracker);
     return tracker;
   }
@@ -184,6 +188,15 @@
   try { ga.toString = nativeFn('ga'); } catch {}
   defGlobal(window, 'ga', ga);
 
+  try {
+    ga.toString = nativeFn('ga');
+    ga.create.toString = nativeFn('create');
+    ga.getAll.toString = nativeFn('getAll');
+    ga.getByName.toString = nativeFn('getByName');
+    ga.require.toString = nativeFn('require');
+    ga.remove.toString = nativeFn('remove');
+  } catch {}
+
   // Zusätzliche No-Ops für Kompatibilität
   ga.require = function() { return true; };
   ga.remove = function() { return true; };
@@ -192,7 +205,8 @@
   window.ga = ga;
 
   // Kompatibilität: ga.q als leeres Array bereitstellen (einige Themes checken das)
-  try { window.ga.q = []; } catch {}
+  try { Object.defineProperty(window.ga, 'q', { value: [], writable: false, configurable: false, enumerable: false }); }
+  catch { window.ga.q = []; }
 
   if (!Array.isArray(window._gaq)) window._gaq = [];
   try { Object.defineProperty(window._gaq, 'push', { value: function(){ return true; }, writable:false, configurable:false }); } catch { window._gaq.push = function(){ return true; }; }

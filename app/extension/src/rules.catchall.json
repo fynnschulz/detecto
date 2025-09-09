@@ -84,7 +84,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "extensionPath": "/stubs/gtm.js"
+        "extensionPath": "/stubs/generic.js"
       }
     }
   },
@@ -207,7 +207,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "extensionPath": "/stubs/gtm.js"
+        "extensionPath": "/stubs/generic.js"
       }
     }
   },
@@ -419,7 +419,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "extensionPath": "/stubs/gtm.js"
+        "extensionPath": "/stubs/generic.js"
       }
     }
   },
@@ -449,7 +449,7 @@
         "image",
         "ping"
       ],
-      "regexFilter": "(?i)(/tr\\?|/tr/)(\\?|/|$)"
+      "regexFilter": "(\\/tr\\?|\\/tr\\/)(\\?|\\/|$)"
     },
     "action": {
       "type": "redirect",
@@ -524,8 +524,21 @@
     }
   },
   {
+    "id": 700009,
+    "priority": 5,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["script"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?googletagmanager\\.com\\/gtm\\.js(\\?|$)"
+    },
+    "action": {
+      "type": "redirect",
+      "redirect": { "extensionPath": "/stubs/gtm.js" }
+    }
+  },
+  {
     "id": 700010,
-    "priority": 1,
+    "priority": 5,
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": [
@@ -542,7 +555,7 @@
   },
   {
     "id": 700011,
-    "priority": 1,
+    "priority": 5,
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": [
@@ -570,7 +583,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><meta charset=\\utf-8></head><body></body></html>"
+        "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>"
       }
     }
   },
@@ -587,7 +600,7 @@
     "action": {
       "type": "redirect",
       "redirect": {
-        "url": "data:text/html,<html><head><meta charset=\\utf-8></head><body></body></html>"
+        "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>"
       }
     }
   }
@@ -717,7 +730,7 @@
   ,
   {
     "id": 200151,
-    "priority": 3,
+    "priority": 1,
     "condition": {
       "domainType": "thirdParty",
       "resourceTypes": ["script"],

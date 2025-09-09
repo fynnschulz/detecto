@@ -114,6 +114,54 @@
     gtag.q = q;
     try { gtag.toString = nativeFn('gtag'); } catch {}
     defGlobal(window, 'gtag', gtag);
+
+  // Minimaler GA-Stub (nur wenn nicht vorhanden) – Queue + API-Fassade
+  if (typeof window.ga !== 'function') {
+    function ga(){ (ga.q || (ga.q = [])).push([].slice.call(arguments)); }
+    try { ga.toString = nativeFn('ga'); } catch {}
+    ga.create  = noop;
+    ga.getAll  = function(){ return []; };
+    ga.getByName = function(){ return null; };
+    ga.require = noop;
+    ga.remove  = noop;
+    try { Object.defineProperty(ga, 'q', { value: [], writable:false, configurable:false, enumerable:false }); }
+    catch { ga.q = []; }
+    defGlobal(window, 'ga', ga);
+    // Echte Seiten erwarten oft dieses Flag/Name
+    defGlobal(window, 'GoogleAnalyticsObject', 'ga');
+  }
+
+  // Minimaler FBQ-Stub (nur wenn nicht vorhanden) – Queue + API-Fassade
+  if (typeof window.fbq !== 'function') {
+    const pre = [];
+    function fbq(){ pre.push([].slice.call(arguments)); return 'fbq-stub'; }
+    fbq.callMethod = function(){ return; };
+    fbq.push = function(){ return; };
+    fbq.disablePushState = true;
+    fbq.loaded = true;
+    fbq.version = '2.0';
+    fbq.queue = pre;
+    try {
+      fbq.toString = nativeFn('fbq');
+      fbq.callMethod.toString = nativeFn('callMethod');
+      fbq.push.toString = nativeFn('push');
+    } catch {}
+    try { Object.defineProperty(fbq, 'queue', { value: pre, writable:false, configurable:false, enumerable:false }); } catch {}
+    defGlobal(window, 'fbq', fbq);
+    defGlobal(window, '_fbq', fbq);
+  }
+
+  // Minimalobjekt für google_tag_manager – verhindert Fingerprinting-Fehler
+  if (typeof window.google_tag_manager !== 'object') {
+    const gtm = new Proxy({}, {
+      get(target, key){
+        if (key === 'toString') return nativeFn('Object');
+        if (!(key in target)) target[key] = {};
+        return target[key];
+      }
+    });
+    defGlobal(window, 'google_tag_manager', gtm);
+  }
   }
 
   // _gaq / _paq – alte Tracker-Queues, nur No-Op push

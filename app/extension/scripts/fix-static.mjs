@@ -29,7 +29,7 @@ const FALLBACK_RULES = [
       regexFilter:
         "https?:\\/\\/([^\\/]*\\.)?(doubleclick|googlesyndication|googleadservices)\\.[^\\/]+\\/",
     },
-    action: { type: "redirect", redirect: { extensionPath: "/stubs/gtm.js" } },
+    action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
   },
   // Images/Pings -> 1x1 GIF
   {
@@ -60,6 +60,36 @@ const FALLBACK_RULES = [
     },
     action: { type: "redirect", redirect: { url: "data:application/json,{}" } },
   },
+  {
+    id: 200211,
+    priority: 2,
+    condition: {
+      domainType: "thirdParty",
+      resourceTypes: ["script"],
+      regexFilter: "^https?:\\/\\/([^\\/]*\\.)?googletagmanager\\.com\\/gtm\\.js(\\?|$)"
+    },
+    action: { type: "redirect", redirect: { extensionPath: "/stubs/gtm.js" } }
+  },
+  {
+    id: 200212,
+    priority: 2,
+    condition: {
+      domainType: "thirdParty",
+      resourceTypes: ["script"],
+      regexFilter: "^https?:\\/\\/([^\\/]*\\.)?google-analytics\\.com\\/(analytics\\.js(\\?|$)|gtag\\/js(\\?|$))"
+    },
+    action: { type: "redirect", redirect: { extensionPath: "/stubs/ga.js" } }
+  },
+  {
+    id: 200213,
+    priority: 2,
+    condition: {
+      domainType: "thirdParty",
+      resourceTypes: ["script"],
+      regexFilter: "^https?:\\/\\/([^\\/]*\\.)?connect\\.facebook\\.net\\/.*\\/fbevents\\.js(\\?|$)"
+    },
+    action: { type: "redirect", redirect: { extensionPath: "/stubs/fbq.js" } }
+  }
 ];
 
 function fileContainsId(txt, id) {
@@ -89,6 +119,45 @@ function appendJsonArrayItems(filePath, items) {
   const nextTxt = base + (hasAnyElement ? "," : "") + payload + "]\n";
   fs.writeFileSync(filePath, nextTxt);
   console.log(`• Fallbacks angehängt: +${toAdd.length} (IDs: ${toAdd.map((r) => r.id).join(", ")})`);
+}
+
+function repointScriptRedirects(filePath){
+  try {
+    const txt = fs.readFileSync(filePath, "utf8");
+    const arr = JSON.parse(txt);
+    let changes=0, toGTM=0, toGA=0, toFBQ=0, toGEN=0;
+    for (const r of arr){
+      if (!r || !r.action || !r.action.redirect) continue;
+      if (!r.condition || !Array.isArray(r.condition.resourceTypes)) continue;
+      if (!r.condition.resourceTypes.includes("script")) continue;
+      const cur = r.action.redirect.extensionPath;
+      const blob = [
+        (r.condition.regexFilter||""),
+        (r.condition.urlFilter||""),
+        Array.isArray(r.condition.requestDomains) ? r.condition.requestDomains.join(" ") : ""
+      ].join(" ").toLowerCase();
+      let target = null;
+      if (/googletagmanager\.com/.test(blob) && /gtm\.js/.test(blob)) {
+        target = "/stubs/gtm.js"; toGTM++;
+      } else if (/google-analytics\.com/.test(blob) && /(analytics\.js|gtag\/js)/.test(blob)) {
+        target = "/stubs/ga.js"; toGA++;
+      } else if (/connect\.facebook\.net/.test(blob) && /fbevents\.js/.test(blob)) {
+        target = "/stubs/fbq.js"; toFBQ++;
+      } else if (cur === "/stubs/gtm.js") {
+        // unspezifische Fälle auf generic.js verschieben
+        target = "/stubs/generic.js"; toGEN++;
+      }
+      if (target && cur !== target) {
+        r.action.redirect.extensionPath = target; changes++;
+      }
+    }
+    if (changes){
+      fs.writeFileSync(filePath, JSON.stringify(arr));
+      console.log(`• Redirect-Repoint: ${changes} geändert (gtm:${toGTM} ga:${toGA} fbq:${toFBQ} gen:${toGEN})`);
+    } else {
+      console.log("• Redirect-Repoint: keine Änderungen nötig.");
+    }
+  } catch(e){ console.warn("• Redirect-Repoint: übersprungen (", e.message, ")"); }
 }
 
 function human(n) { return new Intl.NumberFormat("de-DE").format(n); }
@@ -155,6 +224,7 @@ function human(n) { return new Intl.NumberFormat("de-DE").format(n); }
 
     // Fallback-Regeln ans Ende anhängen (idempotent)
     appendJsonArrayItems(OUTPUT, FALLBACK_RULES);
+    repointScriptRedirects(OUTPUT);
 
     const outStat = fs.statSync(OUTPUT);
     console.timeEnd("⏱  Fix-Dauer");

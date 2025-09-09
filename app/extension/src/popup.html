@@ -1,77 +1,100 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Protecto</title>
   <style>
-    body { 
-      font-family: sans-serif; 
-      width: 220px; 
-      padding: 10px; 
-      background: #111; 
-      color: #eee; 
+    :root {
+      --ok: #2e7d32;   /* grün */
+      --warn: #f9a825; /* gelb */
+      --bad: #c62828;  /* rot */
+      --muted: #6b7280;
     }
-    h3 { text-align: center; margin-top: 0; }
-    button { 
-      margin: 5px 0; 
-      width: 100%; 
-      padding: 6px; 
-      border: none; 
-      border-radius: 6px; 
-      background: #333; 
-      color: #eee; 
-      cursor: pointer; 
-      transition: all 0.2s ease; 
-    }
-    button:hover { background: #555; }
-    input { width: 100%; margin: 5px 0; padding: 5px; border-radius: 4px; border: 1px solid #444; background:#222; color:#eee; }
-    ul { padding-left: 16px; margin: 0; max-height: 100px; overflow-y: auto; }
-    .mode-btn {
-      transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
-      border: 1px solid #333;
-      background: #1b1b1b;
-    }
-    .mode-btn.active {
-      box-shadow: 0 0 0 2px rgba(80,120,255,.35), 0 6px 18px rgba(0,0,0,.35);
-      transform: translateY(-1px);
-      background: #222a3a;
-      border-color: rgba(80,120,255,.6);
-    }
-    .mode-indicator {
-      margin: 8px 0 4px;
-      font-size: 12px;
-      color: #9aa4b2;
-    }
-    .mode-indicator b { color: #e6ebf5; }
+    html, body { margin: 0; padding: 0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; }
+    .wrap { padding: 14px 16px 12px; width: 340px; }
+
+    /* Score Header */
+    .scoreBox { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .scoreCircle { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 20px; }
+    .scoreMeta { line-height: 1.1; }
+    .scoreTitle { font-weight: 700; }
+    .scoreSub { color: var(--muted); font-size: 12px; }
+
+    /* Gründe */
+    .card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px 12px; margin-top: 10px; }
+    .card h4 { margin: 0 0 8px; font-size: 14px; }
+    ul.clean { list-style: none; padding: 0; margin: 0; }
+    ul.clean li { margin: 6px 0; font-size: 13px; }
+
+    /* Redirects */
+    .redirects { margin-top: 10px; font-size: 13px; }
+
+    /* Toggle */
+    .toggleRow { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; }
+    .toggleLabel { font-weight: 600; }
+    .switch { position: relative; width: 52px; height: 28px; }
+    .switch input { display: none; }
+    .slider { position: absolute; cursor: pointer; inset: 0; background: #cbd5e1; border-radius: 999px; transition: background .25s ease; }
+    .slider:before { content: ""; position: absolute; height: 22px; width: 22px; left: 3px; top: 3px; background: #fff; border-radius: 50%; transition: transform .25s ease; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+    .switch input:checked + .slider { background: #22c55e; }
+    .switch input:checked + .slider:before { transform: translateX(24px); }
+
+    /* Niemals mit Schutz */
+    .npRow { margin-top: 16px; }
+    .npInput { display: flex; gap: 8px; }
+    .npInput input { flex: 1; padding: 8px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 13px; }
+    .npInput button { padding: 8px 10px; border-radius: 8px; border: 1px solid #e5e7eb; background:#fff; cursor:pointer; }
+    .npList { margin-top: 8px; }
+    .npList li { display:flex; align-items:center; justify-content:space-between; padding:6px 8px; border:1px solid #e5e7eb; border-radius:8px; margin-top:6px; font-size:13px; }
+    .npRemove { border:none; background:transparent; color:#dc2626; cursor:pointer; font-size:14px; }
   </style>
 </head>
 <body>
-  <h3>Protecto</h3>
+  <div class="wrap">
+    <!-- SCORE -->
+    <div class="scoreBox">
+      <div id="scoreCircle" class="scoreCircle" aria-label="Risiko-Score">—</div>
+      <div class="scoreMeta">
+        <div class="scoreTitle">Risiko für diese Seite</div>
+        <div id="scoreText" class="scoreSub">Bewertung 1–100 (100 = sehr schlecht)</div>
+      </div>
+    </div>
 
-  <p id="recBox" style="padding:8px;border:1px solid #333;border-radius:6px;background:#1a1a1a">
-    Berechne Risiko…
-  </p>
-  <div class="mode-indicator">Aktiver Modus: <b id="modeName">—</b></div>
-  <ul id="reasonList" style="margin-top:6px;"></ul>
+    <!-- GRÜNDE -->
+    <div class="card">
+      <h4>Gründe für die Bewertung</h4>
+      <ul id="reasons" class="clean">
+        <li class="empty">Keine Daten verfügbar.</li>
+      </ul>
+    </div>
 
-  <p>Diese Seite schützen:</p>
-  <button class="mode-btn" id="policy-strict">Strikt</button>
-  <button class="mode-btn" id="policy-standard">Standard</button>
-  <button class="mode-btn" id="policy-soft">Sanft</button>
-  <button class="mode-btn" id="policy-off">Aus</button>
+    <!-- REDIRECTS -->
+    <div id="redirects" class="redirects">Tracker umgeleitet: —</div>
 
-  <hr>
-  <div id="telemetryBox" style="font-size:12px;margin:6px 0;color:#9aa4b2">Telemetry wird geladen…</div>
-  <p id="redirectBox" style="font-size:12px;margin:6px 0;color:#9aa4b2">Redirect-Rate wird geladen…</p>
-  <label style="display:flex;gap:8px;align-items:center;margin:6px 0 0;">
-    <input type="checkbox" id="autoTuningToggle">
-    <span>Auto‑Tuning aktivieren</span>
-  </label>
-  <div id="autoTuningStats" style="margin-top:4px;color:#9aa4b2;font-size:12px;">Auto‑Tuning: –</div>
-  <p>Whitelist / Policies:</p>
-  <input type="text" id="domainInput" placeholder="example.com">
-  <button id="addWhitelist">Hinzufügen</button>
-  <ul id="whitelist"></ul>
+    <!-- TOGGLE -->
+    <div class="toggleRow">
+      <span class="toggleLabel">Schutz aktivieren</span>
+      <label class="switch" title="Protecto an/aus">
+        <input id="protectionToggle" type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
 
+    <!-- NIEMALS MIT SCHUTZ -->
+    <div class="npRow">
+      <div style="font-weight:600; margin-bottom:6px;">Niemals mit Schutz</div>
+      <div class="npInput">
+        <input id="neverInput" type="text" placeholder="z. B. facebook.com" />
+        <button id="addNeverBtn">Hinzufügen</button>
+      </div>
+      <ul id="neverProtectList" class="npList"></ul>
+    </div>
+  </div>
+
+  <!-- Logik im externen Script -->
   <script src="popup.js"></script>
 </body>
 </html>

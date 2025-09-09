@@ -3,12 +3,26 @@
   "use strict";
 
   // Idempotency: avoid double-install
-  if (window.__PROTECTO_FBQ__) return; 
-  window.__PROTECTO_FBQ__ = true;
+  if (window.__PROTECTO_FBQ_STUB__) return; 
+  window.__PROTECTO_FBQ_STUB__ = true;
 
   // Utility: native-like toString for stealth
   function nativeFn(fnName){
     return function(){ return `function ${fnName}() { [native code] }`; };
+  }
+
+  // Promise-queue to serialize async calls
+  const promiseQueue = [];
+  function enqueue(promiseFn) {
+    const last = promiseQueue.length ? promiseQueue[promiseQueue.length - 1] : Promise.resolve();
+    const next = last.then(() => promiseFn()).catch(() => {});
+    promiseQueue.push(next);
+    // Clean up finished promises to avoid memory leak
+    next.finally(() => {
+      const idx = promiseQueue.indexOf(next);
+      if (idx > -1) promiseQueue.splice(idx,1);
+    });
+    return next;
   }
 
   // Vorhandene Queues einsammeln (fbq.queue und _fbq[])
@@ -57,7 +71,7 @@
   function FBQ(){
     const args = Array.prototype.slice.call(arguments);
     if (typeof FBQ.callMethod === "function") {
-      try { return FBQ.callMethod.apply(FBQ, args); } catch { return; }
+      try { return enqueue(() => FBQ.callMethod.apply(FBQ, args)); } catch { return; }
     }
     state.queue.push(args);
     return state.queue.length;
@@ -75,97 +89,99 @@
   FBQ.disablePushState = true;
 
   // API implementation (no‑ops with local bookkeeping)
-  FBQ.callMethod = async function(){
+  FBQ.callMethod = function(){
     const args = Array.prototype.slice.call(arguments);
     const cmd = (args[0]||"").toString();
 
-    switch (cmd) {
-      case "init": {
-        const pixelId = args[1];
-        const options = args[2] || {};
-        if (pixelId) {
-          state.pixels[pixelId] = {
-            id: pixelId,
-            options,
-            enabled: true,
-            created: Date.now()
-          };
-        }
-        // drain any pre‑init queue (keep as no‑op processing)
-        if (state.queue.length) state.queue.length = 0;
-        await jitter();
-        log("init", pixelId, options);
-        return Promise.resolve(true);
-      }
-
-      case "addPixelId": { // fbq('addPixelId', 'PIXEL') – attach extra pixel
-        const pid = args[1];
-        if (pid) state.pixels[pid] = state.pixels[pid] || { id: pid, options:{}, enabled:true, created: Date.now() };
-        await jitter();
-        log("addPixelId", pid);
-        return Promise.resolve(true);
-      }
-
-      case "track":       // fbq('track', 'PageView', {...})
-      case "trackSingle": // fbq('trackSingle', 'PIXEL', 'Event', {...})
-      case "trackCustom":
-      case "trackSingleCustom": {
-        const isSingle = cmd === "trackSingle" || cmd === "trackSingleCustom";
-        const name = isSingle ? (args[2] || "event") : (args[1] || "event");
-        const params = isSingle ? (args[3] || {}) : (args[2] || {});
-        recordEvent(name, params);
-        await jitter();
-        log(cmd, name, params);
-        return Promise.resolve(true);
-      }
-
-      case "consent": { // fbq('consent', 'grant'|'revoke')
-        const action = (args[1]||"").toString().toLowerCase();
-        state.consent.granted = (action === "grant");
-        await jitter();
-        log("consent", action);
-        return Promise.resolve(true);
-      }
-
-      case "set": {
-        // Variants:
-        //  - fbq('set', 'autoConfig', false, 'PIXEL_ID')
-        //  - fbq('set', { external_id: '...' })
-        //  - fbq('set', 'dataProcessingOptions', ['LDU'], 0, 0)
-        // We accept and store but never send.
-        try {
-          if (typeof args[1] === 'object' && args[1]) {
-            state.pixels._global = Object.assign({}, state.pixels._global || {}, args[1]);
-          } else if (typeof args[1] === 'string') {
-            const key = args[1];
-            const val = args[2];
-            const pid = args[3];
-            if (pid && state.pixels[pid]) {
-              state.pixels[pid][key] = val;
-            } else {
-              state.pixels._global = Object.assign({}, state.pixels._global || {}, { [key]: val });
-            }
+    return enqueue(async () => {
+      switch (cmd) {
+        case "init": {
+          const pixelId = args[1];
+          const options = args[2] || {};
+          if (pixelId) {
+            state.pixels[pixelId] = {
+              id: pixelId,
+              options,
+              enabled: true,
+              created: Date.now()
+            };
           }
-        } catch {}
-        await jitter();
-        log("set", args[1], args[2], args[3]);
-        return Promise.resolve(true);
-      }
+          // drain any pre‑init queue (keep as no‑op processing)
+          if (state.queue.length) state.queue.length = 0;
+          await jitter();
+          log("init", pixelId, options);
+          return true;
+        }
 
-      case "dataProcessingOptions": {
-        // fbq('dataProcessingOptions', ['LDU'], country, state)
-        state.dpo = args.slice(1);
-        await jitter();
-        log("dataProcessingOptions", state.dpo);
-        return Promise.resolve(true);
-      }
+        case "addPixelId": { // fbq('addPixelId', 'PIXEL') – attach extra pixel
+          const pid = args[1];
+          if (pid) state.pixels[pid] = state.pixels[pid] || { id: pid, options:{}, enabled:true, created: Date.now() };
+          await jitter();
+          log("addPixelId", pid);
+          return true;
+        }
 
-      default:
-        // Unknown command → ignore silently to avoid breaking sites
-        await jitter(10,50);
-        log("unknown command", cmd, args.slice(1));
-        return Promise.resolve(true);
-    }
+        case "track":       // fbq('track', 'PageView', {...})
+        case "trackSingle": // fbq('trackSingle', 'PIXEL', 'Event', {...})
+        case "trackCustom":
+        case "trackSingleCustom": {
+          const isSingle = cmd === "trackSingle" || cmd === "trackSingleCustom";
+          const name = isSingle ? (args[2] || "event") : (args[1] || "event");
+          const params = isSingle ? (args[3] || {}) : (args[2] || {});
+          recordEvent(name, params);
+          await jitter();
+          log(cmd, name, params);
+          return true;
+        }
+
+        case "consent": { // fbq('consent', 'grant'|'revoke')
+          const action = (args[1]||"").toString().toLowerCase();
+          state.consent.granted = (action === "grant");
+          await jitter();
+          log("consent", action);
+          return true;
+        }
+
+        case "set": {
+          // Variants:
+          //  - fbq('set', 'autoConfig', false, 'PIXEL_ID')
+          //  - fbq('set', { external_id: '...' })
+          //  - fbq('set', 'dataProcessingOptions', ['LDU'], 0, 0)
+          // We accept and store but never send.
+          try {
+            if (typeof args[1] === 'object' && args[1]) {
+              state.pixels._global = Object.assign({}, state.pixels._global || {}, args[1]);
+            } else if (typeof args[1] === 'string') {
+              const key = args[1];
+              const val = args[2];
+              const pid = args[3];
+              if (pid && state.pixels[pid]) {
+                state.pixels[pid][key] = val;
+              } else {
+                state.pixels._global = Object.assign({}, state.pixels._global || {}, { [key]: val });
+              }
+            }
+          } catch {}
+          await jitter();
+          log("set", args[1], args[2], args[3]);
+          return true;
+        }
+
+        case "dataProcessingOptions": {
+          // fbq('dataProcessingOptions', ['LDU'], country, state)
+          state.dpo = args.slice(1);
+          await jitter();
+          log("dataProcessingOptions", state.dpo);
+          return true;
+        }
+
+        default:
+          // Unknown command → ignore silently to avoid breaking sites
+          await jitter(10,50);
+          log("unknown command", cmd, args.slice(1));
+          return true;
+      }
+    });
   };
 
   // Zusätzliche No-Op-Helfer (häufig abgefragt)
@@ -187,20 +203,27 @@
   // Some themes expect _fbq to be an array (bootstrap queue). We provide that,
   // plus the functional fbq API.
   if (!window._fbq) window._fbq = [];
-  try { window._fbq.disablePushState = true; } catch {}
-  try { window._fbq.push = function(){ return true; }; } catch {}
+  try { Object.defineProperty(window._fbq, 'disablePushState', { value: true, writable:false, configurable:false, enumerable:false }); } catch {}
+  try { Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:false, configurable:false, enumerable:false }); } catch {}
   window.fbq = FBQ;
 
   // Stealth: native-like toString & non-enumerable globals
   try { FBQ.toString = nativeFn('fbq'); } catch {}
   try { FBQ.push.toString = nativeFn('push'); } catch {}
+  try { FBQ.callMethod.toString = nativeFn('callMethod'); } catch {}
+  try { FBQ.getState.toString = nativeFn('getState'); } catch {}
   defGlobal(window, 'fbq', FBQ);
 
   // Ensure _fbq exists as array-queue for theme bootstraps
   if (!Array.isArray(window._fbq)) window._fbq = [];
   try {
-    Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:false, configurable:false });
+    Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:false, configurable:false, enumerable:false });
   } catch { window._fbq.push = function(){ return true; }; }
+
+  // Prevent fbq.queue from being overwritten
+  try {
+    Object.defineProperty(FBQ, 'queue', { value: state.queue, writable:false, configurable:false, enumerable:false });
+  } catch {}
 
   // Vorbestehende Queue-Aufrufe (vom Bootstrapping) nachträglich abarbeiten
   (async () => {
@@ -208,11 +231,10 @@
       for (const args of preQueue) {
         try { await FBQ.callMethod.apply(FBQ, args); } catch {}
       }
-      try { FBQ.queue = []; } catch {}
+      try { FBQ.queue.length = 0; } catch {}
       try { if (window.fbq && Array.isArray(window.fbq.queue)) window.fbq.queue.length = 0; } catch {}
       try { if (Array.isArray(window._fbq)) window._fbq.length = 0; } catch {}
     }
   })();
 
-  try { FBQ.getState.toString = nativeFn('getState'); } catch {}
 })();

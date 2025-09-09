@@ -70,6 +70,15 @@ function ensureDomain(d) {
   return self.domainSignals[d];
 }
 
+// Helper: check if a domain is on the neverProtect ("Niemals mit Schutz") allowlist
+async function isNeverProtected(domain) {
+  try {
+    if (!domain) return false;
+    const { neverProtect = [] } = await chrome.storage.sync.get('neverProtect');
+    return Array.isArray(neverProtect) && neverProtect.includes(domain);
+  } catch { return false; }
+}
+
 // --- Auto‑Tuning (miss detection) -----------------------------------------
 // We mark which requests were redirected (via onRuleMatchedDebug). Any risky
 // 3rd‑party request that completes without a redirect counts as a "miss" for
@@ -154,6 +163,13 @@ function isSuspiciousTinyFromHeaders(details) {
 }
 
 async function applyPolicyForDomain(domain, policy) {
+  // Enforce neverProtect: force OFF for domains on the list
+  try {
+    if (await isNeverProtected(domain)) {
+      policy = 'off';
+    }
+  } catch {}
+
   // Clear previous dynamic rules for this policy scope
   const removeIds = [];
   for (let i = 2000; i <= 2050; i++) removeIds.push(i);
@@ -166,9 +182,9 @@ async function applyPolicyForDomain(domain, policy) {
   const NOOP_JS   = "data:text/javascript,/*noop*/";
 
   // Trackers → Stubs (scripts)
-  const GA_STUB   = "/src/stubs/ga.js";   // google-analytics
-  const GTM_STUB  = "/src/stubs/gtm.js";  // googletagmanager
-  const FBQ_STUB  = "/src/stubs/fbq.js";  // facebook pixel
+  const GA_STUB   = "stubs/ga.js";   // google-analytics
+  const GTM_STUB  = "stubs/gtm.js";  // googletagmanager
+  const FBQ_STUB  = "stubs/fbq.js";  // facebook pixel
 
   // ---- Allowlist: echte Framework/CDN-Libs nicht umleiten (höhere Priorität gewinnt) ----
   const ALLOWLIST = [
@@ -192,8 +208,8 @@ async function applyPolicyForDomain(domain, policy) {
     });
   }
 
-  // --- STRICT: aggressiv + generisch ---
-  if (policy === "strict") {
+  // --- ON: aggressiv + generisch ---
+  if (policy === "on") {
     // Google Analytics (analytics.js, gtag.js)
     addRules.push({
       id: 2000, priority: 1,
@@ -216,24 +232,24 @@ async function applyPolicyForDomain(domain, policy) {
     addRules.push({
       id: 2004, priority: 1,
       action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
+      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net", resourceTypes: ["script","xmlhttprequest","ping","image"] }
     });
     addRules.push({
       id: 2005, priority: 1,
       action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "googlesyndication.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
+      condition: { initiatorDomains: [domain], urlFilter: "googlesyndication.com", resourceTypes: ["script","xmlhttprequest","ping","image"] }
     });
 
     // Adservice & Tagservices – schließen weitere JS/XHR Lücken (STRICT)
     addRules.push({
       id: 2006, priority: 1,
       action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "adservice.google.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
+      condition: { initiatorDomains: [domain], urlFilter: "adservice.google.com", resourceTypes: ["script","xmlhttprequest","ping","image"] }
     });
     addRules.push({
       id: 2007, priority: 1,
       action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "googletagservices.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
+      condition: { initiatorDomains: [domain], urlFilter: "googletagservices.com", resourceTypes: ["script","xmlhttprequest","ping","image"] }
     });
 
     // NOOP-Fallback für Loader, die SRI/Integrität o.ä. erzwingen (überstimmt Stubs)
@@ -264,7 +280,7 @@ async function applyPolicyForDomain(domain, policy) {
       condition: { initiatorDomains: [domain], urlFilter: "/beacon", resourceTypes: ["image","xmlhttprequest","ping"] }
     });
 
-    // Inject strict-mode shims only in strict mode (MAIN world)
+    // Inject strict-mode shims only in on mode (MAIN world)
     if (!fingerprintInjected) {
       try {
         const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -281,151 +297,16 @@ async function applyPolicyForDomain(domain, policy) {
                 "src/shims/netpatch.js"
               ]
             });
-            console.log("[Protecto] Injected fingerprints+cloak+stealth shims into", tab.url);
           }
         }
         fingerprintInjected = true;
       } catch (e) {
-        console.warn("[Protecto] Failed to inject strict shims:", e);
+        // No logging
       }
     }
   } else {
-    // Reset fingerprint injection flag for non-strict
+    // Reset fingerprint injection flag for non-on
     fingerprintInjected = false;
-  }
-
-  // Inject CMP shim for STANDARD as well (MAIN world, all frames)
-  if (policy === "standard") {
-    try {
-      const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-      for (const tab of tabs) {
-        if (!tab.id) continue;
-        await chrome.scripting.executeScript({
-          target: { tabId: tab.id, allFrames: true },
-          world: "MAIN",
-          files: [
-            "src/shims/cmp.js",
-            "src/shims/netpatch.js"
-          ]
-        });
-      }
-      console.log("[Protecto] Injected CMP shim (standard) into active tab(s)");
-    } catch (e) {
-      console.warn("[Protecto] Failed to inject CMP shim (standard):", e);
-    }
-  }
-
-  // --- STANDARD: Kern-Tracker + collect/pixel/beacon ---
-  if (policy === "standard") {
-    addRules.push({
-      id: 2020, priority: 1,
-      action: { type: "redirect", redirect: { extensionPath: GA_STUB } },
-      condition: { initiatorDomains: [domain], urlFilter: "google-analytics.com", resourceTypes: ["script"] }
-    });
-    addRules.push({
-      id: 2021, priority: 1,
-      action: { type: "redirect", redirect: { extensionPath: GTM_STUB } },
-      condition: { initiatorDomains: [domain], urlFilter: "googletagmanager.com", resourceTypes: ["script"] }
-    });
-    addRules.push({
-      id: 2022, priority: 1,
-      action: { type: "redirect", redirect: { extensionPath: FBQ_STUB } },
-      condition: { initiatorDomains: [domain], urlFilter: "connect.facebook.net", resourceTypes: ["script"] }
-    });
-    addRules.push({
-      id: 2023, priority: 1,
-      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
-      condition: { initiatorDomains: [domain], urlFilter: "/collect", resourceTypes: ["image","xmlhttprequest","ping"] }
-    });
-    addRules.push({
-      id: 2024, priority: 1,
-      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
-      condition: { initiatorDomains: [domain], urlFilter: "/pixel", resourceTypes: ["image","xmlhttprequest","ping"] }
-    });
-    addRules.push({
-      id: 2025, priority: 1,
-      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
-      condition: { initiatorDomains: [domain], urlFilter: "/beacon", resourceTypes: ["image","xmlhttprequest","ping"] }
-    });
-
-    // Doubleclick & Googlesyndication scripts → hard NOOP (close "Durchläufer" gap)
-    addRules.push({
-      id: 2026, priority: 1,
-      action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
-    });
-    addRules.push({
-      id: 2027, priority: 1,
-      action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "googlesyndication.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
-    });
-
-    // Zusätzliche generische Beacons (einige Anbieter weichen /collect aus)
-    addRules.push({
-      id: 2028, priority: 1,
-      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
-      condition: { initiatorDomains: [domain], urlFilter: "/track", resourceTypes: ["image","xmlhttprequest","ping"] }
-    });
-    addRules.push({
-      id: 2029, priority: 1,
-      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
-      condition: { initiatorDomains: [domain], urlFilter: "/event", resourceTypes: ["image","xmlhttprequest","ping"] }
-    });
-
-    // NOOP-Fallback (STANDARD) – überstimmt Stubs für knifflige Loader
-    addRules.push({
-      id: 2033, priority: 2,
-      action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: {
-        initiatorDomains: [domain],
-        regexFilter: "(adsbygoogle\\.js|fbevents\\.js|gtag\\/js)(\\?|/|$)",
-        resourceTypes: ["script"]
-      }
-    });
-
-    // Adservice & Tagservices – schließen weitere JS/XHR Lücken (STANDARD)
-    addRules.push({
-      id: 2037, priority: 1,
-      action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "adservice.google.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
-    });
-    addRules.push({
-      id: 2038, priority: 1,
-      action: { type: "redirect", redirect: { url: NOOP_JS } },
-      condition: { initiatorDomains: [domain], urlFilter: "googletagservices.com", resourceTypes: ["script","xmlhttprequest","fetch","ping","image"] }
-    });
-  }
-
-  // --- SOFT: nur GA/FBQ; Logins/Consent erlauben ---
-  if (policy === "soft") {
-    // High-risk scripts
-    addRules.push({
-      id: 2030, priority: 1,
-      action: { type: "redirect", redirect: { extensionPath: GA_STUB } },
-      condition: { initiatorDomains: [domain], urlFilter: "google-analytics.com", resourceTypes: ["script"] }
-    });
-    addRules.push({
-      id: 2031, priority: 1,
-      action: { type: "redirect", redirect: { extensionPath: FBQ_STUB } },
-      condition: { initiatorDomains: [domain], urlFilter: "connect.facebook.net", resourceTypes: ["script"] }
-    });
-
-    // Whitelisted essentials (Login/Consent)
-    addRules.push({
-      id: 2034, priority: 1,
-      action: { type: "allow" },
-      condition: { initiatorDomains: [domain], urlFilter: "accounts.google.com" }
-    });
-    addRules.push({
-      id: 2035, priority: 1,
-      action: { type: "allow" },
-      condition: { initiatorDomains: [domain], urlFilter: "staticxx.facebook.com" }
-    });
-    addRules.push({
-      id: 2036, priority: 1,
-      action: { type: "allow" },
-      condition: { initiatorDomains: [domain], urlFilter: "consent.cookiebot.com" }
-    });
   }
 
   // --- OFF: alles erlauben (nur Frames, wie MV3 verlangt) ---
@@ -453,6 +334,8 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
       const pageHost = hostFromUrl(initiator || "");
       const reqHost  = hostFromUrl(url);
       if (!reqHost || !pageHost || reqHost === pageHost) return; // only 3rd-party
+      // Respect user exception list: never protect this page's domain
+      if (await isNeverProtected(pageHost)) return;
       // Count all 3rd‑party requests of risky types
       if (isRiskyType(type)) {
         const ref = ensureDomain(pageHost);
@@ -510,6 +393,8 @@ chrome.webRequest.onHeadersReceived.addListener(
       const target = hostFromUrl(url);
       const d = initiator || target;
       if (!d) return;
+      // Skip learning/signals if page is on neverProtect
+      if (initiator && (async () => await isNeverProtected(initiator))()) return;
       const ref = ensureDomain(d);
 
       // Third-party host count
@@ -567,6 +452,9 @@ chrome.webRequest.onCompleted.addListener(
       const pageHost = hostFromUrl(details.initiator || details.originUrl || "");
       const reqHost  = hostFromUrl(url);
 
+      // Respect neverProtect for the page domain
+      if (pageHost && (async () => await isNeverProtected(pageHost))()) return;
+
       // If this request matched a redirect rule, remove the marker and do nothing
       if (details.requestId && matchedRequestIds.has(details.requestId)) {
         matchedRequestIds.delete(details.requestId);
@@ -599,6 +487,9 @@ chrome.webRequest.onErrorOccurred.addListener(
 
       const pageHost = hostFromUrl(details.initiator || details.originUrl || "");
       const reqHost  = hostFromUrl(url);
+
+      // Respect neverProtect for the page domain
+      if (pageHost && (async () => await isNeverProtected(pageHost))()) return;
 
       // If a redirect rule matched, it's not a miss
       if (details.requestId && matchedRequestIds.has(details.requestId)) {
@@ -641,15 +532,36 @@ chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
       return true;
     }
 
+    // --- POLICY GET: return effective policy, respecting allowlist ---
+    if (msg.type === 'policy:get') {
+      const d = (msg.domain || '').replace(/^www\./, '');
+      const st = await chrome.storage.sync.get('policies');
+      let pol = (st.policies || {})[d] || (st.policies || {})['*'] || 'on';
+      if (pol !== 'on' && pol !== 'off') pol = 'on';
+      if (await isNeverProtected(d)) pol = 'off';
+      sendResponse({ ok: true, policy: pol });
+      return true;
+    }
+
     if (msg.type === "policy:apply") {
-      const d = (msg.domain || "").replace(/^www\./, "");
-      const pol = msg.policy;
-      const st = await chrome.storage.sync.get("policies");
+      const d = (msg.domain || '').replace(/^www\./, '');
+      let pol = msg.policy;
+      // Only allow 'on' or 'off'
+      if (pol !== 'on' && pol !== 'off') pol = 'on';
+      const st = await chrome.storage.sync.get('policies');
       const policies = st.policies || {};
+      // Enforce neverProtect: store the user's choice but apply OFF effectively
+      if (await isNeverProtected(d)) {
+        policies[d] = pol;
+        await chrome.storage.sync.set({ policies });
+        await applyPolicyForDomain(d, 'off');
+        sendResponse({ ok: true, effective: 'off' });
+        return true;
+      }
       policies[d] = pol;
       await chrome.storage.sync.set({ policies });
       await applyPolicyForDomain(d, pol);
-      sendResponse({ ok: true });
+      sendResponse({ ok: true, effective: pol });
       return true;
     }
 
@@ -708,3 +620,128 @@ chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
     return true;
   }
 });
+
+// --- Ensure policy is applied automatically when a tab updates ---
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === "loading" && tab.active) {
+    applyProtectoRules();
+  }
+});
+
+// --- Protecto rules: reusable function for session rules ---
+function applyProtectoRules() {
+  chrome.declarativeNetRequest.updateSessionRules({
+    removeRuleIds: [1000, 1001, 1002, 1003, 1004, 1005, 1006],
+    addRules: [
+      // --- Big 4 ---
+      {
+        id: 1000,
+        priority: 1,
+        action: { type: "redirect", redirect: { extensionPath: "/stubs/gtm.js" } },
+        condition: { urlFilter: "gtm.js", resourceTypes: ["script"] }
+      },
+      {
+        id: 1001,
+        priority: 1,
+        action: { type: "redirect", redirect: { extensionPath: "/stubs/fbq.js" } },
+        condition: { urlFilter: "fbevents.js", resourceTypes: ["script"] }
+      },
+      {
+        id: 1002,
+        priority: 1,
+        action: { type: "redirect", redirect: { extensionPath: "/stubs/ga.js" } },
+        condition: { urlFilter: "analytics.js", resourceTypes: ["script"] }
+      },
+      {
+        id: 1003,
+        priority: 1,
+        action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
+        condition: { urlFilter: "doubleclick.net", resourceTypes: ["script"] }
+      },
+      // --- Catch-All Tracker Patterns ---
+      {
+        id: 1004,
+        priority: 1,
+        action: { type: "redirect", redirect: { url: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } },
+        condition: {
+          regexFilter: "(pixel|collect|beacon|stats|metrics)(\\?|/|$)",
+          resourceTypes: ["image", "xmlhttprequest", "ping"]
+        }
+      },
+      {
+        id: 1005,
+        priority: 1,
+        action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
+        condition: {
+          regexFilter: "(track|telemetry|event|log)(\\?|/|$)",
+          resourceTypes: ["script", "xmlhttprequest"]
+        }
+      },
+      {
+        id: 1006,
+        priority: 1,
+        action: { type: "redirect", redirect: { url: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } },
+        condition: {
+          regexFilter: "(utm_[a-z]+|fbclid|gclid|msclkid|dclid|yclid|mc_eid)=",
+          resourceTypes: ["image", "xmlhttprequest", "ping"]
+        }
+      },
+      {
+        id: 1007,
+        priority: 2,
+        action: { type: "redirect", redirect: { url: "data:text/javascript,/*noop*/" } },
+        condition: {
+          regexFilter: "(adsbygoogle\\.js|gtag\\/js|fbevents\\.js)$",
+          resourceTypes: ["script"]
+        }
+      },
+      // --- Allowlist: wichtige Framework/CDN-Libs niemals umleiten ---
+      {
+        id: 1008,
+        priority: 10,
+        action: { type: "allow" },
+        condition: { urlFilter: "cdn.jsdelivr.net/npm/react", resourceTypes: ["script"] }
+      },
+      {
+        id: 1009,
+        priority: 10,
+        action: { type: "allow" },
+        condition: { urlFilter: "cdn.jsdelivr.net/npm/vue", resourceTypes: ["script"] }
+      },
+      {
+        id: 1010,
+        priority: 10,
+        action: { type: "allow" },
+        condition: { urlFilter: "cdn.jsdelivr.net/npm/angular", resourceTypes: ["script"] }
+      },
+      {
+        id: 1011,
+        priority: 10,
+        action: { type: "allow" },
+        condition: { urlFilter: "cdn.jsdelivr.net/npm/stripe", resourceTypes: ["script"] }
+      },
+      {
+        id: 1012,
+        priority: 10,
+        action: { type: "allow" },
+        condition: { urlFilter: "cdn.jsdelivr.net/npm/mapbox-gl", resourceTypes: ["script"] }
+      },
+      {
+        id: 1013,
+        priority: 10,
+        action: { type: "allow" },
+        condition: { urlFilter: "unpkg.com/react", resourceTypes: ["script"] }
+      },
+      {
+        id: 1014,
+        priority: 10,
+        action: { type: "allow" },
+        condition: { urlFilter: "unpkg.com/vue", resourceTypes: ["script"] }
+      }
+    ]
+  });
+}
+
+// Apply Protecto rules on install and on startup
+chrome.runtime.onInstalled.addListener(applyProtectoRules);
+chrome.runtime.onStartup.addListener(applyProtectoRules);

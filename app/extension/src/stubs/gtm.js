@@ -68,6 +68,7 @@
   dataLayer.onEvent = function(cb){
     if (typeof cb === "function") _state.callbacks.push(cb);
   };
+  try { dataLayer.onEvent.toString = nativeFn('addEventListener'); } catch {}
 
   try { dataLayer.push.toString = nativeFn('push'); } catch {}
 
@@ -125,7 +126,9 @@
   }
 
   if (window.gtag && !Array.isArray(window.gtag.q)) {
-    window.gtag.q = [];
+    try {
+      Object.defineProperty(window.gtag, 'q', { value: [], writable: false, configurable: false, enumerable: false });
+    } catch { window.gtag.q = []; }
   }
   try { window.gtag.toString = nativeFn('gtag'); } catch {}
 
@@ -142,6 +145,12 @@
   gaShim.send   = noop;
   gaShim.set    = noop;
   gaShim.require= noop;
+  try {
+    gaShim.create.toString = nativeFn('create');
+    gaShim.send.toString   = nativeFn('send');
+    gaShim.set.toString    = nativeFn('set');
+    gaShim.require.toString= nativeFn('require');
+  } catch {}
 
   gaShim.getAll = function(){
     // Return a minimal fake tracker with common methods
@@ -151,6 +160,12 @@
       set: noop,
       require: noop
     };
+    try {
+      fakeTracker.get.toString = nativeFn('get');
+      fakeTracker.send.toString = nativeFn('send');
+      fakeTracker.set.toString  = nativeFn('set');
+      fakeTracker.require.toString = nativeFn('require');
+    } catch {}
     return [fakeTracker];
   };
 

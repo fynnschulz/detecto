@@ -6,6 +6,19 @@
 'use strict';
 
 (() => {
+  // Idempotenz: pro Frame nur einmal injizieren
+  if (window.__protectoStubsInjected) return; 
+  window.__protectoStubsInjected = true;
+
+  // CSP-Nonce übernehmen, falls Seite Nonce nutzt
+  function getCspNonce(){
+    try {
+      const n = document.querySelector('script[nonce]');
+      return n && n.nonce ? n.nonce : (n && n.getAttribute('nonce'));
+    } catch { return undefined; }
+  }
+  const NONCE = getCspNonce();
+
   const stubScripts = [
     'src/stubs/generic.js',
     'src/stubs/gtm.js',
@@ -16,11 +29,20 @@
     try {
       const s = document.createElement('script');
       s.src = chrome.runtime.getURL(stubPath);
-      s.async = false;
-      // Fügt das Script ins <html> ein, entfernt es danach
-      (document.documentElement || document.head || document.body).appendChild(s);
-      s.addEventListener('load', () => s.remove(), { once: true });
-      // Optionales Debug-Logging
+      s.async = false; // Reihenfolge beibehalten
+      if (NONCE) try { s.setAttribute('nonce', NONCE); } catch {}
+
+      // möglichst früh einfügen: vor dem ersten <script>, sonst in <head>/<html>
+      const firstScript = document.scripts && document.scripts[0];
+      if (firstScript && firstScript.parentNode) {
+        firstScript.parentNode.insertBefore(s, firstScript);
+      } else {
+        (document.head || document.documentElement || document.body).appendChild(s);
+      }
+
+      s.addEventListener('load', () => { try { s.remove(); } catch {} }, { once: true });
+      s.addEventListener('error', () => { try { s.remove(); } catch {} }, { once: true });
+
       if (typeof console !== 'undefined' && typeof console.debug === 'function') {
         console.debug('[Protecto][Stub Injection]', 'Injected:', stubPath);
       }
