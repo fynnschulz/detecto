@@ -2,8 +2,23 @@
 (function(){
   "use strict";
 
-  // Vorhandene Queue vom Boot-Strap übernehmen
-  const preQueue = (window.fbq && Array.isArray(window.fbq.queue)) ? window.fbq.queue.slice() : [];
+  // Idempotency: avoid double-install
+  if (window.__PROTECTO_FBQ__) return; 
+  window.__PROTECTO_FBQ__ = true;
+
+  // Utility: native-like toString for stealth
+  function nativeFn(fnName){
+    return function(){ return `function ${fnName}() { [native code] }`; };
+  }
+
+  // Vorhandene Queues einsammeln (fbq.queue und _fbq[])
+  const preQueue = [];
+  try {
+    if (window.fbq && Array.isArray(window.fbq.queue)) preQueue.push(...window.fbq.queue);
+  } catch {}
+  try {
+    if (Array.isArray(window._fbq)) preQueue.push(...window._fbq);
+  } catch {}
 
   // Nur behalten, wenn bereits eine vollwertige fbq-API aktiv ist.
   // Reine Queue-Stubs (ohne callMethod/loaded) wollen wir ersetzen.
@@ -24,6 +39,11 @@
     return new Promise(res=>setTimeout(res, Math.floor(min + Math.random()*(max-min))));
   }
   function log(...a){ if (DEBUG) console.debug("[Protecto-fbq-stub]",...a); }
+
+  function defGlobal(obj, key, value){
+    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
+    catch { obj[key] = value; }
+  }
 
   function recordEvent(name, params){
     try {
@@ -78,14 +98,25 @@
         return Promise.resolve(true);
       }
 
-      case "track": // fbq('track', 'PageView', {...})
-      case "trackCustom": {
-        const name = args[1] || "event";
-        const params = args[2] || {};
+      case "addPixelId": { // fbq('addPixelId', 'PIXEL') – attach extra pixel
+        const pid = args[1];
+        if (pid) state.pixels[pid] = state.pixels[pid] || { id: pid, options:{}, enabled:true, created: Date.now() };
+        await jitter();
+        log("addPixelId", pid);
+        return Promise.resolve(true);
+      }
+
+      case "track":       // fbq('track', 'PageView', {...})
+      case "trackSingle": // fbq('trackSingle', 'PIXEL', 'Event', {...})
+      case "trackCustom":
+      case "trackSingleCustom": {
+        const isSingle = cmd === "trackSingle" || cmd === "trackSingleCustom";
+        const name = isSingle ? (args[2] || "event") : (args[1] || "event");
+        const params = isSingle ? (args[3] || {}) : (args[2] || {});
         recordEvent(name, params);
         await jitter();
-        log("track", name, params);
-        return Promise.resolve(true); // pretend success
+        log(cmd, name, params);
+        return Promise.resolve(true);
       }
 
       case "consent": { // fbq('consent', 'grant'|'revoke')
@@ -160,6 +191,17 @@
   try { window._fbq.push = function(){ return true; }; } catch {}
   window.fbq = FBQ;
 
+  // Stealth: native-like toString & non-enumerable globals
+  try { FBQ.toString = nativeFn('fbq'); } catch {}
+  try { FBQ.push.toString = nativeFn('push'); } catch {}
+  defGlobal(window, 'fbq', FBQ);
+
+  // Ensure _fbq exists as array-queue for theme bootstraps
+  if (!Array.isArray(window._fbq)) window._fbq = [];
+  try {
+    Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:false, configurable:false });
+  } catch { window._fbq.push = function(){ return true; }; }
+
   // Vorbestehende Queue-Aufrufe (vom Bootstrapping) nachträglich abarbeiten
   (async () => {
     if (preQueue && preQueue.length) {
@@ -167,6 +209,10 @@
         try { await FBQ.callMethod.apply(FBQ, args); } catch {}
       }
       try { FBQ.queue = []; } catch {}
+      try { if (window.fbq && Array.isArray(window.fbq.queue)) window.fbq.queue.length = 0; } catch {}
+      try { if (Array.isArray(window._fbq)) window._fbq.length = 0; } catch {}
     }
   })();
+
+  try { FBQ.getState.toString = nativeFn('getState'); } catch {}
 })();

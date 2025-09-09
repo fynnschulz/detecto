@@ -10,6 +10,15 @@
 (function () {
   'use strict';
 
+  // Idempotenz & Stealth-Helpers
+  if (window.__PROTECTO_GENERIC__) return;
+  window.__PROTECTO_GENERIC__ = true;
+  function nativeFn(name){ return function(){ return `function ${name}() { [native code] }`; }; }
+  function defGlobal(obj, key, value){
+    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
+    catch { obj[key] = value; }
+  }
+
   // ==== Mini-Utils ===========================================================
   function randInt(min, max) {
     return Math.floor(min + Math.random() * (max - min + 1));
@@ -55,6 +64,11 @@
 
       const proxy = [];
       proxy.push = dlPush;
+      try { proxy.push.toString = nativeFn('push'); } catch {}
+      try {
+        const desc = Object.getOwnPropertyDescriptor(proxy, 'push') || { value: proxy.push };
+        Object.defineProperty(proxy, 'push', { value: desc.value, writable:false, configurable:false, enumerable:false });
+      } catch {}
 
       // Lesezugriff auf aktuellen Snapshot
       Object.defineProperty(proxy, '__dump', {
@@ -62,6 +76,9 @@
         enumerable: false,
         get: () => buffer.slice()
       });
+      try {
+        Object.defineProperty(proxy, 'length', { get: () => buffer.length, enumerable:false, configurable:false });
+      } catch {}
 
       safeGlobal('dataLayer', () => proxy);
     } catch { /* ignore */ }
@@ -89,6 +106,30 @@
     } catch { /* ignore */ }
   }
 
+  // ==== Leichte Global-Shims (generisch) – keine Netzaktivität =================
+  // gtag Boot-Stub (falls GTM/GA-Stubs nicht geladen wurden)
+  if (typeof window.gtag !== 'function') {
+    const q = [];
+    function gtag(){ q.push([].slice.call(arguments)); }
+    gtag.q = q;
+    try { gtag.toString = nativeFn('gtag'); } catch {}
+    defGlobal(window, 'gtag', gtag);
+  }
+
+  // _gaq / _paq – alte Tracker-Queues, nur No-Op push
+  if (!Array.isArray(window._gaq)) {
+    defGlobal(window, '_gaq', []);
+  }
+  try { Object.defineProperty(window._gaq, 'push', { value: function(){ return true; }, writable:false, configurable:false }); } catch { window._gaq.push = function(){ return true; }; }
+
+  if (!Array.isArray(window._paq)) {
+    defGlobal(window, '_paq', []);
+  }
+  try { Object.defineProperty(window._paq, 'push', { value: function(){ return true; }, writable:false, configurable:false }); } catch { window._paq.push = function(){ return true; }; }
+
+  // Häufige Namespace-Objekte
+  if (typeof window.adservice !== 'object') defGlobal(window, 'adservice', {});
+
   // ==== Dummy-Cookie (nur in-memory, kein echter Cookie) =====================
   // Für Themes/Skripte, die nur „existiert ga“ etc. prüfen – KEIN echtes Set-Cookie.
   const fakeCookieJar = new Map();
@@ -110,9 +151,12 @@
     consentSignal,
     setFakeCookie,
     getFakeCookie,
-    MAX_EVENTS
+    MAX_EVENTS,
+    nativeFn,
+    defGlobal
   }));
 
   // Sofort sinnvolle Defaults vorbereiten
   exposeDataLayer();
+  try { window.__protectoStub.toString = nativeFn('__protectoStub'); } catch {}
 })();

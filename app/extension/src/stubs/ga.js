@@ -3,10 +3,18 @@
 (function(){
   "use strict";
 
-  // Wenn schon eine "echte" GA-API existiert (mit getAll), nicht überschreiben.
-  // Die reine Queue-Stub (ga.q vorhanden, aber kein getAll) wollen wir ersetzen.
-  if (typeof window.ga === 'function' && typeof window.ga.getAll === 'function') {
-    return;
+  // Idempotenz & Stealth-Helpers
+  if (window.__PROTECTO_GA__) return; 
+  window.__PROTECTO_GA__ = true;
+  function nativeFn(name){ return function(){ return `function ${name}() { [native code] }`; }; }
+  function defGlobal(obj, key, value){
+    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
+    catch { obj[key] = value; }
+  }
+
+  // Echte analytics.js nicht überschreiben – aber Boot-Snippet (ga.q) sehr wohl
+  if (typeof window.ga === 'function' && typeof window.ga.getAll === 'function' && Array.isArray(window.ga.getAll())) {
+    return; // echtes GA geladen
   }
 
   const DEBUG = false; // bei Bedarf true schalten für lokale Logs
@@ -15,7 +23,10 @@
   window.GoogleAnalyticsObject = 'ga';
 
   // Bereits vorhandene Queue-Aufrufe vom GA-Snippet abgreifen
-  const preQueuedCalls = (window.ga && Array.isArray(window.ga.q)) ? window.ga.q.slice() : [];
+  const preQueuedCalls = [];
+  try { if (window.ga && Array.isArray(window.ga.q)) preQueuedCalls.push(...window.ga.q); } catch {}
+  try { if (window[window.GoogleAnalyticsObject] && Array.isArray(window[window.GoogleAnalyticsObject].q)) preQueuedCalls.push(...window[window.GoogleAnalyticsObject].q); } catch {}
+  try { if (Array.isArray(window._gaq)) preQueuedCalls.push(...window._gaq); } catch {}
 
   // Interner Zustand
   const state = {
@@ -24,6 +35,8 @@
     callbacks: [],            // ga(function(){ ... })
     defaultName: 't0',
     startedAt: Date.now()
+    , plugins: new Set()
+    , linker: { autoLink: [] }
   };
 
   // kleine zufällige Verzögerung für realistischeres Timing
@@ -62,7 +75,6 @@
         return this.fieldsObject[fieldName];
       },
       async send(hitType, hitFields){
-        // Varianten: tr.send('pageview'|'event'|..., fields) oder ga('send', { hitType: 'event', ... })
         const extra = (hitFields && typeof hitFields === 'object') ? hitFields : {};
         const payload = {
           t: hitType || (extra.hitType || 'pageview'),
@@ -70,15 +82,16 @@
           tracker: this.name,
           tid: this.trackingId,
           cid: this.fieldsObject.clientId || '555.0',
-          dl: document.location.href,
-          dt: document.title,
+          dl: document.location && document.location.href || '',
+          dt: document.title || '',
           ...this.fieldsObject,
           ...extra
         };
         state.hits.push(payload);
         if (DEBUG) console.log('[Protecto GA Stub] hit', payload);
-        await jitter(); // so tun, als würde ein Beacon gesendet
+        await jitter();
         this._lastSend = payload.ts;
+        try { if (typeof extra.hitCallback === 'function') extra.hitCallback(); } catch {}
         return true;
       }
     };
@@ -116,6 +129,7 @@
         if (method === 'send') return Promise.resolve(tr.send(a1, a2));
         if (method === 'set')  return Promise.resolve(tr.set(a1, a2));
         if (method === 'get')  return Promise.resolve(tr.get(a1));
+        if (method === 'require') { state.plugins.add(a1); return Promise.resolve(true); }
         return Promise.resolve(true);
       }
 
@@ -143,6 +157,13 @@
         }
         case 'remove':
           return Promise.resolve(true); // no-op
+        case 'provide': // ga('provide', 'pluginName', fn)
+          if (typeof a1 === 'string') state.plugins.add(a1);
+          return Promise.resolve(true);
+        case 'require': // ga('require', 'pluginName' [, options])
+          if (typeof a1 === 'string') state.plugins.add(a1);
+          if (a1 === 'linker' && a2 && a2.autoLink) state.linker.autoLink = [].concat(a2.autoLink);
+          return Promise.resolve(true);
         default:
           if (DEBUG) console.log('[Protecto GA Stub] unknown command:', command, a1, a2, a3);
           return Promise.resolve(true);
@@ -160,6 +181,9 @@
   ga.getAll = () => getAllTrackers();
   ga.getByName = (n) => getTrackerByName(n);
 
+  try { ga.toString = nativeFn('ga'); } catch {}
+  defGlobal(window, 'ga', ga);
+
   // Zusätzliche No-Ops für Kompatibilität
   ga.require = function() { return true; };
   ga.remove = function() { return true; };
@@ -170,14 +194,19 @@
   // Kompatibilität: ga.q als leeres Array bereitstellen (einige Themes checken das)
   try { window.ga.q = []; } catch {}
 
+  if (!Array.isArray(window._gaq)) window._gaq = [];
+  try { Object.defineProperty(window._gaq, 'push', { value: function(){ return true; }, writable:false, configurable:false }); } catch { window._gaq.push = function(){ return true; }; }
+
   // Vorher gequeue’te Aufrufe (vom Bootstrap-Snippet) nachträglich abarbeiten
   (async () => {
     if (preQueuedCalls && preQueuedCalls.length) {
       for (const args of preQueuedCalls) {
-        try {
-          await ga.apply(null, args);
-        } catch {}
+        try { await ga.apply(null, args); } catch {}
       }
+      try { if (window.ga && Array.isArray(window.ga.q)) window.ga.q.length = 0; } catch {}
+      try { if (Array.isArray(window._gaq)) window._gaq.length = 0; } catch {}
     }
   })();
+
+  try { ga.getAll.toString = nativeFn('getAll'); } catch {}
 })();

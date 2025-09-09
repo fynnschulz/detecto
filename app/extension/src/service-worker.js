@@ -302,6 +302,30 @@ async function applyPolicyForDomain(domain, policy) {
       action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
       condition: { initiatorDomains: [domain], urlFilter: "/beacon", resourceTypes: ["image","xmlhttprequest","ping"] }
     });
+
+    // Doubleclick & Googlesyndication scripts → hard NOOP (close "Durchläufer" gap)
+    addRules.push({
+      id: 2026, priority: 1,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: { initiatorDomains: [domain], urlFilter: "doubleclick.net", resourceTypes: ["script"] }
+    });
+    addRules.push({
+      id: 2027, priority: 1,
+      action: { type: "redirect", redirect: { url: NOOP_JS } },
+      condition: { initiatorDomains: [domain], urlFilter: "googlesyndication.com", resourceTypes: ["script"] }
+    });
+
+    // Zusätzliche generische Beacons (einige Anbieter weichen /collect aus)
+    addRules.push({
+      id: 2028, priority: 1,
+      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
+      condition: { initiatorDomains: [domain], urlFilter: "/track", resourceTypes: ["image","xmlhttprequest","ping"] }
+    });
+    addRules.push({
+      id: 2029, priority: 1,
+      action: { type: "redirect", redirect: { url: ONE_BY_ONE } },
+      condition: { initiatorDomains: [domain], urlFilter: "/event", resourceTypes: ["image","xmlhttprequest","ping"] }
+    });
   }
 
   // --- SOFT: nur GA/FBQ; Logins/Consent erlauben ---

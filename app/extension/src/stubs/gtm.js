@@ -1,6 +1,15 @@
 (function(){
   "use strict";
 
+  // Idempotenz & Stealth-Helpers
+  if (window.__PROTECTO_GTM__) return;
+  window.__PROTECTO_GTM__ = true;
+  function nativeFn(name){ return function(){ return `function ${name}() { [native code] }`; }; }
+  function defGlobal(obj, key, value){
+    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
+    catch { obj[key] = value; }
+  }
+
   // If a real GTM/GA is present, do nothing (fail-safe)
   if ((typeof window.gtag === "function" && Array.isArray(window.dataLayer)) || window.gaRealLoaded) return;
 
@@ -46,12 +55,21 @@
       }
     }, 10 + Math.floor(Math.random()*40));
 
+    try {
+      if (Array.isArray(window.gtag && window.gtag.q)) {
+        for (const args of window.gtag.q) { _gtag.apply(null, args); }
+        window.gtag.q.length = 0;
+      }
+    } catch {}
+
     return originalPush.apply(dataLayer, args);
   };
 
   dataLayer.onEvent = function(cb){
     if (typeof cb === "function") _state.callbacks.push(cb);
   };
+
+  try { dataLayer.push.toString = nativeFn('push'); } catch {}
 
   // GTM bootstrap events (commonly observed)
   try {
@@ -72,6 +90,8 @@
     ...gtmContainers
   }));
 
+  try { window.google_tag_manager.toString = nativeFn('google_tag_manager'); } catch {}
+
   // --- gtag facade --------------------------------------------------------
   // Keeps minimal state for config/consent/events
   const _gtag = function(){
@@ -80,20 +100,18 @@
       const [cmd, a1, a2] = args;
       switch (String(cmd || "").toLowerCase()) {
         case "js":
-          // gtag('js', new Date())
-          // no-op
           break;
         case "config":
-          // gtag('config','G-XXXX',{...})
           dataLayer.push({ event: "gtag.config", id: a1, params: a2 || {} });
           break;
         case "event":
-          // gtag('event','name',{...})
           dataLayer.push({ event: a1 || "gtag.event", params: a2 || {} });
           break;
         case "consent":
-          // gtag('consent','update',{ ad_storage:'granted', ... })
           dataLayer.push({ event: "gtag.consent", action: a1, params: a2 || {} });
+          break;
+        case "set":
+          dataLayer.push({ event: "gtag.set", params: a1 || {} });
           break;
         default:
           dataLayer.push({ event: "gtag.call", args });
@@ -105,6 +123,11 @@
   if (typeof window.gtag !== "function") {
     safeGlobal("gtag", () => _gtag);
   }
+
+  if (window.gtag && !Array.isArray(window.gtag.q)) {
+    window.gtag.q = [];
+  }
+  try { window.gtag.toString = nativeFn('gtag'); } catch {}
 
   // --- Legacy ga() facade -------------------------------------------------
   // Old analytics.js compatibility
@@ -131,9 +154,8 @@
     return [fakeTracker];
   };
 
-  if (typeof window.ga !== "function") {
-    safeGlobal("ga", () => gaShim);
-  }
+  try { gaShim.toString = nativeFn('ga'); } catch {}
+  defGlobal(window, 'ga', gaShim);
 
   // --- Minor realism: short jitter on first calls ------------------------
   (async () => { try { await jitter(12, 35); } catch {} })();

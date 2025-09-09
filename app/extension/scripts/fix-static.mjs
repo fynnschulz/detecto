@@ -17,6 +17,80 @@ const INPUT  = path.join(__dirname, "../src/static-rules.json");
 const OUTPUT = path.join(__dirname, "../src/static-rules.fixed.json");
 const OUTTMP = OUTPUT + ".tmp";
 
+// --- Fallback-Regeln (werden am Ende angehängt, idempotent) ---
+const FALLBACK_RULES = [
+  // Scripts -> Stub (Doubleclick, Googlesyndication, Googleadservices)
+  {
+    id: 200201,
+    priority: 1,
+    condition: {
+      domainType: "thirdParty",
+      resourceTypes: ["script"],
+      regexFilter:
+        "https?:\\/\\/([^\\/]*\\.)?(doubleclick|googlesyndication|googleadservices)\\.[^\\/]+\\/",
+    },
+    action: { type: "redirect", redirect: { extensionPath: "/stubs/gtm.js" } },
+  },
+  // Images/Pings -> 1x1 GIF
+  {
+    id: 200202,
+    priority: 1,
+    condition: {
+      domainType: "thirdParty",
+      resourceTypes: ["image", "ping"],
+      regexFilter:
+        "https?:\\/\\/([^\\/]*\\.)?(doubleclick|googlesyndication|googleadservices)\\.[^\\/]+\\/",
+    },
+    action: {
+      type: "redirect",
+      redirect: {
+        url: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA", // 1x1 transparent
+      },
+    },
+  },
+  // Reine XHR/FETCH -> {} JSON
+  {
+    id: 200203,
+    priority: 1,
+    condition: {
+      domainType: "thirdParty",
+      resourceTypes: ["xmlhttprequest"],
+      regexFilter:
+        "https?:\\/\\/([^\\/]*\\.)?(doubleclick|googlesyndication|googleadservices)\\.[^\\/]+\\/",
+    },
+    action: { type: "redirect", redirect: { url: "data:application/json,{}" } },
+  },
+];
+
+function fileContainsId(txt, id) {
+  return txt.includes(`"id":${id}`);
+}
+
+function appendJsonArrayItems(filePath, items) {
+  let txt = fs.readFileSync(filePath, "utf8");
+
+  // Nur IDs einfügen, die noch nicht existieren (idempotent)
+  const toAdd = items.filter((r) => !fileContainsId(txt, r.id));
+  if (toAdd.length === 0) {
+    console.log("• Fallbacks: bereits vorhanden – nichts zu tun.");
+    return;
+  }
+
+  // Sicherstellen, dass die Datei wie ein Array endet
+  const trimmed = txt.trimEnd();
+  if (!trimmed.endsWith("]")) throw new Error("static-rules.fixed.json endet nicht mit ]");
+
+  // Schließende Klammer abtrennen
+  let base = trimmed.slice(0, trimmed.lastIndexOf("]"));
+  // Komma setzen, falls bereits Elemente vorhanden sind
+  const hasAnyElement = base.trimEnd().endsWith("[") === false;
+  const payload = toAdd.map((o) => JSON.stringify(o)).join(",");
+
+  const nextTxt = base + (hasAnyElement ? "," : "") + payload + "]\n";
+  fs.writeFileSync(filePath, nextTxt);
+  console.log(`• Fallbacks angehängt: +${toAdd.length} (IDs: ${toAdd.map((r) => r.id).join(", ")})`);
+}
+
 function human(n) { return new Intl.NumberFormat("de-DE").format(n); }
 
 (async function main() {
@@ -78,6 +152,9 @@ function human(n) { return new Intl.NumberFormat("de-DE").format(n); }
       console.error("❌ Konnte Temp-Datei nicht nach Output umbenennen:", e.message);
       process.exit(1);
     }
+
+    // Fallback-Regeln ans Ende anhängen (idempotent)
+    appendJsonArrayItems(OUTPUT, FALLBACK_RULES);
 
     const outStat = fs.statSync(OUTPUT);
     console.timeEnd("⏱  Fix-Dauer");

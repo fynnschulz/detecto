@@ -591,4 +591,128 @@
       }
     }
   }
+,
+  {
+    "id": 800100,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["script"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?doubleclick\\.net\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/stubs/gtm.js" } }
+  },
+  {
+    "id": 800101,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["image", "ping"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?doubleclick\\.net\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } }
+  },
+  {
+    "id": 800102,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["xmlhttprequest", "other"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?doubleclick\\.net\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
+  },
+  {
+    "id": 800103,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["sub_frame"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?doubleclick\\.net\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>" } }
+  },
+
+  {
+    "id": 800104,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["script"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?googlesyndication\\.com\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/stubs/gtm.js" } }
+  },
+  {
+    "id": 800105,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["image", "ping"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?googlesyndication\\.com\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } }
+  },
+  {
+    "id": 800106,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["xmlhttprequest", "other"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?googlesyndication\\.com\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
+  },
+  {
+    "id": 800107,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["sub_frame"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?googlesyndication\\.com\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>" } }
+  },
+
+  {
+    "id": 800108,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["script"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?googleadservices\\.com\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "extensionPath": "/stubs/gtm.js" } }
+  },
+  {
+    "id": 800109,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["image", "ping"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?googleadservices\\.com\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } }
+  },
+  {
+    "id": 800110,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["xmlhttprequest", "other"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?googleadservices\\.com\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:application/json,{}" } }
+  },
+  {
+    "id": 800111,
+    "priority": 2,
+    "condition": {
+      "domainType": "thirdParty",
+      "resourceTypes": ["sub_frame"],
+      "regexFilter": "^https?:\\/\\/([^\\/]*\\.)?googleadservices\\.com\\/"
+    },
+    "action": { "type": "redirect", "redirect": { "url": "data:text/html,<html><head><meta charset='utf-8'></head><body></body></html>" } }
+  }
+
 ]
