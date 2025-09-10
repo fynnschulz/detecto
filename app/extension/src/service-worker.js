@@ -633,7 +633,7 @@ function applyProtectoRules() {
   chrome.declarativeNetRequest.updateSessionRules({
     removeRuleIds: [
       1000, 1001, 1002, 1003, 1004, 1005, 1006,
-      1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018
+      1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020
     ],
     addRules: [
       // --- Big 4 ---
@@ -663,26 +663,38 @@ function applyProtectoRules() {
       },
       // --- Additional rules ---
       {
-        id: 1016,
-        priority: 1,
-        action: { type: "redirect", redirect: { extensionPath: "/stubs/fbq.js" } },
-        condition: { urlFilter: "connect.facebook.net", resourceTypes: ["script"] }
-      },
-      {
-        id: 1017,
-        priority: 1,
-        action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
-        condition: { urlFilter: "assets.adobedtm.com/launch", resourceTypes: ["script"] }
-      },
-      {
-        id: 1018,
-        priority: 1,
+        id: 1020,
+        priority: 100,
         action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
         condition: {
-          regexFilter: "(iqadcontroller|iqdcontroller)\\.js(\\.gz)?($|\\?)",
-          resourceTypes: ["script"]
+          regexFilter: "^https?:\\/\\/[^\\/]*assets\\.adobedtm\\.com\\/(?:.*?(?:launch-|satelliteLib-).*)\\.js(?:\\?.*)?$",
+          resourceTypes: ["script","xmlhttprequest","other"]
         }
       },
+      {
+  id: 1016,
+  priority: 1,
+  action: { type: "redirect", redirect: { extensionPath: "/stubs/fbq.js" } },
+  condition: { urlFilter: "connect.facebook.net", resourceTypes: ["script"] }
+},
+{
+  id: 1017,
+  priority: 1,
+  action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
+  condition: { urlFilter: "assets.adobedtm.com/launch-", resourceTypes: ["script"] }
+},
+{
+  id: 1018,
+  priority: 1,
+  action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
+  condition: { regexFilter: "(iqadcontroller|iqdcontroller)\\.js(\\.gz)?($|\\?)", resourceTypes: ["script"] }
+},
+{
+  id: 1019,
+  priority: 1,
+  action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
+  condition: { urlFilter: "assets.adobedtm.com/satelliteLib-", resourceTypes: ["script"] }
+},
       // --- Catch-All Tracker Patterns ---
       {
         id: 1004,
