@@ -14,7 +14,7 @@ const MAX_RULES   = 120000;                 // Chrome-bekömmlich
 const PER_HOST    = 2;                      // 1x script, 1x non-script
 const MAX_HOSTS   = Math.floor(MAX_RULES / PER_HOST);
 
-const STUB_PATH   = "/src/stubs/gtm.js";
+const STUB_PATH   = "/stubs/gtm.js";
 const GIF_1x1     = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA";
 const EMPTY_JSON  = "data:application/json,{}";
 

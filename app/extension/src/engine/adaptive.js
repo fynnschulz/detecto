@@ -32,7 +32,7 @@
 
   // --- Script-Stub ---------------------------------------------------------
   // GTM-Stub ist robust und emuliert viele gängige Tracker-Globals
-  const GENERIC_STUB = "/src/stubs/gtm.js";
+  const GENERIC_STUB = "/stubs/gtm.js";
   const GENERIC_SCRIPT_STUB = GENERIC_STUB; // alias für ältere Referenzen
 
   // --- IDs & Limits --------------------------------------------------------
@@ -183,7 +183,7 @@
   // Script → Stub; sonst → Data-URL (GIF/JSON)
   let action;
   if (t === "script") {
-    action = { type: "redirect", redirect: { extensionPath: "/src/stubs/gtm.js" } };
+    action = { type: "redirect", redirect: { extensionPath: "/stubs/gtm.js" } };
   } else if (t === "image" || t === "ping") {
     action = { type: "redirect", redirect: { url: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" } };
   } else {

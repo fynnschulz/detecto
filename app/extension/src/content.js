@@ -20,10 +20,10 @@
   const NONCE = getCspNonce();
 
   const stubScripts = [
-    'src/stubs/generic.js',
-    'src/stubs/gtm.js',
-    'src/stubs/ga.js',
-    'src/stubs/fbq.js'
+    '/stubs/generic.js',
+    '/stubs/gtm.js',
+    '/stubs/ga.js',
+    '/stubs/fbq.js'
   ];
   for (const stubPath of stubScripts) {
     try {

@@ -22,7 +22,7 @@ const MAX_RULES = 30000;         // statisches Budget anpeilen
 const TYPES_ALL = ["script","image","xmlhttprequest","fetch","ping"]; // 'beacon' wird als 'ping' gezählt
 // Mapping für Redirect-Ziele je Typ
 const REDIRECTS = {
-  script: { extensionPath: "/src/stubs/gtm.js" }, // generischer Stub (stelle sicher: web_accessible_resources!)
+  script: { extensionPath: "/stubs/gtm.js" }, // generischer Stub (stelle sicher: web_accessible_resources!)
   image:  { url: "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA" },
   xmlhttprequest: { url: "data:application/json,{}" },
   fetch:  { url: "data:application/json,{}" },
