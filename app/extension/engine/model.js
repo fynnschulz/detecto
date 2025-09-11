@@ -164,6 +164,14 @@ export function decide(url, type, initiatorHost) {
   if (["script","image","ping","xmlhttprequest"].includes(t)) score += 1;
   if (is3p) score += 1;
 
+  // Additional scoring for external seeds explicitly
+  // Check if host matches any external family domain
+  if (EXTERNAL.domains.some(d => suffixMatch(h, d))) score += 3;
+  // Check if path contains any external pattern
+  if (EXTERNAL.patterns.some(pat => u.includes(pat.toLowerCase()))) score += 2;
+  // Check if query contains any external query hint
+  if (EXTERNAL.queryHints.some(qh => qh && u.includes(qh.toLowerCase() + '='))) score += 1;
+
   const isJsLike = (t === 'script' || t === 'xmlhttprequest' || t === 'ping');
   const isTracker = (isJsLike && score >= T_SCRIPT) || (!isJsLike && score >= T_BEACON);
   if (!isTracker) return { isTracker: false, stub: null };
@@ -174,28 +182,84 @@ export function decide(url, type, initiatorHost) {
 }
 
 // Generiert eine eindeutige ID für neue Regeln
-let _nextRuleId = 1;
-export function nextRuleId() {
-  return _nextRuleId++;
+export async function nextRuleId() {
+  try {
+    const result = await chrome.storage.local.get(['nextRuleId']);
+    let currentId = result.nextRuleId;
+    if (typeof currentId !== 'number' || currentId < 2000) {
+      currentId = 2000;
+    }
+    const nextId = currentId;
+    await chrome.storage.local.set({ nextRuleId: nextId + 1 });
+    return nextId;
+  } catch {
+    // Fallback if chrome.storage is not available
+    if (!globalThis._fallbackRuleId) {
+      globalThis._fallbackRuleId = 2000;
+    }
+    return globalThis._fallbackRuleId++;
+  }
 }
 
+const ALLOWED_TYPES = ["script","xmlhttprequest","image","ping"];
+
 // Propose blocking rules für eine URL basierend auf der Entscheidung
-export function proposeRulesForUrl(url, type, initiatorHost) {
+export async function proposeRulesForUrl(url, type, initiatorHost) {
   const decision = decide(url, type, initiatorHost);
   if (!decision.isTracker) return [];
 
   const h = hostOf(url);
   const stub = decision.stub || 'generic';
 
-  // Beispiel-Regel: blockiere alle Requests an den Host
+  const safeType = (typeof type === 'string' && ALLOWED_TYPES.includes(type.toLowerCase())) ? type.toLowerCase() : "script";
+
+  // Beispiel-Regel: redirect to stub script
   const rule = {
-    id: nextRuleId(),
-    action: 'block',
+    id: await nextRuleId(),
+    action: { type: 'redirect', redirect: { extensionPath: `stubs/${stub}.js` } },
     condition: {
       urlFilter: `||${h}^`,
-      resourceTypes: [type || 'script']
+      resourceTypes: [safeType]
     },
     stub
   };
+  console.info("[Protecto][Rule] New rule persisted:", rule.condition?.regexFilter || rule.condition?.urlFilter);
   return [rule];
+}
+
+export function debugSeedsCheck(url) {
+  const u = String(url||'').toLowerCase();
+  const h = hostOf(url);
+  const matchedFamilies = [];
+  const matchedPatterns = [];
+  const matchedQueryHints = [];
+
+  // Check external families (domains)
+  for (const d of EXTERNAL.domains) {
+    if (suffixMatch(h, d.toLowerCase())) {
+      matchedFamilies.push(d);
+    }
+  }
+
+  // Check external patterns
+  for (const p of EXTERNAL.patterns) {
+    if (u.includes(p.toLowerCase())) {
+      matchedPatterns.push(p);
+    }
+  }
+
+  // Check external query hints
+  for (const qh of EXTERNAL.queryHints) {
+    if (qh && u.includes(qh.toLowerCase() + '=')) {
+      matchedQueryHints.push(qh);
+    }
+  }
+
+  return {
+    url: url,
+    host: h,
+    matchedFamilies,
+    matchedPatterns,
+    matchedQueryHints
+  };
 }

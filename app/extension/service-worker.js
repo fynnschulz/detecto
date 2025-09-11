@@ -2,7 +2,7 @@
 // Stealth: Heuristik/KI → DNR Redirect (Stub-Datei) → Ziel sieht 200 OK
 // Learning-Cache: Hosts → Session/Dynamic Rules
 
-import { classify, setExternalSeeds, decide, proposeRulesForUrl } from './engine/model.js';
+import { classify, setExternalSeeds, decide, proposeRulesForUrl, nextRuleId } from './engine/model.js';
 import { getLearned, remember, ensureDnrRule, stubToPath, restorePersistedRules } from './engine/learn.js';
 
 // ---------- Config ----------
@@ -10,8 +10,15 @@ const LEARN_MIN_SEEN_FOR_DNR = 3;
 const SESSION_RULE_ID_BASE = 20000;
 const SESSION_RULE_ID_MAX = 20999;
 
+
 const RT_ALL = ['script', 'xmlhttprequest', 'image', 'ping'];
 const RT_JS = ['script', 'xmlhttprequest', 'ping'];
+
+// Only allow these resource types in rules.
+function sanitizeResourceTypes(types){
+  const ALLOWED = new Set(["script","xmlhttprequest","image","ping"]);
+  return (types||[]).map(t => t.toLowerCase()).filter(t => ALLOWED.has(t));
+}
 
 // ---------- Utils ----------
 const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./,''); } catch { return ''; } };
@@ -41,8 +48,10 @@ async function loadSeedsIntoModel() {
     const seeds = await fetch(url).then(r => r.json());
     if (typeof setExternalSeeds === 'function') {
       setExternalSeeds(seeds);
+      console.info('[Protecto][Seeds] Loaded families:', Object.keys(seeds.families).length);
     } else if (self && typeof self.setExternalSeeds === 'function') {
       self.setExternalSeeds(seeds);
+      console.info('[Protecto][Seeds] Loaded families:', Object.keys(seeds.families).length);
     }
   } catch (e) {
     console.warn('[Protecto][Seeds] load failed', e);
@@ -85,7 +94,7 @@ function buildHeuristicRulesForDomain(domain) {
   for (const df of trackers) {
     rules.push({
       id: id(cursor++), priority: 1,
-      condition: { initiatorDomains: init, urlFilter: df, resourceTypes: RT_JS },
+      condition: { initiatorDomains: init, urlFilter: df, resourceTypes: sanitizeResourceTypes(RT_JS) },
       action: { type: 'redirect', redirect: { extensionPath: stubToPath(df) || '/stubs/generic.js' } }
     });
   }
@@ -99,7 +108,7 @@ function buildHeuristicRulesForDomain(domain) {
   for (const pf of patterns) {
     rules.push({
       id: id(cursor++), priority: 1,
-      condition: { initiatorDomains: init, urlFilter: pf, resourceTypes: RT_JS },
+      condition: { initiatorDomains: init, urlFilter: pf, resourceTypes: sanitizeResourceTypes(RT_JS) },
       action: { type: 'redirect', redirect: { extensionPath: '/stubs/generic.js' } }
     });
   }
@@ -112,7 +121,7 @@ function buildHeuristicRulesForDomain(domain) {
   for (const path of pixelPaths) {
     rules.push({
       id: id(cursor++), priority: 1,
-      condition: { initiatorDomains: init, urlFilter: path, resourceTypes: ['image', 'ping'] },
+      condition: { initiatorDomains: init, urlFilter: path, resourceTypes: sanitizeResourceTypes(['image', 'ping']) },
       action: { type: 'redirect', redirect: { url: ONE_BY_ONE_GIF } }
     });
   }
@@ -122,7 +131,7 @@ function buildHeuristicRulesForDomain(domain) {
   for (const path of xhrBeaconHints) {
     rules.push({
       id: id(cursor++), priority: 1,
-      condition: { initiatorDomains: init, urlFilter: path, resourceTypes: ['xmlhttprequest'] },
+      condition: { initiatorDomains: init, urlFilter: path, resourceTypes: sanitizeResourceTypes(['xmlhttprequest']) },
       action: { type: 'redirect', redirect: { url: EMPTY_JSON } }
     });
   }
@@ -132,12 +141,12 @@ function buildHeuristicRulesForDomain(domain) {
   for (const hint of queryHints) {
     rules.push({
       id: id(cursor++), priority: 1,
-      condition: { initiatorDomains: init, urlFilter: hint, resourceTypes: ['image', 'ping'] },
+      condition: { initiatorDomains: init, urlFilter: hint, resourceTypes: sanitizeResourceTypes(['image', 'ping']) },
       action: { type: 'redirect', redirect: { url: ONE_BY_ONE_GIF } }
     });
     rules.push({
       id: id(cursor++), priority: 1,
-      condition: { initiatorDomains: init, urlFilter: hint, resourceTypes: ['xmlhttprequest'] },
+      condition: { initiatorDomains: init, urlFilter: hint, resourceTypes: sanitizeResourceTypes(['xmlhttprequest']) },
       action: { type: 'redirect', redirect: { url: EMPTY_JSON } }
     });
   }
@@ -174,7 +183,7 @@ async function applySessionRulesForTab(tab) {
       if (nextId > maxId) break; // stop if we run out of ID space
       learnedRules.push({
         id: nextId++, priority: 1,
-        condition: { initiatorDomains: [pageHost], urlFilter: host, resourceTypes: RT_ALL },
+        condition: { initiatorDomains: [pageHost], urlFilter: host, resourceTypes: sanitizeResourceTypes(RT_ALL) },
         action: { type: 'redirect', redirect: { extensionPath: stubToPath(ent.stub) || '/stubs/generic.js' } }
       });
     }
@@ -402,7 +411,7 @@ async function ensureBaselineDynamicRules() {
       action: { type: "redirect", redirect: { extensionPath: `/stubs/${stub}.js` } },
       condition: {
         regexFilter: `^https?:\\/\\/([^\\/]*\\.)?${f.host.replace(/\./g,"\\.")}\\/.*`,
-        resourceTypes: f.types
+        resourceTypes: sanitizeResourceTypes(f.types)
       }
     });
   }
@@ -417,7 +426,7 @@ async function ensureBaselineDynamicRules() {
       action: { type: "redirect", redirect: { extensionPath: `/stubs/${stub}.js` } },
       condition: {
         urlFilter: p.path,
-        resourceTypes: ["script"]
+        resourceTypes: sanitizeResourceTypes(["script"])
       }
     });
   }
@@ -440,19 +449,19 @@ async function ensureStartupSessionCatchalls() {
       action: { type: "redirect", redirect: { url: ONE_BY_ONE_GIF } },
       condition: {
         regexFilter: "https?:\\/\\/[^\\/]+\\/(collect|pixel|beacon|stats|metrics|track|tracking|measure|log)(\\?|\\/|$)",
-        resourceTypes: ["image","ping","xmlhttprequest"]
+        resourceTypes: sanitizeResourceTypes(["image","ping","xmlhttprequest"])
       }
     },
     // Sicherheitsnetz für Script-Pfade (falls Domain-Familie nicht griff)
     {
       id: base + 2, priority: 1,
       action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
-      condition: { urlFilter: "/pixel",   resourceTypes: ["script"] }
+      condition: { urlFilter: "/pixel",   resourceTypes: sanitizeResourceTypes(["script"]) }
     },
     {
       id: base + 3, priority: 1,
       action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
-      condition: { urlFilter: "/collect", resourceTypes: ["script"] }
+      condition: { urlFilter: "/collect", resourceTypes: sanitizeResourceTypes(["script"]) }
     }
   ];
 
@@ -485,6 +494,12 @@ async function bumpLearnCounters(rules){
 
 async function addSessionRules(rules){
   if (!rules || !rules.length) return;
+  // Ensure every rule has a unique ID using nextRuleId if missing
+  for (let r of rules) {
+    if (typeof r.id === "undefined" || r.id === null) {
+      r.id = await nextRuleId();
+    }
+  }
   const ids = rules.map(r => r.id);
   await chrome.declarativeNetRequest.updateSessionRules({ removeRuleIds: ids, addRules: rules });
 }
@@ -493,6 +508,10 @@ async function addDynamicRules(rules){
   if (!rules || !rules.length) return;
   const ids = rules.map(r => r.id);
   await chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: ids, addRules: rules });
+  // Log each persisted rule
+  for (const r of rules) {
+    console.info("[Protecto][Rule] New rule persisted:", r.condition?.regexFilter || r.condition?.urlFilter);
+  }
 }
 
 // Non-blocking (MV3-konform): entscheidet & lernt, ohne den Request zu blockieren
@@ -513,6 +532,13 @@ chrome.webRequest.onBeforeRequest.addListener(async (details) => {
   const rules = await proposeRulesForUrl(url, type, initiatorHost);
   if (!rules.length) return;
 
+  // Ensure each rule has a unique ID using nextRuleId
+  for (let r of rules) {
+    if (typeof r.id === "undefined" || r.id === null) {
+      r.id = await nextRuleId();
+    }
+  }
+
   await addSessionRules(rules);
 
   // Lernen & (ab stabil) persistieren
@@ -520,6 +546,10 @@ chrome.webRequest.onBeforeRequest.addListener(async (details) => {
   for (const r of rules){
     const k = ruleKeyFromRule(r);
     if (counters[k] >= LEARN_MIN_FOR_PERSIST) {
+      // Ensure unique id for dynamic rules as well
+      if (typeof r.id === "undefined" || r.id === null) {
+        r.id = await nextRuleId();
+      }
       await addDynamicRules([r]);
     }
   }
