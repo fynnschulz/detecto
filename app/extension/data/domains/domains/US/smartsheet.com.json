@@ -1,0 +1,88 @@
+{
+    "domain": "smartsheet.com",
+    "owner": {
+        "name": "Smartsheet Inc.",
+        "displayName": "Smartsheet"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "forms"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "smartsheet\\.com\\/assets\\/forms-ui-submit-app\\/bundle\\/main\\.1754939548042\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "forms"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4b348817dcba0898c25eae08759b04faea226bac11bbb4f9a9ad8c89fa193a5d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "osgtool.com",
+                "www.supershuttle.com"
+            ]
+        },
+        {
+            "rule": "smartsheet\\.com\\/assets\\/forms-ui-submit-app\\/bundle\\/main\\.1754939548042\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "forms"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "window.devicePixelRatio": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "20f4ca1add4cfc3e2a45e25bbd0482c7ff88a6af0443b9d66fdbd676aee41a89"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "osgtool.com",
+                "www.supershuttle.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Stylesheet": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-696.awsdns-23.net",
+        "ns-479.awsdns-59.com",
+        "ns-1053.awsdns-03.org",
+        "ns-1673.awsdns-17.co.uk"
+    ]
+}

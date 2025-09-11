@@ -1,0 +1,506 @@
+{
+    "domain": "useinsider.com",
+    "owner": {
+        "name": "Sosyo Plus Bilgi Bilişim Tekn. Dan. Hiz. Tic. A.Ş.",
+        "displayName": "Insider"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000805,
+    "sites": 8,
+    "subdomains": [
+        "seasaltcornwall.api",
+        "euronewsfr.api",
+        "instantprint.api",
+        "londonlutonairport.api",
+        "thy.api",
+        "singaporeairlines.api",
+        "assets.api",
+        "eitri.api",
+        "carrier",
+        "ucd-web.api",
+        "locationv2.api",
+        "log.api",
+        "hit.api",
+        "recommendationv2.api",
+        "falcon",
+        "aryuder.api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "useinsider\\.com\\/ins\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "seasaltcornwall.api",
+                "euronewsfr.api",
+                "instantprint.api",
+                "londonlutonairport.api",
+                "thy.api"
+            ],
+            "apis": {
+                "window.localStorage": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Navigator.prototype.vendor": 6,
+                "Date.prototype.getTime": 6,
+                "Document.cookie getter": 4,
+                "Navigator.prototype.maxTouchPoints": 5,
+                "window.sessionStorage": 5,
+                "window.innerWidth": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
+                "Element.prototype.getClientRects": 1,
+                "window.outerHeight": 1,
+                "Navigator.prototype.permissions": 2,
+                "window.indexedDB": 2,
+                "Notification.permission": 2,
+                "Navigator.prototype.webkitTemporaryStorage": 2,
+                "Performance.prototype.memory": 2
+            },
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "b7ae78b234aaeb27f99f8f711159f2215a0881727739c99dca9d29a185eeacef",
+                "c6ebde85721694ec2493ee202dcdc0470e8944517c0f59573bfc744b070ea9ab",
+                "785f78eae9e5f0bf4af45a06140a0f186f64b1c1761574c5eca0bfcfba137abc",
+                "827446fd38b2dcb43ab06888c2c9881ed94b988e3c97e82e9494fadb5ea9e1ea",
+                "663eadccce6511b3c2af4990b2def71bbf0c33f76c2e64eaf73d784888551def"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seasaltcornwall.com",
+                "www.euronews.com",
+                "www.instantprint.co.uk",
+                "www.london-luton.co.uk",
+                "www.seasaltcornwall.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/worker-new\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "seasaltcornwall.api",
+                "euronewsfr.api",
+                "instantprint.api",
+                "londonlutonairport.api",
+                "singaporeairlines.api",
+                "thy.api"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 7,
+                "window.localStorage": 6,
+                "window.name": 2,
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 3
+            },
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "d84976707d45c775e06064fa2fc8af50bc7e95a925e9336130c304769788d0ba"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seasaltcornwall.com",
+                "www.euronews.com",
+                "www.instantprint.co.uk",
+                "www.london-luton.co.uk",
+                "www.seasaltcornwall.com",
+                "www.singaporeair.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/css\\/responsive-layout\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "6176159515bc5a6d5140731dad89ef228a48152a125f47db77df4335c19844d1"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seasaltcornwall.com",
+                "www.instantprint.co.uk",
+                "www.seasaltcornwall.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/css\\/info\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "53efdc6e8bbe11e25212d2312a298d82ff126f4b1a13b0434e62879c0c719e88"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seasaltcornwall.com",
+                "www.instantprint.co.uk",
+                "www.seasaltcornwall.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/static\\/info\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eitri.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "424de2ca01729b1c9c942322ca890daf29fa1ca7633c1e97cd3905bb56144a14"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seasaltcornwall.com",
+                "www.instantprint.co.uk",
+                "www.seasaltcornwall.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/api\\/info\\/12287\\.24",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "seasaltcornwall.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c550ab0f79ce1bd8f6eb6c1e534de734e6ed0b25b5de5e2e5a95f1eb6dfe252a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seasaltcornwall.com",
+                "www.seasaltcornwall.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/y\\/v2\\/z",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "carrier"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "instantprint.co.uk",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/y\\/v2\\/z",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "carrier"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f9e73fb191ca41769b8c9241bb8c9c26d51dc4ab7b54aebe20e3a7c964ea2fa5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "instantprint.co.uk",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v1\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ucd-web.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "afd2da1c199240c2ac8f238b4dc29e287c0ed28b12d9ff1adfaa422b92dcf38a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "instantprint.co.uk",
+                "www.london-luton.co.uk"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v1\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ucd-web.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "instantprint.co.uk",
+                "www.london-luton.co.uk"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "locationv2.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "77e6776f706c2770a3506068995b7aeb6265e46e43492dce91a51afdb1613844",
+                "c3ae12251a2847d1ab2b659a2313840da98af5fc5922e243c1e1ce007d05409c",
+                "1c13de3abf45d99be08ebb25ccafe10604b0a166334e0934fdd4937323374dcf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "instantprint.co.uk",
+                "www.london-luton.co.uk",
+                "www.singaporeair.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v2\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "instantprint.co.uk",
+                "www.instantprint.co.uk",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/hit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hit.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "instantprint.co.uk",
+                "www.london-luton.co.uk",
+                "www.singaporeair.com",
+                "www.turkishairlines.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v2\\/most-popular",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recommendationv2.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b099858e6360015b16582c69c9a8c5dac1e70ff568e0de6e7de0f74c8f84fe61"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "instantprint.co.uk",
+                "www.instantprint.co.uk"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/api\\/v1\\/contact-profile\\/get\\/singaporeairlines",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "falcon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "947884f103ed676be52706ad94e2a80b7b3bd8c0fe5eb2500ad1c0bd221a9a59"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/api\\/v1\\/contact-profile\\/get\\/singaporeairlines",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "falcon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v3\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aryuder.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v3\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aryuder.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8694259e1f725040d369f69f4ee4c8f7e7055364c8916c3be6908ecf14694968"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5172413793103449
+        },
+        {
+            "domain": "gbqofs.com",
+            "prevalence": 0.41379310344827586
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.06896551724137931
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Document": 7,
+        "Stylesheet": 6,
+        "XHR": 20,
+        "Preflight": 8,
+        "Image": 3
+    },
+    "nameservers": [
+        "eric.ns.cloudflare.com",
+        "eva.ns.cloudflare.com"
+    ]
+}

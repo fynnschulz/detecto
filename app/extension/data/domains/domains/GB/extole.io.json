@@ -1,0 +1,83 @@
+{
+    "domain": "extole.io",
+    "owner": {
+        "name": "Extole",
+        "displayName": "Extole"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "udemy",
+        "zipcar"
+    ],
+    "cnames": [
+        {
+            "original": "refer.udemy.com",
+            "resolved": "udemy.extole.io"
+        },
+        {
+            "original": "refer.zipcar.com",
+            "resolved": "zipcar.extole.io"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "extole\\.io\\/core\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "udemy",
+                "zipcar"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "refer.udemy.com",
+                    "resolved": "udemy.extole.io"
+                },
+                {
+                    "original": "refer.zipcar.com",
+                    "resolved": "zipcar.extole.io"
+                }
+            ],
+            "responseHashes": [
+                "5446970b1d8cec740b2bd1205f03abbfa24d0b894f6cb214481c427cea6467b7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "udemy.com",
+                "www.zipcar.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "fullstory.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-603.awsdns-11.net",
+        "ns-1867.awsdns-41.co.uk",
+        "ns-231.awsdns-28.com",
+        "ns-1510.awsdns-60.org"
+    ]
+}

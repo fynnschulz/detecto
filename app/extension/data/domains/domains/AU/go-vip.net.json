@@ -1,0 +1,2033 @@
+{
+    "domain": "go-vip.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.00222,
+    "sites": 22,
+    "subdomains": [
+        "aleteia",
+        "time-com",
+        "nasa-tv",
+        "bodyandsoul",
+        "private-media-core",
+        "foxsports",
+        "gq",
+        "vogue",
+        "skynews",
+        "voxmedia-vox",
+        "wgb-zenith"
+    ],
+    "cnames": [
+        {
+            "original": "admin.wellandgood.com",
+            "resolved": "wgb-zenith.go-vip.net"
+        },
+        {
+            "original": "api.time.com",
+            "resolved": "time-com.go-vip.net"
+        },
+        {
+            "original": "assets.crikey.com.au",
+            "resolved": "private-media-core.go-vip.net"
+        },
+        {
+            "original": "assets.smartcompany.com.au",
+            "resolved": "private-media-core.go-vip.net"
+        },
+        {
+            "original": "assets.themandarin.com.au",
+            "resolved": "private-media-core.go-vip.net"
+        },
+        {
+            "original": "origin.bodyandsoul.com.au",
+            "resolved": "bodyandsoul.go-vip.net"
+        },
+        {
+            "original": "origin.go.foxsports.com.au",
+            "resolved": "foxsports.go-vip.net"
+        },
+        {
+            "original": "origin.go.gq.com.au",
+            "resolved": "gq.go-vip.net"
+        },
+        {
+            "original": "origin.go.skynews.com.au",
+            "resolved": "skynews.go-vip.net"
+        },
+        {
+            "original": "origin.go.vogue.com.au",
+            "resolved": "vogue.go-vip.net"
+        },
+        {
+            "original": "platform.vox.com",
+            "resolved": "voxmedia-vox.go-vip.net"
+        },
+        {
+            "original": "plus.nasa.gov",
+            "resolved": "nasa-tv.go-vip.net"
+        },
+        {
+            "original": "wp.en.aleteia.org",
+            "resolved": "aleteia.go-vip.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "go-vip\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aleteia",
+                "time-com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "wp.en.aleteia.org",
+                    "resolved": "aleteia.go-vip.net"
+                },
+                {
+                    "original": "api.time.com",
+                    "resolved": "time-com.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "a59971b29a9ef7f27567e38adfd4201d4730711098beed31bcdca56ccdf82a83"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aleteia.org",
+                "time.com"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-json\\/nasaplus\\/v1\\/live",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nasa-tv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "plus.nasa.gov",
+                    "resolved": "nasa-tv.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nasa.gov",
+                "www.nasa.gov"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/2025\\/08\\/social-jetlag-2\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bodyandsoul"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "origin.bodyandsoul.com.au",
+                    "resolved": "bodyandsoul.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "cbe9178236d3aed4da00753d99ddcdd4a773a26743934aa00f4fa714ec62e695"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bodyandsoul.com.au",
+                "www.bodyandsoul.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/mu-plugins\\/jetpack-14\\.8\\/modules\\/related-posts\\/related-posts\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "d6a5f2e1dc209bad375f01131f0218bc61f2625e7ffe63ec97b68abc04c7daaf"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/event-video-resource-header-block\\/style-view\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "7fc9c55613607cfd9aa9ddfbe44e681f88170cc0d8e91b58b6079061a9c22497"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/page-feature-header\\/style-view\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "7b809eb91fab5586553e8b0702a08d1b402c7db69d05ce46eb2a1c1aa7023e77"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/related-article-callout-block\\/style-view\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "1698585c6c824266c0d73833aed978edd104340b7d3e682a5ca968b0ce462da5"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/resource-block\\/style-view\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "674cd27b38252106f1cd8dc3c9943f98af88ef699f25e42214b48170a03ce732"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/video-content-type-block\\/style-view\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "79666666795c0b072a31b550979489460a8ec1d87625f4817bd3e1305f848c1d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/form-input-styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "e938f55f007387b621fc0e780c5724942a8035b9e40ec42816a0b1bfe4ea7204"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/src\\/libs\\/glidejs\\/css\\/glide\\.core\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "cccaa33a3e6fa89df67f9cd2aba8eda3d84b5b19b1975524dbeb7ae7c1332160"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/src\\/libs\\/glidejs\\/css\\/glide\\.theme\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "ce9f02faf8f29f05c62eebf60a8306bcd929ba0c83cd587083f8d717466bde6a"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/glide-sliders\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "f25ef995e360d1d4b3330b8c203a40112bb3e4c5c4143228b640163b66086475"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/tailwind\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "d4180b61e349bfbbbea83b8ea1cfc73b591de263aacbef6ce8a00425f62eac24"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/components\\/link\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "b018495bc7ce6adaee8787257bdc39017fed06050378629fa95a81629490b405"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/button-styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "eda114a3b66814e0a61e1f99484bff7b24303d89abca127ff3e2b899bb1bf574"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/pagination\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "b6fd382ad11259710c5d4483a1399c0a031164e4519d5dcc4613857032846e55"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/layout-blocks-styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "313e78b39e81a48223fcec8e29b3b223e9d02a51439f6f8d789fc54049b00563"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/media-text-styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "94413c7d8b840829bd993645d17e2517fa3b42212ee76fff213f516d84c4a468"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/radio-checkbox-styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "f8550d461f5c2589eb63574403ccd845859713281ead0378e8211bbb98d3b9fa"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/group-block-styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "6ab64cd0a1e9ed86497af06f07fd5abfc67d6a925c0995ee9d96599433cd48fd"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/global-styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "cad112a5eb8ec41b2cc2b5c454b4770d37b1e217f38dec82ee787f3eeac2a455"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/side-nav-styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "b41534a60d45bbc8064e922a3e307cde472a75ca445fa9115ad4e905f1148056"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/zephr-styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "241e86e99dbd5d4cca52afa3086bebb428fce6c595c4ed6aadeb6b10d3ae6296"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/algolia-inline-search-style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "ea8ccfcf81fd9398aa38952a8cc4e435da2389a32222d3ad598ea546c3139939"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/src\\/libs\\/glidejs\\/js\\/glide\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "84e61441effe1acd86cc5ccb8666919fe788165442d3f45544a8b29b36b889ec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/mu-plugins\\/jetpack-14\\.8\\/jetpack_vendor\\/automattic\\/jetpack-forms\\/dist\\/modules\\/form\\/view\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "ee4ec3cf6efac14e19711acc9c03c945ae3f9bec390132833a90db7f5cc14fa0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/svgs\\/outlined\\/search\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "1139b98a2c233daa9131c0c7ba592030b46eaaa44ae4bb093185cf6254ad4119"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/collapse\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "3669b3265d003f4e60a6ef3eddec46bfd8d53f013da9f3ce1f092c515d3702c1"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/embed\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "e2fd857eb97890cca6a425e578caafe0a2c0feb649515cf87f3bd3627f6b22e7"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/heading\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "b1210fe4f03fc71c36ec048080b37f11867c55d90ca4d215b7d98606e7528c70"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/html\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "bb19536a4510ac71871834866bd37f924a1b25ccacbfa1b2e26e176baa9e1c6c"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/image\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "5582f18b1f36975a5964534f81fb89bf19c46dd50f25f975c7a062b1deb2db47"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/list\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "6d548fe584ccefa9afd9b05f96c9be822a3e0979cad949c4d6fcc4c8b9e6613d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/paragraph\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "bda2a8bffc3b5712020b93af2b15105d82e6669c00ddad504c495fea84119f8d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/pullquote\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "70a54d531607e3c5a9ddcbba92b66608d35a13f09a7fca7cfd9bcd52092f02d5"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/quote\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "42cfa16609e28f53bddd943685de9c59a9dbf0dfeeefaf08a822df1f418f9f6a"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/separator\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "fcaf07c4b064045f20e1de660b3f658f5ff6c32329195f155c519d7f6666f33c"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/css\\/blocks\\/table\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "8660222dbf71b5ec9ccaef9fb4a09b9e661f670714d38f52b9418c55c438f00e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/js\\/glide-sliders\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "fe078685596876eb56d286e5c130e02787bbb78f04127d1c6cb4b052598e50c8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/js\\/post-content-type\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "904074e5f9997e8178d1efb7a0c542063f27cad81c572994694a61e12627c3f0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/js\\/utilities\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/js\\/global-scripts\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "a85f49d9e0ef658d1cbe2a1a9a06288b0c60e0a3343f6b4b281fbb33860e600d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/js\\/side-nav-handler\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "bc5613d3ad2215e0d2792d6f8b206c1d82f2d147e42cae62e15ec75d2cc78100"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/js\\/collapse\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "7ce2ae0621f7f6aad7bc9348c0b694b9c59bf14067a9300533362cff3cb5455b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/src\\/libs\\/zephr_blaize\\/blaize-front-end-sdk\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "dc74ee120dc835683555cadfaacde2c8242ac6d6e29d072e06c4551d744eb905"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/js\\/zephr\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "8275900f28455f883e9e7db901aef9f7a8c20d242c2229eb9ba34808a5982d78"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/themes\\/private-media-core\\/assets\\/build\\/js\\/algolia-inline-search\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "private-media-core"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "assets.crikey.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.smartcompany.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                },
+                {
+                    "original": "assets.themandarin.com.au",
+                    "resolved": "private-media-core.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "67258bd7158154523d1cde1e418d106b37235c69c18a49a03ad847d6909345ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crikey.com.au",
+                "www.smartcompany.com.au",
+                "www.themandarin.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-includes\\/js\\/dist\\/script-modules\\/interactivity\\/index\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "foxsports",
+                "gq",
+                "vogue"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "origin.go.foxsports.com.au",
+                    "resolved": "foxsports.go-vip.net"
+                },
+                {
+                    "original": "origin.go.gq.com.au",
+                    "resolved": "gq.go-vip.net"
+                },
+                {
+                    "original": "origin.go.vogue.com.au",
+                    "resolved": "vogue.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "ab666642de849c4230ef48434db5da6798a7ee20a3730893075f9735fbacde00"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxsports.com.au",
+                "www.gq.com.au",
+                "www.vogue.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/2025\\/08\\/BeFunky-collage-19\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "skynews"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "origin.go.skynews.com.au",
+                    "resolved": "skynews.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "97c5190b43d11c19ad410b6703c2ec58a831f7367760c051c57680a6eb4e13e4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skynews.com.au",
+                "www.skynews.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/2025\\/06\\/CHP_Export_313575303_CANBERRA-AUSTRALIA-NewsWire-Photos-June-4-2025-Federal-Treasurer-Jim-Chalm\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "skynews"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "origin.go.skynews.com.au",
+                    "resolved": "skynews.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "d92f881eec9f634f0e2d4722538ef5da4f9f1cfc8b8cec3c1c1abe3baf6f8834"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skynews.com.au",
+                "www.skynews.com.au"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/sites\\/2\\/2025\\/08\\/GettyImages-1193260469\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voxmedia-vox"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "platform.vox.com",
+                    "resolved": "voxmedia-vox.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "4d78597d0f15afbef200ea4b75a960f390584400e9bc19b833d0217dbed87622"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vox.com",
+                "www.vox.com"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/sites\\/2\\/2025\\/08\\/gettyimages-2229454978\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voxmedia-vox"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "platform.vox.com",
+                    "resolved": "voxmedia-vox.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "97f4a1dde2f3abef54aec956973b45f1e881385afd10383d0c5e1e874adb4a80"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vox.com",
+                "www.vox.com"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/sites\\/2\\/2025\\/08\\/GettyImages-2229969139\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voxmedia-vox"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "platform.vox.com",
+                    "resolved": "voxmedia-vox.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "295048219d068e6d6011ffff063468c8afd85acb2d0434dad19fd5ad3a8bc8aa"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vox.com",
+                "www.vox.com"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/sites\\/2\\/2025\\/08\\/GettyImages-2048805653\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voxmedia-vox"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "platform.vox.com",
+                    "resolved": "voxmedia-vox.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "f0b3fdfa212871caffd7b3e2978c20f3fdf0d7845443c906a65befe48a2042c9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vox.com",
+                "www.vox.com"
+            ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/sites\\/3\\/2025\\/06\\/New-Spring-2025_Commerce_Templates-2\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wgb-zenith"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "admin.wellandgood.com",
+                    "resolved": "wgb-zenith.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "846f0b3d7e545fee0ca6826fc672a3b70fdc6a1ab7e6da85d9a639335f7000c4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wellandgood.com",
+                "www.wellandgood.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "tinypass.com",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "XHR": 2,
+        "Image": 19,
+        "Stylesheet": 99,
+        "Script": 35
+    },
+    "nameservers": [
+        "ns1.go-vip.net",
+        "ns3.go-vip.net",
+        "ns2.go-vip.net",
+        "ns4.go-vip.net"
+    ]
+}

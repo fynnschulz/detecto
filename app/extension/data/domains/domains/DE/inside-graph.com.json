@@ -1,0 +1,118 @@
+{
+    "domain": "inside-graph.com",
+    "owner": {
+        "name": "Michael Browitt",
+        "displayName": "Michael Browitt"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "eu2-track",
+        "eu2-live"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "inside-graph\\.com\\/gtm\\/IN-1000855\\/include\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "eu2-track"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e01b1e8bebc8acfbf97476136730a60b2f47d91d1b0c830bedaa5a75ed7f9ec1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.lenovo.com"
+            ]
+        },
+        {
+            "rule": "inside-graph\\.com\\/ig\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "eu2-track"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f29ce9dbd5774c284e6f892ed1d03c8df6256db721aebdada565a43821e47ee5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.lenovo.com"
+            ]
+        },
+        {
+            "rule": "inside-graph\\.com\\/config",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu2-live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.lenovo.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-1314.awsdns-36.org",
+        "ns-449.awsdns-56.com",
+        "ns-753.awsdns-30.net",
+        "ns-1621.awsdns-10.co.uk"
+    ]
+}

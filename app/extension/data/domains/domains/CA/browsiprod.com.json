@@ -1,0 +1,578 @@
+{
+    "domain": "browsiprod.com",
+    "owner": {
+        "name": "Browsi Mobile LLC",
+        "displayName": "Browsi Mobile LLC"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.0066,
+    "sites": 65,
+    "subdomains": [
+        "cdn",
+        "events",
+        "yield-manager",
+        "demand-engine"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "browsiprod\\.com\\/bootstrap\\/bootstrap\\.js",
+            "cookies": 0.00386,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 61,
+                "window.localStorage": 61,
+                "Document.cookie getter": 60,
+                "Navigator.prototype.userAgent": 61,
+                "Screen.prototype.width": 61,
+                "Screen.prototype.height": 61,
+                "Document.cookie setter": 38
+            },
+            "sites": 62,
+            "prevalence": 0.00629,
+            "cnames": [],
+            "responseHashes": [
+                "36209686dbafe448254d09dfa4823688bcc67a46bc257e05eaac36d32aa8ac9b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__browsiSessionID": {
+                    "ttl": 1808,
+                    "length": 71,
+                    "prevalence": 0.0038574763983351946,
+                    "uniqueness": 1
+                },
+                "__browsiUID": {
+                    "ttl": 31536008,
+                    "length": 36,
+                    "prevalence": 0.0038574763983351946,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globalnews.ca",
+                "hollywoodlife.com",
+                "variety.com",
+                "whatismyipaddress.com",
+                "www.azlyrics.com",
+                "www.foxnews.com",
+                "www.mpgtolitres.com",
+                "www.carscoops.com",
+                "www.baeldung.com",
+                "www.nba.com",
+                "food52.com",
+                "www.gbmb.org",
+                "insideevs.com",
+                "fstoppers.com",
+                "dailyhive.com",
+                "investorshub.advfn.com",
+                "www.bandsintown.com",
+                "www.insidermonkey.com",
+                "www.travelgay.com",
+                "www.islamicfinder.org"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/supply",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 62,
+            "prevalence": 0.00629,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globalnews.ca",
+                "hollywoodlife.com",
+                "variety.com",
+                "whatismyipaddress.com",
+                "www.azlyrics.com",
+                "www.foxnews.com",
+                "justthenews.com",
+                "classicalfm.ca",
+                "www.gbnews.com",
+                "soaps.sheknows.com",
+                "stylecaster.com",
+                "www.bandsintown.com",
+                "www.billboard.com",
+                "finviz.com",
+                "bikehike.org",
+                "www.thedailybeast.com",
+                "robbreport.com",
+                "investorshub.advfn.com",
+                "wwd.com",
+                "calibre-ebook.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/supply\\/v5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yield-manager"
+            ],
+            "apis": {},
+            "sites": 62,
+            "prevalence": 0.00629,
+            "cnames": [],
+            "responseHashes": [
+                "09b6b6cb6f5467577d974ba362b6cf81573f2ad52b8ccd1cb23ec41a901a7bbb",
+                "e6bf6527b8d76e49e04d40f08e332dd81e79f93425e8a0017aab6d4f5f10dda3",
+                "96da4482bad2090b86a5adfb00d18e2df5738b5c73397a7d37232578d0660867",
+                "9598950915e04a3dd736c6a7b833dcb817342334ae022336caaa7ef0c5d04c01",
+                "446a4425e95069a12098dccca546b21623b04702f3d0d786dd9ea7acbe227274",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "d78ff7f15ad5a276d6c82b5101760c9af4eb23092d8f7ee8facdf6ecf07066b0",
+                "b9fb94c61557e34023cae10697bf770f05f4213fd2ce735f2fdcd2acf398463b",
+                "689d1d0fd50a97ef3e77a331394d5189e740cd36759d03166af406a4ccf68c59",
+                "67c6204a53e13ed7844e9dbd9fcc0bf132ec4c3b333f4c1b0f61fbc0415e4ce8",
+                "d8a9e00024ea2b0c8bdf3050d9ef5459ef9334c94f619ec4f42e95cf73e1a5d5",
+                "27e89231689fbf51b550de34e78ef4b04a9015f3ad1c5c707d65dc24afbf27f3",
+                "66220a875218a847ee7f31ea662da695de6b378706c0170f81d8241559e2bdce",
+                "484d4c49493ed127f7d408627617af811a548bbbc51a7b8e735ec36cb2b47266",
+                "508a35383453b2262e50c5f994b958ad1f99aba9051738584afdb52bd2d1bec4",
+                "9ad1204d08a89f0299021983ec12a3c6102c30b533a84cee1d03d09750208589",
+                "2660b47f5e6e82f34bc62975e9b5465e8adddcb540ddc0e0105e7ca6b1111e7a",
+                "51c54969452d038ba2d7064bb8a81576cd292422113357071523f509be64106a",
+                "cdf7e5077d479e8232bb21ef29b5e61ed87fdfd7868f111c194b206f79c430f4",
+                "08f35ccfd56e03c4f029636feba7d0d3db1e503f69c9d3d84cfc30662a80615d",
+                "f61b375a05fd7a78e1ea8972bca3b5d60c6af99be051d0812ac84052409776e4",
+                "dd807b82633c105a01f8da3abc0b847e8240fa739b40d2a9ad87a88b1327deab",
+                "38d0036c8ca2bc60b4f84302ba7b7b5dc4b89c2b9bed0bbd4d8b23615c9eaf1a",
+                "c04c086c16749578b089604e10036fdb39e71e45f395192db2eb840aff32edf5",
+                "b92dd56aa1abfbdf21bcff63238a49c73582833b8dc13c129ff6776b662caeb0",
+                "428fcc95e0ceaff924a48ed3708df0baad6c751f2ad294896fde3b950b5bf6d4",
+                "bdbd9dd6a1e7e8d308f794f3169feee9edf67e7a27a93436c96044cf5389e9ec",
+                "4ee3d3b849c74cdd5ac592414339f83795b90121b9c2adb116bfc1a2c47e3fa8",
+                "b73a4d8b9ccc53148907ea531a7eb14d912fcdcd234d7037152602625867839e",
+                "a3b3dbe9eb901bf25fe13544c8cf88bd3ded673604fc2b3a24909f40bb2e3db9",
+                "f644e8e84c5552426966893203e321d609145f1a60a794a1105f1a5cfaf83eed",
+                "48610717231672ed78cd4596dbf55f370d859020517bfb9c34f01659413342f5",
+                "710e39ae0de9eb58022f412cc4c2b21c130625ecd72779bdb59ce387dfe39730",
+                "3e8f673228b59396918fe952755a9358a6173ff30151482d5036186bd9df09ae",
+                "656c32951b702043072b2ad4ac163c25f799fd7f9bb6abda492b76b6716dc29e",
+                "15e6c1fb5d43aa1230a765a8e7e91b1736c030c5e88df4f28148d07df59ea889",
+                "955d51f094856916196f0c2ba4e1831eed49233cb17e588c21d28ebddf429fa7",
+                "a816a5dbd57d4608fa4c505e2150a7b4ee19a02b52d93ae5af598bed0121b11e",
+                "718f642894c41b2dc22466b9608fb22b8c981cf5ec550814a83827dfc9ea4d60"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_cb_svref": 0.00010151253679829459,
+                "lotame_domain_check": 0.0028423510303522484,
+                "_li_dcdm_c": 0.0009136128311846513,
+                "__pid": 0.00020302507359658918
+            },
+            "exampleSites": [
+                "globalnews.ca",
+                "hollywoodlife.com",
+                "variety.com",
+                "whatismyipaddress.com",
+                "www.azlyrics.com",
+                "www.foxnews.com",
+                "justthenews.com",
+                "stylecaster.com",
+                "www.carscoops.com",
+                "www.conversion-metric.org",
+                "www.whatfinger.com",
+                "www.billboard.com",
+                "deadline.com",
+                "www.hollywoodreporter.com",
+                "bikehike.org",
+                "www.jpost.com",
+                "calculat.io",
+                "www.visualcapitalist.com",
+                "www.motor1.com",
+                "beforeitsnews.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/sd\\/apps\\/middy\\/middy-desktop-4\\.46\\.1115\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.availWidth": 25,
+                "Screen.prototype.availHeight": 25,
+                "Date.prototype.getTime": 25,
+                "window.localStorage": 25,
+                "window.innerHeight": 25
+            },
+            "sites": 33,
+            "prevalence": 0.00335,
+            "cnames": [],
+            "responseHashes": [
+                "68462546ef049658b74cf2c802fc4b4af94e20c6508b333712ae56459c6a0dea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hollywoodlife.com",
+                "variety.com",
+                "whatismyipaddress.com",
+                "www.azlyrics.com",
+                "www.foxnews.com",
+                "bikehike.org",
+                "www.thedailybeast.com",
+                "www.gbnews.com",
+                "www.motherjones.com",
+                "www.baeldung.com",
+                "www.indiewire.com",
+                "wwd.com",
+                "www.tunefind.com",
+                "www.carscoops.com",
+                "www.jpost.com",
+                "classicalfm.ca",
+                "www.islamicfinder.org",
+                "calculat.io",
+                "www.hollywoodreporter.com",
+                "www.motor1.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/abd\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 25,
+            "prevalence": 0.00254,
+            "cnames": [],
+            "responseHashes": [
+                "481d713552f587d3bc0e3683557f8541ea69543e4d7abb7e4299c646ab10fd03"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hollywoodlife.com",
+                "whatismyipaddress.com",
+                "www.bandsintown.com",
+                "beforeitsnews.com",
+                "www.motor1.com",
+                "www.islamicfinder.org",
+                "tipsfolder.com",
+                "www.motherjones.com",
+                "www.baeldung.com",
+                "www.personality-database.com",
+                "www.todays-golfer.com",
+                "calculat.io",
+                "www.thedailybeast.com",
+                "www.indiewire.com",
+                "bikehike.org",
+                "dailyhive.com",
+                "nameberry.com",
+                "www.carscoops.com",
+                "wwd.com",
+                "justthenews.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/web-vitals\\/web-vitals-4\\.2\\.3\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 31,
+            "prevalence": 0.00315,
+            "cnames": [],
+            "responseHashes": [
+                "1cf3e6d0ce85a08fee4fd2a90152a1a50e8b829c10003981d8f79da6cc2e874c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globalnews.ca",
+                "hollywoodlife.com",
+                "whatismyipaddress.com",
+                "tipsfolder.com",
+                "nameberry.com",
+                "www.personality-database.com",
+                "www.todays-golfer.com",
+                "www.mpgtolitres.com",
+                "www.motor1.com",
+                "calculat.io",
+                "bikehike.org",
+                "justthenews.com",
+                "www.alt-codes.net",
+                "www.carscoops.com",
+                "www.jpost.com",
+                "www.baeldung.com",
+                "beforeitsnews.com",
+                "www.tapology.com",
+                "www.thedailybeast.com",
+                "www.hollywoodreporter.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/sra\\/desktop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "demand-engine"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "9f86f4ef00b95db3bf1399cd4e14a06aab28f625e847a0d1fe8dd58be347eeb9",
+                "c6712fec9fbeeda7f9e4118f5d59f907baa5c5cb7c9b08c2879696d90f8de220"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__browsiUID": 0.00030453761039488374
+            },
+            "exampleSites": [
+                "bikehike.org",
+                "tipsfolder.com",
+                "www.whatfinger.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/EquativAdServer_tmzr\\/0\\.4\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8598bc7b4f62b1f1b927da2f4dc8c06f593c8c37e382e2dd1206fca4dc38d80e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikehike.org",
+                "tipsfolder.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/generic-templates\\/EquativAdServer_tmzr\\/0\\.4\\/template\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8598bc7b4f62b1f1b927da2f4dc8c06f593c8c37e382e2dd1206fca4dc38d80e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikehike.org",
+                "tipsfolder.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/analytic",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikehike.org",
+                "whatismyipaddress.com",
+                "www.baeldung.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/demand",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailyhive.com",
+                "nameberry.com",
+                "tipsfolder.com",
+                "www.whatfinger.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/events\\/v2\\/pub_demand",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000812,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailyhive.com",
+                "justthenews.com",
+                "whatismyipaddress.com",
+                "wwd.com",
+                "www.hollywoodreporter.com",
+                "www.indiewire.com",
+                "www.motor1.com",
+                "www.todays-golfer.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/prebid\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yield-manager"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00020302507359658918
+            },
+            "exampleSites": [
+                "milb.com",
+                "www.mlb.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/refreshrate\\/single\\/desktop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "demand-engine"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "todays-golfer.com",
+                "www.todays-golfer.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00386,
+    "topInitiators": [
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.11940298507462686
+        },
+        {
+            "domain": "pub.network",
+            "prevalence": 0.1044776119402985
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.09701492537313433
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.08955223880597014
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.07462686567164178
+        },
+        {
+            "domain": "blogherads.com",
+            "prevalence": 0.07462686567164178
+        },
+        {
+            "domain": "ay.delivery",
+            "prevalence": 0.06716417910447761
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.06716417910447761
+        },
+        {
+            "domain": "sascdn.com",
+            "prevalence": 0.04477611940298507
+        },
+        {
+            "domain": "insiad.com",
+            "prevalence": 0.04477611940298507
+        }
+    ],
+    "types": {
+        "Script": 153,
+        "XHR": 143,
+        "Ping": 3,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-189.awsdns-23.com",
+        "ns-729.awsdns-27.net",
+        "ns-1546.awsdns-01.co.uk",
+        "ns-1215.awsdns-23.org"
+    ]
+}

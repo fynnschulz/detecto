@@ -1,0 +1,174 @@
+{
+    "domain": "statuspage.io",
+    "owner": {
+        "name": "Atlassian Corporation plc",
+        "displayName": "Atlassian"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000909,
+    "sites": 9,
+    "subdomains": [
+        "anaconda",
+        "x2m8rwtfjg4j",
+        "sqvvxmkr4r26",
+        "gp2tp03j16xq",
+        "2p66nmmycsj3"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "statuspage\\.io\\/embed\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "anaconda",
+                "x2m8rwtfjg4j"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8e39d164acded29956a617b3dd514696097c68c660725d387ee82f2cb32601cc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anaconda.org",
+                "forums.plex.tv"
+            ]
+        },
+        {
+            "rule": "statuspage\\.io\\/embed\\/frame",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sqvvxmkr4r26",
+                "x2m8rwtfjg4j"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2e863ed127722b620d77f9654a3d00c7e2b2357844d5ba6c5b6d8b89f9a1332b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anaconda.org",
+                "forums.plex.tv"
+            ]
+        },
+        {
+            "rule": "statuspage\\.io\\/api\\/v2\\/status\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gp2tp03j16xq",
+                "2p66nmmycsj3"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "31e28b463121dfa488864e81b2b48661f387321926a8aae33b9e3997093295ed",
+                "1fb11049a2ab0fc00ab043f3bf0fd54935c770a874e4e792253b596cd5ba7dd3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "login.ionos.fr",
+                "www.python.org"
+            ]
+        },
+        {
+            "rule": "statuspage\\.io\\/api\\/v2\\/scheduled-maintenances\\/active\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gp2tp03j16xq"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f36c0895eee18427a374675a3b2f583614ec7f0b9ade7f8982a1e7a490bd857a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "login.ionos.fr"
+            ]
+        },
+        {
+            "rule": "statuspage\\.io\\/api\\/v2\\/incidents\\/unresolved\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gp2tp03j16xq"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0ab743b80d0d7ece60003b51321af147977473368a85151ede5ab013be3bcc06"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ionos.fr",
+                "login.ionos.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8125
+        },
+        {
+            "domain": "transcend-cdn.com",
+            "prevalence": 0.0625
+        },
+        {
+            "domain": "d3e54v103j8qbb.cloudfront.net",
+            "prevalence": 0.0625
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.0625
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Document": 2,
+        "XHR": 7
+    },
+    "nameservers": [
+        "ns-951.awsdns-54.net",
+        "ns-1560.awsdns-03.co.uk",
+        "ns-209.awsdns-26.com",
+        "ns-1407.awsdns-47.org"
+    ]
+}

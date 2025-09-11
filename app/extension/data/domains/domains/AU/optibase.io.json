@@ -1,0 +1,85 @@
+{
+    "domain": "optibase.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "optibase\\.io\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.platform": 3,
+                "window.innerWidth": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "87a73e86afb12cefaf10bb265a4e6837079ffe75a9cc72853ee7315b46f87d11"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "heidihealth.com",
+                "www.heidihealth.com",
+                "www.topazlabs.com"
+            ]
+        },
+        {
+            "rule": "optibase\\.io\\/api\\/script\\/active",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7230750f71678836e41d77047970ff8574009dae739bfef671780bb44b0f15c9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "heidihealth.com",
+                "www.topazlabs.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ram.ns.cloudflare.com",
+        "ines.ns.cloudflare.com"
+    ]
+}

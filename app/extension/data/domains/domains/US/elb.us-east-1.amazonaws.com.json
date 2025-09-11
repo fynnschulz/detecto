@@ -1,0 +1,1033 @@
+{
+    "domain": "elb.us-east-1.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000287,
+    "sites": 42,
+    "subdomains": [
+        "ac39645cb049e4a2aaf9e4bf32a72c48-8adc32dc30de567a",
+        "a25141f5c1a354f21b52ba4511ba56fd-42c38fce78469379",
+        "ada9a682ca3414875944471a7a35bab6-0d0863dd829f2c31",
+        "l4-logs-http-rum-pub-s1-6386d34262e59173",
+        "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8",
+        "wdpthird-pr-0d2f5ae6feef9df0",
+        "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30",
+        "nlb-ac-alb1-ca5704a7436d2808",
+        "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634",
+        "a8aa21fa8a58f48ddb175aac922abb9e-c8c78f8825f53b01",
+        "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340",
+        "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+    ],
+    "cnames": [
+        {
+            "original": "8b61d74c.datadoghq.com",
+            "resolved": "l4-logs-http-rum-pub-s1-6386d34262e59173.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "analytics.freemake.com",
+            "resolved": "a8aa21fa8a58f48ddb175aac922abb9e-c8c78f8825f53b01.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "api.carpartplanet.com",
+            "resolved": "ac39645cb049e4a2aaf9e4bf32a72c48-8adc32dc30de567a.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "api.labfinder.com",
+            "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "api.reman-engine.com",
+            "resolved": "a25141f5c1a354f21b52ba4511ba56fd-42c38fce78469379.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "api.reman-transmission.com",
+            "resolved": "ada9a682ca3414875944471a7a35bab6-0d0863dd829f2c31.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "metrics.freemake.com",
+            "resolved": "a8aa21fa8a58f48ddb175aac922abb9e-c8c78f8825f53b01.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "mpsnare.iesnare.com",
+            "resolved": "wdpthird-pr-0d2f5ae6feef9df0.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "news.emory.edu",
+            "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "syndication.aspencore.com",
+            "resolved": "nlb-ac-alb1-ca5704a7436d2808.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "template.aws.emory.edu",
+            "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "tracking.shopcider.com",
+            "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "usermetrics.airfarewatchdog.com",
+            "resolved": "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "usermetrics.familyvacationcritic.com",
+            "resolved": "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "usermetrics.oyster.com",
+            "resolved": "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "usermetrics.smartertravel.com",
+            "resolved": "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "www.news.emory.edu",
+            "resolved": "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634.elb.us-east-1.amazonaws.com"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ac39645cb049e4a2aaf9e4bf32a72c48-8adc32dc30de567a",
+                "a25141f5c1a354f21b52ba4511ba56fd-42c38fce78469379",
+                "ada9a682ca3414875944471a7a35bab6-0d0863dd829f2c31"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "api.carpartplanet.com",
+                    "resolved": "ac39645cb049e4a2aaf9e4bf32a72c48-8adc32dc30de567a.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "api.reman-engine.com",
+                    "resolved": "a25141f5c1a354f21b52ba4511ba56fd-42c38fce78469379.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "api.reman-transmission.com",
+                    "resolved": "ada9a682ca3414875944471a7a35bab6-0d0863dd829f2c31.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carpartplanet.com",
+                "reman-engine.com",
+                "reman-transmission.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ac39645cb049e4a2aaf9e4bf32a72c48-8adc32dc30de567a",
+                "a25141f5c1a354f21b52ba4511ba56fd-42c38fce78469379",
+                "ada9a682ca3414875944471a7a35bab6-0d0863dd829f2c31"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "api.carpartplanet.com",
+                    "resolved": "ac39645cb049e4a2aaf9e4bf32a72c48-8adc32dc30de567a.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "api.reman-engine.com",
+                    "resolved": "a25141f5c1a354f21b52ba4511ba56fd-42c38fce78469379.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "api.reman-transmission.com",
+                    "resolved": "ada9a682ca3414875944471a7a35bab6-0d0863dd829f2c31.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "c7682fb89236766d039f9c72f89dca916ef0003a9c43eba22ca9704194c15115"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carpartplanet.com",
+                "reman-engine.com",
+                "reman-transmission.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "l4-logs-http-rum-pub-s1-6386d34262e59173"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "8b61d74c.datadoghq.com",
+                    "resolved": "l4-logs-http-rum-pub-s1-6386d34262e59173.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "2d0765d48908ec0880d0833c34739459b29317dcad73667c7f41536d1a52d2fb",
+                "019ad690c7d48d0d9ea748cf44171cbe0aab21d1ee9bd4c633fe6975837ab364"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "datadoghq.com",
+                "docs.datadoghq.com",
+                "www.datadoghq.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/shared-assets\\/feed\\/proxy\\.php",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "template.aws.emory.edu",
+                    "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "1b90195fb598d9cbefa357939cfef5e241a10005699c8f9865a24d452c7da4be"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "emory.edu",
+                "www.emory.edu"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/shared-assets\\/emergency\\/alert-feed\\.php",
+            "cookies": 0.000041,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [
+                {
+                    "original": "template.aws.emory.edu",
+                    "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "emory.edu",
+                "libraries.emory.edu",
+                "med.emory.edu",
+                "news.emory.edu",
+                "registrar.emory.edu",
+                "www.emory.edu"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/general5\\/wdp\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "wdpthird-pr-0d2f5ae6feef9df0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "mpsnare.iesnare.com",
+                    "resolved": "wdpthird-pr-0d2f5ae6feef9df0.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "d0261f6c080c3bd1b195aaccd6997b841c5b8c7352a3a53a4aed09b4a004b3fa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transunion.com",
+                "members.transunion.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/5\\.10\\.0\\/logo\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wdpthird-pr-0d2f5ae6feef9df0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "mpsnare.iesnare.com",
+                    "resolved": "wdpthird-pr-0d2f5ae6feef9df0.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "c6af43a7edd42585a35cd6483aca347418c9d6a4bc4c66a6c1b3271ce6456bb8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transunion.com",
+                "members.transunion.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/star",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wdpthird-pr-0d2f5ae6feef9df0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "mpsnare.iesnare.com",
+                    "resolved": "wdpthird-pr-0d2f5ae6feef9df0.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transunion.com",
+                "members.transunion.com",
+                "membership.tui.transunion.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/general5\\/fg9gcMabiXp-vOUMXoAJkQwsbHHtsHg8aQKT1zToS7U\\/wdp\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "wdpthird-pr-0d2f5ae6feef9df0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "mpsnare.iesnare.com",
+                    "resolved": "wdpthird-pr-0d2f5ae6feef9df0.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "ee5984b93531027cfe33f41d83ed12f05564de870faf3aa80bfe0e12d6c6c2f8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transunion.com",
+                "membership.tui.transunion.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/5\\.10\\.0\\/fg9gcMabiXp-vOUMXoAJkQwsbHHtsHg8aQKT1zToS7U\\/logo\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wdpthird-pr-0d2f5ae6feef9df0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "mpsnare.iesnare.com",
+                    "resolved": "wdpthird-pr-0d2f5ae6feef9df0.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "2d47f17dda5233cc902fdcade23d1ad1ebf8918e95e99d97bcb40240d4133c80"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transunion.com",
+                "membership.tui.transunion.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/8mvjHLuaRCuS79bHt2qn2Q\\/page-view\\.gif",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "usermetrics.airfarewatchdog.com",
+                    "resolved": "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "airfarewatchdog.com",
+                "www.airfarewatchdog.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/syndication\\/v3\\/podcasts\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nlb-ac-alb1-ca5704a7436d2808"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "syndication.aspencore.com",
+                    "resolved": "nlb-ac-alb1-ca5704a7436d2808.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "9da5f276fbc6e9f7d3e38f20ed34f5de5656d3cf1fa0421870c83e245097c69a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "edn.com",
+                "www.edn.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/syndication\\/v3\\/podcasts\\/script\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nlb-ac-alb1-ca5704a7436d2808"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "syndication.aspencore.com",
+                    "resolved": "nlb-ac-alb1-ca5704a7436d2808.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "62b748725eb5dc869dcff4e39f2a0df671a484b0873b5168af8c43728ff61138"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "edn.com",
+                "www.edn.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/images\\/img-head-map2\\.gif",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634",
+                "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "www.news.emory.edu",
+                    "resolved": "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "news.emory.edu",
+                    "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "emory.edu",
+                "www.emory.edu"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/images\\/webltra\\.gif",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634",
+                "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "www.news.emory.edu",
+                    "resolved": "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "news.emory.edu",
+                    "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "emory.edu",
+                "www.emory.edu"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/news_images\\/BrainScan\\.jpg",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634",
+                "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "www.news.emory.edu",
+                    "resolved": "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "news.emory.edu",
+                    "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "emory.edu",
+                "www.emory.edu"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/images\\/wordmark\\.jpg",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634",
+                "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "www.news.emory.edu",
+                    "resolved": "webmgmtwebhosting-red-pub-nlb-e0f391c182f06634.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "news.emory.edu",
+                    "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "emory.edu",
+                "www.emory.edu"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/0wsalyBmRyigj3LTFAfAuw\\/page-view\\.gif",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "usermetrics.familyvacationcritic.com",
+                    "resolved": "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.000013681762210972774,
+                "lotame_domain_check": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "familyvacationcritic.com",
+                "www.familyvacationcritic.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/v1\\.0\\/EnvironmentEvents\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a8aa21fa8a58f48ddb175aac922abb9e-c8c78f8825f53b01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "analytics.freemake.com",
+                    "resolved": "a8aa21fa8a58f48ddb175aac922abb9e-c8c78f8825f53b01.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "8d0bdb1026670edc6abae0e4264bc3a8538a59ffaabd158a8bb3275ae17240e2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freemake.com",
+                "www.freemake.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/v1\\/Metrics\\/SiteDimensions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a8aa21fa8a58f48ddb175aac922abb9e-c8c78f8825f53b01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "metrics.freemake.com",
+                    "resolved": "a8aa21fa8a58f48ddb175aac922abb9e-c8c78f8825f53b01.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freemake.com",
+                "www.freemake.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/v1\\/Metrics\\/SiteUserBehaviour",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a8aa21fa8a58f48ddb175aac922abb9e-c8c78f8825f53b01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "metrics.freemake.com",
+                    "resolved": "a8aa21fa8a58f48ddb175aac922abb9e-c8c78f8825f53b01.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freemake.com",
+                "www.freemake.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/search\\/getcompany",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.labfinder.com",
+                    "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "f8df05d7772a29174d1ba5836aea2ace7596fb671ac7f35c7807a0f15dfc6523"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labfinder.com",
+                "www.labfinder.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/autocomplete\\/getPopularExamData",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.labfinder.com",
+                    "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "d6a74b2c001f09cb4f1622f3d199f2051e8552d515e614024180e3cbafc2ab25"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labfinder.com",
+                "www.labfinder.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/autocomplete\\/getSearchInsuranceData",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.labfinder.com",
+                    "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "83d2e30dfdc2dfdc7aa83626645c28d653086b82dc4e50e4af559026ff6b5619"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labfinder.com",
+                "www.labfinder.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/search\\/get-location-data",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.labfinder.com",
+                    "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "454353ac9b9b0eb1be156719516602b3ea8f3fa30cd2a63113b387eeccd569b5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labfinder.com",
+                "www.labfinder.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/page-view",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "usermetrics.oyster.com",
+                    "resolved": "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oyster.com",
+                "www.oyster.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/monitor\\/report",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/monitor\\/report",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7397e0987dc915f33e145a086726c9654845ee27a6dd9e053b25781d7b54fdde"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7397e0987dc915f33e145a086726c9654845ee27a6dd9e053b25781d7b54fdde"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/IDRPNntCTZ-mV9qg7Ce4DQ\\/page-view\\.gif",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "usermetrics.smartertravel.com",
+                    "resolved": "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "smartertravel.com",
+                "www.smartertravel.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.00015,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3225806451612903
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2903225806451613
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.16129032258064516
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.0967741935483871
+        },
+        {
+            "domain": "is-ebird-web-static-content-prod.s3.amazonaws.com",
+            "prevalence": 0.06451612903225806
+        },
+        {
+            "domain": "hotjar.com",
+            "prevalence": 0.03225806451612903
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.03225806451612903
+        }
+    ],
+    "types": {
+        "Preflight": 7,
+        "Fetch": 12,
+        "Script": 12,
+        "XHR": 10,
+        "WebSocket": 3,
+        "Image": 14,
+        "Document": 2,
+        "Ping": 10
+    },
+    "nameservers": [
+        "ns-1286.awsdns-32.org",
+        "ns-281.awsdns-35.com",
+        "ns-844.awsdns-41.net",
+        "ns-1826.awsdns-36.co.uk"
+    ]
+}

@@ -1,0 +1,253 @@
+{
+    "domain": "j.sni.global.fastly.net",
+    "owner": {
+        "name": "Fastly, Inc.",
+        "displayName": "Fastly",
+        "privacyPolicy": "https://www.fastly.com/privacy",
+        "url": "http://fastly.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000908,
+    "sites": 9,
+    "subdomains": [
+        "dualstack"
+    ],
+    "cnames": [
+        {
+            "original": "api.foxnews.com",
+            "resolved": "j.sni.global.fastly.net"
+        },
+        {
+            "original": "api.hackster.io",
+            "resolved": "dualstack.j.sni.global.fastly.net"
+        },
+        {
+            "original": "static.spektrum.de",
+            "resolved": "dualstack.j.sni.global.fastly.net"
+        },
+        {
+            "original": "stc.outletcity.com",
+            "resolved": "j.sni.global.fastly.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/v3\\/video-player\\/6189191231001",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.foxnews.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "20c795757e18d6706ac1a1e00b806ef6cec1cdce104968bb31114c760f240d2e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/v3\\/video-player\\/6189191231001",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.foxnews.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "031408f99cfa18bc14e4f58f481934952ee0ad269663c2ed56f269ebbcebe6c7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/graphql\\/query",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dualstack"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.hackster.io",
+                    "resolved": "dualstack.j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hackster.io",
+                "www.hackster.io"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/graphql\\/query",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dualstack"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.hackster.io",
+                    "resolved": "dualstack.j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "b06a551c3598b7752a0eeead80a4af34bc233c838acb8f906425afe626653689"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hackster.io",
+                "www.hackster.io"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/i\\/843990f252a2956cee01d314e0d25fba51bd101c-2309x3464\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "stc.outletcity.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "c18fce289218999c0bd96a648f2eac8d1f241252dd28a7853c4b7eb3743176a3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "outletcity.com",
+                "www.outletcity.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/js_css\\/assets\\/fonts\\/custom\\/Roboto_Condensed-400-latin-normal\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dualstack"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "static.spektrum.de",
+                    "resolved": "dualstack.j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "c64d885b1f73d430956ba776f26255e1c5566630ac248153628065751f83fc6d"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spektrum.de",
+                "www.spektrum.de"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/js_css\\/assets\\/fonts\\/custom\\/Roboto_Condensed-700-latin-normal\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dualstack"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "static.spektrum.de",
+                    "resolved": "dualstack.j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "aff2d70fabd8e44f700527cf828afc1531892fefbd991768c75f3a6713d0f523"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spektrum.de",
+                "www.spektrum.de"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Third-Party Analytics Marketing",
+        "Action Pixels",
+        "CDN",
+        "Embedded Content",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "hackster-cdn.online",
+            "prevalence": 0.42857142857142855
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "akamaihd.net",
+            "prevalence": 0.2857142857142857
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 4,
+        "Preflight": 2,
+        "Image": 2,
+        "Font": 4
+    },
+    "nameservers": []
+}

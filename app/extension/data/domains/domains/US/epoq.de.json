@@ -1,0 +1,305 @@
+{
+    "domain": "epoq.de",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000889,
+    "sites": 13,
+    "subdomains": [
+        "cdn",
+        "exlibris.arc",
+        "bw-online-shop.arc",
+        "fritz-berger-de.arc",
+        "haertle.arc",
+        "landi-ch.arc",
+        "maschenfein-de.arc",
+        "matratzen-concord.arc",
+        "nkd-de.arc",
+        "outletcity-de.arc",
+        "pflanzen-koelle-de.arc"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "epoq\\.de\\/flow\\/exlibris-picasso\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.connection": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.orientation": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "63240c6ff2381ead4f0bef57a94866b5effb9d5352830314c14bb13f8c808ae0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "exlibris.ch",
+                "www.exlibris.ch"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/assets\\/exlibris-picasso\\/js\\/epoq-inspire\\.live\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 1,
+                "Date.prototype.getTime": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bd1eb38e0811122311e229445c19977a59019cc6ef8c8a0b46221004ecb09f18"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "exlibris.ch",
+                "www.exlibris.ch"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/inbound-servletapi\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "exlibris.arc",
+                "bw-online-shop.arc",
+                "fritz-berger-de.arc",
+                "haertle.arc",
+                "landi-ch.arc",
+                "maschenfein-de.arc",
+                "matratzen-concord.arc",
+                "nkd-de.arc",
+                "outletcity-de.arc",
+                "pflanzen-koelle-de.arc"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.0000752,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "e1a297662a59113da1fa905934d225fbbb766b9ab1ec409064c634f97ada06d4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_eqsid": 0.000006840881105486387,
+                "7cb54b_session_id": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "exlibris.ch",
+                "www.bw-online-shop.com",
+                "www.exlibris.ch",
+                "www.fritz-berger.de",
+                "www.haertle.de",
+                "www.landi.ch",
+                "www.maschenfein.de",
+                "www.matratzen-concord.de",
+                "www.nkd.com",
+                "www.outletcity.com",
+                "www.pflanzen-koelle.de"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/inbound-servletapi\\/viewItem",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "exlibris.arc",
+                "haertle.arc",
+                "landi-ch.arc",
+                "outletcity-de.arc"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "de7ed5c6f334d81e27d0498de9cf908de7cc11b35274dde9334f6c40b8ee4400",
+                "f092c65154664a3fe9fdd9d01f542eea9a9389b3315be2eb8bbf4002f652f45c",
+                "c299958aee081c7db377f8bc3589c62f8f2fbdd076f992004dc28eb9916e851e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_eqsid": 0.000006840881105486387,
+                "7cb54b_session_id": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "exlibris.ch",
+                "www.haertle.de",
+                "www.landi.ch",
+                "www.outletcity.com"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/inbound-servletapi\\/getRecommendations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "exlibris.arc",
+                "haertle.arc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0adc8842a6874f4c9beb621394b99150061604eae558221ee67de1016af5322c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "exlibris.ch",
+                "www.haertle.de"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/flow\\/megabad\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.connection": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.orientation": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "da804caef5b39242374a95e0d3a762d3977de9d4e42d6d1929898ac9b5ea3eae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "megabad.com",
+                "www.megabad.com"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/inbound-servletapi\\/features",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nkd-de.arc",
+                "outletcity-de.arc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "95f207baa005be101e204b2fd2d564e9bbd1e02d7c08ce48b37058a8879b0043"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "7cb54b_session_id": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "nkd.com",
+                "www.outletcity.com"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/inbound-servletapi\\/getRecommendations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "outletcity-de.arc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "dedd4e5fdbe6d92a7d6a048762f2642f9e5c51059145959d97994d0df07ae955"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "7cb54b_session_id": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "outletcity.com",
+                "www.outletcity.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7241379310344828
+        },
+        {
+            "domain": "outletcity.freetls.fastly.net",
+            "prevalence": 0.1724137931034483
+        },
+        {
+            "domain": "cloudlog.ch",
+            "prevalence": 0.06896551724137931
+        },
+        {
+            "domain": "usercentrics.eu",
+            "prevalence": 0.034482758620689655
+        }
+    ],
+    "types": {
+        "Script": 23,
+        "XHR": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-383.awsdns-47.com",
+        "ns10.dnsmadeeasy.com",
+        "ns-750.awsdns-29.net",
+        "ns11.dnsmadeeasy.com"
+    ]
+}

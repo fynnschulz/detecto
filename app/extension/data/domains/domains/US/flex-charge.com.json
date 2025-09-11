@@ -1,0 +1,574 @@
+{
+    "domain": "flex-charge.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "sensejs-sandbox",
+        "api-sandbox",
+        "cdn-sentry",
+        "tst-kaptcha",
+        "cdn-fonts-googleapis",
+        "cdn-seon"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "flex-charge\\.com\\/widget\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 3,
+            "subdomains": [
+                "sensejs-sandbox"
+            ],
+            "apis": {
+                "window.sessionStorage": 3,
+                "Navigator.prototype.vendor": 3,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 3,
+                "HTMLCanvasElement.prototype.toDataURL": 3,
+                "Screen.prototype.colorDepth": 3,
+                "Navigator.prototype.hardwareConcurrency": 3,
+                "Document.cookie setter": 3,
+                "Document.cookie getter": 3,
+                "window.indexedDB": 3,
+                "Navigator.prototype.deviceMemory": 3,
+                "Screen.prototype.availTop": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.availWidth": 3,
+                "Screen.prototype.availLeft": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.availHeight": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.language": 3,
+                "Navigator.prototype.languages": 3,
+                "Navigator.prototype.platform": 3,
+                "Navigator.prototype.plugins": 3,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "ee7550cdba7fd763f7845d8aa7d533ba44138cd8f5932ec424e31f9b98a356bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1755306563,
+                    "length": 1,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 0.3333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/v1\\/dependencies",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sandbox"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/v1\\/configuration\\/01973c13-a70f-7091-947b-fb321035f558\\/widget",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sandbox"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "dca597d0ef2d70700afa7e314f93276f588486fe44771c423cf96fd5cd233518"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/v1\\/dependencies",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sandbox"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "8e0768722ebd0339c9274c3a6ba506385a1b1e641fe290b72fb293df716e7174",
+                "ea7d122c4dc990149a9068e249835ed844fede94ca12772dffd926d54b7fb176"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/v1\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sandbox"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/v1\\/collect",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sandbox"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "395e27cbc5d799884573ba2cfe4cd66affe5b61b48030314c64b525e76fd6abc",
+                "7da293af37e529cf32e0c401c0a7da6a8f84e25f642963f8ca3fe2bdb3701732"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/7\\.11\\.1\\/bundle\\.tracing\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-sentry"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5026a13aa1247d4d6a03ab4ebbe2db67adfd844f8317ab7e32cdd5fd2cabee5c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/collect\\/sdk",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tst-kaptcha"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b317d139ef382f44960eae84c5d3a1534dd2f3c4ce39c2ec13ee84e1efb8c71b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cdn.flexcharge.100488.ka.ck": {
+                    "ttl": 31536029,
+                    "length": 310,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/css2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-fonts-googleapis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b1ad9966e00de82b560cf50a3fab4c6d74949659c7d82c9922c4c3144740ac05"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/js\\/v4\\/agent\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn-seon"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.plugins": 2,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "WebGLRenderingContext.prototype.getContextAttributes": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.productSub": 2,
+                "OfflineAudioContext.prototype.constructor": 2,
+                "AudioBuffer.prototype.getChannelData": 2,
+                "Navigator.prototype.appVersion": 2,
+                "CanvasRenderingContext2D.prototype.getImageData": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2,
+                "Performance.prototype.memory": 2,
+                "Navigator.prototype.webkitTemporaryStorage": 2,
+                "Navigator.prototype.storage": 2,
+                "Navigator.prototype.mediaDevices": 2,
+                "MediaDevices.prototype.enumerateDevices": 2,
+                "Navigator.prototype.permissions": 2,
+                "Screen.prototype.orientation": 2,
+                "Navigator.prototype.webdriver": 2,
+                "CanvasRenderingContext2D.prototype.measureText": 2,
+                "Notification.permission": 1,
+                "RTCPeerConnection.prototype.constructor": 1,
+                "Navigator.prototype.getBattery": 1,
+                "RTCPeerConnectionIceEvent.prototype.candidate": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5ebdda80c7f59c8f3237e0fa224a491321f544cf109c939141015c75d0f45312"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "data": {
+                    "ttl": 31536029,
+                    "length": 32,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/v1\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sandbox"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/v1\\/track",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sandbox"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "573d3d416faac957ea587d019dfd65d715badd32d5701522b910c62198021e47"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/collect\\/kasupport",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tst-kaptcha"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "9b635dc988466a7fb35649a7262f385a301b5474be97e15f96abd5c18d253130"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/logo\\.htm",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tst-kaptcha"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "RTCPeerConnection.prototype.constructor": 1,
+                "window.localStorage": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Navigator.prototype.language": 1,
+                "Screen.prototype.availHeight": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Navigator.prototype.plugins": 1,
+                "RTCPeerConnectionIceEvent.prototype.candidate": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "de9be5ce73d133c910976fe8e16ca81e7effcbfd12b11a13b5f1ab5c9e057c5d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/collect\\/cookiestore",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tst-kaptcha"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fabletics.com",
+                "www.fabletics.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/v1\\/configuration\\/0197acbe-eb32-746e-a7f6-00c91aa952b8\\/widget",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sandbox"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "21b9a36860f9260b2c52f41f024e9313eed79adbe2019649b927efc6309210c5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savagex.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/md",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tst-kaptcha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savagex.com",
+                "www.savagex.com"
+            ]
+        },
+        {
+            "rule": "flex-charge\\.com\\/fin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tst-kaptcha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "savagex.com",
+                "www.savagex.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.9069767441860465
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.09302325581395349
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Preflight": 9,
+        "Fetch": 13,
+        "Stylesheet": 2,
+        "XHR": 10,
+        "Document": 2
+    },
+    "nameservers": [
+        "ns2.wixdns.net",
+        "ns3.wixdns.net"
+    ]
+}

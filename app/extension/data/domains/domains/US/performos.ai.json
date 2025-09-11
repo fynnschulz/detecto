@@ -1,0 +1,105 @@
+{
+    "domain": "performos.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "live",
+        "backend"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "performos\\.ai\\/popup\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "live"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "80c2931dc08cf2e42cce69bd9380f21a54c953e653b327161955e6b1be064145"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "optimumnutrition.com",
+                "www.optimumnutrition.com"
+            ]
+        },
+        {
+            "rule": "performos\\.ai\\/api\\/menu_grouping\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "backend"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2f57350c1b3e1e5a06ee05b565d457d34454ec5738212769a9ee8b3249f2c82d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "optimumnutrition.com",
+                "www.optimumnutrition.com"
+            ]
+        },
+        {
+            "rule": "performos\\.ai\\/media\\/popup_icons\\/optimum-nutrition-us\\/Final_AI_Coach_resize_pQxzEOh\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "backend"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d3e44037a15cc0766e5bad57228fcee0ad5a9223ee09ea107279f3ea92be10d8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "optimumnutrition.com",
+                "www.optimumnutrition.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "coco.ns.cloudflare.com",
+        "will.ns.cloudflare.com"
+    ]
+}

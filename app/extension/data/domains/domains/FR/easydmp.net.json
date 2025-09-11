@@ -1,0 +1,245 @@
+{
+    "domain": "easydmp.net",
+    "owner": {
+        "name": "EMATCH",
+        "displayName": "EMATCH"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "asset"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "easydmp\\.net\\/mt\\/squadata\\/mt\\.js",
+            "cookies": 0.000404,
+            "fingerprinting": 1,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "d2311f06451d81aa7aa7ef26e95c47c02d93af6f2fe67a699868f2fae98ec96a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sqd_nwvst": {
+                    "ttl": 1805,
+                    "length": 1,
+                    "prevalence": 0.000403999596000404,
+                    "uniqueness": 0.25
+                },
+                "sqd_vst": {
+                    "ttl": 865805,
+                    "length": 1,
+                    "prevalence": 0.000403999596000404,
+                    "uniqueness": 0.25
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dynveo.fr",
+                "www.famillechretienne.fr",
+                "www.terrevivante.org",
+                "www.vetostore.com"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/js\\/client\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "58628f19cfd662722696525d27e959fcc88858ccb626516d5d706d2ad9c06f4e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dynveo.fr",
+                "www.famillechretienne.fr",
+                "www.ktotv.com",
+                "www.terrevivante.org",
+                "www.vetostore.com"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/client_iframe\\.html",
+            "cookies": 0.000404,
+            "fingerprinting": 1,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4,
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "window.indexedDB": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e0623915ab3efa015c998ef66027658a49305ad892554d15d488d82614e8bcbf",
+                "8bb9d4832b5b968049e7530dcf01a7f6b3653ec03bc0a1362cf91e58be83b3d2"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dynveo.fr",
+                "www.ktotv.com",
+                "www.terrevivante.org",
+                "www.vetostore.com"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/etag\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dynveo.fr",
+                "www.ktotv.com",
+                "www.terrevivante.org",
+                "www.vetostore.com"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/collect_v3\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "ed89dfe3d4d6e11dd805770793f5680fd67262fc7ca76b322b3b6bca2b9b18d0",
+                "13b739635e975ac2520fa93ab83fe91b3bd53b47c1f7c554a03967d6fba49951",
+                "808ded29c70485885e9ceec97d6ecc857976aaa4ec1d069ff27333a561b94663"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dynveo.fr",
+                "www.ktotv.com",
+                "www.terrevivante.org",
+                "www.vetostore.com"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/get_delivery_data\\.php",
+            "cookies": 0.000404,
+            "fingerprinting": 0,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "65ba5ac7f04441bf74a5f954321512a44e11c8032e5184df200fea11e772e0e2",
+                "9ba0201564fba97491ad0103af0efec57f471f75532b1a6be0b64d009e92424b",
+                "68d0f502aa76376f59364c8b91bb4a4a890c29b77cdf4a69ea0a097a7b78912a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dynveo.fr",
+                "www.ktotv.com",
+                "www.terrevivante.org",
+                "www.vetostore.com"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/collect_v2\\.img\\.php",
+            "cookies": 0.000404,
+            "fingerprinting": 0,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dynveo.fr",
+                "www.ktotv.com",
+                "www.terrevivante.org",
+                "www.vetostore.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000505,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "email-match.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Document": 4,
+        "XHR": 12,
+        "Image": 4
+    },
+    "nameservers": [
+        "dns109.ovh.net",
+        "ns109.ovh.net"
+    ]
+}

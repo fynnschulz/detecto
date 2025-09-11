@@ -1,0 +1,130 @@
+{
+    "domain": "dvidshub.net",
+    "owner": {
+        "name": "Defense Media Activity",
+        "displayName": "Defense Media Activity"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "api",
+        "analytics"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "dvidshub\\.net\\/asset",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7c5a051bc03161e66ffdf00301107afc3d3668ca7c519a1e8a81c3e59fda6e2b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "af.mil",
+                "www.1af.acc.af.mil"
+            ]
+        },
+        {
+            "rule": "dvidshub\\.net\\/live\\/list",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a279de572510e44724e4bee4f5f4d41a6a7b7e65587666138f666a531a3389e1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "defense.gov",
+                "www.defense.gov"
+            ]
+        },
+        {
+            "rule": "dvidshub\\.net\\/loaded",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marines.mil",
+                "www.marines.mil"
+            ]
+        },
+        {
+            "rule": "dvidshub\\.net\\/loaded",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marines.mil",
+                "www.marines.mil"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9333333333333333
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "XHR": 4,
+        "Fetch": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-1761.awsdns-28.co.uk",
+        "ns-852.awsdns-42.net",
+        "ns-331.awsdns-41.com",
+        "ns-1133.awsdns-13.org"
+    ]
+}

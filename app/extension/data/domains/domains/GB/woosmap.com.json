@@ -1,0 +1,158 @@
+{
+    "domain": "woosmap.com",
+    "owner": {
+        "name": "Web Geo Services",
+        "displayName": "Web Geo Services"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00111,
+    "sites": 11,
+    "subdomains": [
+        "api",
+        "sdk"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "woosmap\\.com\\/geolocation\\/position\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "38fffcfeec1402828e0ecb0b641c87b5e5565b138583351596137bce7a5efcb0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "diy.com",
+                "www.diy.ie",
+                "www.diy.com",
+                "www.trade-point.co.uk"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/localities\\/localitieswidget\\.2\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "f8248d669c1a2dcd9f9f33630c4d09196161c4d0e9904703a92bf224ade76ce5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "halfords.com",
+                "www.halfords.com",
+                "www.halfords.ie"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/localities\\/style\\.2\\.0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "f96fa9ed7a9c2111534a987b5272315363f250aa5dc7b3fc9c61d7303022b9b0"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "halfords.com",
+                "www.halfords.com",
+                "www.halfords.ie"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/localities\\/autocomplete\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "0f7ff619deacef14b541367ea3e04ba7fb775553f7c3839ade3c20d825498257"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "halfords.com",
+                "www.halfords.com",
+                "www.halfords.ie"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/localities\\/localities\\.2\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "ad8110dfb7c6a7e2f7e62f95b1135985350f23d2ce57be3e5a816bca62b1b4f2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toolstation.com",
+                "www.howdens.com",
+                "www.toolstation.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 7,
+        "Script": 6,
+        "Stylesheet": 3
+    },
+    "nameservers": [
+        "chad.ns.cloudflare.com",
+        "jasmine.ns.cloudflare.com"
+    ]
+}

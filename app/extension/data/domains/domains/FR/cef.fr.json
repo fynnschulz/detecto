@@ -1,0 +1,130 @@
+{
+    "domain": "cef.fr",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "stats"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "cef\\.fr\\/matomo\\/matomo\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 2,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.vendor": 3,
+                "Document.cookie getter": 3,
+                "window.name": 2,
+                "NavigatorUAData.prototype.brands": 3,
+                "NavigatorUAData.prototype.platform": 3,
+                "NavigatorUAData.prototype.getHighEntropyValues": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.mimeTypes": 3,
+                "Navigator.prototype.javaEnabled": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Navigator.prototype.platform": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e28e9e2b0218fc7c822ecbc35cb3e627ae353feb6125a18ada643042483a9cb4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.4.30e7": {
+                    "ttl": 33955202,
+                    "length": 28,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                },
+                "_pk_ses.4.30e7": {
+                    "ttl": 1802,
+                    "length": 1,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                },
+                "_pk_ses..7ef2": {
+                    "ttl": 1803,
+                    "length": 1,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 0.5
+                },
+                "_pk_id.6.7ef2": {
+                    "ttl": 33955204,
+                    "length": 28,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                },
+                "_pk_ses.6.7ef2": {
+                    "ttl": 1825,
+                    "length": 1,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "catholique.fr",
+                "messes.info",
+                "www.messes.info"
+            ]
+        },
+        {
+            "rule": "cef\\.fr\\/matomo\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "catholique.fr",
+                "www.messes.info"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Ping": 2
+    },
+    "nameservers": [
+        "ns1.cms-france.net",
+        "ns2.cms-france.net",
+        "ns3.cms-france.net"
+    ]
+}

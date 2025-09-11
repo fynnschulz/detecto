@@ -1,0 +1,144 @@
+{
+    "domain": "webmarked.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "assets.smartwishlist",
+        "front.smartwishlist"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "webmarked\\.net\\/static\\/v6\\/smartwishlist\\.js",
+            "cookies": 0.000403,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets.smartwishlist"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "6df89622d02357e85713a5f18d19391246e6a71d0fe418cba149d5a30d5249b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "wishlist_id": {
+                    "ttl": 31536009,
+                    "length": 22,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 1
+                },
+                "bookmarkeditems": {
+                    "ttl": 31536009,
+                    "length": 12,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "wishlist_customer_id": {
+                    "ttl": 31536009,
+                    "length": 1,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saharalondon.com",
+                "uk.tilley.com",
+                "www.bonnersmusic.co.uk",
+                "www.extremerestraints.com"
+            ]
+        },
+        {
+            "rule": "webmarked\\.net\\/static\\/v6\\/css\\/smartwishlist\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets.smartwishlist"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "c707ee6c5d9fc8318886d3c8a191724f603b76eb2acafade18589c7f6412b0b0"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saharalondon.com",
+                "uk.tilley.com",
+                "www.bonnersmusic.co.uk",
+                "www.extremerestraints.com",
+                "www.souschef.co.uk"
+            ]
+        },
+        {
+            "rule": "webmarked\\.net\\/v6\\/fetchstoredata\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "front.smartwishlist"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "f6ba2d88bf51db51a5f6696a96d1b0f38af7e43fb9a0b357c71caae354a91356",
+                "d0c84a23a260f928f105c04416d0661fb930b94f5e7cf72946334f50788f2442",
+                "5373d161beb3fea4681512950139820741b12afc213bc2a7e1c674f7dfe40a2d",
+                "d5dbf237dd02634cc0f157437f99ffbd1a8bb0cc34b9d75b523e19ee1e07d380"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saharalondon.com",
+                "uk.tilley.com",
+                "www.bonnersmusic.co.uk",
+                "www.extremerestraints.com",
+                "www.souschef.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000503,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5333333333333333
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "d5zu2f4xvqanl.cloudfront.net",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Stylesheet": 5
+    },
+    "nameservers": [
+        "ns2.dreamhost.com",
+        "ns3.dreamhost.com",
+        "ns1.dreamhost.com"
+    ]
+}

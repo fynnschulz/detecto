@@ -1,0 +1,94 @@
+{
+    "domain": "thinkwebcontent.com",
+    "owner": {
+        "name": "Think Web Content SL",
+        "displayName": "Think Web Content"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "thinkwebcontent\\.com\\/assets\\/thinkspain\\.com\\/frontend\\/2025\\/08\\/06\\/5602174\\/js\\/vendors-global\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "280a414daf41c665d2f76afbfd7ab621adaf1bd913ba738a3cd239a964c22f7b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thinkspain.com",
+                "www.thinkspain.com"
+            ]
+        },
+        {
+            "rule": "thinkwebcontent\\.com\\/twcan\\/v0\\.32\\/track\\.min\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "80102df0df9d949a2175e4c6dab2976459d80f70d9a6b8ef0c9d2fcdeb72d2da"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_twc": {
+                    "ttl": 31536000,
+                    "length": 36,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thinkspain.com",
+                "www.thinkspain.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns-612.awsdns-12.net",
+        "ns-437.awsdns-54.com",
+        "ns-1869.awsdns-41.co.uk",
+        "ns-1373.awsdns-43.org"
+    ]
+}

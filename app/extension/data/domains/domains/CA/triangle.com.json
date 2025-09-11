@@ -1,0 +1,121 @@
+{
+    "domain": "triangle.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "gigya"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "triangle\\.com\\/js\\/Api\\.htm",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gigya"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "93a2c16b0ef28a79894d967cc569a5f2dcad552b0c1b55950e66af05c57252f3"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadiantire.ca",
+                "sportchek.ca"
+            ]
+        },
+        {
+            "rule": "triangle\\.com\\/sdk\\.config\\.get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gigya"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "724595a52101707dd648e4196e0aa808603d137f442b07c04e648cf779790049"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadiantire.ca",
+                "sportchek.ca"
+            ]
+        },
+        {
+            "rule": "triangle\\.com\\/js\\/sso\\.htm",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gigya"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2d9f5a99ffc33dc66b6dafe87b5d6fd5cde78a8ab989b4f4369f3663985140b6"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canadiantire.ca",
+                "sportchek.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "gigya.com",
+            "prevalence": 0.8181818181818182
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.18181818181818182
+        }
+    ],
+    "types": {
+        "Document": 4,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns1.cantire.com",
+        "ns2.cantire.com",
+        "ns3.cantire.com",
+        "ns4.cantire.com"
+    ]
+}

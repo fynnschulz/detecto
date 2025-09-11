@@ -1,0 +1,484 @@
+{
+    "domain": "yahoo.com",
+    "owner": {
+        "name": "Yahoo Inc.",
+        "displayName": "Verizon Media"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.00616,
+    "sites": 61,
+    "subdomains": [
+        "c2shb.pubgw",
+        "connectid.analytics",
+        "sp.analytics",
+        "pbs",
+        "cms.analytics",
+        "ups.analytics",
+        "pr-bh.ybp"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "yahoo\\.com\\/bidRequest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c2shb.pubgw"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allestoringen.nl",
+                "downdetector.com",
+                "pimylifeup.com",
+                "www.dictionary.com",
+                "www.thesaurus.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/bidRequest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c2shb.pubgw"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f651c142cf092579d2244d7e844fb12ea5a3ea98959aeb0c903d11d17e4ba717",
+                "43c34b29876de83c52a2b0ed237fb63a7ae1e4a3b85714db18a36347be99d817"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allestoringen.nl",
+                "downdetector.com",
+                "www.dictionary.com",
+                "www.thesaurus.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/connectId-gpt\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "connectid.analytics"
+            ],
+            "apis": {
+                "window.localStorage": 5,
+                "Document.cookie getter": 5,
+                "Document.cookie setter": 3
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "56351c084d8d56437d41f1e58b7eb184b563871e88bab60f6b15486c39f13996"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "connectId": {
+                    "ttl": 31536000,
+                    "length": 68,
+                    "prevalence": 0.0003030915336431602,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biblehub.com",
+                "gamewith.net",
+                "www.behindthename.com",
+                "www.elmundo.es",
+                "www.theweathernetwork.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/sp\\.pl",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.analytics"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "f3882f998713d264095c3b132fade64a677f2a51ffc7a1e6703bb76aa210616f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.00020206102242877348,
+                "utag_main_vapi_domain": 0.00010103051121438674,
+                "_li_dcdm_c": 0.00010103051121438674
+            },
+            "exampleSites": [
+                "draxe.com",
+                "reolink.com",
+                "skylum.com",
+                "www.anker.com",
+                "www.hilton.com",
+                "www.hulu.com",
+                "www.leafly.com",
+                "www.mcafee.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/setuid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbs"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "strategywiki.org",
+                "www.amazon.co.jp",
+                "www.amazon.in",
+                "www.audible.com",
+                "www.haaretz.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/cms",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cms.analytics"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "ita.nl",
+                "veneta.com",
+                "werkenbijdefensie.nl",
+                "www.audible.com",
+                "www.hilton.com",
+                "www.msnbc.com",
+                "www.nbcnews.com",
+                "www.thermenberendonck.nl",
+                "www.today.com",
+                "www.uitagendarotterdam.nl"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/ups\\/58725\\/cms",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ups.analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.audible.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/sync\\/gumgum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pr-bh.ybp"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "75301b6f8fa60829015618ade544c3d33adf1f375bd560d9a4753b5be887058f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "downdetector.com",
+                "www.behindthename.com",
+                "www.iplocation.net",
+                "www.spanjevandaag.com",
+                "www.thephoblographer.com",
+                "www.topcpu.net",
+                "www.zerohedge.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/ups\\/58813\\/fed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ups.analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamewith.net",
+                "www.elmundo.es",
+                "www.theweathernetwork.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/ups\\/58679\\/cms",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ups.analytics"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ita.nl",
+                "veneta.com",
+                "werkenbijdefensie.nl",
+                "www.thermenberendonck.nl",
+                "www.uitagendarotterdam.nl"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/spp\\.pl",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.analytics"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "f3882f998713d264095c3b132fade64a677f2a51ffc7a1e6703bb76aa210616f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vanguard.com",
+                "investor.vanguard.com",
+                "www.ebay.ca",
+                "www.ebay.com",
+                "www.moma.org",
+                "www.toyota.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/ups\\/58618\\/occ",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ups.analytics"
+            ],
+            "apis": {},
+            "sites": 13,
+            "prevalence": 0.00131,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lets-rebuild.com",
+                "sms24.me",
+                "wukihow.com",
+                "www.behindthename.com",
+                "www.gismeteo.ru",
+                "www.kookfans.nl",
+                "www.mysqltutorial.org",
+                "www.oracletutorial.com",
+                "www.politico.com",
+                "www.pythontutorial.net",
+                "www.seat61.com",
+                "www.sqlitetutorial.net",
+                "www.thephoblographer.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/ups\\/57628\\/sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ups.analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "osxdaily.com",
+                "www.whosdatedwho.com"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/admax\\/bid\\/partners\\/PBJS",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c2shb.pubgw"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2697fde216808d93c92ee1f52652caba1bd244a6c97be0e3a826cf9d166cdcad"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbc.ca",
+                "www.cbc.ca"
+            ]
+        },
+        {
+            "rule": "yahoo\\.com\\/ups\\/58782\\/cms",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ups.analytics"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hilton.com",
+                "www.msnbc.com",
+                "www.nbcnews.com",
+                "www.today.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Audience Measurement",
+        "Federated Login"
+    ],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.19327731092436976
+        },
+        {
+            "domain": "smilewanted.com",
+            "prevalence": 0.1092436974789916
+        },
+        {
+            "domain": "yimg.com",
+            "prevalence": 0.09243697478991597
+        },
+        {
+            "domain": "adform.net",
+            "prevalence": 0.08403361344537816
+        },
+        {
+            "domain": "sdcdns.com",
+            "prevalence": 0.08403361344537816
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.06722689075630252
+        },
+        {
+            "domain": "demdex.net",
+            "prevalence": 0.06722689075630252
+        },
+        {
+            "domain": "gumgum.com",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "adthrive.com",
+            "prevalence": 0.03361344537815126
+        },
+        {
+            "domain": "3lift.com",
+            "prevalence": 0.03361344537815126
+        }
+    ],
+    "types": {
+        "Preflight": 5,
+        "Fetch": 6,
+        "Script": 5,
+        "Image": 51,
+        "XHR": 3,
+        "Document": 13
+    },
+    "nameservers": [
+        "ns5.yahoo.com",
+        "ns4.yahoo.com",
+        "ns2.yahoo.com",
+        "ns3.yahoo.com",
+        "ns1.yahoo.com"
+    ]
+}

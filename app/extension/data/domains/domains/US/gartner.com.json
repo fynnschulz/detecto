@@ -1,0 +1,319 @@
+{
+    "domain": "gartner.com",
+    "owner": {
+        "name": "Gartner, Inc.",
+        "displayName": "Gartner"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "gartner\\.com\\/peer-insights\\/vendor-portal\\/public\\/Widget\\/js\\/widget\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "7db9fcf97a8be1b90c880daa16d728db3eb7f79029381acc98d8a464cbfa6857"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "socradar.io",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/peer-insights\\/vendor-portal\\/public\\/Widget\\/data",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0cf97b6d9c5125ef4f75b624b028b3891dcca7ed8618a550620916a52a848f1a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "dtCookie": {
+                    "ttl": null,
+                    "length": 94,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "rxVisitor": {
+                    "ttl": null,
+                    "length": 45,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/peer-insights\\/vendor-portal\\/public\\/Widget\\/css\\/widget\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "403312d3d31e0c00b082c401914d05e1ac606cac336a12793ecfef7efac8a274"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/reviews\\/ruxitagentjs_A7NVfhqrux_10271230629152232\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "203657f03f80386ca6b1db9ae27449920f7c20082300661e0cef335e8489d3c5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/peer-insights\\/vendor-portal\\/public\\/Widget\\/js\\/data\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6679f12b74d51f58c5f33ce27d3288dd38b646ae749fb102d0f8bd168dcb8aee"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/peer-insights\\/vendor-portal\\/api4\\/proxy\\/api",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "500ac78bece4243a17834751216e357a2803f16c9ec44471842014f0152c6333"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/cdn-cgi\\/challenge-platform\\/scripts\\/jsd\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3d3dc4626bfc1c5f464640dfc37b08383b55687c0c2d9b607e3ca3a66e2012bb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/cdn-cgi\\/challenge-platform\\/h\\/b\\/scripts\\/jsd\\/4710d66e8fda\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3d3dc4626bfc1c5f464640dfc37b08383b55687c0c2d9b607e3ca3a66e2012bb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/peer-insights\\/vendor-portal\\/public\\/Widget\\/img\\/logo-bubble-white-bg-2x-min\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "81c96815de10bf160c577be2b3c60fb5e8b0bc4f751e93f6f7245494db9aef37"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/peer-insights\\/vendor-portal\\/public\\/Widget\\/img\\/stars\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f2cd4e6183a61395e11f2350f97e87717394e8a6962a032e37d61e2ec85ff40f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        },
+        {
+            "rule": "gartner\\.com\\/peer-insights\\/vendor-portal\\/public\\/Widget\\/img\\/chevron-right\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2a6c851bd58a3e081fe8c42c7bc3697ce1ef5ba01784a4abcce268786fd7339e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beyondtrust.com",
+                "www.vinchin.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 11,
+        "Document": 2,
+        "Stylesheet": 2,
+        "XHR": 2,
+        "Image": 6
+    },
+    "nameservers": [
+        "a14-64.akam.net",
+        "pdns77.ultradns.org",
+        "a1-109.akam.net",
+        "a28-65.akam.net",
+        "a5-64.akam.net",
+        "pdns77.ultradns.com",
+        "a3-65.akam.net",
+        "a4-64.akam.net"
+    ]
+}

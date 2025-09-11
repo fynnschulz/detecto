@@ -1,0 +1,92 @@
+{
+    "domain": "cbssports.cloud",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "neuron",
+        "static.prod.martech"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "cbssports\\.cloud\\/client\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "neuron"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8506d9fd2f1365ed504c71faec50ac1dc4a96357f391b62d75e99c6e5fdcff8a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/creatives\\/sidelines\\/single_cta\\/v1\\.2\\.0_2025_08_06\\/bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static.prod.martech"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.orientation": 2,
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "945bd230b3d5c24bac2915d0cf3caab9c4612a347bb8dea9f5db96a3528e756b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "confiant-integrations.net",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "cbsistatic.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns-953.awsdns-55.net",
+        "ns-1343.awsdns-39.org",
+        "ns-1856.awsdns-40.co.uk",
+        "ns-113.awsdns-14.com"
+    ]
+}

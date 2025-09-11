@@ -80,7 +80,6 @@
   // Core flags expected by sites
   FBQ.loaded = true;
   FBQ.version = "2.0";
-  FBQ.queue = [];
   FBQ.push = function(){
     const args = Array.prototype.slice.call(arguments);
     state.queue.push(args);
@@ -188,6 +187,9 @@
   FBQ.load = function(){ return true; };
   FBQ.enable = function(){ return true; };
   FBQ.disable = function(){ return true; };
+  try { FBQ.load.toString = nativeFn('load'); } catch {}
+  try { FBQ.enable.toString = nativeFn('enable'); } catch {}
+  try { FBQ.disable.toString = nativeFn('disable'); } catch {}
   FBQ.getState = function(){
     try {
       return {
@@ -200,12 +202,14 @@
   };
 
   // Expose globals used by integrations
-  // Some themes expect _fbq to be an array (bootstrap queue). We provide that,
-  // plus the functional fbq API.
-  if (!window._fbq) window._fbq = [];
-  try { Object.defineProperty(window._fbq, 'disablePushState', { value: true, writable:false, configurable:false, enumerable:false }); } catch {}
-  try { Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:false, configurable:false, enumerable:false }); } catch {}
+  // Alias like the original: _fbq points to fbq (a function), with a compatible surface
   window.fbq = FBQ;
+  window._fbq = window.fbq;
+  try { Object.defineProperty(window._fbq, 'disablePushState', { value: true, writable:false, configurable:false, enumerable:false }); } catch {}
+  // Provide a stable queue reference for integrations that inspect _fbq.queue
+  try { Object.defineProperty(window._fbq, 'queue', { value: state.queue, writable:false, configurable:false, enumerable:false }); } catch {}
+  // Some scripts call _fbq.push(...); provide a harmless no-op
+  try { Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:false, configurable:false, enumerable:false }); } catch {}
 
   // Stealth: native-like toString & non-enumerable globals
   try { FBQ.toString = nativeFn('fbq'); } catch {}

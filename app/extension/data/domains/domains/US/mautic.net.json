@@ -1,0 +1,319 @@
+{
+    "domain": "mautic.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000821,
+    "sites": 12,
+    "subdomains": [
+        "combe",
+        "u-of-u-health",
+        "sideline",
+        "mecknc.gov",
+        "bsnsports",
+        "cx"
+    ],
+    "cnames": [
+        {
+            "original": "cx.mitutoyo.com",
+            "resolved": "cx.mautic.net"
+        },
+        {
+            "original": "go.mecknc.gov",
+            "resolved": "mecknc.gov.mautic.net"
+        },
+        {
+            "original": "go.sfcc.edu",
+            "resolved": "mautic.net"
+        },
+        {
+            "original": "landing-sideline.bsnsports.com",
+            "resolved": "sideline.mautic.net"
+        },
+        {
+            "original": "landing.bsnsports.com",
+            "resolved": "bsnsports.mautic.net"
+        },
+        {
+            "original": "uofuhealthcare.utah.edu",
+            "resolved": "u-of-u-health.mautic.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "mautic\\.net\\/mtc\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 2,
+            "subdomains": [
+                "combe",
+                "u-of-u-health",
+                "sideline",
+                "mecknc.gov",
+                "bsnsports",
+                "cx"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 4,
+                "Date.prototype.getTimezoneOffset": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Navigator.prototype.appVersion": 4,
+                "Navigator.prototype.doNotTrack": 4,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 4,
+                "window.localStorage": 4,
+                "Document.cookie setter": 3,
+                "Document.cookie getter": 1
+            },
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [
+                {
+                    "original": "go.mecknc.gov",
+                    "resolved": "mecknc.gov.mautic.net"
+                },
+                {
+                    "original": "landing.bsnsports.com",
+                    "resolved": "bsnsports.mautic.net"
+                },
+                {
+                    "original": "cx.mitutoyo.com",
+                    "resolved": "cx.mautic.net"
+                },
+                {
+                    "original": "go.sfcc.edu",
+                    "resolved": "mautic.net"
+                }
+            ],
+            "responseHashes": [
+                "a4432da5b4dabbaa88f6583d076198f32654f7b2b18f72b9d4d87b1844c306dd",
+                "521aa0a458240d9ebdb5fd01141e0e8a32ccd97d08efe50db920692401fab6f6",
+                "53685a043e31fdefc01bff23e0d0e92c0792a66ae9ca98c2008333280ba56e19",
+                "1660298be1874c7d977e301014683af2712a49daa134875fab2651f09ebd9aa9",
+                "e980d2aedcdbadab3583b44bf784ceff59727cc5a27d9e183d5ab7561573920b",
+                "e20a83c575984964214f3bcd91a8ccac8cf87279b875bb669a5f48a05972f575"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "mtc_id": {
+                    "ttl": null,
+                    "length": 8,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                },
+                "mtc_sid": {
+                    "ttl": null,
+                    "length": 23,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                },
+                "mautic_device_id": {
+                    "ttl": null,
+                    "length": 23,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "astroglide.com",
+                "healthcare.utah.edu",
+                "medicine.utah.edu",
+                "sideline.bsnsports.com",
+                "tax.mecknc.gov",
+                "www.bsnsports.com",
+                "www.mitutoyo.com",
+                "www.sfcc.edu"
+            ]
+        },
+        {
+            "rule": "mautic\\.net\\/mtc\\/event",
+            "cookies": 0.0000342,
+            "fingerprinting": 0,
+            "subdomains": [
+                "combe",
+                "u-of-u-health",
+                "sideline",
+                "mecknc.gov",
+                "bsnsports",
+                "cx"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [
+                {
+                    "original": "uofuhealthcare.utah.edu",
+                    "resolved": "u-of-u-health.mautic.net"
+                },
+                {
+                    "original": "landing-sideline.bsnsports.com",
+                    "resolved": "sideline.mautic.net"
+                },
+                {
+                    "original": "go.mecknc.gov",
+                    "resolved": "mecknc.gov.mautic.net"
+                },
+                {
+                    "original": "landing.bsnsports.com",
+                    "resolved": "bsnsports.mautic.net"
+                },
+                {
+                    "original": "cx.mitutoyo.com",
+                    "resolved": "cx.mautic.net"
+                },
+                {
+                    "original": "go.sfcc.edu",
+                    "resolved": "mautic.net"
+                }
+            ],
+            "responseHashes": [
+                "0e1e37e6cfacde450382e8cd9ed4cb7353ee0daaac3a68744028263545522176",
+                "84d1550afaad6275b61f0e8f8f79b74250621819ad6f1ac953f3ebcd339fdee6",
+                "f740d7cac639dc2e68a44f768db7653fb6513b7e5665dbad12fa3e7cc118e88e",
+                "cf6d14dbc74ed7ab86af039db5a4c21e7e1b75c0861b2adef67fe77c495a3e5b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "astroglide.com",
+                "healthcare.utah.edu",
+                "medicine.utah.edu",
+                "sideline.bsnsports.com",
+                "tax.mecknc.gov",
+                "www.bsnsports.com",
+                "www.mitutoyo.com",
+                "www.sfcc.edu"
+            ]
+        },
+        {
+            "rule": "mautic\\.net\\/mtc\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "combe",
+                "u-of-u-health",
+                "sideline",
+                "mecknc.gov",
+                "bsnsports",
+                "cx"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [
+                {
+                    "original": "uofuhealthcare.utah.edu",
+                    "resolved": "u-of-u-health.mautic.net"
+                },
+                {
+                    "original": "landing-sideline.bsnsports.com",
+                    "resolved": "sideline.mautic.net"
+                },
+                {
+                    "original": "go.mecknc.gov",
+                    "resolved": "mecknc.gov.mautic.net"
+                },
+                {
+                    "original": "landing.bsnsports.com",
+                    "resolved": "bsnsports.mautic.net"
+                },
+                {
+                    "original": "cx.mitutoyo.com",
+                    "resolved": "cx.mautic.net"
+                },
+                {
+                    "original": "go.sfcc.edu",
+                    "resolved": "mautic.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "astroglide.com",
+                "healthcare.utah.edu",
+                "medicine.utah.edu",
+                "sideline.bsnsports.com",
+                "tax.mecknc.gov",
+                "www.bsnsports.com",
+                "www.mitutoyo.com",
+                "www.sfcc.edu"
+            ]
+        },
+        {
+            "rule": "mautic\\.net\\/mtracking\\.gif",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mecknc.gov",
+                "cx"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "go.mecknc.gov",
+                    "resolved": "mecknc.gov.mautic.net"
+                },
+                {
+                    "original": "cx.mitutoyo.com",
+                    "resolved": "cx.mautic.net"
+                },
+                {
+                    "original": "go.sfcc.edu",
+                    "resolved": "mautic.net"
+                }
+            ],
+            "responseHashes": [
+                "25b4ecfd3a740f29d76fe930a4cec9d41afa0cfd2bafa70ca4051bd3d5395d74"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mecknc.gov",
+                "tax.mecknc.gov",
+                "www.mitutoyo.com",
+                "www.sfcc.edu"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000821,
+    "topInitiators": [
+        {
+            "domain": "osano.com",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.23809523809523808
+        },
+        {
+            "domain": "mautic.net",
+            "prevalence": 0.23809523809523808
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.23809523809523808
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "XHR": 8,
+        "Preflight": 8,
+        "Image": 4
+    },
+    "nameservers": [
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e3.googledomains.com"
+    ]
+}

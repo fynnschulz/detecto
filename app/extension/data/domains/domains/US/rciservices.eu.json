@@ -1,0 +1,152 @@
+{
+    "domain": "rciservices.eu",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "prod"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "rciservices\\.eu\\/proxy\\/js\\/latest\\/RCIFinancialProxy\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "prod"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ce7be8ea8813ddb8dcc8bdc571eeb528aae480387d82bb7409f9b10089786eff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "renault.es",
+                "www.renault.co.uk"
+            ]
+        },
+        {
+            "rule": "rciservices\\.eu\\/rci-rest-proxy\\/storage\\/prod\\/renault\\/es\\/ONE",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "18c31e5b570e870bf6613082df5528b34eaecb7a843248a52fb423aa60846563"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "renault.es",
+                "www.renault.es"
+            ]
+        },
+        {
+            "rule": "rciservices\\.eu\\/rci-rest-proxy\\/config\\/prod\\/renault\\/es",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9d103a2ebff72696fb9eeedde09f45145479ecee6bfd3eb8d532a34c428945aa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "renault.es",
+                "www.renault.es"
+            ]
+        },
+        {
+            "rule": "rciservices\\.eu\\/services-dispatcher\\/result_do\\.json",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "renault.es",
+                "www.renault.es",
+                "www.renault.co.uk"
+            ]
+        },
+        {
+            "rule": "rciservices\\.eu\\/services-dispatcher\\/result_do\\.json",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "c6de1e287ba732226f94398011ba256b235e771e5c55d272d50fc93c1c7e3d9f",
+                "8edca210ced062deaabeb212e97d8453d3bb161f34021834ab292d61ac944991"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "renault.es",
+                "www.renault.es",
+                "www.renault.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 7,
+        "Preflight": 3
+    },
+    "nameservers": [
+        "ns-cloud-a3.googledomains.com",
+        "ns-cloud-a2.googledomains.com",
+        "ns-cloud-a4.googledomains.com",
+        "ns-cloud-a1.googledomains.com"
+    ]
+}

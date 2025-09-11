@@ -1,0 +1,187 @@
+{
+    "domain": "global-e.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "webservices",
+        "utils",
+        "globale-analytics-sdk",
+        "gepi"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "global-e\\.com\\/merchant\\/freeShippingBanner",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dissh.com.au",
+                "www.citybeach.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/set",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "utils"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dissh.com.au",
+                "www.citybeach.com",
+                "www.sennheiser-hearing.com",
+                "www.t2tea.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/changeshippingandcurrency",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "2e74dd530127d76de82708b39ca54b4b935a2a63a4854141a6dacb147c8be846",
+                "9bcf7922efb36a22edb53b3f7d817ca1f3b58bd4011afe9bb1d11979fe5c31bc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "citybeach.com",
+                "www.sennheiser-hearing.com",
+                "www.t2tea.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/merchant\\/GAData",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "webservices"
+            ],
+            "apis": {
+                "window.sessionStorage": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "b43d11447418859d4d4aa57c3da06d7709a7746653bbb85c6339b3a68fad1098",
+                "076519691955da4214db8ac8335560494db9f3da5a06f58f3b20b7f60803226c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "citybeach.com",
+                "www.sennheiser-hearing.com",
+                "www.t2tea.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/PROD\\/bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "globale-analytics-sdk"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bdceb9bef359b16d1a072b2174c9bbc9b42066c0af3423db48950a7bcec5ab84"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "citybeach.com",
+                "www.t2tea.com"
+            ]
+        },
+        {
+            "rule": "global-e\\.com\\/includes\\/CSS\\/672",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gepi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "df5bdd5eb254b16ef1db24c3abf44f0e510af62439aaa84d472cdb88b8104f91"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sennheiser-hearing.com",
+                "www.sennheiser-hearing.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6363636363636364
+        },
+        {
+            "domain": "techlab-cdn.com",
+            "prevalence": 0.36363636363636365
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Image": 4,
+        "Document": 3,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "ns-1386.awsdns-45.org",
+        "ns-1982.awsdns-55.co.uk",
+        "ns-734.awsdns-27.net",
+        "ns-80.awsdns-10.com"
+    ]
+}

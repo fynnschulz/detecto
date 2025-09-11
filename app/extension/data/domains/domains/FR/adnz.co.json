@@ -1,0 +1,134 @@
+{
+    "domain": "adnz.co",
+    "owner": {
+        "name": "audienzz AG",
+        "displayName": "NZZ Management"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "cdn",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "adnz\\.co\\/convey-scripts\\/contextual_10\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a2e601b1bda577e8b24c4913662f4fd907988b8564bcc6227c23dcbec0e34af0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "search.ch",
+                "www.bluewin.ch"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/api\\/ws-events-sink\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "search.ch",
+                "www.bluewin.ch"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/api\\/ws-semantiq\\/page-keywords",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "5af6472b3f53229c2f1fe4fc45869085edad321c4ee0bb098f435a640e744b03",
+                "cabf5609dd3ca129d4a52f774801221dd9715298f4d99d36959ce24dc3c716ad"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bluewin.ch",
+                "www.bluewin.ch",
+                "www.letemps.ch"
+            ]
+        },
+        {
+            "rule": "adnz\\.co\\/api\\/ws-geodata\\/country",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "08d1623c441b55a6989fce1086354967eb9f522e4cab47da49e9e1e640afbde6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "letemps.ch",
+                "www.letemps.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "ringier-advertising.ch",
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Ping": 2,
+        "Fetch": 5
+    },
+    "nameservers": [
+        "charles.ns.cloudflare.com",
+        "cheryl.ns.cloudflare.com"
+    ]
+}

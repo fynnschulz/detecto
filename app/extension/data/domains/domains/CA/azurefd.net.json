@@ -1,0 +1,406 @@
+{
+    "domain": "azurefd.net",
+    "owner": {
+        "name": "Microsoft Corporation",
+        "displayName": "Microsoft",
+        "privacyPolicy": "https://privacy.microsoft.com/en-us/privacystatement",
+        "url": "http://microsoft.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.00426,
+    "sites": 42,
+    "subdomains": [
+        "pr-olg-proline",
+        "prd-dcp",
+        "amuutilities-ddhcfccsc5ewceh5.z03",
+        "voilaloginseconnecter"
+    ],
+    "cnames": [
+        {
+            "original": "api.sports.olg.ca",
+            "resolved": "pr-olg-proline.azurefd.net"
+        },
+        {
+            "original": "socialize.iga.net",
+            "resolved": "voilaloginseconnecter.azurefd.net"
+        },
+        {
+            "original": "socialize.safeway.ca",
+            "resolved": "voilaloginseconnecter.azurefd.net"
+        },
+        {
+            "original": "socialize.sobeys.com",
+            "resolved": "voilaloginseconnecter.azurefd.net"
+        },
+        {
+            "original": "socialize.thriftyfoods.com",
+            "resolved": "voilaloginseconnecter.azurefd.net"
+        },
+        {
+            "original": "utilities.amuniversal.com",
+            "resolved": "amuutilities-ddhcfccsc5ewceh5.z03.azurefd.net"
+        },
+        {
+            "original": "ws.api.dcp.edu.gov.on.ca",
+            "resolved": "prd-dcp.azurefd.net"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "azurefd\\.net\\/api\\/AppContent\\/get",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pr-olg-proline"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "api.sports.olg.ca",
+                    "resolved": "pr-olg-proline.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "80afb220c0a17482edb25311e28f6105fb2e7eff84ad50b13a415b0b61245887"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "olg.ca",
+                "proline.olg.ca"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/api\\/AppContent\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pr-olg-proline"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "api.sports.olg.ca",
+                    "resolved": "pr-olg-proline.azurefd.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "olg.ca",
+                "proline.olg.ca"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/content\\/api\\/items",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prd-dcp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "ws.api.dcp.edu.gov.on.ca",
+                    "resolved": "prd-dcp.azurefd.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gov.on.ca",
+                "www.dcp.edu.gov.on.ca"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/content\\/api\\/items",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prd-dcp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "ws.api.dcp.edu.gov.on.ca",
+                    "resolved": "prd-dcp.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "e351e72e590f26f05d9212272fd14bc0f4d4ee30b4a5432c4714f84dd2e4e047"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gov.on.ca",
+                "www.dcp.edu.gov.on.ca"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/unsupportedbrowsers\\/index\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "amuutilities-ddhcfccsc5ewceh5.z03"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "utilities.amuniversal.com",
+                    "resolved": "amuutilities-ddhcfccsc5ewceh5.z03.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "2eae200b72d6793456f1440fc88af932b7dca9a867ff09ebd865c401a5f5014f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gocomics.com",
+                "www.uexpress.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/accounts\\.webSdkBootstrap",
+            "cookies": 0.000406,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voilaloginseconnecter"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [
+                {
+                    "original": "socialize.iga.net",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                },
+                {
+                    "original": "socialize.safeway.ca",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                },
+                {
+                    "original": "socialize.sobeys.com",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                },
+                {
+                    "original": "socialize.thriftyfoods.com",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "6f0009d9f26fb4aa0d75f8a6327463ade89f6cef7db2b24babc91ecdaae04918",
+                "01bf27cc5a6084d0f1d16248176a529d8cd99a2a27fa26ce69c75eae64f2404a",
+                "378e4131a1131ace30687a9b0431a0deb531204fd7e54eead3c3c9f23b040ebb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iga.net",
+                "www.safeway.ca",
+                "www.sobeys.com",
+                "www.thriftyfoods.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/accounts\\.getScreenSets",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voilaloginseconnecter"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "socialize.iga.net",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                },
+                {
+                    "original": "socialize.thriftyfoods.com",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "33b58527e292041e799cd0837590e8cf5af26cabcc3a1e2f997f425976aed656"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iga.net",
+                "www.thriftyfoods.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/sdk\\.getConsentStatus",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voilaloginseconnecter"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "socialize.iga.net",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                },
+                {
+                    "original": "socialize.thriftyfoods.com",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "afdb5bfad99944993f4e908c227a8a74ceaa271d8eb657774b4bd6e0508554da"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iga.net",
+                "www.thriftyfoods.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/accounts\\.getSchema",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voilaloginseconnecter"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "socialize.iga.net",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                },
+                {
+                    "original": "socialize.thriftyfoods.com",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "1bf5341a606c136819e7b02ceb8a8be73c6c81b6063b82a401bd4dcfd936602e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iga.net",
+                "www.thriftyfoods.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/accounts\\.getSiteConsentDetails",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voilaloginseconnecter"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "socialize.iga.net",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                },
+                {
+                    "original": "socialize.thriftyfoods.com",
+                    "resolved": "voilaloginseconnecter.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "e65eda08d78d51abfa2b7a220023b20ac583add09bbbeebdcf0f30ee2707d16b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iga.net",
+                "www.thriftyfoods.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.00112,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.0945945945945946
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.06756756756756757
+        },
+        {
+            "domain": "appdynamics.com",
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "login-seconnecter.ca",
+            "prevalence": 0.013513513513513514
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.006756756756756757
+        },
+        {
+            "domain": "ensighten.com",
+            "prevalence": 0.006756756756756757
+        },
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 0.006756756756756757
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "Preflight": 4,
+        "XHR": 12,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns2-37.azure-dns.net",
+        "ns4-37.azure-dns.info",
+        "ns1-37.azure-dns.com",
+        "ns3-37.azure-dns.org"
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "domain": "certainly.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "scripts",
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "certainly\\.io\\/extensions\\/zendesk\\/zendesk_switch\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1113c2db02f4c71307a92915539425193c6b395263d648a0b4df375e1e4a75e0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lasta.app",
+                "www.mspy.com"
+            ]
+        },
+        {
+            "rule": "certainly\\.io\\/extensions\\/certainly_chat_queue\\/chat_queue\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c984e9f7404bbb5b66c19ec3758db3aa722d17c8646579f3f1477c327a8ebbfb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lasta.app",
+                "www.mspy.com"
+            ]
+        },
+        {
+            "rule": "certainly\\.io\\/webbot\\/api\\/webchat\\/36f9fe2b-5f0f-4299-ac42-19b3137f4e4a\\/configuration\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "50dcfd16c197264eb89c533ba36da6e6ea62d5ead0124dd041d0f4611fb2d18c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mspy.com",
+                "www.mspy.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-1672.awsdns-17.co.uk",
+        "ns-813.awsdns-37.net",
+        "ns-476.awsdns-59.com",
+        "ns-1446.awsdns-52.org"
+    ]
+}

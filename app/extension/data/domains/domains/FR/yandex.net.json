@@ -1,0 +1,130 @@
+{
+    "domain": "yandex.net",
+    "owner": {
+        "name": "Yandex LLC",
+        "displayName": "Yandex",
+        "privacyPolicy": "https://yandex.com/legal/privacy/",
+        "url": "http://yandex.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00111,
+    "sites": 11,
+    "subdomains": [
+        "favicon",
+        "abt.s3",
+        "avatars.mds"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "yandex\\.net\\/favicon\\/yandex\\.ru",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "favicon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0445d9b0d7fbee58c190839e2657794d1ab1612340f118539db4d4ffb5134970"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flowlez.com",
+                "musify.club"
+            ]
+        },
+        {
+            "rule": "yandex\\.net\\/expjs\\/latest\\/exp\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "abt.s3"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4776acad9d8c3dd1b75354e545027100b932fd8dd104e86cbdd42c16f8794b0e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ymab_param": {
+                    "ttl": 31536000,
+                    "length": 91,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fr-academic.com",
+                "ria.ru"
+            ]
+        },
+        {
+            "rule": "yandex\\.net\\/get-direct\\/5205338\\/t_Y_8yuBDF8gbfUsAP68Gw\\/wx150",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "avatars.mds"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0204a5b703248825dff6430adc6cf07517d19b0468ed519b56c4a5f000a2a46e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mail.ru",
+                "my.mail.ru"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN",
+        "Embedded Content",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "yastatic.net",
+            "prevalence": 0.7692307692307693
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.19230769230769232
+        },
+        {
+            "domain": "adfox.ru",
+            "prevalence": 0.038461538461538464
+        }
+    ],
+    "types": {
+        "Image": 4,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns1.yandex.net",
+        "ns2.yandex.net"
+    ]
+}

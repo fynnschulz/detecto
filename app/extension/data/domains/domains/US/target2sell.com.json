@@ -1,0 +1,184 @@
+{
+    "domain": "target2sell.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "static",
+        "api",
+        "serv-api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "target2sell\\.com\\/t2s\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "window.sessionStorage": 5,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "059fbe77046fa707a97aa3d8aa85f61fa429e9609bf476be5d49dc740aa14044"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "t2s-analytics": {
+                    "ttl": 33696005,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "mirakl-analytics": {
+                    "ttl": 33696005,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "t2s-p": {
+                    "ttl": 33696015,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "mirakl-p": {
+                    "ttl": 33696015,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "t2s-rank": {
+                    "ttl": 906,
+                    "length": 5,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "mirakl-rank": {
+                    "ttl": 906,
+                    "length": 5,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arenal.com",
+                "www.histoiredor.com",
+                "www.stadium.se",
+                "www.stadium.fi",
+                "www.stadiumoutlet.se"
+            ]
+        },
+        {
+            "rule": "target2sell\\.com\\/user\\/indexes\\/433352f7-622d-4c8a-ad0e-55e4c60d209e",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5cd380e917cf555ca3c11ba3d4f11399ac4a2f86183f0631dabcbc40d88a496e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "t2s-analytics": 0.000013681762210972774,
+                "mirakl-analytics": 0.000013681762210972774,
+                "t2s-p": 0.000013681762210972774,
+                "mirakl-p": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "arenal.com",
+                "www.arenal.com"
+            ]
+        },
+        {
+            "rule": "target2sell\\.com\\/user\\/indexes\\/433352f7-622d-4c8a-ad0e-55e4c60d209e",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "t2s-analytics": 0.000013681762210972774,
+                "mirakl-analytics": 0.000013681762210972774,
+                "t2s-p": 0.000013681762210972774,
+                "mirakl-p": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "arenal.com",
+                "www.arenal.com"
+            ]
+        },
+        {
+            "rule": "target2sell\\.com\\/1\\.1\\/json\\/T\\/t",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "serv-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "b55464d71b0ff8c7e433e5b800eb5990d43e9c1bdebef2c4d3d3f60e48edb2d3",
+                "600b08d547e1cfc2539ea4cce0ef17634159d99ccd0f8d0751ca4202477eeab7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arenal.com",
+                "www.histoiredor.com",
+                "www.yves-rocher.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.3
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Fetch": 5,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-32.awsdns-04.com",
+        "ns-713.awsdns-25.net",
+        "ns-1324.awsdns-37.org",
+        "ns-2024.awsdns-61.co.uk"
+    ]
+}

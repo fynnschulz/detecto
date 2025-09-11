@@ -1,0 +1,88 @@
+{
+    "domain": "mavenoid.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "gardena",
+        "app",
+        "api-gardena",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "mavenoid\\.com\\/embedded\\/embedded\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gardena",
+                "app"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.languages": 2,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "29324fb4ef30974778982d16e3080a74239866d7db89f0181eaa2467e64b2e1e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gardena.com",
+                "www.sena.com"
+            ]
+        },
+        {
+            "rule": "mavenoid\\.com\\/api\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-gardena",
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "69469373ce42333ddfdccb34731aa3592a0f547ebb5b3681ad0c57c77b867fb0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gardena.com",
+                "www.gardena.com",
+                "www.sena.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "crystal.ns.cloudflare.com",
+        "marvin.ns.cloudflare.com"
+    ]
+}

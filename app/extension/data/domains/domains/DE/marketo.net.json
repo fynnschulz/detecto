@@ -1,0 +1,140 @@
+{
+    "domain": "marketo.net",
+    "owner": {
+        "name": "Adobe Inc.",
+        "displayName": "Adobe",
+        "privacyPolicy": "https://www.adobe.com/privacy/marketing-cloud.html",
+        "url": "http://adobe.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00182,
+    "sites": 18,
+    "subdomains": [
+        "munchkin"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "marketo\\.net\\/munchkin\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "munchkin"
+            ],
+            "apis": {},
+            "sites": 17,
+            "prevalence": 0.00172,
+            "cnames": [],
+            "responseHashes": [
+                "081ad4206bfeb1950c8382b5bc32aac31c4698598563d87080ee67a8fc5318d0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gitlab.com",
+                "clickup.com",
+                "developer.nvidia.com",
+                "docs.gitlab.com",
+                "docs.influxdata.com",
+                "forums.developer.nvidia.com",
+                "grabcad.com",
+                "intellij-support.jetbrains.com",
+                "kotlinlang.org",
+                "muckrack.com",
+                "plugins.jetbrains.com",
+                "sketchup.trimble.com",
+                "www.byd.com",
+                "www.crucial.de",
+                "www.jetbrains.com",
+                "www.techem.com",
+                "www.veeam.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.net\\/164\\/munchkin\\.js",
+            "cookies": 0.00151,
+            "fingerprinting": 1,
+            "subdomains": [
+                "munchkin"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 15,
+                "Document.cookie getter": 15,
+                "Navigator.prototype.userAgent": 15,
+                "window.localStorage": 15,
+                "Date.prototype.getTime": 15,
+                "Document.cookie setter": 15
+            },
+            "sites": 15,
+            "prevalence": 0.00151,
+            "cnames": [],
+            "responseHashes": [
+                "dea9df0145848ffeb3c6931228d41e833341b4837c0e713d321c5bfcf6dcd4e6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_mkto_trk": {
+                    "ttl": 63072004,
+                    "length": 70,
+                    "prevalence": 0.0015134698819493492,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickup.com",
+                "developer.nvidia.com",
+                "docs.influxdata.com",
+                "docs.gitlab.com",
+                "forums.developer.nvidia.com",
+                "grabcad.com",
+                "intellij-support.jetbrains.com",
+                "kotlinlang.org",
+                "muckrack.com",
+                "plugins.jetbrains.com",
+                "sketchup.trimble.com",
+                "www.byd.com",
+                "www.crucial.de",
+                "www.jetbrains.com",
+                "www.techem.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Third-Party Analytics Marketing",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.00151,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5454545454545454
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.36363636363636365
+        },
+        {
+            "domain": "discourse-cdn.com",
+            "prevalence": 0.06060606060606061
+        },
+        {
+            "domain": "d1pspl52z5rk07.cloudfront.net",
+            "prevalence": 0.030303030303030304
+        }
+    ],
+    "types": {
+        "Script": 32
+    },
+    "nameservers": [
+        "ns2.mktdns.com",
+        "ns1.marketo.com"
+    ]
+}

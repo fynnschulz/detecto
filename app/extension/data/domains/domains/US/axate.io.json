@@ -1,0 +1,133 @@
+{
+    "domain": "axate.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "wallet",
+        "page-notices"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "axate\\.io\\/bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wallet"
+            ],
+            "apis": {
+                "Screen.prototype.width": 4,
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "249bd7b330c16907861dc4d84e3d484788aa322b48905d6e64312c4333831a83"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "road.cc",
+                "singletrackworld.com",
+                "www.newsletter.co.uk",
+                "www.yorkshirepost.co.uk"
+            ]
+        },
+        {
+            "rule": "axate\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "page-notices"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "cookies.js_dtest": 0.000006840881105486387,
+                "parsely_uuid": 0.000006840881105486387,
+                "__pid": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "road.cc",
+                "www.yorkshirepost.co.uk"
+            ]
+        },
+        {
+            "rule": "axate\\.io\\/vendors~index\\.1\\.741460c225994e518623\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "page-notices"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "road.cc",
+                "www.yorkshirepost.co.uk"
+            ]
+        },
+        {
+            "rule": "axate\\.io\\/index\\.741460c225994e518623\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "page-notices"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "road.cc",
+                "www.yorkshirepost.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "Document": 2
+    },
+    "nameservers": [
+        "ara.ns.cloudflare.com",
+        "anirban.ns.cloudflare.com"
+    ]
+}

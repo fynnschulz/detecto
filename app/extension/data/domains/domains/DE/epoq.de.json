@@ -1,0 +1,260 @@
+{
+    "domain": "epoq.de",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00161,
+    "sites": 16,
+    "subdomains": [
+        "cdn",
+        "narayana-verlag-de.arc",
+        "badshop-de.arc",
+        "fritz-berger-de.arc",
+        "haertle.arc",
+        "marcopolo-com-de.arc",
+        "maschenfein-de.arc",
+        "matratzen-concord.arc",
+        "nkd-de.arc",
+        "office-partner.arc",
+        "pflanzen-koelle-de.arc",
+        "radonline-shw.arc",
+        "shop-naturpur-de.arc"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "epoq\\.de\\/flow\\/marcopolo-com-de\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marc-o-polo.com",
+                "www.marc-o-polo.com"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/flow\\/megabad\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.connection": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.orientation": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "da804caef5b39242374a95e0d3a762d3977de9d4e42d6d1929898ac9b5ea3eae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "megabad.com",
+                "www.megabad.com"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/flow\\/narayana-verlag-de\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.connection": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.orientation": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a3a54285a06d76487fb2586fa2955580115cf472914594ed726c6367891f6e70"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "7cb54b_session_id": {
+                    "ttl": null,
+                    "length": 32,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "narayana-verlag.de",
+                "www.narayana-verlag.de"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/inbound-servletapi\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "narayana-verlag-de.arc",
+                "badshop-de.arc",
+                "fritz-berger-de.arc",
+                "haertle.arc",
+                "marcopolo-com-de.arc",
+                "maschenfein-de.arc",
+                "matratzen-concord.arc",
+                "nkd-de.arc",
+                "office-partner.arc",
+                "pflanzen-koelle-de.arc",
+                "radonline-shw.arc",
+                "shop-naturpur-de.arc"
+            ],
+            "apis": {},
+            "sites": 13,
+            "prevalence": 0.00131,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "7cb54b_session_id": 0.0003026939763898698,
+                "eqsid_": 0.00010089799212995662
+            },
+            "exampleSites": [
+                "narayana-verlag.de",
+                "www.badshop.de",
+                "www.fritz-berger.de",
+                "www.haertle.de",
+                "www.marc-o-polo.com",
+                "www.maschenfein.de",
+                "www.matratzen-concord.de",
+                "www.narayana-verlag.de",
+                "www.nkd.com",
+                "www.office-partner.de",
+                "www.pflanzen-koelle.de",
+                "www.radonline.de",
+                "www.shop-naturpur.de"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/inbound-servletapi\\/getRecommendations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "haertle.arc",
+                "maschenfein-de.arc",
+                "matratzen-concord.arc",
+                "radonline-shw.arc",
+                "shop-naturpur-de.arc"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "8081bcf99ada89af72f41cad43ad75ddc98a39213ffd0c24395f0ae429080736",
+                "b88c481e141eef876bd6a3935aedf0c0f1e72f6fbc62490e9e5d2382db7f5c8e",
+                "662941377a14e858440ba4a6014ebd83c6265eb205c61331087f16a57c1a099d",
+                "6a495a9954187a1699ee63f771f504670736dc85ed89c190fa8cde3cb21df92e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "haertle.de",
+                "www.maschenfein.de",
+                "www.matratzen-concord.de",
+                "www.radonline.de",
+                "www.shop-naturpur.de"
+            ]
+        },
+        {
+            "rule": "epoq\\.de\\/inbound-servletapi\\/features",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "marcopolo-com-de.arc",
+                "nkd-de.arc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marc-o-polo.com",
+                "www.nkd.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8181818181818182
+        },
+        {
+            "domain": "azurefd.net",
+            "prevalence": 0.09090909090909091
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.045454545454545456
+        },
+        {
+            "domain": "usercentrics.eu",
+            "prevalence": 0.045454545454545456
+        }
+    ],
+    "types": {
+        "Script": 24,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns10.dnsmadeeasy.com",
+        "ns-383.awsdns-47.com",
+        "ns11.dnsmadeeasy.com",
+        "ns-750.awsdns-29.net"
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "domain": "com-v4.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "buy.norton"
+    ],
+    "cnames": [
+        {
+            "original": "buy.norton.com",
+            "resolved": "buy.norton.com-v4.edgekey.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "com-v4\\.edgekey\\.net\\/estore\\/rest\\/api\\/v2\\/price",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy.norton"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "buy.norton.com",
+                    "resolved": "buy.norton.com-v4.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "norton.com",
+                "us.norton.com"
+            ]
+        },
+        {
+            "rule": "com-v4\\.edgekey\\.net\\/estore\\/rest\\/api\\/v2\\/price",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy.norton"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "buy.norton.com",
+                    "resolved": "buy.norton.com-v4.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "c6615d3c9b5225f99a1b5b73106282ef680080f5298c5bb58e1dea17674dcb93"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "norton.com",
+                "us.norton.com"
+            ]
+        },
+        {
+            "rule": "com-v4\\.edgekey\\.net\\/redirector\\/seo",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy.norton"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "buy.norton.com",
+                    "resolved": "buy.norton.com-v4.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "8eb68843a8bc914fb33d7612c587695a40c5c804b55757e7f10589dbfc6bb7e3",
+                "9c905796a3aec5c8380e41741cf8248e4a8541883593a8439c4b7440c5d6ffb6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "norton.com",
+                "uk.norton.com",
+                "us.norton.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000342,
+    "types": {
+        "Preflight": 2,
+        "XHR": 2,
+        "Script": 3
+    },
+    "nameservers": []
+}

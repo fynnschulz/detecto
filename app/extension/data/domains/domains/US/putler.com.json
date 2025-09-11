@@ -1,0 +1,81 @@
+{
+    "domain": "putler.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "st"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "putler\\.com\\/js\\/t\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "st"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "769c89791b27613fce0c80233dec27944c06cead6051077bfcd07de66d74820f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kinolorber.com",
+                "lynkpleasure.com",
+                "seedtime.us"
+            ]
+        },
+        {
+            "rule": "putler\\.com\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "st"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lynkpleasure.com",
+                "seedtime.us"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "XHR": 2
+    },
+    "nameservers": [
+        "norm.ns.cloudflare.com",
+        "fay.ns.cloudflare.com"
+    ]
+}

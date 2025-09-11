@@ -1,0 +1,97 @@
+{
+    "domain": "ageverif.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000904,
+    "sites": 9,
+    "subdomains": [
+        "www",
+        "wstats"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ageverif\\.com\\/checker\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.localStorage": 9,
+                "Document.cookie getter": 9,
+                "Navigator.prototype.language": 9
+            },
+            "sites": 9,
+            "prevalence": 0.000904,
+            "cnames": [],
+            "responseHashes": [
+                "d3365c4e6dce4d218ebe810c75183a0e4220b8077f322885ad3a705bb2ab1eda",
+                "dfee082d0a5ff642f8d12be1e4138024cc1756bdc2e5069c9dafd98922fcf8f1",
+                "94bde55770a81b6961447bcaa085edd0726430aaed3299500bce2fae9e9d656d",
+                "dfa562255e4e6e47754dad462ae1f92d04d747250d50d51b5509116d7ce6611d",
+                "b392485c26da50d8f5560db8325ebe08b416b559b8cf221f1b22cf0c92cf1a18",
+                "c9cfe8b39f1961e765300d53d1660ed6d849bfd3a5f0e4e99b6f14a42c934768",
+                "ff467011da599b88e554f1c97be457373bdd9ad66c0e441c43c12aabe0edc5bb",
+                "062836a079251a06e120117e64128ef9551def3d7c46c02b4233d5cee4dfdbc6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eispop.com",
+                "extremescatporn.com",
+                "scatxxxporn.com",
+                "tukif.porn",
+                "www.bonporn.com",
+                "www.perverttube.com",
+                "www.porndig.com",
+                "www.xfreehd.com",
+                "xxxdan.com"
+            ]
+        },
+        {
+            "rule": "ageverif\\.com\\/api\\/add_stat",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wstats"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "extremescatporn.com",
+                "scatxxxporn.com",
+                "www.perverttube.com",
+                "www.xfreehd.com",
+                "xxxdan.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Fetch": 5
+    },
+    "nameservers": [
+        "damon.ns.cloudflare.com",
+        "nova.ns.cloudflare.com"
+    ]
+}

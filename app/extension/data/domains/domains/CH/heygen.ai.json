@@ -1,0 +1,81 @@
+{
+    "domain": "heygen.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.0001,
+    "sites": 1,
+    "subdomains": [
+        "static",
+        "dynamic"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "heygen\\.ai\\/js\\/heygen-event\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.onLine": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5238284891091f20a9f9b0d3c65e53665bf469ec743b3950569c83baee5d791b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "heygen.com",
+                "www.heygen.com"
+            ]
+        },
+        {
+            "rule": "heygen\\.ai\\/www\\/Home%20-%20Page\\/HeroEnglish2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dynamic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "34fc7cd0c885f46de39d6a23c8637353b2437c808f7fc045a878ad412789a3ba"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "heygen.com",
+                "www.heygen.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Media": 2
+    },
+    "nameservers": [
+        "tim.ns.cloudflare.com",
+        "sandra.ns.cloudflare.com"
+    ]
+}

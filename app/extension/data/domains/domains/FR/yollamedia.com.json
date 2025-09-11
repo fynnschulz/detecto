@@ -1,0 +1,159 @@
+{
+    "domain": "yollamedia.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "portal.cdn",
+        "analytics"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "yollamedia\\.com\\/storage\\/tpl\\/3\\.18\\.0\\.10\\/yaq\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "portal.cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4c7c7022a13519828ca89b0bbb0f19e23ee0157a615f9f655dcd2c4fb076e409"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bubbleshooter.com",
+                "www.bubbleshooter.net"
+            ]
+        },
+        {
+            "rule": "yollamedia\\.com\\/storage\\/tpl\\/yolla_preload\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "portal.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0bcf5cd0484b234b49b27b7c36bbd981b8895eec7b2115347dab8ec627aa41bf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bubbleshooter.com",
+                "www.bubbleshooter.net"
+            ]
+        },
+        {
+            "rule": "yollamedia\\.com\\/v0\\/pv",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bubbleshooter.com",
+                "www.bubbleshooter.com",
+                "www.bubbleshooter.net"
+            ]
+        },
+        {
+            "rule": "yollamedia\\.com\\/storage\\/tpl\\/3\\.18\\.0\\.10\\/ympb\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "portal.cdn"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e9064b957d786fcdcef4352c29adb5912148a6f5ac1f2aa76329dd55dc360f25"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_sharedid": {
+                    "ttl": 31536015,
+                    "length": 36,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                },
+                "_sharedid_cst": {
+                    "ttl": 31536015,
+                    "length": 16,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bubbleshooter.com",
+                "www.bubbleshooter.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "ns1.bdm.microsoftonline.com",
+        "ns2.bdm.microsoftonline.com",
+        "ns3.bdm.microsoftonline.com",
+        "ns4.bdm.microsoftonline.com"
+    ]
+}

@@ -1,0 +1,944 @@
+{
+    "domain": "rudderlabs.com",
+    "owner": {
+        "name": "Rudderstack Inc.",
+        "displayName": "Rudderstack"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00161,
+    "sites": 16,
+    "subdomains": [
+        "cdn",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "rudderlabs\\.com\\/v3\\/modern\\/rsa\\.min\\.js",
+            "cookies": 0.000403,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie setter": 4,
+                "Document.cookie getter": 4,
+                "window.sessionStorage": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.onLine": 4,
+                "Navigator.prototype.language": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "window.devicePixelRatio": 4,
+                "window.innerWidth": 4,
+                "window.innerHeight": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "aa4e92bda9293ef393c21a572821d4f5f6094101fab500bb45ee26f5ce54e7f5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__tld__": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "test_rudder_cookie": {
+                    "ttl": 6,
+                    "length": 4,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "rl_user_id": {
+                    "ttl": 6,
+                    "length": 4,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "rl_trait": {
+                    "ttl": 6,
+                    "length": 4,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "rl_anonymous_id": {
+                    "ttl": 31536006,
+                    "length": 64,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 1
+                },
+                "rl_group_id": {
+                    "ttl": 6,
+                    "length": 4,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "rl_group_trait": {
+                    "ttl": 6,
+                    "length": 4,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "rl_page_init_referrer": {
+                    "ttl": 31536006,
+                    "length": 22,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "rl_page_init_referring_domain": {
+                    "ttl": 6,
+                    "length": 4,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "rl_session": {
+                    "ttl": 31536006,
+                    "length": 141,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 1
+                },
+                "rl_auth_token": {
+                    "ttl": 6,
+                    "length": 4,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com",
+                "www.brandalley.co.uk"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.23\\.0\\/modern\\/plugins\\/rsa-plugins\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "d3bda5488561c7d000dadbacabcb2260a29ed021df4922cf2f768b3613572435"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com",
+                "www.brandalley.co.uk"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.23\\.0\\/modern\\/plugins\\/rsa-plugins-remote-XhrQueue\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "a8d2a7643550d8edd4bccd35f804133da2935778740a468891e45e95a408b2d5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com",
+                "www.brandalley.co.uk"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.23\\.0\\/modern\\/plugins\\/rsa-plugins-remote-GoogleLinker\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "ac8e885710984ec1dd54cbadb7afc6ad8f2cfa4c73107b06ce701f67dbfc6bed"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.23\\.0\\/modern\\/plugins\\/rsa-plugins-remote-StorageEncryption\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "209eb7ce4c274c4adc0ca13147ab37ffa929687455bb20f33a5ae4414833694c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com",
+                "www.brandalley.co.uk"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.23\\.0\\/modern\\/plugins\\/rsa-plugins-remote-ExternalAnonymousId\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e2404fe1ff25c153e15841642aefb2d3fd456c73d2649c52a827f6eaff66b1bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.23\\.0\\/modern\\/plugins\\/rsa-plugins-remote-StorageMigrator\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "bb0602bcbe4df2e3d52250ef5057bb3a321e7f46d21ab4e84fdb5b783038ad60"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com",
+                "www.brandalley.co.uk"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.23\\.0\\/modern\\/plugins\\/rsa-plugins-common\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e6b2e3dba9b487095dbfb22af7bec45615aec8309c18e9363aa789c1ee115247"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com",
+                "www.brandalley.co.uk"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.23\\.0\\/modern\\/plugins\\/rsa-plugins-legacyEncryptionUtils\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "62b71040381577e9bfdcaa1c0803d3a7d317b2ed1083e9f25dbca09a4d4233fa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com",
+                "www.brandalley.co.uk"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.23\\.0\\/modern\\/plugins\\/rsa-plugins-RetryQueue\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "ea21a33b24547eb9fe2e10e9ffa469a175b4d4db6e4f4559a4bc4d0a058276ed"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneyfarm.com",
+                "esports.gg",
+                "laravel.com",
+                "www.brandalley.co.uk"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/sourceConfig\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "grafana.com",
+                "onefootball.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/sourceConfig\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "grafana.com",
+                "onefootball.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/v3\\/modern\\/plugins\\/rsa-plugins\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "84dc2e7abb6799bf54a8248acedb4d17df945d5c3dab936021a1248c18c690d2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flynorse.com",
+                "tailscale.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/v3\\/modern\\/plugins\\/rsa-plugins-remote-XhrQueue\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "531f0265253d2b1fb46ab22b598d700c4d33bb3d9aa288a4353ec60b02a0764e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flynorse.com",
+                "tailscale.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/v3\\/modern\\/plugins\\/rsa-plugins-remote-StorageEncryption\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3d9dae571d29319e5284206c040d4e39446f9ad2ee9a4612f51ee237f476a71c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flynorse.com",
+                "tailscale.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/v3\\/modern\\/plugins\\/rsa-plugins-remote-GoogleLinker\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "09aea2bf56d7b244b9ca76103edd76493b6515b55f3c376383d93e44a3920c9b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flynorse.com",
+                "tailscale.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/v3\\/modern\\/plugins\\/rsa-plugins-remote-ExternalAnonymousId\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a6f41d433502964f62c699bbd6fd5e79f71899f911d35988f39ae7a051f02f88"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flynorse.com",
+                "tailscale.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/v3\\/modern\\/plugins\\/rsa-plugins-common\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c74b749e27341e799650819f20275728a1aa2e1279b62145060cd529657ee02e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flynorse.com",
+                "tailscale.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/v3\\/modern\\/plugins\\/rsa-plugins-RetryQueue\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ab7ab5492869092db8c84f90a07aedf9e4134144f6574ff5b50a4b476121dcce"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flynorse.com",
+                "tailscale.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "478b61e32ceaac1fbb315083eb294ca44ccf350ee2cb25edab6280d9c7e86335"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-remote-StorageMigrator\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "19c500071481c325c4068ee8939eec272e132749a5e2617b5ebbb322b6318e17"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-remote-StorageEncryption\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "89f896740a5cdc49900c0c1477fea3234a403d2e33932c08a233d5934434c45f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-remote-XhrQueue\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "61175fabe60f0f1921fd2f10ecae8d94fe41b609b1656f57e2e271638b70703e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-remote-GoogleLinker\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "09aea2bf56d7b244b9ca76103edd76493b6515b55f3c376383d93e44a3920c9b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-remote-ExternalAnonymousId\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a6f41d433502964f62c699bbd6fd5e79f71899f911d35988f39ae7a051f02f88"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-common\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a0c6fe1d235ebcc911e39a502c9764ad2393f0f3b0a9c6ccc1babbfa9d7ca5d8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-legacyEncryptionUtils\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "67ebdc098deba9cbb6d8f1be1e429e3399dfd383e5198ad612d85ef1a7dd6d4a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-RetryQueue\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "1108f9458a6419de9d62d2bd44177d1e565075e0536837087187ca0d0e1e0d0c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/v1\\.1\\/rudder-analytics\\.min\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.devicePixelRatio": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d027a0a7ea3b3021cac4cab80ba1d3ca17348a525e2d34baecb49c10313eba7f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__tld__": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                },
+                "test_rudder_cookie": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                },
+                "rl_session": {
+                    "ttl": 31536005,
+                    "length": 181,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "rl_user_id": {
+                    "ttl": 31536004,
+                    "length": 63,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "rl_trait": {
+                    "ttl": 31536004,
+                    "length": 66,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "rl_group_id": {
+                    "ttl": 31536004,
+                    "length": 66,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "rl_group_trait": {
+                    "ttl": 31536004,
+                    "length": 65,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "rl_anonymous_id": {
+                    "ttl": 31536005,
+                    "length": 116,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "rl_page_init_referrer": {
+                    "ttl": 31536004,
+                    "length": 66,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "rl_page_init_referring_domain": {
+                    "ttl": 31536004,
+                    "length": 66,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "glassdoor.co.uk",
+                "www.vinterior.co"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-remote-DeviceModeDestinations\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9581be2e96a22af9dd2113829ed92ace33ad0bbe21df7d7eec53e13c9d59b0f6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-remote-NativeDestinationQueue\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "df04c5c4973810a1d9388a316a0a2343d9812a234ee92f2f3028d086b0767327"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/plugins\\/rsa-plugins-deviceModeDestinations\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "555858df010b9adf67d2eb8c5044b5972621336c76dbb20d3e21e1e29d3bb456"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        },
+        {
+            "rule": "rudderlabs\\.com\\/3\\.20\\.1\\/modern\\/js-integrations\\/GoogleAds\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a68259fa714a75cf4f64d9b8ead7f3dac27b38aafbbc28758a5a8c48160fb259"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riverford.co.uk",
+                "www.savemyexams.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000906,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9538461538461539
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.046153846153846156
+        }
+    ],
+    "types": {
+        "Script": 88,
+        "Preflight": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-1309.awsdns-35.org",
+        "ns-1932.awsdns-49.co.uk",
+        "ns-479.awsdns-59.com",
+        "ns-697.awsdns-23.net"
+    ]
+}

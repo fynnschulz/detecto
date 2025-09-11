@@ -1,0 +1,95 @@
+{
+    "domain": "exosrv.com",
+    "owner": {
+        "name": "ExoClick, S.L.",
+        "displayName": "ExoClick",
+        "privacyPolicy": "https://www.exoclick.com/privacy/",
+        "url": "http://exoclick.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000504,
+    "sites": 5,
+    "subdomains": [
+        "a",
+        "ads",
+        "syndication"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "exosrv\\.com\\/ads\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "a",
+                "ads"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "273c95ab65884bfb12154bf674975fa538719d095fcf78c27504e52cb391c68f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jungespornovideo.com",
+                "thegay.com",
+                "www.peekvids.com"
+            ]
+        },
+        {
+            "rule": "exosrv\\.com\\/ads-iframe-display\\.php",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "syndication"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fce774e8fc4b0c5e396fb9a18e9b335138f13612ce3a4c1602b17dd6f67d8409"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jungespornovideo.com",
+                "www.peekvids.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising"
+    ],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Document": 2
+    },
+    "nameservers": [
+        "sec2.rcode0.net",
+        "sec1.rcode0.net",
+        "dns1.cloudns.net",
+        "dns2.cloudns.net"
+    ]
+}

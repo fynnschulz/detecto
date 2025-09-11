@@ -1,0 +1,150 @@
+{
+    "domain": "trendmd.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "js",
+        "rev"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "trendmd\\.com\\/trendmd\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "13cf2cd8fc23614cf53970595e2797dedbf80205ebf5306a8be68ae2ad529e6f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oup.com",
+                "geekymedics.com",
+                "www.iflscience.com"
+            ]
+        },
+        {
+            "rule": "trendmd\\.com\\/ad-sets\\/identifier",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rev"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oup.com",
+                "geekymedics.com",
+                "www.iflscience.com"
+            ]
+        },
+        {
+            "rule": "trendmd\\.com\\/ad-sets\\/identifier",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rev"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "41c8d3333f04c68fffd691c3636dd63d61d37b507fe9fb2ff60f396a9a33aa5d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oup.com",
+                "geekymedics.com",
+                "www.iflscience.com"
+            ]
+        },
+        {
+            "rule": "trendmd\\.com\\/polyfills\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2e9a20bceab8def33a75b77d75395c969983695f558478958ce5221069cd04fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oup.com",
+                "www.iflscience.com"
+            ]
+        },
+        {
+            "rule": "trendmd\\.com\\/widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9eb492dac6f1750a635fac1be566f080eb812b8de232edeb6424aaf89d719a20"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oup.com",
+                "www.iflscience.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Preflight": 3,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "noel.ns.cloudflare.com",
+        "pola.ns.cloudflare.com"
+    ]
+}

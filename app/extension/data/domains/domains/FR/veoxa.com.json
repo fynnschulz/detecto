@@ -1,0 +1,107 @@
+{
+    "domain": "veoxa.com",
+    "owner": {
+        "name": "J S WEB PRODUCTION",
+        "displayName": "J S WEB PRODUCTION"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "profiling"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "veoxa\\.com\\/boot\\/request\\/",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "profiling"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie getter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "bdaa17ef3c07bb780a887bbd895c944cf19ff3855777d70fb224e004418af020",
+                "4b226d3cb2e4a0633f4f167971ec33237f5e49d3e0a76fb532ea33fdd19b6338",
+                "a2d98e4bb672211fa07c48ca2d1905a65edbb57758e95dcd128a291dc839d1aa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labourseauxlivres.fr",
+                "luminaire.fr",
+                "velo-store.fr",
+                "www.ammareal.fr"
+            ]
+        },
+        {
+            "rule": "veoxa\\.com\\/store\\/js",
+            "cookies": 0.000404,
+            "fingerprinting": 1,
+            "subdomains": [
+                "profiling"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "9f1b5e9964ca4dd965f8018f3398b6ce791ef079a9aed583f35f7333e35e2bf0",
+                "5012dacf8bee34754b9ed9d4e59d9899c705edd6e3c290aaca729918f2527811",
+                "f575f1aa795b4e768954eb7f7e5cd71b2dcec84887514f21f8198fa457641972"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "vuidck": {
+                    "ttl": 7776006,
+                    "length": 36,
+                    "prevalence": 0.000403999596000404,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labourseauxlivres.fr",
+                "luminaire.fr",
+                "velo-store.fr",
+                "www.ammareal.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000505,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "dwin1.com",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 8
+    },
+    "nameservers": [
+        "ns-713.awsdns-25.net",
+        "ns-475.awsdns-59.com",
+        "ns-1096.awsdns-09.org",
+        "ns-1729.awsdns-24.co.uk"
+    ]
+}

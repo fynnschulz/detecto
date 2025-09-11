@@ -1,0 +1,134 @@
+{
+    "domain": "perfops.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "cdn",
+        "qh4gbl355j0f4712.test.resolver",
+        "mg74zvnafdwlf6rx.test.resolver",
+        "j6o88j0lldeqo2gv.test.resolver",
+        "rum-cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "perfops\\.net\\/rom3\\/rom3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.onLine": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a4fef32f2e02f7c21ef16d72389838afbbbe1678bacc1c9d83a96789259f032c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redketchup.io",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qh4gbl355j0f4712.test.resolver",
+                "mg74zvnafdwlf6rx.test.resolver",
+                "j6o88j0lldeqo2gv.test.resolver"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "7696cb98809e13ee676f1058f157faf1ab7fc1311ec3030ef047933a9ea049d2",
+                "cdc69bf03e70457a5e11eb7aaafaf6344843024dbccadf436c22cbe30151b81f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redketchup.io",
+                "vuejs.org",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/providers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "0f5689b1f5409a0dda233440c92950ef25759ecbc5ac73abea721550b2073491",
+                "2b1a10f2829bad9a082584e43aa550625bcd26d7626fbaca4f0aa26835e0f9bf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redketchup.io",
+                "vuejs.org",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/providers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vuejs.org",
+                "www.opensubtitles.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 6,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "amber.ns.cloudflare.com",
+        "dave.ns.cloudflare.com"
+    ]
+}

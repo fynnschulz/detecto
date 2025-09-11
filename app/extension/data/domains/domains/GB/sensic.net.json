@@ -1,0 +1,179 @@
+{
+    "domain": "sensic.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "es-config",
+        "sg-config",
+        "1755378462770c7b8dfeea56d73597d7fd3ae28f8412616b90c2e6b5.trk",
+        "1755379871114c18c6768bddb9e6a0519a9c94a3a4d96b2738a96791.trk",
+        "1755380529234a31c397f5baaadf00e00fcd77a2311ca2871cebac00.trk",
+        "1755376143101aaae643a4dc81c8ed21df4fc37bdef29fc00640a174.trk",
+        "es1-s2s",
+        "sg2-s2s"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "sensic\\.net\\/s2s-web\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "es-config",
+                "sg-config"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.maxTouchPoints": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.platform": 4,
+                "Navigator.prototype.language": 4,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "c1970577e4c3e5dd0ea0de6255b1a5a15eecb911d7c5c22b588fecf064f0a4de",
+                "2f1f93c2fd79eca635e44f90c141d93f8fc32ce7f57a327aadbe009c98db786c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sui_1pc": {
+                    "ttl": 63072014,
+                    "length": 56,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elpais.com",
+                "english.elpais.com",
+                "www.straitstimes.com",
+                "www.yourweather.co.uk"
+            ]
+        },
+        {
+            "rule": "sensic\\.net\\/3pc\\.html",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "es-config",
+                "sg-config"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "50d7dc201785b5d141a77b2ddff351c2caaa2ab64b19e659fe8f825a7c487f22"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elpais.com",
+                "english.elpais.com",
+                "www.straitstimes.com",
+                "www.yourweather.co.uk"
+            ]
+        },
+        {
+            "rule": "sensic\\.net\\/tp\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "1755378462770c7b8dfeea56d73597d7fd3ae28f8412616b90c2e6b5.trk",
+                "1755379871114c18c6768bddb9e6a0519a9c94a3a4d96b2738a96791.trk",
+                "1755380529234a31c397f5baaadf00e00fcd77a2311ca2871cebac00.trk",
+                "1755376143101aaae643a4dc81c8ed21df4fc37bdef29fc00640a174.trk"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elpais.com",
+                "english.elpais.com",
+                "www.straitstimes.com",
+                "www.yourweather.co.uk"
+            ]
+        },
+        {
+            "rule": "sensic\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "es1-s2s",
+                "sg2-s2s"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elpais.com",
+                "english.elpais.com",
+                "www.straitstimes.com",
+                "www.yourweather.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "sph.com.sg",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Document": 4,
+        "XHR": 8
+    },
+    "nameservers": [
+        "ns-192.awsdns-24.com",
+        "ns-1003.awsdns-61.net",
+        "ns-1081.awsdns-07.org",
+        "ns-1850.awsdns-39.co.uk"
+    ]
+}

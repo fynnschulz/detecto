@@ -1,0 +1,86 @@
+{
+    "domain": "connectad.io",
+    "owner": {
+        "name": "ConnectAd",
+        "displayName": "ConnectAd",
+        "privacyPolicy": "https://www.connectadrealtime.com",
+        "url": "http://connectadrealtime.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "i",
+        "sync"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "connectad\\.io\\/api\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wukihow.com",
+                "fr.wukihow.com",
+                "www.iplocation.net"
+            ]
+        },
+        {
+            "rule": "connectad\\.io\\/iFrameSyncer",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wukihow.com",
+                "www.iplocation.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "optad360.io",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "buysellads.net",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Fetch": 3,
+        "Document": 2
+    },
+    "nameservers": [
+        "elma.ns.cloudflare.com",
+        "amit.ns.cloudflare.com"
+    ]
+}

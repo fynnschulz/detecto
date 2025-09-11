@@ -1,0 +1,86 @@
+{
+    "domain": "campanile.com.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "api"
+    ],
+    "cnames": [
+        {
+            "original": "api.campanile.com",
+            "resolved": "api.campanile.com.edgekey.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "campanile\\.com\\.edgekey\\.net\\/api\\/v1\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.campanile.com",
+                    "resolved": "api.campanile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "campanile.com",
+                "www.campanile.com"
+            ]
+        },
+        {
+            "rule": "campanile\\.com\\.edgekey\\.net\\/api\\/v1\\/graphql",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.campanile.com",
+                    "resolved": "api.campanile.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "67b35e026a18c2d3014548550d81c4b2f931a8d78151b4043da345ed1c2672ed"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "campanile.com",
+                "www.campanile.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "types": {
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": []
+}

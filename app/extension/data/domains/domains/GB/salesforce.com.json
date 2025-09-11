@@ -1,0 +1,158 @@
+{
+    "domain": "salesforce.com",
+    "owner": {
+        "name": "Salesforce.com, Inc.",
+        "displayName": "Salesforce.com",
+        "privacyPolicy": "https://www.salesforce.com/company/privacy/",
+        "url": "http://salesforce.com"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00101,
+    "sites": 10,
+    "subdomains": [
+        "wwce-eait.my",
+        "intrepidgroup.my",
+        "ntgr.my",
+        "underarmour.my",
+        "g5stcytdmvrdmmzrgqzggnztgq.c360a",
+        "fortinet.my",
+        "uniquest-soas.my"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "salesforce\\.com\\/embeddedservice\\/5\\.0\\/esw\\.min\\.js",
+            "cookies": 0.000403,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wwce-eait.my",
+                "intrepidgroup.my",
+                "ntgr.my",
+                "underarmour.my"
+            ],
+            "apis": {
+                "Document.cookie getter": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "c3509aae0e00c4e8cafda8a5e80ae3db94ea5a55bff7198c1e9e1f1b0e26f1d8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ea.com",
+                "www.intrepidtravel.com",
+                "www.netgear.com",
+                "www.underarmour.co.uk"
+            ]
+        },
+        {
+            "rule": "salesforce\\.com\\/web\\/v2\\/authentication",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "g5stcytdmvrdmmzrgqzggnztgq.c360a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f61e77562a1df2820c24fed4e8cfe2c326f0bc3f083cdcc26bba45793b69cbf9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "colgate.com",
+                "www.colgate.com"
+            ]
+        },
+        {
+            "rule": "salesforce\\.com\\/web\\/events\\/6da49e4e-fe5b-439a-b9e8-d25d7b22facb",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "g5stcytdmvrdmmzrgqzggnztgq.c360a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "colgate.com",
+                "www.colgate.com"
+            ]
+        },
+        {
+            "rule": "salesforce\\.com\\/servlet\\/servlet\\.ImageServer",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fortinet.my",
+                "uniquest-soas.my"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0b1294c0aac92c732bb5f305d6d23dde38d06fb8c8a0e63b033ac458bc1dfbd4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fortinet.com",
+                "www.soas.ac.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000805,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8235294117647058
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "site.com",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "force.com",
+            "prevalence": 0.058823529411764705
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2,
+        "Fetch": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "pch2.salesforce-dns.com",
+        "udns4.salesforce.com",
+        "udns2.salesforce.com",
+        "udns3.salesforce.com",
+        "pch1.salesforce-dns.com",
+        "udns1.salesforce.com"
+    ]
+}

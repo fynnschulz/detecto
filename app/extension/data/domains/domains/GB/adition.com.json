@@ -1,0 +1,191 @@
+{
+    "domain": "adition.com",
+    "owner": {
+        "name": "Virtual Minds AG",
+        "displayName": "Virtual Minds",
+        "privacyPolicy": "https://www.virtualminds.de/en/",
+        "url": "http://virtualminds.de"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000604,
+    "sites": 6,
+    "subdomains": [
+        "imagesrv",
+        "adfarm1",
+        "dsp.adfarm1"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "adition\\.com\\/js\\/aut\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "imagesrv"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "10a51218b7adf5788ddad063cb4b820c18d95fc64e70b43eee65fa184709bc38"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_autuserid2": {
+                    "ttl": 7776017,
+                    "length": 19,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "efl.com",
+                "www.ntfc.co.uk",
+                "www.wrexhamafc.co.uk"
+            ]
+        },
+        {
+            "rule": "adition\\.com\\/js\\/srp\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "imagesrv"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.appVersion": 3,
+                "Navigator.prototype.plugins": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a8b315157893b4ef72c2c50466b8fb3bd64b3cb48fad86680f897301e93c86e8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "efl.com",
+                "www.ntfc.co.uk",
+                "www.wrexhamafc.co.uk"
+            ]
+        },
+        {
+            "rule": "adition\\.com\\/i",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adfarm1"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "3771893dd56b753aa78916cbc23a9969bc4b3bb8e812eb3032c7a8d5f205b52a",
+                "960a0948581da6c63266b8c142ab88eba0fe45e82503ac4bbfd81c25fa95b0a7",
+                "02b191b283140b56795e60b5552f397e6163cf2a5726e29001047bb8523be707"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "efl.com",
+                "www.efl.com",
+                "www.ntfc.co.uk",
+                "www.wrexhamafc.co.uk"
+            ]
+        },
+        {
+            "rule": "adition\\.com\\/s",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adfarm1"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "ce1ccb39243e03bf6b85952262ec1279063a281842993e037e94878530051602",
+                "96152fa319c1c5bd1a71ac4d2f4ea53af5a8a5cb92bb7a9737f39fa5019245cd",
+                "4ed7769f77362d8d072c26c764c7e5837e5802c6b745a8f17a8d69ef0628a4b2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_autuserid2": 0.00030193236714975844
+            },
+            "exampleSites": [
+                "efl.com",
+                "www.efl.com",
+                "www.ntfc.co.uk",
+                "www.wrexhamafc.co.uk"
+            ]
+        },
+        {
+            "rule": "adition\\.com\\/cookie\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dsp.adfarm1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "grammar-monster.com",
+                "www.hardreset.info"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising"
+    ],
+    "performance": {},
+    "cookies": 0.000604,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8235294117647058
+        },
+        {
+            "domain": "zeotap.com",
+            "prevalence": 0.11764705882352941
+        },
+        {
+            "domain": "pubmatic.com",
+            "prevalence": 0.058823529411764705
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "XHR": 4,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns1.dnsimple.com",
+        "ns3.dnsimple.com",
+        "ns4.dnsimple-edge.org",
+        "ns2.dnsimple-edge.net"
+    ]
+}

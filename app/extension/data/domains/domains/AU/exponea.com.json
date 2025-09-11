@@ -1,0 +1,292 @@
+{
+    "domain": "exponea.com",
+    "owner": {
+        "name": "Bloomreach, Inc.",
+        "displayName": "Bloomreach"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000606,
+    "sites": 6,
+    "subdomains": [
+        "api.eu1",
+        "api.uk",
+        "api.us1"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "exponea\\.com\\/js\\/exponea\\.min\\.js",
+            "cookies": 0.000505,
+            "fingerprinting": 2,
+            "subdomains": [
+                "api.eu1",
+                "api.uk",
+                "api.us1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "Navigator.prototype.vendor": 6,
+                "window.localStorage": 6,
+                "window.sessionStorage": 6,
+                "Date.prototype.getTime": 6,
+                "Document.cookie getter": 5,
+                "Document.cookie setter": 5,
+                "Navigator.prototype.maxTouchPoints": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "b63da26b63b8f21eac6893a5d11a705fd4feecfc6a1bea18ef7f3c358bd4dbad",
+                "29e7ba853a7b431baeeb7165fed40ea204e22cbd49e785fc3ea6a25fefb3ab56"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__exponea_etc__": {
+                    "ttl": 94608011,
+                    "length": 36,
+                    "prevalence": 0.000504693650953871,
+                    "uniqueness": 1
+                },
+                "__exponea_time2__": {
+                    "ttl": 3611,
+                    "length": 20,
+                    "prevalence": 0.000504693650953871,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "haynes.com",
+                "www.atptour.com",
+                "www.glassons.com",
+                "www.sheetmusicplus.com",
+                "www.sheetmusicdirect.com",
+                "www.worldofbooks.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/32e2015e-3f7e-11ef-8793-d23dd0b4c5ec\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.eu1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9455a932f8890be907fd18f8a4592e3a40e774109f23d96ac1d5640cc699f47c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "haynes.com",
+                "au.haynes.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/bulk",
+            "cookies": 0.000505,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.eu1",
+                "api.us1",
+                "api.uk"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "dbace33c10b7e64b526a8e95b3f6700b54e2a20f899c454751eba09a132a3bc8",
+                "0b08adcab98f539993ee659b24d839ab7cf3fe7ded1e1862e25db692f5c19b3b",
+                "3cc8cbef07c4578ea6ba3e2bae76ed8e51cc40d9e3a17f4a751328c0e8ee8550",
+                "6e7d2b16d77a1527d6b89e1e40e99838a75f13a4339037e903994cac2724f0e8",
+                "f6295678524e639dec9396bd7e678d3cf4aaef0df1d840c01874c1314c76b738"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "haynes.com",
+                "au.haynes.com",
+                "www.glassons.com",
+                "www.sheetmusicplus.com",
+                "www.sheetmusicdirect.com",
+                "www.worldofbooks.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/managed-tags\\/show",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.eu1",
+                "api.us1",
+                "api.uk"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "5c858b1c80e2a37e46abc26525a908fe14db93ebdce1dbdbdd2828cd180bbeec"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "haynes.com",
+                "www.glassons.com",
+                "www.sheetmusicplus.com",
+                "www.sheetmusicdirect.com",
+                "www.worldofbooks.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/campaigns\\/banners\\/show",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.eu1",
+                "api.us1",
+                "api.uk"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "f5c1388868f22487ce09932804f0203ff0e4821dc325963da6337358b3c6274f",
+                "8189497d018e698ae1e885bbf8094fffcef6d1ef1c52543b3e8d03eb99e1fcb2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "haynes.com",
+                "www.glassons.com",
+                "www.sheetmusicplus.com",
+                "www.sheetmusicdirect.com",
+                "www.worldofbooks.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/f9e71002-37c0-11ef-ae00-6e34b8767a0d\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c9014ac7be0dbbc47a10f28b46bf2113be62fece3cae0c5170a214a62714de4e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "glassons.com",
+                "www.glassons.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/5ecc4afa-dabd-11eb-9bcf-a2a41a4e8acb\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0bb3f647fdc772cc5b0c8c0eb9eb3463751e270c09ab409bed832c7109481c36"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sheetmusicplus.com",
+                "www.sheetmusicplus.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/f65766f0-b692-11ec-8680-ca3cde3385be\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.us1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ee85b7cae7b8a3ec9dd47587e12643c9c7313dd2382a46de2e0663120df734df"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sheetmusicdirect.com",
+                "www.sheetmusicdirect.com"
+            ]
+        },
+        {
+            "rule": "exponea\\.com\\/webxp\\/projects\\/69e7e4fe-79a7-11ee-aa37-b2cbbf8fb346\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.uk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "751a56c821390f8ad96a5700dff6cd0ee0be8b814471f3fdda75567189e8b3b2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "worldofbooks.com",
+                "www.worldofbooks.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000505,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.88
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.12
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Fetch": 26
+    },
+    "nameservers": [
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com"
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "domain": "ddlnk.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000403,
+    "sites": 4,
+    "subdomains": [
+        "r1"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ddlnk\\.net\\/_dmpt\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "r1"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "01820856bbdce481213106cb92d61207e770b47de4de786edb67e871f5348545"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lightbulbs-direct.com",
+                "www.chatsworth.org"
+            ]
+        },
+        {
+            "rule": "ddlnk\\.net\\/DM-3924547840-01\\/ddgtag\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "r1"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "126b48261b131fda807d7f7a8716c8c0d820139284d754d0837401d288eb076a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thecricketer.com",
+                "www.thecricketer.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "trackedlink.net",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns02.dot-dns.net",
+        "ns01.dot-dns.co.uk",
+        "ns02.dot-dns.co.uk",
+        "ns01.dot-dns.net"
+    ]
+}

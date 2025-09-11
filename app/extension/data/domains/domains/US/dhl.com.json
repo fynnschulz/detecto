@@ -1,0 +1,89 @@
+{
+    "domain": "dhl.com",
+    "owner": {
+        "name": "Deutsche Post AG",
+        "displayName": "Deutsche Post"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "vawidget",
+        "vawidget-eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "dhl\\.com\\/latest\\/embed\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "vawidget",
+                "vawidget-eu"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4bb39a8cbc043766ee5ae09b82f9d4899b453cf23a6e04c5cd80407ba873ee41"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dhlexpress.pl",
+                "www.dhlexpress.nl"
+            ]
+        },
+        {
+            "rule": "dhl\\.com\\/geolocation",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vawidget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3b7cee28fa95ec33be4fbf682e822cc8ff04df32cfccd1f84bec13861bd3fa95"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.dhl",
+                "www.dhlexpress.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns6b.dhl.com",
+        "ns2b.dhl.com",
+        "ns2.dhl.com",
+        "ns4.dhl.com",
+        "ns6.dhl.com",
+        "ns4b.dhl.com"
+    ]
+}

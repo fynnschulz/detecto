@@ -1,0 +1,404 @@
+{
+    "domain": "zdbb.net",
+    "owner": {
+        "name": "Ziff Davis LLC",
+        "displayName": "Ziff Davis"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.00131,
+    "sites": 13,
+    "subdomains": [
+        "cdn.static",
+        "gurgle",
+        "jogger"
+    ],
+    "cnames": [
+        {
+            "original": "gurgle.babycenter.com",
+            "resolved": "gurgle.zdbb.net"
+        },
+        {
+            "original": "gurgle.cnet.com",
+            "resolved": "gurgle.zdbb.net"
+        },
+        {
+            "original": "gurgle.eurogamer.net",
+            "resolved": "gurgle.zdbb.net"
+        },
+        {
+            "original": "gurgle.nintendolife.com",
+            "resolved": "gurgle.zdbb.net"
+        },
+        {
+            "original": "gurgle.pushsquare.com",
+            "resolved": "gurgle.zdbb.net"
+        },
+        {
+            "original": "gurgle.rockpapershotgun.com",
+            "resolved": "gurgle.zdbb.net"
+        },
+        {
+            "original": "gurgle.spiceworks.com",
+            "resolved": "gurgle.zdbb.net"
+        },
+        {
+            "original": "gurgle.zdnet.com",
+            "resolved": "gurgle.zdbb.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "zdbb\\.net\\/js\\/z0WVjCBSEeGLoxIxOQVEwQ\\.min\\.js",
+            "cookies": 0.00121,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.static"
+            ],
+            "apis": {
+                "Document.cookie getter": 12,
+                "Date.prototype.getTime": 12,
+                "Document.cookie setter": 12
+            },
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "52dada392a3139425d029d3766f34231bd8a146d6c53715533781a87205d6585"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fu": {
+                    "ttl": 2592004,
+                    "length": 1,
+                    "prevalence": 0.0012112647622892904,
+                    "uniqueness": 0.08333333333333333
+                },
+                "zd_session_id": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.0011103260320985161,
+                    "uniqueness": 1
+                },
+                "zpack": {
+                    "ttl": null,
+                    "length": 326,
+                    "prevalence": 0.0011103260320985161,
+                    "uniqueness": 1
+                },
+                "h_zdbb": {
+                    "ttl": 15552008,
+                    "length": 32,
+                    "prevalence": 0.0008075098415261935,
+                    "uniqueness": 1
+                },
+                "lrswap": {
+                    "ttl": 15552006,
+                    "length": 1,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "community.spiceworks.com",
+                "howlongtobeat.com",
+                "maxroll.gg",
+                "www.babycenter.com.au",
+                "www.babycenter.com",
+                "www.cnet.com",
+                "www.eurogamer.net",
+                "www.nintendolife.com",
+                "www.pushsquare.com",
+                "www.rockpapershotgun.com",
+                "www.zdnet.com"
+            ]
+        },
+        {
+            "rule": "zdbb\\.net\\/check_c",
+            "cookies": 0.00121,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "dba4454e188864ec03ffaba4c574b05ef03985b39d2b9ba98180c526ad63e328",
+                "089b1d2a342744aeef75657ec6638cfc96e513580caaa9f9a44b9b6393065abe",
+                "81ac459471b63a15de102031ea56fb9f45ebcb2d2d4d7ed9a5d939433d9a85ce",
+                "da4b6d3c2a7ac944af985ab86dc1359683894ebacb1e459cd11412dedf0e5934",
+                "bcc0fcbd9974a5b52077d7832c7b74625a6897e2f312b327ad48545c7d2735a5",
+                "d42a58321583656b43c53898fd0d3802547de4ea81033dfed72440ec158a85e5",
+                "6f8eb813c96bda3012c1a345c01c552a72bddd15fff34e60b66f000694a777de",
+                "bfb5892336fa7c01acc8c7780991c4790f186696e90d561ec8c5d82031d18605",
+                "4a867c627c2272f97bb65cad1b59d4e2251eeff3612479a6763f933429168059",
+                "646329bd19d1ffcea2dd5dc888cdc4c2eefbbc4b0be28f309061b9de02113d2b",
+                "814b45f1362d32318ba5452aa85de85fc19734326d5452868f678e4aee9d644a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "community.spiceworks.com",
+                "howlongtobeat.com",
+                "maxroll.gg",
+                "www.babycenter.com.au",
+                "www.babycenter.com",
+                "www.cnet.com",
+                "www.eurogamer.net",
+                "www.nintendolife.com",
+                "www.pushsquare.com",
+                "www.rockpapershotgun.com",
+                "www.zdnet.com"
+            ]
+        },
+        {
+            "rule": "zdbb\\.net\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gurgle"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [
+                {
+                    "original": "gurgle.spiceworks.com",
+                    "resolved": "gurgle.zdbb.net"
+                },
+                {
+                    "original": "gurgle.babycenter.com",
+                    "resolved": "gurgle.zdbb.net"
+                },
+                {
+                    "original": "gurgle.cnet.com",
+                    "resolved": "gurgle.zdbb.net"
+                },
+                {
+                    "original": "gurgle.eurogamer.net",
+                    "resolved": "gurgle.zdbb.net"
+                },
+                {
+                    "original": "gurgle.nintendolife.com",
+                    "resolved": "gurgle.zdbb.net"
+                },
+                {
+                    "original": "gurgle.pushsquare.com",
+                    "resolved": "gurgle.zdbb.net"
+                },
+                {
+                    "original": "gurgle.rockpapershotgun.com",
+                    "resolved": "gurgle.zdbb.net"
+                },
+                {
+                    "original": "gurgle.zdnet.com",
+                    "resolved": "gurgle.zdbb.net"
+                }
+            ],
+            "responseHashes": [
+                "0a5a7d0cac748c3bc8413b2d8da61789faaf82d667d233af3bd48b6a534af912",
+                "3b6f22cf4ac452b4f6aca681358decd1d1f6ade1fe92fe9864d2add46650768b",
+                "cfba627df9f09ecc30f9ccfb1bee54d8df8f0e26b231128a83859368fcf7a790"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.0007065711113354194,
+                "lotame_domain_check": 0.0003028161905723226
+            },
+            "exampleSites": [
+                "lifehacker.com",
+                "community.spiceworks.com",
+                "howlongtobeat.com",
+                "maxroll.gg",
+                "www.babycenter.com.au",
+                "www.babycenter.com",
+                "www.cnet.com",
+                "www.eurogamer.net",
+                "www.nintendolife.com",
+                "www.pushsquare.com",
+                "www.rockpapershotgun.com",
+                "www.zdnet.com"
+            ]
+        },
+        {
+            "rule": "zdbb\\.net\\/l\\/z0WVjCBSEeGLoxIxOQVEwQ",
+            "cookies": 0.00121,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.0008075098415261935,
+                "zd_session_id": 0.0011103260320985161,
+                "h_zdbb": 0.0007065711113354194,
+                "lotame_domain_check": 0.0003028161905723226
+            },
+            "exampleSites": [
+                "spiceworks.com",
+                "howlongtobeat.com",
+                "lifehacker.com",
+                "maxroll.gg",
+                "www.babycenter.com.au",
+                "www.babycenter.com",
+                "www.cnet.com",
+                "www.eurogamer.net",
+                "www.nintendolife.com",
+                "www.pushsquare.com",
+                "www.rockpapershotgun.com",
+                "www.zdnet.com"
+            ]
+        },
+        {
+            "rule": "zdbb\\.net\\/l\\/qI109lRAEeGCiBIxORcFRw\\/",
+            "cookies": 0.00111,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "howlongtobeat.com",
+                "lifehacker.com",
+                "maxroll.gg",
+                "www.babycenter.com.au",
+                "www.babycenter.com",
+                "www.cnet.com",
+                "www.eurogamer.net",
+                "www.nintendolife.com",
+                "www.pushsquare.com",
+                "www.rockpapershotgun.com",
+                "www.zdnet.com"
+            ]
+        },
+        {
+            "rule": "zdbb\\.net\\/check",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jogger"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "4e523a5ae5b4636c75901b79fafbd3912e41dc7987414e688b09d4b436ff22b3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.0002018774603815484,
+                "lotame_domain_check": 0.0002018774603815484
+            },
+            "exampleSites": [
+                "lifehacker.com",
+                "www.eurogamer.net",
+                "www.rockpapershotgun.com"
+            ]
+        },
+        {
+            "rule": "zdbb\\.net\\/set_fpid\\/babycenter\\.com\\/c\\/b2a16ec92735453b98bf403597f4e9da",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gurgle"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "gurgle.babycenter.com",
+                    "resolved": "gurgle.zdbb.net"
+                }
+            ],
+            "responseHashes": [
+                "22d39a7761dcff116c77ceab0dcfcaaeef0645ef4f6a79d7efa7f1b85fe4dfd9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "h_zdbb": 0.0002018774603815484
+            },
+            "exampleSites": [
+                "babycenter.com",
+                "www.babycenter.com"
+            ]
+        },
+        {
+            "rule": "zdbb\\.net\\/l\\/RKxdUqEhIpfGFepvvpLhhs",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "zd_session_id": 0.0002018774603815484,
+                "h_zdbb": 0.0002018774603815484,
+                "_li_dcdm_c": 0.0004037549207630968
+            },
+            "exampleSites": [
+                "babycenter.com",
+                "www.babycenter.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00131,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4666666666666667
+        },
+        {
+            "domain": "zdbb.net",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "ziffstatic.com",
+            "prevalence": 0.044444444444444446
+        },
+        {
+            "domain": "babycenter.com",
+            "prevalence": 0.044444444444444446
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.044444444444444446
+        }
+    ],
+    "types": {
+        "Script": 12,
+        "XHR": 29,
+        "Image": 25
+    },
+    "nameservers": [
+        "ns-1353.awsdns-41.org",
+        "ns-1537.awsdns-00.co.uk",
+        "ns-164.awsdns-20.com",
+        "ns-982.awsdns-58.net"
+    ]
+}

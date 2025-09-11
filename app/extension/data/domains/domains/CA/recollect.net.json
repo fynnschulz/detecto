@@ -1,0 +1,107 @@
+{
+    "domain": "recollect.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000102,
+    "sites": 1,
+    "subdomains": [
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "recollect\\.net\\/0\\.11\\.1754586552\\/javascript\\/compiled\\/recollect-widget-prod-us\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTime": 2,
+                "Event.prototype.timeStamp": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "Element.prototype.getClientRects": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a400ebd33bdf729d97c76c8dd30d7bcb1ea9b46cfe3e4935c5a2947ba7a01529"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "recollect-locale": {
+                    "ttl": 31536005,
+                    "length": 2,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                },
+                "rCclient": {
+                    "ttl": 31536030,
+                    "length": 36,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                },
+                "temp-client-id": {
+                    "ttl": 604830,
+                    "length": 36,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acrd.bc.ca",
+                "www.acrd.bc.ca"
+            ]
+        },
+        {
+            "rule": "recollect\\.net\\/0\\.11\\.1754586552\\/javascript\\/compiled\\/recollect-l10n-widget\\.en\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "611c24623f66abf265ec2722a655753a0eedcbce61ceb37f453f9bd3598cf721"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acrd.bc.ca",
+                "www.acrd.bc.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns-160.awsdns-20.com",
+        "ns-940.awsdns-53.net",
+        "ns-1622.awsdns-10.co.uk",
+        "ns-1296.awsdns-34.org"
+    ]
+}

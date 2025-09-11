@@ -1,0 +1,101 @@
+{
+    "domain": "itmedia.xyz",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "itmedia\\.xyz\\/form\\/3\\.0\\/js\\/form\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7168e7b8b19f26e53c8eb533b8b558dd13f28e8dc4e326a40a6b79d737e26a32"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "itmSysData_aid": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "itmSysData_tracking_code": {
+                    "ttl": null,
+                    "length": 21,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "sfData": {
+                    "ttl": null,
+                    "length": 74,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sba.com",
+                "www.sba.com"
+            ]
+        },
+        {
+            "rule": "itmedia\\.xyz\\/api-v3\\/ip",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sba.com",
+                "www.sba.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-914.awsdns-50.net",
+        "ns-1270.awsdns-30.org",
+        "ns-124.awsdns-15.com",
+        "ns-1917.awsdns-47.co.uk"
+    ]
+}

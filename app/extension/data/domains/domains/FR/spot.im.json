@@ -1,0 +1,877 @@
+{
+    "domain": "spot.im",
+    "owner": {
+        "name": "OpenWeb Technologies Ltd.",
+        "displayName": "OpenWeb",
+        "privacyPolicy": "https://www.openweb.com",
+        "url": "http://openweb.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "api-2-0",
+        "publisher-assets",
+        "static-cdn",
+        "direct-events-collector",
+        "pix"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/device-load",
+            "cookies": 0.000404,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "1e793fcad176a413a981898280886668ac77a325ce47c30dd0dfae8e80e53de3",
+                "bd12841eb372cc5d9513d4157e130ecc0712e01139913c5c4dade2486850a9b2",
+                "ca1258fa3c22a41ccbf2dd58cdb7934ffa652331c6b7dbe03446759850df7080"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/ad\\/event-tracking\\/pixel-ads-google-adsense\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "publisher-assets"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/init",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "d3cc1087c7206de408117e364d33a93d82d123ddf61bdef2a19df3cd7a77a833",
+                "0d625c645eb261b2890247bef4e8e4173d9c583f4cc1f9f17022dbefccf4051d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/entry-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "af0812ab252e73efb99e7823f1d91d4fe0d896942a8f6ffbf7641de383ee44e9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/ads\\/tags\\/v22\\.26\\.1\\/ads\\/ads\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.localStorage": 3,
+                "Navigator.prototype.platform": 1,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.connection": 1,
+                "Navigator.prototype.deviceMemory": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "6a1eb76da2d9eb90d1d50ff0b2a679252fc15304172b1e4cd9f5ded334c175d3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "spotim_visitId": {
+                    "ttl": 1809,
+                    "length": 205,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/api\\/v2\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-events-collector"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/236-bundle\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "176c49ff836094de055c9d5baa77d9f644e9e533fa0abf8b27709941cc153b06"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "spotim_visitId": {
+                    "ttl": 1818,
+                    "length": 206,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/894-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.platform": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Performance.prototype.memory": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b308939e59dab620465dab59386640be1d55bfaa5d330044816cfbce256d3cb4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/775-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "19e0028bbc3228128ba429612759c08bd15517ee88e0b5a350d59473cee9b03b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/initial-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b1e48b46bf2162b0823da7ec7e68cfa739dfa1ee6c3f7b3c4772bd7f100787b5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/967-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0b6a10f5cffa338449dd4440cc0e55991eb7d392b1877cd39a0cace3d306dbd9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/shell-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1a77929fa819f00d6b51b9dedb889f176550238a48dbfaae2bd12ce3aed8f65c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/icons\\/sprites\\/sprite\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "937085b9310af935b47f756a6326f86351c9fa0066de9e313e8cd6623ca0f888"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/182-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "df19a5012fefbbf7f9c6d0ba2f0b8b1c2c1ffa4ba63db7f0adf19d887e6fa1e3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/111-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "547ce3520e02043a5d370b5da47588073c4e5851bbb5b244783346af8857ad3b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/207-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1d03ceddd036aa323edb2cc4fa1f899d7ff81393e22be6cd7b19d7671c2f2708"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/authenticate",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/authenticate",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "1f73a5ba528314f467a535930d4f29647f1316b0565bcf7f0d9a92b4b63177a1",
+                "e5e2892e430ca368783f19e394ab815d46c2b45da3f33eb3c9e157393f5c0696"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/108-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "60131042c820ec89774252a62edd8f996e2020f8ecdb320e40377a0fe61ba13a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/with-all-vendors-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "adf0ceac9c262c736f93da2e7f7109886bbca95cbf2d0c2bdccfec5c4d6c4f3c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/notifications-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "75ef606162279da0b7f0f1456c9810c6e1cc27f2cc6cc8720d5af94179b836d7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/src_next_index_tsx-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4e86201d36b72474ca2b82e3b3595103f9fe7576ce374f5be77b07c4bef34559"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/realtime\\/read",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "c41ad4d50b8e52cc8bf89f01abcaedfcea00b2caeae6eb4ba0b3756f56fdbed7",
+                "bdfc6695cac7d2f08b7d16b4a6c925f2902a9977711b8dbff49ae13282a8d071"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/realtime\\/read",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "lifehacker.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/vendors-node_modules_reduxjs_toolkit_dist_redux-toolkit_esm_js-node_modules_spotim_images_dis-86e181-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9e862df096e9e6aab3d93cf68e8f52b6d645d42de6d0a60a4fc7ba76f39b4afd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/src_components_NotificationItem_NotificationDescription_NotificationDescription_tsx-src_compo-279477-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6ccdfbc98cb37e7293196bbc4d2a8d325e678d5f0e40cf6238b566cc8bcb742b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/src_components_StickyNotification_ActionContent_ActionContent_tsx-src_components_StickyNotifi-b290dd-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ac34585ac39aad5df21c971cbc35c075b2a3dd4457f4076a99335cfd320a1374"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/src_next_features_BootStickyNotifications_index_tsx-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f82fba3c2861b9ec5e8bd1ed77ef1997642a6d6f00faedf89d1711ae772b328e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bd7b308d78003d9a2bacf9a7ade7b2660cd7a40ee9f51a3068f6e2a87ceec8e3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timesofisrael.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/yad\\/ad-choises\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "publisher-assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b7e1c8a9635be0755d4154c5b017c122c43415f628cb151816733d4f78d1fa10"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kooora.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/api\\/v1\\/pixels",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pix"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kooora.com",
+                "www.kooora.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/count",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e32b5fe8316d32edc12a06c8201ec6e307a988542f9ac742e97a55881769b9b7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kooora.com",
+                "www.kooora.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/count",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kooora.com",
+                "www.kooora.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "rlcdn.com",
+            "prevalence": 0.6086956521739131
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.391304347826087
+        }
+    ],
+    "types": {
+        "Fetch": 24,
+        "Preflight": 11,
+        "Script": 39,
+        "XHR": 4,
+        "Image": 2,
+        "Ping": 3
+    },
+    "nameservers": [
+        "ns-2018.awsdns-60.co.uk",
+        "ns-802.awsdns-36.net",
+        "ns-1202.awsdns-22.org",
+        "ns-34.awsdns-04.com"
+    ]
+}

@@ -1,0 +1,205 @@
+{
+    "domain": "branch.io",
+    "owner": {
+        "name": "Branch Metrics, Inc.",
+        "displayName": "Branch Metrics",
+        "privacyPolicy": "https://branch.io/policies/",
+        "url": "http://branch.io"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00151,
+    "sites": 15,
+    "subdomains": [
+        "cdn",
+        "api2"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "branch\\.io\\/branch-latest\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 13,
+                "window.innerHeight": 13,
+                "window.innerWidth": 13,
+                "window.sessionStorage": 13,
+                "NavigatorUAData.prototype.getHighEntropyValues": 12,
+                "window.localStorage": 12,
+                "Navigator.prototype.userAgent": 12,
+                "Screen.prototype.height": 12,
+                "Screen.prototype.width": 12,
+                "Navigator.prototype.language": 12,
+                "window.devicePixelRatio": 12,
+                "Navigator.prototype.languages": 12
+            },
+            "sites": 13,
+            "prevalence": 0.00131,
+            "cnames": [],
+            "responseHashes": [
+                "92c8d76437db44b1b0fb1a683d82e370ceb7dab294bc67f3c4638655d243bbbe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adobe.com",
+                "medium.com",
+                "music.amazon.fr",
+                "www.alltrails.com",
+                "www.bible.com",
+                "www.massimodutti.com",
+                "www.mlb.com",
+                "www.msnbc.com",
+                "www.nbcnews.com",
+                "www.newyorker.com",
+                "www.pressreader.com",
+                "www.thetrainline.com",
+                "www.voyage-prive.com"
+            ]
+        },
+        {
+            "rule": "branch\\.io\\/v1\\/open",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api2"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "42ae32052f5f03a37307c99f192052a2e0526e6d9a279f9872fa09b719e39aa8",
+                "8d10e6fac552842886adcd901ed56e9de2ee89ba401cd9c584e751eda15864e6",
+                "41908293fc5440d2e8f89fbff2dd0ba2f5398ba762a522392ebd6ee7345c7646",
+                "695716f9ccade3b19fdfb61c89f352b2ea475a16dbe91d0f46a7a16a45de3cb4",
+                "88bae09b00620fda848ac08a4a102cfdd48eb6f5e8568d946f20ae0f420e405b",
+                "8f7ba6e07242f75d058b2a013be5d8c06767fecc5e0bbdf8c512336e6f06aa3f",
+                "885628765224840a2d7556a9754bbb1ac10908246434b8764f57fd3c121f97ed",
+                "e53d40525fa16521ee42b39d7565bbb67585f374779b30d61c0320f4ac773402",
+                "0567135b11d62bd07ea3de66e07a827450943bb0f811fe0deb413d620ffec697",
+                "7b64e0c06eb07c20b3a846524bc47ec5cb8daffe4846454a2d8e902bfdab30e3",
+                "81b2c7c7b55d80aec02847958d26a28d7f2974e02749c180aa5accf567124c9b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adobe.com",
+                "medium.com",
+                "music.amazon.fr",
+                "www.bible.com",
+                "www.hoopladigital.com",
+                "www.mlb.com",
+                "www.msnbc.com",
+                "www.nbcnews.com",
+                "www.newyorker.com",
+                "www.pressreader.com",
+                "www.staycation.co",
+                "www.voyage-prive.com"
+            ]
+        },
+        {
+            "rule": "branch\\.io\\/v1\\/pageview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api2"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.00141,
+            "cnames": [],
+            "responseHashes": [
+                "a82dc28d43942326b346f92907df3bea5e38b2325ef97176f3b6234966bf19eb",
+                "c3dd5a6fff633c6393dca21ce74cd6dc95265943575b43d2d9616f020eea68fa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adobe.com",
+                "medium.com",
+                "music.amazon.fr",
+                "www.alltrails.com",
+                "www.bible.com",
+                "www.hoopladigital.com",
+                "www.mlb.com",
+                "www.msnbc.com",
+                "www.nbcnews.com",
+                "www.newyorker.com",
+                "www.pressreader.com",
+                "www.staycation.co",
+                "www.thetrainline.com",
+                "www.voyage-prive.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Advertising",
+        "Analytics",
+        "Audience Measurement",
+        "Third-Party Analytics Marketing"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "app.link",
+            "prevalence": 0.15
+        },
+        {
+            "domain": "prcdn.co",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "inspectlet.com",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "nbcnews.com",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.025
+        }
+    ],
+    "types": {
+        "Script": 13,
+        "XHR": 26
+    },
+    "nameservers": [
+        "ns-236.awsdns-29.com",
+        "ns-1809.awsdns-34.co.uk",
+        "ns-991.awsdns-59.net",
+        "ns-1091.awsdns-08.org"
+    ]
+}

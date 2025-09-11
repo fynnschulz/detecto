@@ -1,0 +1,743 @@
+{
+    "domain": "captcha-delivery.com",
+    "owner": {
+        "name": "DataDome",
+        "displayName": "DataDome"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00574,
+    "sites": 57,
+    "subdomains": [
+        "ct",
+        "geo",
+        "static"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "captcha-delivery\\.com\\/i\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {
+                "window.sessionStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "9c15da5292b7e47136d41b9934279d4a8db7742bc31d078118875ca0dc39f3fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "etsy.com",
+                "www.leboncoin.fr",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/interstitial\\/",
+            "cookies": 0.000403,
+            "fingerprinting": 3,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {
+                "Navigator.prototype.languages": 4,
+                "window.outerHeight": 4,
+                "window.outerWidth": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.hardwareConcurrency": 4,
+                "Navigator.prototype.platform": 4,
+                "Navigator.prototype.maxTouchPoints": 4,
+                "Navigator.prototype.onLine": 4,
+                "NavigatorUAData.prototype.getHighEntropyValues": 4,
+                "Navigator.prototype.getBattery": 4,
+                "WebGLRenderingContext.prototype.getExtension": 4,
+                "WebGLRenderingContext.prototype.getParameter": 4,
+                "HTMLMediaElement.prototype.canPlayType": 4,
+                "MediaSource.isTypeSupported": 4,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 4,
+                "Navigator.prototype.language": 4,
+                "Navigator.prototype.connection": 4,
+                "Navigator.prototype.vendor": 4,
+                "NavigatorUAData.prototype.brands": 4,
+                "Document.cookie setter": 4,
+                "Document.cookie getter": 4,
+                "window.innerWidth": 4,
+                "window.innerHeight": 4,
+                "Screen.prototype.availWidth": 4,
+                "Screen.prototype.availHeight": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Screen.prototype.colorDepth": 4,
+                "window.devicePixelRatio": 4,
+                "Screen.prototype.orientation": 4,
+                "Date.prototype.getTimezoneOffset": 4,
+                "Navigator.prototype.mimeTypes": 4,
+                "Navigator.prototype.permissions": 4,
+                "Navigator.prototype.mediaDevices": 4,
+                "MediaDevices.prototype.enumerateDevices": 4,
+                "window.localStorage": 3,
+                "Navigator.prototype.webdriver": 3,
+                "Navigator.prototype.deviceMemory": 3,
+                "Navigator.prototype.keyboard": 3,
+                "URL.createObjectURL": 3,
+                "Navigator.prototype.plugins": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "2e84b45d75677fb59c155b55ecb43405f2fdad5d4d4d2fb75cdde57e26cd32c4",
+                "513b7f69b9dd98fb9f6a5eb07bb1ebb130c7e82185ed23f8137000f28a97975e",
+                "35e5bae9641f4b4212a1f7eeba1d89ec6e9b06bc7d0eb62a6b1de91a9beff8e3"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "dd_testcookie": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "etsy.com",
+                "www.leboncoin.fr",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/interstitial\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "8522afa1df7b69ee2fbef359161876e3ac8e3c4eedf7e168a5bd8966c359944d",
+                "43cd423d3b936cdab941c3e163f367a8a7e86051e976d4e180ebb47ee63f69ae",
+                "6b8cf63a79a36c203f25fb4abc3e59e71c9ba616cb3eabae190e603d78c46e4b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "etsy.com",
+                "www.leboncoin.fr",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/",
+            "cookies": 0.00393,
+            "fingerprinting": 3,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 42,
+                "Navigator.prototype.languages": 34,
+                "window.outerHeight": 34,
+                "window.outerWidth": 34,
+                "Navigator.prototype.userAgent": 42,
+                "Navigator.prototype.hardwareConcurrency": 42,
+                "Navigator.prototype.webdriver": 34,
+                "Navigator.prototype.platform": 34,
+                "Navigator.prototype.maxTouchPoints": 34,
+                "Navigator.prototype.onLine": 42,
+                "Navigator.prototype.deviceMemory": 30,
+                "Navigator.prototype.keyboard": 30,
+                "NavigatorUAData.prototype.getHighEntropyValues": 34,
+                "WebGLRenderingContext.prototype.getExtension": 39,
+                "WebGLRenderingContext.prototype.getParameter": 39,
+                "Navigator.prototype.permissions": 40,
+                "URL.createObjectURL": 34,
+                "Navigator.prototype.getBattery": 42,
+                "speechSynthesis.__proto__.getVoices": 42,
+                "Navigator.prototype.connection": 42,
+                "Navigator.prototype.vendor": 42,
+                "Navigator.prototype.mediaDevices": 34,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 42,
+                "Navigator.prototype.plugins": 34,
+                "NavigatorUAData.prototype.brands": 34,
+                "HTMLMediaElement.prototype.canPlayType": 39,
+                "MediaSource.isTypeSupported": 39,
+                "window.innerWidth": 39,
+                "window.innerHeight": 39,
+                "Screen.prototype.availWidth": 39,
+                "Screen.prototype.availHeight": 39,
+                "Screen.prototype.width": 39,
+                "Screen.prototype.height": 39,
+                "Screen.prototype.colorDepth": 39,
+                "window.devicePixelRatio": 39,
+                "Screen.prototype.orientation": 39,
+                "Navigator.prototype.mimeTypes": 42,
+                "Date.prototype.getTimezoneOffset": 42,
+                "Document.cookie setter": 39,
+                "Document.cookie getter": 39,
+                "window.localStorage": 39,
+                "HTMLCanvasElement.prototype.toDataURL": 42,
+                "MediaDevices.prototype.enumerateDevices": 33,
+                "Date.prototype.getTime": 6
+            },
+            "sites": 57,
+            "prevalence": 0.00574,
+            "cnames": [],
+            "responseHashes": [
+                "9ad6b2c9e344f3d0ca3129d0ccb251137219e64b4dc63870e2adf5e1b1291260",
+                "9559113e013d988d42a72d2573b3e25ad7098a94474620b36abf392a51f6b922",
+                "4a98adf3ec0063f30ccb9098feca6c9457e223c0122ece22ecc09136f1764313",
+                "ebb17a674ff93974612948745e42afaaf7a23b48048c099cf9efa0b66121e04c",
+                "1f055574b2da10956b9256e0fc16ea25ea76e2e9a67bd29b0a212eda99629d38",
+                "0bb3f37095c0898644bd7b57620ca1fab9c21e91d00f1d130f9add2973e95ead",
+                "e8f78cae7cfde08c0e56c15209c7442ccef269117a36d9c2508e5a61c6790334",
+                "23aa53ba511fd80ed8ca92090ea6a3c60a259d8318c2e0110354d33f382888a3",
+                "6beb15e4a6c27cc9d491973e4b942274ec890d975c35c2d24601d23b99feeeab",
+                "6f8c21f028dc1ec593a30b230ef1da231dcd797f1cbf4fc1d96f0d8bc6b6b595",
+                "9a768d147155ceaf21a46c8c5b237da899b4a6a99834c82d3506809dbec95e16",
+                "ad1b2e98e1f9a5a2db771fe084323f6ecabff6cb93bd94246712b9386d8103e6",
+                "6af01c16f066020482d0d9d862a5f4fdfb1fa126bfcffa2e2531a01f9daea047",
+                "9a79fff9c4167b8524df99f8b8088d95b98d4ced641b71f002eb5d010fa7efda",
+                "b0f8139106ca0a57308f67d9826d4be39d27e05f5b2c629cf8242be5a397d3a5",
+                "7aca8b544c655ef10b56825eb3e91547304777f102452942b6869ea0b7a2ddc1",
+                "27e57b167f4a56e2c72e2e709aad82e69198994d098dcbe26579eab637a22d14",
+                "6acd055d888e42bc715b1eca2933e0dd57a469b53fc21b5afee53495d35caa8c",
+                "af71766ca5c93f93e71f3da28710077ad8d7b5a99b37f45bd11006b44ff8977e",
+                "aff72829ce9396d2e645e1c04de91f3e529e3d8db5bf879bd1bb0ae1a5263f06",
+                "477763cecbc2aa77e8cc09bba8cbdebf77ec8ffad5efe9ecbf4063d1322dfe35",
+                "7e8c13784d2f0b4b06433471e08bbe4f83e2b0180a2aee5e8e9113c78e4e6cf6",
+                "76b874c2ae83ad636c92e414d8524a539c370018c4023236c79185c03dd1b293",
+                "9b0dd19082a44b72a4f7d387745dee5c61c72ab47f2da64e4e6e96bc6312d486",
+                "e037020dd61c9a636c494fd12be9107347e71148d39081e6fe79a44a2db6dc2e",
+                "5752684bddcfda2266a39fa94f50ad6c07593f2f19b527d1b78ee4442ad2635b",
+                "be4462d2d2e775351f1085c8b5bbcee0cc9d0369c2847af0fa69f60b6cf3c72d",
+                "6996dc6463d83acc17e67216d1fee41a951cc5d570d5e4bde4171cc260240d2f",
+                "3e4b97afdc637f992618a5f00e48fcad572d06bf0d963862be3e10c142de3b28",
+                "6c0ff9778c7acab54e535a0da955d3df60d41bcfc8dc0015f467cfb18aacee7e",
+                "8a00dde519a64accb943447f108e4f62ed04e22f54572efe49733212d3f93c65",
+                "af94817ae0a5cd45340430b91067065a67b7ea1ea495e84f10f1d28d43b70023",
+                "2f79cc0938da0e53dda9392009ac741d02616c52f6f130ea75f40f3e6327d191",
+                "2afc1ab58ee476204c86006e7a8a0865b1cb76977665a5f80e038aada480603d",
+                "f44ab40e29edc6aa6b4253729fed46ec9d3d1f1915895081c04dd8636b70de64",
+                "c2c19861ce6102f1289f7e6e0397863311e989e5651c5fd8ad0842b015b2d830",
+                "bd1cbe853888eb88718b662d85ec6cb356ebf0d5365b09212a9bdc9e3506502e",
+                "8099a49e30d5746a0da8afa90da9a3ab6bd7b0c990bd0bcd90a748b81ef42ea7",
+                "6d9d0fba50087e8cb307617155fc10cbeb7feffb810c158dcdf2b3d824880c49",
+                "e75ce6a39066b44ad2dab51b17286deb10da00550e4dbb1846aa4d7ee088dbce",
+                "0c2463a461abc684fa6ffa8b81f6abb40a25eb1099f6df8dc83ca66fed1c6411",
+                "2ef5b98fb129774e8ce8311f7037dd3cc6e8f2c93834e2bce8b4e3b7631e50c3",
+                "ad0720d1e02fc551fdd0582d105a1de153c2fc452e0ee4196b08225c534f0474",
+                "ab75fb38ccf746ed1e12344332ddf52b086684da42800c7850c613ee5ed3eb68",
+                "f6523e190119b0e769933290b090143fbaf86957023cfdee894d5aa930562292",
+                "9fcbd3d5ad9c721ff9ef937c036c75e066e4c836ceb4b285c2e1f14873a5858f",
+                "94c134300bc0162086ab10a63d9e76c0c2e769ae052d1924661fa38515ef79e6",
+                "4467f37efdfd454a2ace6221202b841938ee86e46a7d5f54ccc321fa10482f7e",
+                "4a90849f8479b2464ce7f22eaff4c2903da58d1cacc3eb337eea909fd1bae932",
+                "4207d5649fb2f05eeccab8deb635329f3f4dba016bc2c3b90fda68b8a1940d97",
+                "c93bc36636a3767feaaa1df9be75d461a354de5a3d0acbb4e9a0df9b4dd5d968",
+                "d0bd6313b10d921e8271e02644317f8088b0cf62ba5b5f229c305b77ed5158ca",
+                "5958e88210b6739ea6449a482838d49efb9c4877c826c0bc03568251c06b2884",
+                "ad065a275e6d0672ef64d3856b5924a1ee0167c22c2445b7479a18528ad0cbcc",
+                "e54c20abbba0b022e21c62925429a1afac0953e71b8231c4e412259eed5825d2",
+                "3908be82ba06377ec99d540f872379084b581bcb124652ef14ccba8b8b9bd295"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "dd_testcookie": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00392512077294686,
+                    "uniqueness": 0.02564102564102564
+                }
+            },
+            "firstPartyCookiesSent": {
+                "datadome": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "allegro.pl",
+                "brainly.com",
+                "etsy.com",
+                "study.com",
+                "tripadvisor.co.uk",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.yelp.com",
+                "www.sncf-connect.com",
+                "www.taylormadegolf.com",
+                "www.mouser.com",
+                "www.tripadvisor.in",
+                "www.mouser.co.uk",
+                "www.pokemoncenter.com",
+                "www.wineenthusiast.com",
+                "www.sezane.com",
+                "discover.hubpages.com",
+                "www.shutterstock.com",
+                "www.reuters.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/tpl\\/6dc485c0c428c35b53577b146dc6f9179f55ef9ad41b327a2a179998839364bf\\/index\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 57,
+            "prevalence": 0.00574,
+            "cnames": [],
+            "responseHashes": [
+                "d49fce4d3745c6d9f755f6be625eb218238baec337cfdb30be0e87d8c0ff6653"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "brainly.com",
+                "etsy.com",
+                "study.com",
+                "tripadvisor.co.uk",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.yelp.com",
+                "cvp.com",
+                "www.mouser.co.uk",
+                "www.tripadvisor.co.uk",
+                "www.turbosquid.com",
+                "parade.com",
+                "www.raileurope.com",
+                "www.shutterstock.com",
+                "www.hermes.com",
+                "www.pokemoncenter.com",
+                "www.viator.com",
+                "www.vivobarefoot.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/font-face\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "a1364e82ab23f2b2d2f20da412e83cac79e6310fb784b58ebb8edf5973ea9d90"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.idealista.com",
+                "www.idealista.it",
+                "www.idealista.pt"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/open-sans-300\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "57448185041ed1b29f54c778c6d48af032778fb2497b5a08f7b2a77dff712fcf"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.idealista.com",
+                "www.idealista.it",
+                "www.idealista.pt"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/c\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {
+                "window.sessionStorage": 50,
+                "Navigator.prototype.userAgent": 50,
+                "Document.cookie getter": 50
+            },
+            "sites": 50,
+            "prevalence": 0.00503,
+            "cnames": [],
+            "responseHashes": [
+                "fc732c544e858efbdc4431618157025cac5cb5e2118893d904b0ef91c081d6ef"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brainly.com",
+                "study.com",
+                "tripadvisor.co.uk",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.yelp.com",
+                "www.hermes.com",
+                "www.tripadvisor.ie",
+                "www.travelrepublic.co.uk",
+                "loveholidays.com",
+                "www.cruisecritic.co.uk",
+                "www.fnac.com",
+                "www.sncf-connect.com",
+                "www.mouser.co.uk",
+                "www.tripadvisor.co.nz",
+                "www.singlecare.com",
+                "www.mouser.com",
+                "www.wsj.com",
+                "www.tripadvisor.co.uk"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/roboto\\/font-face\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 51,
+            "prevalence": 0.00513,
+            "cnames": [],
+            "responseHashes": [
+                "66599c34190f7a6a402b38664a30a9b564fc22510f51fa3c5f027fb91e7a0e51"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brainly.com",
+                "etsy.com",
+                "study.com",
+                "tripadvisor.co.uk",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.yelp.com",
+                "www.cruisecritic.co.uk",
+                "www.reuters.com",
+                "www.fnac.com",
+                "www.singlecare.com",
+                "www.mouser.com",
+                "www.sncf-connect.com",
+                "www.viator.com",
+                "www.travelrepublic.co.uk",
+                "www.leboncoin.fr",
+                "www.pond5.com",
+                "parade.com",
+                "www.vivobarefoot.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/roboto\\/roboto\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 51,
+            "prevalence": 0.00513,
+            "cnames": [],
+            "responseHashes": [
+                "81d931a8c973b5bc8f9ded86a3440bd247a58e592b3897bf755c1a5d8390d763"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brainly.com",
+                "etsy.com",
+                "study.com",
+                "tripadvisor.co.uk",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.yelp.com",
+                "www.shutterstock.com",
+                "www.vivobarefoot.com",
+                "www.singlecare.com",
+                "www.g2.com",
+                "www.reuters.com",
+                "www.leboncoin.fr",
+                "www.expedia.co.uk",
+                "www.tripadvisor.co.uk",
+                "www.wineenthusiast.com",
+                "shutterstock.com",
+                "www.tripadvisor.ca",
+                "parade.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/e0aa99be678965d8c0263bcfd73bf046792f8a69\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9e49a74ed688363135e3b3644a90e3aabbf51bbef48d7582792f94a32ec20bf4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "etsy.com",
+                "www.etsy.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/560279392ba54d67c2d40106f9ddeba278a703ff\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2d2e56f6df0a92b8313ff6a01366285b1d4addf07ecb8254d69c617efb6bd905"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loveholidays.com",
+                "www.loveholidays.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/8076b712223db1fcb654acba027f7a87290374dc\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "200debdaa0c8ee3fe6db39a559903f643ff4c84685b6f8ae12932df2e22e2aa8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shutterstock.com",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/a9f0e9523bb464dc97737c4749c9335e29175c0c\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "0f4a12a29f8f3f4a64969a5b87b1eb19cebaab653928b7214727634172a47ec4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tripadvisor.co.uk",
+                "www.tripadvisor.ca",
+                "www.tripadvisor.co.nz",
+                "www.tripadvisor.co.uk",
+                "www.tripadvisor.com.au",
+                "www.tripadvisor.com",
+                "www.tripadvisor.ie",
+                "www.tripadvisor.in"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/7f2e02d8f311fcd71858b4320d939fc204b8da44\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5b5b050bee6345b916872971881a2f25a2df2785cdb1d6e20eb35e0ff8ec6328"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cruisecritic.co.uk",
+                "www.cruisecritic.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/open-sans-700\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "5c1f54ca8eef30134b982ad229a441645d3f83f0d77f6f215006f5d0db404154"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idealista.com",
+                "www.idealista.it",
+                "www.idealista.pt"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/26e53713afb2da82d031f045066fa4b2a47b0733\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "506b343b00ff65c6d0ba0ae410bb77dcdc7f0e39eb0521533d7a309d91612fa2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leboncoin.fr",
+                "www.leboncoin.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/ab6244112dd28d9e4b8a04e10ddbe02fd20461aa\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7519334581ecdbc1ce79a5c9c06832edf9f5f2f117745cfd23a4b79c76fe543e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mouser.co.uk",
+                "www.mouser.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/f525eef4f03ab81983392564bc44fea01267b8cd\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "286420daaf2f6e01b4292bce6e639506a600576a21400c41733ded187879e16b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefork.co.uk",
+                "www.thefork.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00393,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9649122807017544
+        },
+        {
+            "domain": "datadome.co",
+            "prevalence": 0.03508771929824561
+        }
+    ],
+    "types": {
+        "Script": 54,
+        "Document": 61,
+        "XHR": 4,
+        "Stylesheet": 112,
+        "Font": 58,
+        "Image": 22
+    },
+    "nameservers": [
+        "ns-257.awsdns-32.com",
+        "ns-1890.awsdns-44.co.uk",
+        "ns-730.awsdns-27.net",
+        "ns-1456.awsdns-54.org"
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "domain": "gravitec.media",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00151,
+    "sites": 15,
+    "subdomains": [
+        "cdn",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "gravitec\\.media\\/track\\.min\\.js",
+            "cookies": 0.00151,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 15,
+                "Date.prototype.getTime": 15,
+                "Document.cookie setter": 15
+            },
+            "sites": 15,
+            "prevalence": 0.00151,
+            "cnames": [],
+            "responseHashes": [
+                "051d72fee35a1656da7f68a12fce47e0b2a05a77b10feba942f25458955d8487"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "GN_USER_ID_KEY": {
+                    "ttl": 63072003,
+                    "length": 36,
+                    "prevalence": 0.001514998485001515,
+                    "uniqueness": 1
+                },
+                "GN_SESSION_ID_KEY": {
+                    "ttl": 1803,
+                    "length": 36,
+                    "prevalence": 0.001514998485001515,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "encause.fr",
+                "expo.paris",
+                "meilleure-innovation.com",
+                "mychromebook.fr",
+                "nature-au-quotidien.com",
+                "www.addictivetips.com",
+                "www.algerie360.com",
+                "www.cinetrafic.fr",
+                "www.culturequizz.com",
+                "www.ecranlarge.com",
+                "www.lensfoot.com",
+                "www.liverugby.fr",
+                "www.losclive.com",
+                "www.mercatolive.fr",
+                "www.tameteo.com"
+            ]
+        },
+        {
+            "rule": "gravitec\\.media\\/api\\/stats\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.00151,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "GN_USER_ID_KEY": 0.001514998485001515,
+                "GN_SESSION_ID_KEY": 0.001514998485001515
+            },
+            "exampleSites": [
+                "encause.fr",
+                "expo.paris",
+                "meilleure-innovation.com",
+                "mychromebook.fr",
+                "nature-au-quotidien.com",
+                "www.addictivetips.com",
+                "www.algerie360.com",
+                "www.cinetrafic.fr",
+                "www.culturequizz.com",
+                "www.ecranlarge.com",
+                "www.lensfoot.com",
+                "www.liverugby.fr",
+                "www.losclive.com",
+                "www.mercatolive.fr",
+                "www.tameteo.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00151,
+    "topInitiators": [
+        {
+            "domain": "gravitec.net",
+            "prevalence": 0.9375
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.0625
+        }
+    ],
+    "types": {
+        "Script": 15,
+        "Fetch": 15
+    },
+    "nameservers": [
+        "chan.ns.cloudflare.com",
+        "thomas.ns.cloudflare.com"
+    ]
+}

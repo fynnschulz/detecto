@@ -12,8 +12,15 @@
     catch { obj[key] = value; }
   }
 
+  // Provide GA4 gtag() noop if missing (some sites mix GA/gtag)
+  if (typeof window.gtag !== 'function') {
+    function gtag(){ return true; }
+    try { gtag.toString = nativeFn('gtag'); } catch {}
+    defGlobal(window, 'gtag', gtag);
+  }
+
   // Echte analytics.js nicht überschreiben – aber Boot-Snippet (ga.q) sehr wohl
-  if (typeof window.ga === 'function' && typeof window.ga.getAll === 'function' && Array.isArray(window.ga.getAll())) {
+  if (typeof window.ga === 'function' && window.ga.loaded === true) {
     return; // echtes GA geladen
   }
 
@@ -74,7 +81,7 @@
       get(fieldName){
         return this.fieldsObject[fieldName];
       },
-      async send(hitType, hitFields){
+      send(hitType, hitFields){
         const extra = (hitFields && typeof hitFields === 'object') ? hitFields : {};
         const payload = {
           t: hitType || (extra.hitType || 'pageview'),
@@ -82,16 +89,20 @@
           tracker: this.name,
           tid: this.trackingId,
           cid: this.fieldsObject.clientId || '555.0',
-          dl: document.location && document.location.href || '',
+          dl: (document.location && document.location.href) || '',
           dt: document.title || '',
           ...this.fieldsObject,
           ...extra
         };
+        // keep bounded history to avoid leaks
         state.hits.push(payload);
+        if (state.hits.length > 200) state.hits.shift();
         if (DEBUG) console.log('[Protecto GA Stub] hit', payload);
-        await jitter();
-        this._lastSend = payload.ts;
-        try { if (typeof extra.hitCallback === 'function') extra.hitCallback(); } catch {}
+        // simulate network delay without making ga() async
+        setTimeout(() => {
+          this._lastSend = payload.ts;
+          try { if (typeof extra.hitCallback === 'function') extra.hitCallback(); } catch {}
+        }, Math.floor(25 + Math.random()*65));
         return true;
       }
     };
@@ -113,28 +124,27 @@
   }
 
   // Hauptfunktion ga(...)
-  async function ga(command, a1, a2, a3){
+  function ga(command, a1, a2, a3){
     try {
-      // ga(function(){ ... }) – Callback-Style
+      // ga(function(){ ... }) – Callback-Style (exec later, but return true now)
       if (typeof command === 'function') {
         state.callbacks.push(command);
-        await jitter(5,25);
-        try { command(); } catch {}
-        return Promise.resolve(true);
+        setTimeout(() => { try { command(); } catch {} }, Math.floor(5 + Math.random()*20));
+        return true;
       }
 
-      if (typeof command !== 'string') return Promise.resolve(true);
+      if (typeof command !== 'string') return true;
 
       // t0.send / t0.set / t0.get Syntax
       if (command.indexOf('.') > -1) {
         const [trackerName, method] = command.split('.', 2);
         const tr = getTrackerByName(trackerName);
-        if (!tr) return Promise.resolve(false);
-        if (method === 'send') return Promise.resolve(tr.send(a1, a2));
-        if (method === 'set')  return Promise.resolve(tr.set(a1, a2));
-        if (method === 'get')  return Promise.resolve(tr.get(a1));
-        if (method === 'require') { state.plugins.add(a1); return Promise.resolve(true); }
-        return Promise.resolve(true);
+        if (!tr) return false;
+        if (method === 'send') return tr.send(a1, a2);
+        if (method === 'set')  return tr.set(a1, a2);
+        if (method === 'get')  return tr.get(a1);
+        if (method === 'require') { state.plugins.add(a1); return true; }
+        return true;
       }
 
       // create / send / set / get (global auf defaultTracker)
@@ -142,67 +152,58 @@
         case 'create':
           // ga('create', trackingId, cookieDomain, nameOrFields)
           createTracker(a1, a2, a3);
-          return Promise.resolve(true);
+          return true;
         case 'send': {
           const tr = getTrackerByName(state.defaultName) || createTracker();
           if (typeof a1 === 'object') {
             const hf = a1 || {}; // { hitType: 'event', ... }
-            return Promise.resolve(tr.send(hf.hitType || 'pageview', hf));
+            return tr.send(hf.hitType || 'pageview', hf);
           }
-          return Promise.resolve(tr.send(a1, a2));
+          return tr.send(a1, a2);
         }
         case 'set': {
           const tr = getTrackerByName(state.defaultName) || createTracker();
-          return Promise.resolve(tr.set(a1, a2));
+          return tr.set(a1, a2);
         }
         case 'get': {
           const tr = getTrackerByName(state.defaultName) || createTracker();
-          return Promise.resolve(tr.get(a1));
+          return tr.get(a1);
         }
         case 'remove':
-          return Promise.resolve(true); // no-op
+          return true; // no-op
         case 'provide': // ga('provide', 'pluginName', fn)
           if (typeof a1 === 'string') state.plugins.add(a1);
-          return Promise.resolve(true);
+          return true;
         case 'require': // ga('require', 'pluginName' [, options])
           if (typeof a1 === 'string') state.plugins.add(a1);
           if (a1 === 'linker' && a2 && a2.autoLink) state.linker.autoLink = [].concat(a2.autoLink);
-          return Promise.resolve(true);
+          return true;
         default:
           if (DEBUG) console.log('[Protecto GA Stub] unknown command:', command, a1, a2, a3);
-          return Promise.resolve(true);
+          return true;
       }
     } catch (e) {
       if (DEBUG) console.warn('[Protecto GA Stub] error', e);
-      return Promise.resolve(false);
+      return false;
     }
   }
 
-  // Zusätzliche Kurzformen wie im Original
-  ga.l = Date.now();
-  ga.loaded = true;
-  ga.create = (tid, cd, nameOrFields) => createTracker(tid, cd, nameOrFields);
-  ga.getAll = () => getAllTrackers();
-  ga.getByName = (n) => getTrackerByName(n);
-
-  try { ga.toString = nativeFn('ga'); } catch {}
+  // Exponieren (einmal, read-only)
   defGlobal(window, 'ga', ga);
 
+  // Zusätzliche No-Ops für Kompatibilität (synchron)
+  ga.require = function() { return true; };
+  ga.remove  = function() { return true; };
+
+  // Native-like Fingerprints NACH der Zuweisung
   try {
-    ga.toString = nativeFn('ga');
+    ga.toString        = nativeFn('ga');
     ga.create.toString = nativeFn('create');
     ga.getAll.toString = nativeFn('getAll');
     ga.getByName.toString = nativeFn('getByName');
-    ga.require.toString = nativeFn('require');
-    ga.remove.toString = nativeFn('remove');
+    ga.require.toString   = nativeFn('require');
+    ga.remove.toString    = nativeFn('remove');
   } catch {}
-
-  // Zusätzliche No-Ops für Kompatibilität
-  ga.require = function() { return true; };
-  ga.remove = function() { return true; };
-
-  // Exponieren
-  window.ga = ga;
 
   // Kompatibilität: ga.q als leeres Array bereitstellen (einige Themes checken das)
   try { Object.defineProperty(window.ga, 'q', { value: [], writable: false, configurable: false, enumerable: false }); }
@@ -210,6 +211,20 @@
 
   if (!Array.isArray(window._gaq)) window._gaq = [];
   try { Object.defineProperty(window._gaq, 'push', { value: function(){ return true; }, writable:false, configurable:false }); } catch { window._gaq.push = function(){ return true; }; }
+
+  // Legacy _gat compatibility (_getTracker)
+  if (!window._gat) {
+    const legacyTracker = {
+      _trackPageview: function(){ return true; },
+      _trackEvent: function(){ return true; }
+    };
+    try {
+      Object.defineProperty(window, '_gat', {
+        value: { _getTracker: function(){ return legacyTracker; } },
+        writable: false, configurable: false, enumerable: false
+      });
+    } catch { window._gat = { _getTracker: function(){ return legacyTracker; } }; }
+  }
 
   // Vorher gequeue’te Aufrufe (vom Bootstrap-Snippet) nachträglich abarbeiten
   (async () => {
@@ -222,5 +237,4 @@
     }
   })();
 
-  try { ga.getAll.toString = nativeFn('getAll'); } catch {}
 })();

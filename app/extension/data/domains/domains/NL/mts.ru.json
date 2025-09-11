@@ -1,0 +1,368 @@
+{
+    "domain": "mts.ru",
+    "owner": {
+        "name": "Mobile TeleSystems Public Joint Stock Company",
+        "displayName": "Mobile TeleSystems Public Joint Stock Company"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "static.a",
+        "cm.a",
+        "api.a",
+        "sm.rtb",
+        "6396713941755402798219.cm.a",
+        "6799460311755401791749.cm.a",
+        "vma",
+        "5384259421755406246835.cm.a",
+        "6291124541755405581025.cm.a"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "mts\\.ru\\/id\\/pixel\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 3,
+            "subdomains": [
+                "static.a"
+            ],
+            "apis": {
+                "URL.createObjectURL": 2,
+                "Navigator.prototype.vendor": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.storage": 2,
+                "Document.cookie getter": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.connection": 2,
+                "Screen.prototype.width": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "window.matchMedia(\"prefers-color-scheme\")": 2,
+                "Performance.prototype.memory": 2,
+                "Navigator.prototype.languages": 2,
+                "OfflineAudioContext.prototype.constructor": 2,
+                "AudioBuffer.prototype.getChannelData": 2,
+                "Screen.prototype.availTop": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availLeft": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.plugins": 2,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Document.cookie setter": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.getBattery": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3f8f351130878d5fc50c04773cc56c7737e3903e57d9bf5f12edba457174c213"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1755402776,
+                    "length": 1,
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 0.5
+                },
+                "ma_id": {
+                    "ttl": 31536000,
+                    "length": 22,
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 1
+                },
+                "ma_id_api": {
+                    "ttl": 31536000,
+                    "length": 342,
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtf.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/cm\\/tech",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cm.a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtf.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/api\\/ia\\/v1\\/ids\\/vis-id",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d6b420ed0dc19bb972164b02d30da9438e75ba667a2c05e4fc2ca030c64f1349"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtf.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/api\\/ia\\/v1\\/ids\\/vis-id",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtf.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/p",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sm.rtb"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtf.ru",
+                "flibusta.su",
+                "www.banki.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/cm\\/tech",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cm.a"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flibusta.su",
+                "dtf.ru",
+                "www.banki.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/cm\\/match",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "6396713941755402798219.cm.a",
+                "6799460311755401791749.cm.a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8c8538a22e961fbd94a16a3546e70c05f158668cd183747d6860be7a901476e7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtf.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/match\\/second",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vma"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtf.ru",
+                "flibusta.su",
+                "www.banki.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/cm\\/match",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "5384259421755406246835.cm.a",
+                "6291124541755405581025.cm.a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flibusta.su",
+                "www.banki.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/em",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vma"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "banki.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "mts\\.ru\\/metric-api\\/api\\/message\\/json\\/v3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ym_d": 0.00020206102242877348,
+                "ma_cid": 0.00020206102242877348
+            },
+            "exampleSites": [
+                "avito.ru",
+                "www.avito.ru"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "buzzoola.com",
+            "prevalence": 0.4117647058823529
+        },
+        {
+            "domain": "avito.st",
+            "prevalence": 0.2549019607843137
+        },
+        {
+            "domain": "otm-r.com",
+            "prevalence": 0.11764705882352941
+        },
+        {
+            "domain": "yastatic.net",
+            "prevalence": 0.09803921568627451
+        },
+        {
+            "domain": "adhigh.net",
+            "prevalence": 0.09803921568627451
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0196078431372549
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 6,
+        "Preflight": 2,
+        "Image": 16,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns1.mts-ws.net",
+        "ns2.mts.ru",
+        "ns3.mts.ru",
+        "ns4.mts-ws.net",
+        "dns1.mtu.ru"
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "domain": "dynamicbanner.xyz",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "dynamicbanner\\.xyz\\/utils\\/cookie-check\\/start\\.html",
+            "cookies": 0.0000274,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "0591afa82840d064c2b4e7d76a5ba7a082e61a46935352b9101e413c8810c234"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "thirdparty": {
+                    "ttl": 3600,
+                    "length": 3,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 0.25
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "medianewsc.com",
+                "news75today.com",
+                "nongnhat.com",
+                "thenewsscroll.com"
+            ]
+        },
+        {
+            "rule": "dynamicbanner\\.xyz\\/utils\\/cookie-check\\/complete\\.html",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "765b210a3b2d92a4cf733791439079e32686a1bb229d07902d0d6248196675d8"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "medianewsc.com",
+                "news75today.com",
+                "nongnhat.com",
+                "thenewsscroll.com"
+            ]
+        },
+        {
+            "rule": "dynamicbanner\\.xyz\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "medianewsc.com",
+                "news75today.com",
+                "nongnhat.com",
+                "thenewsscroll.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "adbridgepro.com",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "aj1559.online",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Document": 8,
+        "XHR": 4
+    },
+    "nameservers": [
+        "deb.ns.cloudflare.com",
+        "boyd.ns.cloudflare.com"
+    ]
+}

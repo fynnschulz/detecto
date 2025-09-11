@@ -1,0 +1,91 @@
+{
+    "domain": "goaffpro.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000707,
+    "sites": 7,
+    "subdomains": [
+        "api",
+        "static"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "goaffpro\\.com\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "window.sessionStorage": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "da651e59ab33ca0d0a81ec47b03559f4f8a064251929009f9097a8b4114e345c",
+                "93d9942142ddae794866671d6964a38ab04dfef7153f42b8319f8c4a3bc518ac",
+                "852cb569bdfc5688501353aff8cbbd28874045660728783693e4ae9c0bacefdf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "militaryshop.com.au",
+                "oxoaustralia.com.au",
+                "www.creality.com",
+                "www.goodness.com.au"
+            ]
+        },
+        {
+            "rule": "goaffpro\\.com\\/cross-domain-sharing-innner-frame\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e803caa67eb0a2f34fba4ad9b14b263df67f53aae17737d47e31bca0f7b3842b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "simify.com",
+                "www.lskd.co"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.2857142857142857
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Document": 2
+    },
+    "nameservers": [
+        "noah.ns.cloudflare.com",
+        "ivy.ns.cloudflare.com"
+    ]
+}

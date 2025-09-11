@@ -1,0 +1,109 @@
+{
+    "domain": "mlb.com",
+    "owner": {
+        "name": "MLB Advanced Media, LP",
+        "displayName": "MLB Advanced Media"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000102,
+    "sites": 1,
+    "subdomains": [
+        "data-graph",
+        "statsapi"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "mlb\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data-graph"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a18bfaaf9c10983fe25becc414aa4cedd06a636fcba4ffab1377476cdf215ea2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "milb.com",
+                "www.milb.com"
+            ]
+        },
+        {
+            "rule": "mlb\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data-graph"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "milb.com",
+                "www.milb.com"
+            ]
+        },
+        {
+            "rule": "mlb\\.com\\/api\\/v1\\/schedule",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "statsapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "milb.com",
+                "www.milb.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "mlbstatic.com",
+            "prevalence": 0.875
+        },
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-1997.awsdns-57.co.uk",
+        "ns-cloud-b3.googledomains.com",
+        "ns-976.awsdns-58.net",
+        "ns-204.awsdns-25.com",
+        "ns-cloud-b2.googledomains.com",
+        "ns-1370.awsdns-43.org",
+        "ns-cloud-b4.googledomains.com",
+        "ns-cloud-b1.googledomains.com"
+    ]
+}

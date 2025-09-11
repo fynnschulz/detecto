@@ -1,0 +1,269 @@
+{
+    "domain": "adriver.ru",
+    "owner": {
+        "name": "LLC \"Internest-holding\"",
+        "displayName": "Internest-holding",
+        "privacyPolicy": "https://www.adriver.ru/about/privacy-en/",
+        "url": "http://adriver.ru"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000605,
+    "sites": 6,
+    "subdomains": [
+        "pb",
+        "ssp",
+        "content",
+        "ad",
+        "ev"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "adriver\\.ru\\/cgi-bin\\/bid\\.cgi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pb"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "7flamme.com",
+                "musify.club",
+                "www.kp.ru",
+                "www.mk.ru"
+            ]
+        },
+        {
+            "rule": "adriver\\.ru\\/cgi-bin\\/sync\\.cgi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yandex.ru",
+                "translate.yandex.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "adriver\\.ru\\/AdRiverFPS\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "window.indexedDB": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4a28a81629abeda1fb6f265de3842320581c1d87401abf46f6b0da180e313a68"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "adrdel": {
+                    "ttl": 315360008,
+                    "length": 13,
+                    "prevalence": 0.00010089799212995662,
+                    "uniqueness": 1
+                },
+                "adrcid": {
+                    "ttl": 315360008,
+                    "length": 23,
+                    "prevalence": 0.00010089799212995662,
+                    "uniqueness": 1
+                },
+                "acs_3": {
+                    "ttl": 315360008,
+                    "length": 167,
+                    "prevalence": 0.00010089799212995662,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avito.ru",
+                "www.mk.ru"
+            ]
+        },
+        {
+            "rule": "adriver\\.ru\\/cgi-bin\\/rle\\.cgi",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ad"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b7e8b3e17620828b358b104fb2a2813df4ff3a1d42631cf8bff038eecdb11b9f"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avito.ru",
+                "www.mk.ru"
+            ]
+        },
+        {
+            "rule": "adriver\\.ru\\/cgi-bin\\/erle\\.cgi",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ad"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ym_uid": 0.00020179598425991324,
+                "_ym_d": 0.00020179598425991324,
+                "_ga": 0.00020179598425991324
+            },
+            "exampleSites": [
+                "avito.ru",
+                "www.avito.ru"
+            ]
+        },
+        {
+            "rule": "adriver\\.ru\\/cgi-bin\\/json\\.cgi",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ad"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fde74d107ee2c691e37e82442043bc061787a54dacfc6e5990f82c0152c9a12e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ym_uid": 0.00010089799212995662,
+                "_ym_d": 0.00010089799212995662,
+                "_ga": 0.00010089799212995662
+            },
+            "exampleSites": [
+                "avito.ru",
+                "www.mk.ru"
+            ]
+        },
+        {
+            "rule": "adriver\\.ru\\/cgi-bin\\/rle\\.cgi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ev"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "adrcid": 0.0003026939763898698
+            },
+            "exampleSites": [
+                "avito.ru",
+                "www.avito.ru",
+                "www.mk.ru"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising"
+    ],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "buzzoola.com",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "yandex.ru",
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "soloway.ru",
+            "prevalence": 0.17857142857142858
+        },
+        {
+            "domain": "yastatic.net",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.10714285714285714
+        },
+        {
+            "domain": "avito.st",
+            "prevalence": 0.03571428571428571
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.03571428571428571
+        }
+    ],
+    "types": {
+        "XHR": 4,
+        "Image": 6,
+        "Script": 4,
+        "Document": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns1.adriver.ru",
+        "ns2.adriver.ru",
+        "ns3.adriver.ru",
+        "ns4.adriver.ru",
+        "ns6.adriver.ru",
+        "ns7.adriver.ru",
+        "ns8.adriver.ru"
+    ]
+}

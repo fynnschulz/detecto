@@ -1,0 +1,82 @@
+{
+    "domain": "push-sdk.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "push-sdk\\.net\\/f\\/sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [],
+            "apis": {
+                "window.indexedDB": 5,
+                "NavigatorUAData.prototype.getHighEntropyValues": 5,
+                "Notification.permission": 5
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "d5915ebbad4870fff3eb8d46156288f7a5339d9d1859168084f9ed3643c576f6",
+                "33a696af91e3ac5fc69b97eb816318c1c5f4071b90398c73b0421a795b294e4b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "auralcrave.com",
+                "nfl-replays.com",
+                "www.jolie-bobine.fr",
+                "www.lottopcso.com",
+                "yappe.in"
+            ]
+        },
+        {
+            "rule": "push-sdk\\.net\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "auralcrave.com",
+                "nfl-replays.com",
+                "www.jolie-bobine.fr",
+                "www.lottopcso.com",
+                "yappe.in"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Ping": 5
+    },
+    "nameservers": [
+        "aspen.ns.cloudflare.com",
+        "braden.ns.cloudflare.com"
+    ]
+}

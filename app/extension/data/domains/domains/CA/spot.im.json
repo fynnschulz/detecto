@@ -1,0 +1,1279 @@
+{
+    "domain": "spot.im",
+    "owner": {
+        "name": "OpenWeb Technologies Ltd.",
+        "displayName": "OpenWeb",
+        "privacyPolicy": "https://www.openweb.com",
+        "url": "http://openweb.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.0102,
+    "sites": 100,
+    "subdomains": [
+        "open-api",
+        "api-ssp",
+        "static-cdn",
+        "api-2-0",
+        "publisher-assets",
+        "direct-events-collector",
+        "pix"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "spot\\.im\\/v1\\/messages-count",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "open-api"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000812,
+            "cnames": [],
+            "responseHashes": [
+                "6efcf30220898096b510bdc6d0a2efdc6f0237f3d7fc383075bd619fefdb7f99",
+                "0833fb6ed11743e582ef2c9740558e5d30981ebadfd729bcf4cb031943d1c88a",
+                "070bcf5cc40250b2e6f8ad10f84ce4881136012b0c1eb3bfbb8f6e8e1565226d",
+                "afc1f4ddc4bcf6b7841ced0e4c3d5f53eca25f1f5d3ef669d9799b35ddce6f1f",
+                "c54ce79a14d045f4dd1e899586d94a6b0b7ec521bc0994ed42d73ce1d275cc81",
+                "457cdb4d36417f498b1fcbd97213e0d7ad641b4784f99e3c823b23a384f06000",
+                "bb14e1ef8da29c352e69a2e25792396a06f46430077f62a0d61988051ba0739a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "attackofthefanboy.com",
+                "dotesports.com",
+                "wegotthiscovered.com",
+                "wgme.com",
+                "www.forbes.com",
+                "www.gamerevolution.com",
+                "www.gamepur.com",
+                "www.gameskinny.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/pixels\\/ayl_pixel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-ssp"
+            ],
+            "apis": {},
+            "sites": 80,
+            "prevalence": 0.00812,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.pcworld.com",
+                "www.techradar.com",
+                "www.timeanddate.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.guitarworld.com",
+                "www.whowhatwear.com",
+                "swimsuit.si.com",
+                "www.livescience.com",
+                "www.iplocation.net",
+                "www.01net.com",
+                "www.planetf1.com",
+                "www.kiplinger.com",
+                "www.digitalcameraworld.com",
+                "www.cyclingnews.com",
+                "forums.civfanatics.com",
+                "www.whattowatch.com",
+                "www.greentractortalk.com",
+                "hockey30.com",
+                "www.igeeksblog.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/ads\\/tags\\/v22\\.26\\.1\\/ads-independent\\/ads-independent\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "NavigatorUAData.prototype.platform": 3,
+                "window.sessionStorage": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.connection": 1,
+                "Navigator.prototype.deviceMemory": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "1a65a80ca30edf578c89fd64570b700791f5ac78f849a26d6b1ed437b4c34256"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decider.com",
+                "nypost.com",
+                "pagesix.com",
+                "www.capitalfm.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/device-load",
+            "cookies": 0.00142,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.00142,
+            "cnames": [],
+            "responseHashes": [
+                "a99e63634d97d54df78137df3adcc9f6ce02c5c11e3ea838178d6b7c76b53133",
+                "de8e115fab4d97aa51e167fabdfc8df7405aaf789cc8918af980cd6447893529",
+                "1a98bd256fec0b10a2a8449395ce0c8846dd7c375c2aed407070df07ec4f848d",
+                "c638fd4bcead635a31a72ab2043d0996dc2374c91972b8ace806b94dbc403fab",
+                "b14a6364872a1a0d48f3e69d8f875765bc96eb46bf69b17776bc5a311670964e",
+                "c4f246e5382e5942e0744a3931a2fe604fe31a19b3205f74671ae4f8161c2654",
+                "3bd1604e73e15640bc481f069914a827c99fc9bf13841fe58d2c43231383c2e8",
+                "48afd1af22e47ec5e060bbe2c3f1d0ff516c7052c3b2af80161ba9fb6ed0e0ee",
+                "05e8d7840ba9763ac90468a9daa3761824543b1424046c70b963ffb9e2ff66b0",
+                "7cdfe1428a02ffebdca01460437e8e07947c1277c73df11768b79f79699da03f",
+                "c561053f38ace03ca0be8286a5f68741229616f66d00efe6dbc2a4fa6502fadd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decider.com",
+                "jalopnik.com",
+                "lifehacker.com",
+                "nypost.com",
+                "pagesix.com",
+                "soaps.sheknows.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.capitalfm.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com",
+                "www.gocomics.com",
+                "www.ign.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/ad\\/event-tracking\\/pixel-ads-google-adsense\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "publisher-assets"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.00152,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decider.com",
+                "jalopnik.com",
+                "lifehacker.com",
+                "nypost.com",
+                "pagesix.com",
+                "soaps.sheknows.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.capitalfm.com",
+                "www.comingsoon.net",
+                "www.dailydot.com",
+                "www.gamerevolution.com",
+                "www.gocomics.com",
+                "www.ign.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/api\\/v2\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-events-collector"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00112,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decider.com",
+                "jalopnik.com",
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.capitalfm.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com",
+                "www.gocomics.com",
+                "www.thedailybeast.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000812,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/init",
+            "cookies": 0.000812,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000812,
+            "cnames": [],
+            "responseHashes": [
+                "d3cc1087c7206de408117e364d33a93d82d123ddf61bdef2a19df3cd7a77a833",
+                "0d625c645eb261b2890247bef4e8e4173d9c583f4cc1f9f17022dbefccf4051d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/entry-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 5,
+                "window.sessionStorage": 5,
+                "window.innerHeight": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "af0812ab252e73efb99e7823f1d91d4fe0d896942a8f6ffbf7641de383ee44e9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/ads\\/tags\\/v22\\.26\\.1\\/ads\\/ads\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 8,
+                "Navigator.prototype.userAgent": 8,
+                "NavigatorUAData.prototype.platform": 7,
+                "window.localStorage": 8,
+                "Navigator.prototype.platform": 1
+            },
+            "sites": 8,
+            "prevalence": 0.000812,
+            "cnames": [],
+            "responseHashes": [
+                "6a1eb76da2d9eb90d1d50ff0b2a679252fc15304172b1e4cd9f5ded334c175d3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/236-bundle\\.js",
+            "cookies": 0.000305,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "176c49ff836094de055c9d5baa77d9f644e9e533fa0abf8b27709941cc153b06"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "spotim_visitId": {
+                    "ttl": 1829,
+                    "length": 178,
+                    "prevalence": 0.00030453761039488374,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/894-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.sessionStorage": 4,
+                "Navigator.prototype.maxTouchPoints": 4,
+                "Navigator.prototype.platform": 4,
+                "window.innerHeight": 4,
+                "window.innerWidth": 4,
+                "Performance.prototype.memory": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "b308939e59dab620465dab59386640be1d55bfaa5d330044816cfbce256d3cb4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/775-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 5,
+                "Date.prototype.getTime": 5,
+                "Navigator.prototype.language": 3
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "19e0028bbc3228128ba429612759c08bd15517ee88e0b5a350d59473cee9b03b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/initial-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 4,
+                "window.localStorage": 2
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "b1e48b46bf2162b0823da7ec7e68cfa739dfa1ee6c3f7b3c4772bd7f100787b5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/967-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "0b6a10f5cffa338449dd4440cc0e55991eb7d392b1877cd39a0cace3d306dbd9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/shell-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "1a77929fa819f00d6b51b9dedb889f176550238a48dbfaae2bd12ce3aed8f65c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "wgme.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/icons\\/sprites\\/sprite\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000711,
+            "cnames": [],
+            "responseHashes": [
+                "937085b9310af935b47f756a6326f86351c9fa0066de9e313e8cd6623ca0f888"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.celebdirtylaundry.com",
+                "www.comingsoon.net",
+                "www.gamerevolution.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/182-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "df19a5012fefbbf7f9c6d0ba2f0b8b1c2c1ffa4ba63db7f0adf19d887e6fa1e3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/111-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "547ce3520e02043a5d370b5da47588073c4e5851bbb5b244783346af8857ad3b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/207-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "1d03ceddd036aa323edb2cc4fa1f899d7ff81393e22be6cd7b19d7671c2f2708"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/authenticate",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "lifehacker.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/authenticate",
+            "cookies": 0.000305,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "e47cfd46f8f14538684ddc3827b8a6ce70f584d36a5b2f0b2e8ab5fe2d4634e7",
+                "7222b8f82431befa9bc6fda358b04789db9bd85546efb7531e557a4c3a86adeb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "lifehacker.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/108-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "60131042c820ec89774252a62edd8f996e2020f8ecdb320e40377a0fe61ba13a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/launcher\\/with-all-vendors-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "adf0ceac9c262c736f93da2e7f7109886bbca95cbf2d0c2bdccfec5c4d6c4f3c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/notifications-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "75ef606162279da0b7f0f1456c9810c6e1cc27f2cc6cc8720d5af94179b836d7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/src_next_index_tsx-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "4e86201d36b72474ca2b82e3b3595103f9fe7576ce374f5be77b07c4bef34559"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/vendors-node_modules_reduxjs_toolkit_dist_redux-toolkit_esm_js-node_modules_spotim_images_dis-86e181-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "9e862df096e9e6aab3d93cf68e8f52b6d645d42de6d0a60a4fc7ba76f39b4afd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/src_components_NotificationItem_NotificationDescription_NotificationDescription_tsx-src_compo-279477-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "6ccdfbc98cb37e7293196bbc4d2a8d325e678d5f0e40cf6238b566cc8bcb742b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/src_components_StickyNotification_ActionContent_ActionContent_tsx-src_components_StickyNotifi-b290dd-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "ac34585ac39aad5df21c971cbc35c075b2a3dd4457f4076a99335cfd320a1374"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/src_next_features_BootStickyNotifications_index_tsx-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "f82fba3c2861b9ec5e8bd1ed77ef1997642a6d6f00faedf89d1711ae772b328e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/v5\\.8\\.0\\/notifications\\/styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "bd7b308d78003d9a2bacf9a7ade7b2660cd7a40ee9f51a3068f6e2a87ceec8e3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/realtime\\/read",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "d2b8b45be8cda03ae4216de1e568e2cb6c6aa2e792fdb9eceac62fe08fb3a2fb",
+                "2d233c2f426ec5d2887f022ec0961409d6fa9e4a16ce3ce71c78fbd59703473e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "lifehacker.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/realtime\\/read",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jalopnik.com",
+                "lifehacker.com",
+                "www.celebdirtylaundry.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/entry-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "window.sessionStorage": 3,
+                "window.innerHeight": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "d1fe9f6a40bd26ecf1e933f48aafd19f74719348365d3499c9915e7ba1ae5808"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/236-bundle\\.js",
+            "cookies": 0.000305,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "176c49ff836094de055c9d5baa77d9f644e9e533fa0abf8b27709941cc153b06"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "spotim_visitId": {
+                    "ttl": 1822,
+                    "length": 178,
+                    "prevalence": 0.00030453761039488374,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/894-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.sessionStorage": 3,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "Navigator.prototype.platform": 3,
+                "window.innerHeight": 3,
+                "window.innerWidth": 3,
+                "Performance.prototype.memory": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "8e1d3c6a7d0531d379f8d01ae6d9abf54decc6c9639d9f8df7448262bd08a2ca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/775-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.language": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "6df13b42abffece59ecd8e9cdb27e4205435b9ab1c764ef49704054d90f257c1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/initial-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "6b9abfedce7397c5d64df71fc58dc45f52cb470abf2939d3971c92a92aa056b5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/967-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "0b6a10f5cffa338449dd4440cc0e55991eb7d392b1877cd39a0cace3d306dbd9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/shell-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "553b1c61d5f3aa95ddaebf98615244c1777b1301b0e2e730b8986af36e12c4e3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/182-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "df19a5012fefbbf7f9c6d0ba2f0b8b1c2c1ffa4ba63db7f0adf19d887e6fa1e3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/111-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "547ce3520e02043a5d370b5da47588073c4e5851bbb5b244783346af8857ad3b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/social\\/tags\\/RC-OW-34049-2\\/launcher\\/207-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "c23f0d6f37491a710ebd949a73bb9d0cb281bb21b3eaa6d5618c28aa8d28d110"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "soaps.sheknows.com",
+                "www.gocomics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/api\\/v1\\/pixels",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pix"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sheknows.com",
+                "www.celebdirtylaundry.com",
+                "www.capitalfm.com",
+                "www.gamerevolution.com",
+                "www.gocomics.com",
+                "www.thedailybeast.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00142,
+    "topInitiators": [
+        {
+            "domain": "omnitagjs.com",
+            "prevalence": 0.543046357615894
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2052980132450331
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.11258278145695365
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.10596026490066225
+        },
+        {
+            "domain": "ignimgs.com",
+            "prevalence": 0.019867549668874173
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.006622516556291391
+        },
+        {
+            "domain": "datadome.co",
+            "prevalence": 0.006622516556291391
+        }
+    ],
+    "types": {
+        "Fetch": 60,
+        "Image": 80,
+        "Script": 100,
+        "XHR": 11,
+        "Preflight": 14,
+        "Ping": 6
+    },
+    "nameservers": [
+        "ns-2018.awsdns-60.co.uk",
+        "ns-802.awsdns-36.net",
+        "ns-1202.awsdns-22.org",
+        "ns-34.awsdns-04.com"
+    ]
+}

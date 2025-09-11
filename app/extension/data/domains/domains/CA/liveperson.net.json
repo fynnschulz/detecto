@@ -1,0 +1,868 @@
+{
+    "domain": "liveperson.net",
+    "owner": {
+        "name": "LivePerson, Inc",
+        "displayName": "LivePerson",
+        "privacyPolicy": "https://www.liveperson.com/policies/privacy",
+        "url": "http://liveperson.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.00294,
+    "sites": 29,
+    "subdomains": [
+        "publisher",
+        "lptag",
+        "va.v",
+        "va.idp",
+        "lo0.v"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "liveperson\\.net\\/iframe-le-tag\\/iframe-cs\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "publisher"
+            ],
+            "apis": {
+                "window.indexedDB": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "f51f13edf8937d1ef2e77ad3e98991637bbadcf4acef035834707585df4825b9"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microsoft.com",
+                "onedrive.live.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/tag\\/tag\\.js",
+            "cookies": 0.00244,
+            "fingerprinting": 1,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 26,
+                "NavigatorUAData.prototype.brands": 25,
+                "NavigatorUAData.prototype.getHighEntropyValues": 25,
+                "window.sessionStorage": 25,
+                "window.localStorage": 25,
+                "Date.prototype.getTime": 26,
+                "Document.cookie setter": 24,
+                "Document.cookie getter": 24
+            },
+            "sites": 27,
+            "prevalence": 0.00274,
+            "cnames": [],
+            "responseHashes": [
+                "93daacf37dacdf214c0bddbdf08c42b835989cde862262c487ec4b4654b2bc21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "LPVID": {
+                    "ttl": 31536009,
+                    "length": 22,
+                    "prevalence": 0.0018272256623693027,
+                    "uniqueness": 1
+                },
+                "LPSID-62481719": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "LPSID-40418296": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                },
+                "LPSID-58599248": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "LPSID-48757504": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                },
+                "LPSID-68554436": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                },
+                "LPSID-52835523": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "LPSID-7093451": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "LPSID-56988017": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "LPSID-63033177": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                },
+                "LPSID-5003492": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "LPSID-27876844": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "LPSID-46995945": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "LPSID-41337752": {
+                    "ttl": null,
+                    "length": 22,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.cargurus.com",
+                "go.com",
+                "www.hotwire.com",
+                "www.westburne.ca",
+                "www.discounttire.com",
+                "www.frigidaire.ca",
+                "www.uline.ca",
+                "www.united.com",
+                "www.celebritycruises.com",
+                "www.royalcaribbean.com",
+                "www.on.betmgm.ca",
+                "secure.eqbank.ca",
+                "www.thebrick.com",
+                "www.brickenligne.com",
+                "www.leons.ca",
+                "www.cargurus.ca",
+                "www.nedco.ca",
+                "www.perkopolis.com",
+                "mailchimp.com",
+                "evo.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/lptag\\/api\\/account\\/65526753\\/configuration\\/applications\\/taglets\\/\\.jsonp",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.appVersion": 1,
+                "Navigator.prototype.onLine": 1,
+                "window.innerWidth": 1,
+                "Screen.prototype.availHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "825902b8fd9015252977661b43d0dc2619e40680330d3f3f11dd24afc6c6c522"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "go.com",
+                "disneyworld.disney.go.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/lptag\\/api\\/account\\/40418296\\/configuration\\/applications\\/taglets\\/\\.jsonp",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.onLine": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.availHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "46c4904089632e48ea996b19245a7ff3493f85bf5442e6fcf85ff7cfa17980cb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leons.ca",
+                "www.leons.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/40418296",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "30ad3e040fdb2156aa663be8f7c80687adcfaf3726ca126202c1671c8defa020",
+                "279d508615b7ddeaecb19cbf36075b919f934a84f3572615dab632b4b4f59dca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-40418296": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "leons.ca",
+                "fr.leons.ca",
+                "www.leons.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/58599248",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "1cfb2c57b3ec12872d895c01abf556ee93ad8d1864387ac34cde867d85ab5750"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-58599248": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "eqbank.ca",
+                "secure.eqbank.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/lptag\\/api\\/account\\/48757504\\/configuration\\/applications\\/taglets\\/\\.jsonp",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.onLine": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.availHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "7d7e439db75b7c565ceaa85e75a166bb6871f3cb79a70b05f461a91b5f64088b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uline.ca",
+                "www.uline.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/36364210",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "340b558ca7e28022fd7f201e368035774aff98e96d44b6558ce3681327dccfaf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rogers.com",
+                "unilogin.rogers.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/postmessage\\/postmessage\\.min\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "va.idp"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4,
+                "window.sessionStorage": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "c8cd0b0d514cecdaf4e7214325a70bba9bae301e156265bd0d880f9065d1d183"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "uline.ca",
+                "www.hotwire.com",
+                "www.tiffany.ca",
+                "www.uline.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/account\\/48757504\\/anonymous\\/authorize",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.idp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "3be8051209c0ce6512316946726edfccefdfd29f720aa06a1892e443d6937b42"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uline.ca",
+                "www.uline.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/48757504",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "d1a6d674adc572c378de3da797a0a84fbceb461756c7ce302411abb078a6fbed"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uline.ca",
+                "www.uline.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/lptag\\/api\\/account\\/68554436\\/configuration\\/applications\\/taglets\\/\\.jsonp",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.onLine": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.availHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "fa3663e5659c20d698e4d2e8a1f25fea80c7ae78e91be8871502661a3c0c6e39"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brickenligne.com",
+                "www.thebrick.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/68554436",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "6d54937a65f7253cde027e600d2d5edae4bbd478fdcce26aa80959d817fe7f76",
+                "02484aeb3beba4f9e7437a6973d82f98f997906bbdf3ba332595e808a833c72d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-68554436": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "brickenligne.com",
+                "www.brickenligne.com",
+                "www.thebrick.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/lptag\\/api\\/account\\/61801890\\/configuration\\/applications\\/taglets\\/\\.jsonp",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.onLine": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.availHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "49e647d9451c6fe79fb7bed2714c43beeae04e5f03c1d7e16015510108076bc6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cargurus.ca",
+                "www.cargurus.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/83587472",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "f075191522f21bb3435f2e754a0f1b411cb93415a1c12f75a4373194848b1a8c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-83587472": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "discounttire.com",
+                "www.discounttire.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/52835523",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "b4578c55ec6293077125363fb87c9ae0acb32680f8bd5be2e512983fd63269fb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-52835523": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "frigidaire.ca",
+                "www.frigidaire.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/7093451",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "386b8ab9203517e9169100feea756cfdaf05827e9e167f74570abe575e265e5f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.00010151253679829459,
+                "LPVID": 0.00010151253679829459,
+                "LPSID-7093451": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "hotwire.com",
+                "www.hotwire.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/64904228",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "5aa2cd66a015c98ca6190d8a1e5c0ab1b4b42b0d85d96e2463de97c9367c8d59"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "yorku.ca",
+                "www.library.yorku.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/56988017",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "74ff00235cc0aa63c5b0fe3c56d4de882310743435f673b1f25f1665842c1ee6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-56988017": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "mbna.ca",
+                "www.mbna.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/lptag\\/api\\/account\\/63033177\\/configuration\\/applications\\/taglets\\/\\.jsonp",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.onLine": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.availHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "15f23b99c6e48a26ea6546b121626b7e8876424f1e4b8bdad2286ba42d58f772"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nedco.ca",
+                "www.westburne.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/63033177",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "6d567794ba468b3b676299b365c7dcd2a63059ecf4d071affde188568690fdb7",
+                "7ae8a397dfe8d4bfc9beb8a7c16144d9f1875f8d09f0cbdcab271bc72264cb57"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-63033177": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "nedco.ca",
+                "www.nedco.ca",
+                "www.westburne.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/5003492",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lo0.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "d2cd41cc1176d7d1d6cd69b55e680e72ab2aa8b1de092be4f0283b07adb0aa61"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-5003492": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "betmgm.ca",
+                "www.on.betmgm.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/27876844",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8a440166f046946a014309bb8920f50087b412ad0cbdefb3179a4f2cd969f4c0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-27876844": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "perkopolis.com",
+                "www.perkopolis.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/46995945",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e5b0c04a390a3ed8aa15d0966642e780dcf52b7d78ad5d2b1a7731241fb02ac6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-46995945": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "pmi.org",
+                "www.pmi.org"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/api\\/js\\/41337752",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "va.v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "ee67c8b50ed1724d31dd72879bc8751f33b0bfa1748517a7b5147ae47a4c2fdb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LPVID": 0.00010151253679829459,
+                "LPSID-41337752": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "tiffany.ca",
+                "www.tiffany.ca"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/lptag\\/api\\/account\\/84608747\\/configuration\\/applications\\/taglets\\/\\.jsonp",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.appVersion": 1,
+                "Navigator.prototype.onLine": 1,
+                "window.innerWidth": 1,
+                "Screen.prototype.availHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "united.com",
+                "www.united.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Analytics",
+        "Embedded Content",
+        "Support Chat Widget"
+    ],
+    "performance": {},
+    "cookies": 0.00254,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5294117647058824
+        },
+        {
+            "domain": "lpsnmedia.net",
+            "prevalence": 0.3176470588235294
+        },
+        {
+            "domain": "sdiapi.com",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.03529411764705882
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.023529411764705882
+        },
+        {
+            "domain": "cargurus.com",
+            "prevalence": 0.023529411764705882
+        },
+        {
+            "domain": "microsoft.com",
+            "prevalence": 0.011764705882352941
+        }
+    ],
+    "types": {
+        "Document": 6,
+        "Script": 74,
+        "XHR": 2
+    },
+    "nameservers": [
+        "a1-175.akam.net",
+        "a12-64.akam.net",
+        "a3-64.akam.net"
+    ]
+}

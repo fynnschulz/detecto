@@ -1,0 +1,100 @@
+{
+    "domain": "g2.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.00141,
+    "sites": 14,
+    "subdomains": [
+        "tracking-api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "g2\\.com\\/attribution_tracking\\/conversions\\/assign",
+            "cookies": 0.000804,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking-api"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.00141,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anydesk.com",
+                "assets.adac.de",
+                "goteleport.com",
+                "helpcenter.onlyoffice.com",
+                "ipinfo.io",
+                "kinsta.com",
+                "openvpn.net",
+                "prezi.com",
+                "rocketreach.co",
+                "www.airdroid.com",
+                "www.heygen.com",
+                "www.onlyoffice.com",
+                "www.papercut.com",
+                "www.zabbix.com"
+            ]
+        },
+        {
+            "rule": "g2\\.com\\/attribution_tracking\\/conversions\\/1010765\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tracking-api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.availWidth": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9f5cda62b7f93cbed934f66bd4fc781877b49d511fb6d654ce2dd8a97d507ba7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onlyoffice.com",
+                "www.onlyoffice.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00141,
+    "topInitiators": [
+        {
+            "domain": "g2crowd.com",
+            "prevalence": 0.6470588235294118
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.35294117647058826
+        }
+    ],
+    "types": {
+        "Ping": 14,
+        "Script": 2
+    },
+    "nameservers": [
+        "dale.ns.cloudflare.com",
+        "lia.ns.cloudflare.com"
+    ]
+}

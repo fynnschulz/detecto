@@ -1,0 +1,601 @@
+{
+    "domain": "piano.io",
+    "owner": {
+        "name": "Piano Software",
+        "displayName": "Piano Software",
+        "privacyPolicy": "https://piano.io/privacy-policy/",
+        "url": "http://piano.io"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.00333,
+    "sites": 33,
+    "subdomains": [
+        "api-esp",
+        "c2",
+        "experience",
+        "c2-eu",
+        "code",
+        "cdn-eu",
+        "cdn",
+        "id",
+        "id-eu",
+        "buy",
+        "buy-eu",
+        "experience-eu",
+        "api-esp-eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "piano\\.io\\/public\\/sdk\\/v04\\/sdk\\.js",
+            "cookies": 0.000707,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api-esp"
+            ],
+            "apis": {
+                "window.localStorage": 7,
+                "Date.prototype.getTime": 7,
+                "Document.cookie setter": 7,
+                "Document.cookie getter": 7,
+                "window.indexedDB": 7
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "dbfdee23861d76abdaf41f4a29d0be42a10a78436251530221feb162e562c9f7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "pnespsdk_ssn": {
+                    "ttl": null,
+                    "length": 56,
+                    "prevalence": 0.0007072135785007072,
+                    "uniqueness": 1
+                },
+                "pnespsdk_visitor": {
+                    "ttl": 31536003,
+                    "length": 16,
+                    "prevalence": 0.0007072135785007072,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beaumonde.nl",
+                "grazia.nl",
+                "marieclaire.nl",
+                "noorderland.nl",
+                "panorama.nl",
+                "revu.nl",
+                "www.nouveau.nl"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/esp-service-worker\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-esp"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "2890945228f1ecbd54d26e03dbca4f6f108c3357ea7bc8f51e767fc8fd19c767"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beaumonde.nl",
+                "grazia.nl",
+                "marieclaire.nl",
+                "noorderland.nl",
+                "panorama.nl",
+                "revu.nl",
+                "www.nouveau.nl"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/xbuilder\\/experience\\/execute",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c2",
+                "experience",
+                "c2-eu"
+            ],
+            "apis": {},
+            "sites": 25,
+            "prevalence": 0.00253,
+            "cnames": [],
+            "responseHashes": [
+                "218987168bb87331319993809cc084e1aa8f3c74950866fcdc949453f9309ff1",
+                "5cb061297f4e8194606ceb8bdf319189b98b7675641f74c560516ad0b38feaa3",
+                "834b657d80e5b00b73c8e776edf7220435cab1f085bad3478261dbf296fea706",
+                "87407dc1cebe2868cc7f8b6a5816af69006bcfacde13d67b219bcf6760e680be",
+                "7879264e843b86bbab5969aef3cdbe85fd28de1dc1a188cf0040a9b35b442b43",
+                "e9e352267bb10fae3c3d40d122d9b49cceb7bc12c37512b30a96ab10ea5a677f",
+                "bd505d964323831c2d2a67e48fcef8130c2ba1c7972414776867c046c443a021",
+                "51399fefd7867520f1ef5fc319f986cc8427f572a5c5d0da9e9d8da227260337",
+                "8250911beaa877d9fc86b4e481e1b1d8f1871a13f2f7f7815f3eb621fdff854c",
+                "189bfc43c13b7528e8ffae83e04fac21a0018e7b6f7caf07e187a4bf40d5c9d4",
+                "b87d28c88b3bc25100518847630c3c13001765be277ec19ed572ce69cb68ea83",
+                "829431f213eef839416fa457eef63c2f4115d570c2dfe248f06392e9aceeb96b",
+                "218ad4d4430549f180cd975abc1a49e13b10e7a5d1cc3b6bbf2a1eb6e7f4e084",
+                "d30010bff1b511fee37fd622d4e4117b00060ff10c56f618fc2ea0a842be6f7c",
+                "cc439058588e7bfda37042638f3ca7572ddeb5e4b7f5a34ea40be8ffffa6ab4e",
+                "a280d5972e6d157d58e15e536f31ec281a5500a15e9b74bcef5c4ab6d4db7048",
+                "f89b6ed52713c096c6968de2f659338b5a96c03bfba3dfc91d99035120215818",
+                "5f0fb7af0aab9a2056ba57cc40758460c21b7728afc815dd2c994eaac4be75e6",
+                "e6db35cf26b33ffbbf8c77bf197ba92fffcbb9f0d23ef19f941347dab0049f71",
+                "424c6f6d1e22ce52883f0802daaaa6c8dab6ad29be6f2d207d85f94728ff2fa0",
+                "d337e8e66c5c01dde1afac994e38280a57318d4830f4a4962b03da9a63bfcd62",
+                "e531ba8150383923dbe64effce4c80bac11dceb74c90d7f74af6fabaac9cf9b5",
+                "6bf82ac71f6c878bcc5367812ce8c3e65b7f92bdadd8057b37aff86c3f8b517f",
+                "3d8463c3ce11648ccdbd73e371cc8d2ef9ca608eda5cf11cb17ea537620992bd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slate.com",
+                "variety.com",
+                "www.cnbc.com",
+                "www.npr.org",
+                "www.politico.com",
+                "www.telegraph.co.uk",
+                "wibnet.nl",
+                "www.ansa.it",
+                "www.test.de",
+                "www.boerderij.nl",
+                "www.smithsonianmag.com",
+                "www.rollingstone.com",
+                "www.elmundo.es",
+                "www.billboard.com",
+                "www.rd.nl",
+                "www.bbcgoodfood.com",
+                "www.radiotimes.com",
+                "historianet.nl",
+                "www.scmp.com",
+                "www.gbnews.com"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/api\\/tinypass\\.min\\.js",
+            "cookies": 0.00101,
+            "fingerprinting": 3,
+            "subdomains": [
+                "experience",
+                "code",
+                "cdn-eu",
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 10,
+                "Date.prototype.getTime": 10,
+                "Document.cookie setter": 10,
+                "Document.cookie getter": 10,
+                "window.name": 10,
+                "Navigator.prototype.userAgent": 10,
+                "Navigator.prototype.platform": 10,
+                "window.sessionStorage": 10,
+                "window.innerWidth": 10,
+                "window.innerHeight": 10,
+                "Notification.permission": 10,
+                "Date.prototype.getTimezoneOffset": 10,
+                "Navigator.prototype.appVersion": 10,
+                "window.screenLeft": 2,
+                "window.screenTop": 2,
+                "window.outerHeight": 2,
+                "Navigator.prototype.doNotTrack": 1
+            },
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "0f2181f799b15563a9df690025beae6a3df8715a7b6d988f46dcf09e2b5a3071"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pctx": {
+                    "ttl": 34128003,
+                    "length": 95,
+                    "prevalence": 0.0010103051121438675,
+                    "uniqueness": 0.8
+                },
+                "_pcid": {
+                    "ttl": 34128002,
+                    "length": 49,
+                    "prevalence": 0.0008082440897150939,
+                    "uniqueness": 1
+                },
+                "__pid": {
+                    "ttl": 2592005,
+                    "length": 9,
+                    "prevalence": 0.00040412204485754696,
+                    "uniqueness": 1
+                },
+                "__pnahc": {
+                    "ttl": 7779605,
+                    "length": 1,
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 0.5
+                },
+                "__tbc": {
+                    "ttl": 63072005,
+                    "length": 74,
+                    "prevalence": 0.0009092746009294807,
+                    "uniqueness": 1
+                },
+                "__pat": {
+                    "ttl": 2592005,
+                    "length": 7,
+                    "prevalence": 0.0007072135785007072,
+                    "uniqueness": 0.42857142857142855
+                },
+                "__pvi": {
+                    "ttl": 86405,
+                    "length": 99,
+                    "prevalence": 0.0007072135785007072,
+                    "uniqueness": 1
+                },
+                "xbc": {
+                    "ttl": 63072005,
+                    "length": 63,
+                    "prevalence": 0.0009092746009294807,
+                    "uniqueness": 1
+                },
+                "_pcus": {
+                    "ttl": 34128005,
+                    "length": 275,
+                    "prevalence": 0.00040412204485754696,
+                    "uniqueness": 1
+                },
+                "LANG": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00010103051121438674,
+                    "uniqueness": 1
+                },
+                "__pil": {
+                    "ttl": 2592007,
+                    "length": 5,
+                    "prevalence": 0.00010103051121438674,
+                    "uniqueness": 1
+                },
+                "_pprv": {
+                    "ttl": 34128004,
+                    "length": 271,
+                    "prevalence": 0.0003030915336431602,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slate.com",
+                "www.ansa.it",
+                "www.boerderij.nl",
+                "www.gbnews.com",
+                "www.npr.org",
+                "www.nzz.ch",
+                "www.politico.eu",
+                "www.politico.com",
+                "www.test.de",
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/id\\/api\\/v1\\/identity\\/token\\/verify",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id",
+                "id-eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "977075fe8b7fe41247439ee895ca0f71089cf0d155f17dfb44279a70bb63f226",
+                "9468f6b246fb718e31014403631188f01ff975429c5a65a2334d4f757875d9b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__pid": 0.00020206102242877348
+            },
+            "exampleSites": [
+                "slate.com",
+                "www.ansa.it",
+                "www.nzz.ch"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/ng\\/common\\/i18n\\/platform-translation-map_en_US\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy",
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9354be2c05aa4ee314f5cc4ef0f971432de49264aa920d939f96a25470368efd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slate.com",
+                "www.ansa.it"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/api\\/v3\\/anon\\/assets\\/sdk-runtime-config\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy",
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "37380e9f7ef7798e99a02327b8f45ebb8337bad4225d9a8de1bdd38fdaa2e433",
+                "8679bd719fe1e990662f0017f1bbb667e170be21934fd013fc76383beb7a6ab1",
+                "58ac239a8f09f538bf0d5b71e8cffd3d1822adc5ab8a269cd33e78525c408d01",
+                "93416df47e9da7c3cc05b1cdda58f52057bcae406a7f35891eb9a8301ef79042",
+                "fb084d686416dab0bfc43f036d56f91b138c10bd3cc73980be15fe32731d0553",
+                "c6b8f589271d9520127b0117da181993676441ed772cea34e717ccfd97e9f009",
+                "b37e3be607d69c8687df5362b3e8951969efd2cf394c1316bdc68a95bf10bc32"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slate.com",
+                "www.ansa.it",
+                "www.boerderij.nl",
+                "www.gbnews.com",
+                "www.nzz.ch",
+                "www.politico.eu",
+                "www.test.de",
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/xbuilder\\/experience\\/load",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "experience-eu",
+                "id-eu",
+                "experience"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "a9c8ae8c339b7f9097ae2d41fcc5504003e332317c2c6034afb7ac8b281ddc5f",
+                "1d12a10361affca9631e7087cb5be458b9d8965ec104478c84cc1e1997a02542",
+                "f65af8fa8ef0bd2667b944fbdb51dade0ade4bc2877c05506eef80d5161d4203",
+                "a548b76f8fbb22166acfad0cd8295f9358719aab5bc79ecaf5c242bc1f2f09ad",
+                "1d6f4676ce9b855379804f893d739caa3f282960eaa4ddf6ceade55874c747dc",
+                "ac285c533c2e9979532fed6bfd174e9a1a670bf1e0ba033cfdd254587b95efd4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ansa.it",
+                "www.boerderij.nl",
+                "www.digibron.nl",
+                "www.gbnews.com",
+                "www.smithsonianmag.com",
+                "www.test.de",
+                "www.zeit.de"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/showtemplate\\/general\\/loadTranslationMap",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buy-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f48faf13ad84520811dd0b6016fd3f7b0bc4e446243392e38917996676233990"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ansa.it",
+                "www.ansa.it"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/api\\/v3\\/composer\\/logExecutionStats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.elmundo.es",
+                "www.npr.org"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/public\\/sdk\\/vx\\/sdk\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api-esp",
+                "api-esp-eu"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "Document.cookie getter": 3,
+                "window.indexedDB": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "dbfdee23861d76abdaf41f4a29d0be42a10a78436251530221feb162e562c9f7",
+                "aa8a2df355579670fdc38838d10f633d31c98c5e2ffdc306718e6790dc21fcf0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "pnespsdk_ssn": {
+                    "ttl": null,
+                    "length": 56,
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 1
+                },
+                "pnespsdk_visitor": {
+                    "ttl": 31536021,
+                    "length": 16,
+                    "prevalence": 0.00020206102242877348,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elmundo.es",
+                "www.gbnews.com",
+                "www.newsweek.com"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/push\\/sdk\\/event\\/1026",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-esp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "837b1bb1e3e41186260958d2e08cc74e66c2aabee961c3350163071e15682a81"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nouveau.nl",
+                "www.nouveau.nl"
+            ]
+        },
+        {
+            "rule": "piano\\.io\\/push\\/sdk\\/event\\/1026",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-esp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nouveau.nl",
+                "www.nouveau.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00192,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.36082474226804123
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.32989690721649484
+        },
+        {
+            "domain": "tinypass.com",
+            "prevalence": 0.16494845360824742
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.05154639175257732
+        },
+        {
+            "domain": "asadcdn.com",
+            "prevalence": 0.030927835051546393
+        },
+        {
+            "domain": "static-nzz.ch",
+            "prevalence": 0.020618556701030927
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.010309278350515464
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.010309278350515464
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.010309278350515464
+        },
+        {
+            "domain": "i-scmp.com",
+            "prevalence": 0.010309278350515464
+        }
+    ],
+    "types": {
+        "Script": 34,
+        "Other": 7,
+        "XHR": 35,
+        "Ping": 3,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ian.ns.cloudflare.com",
+        "emma.ns.cloudflare.com"
+    ]
+}

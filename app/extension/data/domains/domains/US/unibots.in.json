@@ -1,0 +1,334 @@
+{
+    "domain": "unibots.in",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000178,
+    "sites": 26,
+    "subdomains": [
+        "socket",
+        "api",
+        "cdn",
+        "newsbot"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "unibots\\.in\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socket"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.0000958,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gardenandcrafty.com",
+                "igvofficial.com",
+                "m.ragalahari.com",
+                "mnews.allplaynews.com",
+                "scrolldroll.com",
+                "sports.amazingtoday.net",
+                "www.bhaktibharat.com",
+                "www.jugantor.com",
+                "www.ragalahari.com",
+                "www.republicworld.com",
+                "www.rewayatna.com",
+                "www.standardmedia.co.ke",
+                "www.trainman.in",
+                "www.tvseasonspoilers.com"
+            ]
+        },
+        {
+            "rule": "unibots\\.in\\/block",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.0000752,
+            "cnames": [],
+            "responseHashes": [
+                "7079c4a270a27cec5738869ff1c650bcb431e7427aa282e507005fbdd4102b4e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "igvofficial.com",
+                "m.brilio.net",
+                "m.ragalahari.com",
+                "mnews.allplaynews.com",
+                "sports.amazingtoday.net",
+                "www.amarujala.com",
+                "www.bhaktibharat.com",
+                "www.ragalahari.com",
+                "www.rewayatna.com",
+                "www.tbsnews.net",
+                "www.tvseasonspoilers.com"
+            ]
+        },
+        {
+            "rule": "unibots\\.in\\/headerbidding\\/common\\/hb\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 8,
+                "Navigator.prototype.userAgent": 8,
+                "Screen.prototype.availWidth": 1
+            },
+            "sites": 11,
+            "prevalence": 0.0000752,
+            "cnames": [],
+            "responseHashes": [
+                "970c2e571635f1259ef07e2b6c3c3240c515a47a3f048fd352bb7580e50dfdd4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifecollective.net",
+                "m.ragalahari.com",
+                "mnews.allplaynews.com",
+                "s.allplaynews.com",
+                "sports.amazingtoday.net",
+                "www.jugantor.com",
+                "www.learncbse.in",
+                "www.ragalahari.com",
+                "www.rewariyasat.com",
+                "www.rewayatna.com",
+                "www.tupaki.com"
+            ]
+        },
+        {
+            "rule": "unibots\\.in\\/headerbidding\\/common\\/ub_prebid\\.js",
+            "cookies": 0.0000547,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 8,
+                "Navigator.prototype.userAgent": 8,
+                "Date.prototype.getTime": 8,
+                "window.localStorage": 8,
+                "Navigator.prototype.cookieEnabled": 8,
+                "Document.cookie getter": 8,
+                "Document.cookie setter": 8,
+                "Screen.prototype.width": 8,
+                "Screen.prototype.height": 8,
+                "Screen.prototype.availWidth": 8,
+                "Screen.prototype.availHeight": 8,
+                "Screen.prototype.colorDepth": 8,
+                "window.innerHeight": 8,
+                "window.innerWidth": 8,
+                "window.outerWidth": 8,
+                "window.outerHeight": 8,
+                "Navigator.prototype.doNotTrack": 8,
+                "Navigator.prototype.language": 8,
+                "Navigator.prototype.webdriver": 8,
+                "NavigatorUAData.prototype.brands": 7,
+                "NavigatorUAData.prototype.platform": 7,
+                "window.screenLeft": 4,
+                "window.screenTop": 4,
+                "PerformanceTiming.prototype.navigationStart": 4,
+                "Navigator.prototype.connection": 5,
+                "window.devicePixelRatio": 1,
+                "Screen.prototype.orientation": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.deviceMemory": 1
+            },
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "d30460dea52839cbfe6a5dbd163e9056349d417fa9616e378fa771ba77079c6d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pubcid": {
+                    "ttl": 31536010,
+                    "length": 36,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 1
+                },
+                "_pubcid_cst": {
+                    "ttl": 31536010,
+                    "length": 16,
+                    "prevalence": 0.000054727048843891096,
+                    "uniqueness": 0.125
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifecollective.net",
+                "m.ragalahari.com",
+                "mnews.allplaynews.com",
+                "sports.amazingtoday.net",
+                "www.jugantor.com",
+                "www.ragalahari.com",
+                "www.rewayatna.com",
+                "www.tupaki.com"
+            ]
+        },
+        {
+            "rule": "unibots\\.in\\/headerbidding\\/ragalahari\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1dac4b9d084bcc8abc691e610b89c67500cea6a820a0d4736b822e96a6f9f898"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ragalahari.com",
+                "www.ragalahari.com"
+            ]
+        },
+        {
+            "rule": "unibots\\.in\\/headerbidding\\/css\\/ragalahari\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ed93153a28c2cb826194aaaa0b7f85676d9d59f79ec83990cd880a9339ff9eb7"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ragalahari.com",
+                "www.ragalahari.com"
+            ]
+        },
+        {
+            "rule": "unibots\\.in\\/headerbidding\\/js\\/ragalahari\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c751c877c67c15e4789a0eafd896eb50449190db69bce121ab38b86a7a626969"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ragalahari.com",
+                "www.ragalahari.com"
+            ]
+        },
+        {
+            "rule": "unibots\\.in\\/get_videos\\/raglahari",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "newsbot"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a44b28dc27d5d05bb8948860269086105fd698bd3e18ddf306ede9582b9390e7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ragalahari.com",
+                "www.ragalahari.com"
+            ]
+        },
+        {
+            "rule": "unibots\\.in\\/get_videos\\/ubpvideos",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "newsbot"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5409e186455112ab30b4a2f4d1a2961452808390ebd3a95bd2697c6f2f69a812"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazingtoday.net",
+                "sports.amazingtoday.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000547,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5405405405405406
+        },
+        {
+            "domain": "unibotscdn.com",
+            "prevalence": 0.22972972972972974
+        },
+        {
+            "domain": "socket.io",
+            "prevalence": 0.21621621621621623
+        },
+        {
+            "domain": "pubfuture-ad.com",
+            "prevalence": 0.013513513513513514
+        }
+    ],
+    "types": {
+        "WebSocket": 14,
+        "Fetch": 17,
+        "Script": 21,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "ns4.linode.com",
+        "ns1.linode.com",
+        "ns3.linode.com",
+        "ns5.linode.com",
+        "ns2.linode.com"
+    ]
+}

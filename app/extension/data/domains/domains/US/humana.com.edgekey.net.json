@@ -1,0 +1,118 @@
+{
+    "domain": "humana.com.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "s5",
+        "s1"
+    ],
+    "cnames": [
+        {
+            "original": "smetrics.centerwellpharmacy.com",
+            "resolved": "s1.humana.com.edgekey.net"
+        },
+        {
+            "original": "smetrics.centerwellprimarycare.com",
+            "resolved": "s5.humana.com.edgekey.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "humana\\.com\\.edgekey\\.net\\/ee\\/va6\\/v1\\/identity\\/acquire",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s5",
+                "s1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "smetrics.centerwellprimarycare.com",
+                    "resolved": "s5.humana.com.edgekey.net"
+                },
+                {
+                    "original": "smetrics.centerwellpharmacy.com",
+                    "resolved": "s1.humana.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "3287adabe28531da1f55bff6da1b700f12fe98d6e7f6554b42cd7302d0af19a8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "centerwellprimarycare.com",
+                "www.centerwellpharmacy.com"
+            ]
+        },
+        {
+            "rule": "humana\\.com\\.edgekey\\.net\\/ee\\/va6\\/v1\\/interact",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s1",
+                "s5"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "smetrics.centerwellpharmacy.com",
+                    "resolved": "s1.humana.com.edgekey.net"
+                },
+                {
+                    "original": "smetrics.centerwellprimarycare.com",
+                    "resolved": "s5.humana.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "89e72384328d8b8bf2980c5843106cb3555558bf230eb7c0c976b8455696ab69",
+                "179da6e79fc9a421770a1fee002312a0f856ab643b5efbf5591c1cfbb5a2e503"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "centerwellpharmacy.com",
+                "www.centerwellprimarycare.com",
+                "www.centerwellpharmacy.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "humana.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "adoberesources.net",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Fetch": 5
+    },
+    "nameservers": []
+}

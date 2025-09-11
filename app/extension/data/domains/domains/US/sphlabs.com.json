@@ -1,0 +1,100 @@
+{
+    "domain": "sphlabs.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "cdn",
+        "suid"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "sphlabs\\.com\\/suid\\/suid\\.min\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "c2d07b4853f87121d83330540ab3dd85c6f9eff3c361d407b8c141230590be0f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "suid": {
+                    "ttl": 63072005,
+                    "length": 32,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hardwarezone.com.sg",
+                "www.herworld.com",
+                "www.stomp.sg",
+                "www.straitstimes.com"
+            ]
+        },
+        {
+            "rule": "sphlabs\\.com\\/",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "suid"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "4ef8021d9c5867683b95473398a289f2c9a582932b7ac5f612d0002e3608eeb7",
+                "8886611637809dcc4d59d826deb11709a19a660a0a84b6501e36a16e89293b4f",
+                "487e5209606bb3ac7a88aca66d62bcfab812eea8ff44f076a25a168108991312"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "suid": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "hardwarezone.com.sg",
+                "www.herworld.com",
+                "www.stomp.sg",
+                "www.straitstimes.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000342,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-412.awsdns-51.com",
+        "ns-850.awsdns-42.net",
+        "ns-1068.awsdns-05.org",
+        "ns-1775.awsdns-29.co.uk"
+    ]
+}

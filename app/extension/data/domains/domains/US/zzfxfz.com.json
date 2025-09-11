@@ -1,0 +1,103 @@
+{
+    "domain": "zzfxfz.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "zzfxfz\\.com\\/tj\\/tongji\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "RTCPeerConnection.prototype.constructor": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "RTCPeerConnectionIceEvent.prototype.candidate": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5c5f5972d1d5452ccfff27ebe347bcbb5f48180269a37cc46d3eeb595a55ded8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "HWTOKEN": {
+                    "ttl": 31536005,
+                    "length": 80,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "HWIDHASH": {
+                    "ttl": 31536005,
+                    "length": 32,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "HWPID": {
+                    "ttl": 185,
+                    "length": 43,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "12chun.com",
+                "www.69hsz.net"
+            ]
+        },
+        {
+            "rule": "zzfxfz\\.com\\/api\\/v1\\/api2\\/statistics\\/start",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "51165d32fd9184e8c03876e9188863d88d711b546e22fc6b76514aa2bb6deefb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "12chun.com",
+                "www.69hsz.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "v2.dnsip.com",
+        "v1.dnsip.com"
+    ]
+}

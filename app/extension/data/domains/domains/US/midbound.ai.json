@@ -1,0 +1,182 @@
+{
+    "domain": "midbound.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "api-id",
+        "lead",
+        "pxl",
+        "px"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "midbound\\.ai\\/cs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-id"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e9e74b9fc0b8d9018c08b63e556e65c8abf1e32d194a10d124023fd070d94d4a",
+                "100219eb95e9d1592908b9e4e3ba281da8fbe6ab15ce4b1c65d051c270ae2330"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "armsunlimited.com",
+                "newsilver.com",
+                "www.bardeen.ai"
+            ]
+        },
+        {
+            "rule": "midbound\\.ai\\/pv6\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "lead"
+            ],
+            "apis": {
+                "window.innerWidth": 3,
+                "window.innerHeight": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "03494ef01bb1aacdc71fbf245f4cec01b50df9969dd1538b68adfddadff150fb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "armsunlimited.com",
+                "newsilver.com",
+                "www.bardeen.ai"
+            ]
+        },
+        {
+            "rule": "midbound\\.ai\\/webhook\\/hem",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pxl"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "armsunlimited.com",
+                "newsilver.com",
+                "www.bardeen.ai"
+            ]
+        },
+        {
+            "rule": "midbound\\.ai\\/webhook\\/hem",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pxl"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "armsunlimited.com",
+                "newsilver.com",
+                "www.bardeen.ai"
+            ]
+        },
+        {
+            "rule": "midbound\\.ai\\/e\\/cmbj51m5c0001s601ztmpqgub",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "px"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bardeen.ai",
+                "www.bardeen.ai"
+            ]
+        },
+        {
+            "rule": "midbound\\.ai\\/e\\/cmbj51m5c0001s601ztmpqgub",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "px"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bardeen.ai",
+                "www.bardeen.ai"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Fetch": 5,
+        "Image": 3,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "adrian.ns.cloudflare.com",
+        "armando.ns.cloudflare.com"
+    ]
+}

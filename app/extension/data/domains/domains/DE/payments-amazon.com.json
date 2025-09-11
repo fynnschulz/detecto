@@ -1,0 +1,178 @@
+{
+    "domain": "payments-amazon.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00303,
+    "sites": 30,
+    "subdomains": [
+        "static-eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "payments-amazon\\.com\\/checkout\\.js",
+            "cookies": 0.00101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-eu"
+            ],
+            "apis": {
+                "Document.cookie getter": 10,
+                "Navigator.prototype.languages": 9,
+                "Date.prototype.getTime": 10,
+                "Document.cookie setter": 10,
+                "Navigator.prototype.connection": 9,
+                "Navigator.prototype.userAgent": 10,
+                "NavigatorUAData.prototype.getHighEntropyValues": 8
+            },
+            "sites": 28,
+            "prevalence": 0.00283,
+            "cnames": [],
+            "responseHashes": [
+                "8cfa2d5952f6e607a6caa0cc225bbb7a10f1ee258200f8e0e5ff8099c53e1758"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "language": {
+                    "ttl": 86404,
+                    "length": 5,
+                    "prevalence": 0.0009080819291696096,
+                    "uniqueness": 0.1111111111111111
+                },
+                "ledgerCurrency": {
+                    "ttl": 86404,
+                    "length": 3,
+                    "prevalence": 0.0009080819291696096,
+                    "uniqueness": 0.1111111111111111
+                },
+                "apay-session-set": {
+                    "ttl": 31536004,
+                    "length": 71,
+                    "prevalence": 0.001008979921299566,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.ofenseite.com",
+                "www.elektro4000.de",
+                "www.bundeswehr-und-mehr.de",
+                "gotools.de",
+                "www.foto-erhardt.de",
+                "www.ankermann.com",
+                "www.boerger-motorgeraete.de",
+                "www.office-partner.de",
+                "lizenzstar.de",
+                "www.youtv.de",
+                "www.motorrad-ersatzteile24.de",
+                "www.genius.tv",
+                "www.sanicare.de",
+                "shop.ahw-shop.de",
+                "foto-erhardt.de",
+                "www.trigema.de",
+                "www.lucky-bike.de",
+                "www.ofen.de",
+                "lucky-bike.de",
+                "schraub-doc.de"
+            ]
+        },
+        {
+            "rule": "payments-amazon\\.com\\/OffAmazonPayments\\/de\\/lpa\\/js\\/Widgets\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-eu"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e7300ebaabca47077e2818ee8d4c66b3911aac76cd829ccf79775f252d9f97c9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "apay-session-set": {
+                    "ttl": 31536005,
+                    "length": 67,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "akkushop.de",
+                "www.sioux.de"
+            ]
+        },
+        {
+            "rule": "payments-amazon\\.com\\/v2\\/login\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-eu"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bd37efe1441591168feef8c83118a3fd09ca8b5b3e69dc305a9ea46a6be0fa2b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "akkushop.de",
+                "www.sioux.de"
+            ]
+        }
+    ],
+    "categories": [
+        "Analytics",
+        "Audience Measurement",
+        "Federated Login",
+        "Online Payment",
+        "Badge",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.00121,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.967741935483871
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.03225806451612903
+        }
+    ],
+    "types": {
+        "Script": 32
+    },
+    "nameservers": [
+        "pdns3.ultradns.org",
+        "pdns4.ultradns.org",
+        "pdns1.ultradns.net",
+        "pdns2.ultradns.net",
+        "pdns5.ultradns.info",
+        "pdns6.ultradns.co.uk"
+    ]
+}

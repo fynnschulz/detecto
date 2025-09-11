@@ -1,0 +1,88 @@
+{
+    "domain": "ukwm.co.uk",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "tracking"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ukwm\\.co\\.uk\\/track\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "284d8fbd6f6550745c20fcf6ff5d6367a4c8715cc0c2d5377c3522093ee3401e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__UKWM": {
+                    "ttl": 31536005,
+                    "length": 14,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "broadband-finder.co.uk",
+                "www.digital-tv.co.uk"
+            ]
+        },
+        {
+            "rule": "ukwm\\.co\\.uk\\/impression\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "902e8375f7c8ccb19d6c857f0ac10199bbaf9a4fc929b28b64969353bc82aaee"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "broadband-finder.co.uk",
+                "www.digital-tv.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "ns0.ukfast.net",
+        "ns1.ukfast.net"
+    ]
+}

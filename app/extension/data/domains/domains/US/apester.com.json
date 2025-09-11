@@ -1,0 +1,333 @@
+{
+    "domain": "apester.com",
+    "owner": {
+        "name": "Apester Ltd.",
+        "displayName": "Apester"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "static",
+        "sdk",
+        "events"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "apester\\.com\\/js\\/sdk\\/latest\\/apester-sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rollingstone.com",
+                "tvseriesfinale.com"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/web-sdk\\.core\\.legacy\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "627de12286bdf07faae665d1b213b49b510553911e3d2eab459765d118f256b9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rollingstone.com",
+                "tvseriesfinale.com",
+                "www.calcalist.co.il",
+                "www.mstar.com.my",
+                "www.roomie.jp"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rollingstone.com",
+                "tvseriesfinale.com",
+                "www.abendzeitung-muenchen.de",
+                "www.calcalist.co.il",
+                "www.dicebreaker.com",
+                "www.eatbetter.de",
+                "www.mstar.com.my",
+                "www.roomie.jp"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rollingstone.com",
+                "tvseriesfinale.com",
+                "www.abendzeitung-muenchen.de",
+                "www.calcalist.co.il",
+                "www.dicebreaker.com",
+                "www.eatbetter.de",
+                "www.mstar.com.my",
+                "www.roomie.jp"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/assets\\/iconRightArrow\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8bc418848596026ead6a4739824a5f15a7d1c37d9ff91606ef6347a321c3f7ff"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tvseriesfinale.com",
+                "www.abendzeitung-muenchen.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/web-sdk\\.core\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "NavigatorUAData.prototype.platform": 3,
+                "Navigator.prototype.platform": 3,
+                "Navigator.prototype.language": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.width": 3,
+                "Date.prototype.getTime": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "c89d4b4f5599eb9093279f5b5821a4e6f8f0748d00c9db4dd8f3a646bd6ab87e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abendzeitung-muenchen.de",
+                "www.dicebreaker.com",
+                "www.eatbetter.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/web-sdk\\.afc0ade8b185386488ed\\.36160\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "window.outerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3d7242a89b3a70187bc6b8dd38b425da3138bcbb41d61b3518cefca40936521b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abendzeitung-muenchen.de",
+                "www.eatbetter.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/web-sdk\\.3be0b3d38da9465e76ad\\.Monetization\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "26d87ac923b12f918af6031f23eca380dc31317f212044e8d863f8b321389057"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abendzeitung-muenchen.de",
+                "www.eatbetter.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/web-sdk\\.f69c8bdbd90cf03ac6d6\\.adsbygoogle\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "89f4a6a00086c55b57889083c5610a44be35ad2a530a68af68f7a780bd92c7da"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abendzeitung-muenchen.de",
+                "www.eatbetter.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/web-sdk\\.a3e659d89e042da90d5d\\.Aniview\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e94cf4262223cf67718b1c14515d95ea3ed55b5d7779d4a7380b489ffe4a9b0f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abendzeitung-muenchen.de",
+                "www.eatbetter.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/web-sdk\\.b6f91eb6b62e57dd1525\\.Magnite\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0090d696b10f9f8f0b7a7f08f880906ed22754fb8a99cf0e62c2a3acb6864b34"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abendzeitung-muenchen.de",
+                "www.eatbetter.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4722222222222222
+        },
+        {
+            "domain": "storage.googleapis.com",
+            "prevalence": 0.3888888888888889
+        },
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.05555555555555555
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05555555555555555
+        },
+        {
+            "domain": "aniview.com",
+            "prevalence": 0.027777777777777776
+        }
+    ],
+    "types": {
+        "Script": 20,
+        "Preflight": 8,
+        "XHR": 8,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
+    ]
+}

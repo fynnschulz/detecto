@@ -1,0 +1,174 @@
+{
+    "domain": "zohopublic.com",
+    "owner": {
+        "name": "ZOHO Corporation",
+        "displayName": "ZOHO"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000808,
+    "sites": 8,
+    "subdomains": [
+        "salesiq",
+        "vts"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "zohopublic\\.com\\/visitor\\/v2\\/channels\\/website",
+            "cookies": 0.000808,
+            "fingerprinting": 0,
+            "subdomains": [
+                "salesiq"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "039e02c18c9175b0b6d1288727187f504b3023e17864e9d1d64a836f33121561",
+                "9a7831a04b7996f0f60f08f1bab61ec7ed2a8991c48ca7efaafc968083ad3b1b",
+                "5f4c5fd8247acc6a8f406a87b5d65e1e7d30cdb89b3dfc882c00938f873a43e5",
+                "96bd0d983ca36d403e87870f22028f11865eacf992866c5c75735cd2a2920119",
+                "6448a087c131868d14ea2230f8d4643b56b394603db7f93792c0e3df6bde1ebb",
+                "f122de4a92a0d66db8e1671827a48aaae87e5f4dbfa63fe4e436d0286d347e46",
+                "94cc25c951e612d6c60bf29010b0048c86ed4994663028d8d0fd5d9e348ce41b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "utm_source": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "electricbikesbrisbane.com.au",
+                "fienza.com.au",
+                "tasmania.com",
+                "www.bosistos.com.au",
+                "www.instrumentchoice.com.au",
+                "www.livingstyles.com.au",
+                "www.seeedstudio.com",
+                "www.trybooking.com"
+            ]
+        },
+        {
+            "rule": "zohopublic\\.com\\/visitor\\/v2\\/channels\\/website",
+            "cookies": 0.000808,
+            "fingerprinting": 0,
+            "subdomains": [
+                "salesiq"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "utm_source": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "electricbikesbrisbane.com.au",
+                "fienza.com.au",
+                "tasmania.com",
+                "www.bosistos.com.au",
+                "www.instrumentchoice.com.au",
+                "www.livingstyles.com.au",
+                "www.seeedstudio.com",
+                "www.trybooking.com"
+            ]
+        },
+        {
+            "rule": "zohopublic\\.com\\/watchws",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vts"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "utm_source": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "electricbikesbrisbane.com.au",
+                "fienza.com.au",
+                "tasmania.com",
+                "www.bosistos.com.au",
+                "www.instrumentchoice.com.au",
+                "www.seeedstudio.com"
+            ]
+        },
+        {
+            "rule": "zohopublic\\.com\\/widget",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "salesiq"
+            ],
+            "apis": {
+                "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "922ff09880bbe4c85ba3904f55a02efb6e5376a1249d716a08f5b97759c438ce"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seeedstudio.com",
+                "www.trybooking.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000808,
+    "topInitiators": [
+        {
+            "domain": "zoho.com",
+            "prevalence": 0.47368421052631576
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2631578947368421
+        },
+        {
+            "domain": "zohocdn.com",
+            "prevalence": 0.2631578947368421
+        }
+    ],
+    "types": {
+        "XHR": 8,
+        "Preflight": 8,
+        "WebSocket": 6,
+        "Script": 2
+    },
+    "nameservers": [
+        "PDNS90.ULTRADNS.BIZ",
+        "NS11.ZNS-53.com",
+        "NS31.ZNS-53.com",
+        "ns1.zohocorp.com",
+        "NS41.ZNS-53.NET",
+        "PDNS90.ULTRADNS.NET",
+        "PDNS90.ULTRADNS.com",
+        "NS21.ZNS-53.NET"
+    ]
+}

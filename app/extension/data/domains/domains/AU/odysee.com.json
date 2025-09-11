@@ -1,0 +1,75 @@
+{
+    "domain": "odysee.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "api.na-backend"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "odysee\\.com\\/api\\/v1\\/proxy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.na-backend"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rt.com",
+                "www.rt.com"
+            ]
+        },
+        {
+            "rule": "odysee\\.com\\/api\\/v1\\/proxy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.na-backend"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "027b49318a8909c9c17fae3eb74e024274a37449255a2c4a403ad2ca8238d24c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rt.com",
+                "www.rt.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "nitin.ns.cloudflare.com",
+        "aurora.ns.cloudflare.com"
+    ]
+}

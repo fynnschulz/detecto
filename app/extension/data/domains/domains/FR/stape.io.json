@@ -1,0 +1,167 @@
+{
+    "domain": "stape.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "fuhsopop.euk",
+        "euk",
+        "usc",
+        "usd",
+        "lusc"
+    ],
+    "cnames": [
+        {
+            "original": "assets.comparitech.com",
+            "resolved": "usc.stape.io"
+        },
+        {
+            "original": "dsa.aubergesdejeunesse.com",
+            "resolved": "usd.stape.io"
+        },
+        {
+            "original": "load.assets.comparitech.com",
+            "resolved": "lusc.stape.io"
+        },
+        {
+            "original": "stp.achat-electrique.com",
+            "resolved": "euk.stape.io"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "stape\\.io\\/_\\/service_worker\\/5840\\/sw_iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fuhsopop.euk",
+                "euk",
+                "usc"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "stp.achat-electrique.com",
+                    "resolved": "euk.stape.io"
+                },
+                {
+                    "original": "assets.comparitech.com",
+                    "resolved": "usc.stape.io"
+                }
+            ],
+            "responseHashes": [
+                "2ada301d803d8f4b2ba210c9c57091378255ed54b96e4236a9e2ce587a2a4035"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "colisprive.fr",
+                "www.achat-electrique.com",
+                "www.comparitech.com"
+            ]
+        },
+        {
+            "rule": "stape\\.io\\/gpt_ads-public\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "euk",
+                "usd",
+                "lusc"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "stp.achat-electrique.com",
+                    "resolved": "euk.stape.io"
+                },
+                {
+                    "original": "dsa.aubergesdejeunesse.com",
+                    "resolved": "usd.stape.io"
+                },
+                {
+                    "original": "load.assets.comparitech.com",
+                    "resolved": "lusc.stape.io"
+                }
+            ],
+            "responseHashes": [
+                "60cb051e5a90fb89b3dd953d5eb8a121a0d6d54f5c49a174997190aaf013e3af"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "achat-electrique.com",
+                "www.aubergesdejeunesse.com",
+                "www.comparitech.com"
+            ]
+        },
+        {
+            "rule": "stape\\.io\\/_\\/service_worker\\/5840\\/sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "euk",
+                "usc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "stp.achat-electrique.com",
+                    "resolved": "euk.stape.io"
+                },
+                {
+                    "original": "assets.comparitech.com",
+                    "resolved": "usc.stape.io"
+                }
+            ],
+            "responseHashes": [
+                "da7281e49859a7f0cc75fab5f0e256775e20fed461502cc86321d55ad5be7084"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "achat-electrique.com",
+                "www.comparitech.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "axept.io",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Document": 3,
+        "Script": 3,
+        "Other": 2
+    },
+    "nameservers": [
+        "donald.ns.cloudflare.com",
+        "aida.ns.cloudflare.com"
+    ]
+}

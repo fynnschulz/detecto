@@ -1,0 +1,185 @@
+{
+    "domain": "decathlon.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "insights.v3",
+        "prod.transcript"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "decathlon\\.net\\/v1\\/configs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "insights.v3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "82920f718cf43924f00cd63b5fc3d428667258d56822f6d47fa5a084252dd880"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.ca",
+                "www.decathlon.fr"
+            ]
+        },
+        {
+            "rule": "decathlon\\.net\\/csm\\/1\\.34\\.0\\/tracker\\.v2\\.prod\\.min\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 2,
+            "subdomains": [
+                "prod.transcript"
+            ],
+            "apis": {
+                "window.name": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.languages": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.onLine": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "4a3eb9ef1d1a913c706784c0b1847b3bb5ae0d3cc83d2ea94ff61345683b5bcf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.ca",
+                "www.decathlon.fr"
+            ]
+        },
+        {
+            "rule": "decathlon\\.net\\/csm\\/1\\.34\\.0\\/428\\.tracker\\.v2\\.prod\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.transcript"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "f7c4965f18b97578304ad7f6e332b215b6d09421a79ea95a22acda4f9d6cdd84"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.ca",
+                "www.decathlon.fr"
+            ]
+        },
+        {
+            "rule": "decathlon\\.net\\/csm\\/1\\.34\\.0\\/515\\.tracker\\.v2\\.prod\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.transcript"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "fb4a8d01ef55f52a633561369bd34739945b4d23fd716f3dd86c6fb16f89a5b9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.ca",
+                "www.decathlon.fr"
+            ]
+        },
+        {
+            "rule": "decathlon\\.net\\/v1\\/events\\/page",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "insights.v3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.ca",
+                "www.decathlon.fr"
+            ]
+        },
+        {
+            "rule": "decathlon\\.net\\/v1\\/events\\/page",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "insights.v3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "951e44b43ae25e7a889f4aa06ac1541969572046409c75d6f5fa8392162fe6ec"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decathlon.ca",
+                "www.decathlon.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 0.42857142857142855
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.2857142857142857
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "Script": 6,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "udns1.cscdns.net",
+        "udns2.cscdns.uk"
+    ]
+}

@@ -1,0 +1,100 @@
+{
+    "domain": "ca.edgesuite.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000305,
+    "sites": 3,
+    "subdomains": [
+        "widgets-sdp.canpl",
+        "vocabulary-tool-api.canpl"
+    ],
+    "cnames": [
+        {
+            "original": "vocabulary-tool-api.canpl.ca",
+            "resolved": "vocabulary-tool-api.canpl.ca.edgesuite.net"
+        },
+        {
+            "original": "widgets-sdp.canpl.ca",
+            "resolved": "widgets-sdp.canpl.ca.edgesuite.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "ca\\.edgesuite\\.net\\/dist\\/locales\\/common\\/en\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widgets-sdp.canpl"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "widgets-sdp.canpl.ca",
+                    "resolved": "widgets-sdp.canpl.ca.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "5faee907312c665541dd257c8d6796e09cfa91026c4ea62b02066aee7e1d34e7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canpl.ca",
+                "www.canpl.ca"
+            ]
+        },
+        {
+            "rule": "ca\\.edgesuite\\.net\\/api\\/vocabularies\\/sdp-widgets\\/terms",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vocabulary-tool-api.canpl"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "vocabulary-tool-api.canpl.ca",
+                    "resolved": "vocabulary-tool-api.canpl.ca.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "8e0728e40e1dc9eb604031a5eb8396f0cd689471387725f32154efae8b193cb5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "canpl.ca",
+                "www.canpl.ca"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 4
+    },
+    "nameservers": []
+}

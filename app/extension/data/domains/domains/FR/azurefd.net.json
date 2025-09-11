@@ -1,0 +1,615 @@
+{
+    "domain": "azurefd.net",
+    "owner": {
+        "name": "Microsoft Corporation",
+        "displayName": "Microsoft",
+        "privacyPolicy": "https://privacy.microsoft.com/en-us/privacystatement",
+        "url": "http://microsoft.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00222,
+    "sites": 22,
+    "subdomains": [
+        "prod-afd-endpoint-maiffr-gxashhh0eufxfpb0.a02",
+        "aviramhub-a2dfbvbedqbda7av.a03",
+        "avgcommhub-dmhac3ehf8cpayd8.a03",
+        "ccleanermhub-bjhybxceamebajhe.a03",
+        "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01",
+        "beingold-prod-cms-eventmanagement-ep-bucgc6e0amhth3ee.z01",
+        "portails-afc7bqedcvhfc6fe.z01"
+    ],
+    "cnames": [
+        {
+            "original": "cdn.campingdirect.com",
+            "resolved": "portails-afc7bqedcvhfc6fe.z01.azurefd.net"
+        },
+        {
+            "original": "mhubc.avg.com",
+            "resolved": "avgcommhub-dmhac3ehf8cpayd8.a03.azurefd.net"
+        },
+        {
+            "original": "mhubc.avira.com",
+            "resolved": "aviramhub-a2dfbvbedqbda7av.a03.azurefd.net"
+        },
+        {
+            "original": "mhubc.ccleaner.com",
+            "resolved": "ccleanermhub-bjhybxceamebajhe.a03.azurefd.net"
+        },
+        {
+            "original": "prod-cmseventmanagement.beinsports.com",
+            "resolved": "beingold-prod-cms-eventmanagement-ep-bucgc6e0amhth3ee.z01.azurefd.net"
+        },
+        {
+            "original": "prod-media.beinsports.com",
+            "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+        },
+        {
+            "original": "static.maif.fr",
+            "resolved": "prod-afd-endpoint-maiffr-gxashhh0eufxfpb0.a02.azurefd.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "azurefd\\.net\\/resources\\/img\\/logo-maif\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-afd-endpoint-maiffr-gxashhh0eufxfpb0.a02"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "static.maif.fr",
+                    "resolved": "prod-afd-endpoint-maiffr-gxashhh0eufxfpb0.a02.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "d3a6c5e6c05811d1627d6f9da4c34f5ce4073f690f37c85207c410caee2b36d3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "maif.fr",
+                "www.maif.fr"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/script\\/mhubc\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "aviramhub-a2dfbvbedqbda7av.a03",
+                "avgcommhub-dmhac3ehf8cpayd8.a03",
+                "ccleanermhub-bjhybxceamebajhe.a03"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "mhubc.avira.com",
+                    "resolved": "aviramhub-a2dfbvbedqbda7av.a03.azurefd.net"
+                },
+                {
+                    "original": "mhubc.avg.com",
+                    "resolved": "avgcommhub-dmhac3ehf8cpayd8.a03.azurefd.net"
+                },
+                {
+                    "original": "mhubc.ccleaner.com",
+                    "resolved": "ccleanermhub-bjhybxceamebajhe.a03.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "680813c7f6c34091c4e8bd66aed29138f1b6a8a384b557a6d73246e2832d7fd5",
+                "3cd6d64d61788f176d2f8dc67d11a7adac8620e5b1a7eed4acf6e25b1ca0770e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avira.com",
+                "www.avg.com",
+                "www.ccleaner.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/e2w9iicoifx689pzi5jqw7j4a\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "e6be4ba6a38f46ee4fb5092063e8b1b544b59837941b22cbca8692c1d5266f52"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/dm5ka0os1e3dxcp3vh05kmp33\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "65c4c7d05be405014f7997f09ecb52eeb1b877076eb97c28b0ad97a4dac270e8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/4w7x0s5gfs5abasphlha5de8k\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "70f34b728f6d95dcc91f17cd1b9450aa9f851cad2a91d7a86eb785aafb05fc24"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/3n9mk5b2mxmq831wfmv6pu86i\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "1fe41e366cb6e734abc90bfc90d17007eadd65709936476bc08d281ba15d1acc"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/34pl8szyvrbwcmfkuocjm3r6t\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "28cba853c7dea4bc133b358b1ad9fd4c66182664e95a0e7b8c0cc32da75f6974"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/6by3h89i2eykc341oz7lv1ddd\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "04885e5d0a75357be107b33e8ea3f144c1aa3859587b31ef5bcac014f5aeb3a2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/2kwbbcootiqqgmrzs6o5inle5\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "02b8721ce4b77464a048bcabdaa4c6e9cf75e420f748e360e4f4eb2f33288e92"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/1r097lpxe0xn03ihb7wi98kao\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "ece1806d8a17f5ce9d31b8898bc7549503cc9aea73f52fdb6b0ce42107d70644"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/4oogyu6o156iphvdvphwpck10\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "7cb90a071098074bf87f7ee7e0ec08c2eff95f874c36278f22c8ecb139b43cd3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/4c1nfi2j1m731hcay25fcgndq\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "1c96e1d786bf5ba9e059f4d10cd8fd1d7c9ce324dda99360b68f7d72a41ce52d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/dc4k1xh2984zbypbnunk7ncic\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "9b8b91eda62e8245da866cb403b0a74f37ce9cfcfc92fa08c2b1636ddf043cb2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/2kbbncoonibqnmrns6n5inln5\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "b8474cf84ca650cf615ce1d3927d7e990c5e38ef5bdf72909ea09c8a73c6272e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/RUGBYChampions2024\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "300e8fd65b1c79a601c359bec3027226b6d5c3d52042c2893792e4648d292c7c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/image\\/8yi6ejjd1zudcqtbn07haahg6\\.1920\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-media.beinsports.com",
+                    "resolved": "beingold-prod-media-proxy-ep-dxgsdqcnbkcqeshg.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "53b28c48e59190108468f2aff434877d777d8bf48e9d86c81259be317c23ed14"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/w2w\\/getWatch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-cms-eventmanagement-ep-bucgc6e0amhth3ee.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-cmseventmanagement.beinsports.com",
+                    "resolved": "beingold-prod-cms-eventmanagement-ep-bucgc6e0amhth3ee.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "8f38991d0575db69d152377a897a609669acfde52755cd4b0190f6518a8bccde"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/w2w\\/getItems",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beingold-prod-cms-eventmanagement-ep-bucgc6e0amhth3ee.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "prod-cmseventmanagement.beinsports.com",
+                    "resolved": "beingold-prod-cms-eventmanagement-ep-bucgc6e0amhth3ee.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "25848d7a57ce233daca59bef1e6f8496c8f69027da41c803ea2a87a4e99d82af"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beinsports.com",
+                "www.beinsports.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/images\\/flags\\/flags\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "portails-afc7bqedcvhfc6fe.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "cdn.campingdirect.com",
+                    "resolved": "portails-afc7bqedcvhfc6fe.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "4da6a72639d1f1f8daf7066ed61af6daeb675cef8e0bc3ed8305d26f03c5603f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "campingdirect.com",
+                "www.campingdirect.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000606,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9664429530201343
+        },
+        {
+            "domain": "trustcommander.net",
+            "prevalence": 0.013422818791946308
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.013422818791946308
+        },
+        {
+            "domain": "ensighten.com",
+            "prevalence": 0.006711409395973154
+        }
+    ],
+    "types": {
+        "Image": 32,
+        "Script": 3,
+        "Fetch": 4
+    },
+    "nameservers": [
+        "ns2-37.azure-dns.net",
+        "ns4-37.azure-dns.info",
+        "ns1-37.azure-dns.com",
+        "ns3-37.azure-dns.org"
+    ]
+}

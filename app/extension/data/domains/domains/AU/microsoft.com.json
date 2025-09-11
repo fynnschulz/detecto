@@ -1,0 +1,436 @@
+{
+    "domain": "microsoft.com",
+    "owner": {
+        "name": "Microsoft Corporation",
+        "displayName": "Microsoft",
+        "privacyPolicy": "https://privacy.microsoft.com/en-us/privacystatement",
+        "url": "http://microsoft.com"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.00303,
+    "sites": 30,
+    "subdomains": [
+        "mobile.events.data",
+        "browser.events.data",
+        "noam.events.data",
+        "us-mobile.events.data",
+        "wcpstatic",
+        "www",
+        "c1",
+        "browser.pipe.aria",
+        "atlas"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0.000808,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile.events.data",
+                "browser.events.data",
+                "noam.events.data",
+                "us-mobile.events.data"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.00151,
+            "cnames": [],
+            "responseHashes": [
+                "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58",
+                "5abb3f4fc440b071b3e07cd924fe57878b6466a78570e21f9287e519967f6ada",
+                "582c7638fee796c3cd535594ff24c74a5c723a49240c2da34eac59b90f8c300e",
+                "62add93d536b8de87b49c6c321c6891941c802e41a7ebcb75b8e0bc14d82cb5a",
+                "55a97e4f17c577dc1d6af56650bb3c1dae886fe1ca1f0858cf39a802d885a3c7",
+                "27a5551c53c204826cd1c5053d578d16f3fbd8e48f1c7ecd126db567ef04439c",
+                "e516794d0b5b98981b3e580b43ee068cbd553f6b57627f2c2dc29151c5324134",
+                "f5610c23e710707679ab1b7fb30bbe2ed4c1543d4efb3663ab7175683f832c95",
+                "69ade6e3736fb087b4eb483f8aa3257383768d51690d98bf0d51ad213793868b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apm.net.au",
+                "book.13cabs.com.au",
+                "clipchamp.com",
+                "education.minecraft.net",
+                "github.blog",
+                "microsoft.github.io",
+                "mycruises.com.au",
+                "pacfa.org.au",
+                "student.sims.uwa.edu.au",
+                "www.13cabs.com.au",
+                "www.lms.uwa.edu.au",
+                "www.minecraft.net",
+                "www.reckon.com",
+                "www.seniorscard.wa.gov.au",
+                "www.trekbikes.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile.events.data",
+                "browser.events.data",
+                "noam.events.data",
+                "us-mobile.events.data"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apm.net.au",
+                "clipchamp.com",
+                "education.minecraft.net",
+                "github.blog",
+                "microsoft.github.io",
+                "mycruises.com.au",
+                "pacfa.org.au",
+                "student.sims.uwa.edu.au",
+                "www.lms.uwa.edu.au",
+                "www.minecraft.net",
+                "www.reckon.com",
+                "www.seniorscard.wa.gov.au"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/mscc\\/lib\\/v2\\/wcp-consent\\.js",
+            "cookies": 0.000505,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wcpstatic"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 5,
+                "Document.cookie setter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "daf7759fedd9af6c4d7e374b0d056547ae7cb245ec24a1c4acf02932f30dc536"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "MSCC": {
+                    "ttl": 86407,
+                    "length": 2,
+                    "prevalence": 0.0004037549207630968,
+                    "uniqueness": 0.25
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clipchamp.com",
+                "community.powerplatform.com",
+                "education.minecraft.net",
+                "microsoft.github.io",
+                "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/library\\/svy\\/minecraft\\/broker\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8ac5e872b12556c367704d34698c1bfb51f7b63773c03b9bcd87cdd3e0b0c4af"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minecraft.net",
+                "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/library\\/svy\\/minecraft\\/broker-config\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a9ed2aaaf578bea1102df752dd0476f565ec115467f87fc134e89468387a62b6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minecraft.net",
+                "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/c\\.gif",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "8f84c4ced509262009163e45994b45ed7ee9d4dbac88674be5f2db5c9e5be38e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "minecraft.net",
+                "education.minecraft.net",
+                "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.pipe.aria"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clevelandclinic.org",
+                "my.clevelandclinic.org",
+                "www.airnewzealand.co.nz",
+                "www.airnewzealand.com.au",
+                "www.bankwest.com.au",
+                "www.hearing.com.au",
+                "www.manningham.vic.gov.au",
+                "www.metagenics.com.au",
+                "www.northmetrotafe.wa.edu.au",
+                "www.southmetrotafe.wa.edu.au"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/map\\/tileset",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "atlas"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuelwatch.wa.gov.au",
+                "www.fuelwatch.wa.gov.au"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/map\\/tileset",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "atlas"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "06638359b5c89e8d56c6d700f8228b289f8bd1bd9b5a2939b2ad7c23f6641191"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuelwatch.wa.gov.au",
+                "www.fuelwatch.wa.gov.au"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/map\\/tile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "atlas"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1fe95ed5cc0d70aae08dc407158f431fc001d46c16ba688a5c1dd43840462060"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuelwatch.wa.gov.au",
+                "www.fuelwatch.wa.gov.au"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/map\\/tile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "atlas"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuelwatch.wa.gov.au",
+                "www.fuelwatch.wa.gov.au"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/map\\/attribution",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "atlas"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "90bee67848e17e845b0d4675341367c7432a1e28daf71d3494e001d5f132755c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuelwatch.wa.gov.au",
+                "www.fuelwatch.wa.gov.au"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/map\\/attribution",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "atlas"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fuelwatch.wa.gov.au",
+                "www.fuelwatch.wa.gov.au"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000908,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.41228070175438597
+        },
+        {
+            "domain": "azureedge.net",
+            "prevalence": 0.21052631578947367
+        },
+        {
+            "domain": "p-airnz.com",
+            "prevalence": 0.11403508771929824
+        },
+        {
+            "domain": "powerapps.com",
+            "prevalence": 0.07894736842105263
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.06140350877192982
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.03508771929824561
+        },
+        {
+            "domain": "msecnd.net",
+            "prevalence": 0.017543859649122806
+        },
+        {
+            "domain": "msauth.net",
+            "prevalence": 0.017543859649122806
+        },
+        {
+            "domain": "windows.net",
+            "prevalence": 0.008771929824561403
+        },
+        {
+            "domain": "postmedia.digital",
+            "prevalence": 0.008771929824561403
+        }
+    ],
+    "types": {
+        "XHR": 25,
+        "Preflight": 18,
+        "Script": 9,
+        "Image": 3,
+        "Fetch": 6
+    },
+    "nameservers": [
+        "ns1-39.azure-dns.com",
+        "ns2-39.azure-dns.net",
+        "ns3-39.azure-dns.org",
+        "ns4-39.azure-dns.info"
+    ]
+}

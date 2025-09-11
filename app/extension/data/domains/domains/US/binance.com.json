@@ -1,0 +1,106 @@
+{
+    "domain": "binance.com",
+    "owner": {
+        "name": "Binance Holdings Ltd.",
+        "displayName": "Binance"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000547,
+    "sites": 8,
+    "subdomains": [
+        "stream",
+        "www",
+        "nbstream"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "binance\\.com\\/ws\\/!miniTicker@arr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stream"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coincentral.com",
+                "coinguides.org"
+            ]
+        },
+        {
+            "rule": "binance\\.com\\/bapi\\/composite\\/v1\\/public\\/promo\\/cmc\\/cryptocurrency\\/quotes\\/latest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "02ff50c60be53a51ea3bc91e8b47d3b7b50ef0de690c7a26063663dcf8ca68a5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitcoin.com",
+                "news.bitcoin.com"
+            ]
+        },
+        {
+            "rule": "binance\\.com\\/wallet-connector",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nbstream"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pancakeswap.finance",
+                "uniswap.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "bnbstatic.com",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "WebSocket": 4,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-234.awsdns-29.com",
+        "ns-735.awsdns-27.net",
+        "ns-1701.awsdns-20.co.uk",
+        "ns-1319.awsdns-36.org"
+    ]
+}

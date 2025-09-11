@@ -1,0 +1,151 @@
+{
+    "domain": "browser-intake-datadoghq.com",
+    "owner": {
+        "name": "Datadog, Inc.",
+        "displayName": "Datadog"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00131,
+    "sites": 13,
+    "subdomains": [
+        "logs",
+        "rum"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "backmarket.fr",
+                "www.backmarket.fr"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000909,
+            "cnames": [],
+            "responseHashes": [
+                "1e2526aec8bdbcececeeff6d6cbffce20ebd369936616f049e7d30ef99258901",
+                "f517e7e013fa88522c167173f61ff0f44257ee040c8801a24d97f541522d71f3",
+                "0694aa9bcd8cbe09d3ffb7c2a0990c837d4fca66ec21ca1789b2f3fca0383c2f",
+                "e6a8aca2a0d89fee6466e335ba1ec33ebc85ea6f1e290bc84ba2d487fa01bfc1",
+                "aec2cfc42bbb392d0e7ef1ea5c0d11c578faa40d3ef2f5e6316d717af4825fe2",
+                "111e23947f3ce3cc5da76ef2fc155e547c80b482d0bf746a104cc57dfeb9c48b",
+                "7e16158ad7abdcd2779609b61a55655acb6d96881c59b42cbb4ff2d3b335fa76"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "datascientest.com",
+                "developer.hashicorp.com",
+                "lolesports.com",
+                "muckrack.com",
+                "openai.com",
+                "picsart.com",
+                "www.manyvids.com",
+                "www.nerdwallet.com",
+                "www.thesaurus.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "7833e9e1457ca458bbe5aee111d29edb17864cee29cd31ac28b49e18ec6c9d1b",
+                "a38b57f09b8ca482c102d6ae776cd63032f6ee823ec1839cf9008f805e5a6d1c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lolesports.com",
+                "picsart.com",
+                "www.nerdwallet.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polymarket.com",
+                "www.foxnews.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9078947368421053
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.039473684210526314
+        },
+        {
+            "domain": "backmarket.com",
+            "prevalence": 0.02631578947368421
+        },
+        {
+            "domain": "zapier.com",
+            "prevalence": 0.02631578947368421
+        }
+    ],
+    "types": {
+        "Ping": 2,
+        "Fetch": 11,
+        "XHR": 3
+    },
+    "nameservers": [
+        "ns-1264.awsdns-30.org",
+        "ns-128.awsdns-16.com",
+        "ns-1907.awsdns-46.co.uk",
+        "ns-560.awsdns-06.net"
+    ]
+}

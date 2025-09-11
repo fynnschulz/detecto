@@ -1,0 +1,86 @@
+{
+    "domain": "myomni.app",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "storefront"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "myomni\\.app\\/main\\.mjs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "storefront"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "30772d36042f9b5ef1525587ecd8e4b6f376a9f36dd1d7c2657106993117c844"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mozaracing.com",
+                "us.mozaracing.com"
+            ]
+        },
+        {
+            "rule": "myomni\\.app\\/index\\.a0ec6c73\\.mjs",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "storefront"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.language": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.appName": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "341c823200fb1561a366ae024f08fbef203a37dd47b120d297c0033dbd1b5bfb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mozaracing.com",
+                "us.mozaracing.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "albert.ns.cloudflare.com",
+        "ines.ns.cloudflare.com"
+    ]
+}

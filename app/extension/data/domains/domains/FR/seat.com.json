@@ -1,0 +1,82 @@
+{
+    "domain": "seat.com",
+    "owner": {
+        "name": "SEAT, S.A.",
+        "displayName": "SEAT"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "vtpapi"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "seat\\.com\\/restapi\\/v1\\/stfrnwb\\/search\\/car",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vtpapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seat.fr",
+                "www.seat.fr"
+            ]
+        },
+        {
+            "rule": "seat\\.com\\/restapi\\/v1\\/stfrnwb\\/search\\/car",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vtpapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ea536a8935f08930d6376c8a29b972e0d1aa604c09c9c9b3e0e8c0b0f229d037"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seat.fr",
+                "www.seat.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "a10-65.akam.net",
+        "a1-210.akam.net",
+        "a28-64.akam.net",
+        "a9-66.akam.net",
+        "a11-64.akam.net",
+        "a14-67.akam.net"
+    ]
+}

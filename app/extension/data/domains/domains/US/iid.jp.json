@@ -1,0 +1,196 @@
+{
+    "domain": "iid.jp",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "front-api-gateway.account.media",
+        "recruitbox.media"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "iid\\.jp\\/v1\\/front\\/js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "front-api-gateway.account.media"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bbe2fcee227a8d86fc83d4b457b0ec1a9b90b2f88cbb5e158bd3ad1e3354ea2d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manetatsu.com",
+                "www.gamespark.jp"
+            ]
+        },
+        {
+            "rule": "iid\\.jp\\/asset\\/static\\/\\/4\\.041e025f92eac4932fb2\\.chunk\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "front-api-gateway.account.media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "02a41dd5fa516ad66758d90183171929f2593a447389ca4be88982f2abf0ac7d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manetatsu.com",
+                "www.gamespark.jp"
+            ]
+        },
+        {
+            "rule": "iid\\.jp\\/v1\\/front\\/js\\/175461868815908",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "front-api-gateway.account.media"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 1,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f76a1b63410c5a5537fde3138002c18a310560953c8326b33614269e50c8dc16"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manetatsu.com",
+                "www.gamespark.jp"
+            ]
+        },
+        {
+            "rule": "iid\\.jp\\/v1\\/front\\/css\\/175461868815908",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "front-api-gateway.account.media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "eef4dd59d394fbec37a44fc48a464de07f3ee841c628e9c7e25ffb428876f00e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manetatsu.com",
+                "www.gamespark.jp"
+            ]
+        },
+        {
+            "rule": "iid\\.jp\\/asset\\/static\\/\\/5\\.041e025f92eac4932fb2\\.chunk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "front-api-gateway.account.media"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manetatsu.com",
+                "www.gamespark.jp"
+            ]
+        },
+        {
+            "rule": "iid\\.jp\\/asset\\/static\\/\\/2\\.041e025f92eac4932fb2\\.chunk\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "front-api-gateway.account.media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manetatsu.com",
+                "www.gamespark.jp"
+            ]
+        },
+        {
+            "rule": "iid\\.jp\\/sites\\/gamespark\\.jp\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recruitbox.media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2885b1bc4cc1b04b7f1b52386c61e91b17cefa680e8792c4df347224d8f79da9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamespark.jp",
+                "www.gamespark.jp"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "Stylesheet": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns10.bbtower.ne.jp",
+        "ns15.bbtower.ne.jp"
+    ]
+}

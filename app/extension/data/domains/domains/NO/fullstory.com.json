@@ -1,0 +1,264 @@
+{
+    "domain": "fullstory.com",
+    "owner": {
+        "name": "FullStory",
+        "displayName": "FullStory",
+        "privacyPolicy": "https://www.fullstory.com/legal/privacy/",
+        "url": "http://fullstory.com"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.00141,
+    "sites": 14,
+    "subdomains": [
+        "edge",
+        "edge.eu1",
+        "rs",
+        "rs.eu1"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "fullstory\\.com\\/s\\/fs\\.js",
+            "cookies": 0.000403,
+            "fingerprinting": 2,
+            "subdomains": [
+                "edge",
+                "edge.eu1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 11,
+                "Navigator.prototype.vendor": 11,
+                "Document.cookie getter": 9,
+                "window.localStorage": 11,
+                "Screen.prototype.width": 10,
+                "Screen.prototype.height": 10,
+                "window.sessionStorage": 10,
+                "PerformanceTiming.prototype.navigationStart": 10,
+                "Document.cookie setter": 4,
+                "Performance.prototype.memory": 6,
+                "Navigator.prototype.languages": 6,
+                "window.innerWidth": 6,
+                "window.innerHeight": 6,
+                "window.matchMedia(\"prefers-color-scheme\")": 3
+            },
+            "sites": 14,
+            "prevalence": 0.00141,
+            "cnames": [],
+            "responseHashes": [
+                "d4ba09437cb4a8cfe4fec31d9e334a792194fa940f331ec1a59e08db8fd36ece"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fs_lua": {
+                    "ttl": 1810,
+                    "length": 15,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 1
+                },
+                "fs_uid": {
+                    "ttl": 31536010,
+                    "length": 117,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dbjourney.com",
+                "giphy.com",
+                "support.hpe.com",
+                "watch.plex.tv",
+                "www.audible.com",
+                "www.dekkpartner.no",
+                "www.findagrave.com",
+                "www.icelandair.com",
+                "www.jwpepper.com",
+                "www.klarna.com",
+                "www.overtake.gg",
+                "www.plex.tv",
+                "www.pricerunner.dk",
+                "www.pricerunner.se"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/page",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs",
+                "rs.eu1"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "6ea743e594878919ca0f03938244d68c3997b76ef89279e13cd0027b9913a708",
+                "cacf48629a44597d6c066c502a3e59c661bb54accfa094004f48542ce3031d6f",
+                "e283e9c46064170828a3544c5cc8f1caff2fe4519b69802bc0adfb40146eaa1f",
+                "3c15ca3dfaf62eeac6f735b894d33e59b3ce74206c9ead5d56128993c81a683b",
+                "65a79e2ab03e8845f1ce270a1e6a8b6ad784de1c30e444cb4cd322f264462cd7",
+                "6deea88d6f943a8d084d3b4deb14a5f6c17017b100a27fa92aafb6c492afc4ae",
+                "96210290b556fb0beeb93306282402f0085a420a321a8bfb1b680a35d3684dc7",
+                "c97e9e38ee020c4350c47fe3fbdd216197ceffe81a65983fda27f4198c7aedc8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dbjourney.com",
+                "support.hpe.com",
+                "watch.plex.tv",
+                "www.dekkpartner.no",
+                "www.findagrave.com",
+                "www.icelandair.com",
+                "www.jwpepper.com",
+                "www.klarna.com",
+                "www.overtake.gg",
+                "www.plex.tv"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/integrations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs",
+                "rs.eu1"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e1af881c28a7100691c1867bc6364ee8461279daa255d73cc64c099a4cf6bd8b",
+                "090f3ab4e34d4fa683626f099405fe3e08660fea56b725e4e2d67e556e660cb2",
+                "0c7fbef72148e2987fb30084a8e60b7952783eb6148205f6f8c4ceb3834d4245"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hpe.com",
+                "www.dekkpartner.no",
+                "www.icelandair.com",
+                "www.jwpepper.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/datalayer\\/v4\\/latest\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge",
+                "edge.eu1"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "38d9c5f094f923cfff59f136a246a9505ed36c42c58589e2338c6b58b20764d4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hpe.com",
+                "www.dekkpartner.no",
+                "www.icelandair.com",
+                "www.jwpepper.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/rec\\/bundle\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rs",
+                "rs.eu1"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "a873d1b51fe7f45886eb921b686f008088684e92be2bd25b0bc4b13bb5bbfd29",
+                "419678d30f6d6ff1ae20decfcbdb683b21975becb948c908785cb46cdce437d9",
+                "12d3bc0275eb87319dcd1d5d6c5a4726e4b9b06f4cbf2ae563e851df1afaf2ea",
+                "0182ffb257ceed4080c5cb6159d3caf366c3db06e87c0056e60ff6aeda093a3f",
+                "8af4d446f50a03408e0a0db50adfc214097485d64cffd6eed4362a4cf27b2f78"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hpe.com",
+                "www.dekkpartner.no",
+                "www.findagrave.com",
+                "www.icelandair.com",
+                "www.jwpepper.com",
+                "www.klarna.com"
+            ]
+        },
+        {
+            "rule": "fullstory\\.com\\/s\\/settings\\/o-1EGFV7-na1\\/v1\\/web",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e0455b4f4c5e9b78f1fa968f5853d9422197d397963828d360074ada1b18e0ef"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plex.tv",
+                "www.plex.tv"
+            ]
+        }
+    ],
+    "categories": [
+        "Analytics",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "klarna.com",
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "amazon.dev",
+            "prevalence": 0.037037037037037035
+        }
+    ],
+    "types": {
+        "Script": 22,
+        "XHR": 18
+    },
+    "nameservers": [
+        "ns-cloud-d1.googledomains.com",
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d4.googledomains.com"
+    ]
+}

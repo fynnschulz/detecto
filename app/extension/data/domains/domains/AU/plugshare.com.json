@@ -1,0 +1,105 @@
+{
+    "domain": "plugshare.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "www",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "plugshare\\.com\\/widget2\\.html",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f4caf65920df2c5c1e0eb954dd140098598a6717adcfb0c989d66e8848fa79c4"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "evchargingmap.com.au",
+                "www.evchargingmap.com.au"
+            ]
+        },
+        {
+            "rule": "plugshare\\.com\\/v3\\/locations\\/region",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "evchargingmap.com.au",
+                "www.evchargingmap.com.au"
+            ]
+        },
+        {
+            "rule": "plugshare\\.com\\/v3\\/locations\\/region",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "evchargingmap.com.au",
+                "www.evchargingmap.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.9583333333333334
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.027777777777777776
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.013888888888888888
+        }
+    ],
+    "types": {
+        "Document": 2,
+        "Preflight": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "tani.ns.cloudflare.com",
+        "adam.ns.cloudflare.com"
+    ]
+}

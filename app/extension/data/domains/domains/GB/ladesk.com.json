@@ -1,0 +1,244 @@
+{
+    "domain": "ladesk.com",
+    "owner": {
+        "name": "Quality Unit LLC",
+        "displayName": "Quality Unit"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "design911",
+        "xrllc",
+        "3.ec1.vbus.apps",
+        "1.ue1.vbus.apps"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ladesk\\.com\\/scripts\\/track\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "design911",
+                "xrllc"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e9407f15c21f27b91ac1cfc22b6488c2ce4a4d9d56cde09701b8710dcc0dfbe3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "LaVisitorNew": {
+                    "ttl": 86415,
+                    "length": 1,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                },
+                "LaVisitorId_ZGVzaWduOTExLmxhZGVzay5jb20v": {
+                    "ttl": null,
+                    "length": 32,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "LaSID": {
+                    "ttl": null,
+                    "length": 32,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "LaVisitorId_eHJsbGMubGFkZXNrLmNvbS8": {
+                    "ttl": null,
+                    "length": 32,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "design911.co.uk",
+                "www.extremerestraints.com"
+            ]
+        },
+        {
+            "rule": "ladesk\\.com\\/scripts\\/button\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "design911",
+                "xrllc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "00ca2016acd412b6ecdd5ba98d7e3e493de808773ec647f0078ad33821e56160"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "design911.co.uk",
+                "www.extremerestraints.com"
+            ]
+        },
+        {
+            "rule": "ladesk\\.com\\/scripts\\/track_visit\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "design911",
+                "xrllc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "eea183ddace968727b8f9b09e6c5a300103dcda16f0de16ad009f87b9d5a6654"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "LaVisitorId_ZGVzaWduOTExLmxhZGVzay5jb20v": 0.00010064412238325282,
+                "LaSID": 0.00020128824476650564,
+                "LaVisitorId_eHJsbGMubGFkZXNrLmNvbS8": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "design911.co.uk",
+                "www.extremerestraints.com"
+            ]
+        },
+        {
+            "rule": "ladesk\\.com\\/5_57_3_3\\/scripts\\/lib\\/bus\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "3.ec1.vbus.apps",
+                "1.ue1.vbus.apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5a4164cdbb38651f2f2d28e25101780515ff8c1072ba99d0a5761500cf306ee3"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "design911.co.uk",
+                "www.extremerestraints.com"
+            ]
+        },
+        {
+            "rule": "ladesk\\.com\\/5_57_3_3\\/static\\/webpack\\/js_bundle\\/postmessage_bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "3.ec1.vbus.apps",
+                "1.ue1.vbus.apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "15b7dbe9c14021ee7eb6ca48c988b714e37a2a87050797d5f74aff8dd0b99c9c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "design911.co.uk",
+                "www.extremerestraints.com"
+            ]
+        },
+        {
+            "rule": "ladesk\\.com\\/5_57_3_3\\/static\\/webpack\\/js_bundle\\/pushstream_bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "3.ec1.vbus.apps",
+                "1.ue1.vbus.apps"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c3b2ac39bf772195f3a131c3b6a2cdc4a62224acf2e3a11755006814aed9b77f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "design911.co.uk",
+                "www.extremerestraints.com"
+            ]
+        },
+        {
+            "rule": "ladesk\\.com\\/5_57_3_3\\/static\\/webpack\\/js_bundle\\/bus_bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "3.ec1.vbus.apps",
+                "1.ue1.vbus.apps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "25ab9c0848c9b01c95f744b4c31278f0f9101e86e662c79d1bdb9777e57eed19"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "design911.co.uk",
+                "www.extremerestraints.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Script": 12,
+        "Document": 2
+    },
+    "nameservers": [
+        "ns-1251.awsdns-28.org",
+        "ns-933.awsdns-52.net",
+        "ns-208.awsdns-26.com",
+        "ns-1839.awsdns-37.co.uk"
+    ]
+}

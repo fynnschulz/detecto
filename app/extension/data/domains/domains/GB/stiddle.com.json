@@ -1,0 +1,123 @@
+{
+    "domain": "stiddle.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "fp",
+        "api-tracking"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "stiddle\\.com\\/thumbmark\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "fp"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "OfflineAudioContext.prototype.constructor": 2,
+                "CanvasRenderingContext2D.prototype.getImageData": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Performance.prototype.memory": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.language": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.permissions": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.product": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2,
+                "AudioBuffer.prototype.getChannelData": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "98d65f021e74ac4289062bfaf58c2700cb1a46f7c356d2669b1093a3b5498743"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "finisterre.com",
+                "www.youfibre.com"
+            ]
+        },
+        {
+            "rule": "stiddle\\.com\\/api\\/v1\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "10d9bbe97624195339f8baabf9549945f0ccb15341fbf3bef04aba6d05930fd1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "finisterre.com",
+                "www.youfibre.com"
+            ]
+        },
+        {
+            "rule": "stiddle\\.com\\/api\\/v1\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "finisterre.com",
+                "www.youfibre.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "security-privacy.com",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "aron.ns.cloudflare.com",
+        "damiete.ns.cloudflare.com"
+    ]
+}

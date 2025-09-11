@@ -1,0 +1,110 @@
+{
+    "domain": "uplift-platform.com",
+    "owner": {
+        "name": "Uplift Canada Services ULC",
+        "displayName": "Uplift"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000406,
+    "sites": 4,
+    "subdomains": [
+        "www",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "uplift-platform\\.com\\/c",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "7fff1569ea68ef52782ba25b0cf3934627f7a4fc1e8e22f4652de959c5f97978"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flyflair.com",
+                "flights.flyflair.com",
+                "www.carnival.com",
+                "www.redtag.ca"
+            ]
+        },
+        {
+            "rule": "uplift-platform\\.com\\/a\\/up\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Navigator.prototype.javaEnabled": 1,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e7d96f0911de643e4dd1c1a9613c4c97159278110f13ccea8cb7828c30a365bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_up": {
+                    "ttl": 63072004,
+                    "length": 25,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redtag.ca",
+                "www.selloffvacations.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "uplift.com",
+            "prevalence": 0.625
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.375
+        }
+    ],
+    "types": {
+        "Image": 4,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-794.awsdns-35.net",
+        "ns-1108.awsdns-10.org",
+        "ns-288.awsdns-36.com",
+        "ns-1603.awsdns-08.co.uk"
+    ]
+}

@@ -1,0 +1,171 @@
+{
+    "domain": "wisepops.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000605,
+    "sites": 6,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "wisepops\\.net\\/loader\\.js",
+            "cookies": 0.000504,
+            "fingerprinting": 2,
+            "subdomains": [],
+            "apis": {
+                "window.sessionStorage": 5,
+                "window.localStorage": 5,
+                "Document.cookie getter": 5,
+                "Document.cookie setter": 5,
+                "Date.prototype.getTime": 5,
+                "window.innerHeight": 5,
+                "window.innerWidth": 5,
+                "Navigator.prototype.cookieEnabled": 5,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 3
+            },
+            "sites": 6,
+            "prevalence": 0.000605,
+            "cnames": [],
+            "responseHashes": [
+                "e0b4288e40a7372037ff8866a73edbfe875857f03f2590a5b4ef32ac9d6a7801",
+                "d14b6bea4c9fa6b68715b6ddccc5c1f8f0329307e8ae0efdb537cf1542d2e7d8",
+                "fb2f8137b11935191d796e55dc9efa2356674f40d90c00e0309b482a6401ee3a",
+                "ef8da4a2759fca7d96fe954b43e10afa3254447915828c2c0edd37b5796d9441",
+                "566885e8b14a624a6deedb0a31f438ce1d8a6dfa0e4bcd85c20a8ee0ae833246"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "wisepops_tld": {
+                    "ttl": 3,
+                    "length": 1,
+                    "prevalence": 0.000504489960649783,
+                    "uniqueness": 0.2
+                },
+                "wisepops": {
+                    "ttl": 63072000,
+                    "length": 145,
+                    "prevalence": 0.000504489960649783,
+                    "uniqueness": 1
+                },
+                "wisepops_session": {
+                    "ttl": null,
+                    "length": 286,
+                    "prevalence": 0.000504489960649783,
+                    "uniqueness": 1
+                },
+                "wisepops_visitor": {
+                    "ttl": 63072000,
+                    "length": 67,
+                    "prevalence": 0.0003026939763898698,
+                    "uniqueness": 1
+                },
+                "wisepops_visits": {
+                    "ttl": 63072000,
+                    "length": 40,
+                    "prevalence": 0.0003026939763898698,
+                    "uniqueness": 1
+                },
+                "wisepops_props": {
+                    "ttl": 63072000,
+                    "length": 80,
+                    "prevalence": 0.00010089799212995662,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shimano.com",
+                "buycycle.com",
+                "flowzz.com",
+                "www.doktorabc.com",
+                "www.fahrrad.de",
+                "www.zamnesia.com"
+            ]
+        },
+        {
+            "rule": "wisepops\\.net\\/id",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "d44dad809b8cfc5270a6d80b543f4aff8d17fa99d615304ea02f5a4dfdd25aaa",
+                "72377d6bdc0832364f8fd3ff9331488bce3176bdbc4c0d06968056dd9a24bd88",
+                "fb79beeab786aafa7b113cd6272ee07d389e1446c33fb605ce1afaee597760e2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shimano.com",
+                "buycycle.com",
+                "www.doktorabc.com",
+                "www.zamnesia.com"
+            ]
+        },
+        {
+            "rule": "wisepops\\.net\\/my-wisepop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "2c288aff3b403415a1ae9b4031432a55b46118255b53db4f13f1580aaae38985",
+                "49c0610b575b018074a101c959e04c1f69bff71762a35557db2ec62d4fdbcc26",
+                "e7d9ebd91a0c516777558c44f9b9c32250e51d52415689e61be9a2c9c81003f7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shimano.com",
+                "buycycle.com",
+                "www.doktorabc.com",
+                "www.zamnesia.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000504,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.35714285714285715
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "wisepops.com",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "digitaloceanspaces.com",
+            "prevalence": 0.07142857142857142
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Fetch": 4,
+        "XHR": 4
+    },
+    "nameservers": [
+        "wally.ns.cloudflare.com",
+        "marek.ns.cloudflare.com"
+    ]
+}

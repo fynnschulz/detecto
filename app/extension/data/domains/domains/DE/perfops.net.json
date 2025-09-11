@@ -1,0 +1,133 @@
+{
+    "domain": "perfops.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "33toqvt505eg18fm.test.resolver",
+        "5i19w21mo7hwfcsc.test.resolver",
+        "r90eye8vxgact1wg.test.resolver",
+        "rum-cdn",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "perfops\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "33toqvt505eg18fm.test.resolver",
+                "5i19w21mo7hwfcsc.test.resolver",
+                "r90eye8vxgact1wg.test.resolver"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "dc46c10b4677aef7426e8e0a930799d1e1617be67c05064f252eb4b6900aa90a",
+                "61a5b7957ca3d2a02a7586bbe7a935fb0a27389ece1d728f99ef384287fbf8aa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vuejs.org",
+                "www.idrlabs.com",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/providers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "b87eead996abfe2fda16ef6d14c650e338978c5a98c972bdec92e6683f49e097"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vuejs.org",
+                "www.idrlabs.com",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/providers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vuejs.org",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/rom3\\/rom3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.onLine": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a4fef32f2e02f7c21ef16d72389838afbbbe1678bacc1c9d83a96789259f032c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idrlabs.com",
+                "www.opensubtitles.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 6,
+        "Preflight": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "amber.ns.cloudflare.com",
+        "dave.ns.cloudflare.com"
+    ]
+}

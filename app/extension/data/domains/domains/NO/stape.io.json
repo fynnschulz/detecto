@@ -1,0 +1,144 @@
+{
+    "domain": "stape.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000705,
+    "sites": 7,
+    "subdomains": [
+        "luse",
+        "leu",
+        "lusc",
+        "leun",
+        "gweu"
+    ],
+    "cnames": [
+        {
+            "original": "load.abc.authorityastrology.com",
+            "resolved": "luse.stape.io"
+        },
+        {
+            "original": "load.assets.comparitech.com",
+            "resolved": "lusc.stape.io"
+        },
+        {
+            "original": "load.gtm.ginatricot.com",
+            "resolved": "leun.stape.io"
+        },
+        {
+            "original": "load.gtm.guidetoiceland.is",
+            "resolved": "leu.stape.io"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "stape\\.io\\/gtag\\/js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "luse",
+                "leu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "load.abc.authorityastrology.com",
+                    "resolved": "luse.stape.io"
+                },
+                {
+                    "original": "load.gtm.guidetoiceland.is",
+                    "resolved": "leu.stape.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "authorityastrology.com",
+                "guidetoiceland.is"
+            ]
+        },
+        {
+            "rule": "stape\\.io\\/gpt_ads-public\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lusc",
+                "leun"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "load.assets.comparitech.com",
+                    "resolved": "lusc.stape.io"
+                },
+                {
+                    "original": "load.gtm.ginatricot.com",
+                    "resolved": "leun.stape.io"
+                }
+            ],
+            "responseHashes": [
+                "60cb051e5a90fb89b3dd953d5eb8a121a0d6d54f5c49a174997190aaf013e3af"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "comparitech.com",
+                "www.ginatricot.com"
+            ]
+        },
+        {
+            "rule": "stape\\.io\\/events\\/22df96e3d1ba3d71787209fceab1618bc5fbd8d3e48edb395c7687af7c96255f",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gweu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mymovies.it",
+                "www.mymovies.it"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000503,
+    "topInitiators": [
+        {
+            "domain": "facebook.net",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "donald.ns.cloudflare.com",
+        "aida.ns.cloudflare.com"
+    ]
+}

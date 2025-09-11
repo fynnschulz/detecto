@@ -1,0 +1,234 @@
+{
+    "domain": "nike.com.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "clickstream.halfpipe",
+        "experimentation.halfpipe",
+        "analytics"
+    ],
+    "cnames": [
+        {
+            "original": "analytics.nike.com",
+            "resolved": "analytics.nike.com.edgekey.net"
+        },
+        {
+            "original": "clickstream.halfpipe.nike.com",
+            "resolved": "clickstream.halfpipe.nike.com.edgekey.net"
+        },
+        {
+            "original": "experimentation.halfpipe.nike.com",
+            "resolved": "experimentation.halfpipe.nike.com.edgekey.net"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "nike\\.com\\.edgekey\\.net\\/nike\\.clickstream\\.service\\.web\\.dotcom\\.v2\\.Service\\/TrackEvent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "clickstream.halfpipe"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "clickstream.halfpipe.nike.com",
+                    "resolved": "clickstream.halfpipe.nike.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nike.com",
+                "www.nike.com"
+            ]
+        },
+        {
+            "rule": "nike\\.com\\.edgekey\\.net\\/nike\\.clickstream\\.service\\.web\\.dotcom\\.v2\\.Service\\/TrackEvent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "clickstream.halfpipe"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "clickstream.halfpipe.nike.com",
+                    "resolved": "clickstream.halfpipe.nike.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "73dde211353a121029fd703f02f43110c9087d573676a8c17ab7b13d4825fcb7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nike.com",
+                "www.nike.com"
+            ]
+        },
+        {
+            "rule": "nike\\.com\\.edgekey\\.net\\/nike\\.clickstream\\.service\\.experimentation\\.v1\\.Service\\/TrackEvent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "experimentation.halfpipe"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "experimentation.halfpipe.nike.com",
+                    "resolved": "experimentation.halfpipe.nike.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nike.com",
+                "www.nike.com"
+            ]
+        },
+        {
+            "rule": "nike\\.com\\.edgekey\\.net\\/nike\\.clickstream\\.service\\.experimentation\\.v1\\.Service\\/TrackEvent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "experimentation.halfpipe"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "experimentation.halfpipe.nike.com",
+                    "resolved": "experimentation.halfpipe.nike.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "62bee819504d912f47b41535ef4b636ba3ce59c696d62db076da43523ade95d6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nike.com",
+                "www.nike.com"
+            ]
+        },
+        {
+            "rule": "nike\\.com\\.edgekey\\.net\\/v1\\/t",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "analytics.nike.com",
+                    "resolved": "analytics.nike.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nike.com",
+                "www.nike.com"
+            ]
+        },
+        {
+            "rule": "nike\\.com\\.edgekey\\.net\\/v1\\/t",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "analytics.nike.com",
+                    "resolved": "analytics.nike.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nike.com",
+                "www.nike.com"
+            ]
+        },
+        {
+            "rule": "nike\\.com\\.edgekey\\.net\\/v1\\/t",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "analytics.nike.com",
+                    "resolved": "analytics.nike.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nike.com",
+                "www.nike.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 6,
+        "Fetch": 6,
+        "Ping": 2
+    },
+    "nameservers": []
+}

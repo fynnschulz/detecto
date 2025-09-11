@@ -1,0 +1,106 @@
+{
+    "domain": "rum.us-east-1.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "client",
+        "dataplane"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "rum\\.us-east-1\\.amazonaws\\.com\\/1\\.19\\.0\\/cwr\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "927208bf7f8618a1756fb20df1f5a6dc5c4387736cffc6dc5e7b44187315ba6e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cwr_u": {
+                    "ttl": 2592006,
+                    "length": 36,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "cwr_s": {
+                    "ttl": 1808,
+                    "length": 236,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theorg.com",
+                "www.interrail.eu"
+            ]
+        },
+        {
+            "rule": "rum\\.us-east-1\\.amazonaws\\.com\\/appmonitors\\/397a8331-0ff9-4145-8f1a-e9da6924d4e7",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eventbrite.com",
+                "www.eventbrite.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-1805.awsdns-33.co.uk",
+        "ns-547.awsdns-04.net",
+        "ns-245.awsdns-30.com",
+        "ns-1058.awsdns-04.org"
+    ]
+}

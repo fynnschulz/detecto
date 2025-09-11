@@ -1,0 +1,376 @@
+{
+    "domain": "dotomi.com",
+    "owner": {
+        "name": "Conversant LLC",
+        "displayName": "Conversant",
+        "privacyPolicy": "https://www.conversantmedia.com/legal/privacy",
+        "url": "http://conversantmedia.com"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.0143,
+    "sites": 142,
+    "subdomains": [
+        "proc.ad.cpe",
+        "web.hb.ad.cpe",
+        "adobe-sync",
+        "beachfront-match",
+        "openx2-match",
+        "login",
+        "lotame-match",
+        "prebid-match",
+        "amazon-tam-match",
+        "login-ds",
+        "dclk-match",
+        "c83827.csd"
+    ],
+    "cnames": [
+        {
+            "original": "dtm.hawesandcurtis.co.uk",
+            "resolved": "c83827.csd.dotomi.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "dotomi\\.com\\/cvx\\/client\\/direct\\/launcher",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proc.ad.cpe"
+            ],
+            "apis": {},
+            "sites": 125,
+            "prevalence": 0.0126,
+            "cnames": [],
+            "responseHashes": [
+                "71f0c958e33905cb028dfd76ff7fcffa9d57a260845594e84d116530e3f80a36"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "screenrant.com",
+                "www.dictionary.com",
+                "www.howtogeek.com",
+                "www.makeuseof.com",
+                "www.newsweek.com",
+                "www.thesaurus.com",
+                "www.polygon.com",
+                "www.gta5-mods.com",
+                "eso-hub.com",
+                "www.si.com",
+                "www.maggotdrowning.com",
+                "robloxden.com",
+                "forums.civfanatics.com",
+                "www.boatsandoutboards.co.uk",
+                "www.findagrave.com",
+                "www.pythontutorial.net",
+                "www.pcgamingwiki.com",
+                "darksouls.wiki.fextralife.com",
+                "www.pokemoncoders.com",
+                "www.golinuxcloud.com"
+            ]
+        },
+        {
+            "rule": "dotomi\\.com\\/cvx\\/client\\/hb\\/ortb\\/25",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web.hb.ad.cpe"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biblehub.com",
+                "www.ancient-origins.net",
+                "www.behindthename.com",
+                "www.conversion-metric.org",
+                "www.convertunits.com",
+                "www.dictionary.com",
+                "www.gbmb.org",
+                "www.hardreset.info",
+                "www.pythontutorial.net",
+                "www.sqlitetutorial.net",
+                "www.thesaurus.com"
+            ]
+        },
+        {
+            "rule": "dotomi\\.com\\/match\\/bounce\\/current",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adobe-sync",
+                "beachfront-match",
+                "openx2-match",
+                "login",
+                "lotame-match"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "charlestyrwhitt.com",
+                "mydramalist.com",
+                "www.azlyrics.com",
+                "www.bravissimo.com",
+                "www.charlestyrwhitt.com",
+                "www.hawesandcurtis.co.uk",
+                "www.trustford.co.uk"
+            ]
+        },
+        {
+            "rule": "dotomi\\.com\\/match\\/bounce\\/current",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prebid-match",
+                "amazon-tam-match"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_dbid": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "downdetector.com",
+                "www.azlyrics.com"
+            ]
+        },
+        {
+            "rule": "dotomi\\.com\\/profile\\/visit\\/final\\/js",
+            "cookies": 0.000403,
+            "fingerprinting": 1,
+            "subdomains": [
+                "login-ds"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "window.localStorage": 4,
+                "window.sessionStorage": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "44047226ab472076138a3fc892c58bd50665bc0f0f20731c5c971089d12cf24f",
+                "2f08b62727f2681a9d5fca8a1c35eab4abaa9662e290bf46e7563123d41a9ee8",
+                "7488a3ee0f86d0905d2f7f926a5b800d21b425b12bb4994cbf85de46de174c55",
+                "e74dcce0e895242528a4b1e5d24940fbee27a5570fa651509261319986fd3199"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "dtm_token": {
+                    "ttl": 34128014,
+                    "length": 48,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {
+                "dtm_token": 0.00040257648953301127
+            },
+            "exampleSites": [
+                "bravissimo.com",
+                "www.futoncompany.co.uk",
+                "www.hawesandcurtis.co.uk",
+                "www.houseofbruar.com",
+                "www.trustford.co.uk"
+            ]
+        },
+        {
+            "rule": "dotomi\\.com\\/match\\/pixel\\/current",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dclk-match"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bravissimo.com",
+                "www.houseofbruar.com",
+                "www.trustford.co.uk"
+            ]
+        },
+        {
+            "rule": "dotomi\\.com\\/ucm\\/DMCSuccessLogger",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login-ds"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bravissimo.com",
+                "www.hawesandcurtis.co.uk",
+                "www.houseofbruar.com",
+                "www.trustford.co.uk"
+            ]
+        },
+        {
+            "rule": "dotomi\\.com\\/profile\\/visit\\/js\\/1_0",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "c83827.csd",
+                "login"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "dtm.hawesandcurtis.co.uk",
+                    "resolved": "c83827.csd.dotomi.com"
+                }
+            ],
+            "responseHashes": [
+                "d735456ec53522bae87d06ce55a2a3d14e80b2880b1afcc7220b636058540452"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hawesandcurtis.co.uk",
+                "www.metmuseum.org"
+            ]
+        },
+        {
+            "rule": "dotomi\\.com\\/profile\\/visit\\/consent\\/js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "c83827.csd",
+                "login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "dtm.hawesandcurtis.co.uk",
+                    "resolved": "c83827.csd.dotomi.com"
+                }
+            ],
+            "responseHashes": [
+                "2db1dbcf1a4a6e63576e5f22320949e1ddc87ff4c10ff26ec353abc9540cd228"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hawesandcurtis.co.uk",
+                "www.metmuseum.org"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising"
+    ],
+    "performance": {},
+    "cookies": 0.000503,
+    "topInitiators": [
+        {
+            "domain": "fastclick.net",
+            "prevalence": 0.7076023391812866
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.13450292397660818
+        },
+        {
+            "domain": "admetricspro.com",
+            "prevalence": 0.017543859649122806
+        },
+        {
+            "domain": "global-e.com",
+            "prevalence": 0.017543859649122806
+        },
+        {
+            "domain": "demdex.net",
+            "prevalence": 0.011695906432748537
+        },
+        {
+            "domain": "adncdn.net",
+            "prevalence": 0.011695906432748537
+        },
+        {
+            "domain": "openx.net",
+            "prevalence": 0.011695906432748537
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.011695906432748537
+        },
+        {
+            "domain": "pubmatic.com",
+            "prevalence": 0.011695906432748537
+        },
+        {
+            "domain": "casalemedia.com",
+            "prevalence": 0.011695906432748537
+        }
+    ],
+    "types": {
+        "XHR": 125,
+        "Fetch": 11,
+        "Image": 14,
+        "Document": 2,
+        "Script": 9
+    },
+    "nameservers": [
+        "eur3.akam.net",
+        "use4.akam.net",
+        "ns1-27.akam.net",
+        "ns1-100.akam.net",
+        "asia9.akam.net",
+        "usw1.akam.net",
+        "eur2.akam.net",
+        "eur7.akam.net"
+    ]
+}

@@ -1,0 +1,212 @@
+{
+    "domain": "viafoura.co",
+    "owner": {
+        "name": "Viafoura Inc.",
+        "displayName": "Viafoura"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.00575,
+    "sites": 57,
+    "subdomains": [
+        "realtimeeventfeeds",
+        "i",
+        "livecomments",
+        "tyrion",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "viafoura\\.co\\/eventfeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realtimeeventfeeds"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalpost.com",
+                "www.cbc.ca",
+                "www.irishstar.com",
+                "www.telegraph.co.uk"
+            ]
+        },
+        {
+            "rule": "viafoura\\.co\\/v3\\/www\\.cbc\\.ca\\/ingest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbc.ca",
+                "www.cbc.ca"
+            ]
+        },
+        {
+            "rule": "viafoura\\.co\\/v4\\/livecomments\\/00000000-0000-4000-8000-0ed77b31aaaf\\/content-containers\\/comment-count-and-status\\/by-container-ids",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "livecomments"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "95429000fff396d6a3803e459c6912c757bb8b0ea053c27faf213eb4442547c5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "www.express.co.uk"
+            ]
+        },
+        {
+            "rule": "viafoura\\.co\\/v3\\/www\\.telegraph\\.co\\.uk\\/ingest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8b0dd6330236b2fc5ec91d1fd116814d9f792fcecdc674a015ff88415fedaf86"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telegraph.co.uk",
+                "www.telegraph.co.uk"
+            ]
+        },
+        {
+            "rule": "viafoura\\.co\\/v3\\/sections\\/sites\\/www\\.visordown\\.com",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tyrion"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d40cdb05c0d6ad6bfd767e2dea937ede546a6199330b2e8f99d2cc457011e8a6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "visordown.com",
+                "www.visordown.com"
+            ]
+        },
+        {
+            "rule": "viafoura\\.co\\/v3\\/sections\\/00000000-0000-4000-8000-4569aeafab60\\/ancestors",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tyrion"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4e536f799a9804963caf3bcee8edbb3d13ecb97a5826b667b3686b2ab830233f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "visordown.com",
+                "www.visordown.com"
+            ]
+        },
+        {
+            "rule": "viafoura\\.co\\/v2\\/www\\.visordown\\.com\\/bootstrap\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a604411de05bb56c6f47324c56962123c1dbc35ab0d946d3bddeacd2879cfabc"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "visordown.com",
+                "www.visordown.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "viafoura.net",
+            "prevalence": 0.6223021582733813
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.22661870503597123
+        },
+        {
+            "domain": "futurecdn.net",
+            "prevalence": 0.13309352517985612
+        },
+        {
+            "domain": "3gl.net",
+            "prevalence": 0.014388489208633094
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.0035971223021582736
+        }
+    ],
+    "types": {
+        "WebSocket": 4,
+        "Image": 2,
+        "Fetch": 8,
+        "Ping": 2
+    },
+    "nameservers": [
+        "ns-272.awsdns-34.com",
+        "ns-1124.awsdns-12.org",
+        "ns-766.awsdns-31.net",
+        "ns-2035.awsdns-62.co.uk"
+    ]
+}

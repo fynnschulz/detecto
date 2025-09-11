@@ -1,0 +1,148 @@
+{
+    "domain": "browser-intake-datadoghq.com",
+    "owner": {
+        "name": "Datadog, Inc.",
+        "displayName": "Datadog"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00141,
+    "sites": 14,
+    "subdomains": [
+        "rum",
+        "csp-report"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "e150df7c0df884107af0a409cdfa1f89b392f80eb2a678a26b01d49d37c33f45",
+                "c6b5477b12434007590681081c927f2c9e3397a0e495bfbc17fcd2065f8d3ced",
+                "29614be42746aee81262859506c2491ccfe473cd6341843ca8f878a235ac6415",
+                "a23b08711fa3d4b57eec4087a01a3a3072f830f639b702fd2fe8ea63b3f356b8",
+                "28e5b6e012cb5254a5020b09488c979577e7507225319e63758121750164df4c",
+                "b2d61f17e815801b4cf13282e1a960b2567545b2d912155dd4386220ec3d3ee0",
+                "7e1492fcb2f1f1d60ad391a428f4cb08b5de707b4c6476b5efb4415b3795d699",
+                "6ad5389f9d8eebf3a6516b40ac42ec9b9a686419bd30505c2181427f466ea8a5",
+                "67d345aeae70d88757bc33e9f1c11013c598541d43d17e30886d80ae88addc1a",
+                "fa258d057b3da99b8ed89773ebdc9c1f64ddcdbed4bbec32ffbc530b102d9203",
+                "d8aac2877906380ec3eabc4dd1a9a1032d5e550a2db046ee7f85234a435c95de"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hashicorp.com",
+                "developer.hashicorp.com",
+                "muckrack.com",
+                "openai.com",
+                "picsart.com",
+                "www.cnbc.com",
+                "www.dictionary.com",
+                "www.litcharts.com",
+                "www.ovoenergy.com",
+                "www.redfin.com",
+                "www.roofingmegastore.co.uk",
+                "zapier.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6d69ed205991c05df03cebe8cf35d7da2425cf3077731b279d2022f8ff471b64"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnbc.com",
+                "www.redfin.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "girlsway.com",
+                "www.girlsway.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4895833333333333
+        },
+        {
+            "domain": "cdn-redfin.com",
+            "prevalence": 0.13541666666666666
+        },
+        {
+            "domain": "zapier-deployment.com",
+            "prevalence": 0.13541666666666666
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.09375
+        },
+        {
+            "domain": "backmarket.com",
+            "prevalence": 0.010416666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.010416666666666666
+        }
+    ],
+    "types": {
+        "Fetch": 12,
+        "XHR": 2,
+        "Other": 2
+    },
+    "nameservers": [
+        "ns-1907.awsdns-46.co.uk",
+        "ns-128.awsdns-16.com",
+        "ns-560.awsdns-06.net",
+        "ns-1264.awsdns-30.org"
+    ]
+}

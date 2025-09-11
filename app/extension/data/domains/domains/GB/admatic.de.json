@@ -1,0 +1,129 @@
+{
+    "domain": "admatic.de",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000805,
+    "sites": 8,
+    "subdomains": [
+        "dsp-service",
+        "prebid",
+        "static.cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "admatic\\.de\\/cookie_sync",
+            "cookies": 0.000805,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dsp-service"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "f23c7b5c7bc5a36c1cfdcfc621e5827cb6ee7e860740cc04fc614badd4ec06f0",
+                "1e3e0d4540afce69640f38c03e591fecd17785a3667ea40bf0e44e9238f4bbb4"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sage-advices.com",
+                "thequickadvisor.com",
+                "www.behindthename.com",
+                "www.gbmb.org",
+                "www.politico.com",
+                "www.seat61.com",
+                "www.sqlitetutorial.net",
+                "www.thephoblographer.com"
+            ]
+        },
+        {
+            "rule": "admatic\\.de\\/users\\/sync\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dsp-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seat61.com",
+                "www.seat61.com"
+            ]
+        },
+        {
+            "rule": "admatic\\.de\\/setuid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prebid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seat61.com",
+                "www.seat61.com"
+            ]
+        },
+        {
+            "rule": "admatic\\.de\\/cookie\\.html",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static.cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "481c8382889f68e105a819ab253cbea9e6a52e86d611edd9fde5feae25e1d8a7"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seat61.com",
+                "www.seat61.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000805,
+    "topInitiators": [
+        {
+            "domain": "smilewanted.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Document": 14
+    },
+    "nameservers": [
+        "porter.ns.cloudflare.com",
+        "ursula.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,683 @@
+{
+    "domain": "arkoselabs.com",
+    "owner": {
+        "name": "Arkose Labs, Inc.",
+        "displayName": "Arkose Labs"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000812,
+    "sites": 8,
+    "subdomains": [
+        "expedia-api",
+        "client-api",
+        "adobe-api"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "arkoselabs\\.com\\/v2\\/33C384C0-7DE5-4243-80DB-2C5E35802C15\\/api\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 5,
+                "Navigator.prototype.language": 5,
+                "Navigator.prototype.connection": 5,
+                "window.localStorage": 5,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5,
+                "Screen.prototype.availHeight": 5,
+                "Screen.prototype.availWidth": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "fd7c696ef1f73f82d99c54d3662b16b0609019b05a0fad8e080b9ead09888684"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/v2\\/2\\.16\\.0\\/enforcement\\.f845a08949c076f42e09da2c4b7496a6\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api",
+                "client-api"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [
+                "cdd266f9d165073afcea0be2f684c1f72501c2169ccdc222a1630157805176ed"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.match.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/v2\\/2\\.16\\.0\\/enforcement\\.f845a08949c076f42e09da2c4b7496a6\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "expedia-api",
+                "client-api"
+            ],
+            "apis": {
+                "window.matchMedia(\"prefers-color-scheme\")": 6,
+                "Date.prototype.getTimezoneOffset": 6,
+                "speechSynthesis.__proto__.getVoices": 3,
+                "Date.prototype.getTime": 5,
+                "Navigator.prototype.userAgent": 3,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "WebGLRenderingContext.prototype.getContextAttributes": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 2,
+                "HTMLMediaElement.prototype.canPlayType": 2,
+                "MediaSource.isTypeSupported": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "Navigator.prototype.connection": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.languages": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "Navigator.prototype.mediaDevices": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Screen.prototype.orientation": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.colorDepth": 2,
+                "window.devicePixelRatio": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.platform": 2,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "OfflineAudioContext.prototype.constructor": 2,
+                "Navigator.prototype.getBattery": 2,
+                "Navigator.prototype.permissions": 2,
+                "MediaDevices.prototype.enumerateDevices": 2,
+                "Navigator.prototype.keyboard": 2,
+                "AudioBuffer.prototype.getChannelData": 2
+            },
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [
+                "a43cc4c9ad906bc43ed5f3fc539fee898ac931d4c87c2928094f38995b8f28c2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.match.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/v2\\/33C384C0-7DE5-4243-80DB-2C5E35802C15\\/settings",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "d9c781007ed12d51d9ac3c57ed8fe495a6dcb29e3ac38db574da68eb8c846509"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/gt2\\/public_key\\/33C384C0-7DE5-4243-80DB-2C5E35802C15",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "841f682acba913a9b5596e7da609791503bcefc27ca65244a220b4283345bd5f",
+                "ed8147635ce54f8328d94657c09682016a7c3e3f08519f68f9f0b3fe504deb4c",
+                "b7fbfd4986709edbefbf410713702686aafa9bd858228da59ab78981d59e4a53",
+                "09b30900a3b2e30de9473b6d5f56dec941862f20badefa96b0d3dd41c86dd79d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/cdn\\/fc\\/assets\\/ec-game-core\\/bootstrap\\/1\\.29\\.6\\/standard\\/game_core_bootstrap\\.js",
+            "cookies": 0.000508,
+            "fingerprinting": 1,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie setter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "d09adc54adfe8e4460a9b1d4edc6137eb0aa9aa5e8507ac008b842519fed6acb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "timestamp": {
+                    "ttl": null,
+                    "length": 15,
+                    "prevalence": 0.000507562683991473,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/cdn\\/fc\\/assets\\/style-manager\\/styles\\/1dee1b7a-b7d3-4f3f-a6c0-a20a135968a7\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "75b54753c0fa152d99dc77389f6763a5242f19baa21ab9b29bbaee89a46e1464"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/assets\\/ec-game-core\\/game-core\\/1\\.29\\.6\\/standard\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "666ab044bb0030c4da294c1982fe74a7873badd6d50f627fbf44308010968f2a"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/init-load\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/assets\\/ec-game-core\\/game-core\\/1\\.29\\.6\\/standard\\/main\\.5f520a5b9c9bebf96461\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "52aecba77a8d1fdc0ac3ab4a24c4c1baf219f71b3c6c98d7a97dcfecbb1ba2d8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/gfct\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "bf4e56a844b13f6ffbab8f9d4d814fe4a573f7bfdb396233c9c11ec1d01e8878",
+                "45c6ee84d411e92df6a7da3350907afa106af6f654a4dce8d3bda1d52e9af0ae",
+                "4295b2c0a4f1583a2a804766c87dd7ef81e6db6e2db2f09a0359823178a69f40",
+                "5a1b3850e4be4a813e1843d47695a147678be503d8b3470eb15492a01b03af25"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/assets\\/ec-game-core\\/game-core\\/1\\.29\\.6\\/standard\\/lib\\.chunk\\.ccf7582a8a4552a74deb\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {
+                "Document.cookie setter": 2
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "bfa9c1427422631b44af6576b25f05bd453b4b3f0dc730f981bd2f8f814422d8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "timestamp": {
+                    "ttl": null,
+                    "length": 15,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/assets\\/ec-game-core\\/game-core\\/1\\.29\\.6\\/standard\\/367\\.vendors\\.962986cb5de954426b21\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "bd1b439a60531a6284e6ad07fc28d9aa00cb700d5738e7f87e7f6e9b2cd62725"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/assets\\/ec-game-core\\/game-core\\/1\\.29\\.6\\/standard\\/378\\.chunk\\.cba6d4dc5afee90e47aa\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "f65f26334f5c61f1b038a995453ec7137751f6ba1f8c5f590ea334d335802eba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/assets\\/ec-game-core\\/game-core\\/1\\.29\\.6\\/standard\\/542\\.vendors\\.abe0e64e95582406fe38\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "db05a8f83715de0ef7d87feb02c65bbbebb4870c7855f7911d4decd5e9188022"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/assets\\/ec-game-core\\/game-core\\/1\\.29\\.6\\/standard\\/924\\.vendors\\.ea33e7ebaefd19354536\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "858807237d92917430f4a0e45f721313b473b01016520ac5fa1da09b74cfec95"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/assets\\/ec-game-core\\/game-core\\/1\\.29\\.6\\/standard\\/932\\.chunk\\.d22e3438993782c140ca\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "18ce1929f5faa4cba36eb0e6eae1ce91a7526086813eaa8d210a2bd4c7efdf78"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/a\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [
+                "2ad3e8570386d338e4f7ad703ba8f80f4cf257223b7b09cf71b2dde405403471"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "ca.hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/assets\\/ec-game-core\\/match-game\\/1\\.29\\.6\\/standard\\/remoteEntry\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "expedia-api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "6a9005263cc39430ca61396ca8d478358d9b2a8fefbc818abbeb682e375ab05f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hotels.com",
+                "www.expedia.com",
+                "www.hotels.com",
+                "www.travelocity.ca",
+                "www.vrbo.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/v2\\/BBCC314C-4937-4CCD-B0A3-FDF0F0F7603C\\/settings",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adobe-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "18b83d593d7f25465adfa7c67ba9ef011b08840a7ce7961dbbdd319e3c3121bd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adobe.com",
+                "fonts.adobe.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/gt2\\/public_key\\/BBCC314C-4937-4CCD-B0A3-FDF0F0F7603C",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adobe-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "235fc5df21b1cde035e6be7a28d44802c2e7f54a3ab045aacd9d7f9594ae635f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adobe.com",
+                "fonts.adobe.com"
+            ]
+        },
+        {
+            "rule": "arkoselabs\\.com\\/fc\\/a\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adobe-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8f15922f3de5b2a78ab7f3944f037cdfa1232be1a1235d376a608f56d96978f5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "gpv": 0.00020302507359658918
+            },
+            "exampleSites": [
+                "adobe.com",
+                "fonts.adobe.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Fraud Prevention"
+    ],
+    "performance": {},
+    "cookies": 0.000508,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5454545454545454
+        },
+        {
+            "domain": "travel-assets.com",
+            "prevalence": 0.45454545454545453
+        }
+    ],
+    "types": {
+        "Script": 58,
+        "Document": 11,
+        "Fetch": 26,
+        "XHR": 9
+    },
+    "nameservers": [
+        "ns-1019.awsdns-63.net",
+        "ns-1457.awsdns-54.org",
+        "ns-1890.awsdns-44.co.uk",
+        "ns-475.awsdns-59.com"
+    ]
+}

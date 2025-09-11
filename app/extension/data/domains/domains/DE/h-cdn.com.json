@@ -1,0 +1,144 @@
+{
+    "domain": "h-cdn.com",
+    "owner": {
+        "name": "Hola Networks Ltd.",
+        "displayName": "Hola Networks"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "player",
+        "zagent7",
+        "perr"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "h-cdn\\.com\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.product": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "window.sessionStorage": 1,
+                "window.devicePixelRatio": 1,
+                "Navigator.prototype.connection": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "0180696bed028f49e7a483e77dac0df542d6cc6edfe7ee121cbf188b87304d9c",
+                "11133a683df8097e618dc1be8d824c1d9cae7a44be779d0e72afc568a32fd2e8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.sportschau.de",
+                "www.tagesschau.de"
+            ]
+        },
+        {
+            "rule": "h-cdn\\.com\\/config\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d7c4fb8a769437b9ecba6470fd2026181ae17985182ccf772cd26b96b31878ea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.tagesschau.de"
+            ]
+        },
+        {
+            "rule": "h-cdn\\.com\\/cmd\\/get_links_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zagent7"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "09d2b174adc80b7f690e0aae0059ccff0028714e2041bd7684d1277b91ad84ba",
+                "28cb889ea913bae893dc4f979b4ab33924eaf2bee4831070480c870c589d673e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.sportschau.de",
+                "www.tagesschau.de"
+            ]
+        },
+        {
+            "rule": "h-cdn\\.com\\/be_client_cgi\\/perr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "perr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.tagesschau.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "XHR": 3,
+        "Ping": 2
+    },
+    "nameservers": [
+        "ns-1405.awsdns-47.org",
+        "ns-1554.awsdns-02.co.uk",
+        "ns-43.awsdns-05.com",
+        "ns-661.awsdns-18.net"
+    ]
+}

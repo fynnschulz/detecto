@@ -1,0 +1,77 @@
+{
+    "domain": "wootric.com",
+    "owner": {
+        "name": "Wootric",
+        "displayName": "Wootric"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000305,
+    "sites": 3,
+    "subdomains": [
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "wootric\\.com\\/wootric-sdk\\.js",
+            "cookies": 0.000102,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "aadfd0f1d54317a2a09c6d9e91ad4127bb54d76aa0bfea7c51159ed3e9fb75ed"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "NPS_88f9d834_last_seen": {
+                    "ttl": 7776004,
+                    "length": 13,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "logrocket.com",
+                "hub.docker.com",
+                "www.comptia.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "lr-wa.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "segment.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 3
+    },
+    "nameservers": [
+        "dns1.registrar-servers.com",
+        "dns2.registrar-servers.com"
+    ]
+}

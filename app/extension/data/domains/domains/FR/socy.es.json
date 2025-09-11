@@ -1,0 +1,119 @@
+{
+    "domain": "socy.es",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "prra.spxl",
+        "uuee.spxl",
+        "tvee.spxl"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "socy\\.es\\/pixel\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prra.spxl",
+                "uuee.spxl",
+                "tvee.spxl"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "1de939044f706f638e45423451b3b077c52c47c71edfe8ed6d42e8902fc87d3f",
+                "3d42f94fdae67262194430d2a67a91a4cd71c5e672c13a3b40f3027f7b28bd01"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__bs_id": 0.000403999596000404,
+                "_ga": 0.000403999596000404,
+                "_gid": 0.000201999798000202
+            },
+            "exampleSites": [
+                "cadenaser.com",
+                "www.elmundo.es",
+                "www.marca.com",
+                "www.rtve.es"
+            ]
+        },
+        {
+            "rule": "socy\\.es\\/pixel\\/js\\/UUEE_234_934_884\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "uuee.spxl"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.width": 2,
+                "window.innerWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.height": 2,
+                "window.innerHeight": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7b927c90927ec54ad35d244c51abb555790e0f559faff51cfb9eafcc6bc3dc2c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__bs_id": {
+                    "ttl": 31536009,
+                    "length": 27,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elmundo.es",
+                "www.marca.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "socy.cloud",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "XHR": 4,
+        "Script": 2
+    },
+    "nameservers": [
+        "henry.ns.cloudflare.com",
+        "ruth.ns.cloudflare.com"
+    ]
+}

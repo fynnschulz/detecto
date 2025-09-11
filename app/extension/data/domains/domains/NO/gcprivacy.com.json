@@ -1,0 +1,158 @@
+{
+    "domain": "gcprivacy.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.00171,
+    "sites": 17,
+    "subdomains": [
+        "p",
+        "p2"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "gcprivacy\\.com\\/t\\/gcid_s\\.min\\.js",
+            "cookies": 0.00161,
+            "fingerprinting": 1,
+            "subdomains": [
+                "p"
+            ],
+            "apis": {
+                "window.localStorage": 16,
+                "Document.cookie getter": 16,
+                "Date.prototype.getTime": 16,
+                "Document.cookie setter": 16
+            },
+            "sites": 16,
+            "prevalence": 0.00161,
+            "cnames": [],
+            "responseHashes": [
+                "c2534582054f375db85432dc76f08aecd4a20f3d792dbcc8ddfffaa3d4e7897d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "gc_session_id": {
+                    "ttl": 3462,
+                    "length": 21,
+                    "prevalence": 0.001610305958132045,
+                    "uniqueness": 1
+                },
+                "gcid_first": {
+                    "ttl": 7776007,
+                    "length": 36,
+                    "prevalence": 0.001610305958132045,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "attackofthefanboy.com",
+                "gamerjournalist.com",
+                "primagames.com",
+                "progameguides.com",
+                "twinfinite.net",
+                "www.atlasobscura.com",
+                "www.destructoid.com",
+                "www.gamepur.com",
+                "www.gameskinny.com",
+                "www.jpost.com",
+                "www.mentalfloss.com",
+                "www.pythontutorial.net",
+                "www.sqlitetutorial.net",
+                "www.themarysue.com",
+                "www.travelgay.com",
+                "www.w3docs.com"
+            ]
+        },
+        {
+            "rule": "gcprivacy\\.com\\/v4\\/sync",
+            "cookies": 0.00161,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p2"
+            ],
+            "apis": {},
+            "sites": 17,
+            "prevalence": 0.00171,
+            "cnames": [],
+            "responseHashes": [
+                "80f6870272450ef99c72a1ee1d2cfdaba6db590bc0b33b616c98c7dbafc4c441",
+                "abe0ef6bbbab70de14621c167592fc41c07043193edaeea921b3d4d4bd93e90e",
+                "a4bc19cbdcfc165bad8a2d1be0668c4999c1f200bf187cbffc5c7e1558aa7e2f",
+                "f9c1ed686054c632e1b96fe60a2007631d5f50284655cd53a6b72f3b54ed2765",
+                "f51d9ebc1cfb66727e031abd00c6a8a4187bfcc422761080f9279d60c60edec3",
+                "fc943955629534836f599f9e54972f4a4130f7813c25b6de32ebfb0b21e92006",
+                "f3d4e7235e014eb9c3845a474e6bba7bedb896c42edf39c65adf05d7d8ae8f98",
+                "3b87cdfb61a89434e2730e22147b0be162d744b1f2bb933de881303b2a13ec40",
+                "a2f64458683cd488344818a8c7747627d89c89d7649edc223bb1181fd5ad7154",
+                "7442eefe39d8457aecd194bb407b0ffc8a6b38d0333bbb7d10efb2688821861a",
+                "c778ced7da1c63534a85e7585b507d53fed9f5550046081f7a48b17f155f9e6f",
+                "b51e6a00853181d8cea75f483eed62b351231784e32693f1c43b011970f934fd",
+                "6b19228ef1874b791e2cde92fb74833c0950e0bbf74a91b252830eab834a1e66",
+                "70ddbdc4150a947944dc64b955e678f525b4b59218586acdf1c98975a0603088",
+                "e9a44aae43b3b26eee4e08d3e5de8d03d1ee7b2df2dfd1913f0c8ca8d991020a",
+                "28302823422cb83cd8f79f5630cff19ebdfa39767359cf5012e61bb80f22e6cc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "attackofthefanboy.com",
+                "gamerjournalist.com",
+                "primagames.com",
+                "progameguides.com",
+                "twinfinite.net",
+                "www.atlasobscura.com",
+                "www.destructoid.com",
+                "www.gamepur.com",
+                "www.gameskinny.com",
+                "www.jpost.com",
+                "www.mentalfloss.com",
+                "www.pythontutorial.net",
+                "www.sportskeeda.com",
+                "www.sqlitetutorial.net",
+                "www.themarysue.com",
+                "www.travelgay.com",
+                "www.w3docs.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00171,
+    "topInitiators": [
+        {
+            "domain": "mediatradecraft.com",
+            "prevalence": 0.47368421052631576
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.21052631578947367
+        },
+        {
+            "domain": "adapex.io",
+            "prevalence": 0.15789473684210525
+        },
+        {
+            "domain": "increaserev.com",
+            "prevalence": 0.10526315789473684
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.05263157894736842
+        }
+    ],
+    "types": {
+        "Script": 16,
+        "XHR": 17
+    },
+    "nameservers": [
+        "ns-409.awsdns-51.com",
+        "ns-828.awsdns-39.net",
+        "ns-1134.awsdns-13.org",
+        "ns-1818.awsdns-35.co.uk"
+    ]
+}

@@ -1,0 +1,175 @@
+{
+    "domain": "we-stats.com",
+    "owner": {
+        "name": "BioCatch",
+        "displayName": "BioCatch"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "wup-6bb5a42d.eu.v2",
+        "wup-788fdc13.suk.v2",
+        "wup-16c9d93d.eu.v2",
+        "logs-6bb5a42d.eu.v2",
+        "log-788fdc13.suk.v2",
+        "log-87e12e85.suk.v2",
+        "bcdn-16c9d93d"
+    ],
+    "cnames": [
+        {
+            "original": "bcdn-16c9d93d.halifax-online.co.uk",
+            "resolved": "bcdn-16c9d93d.we-stats.com"
+        },
+        {
+            "original": "bcdn-16c9d93d.mbna.co.uk",
+            "resolved": "bcdn-16c9d93d.we-stats.com"
+        },
+        {
+            "original": "bclog.nationwide.co.uk",
+            "resolved": "log-788fdc13.suk.v2.we-stats.com"
+        },
+        {
+            "original": "bcwup.nationwide.co.uk",
+            "resolved": "wup-788fdc13.suk.v2.we-stats.com"
+        },
+        {
+            "original": "log.ato.santander.co.uk",
+            "resolved": "log-87e12e85.suk.v2.we-stats.com"
+        },
+        {
+            "original": "wup-16c9d93d.halifax-online.co.uk",
+            "resolved": "wup-16c9d93d.eu.v2.we-stats.com"
+        },
+        {
+            "original": "wup-16c9d93d.mbna.co.uk",
+            "resolved": "wup-16c9d93d.eu.v2.we-stats.com"
+        }
+    ],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "we-stats\\.com\\/client\\/v3\\.1\\/web\\/wup",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wup-6bb5a42d.eu.v2",
+                "wup-788fdc13.suk.v2",
+                "wup-16c9d93d.eu.v2"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [
+                {
+                    "original": "bcwup.nationwide.co.uk",
+                    "resolved": "wup-788fdc13.suk.v2.we-stats.com"
+                },
+                {
+                    "original": "wup-16c9d93d.mbna.co.uk",
+                    "resolved": "wup-16c9d93d.eu.v2.we-stats.com"
+                },
+                {
+                    "original": "wup-16c9d93d.halifax-online.co.uk",
+                    "resolved": "wup-16c9d93d.eu.v2.we-stats.com"
+                }
+            ],
+            "responseHashes": [
+                "3db0e4f462f78c2646d3b1681fb539bec71d650f118ce8c27b558cf4c2aa2c10",
+                "4cf496670d71f5e7d433fef977f5f9352e0333e1592be76fa31bd552dd9b9be1",
+                "1b761588515821a447e1e183c5c8924823c730be6ea92e0ada456d6abd19b6d6",
+                "f914548fa6083d644fe4c5542ce5788657e4dc7cf927e9c936081b8c4e8a606c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "barclays.co.uk",
+                "bank.barclays.co.uk",
+                "onlinebanking.nationwide.co.uk",
+                "online.mbna.co.uk",
+                "www.halifax-online.co.uk"
+            ]
+        },
+        {
+            "rule": "we-stats\\.com\\/api\\/v1\\/sendLogs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs-6bb5a42d.eu.v2",
+                "log-788fdc13.suk.v2",
+                "log-87e12e85.suk.v2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "bclog.nationwide.co.uk",
+                    "resolved": "log-788fdc13.suk.v2.we-stats.com"
+                },
+                {
+                    "original": "log.ato.santander.co.uk",
+                    "resolved": "log-87e12e85.suk.v2.we-stats.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "barclays.co.uk",
+                "onlinebanking.nationwide.co.uk",
+                "retail.santander.co.uk"
+            ]
+        },
+        {
+            "rule": "we-stats\\.com\\/scripts\\/16c9d93d\\/16c9d93d\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "bcdn-16c9d93d"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "bcdn-16c9d93d.mbna.co.uk",
+                    "resolved": "bcdn-16c9d93d.we-stats.com"
+                },
+                {
+                    "original": "bcdn-16c9d93d.halifax-online.co.uk",
+                    "resolved": "bcdn-16c9d93d.we-stats.com"
+                }
+            ],
+            "responseHashes": [
+                "e507e764eb1c1ef06bdca65935ac97c239c896c1dfabdef661ad15cfb449493c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mbna.co.uk",
+                "www.halifax-online.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "types": {
+        "XHR": 8,
+        "Script": 2
+    },
+    "nameservers": [
+        "dns3.p07.nsone.net",
+        "dns1.p07.nsone.net",
+        "dns4.p07.nsone.net",
+        "dns2.p07.nsone.net"
+    ]
+}

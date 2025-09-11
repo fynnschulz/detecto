@@ -1,0 +1,2436 @@
+{
+    "domain": "yektanet.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000192,
+    "sites": 28,
+    "subdomains": [
+        "audience",
+        "ua",
+        "native-scripts",
+        "bfetch",
+        "nfetch",
+        "cdn",
+        "panel-cdn",
+        "event",
+        "biscotti",
+        "tasvir",
+        "vr",
+        "vrec-k",
+        "vrec",
+        "super-script-cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "yektanet\\.com\\/api\\/v1\\/scripts\\/preview\\/validate\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "audience"
+            ],
+            "apis": {},
+            "sites": 24,
+            "prevalence": 0.000164,
+            "cnames": [],
+            "responseHashes": [
+                "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "behtarino.com",
+                "namnamak.com",
+                "www.zoomit.ir",
+                "kashoob.com",
+                "setare.com",
+                "www.hamshahrionline.ir",
+                "www.varzesh3.com",
+                "www.ninisite.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.tgju.org",
+                "basalam.com",
+                "www.flytoday.ir",
+                "bahalmag.ir",
+                "drdr.ir",
+                "mrbilit.com",
+                "www.namasha.com",
+                "www.plaza.ir",
+                "www.khabarfoori.com",
+                "tabamusic.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/cookie\\/iframe\\/",
+            "cookies": 0.000123,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ua"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 22,
+                "Document.cookie setter": 18,
+                "window.localStorage": 18,
+                "Document.cookie getter": 2
+            },
+            "sites": 24,
+            "prevalence": 0.000164,
+            "cnames": [],
+            "responseHashes": [
+                "ec23baab8cd3483c4877e0e191853c7566fef52363c7abf347286f63a93b9c99"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "behtarino.com",
+                "www.plaza.ir",
+                "www.flytoday.ir",
+                "drdr.ir",
+                "www.varzesh3.com",
+                "setare.com",
+                "balad.ir",
+                "www.ninisite.com",
+                "www.namasha.com",
+                "namnamak.com",
+                "bahalmag.ir",
+                "www.khabarfoori.com",
+                "basalam.com",
+                "kashoob.com",
+                "www.tgju.org",
+                "mrbilit.com",
+                "www.tala.ir",
+                "mosbatesabz.com",
+                "www.zoomit.ir",
+                "www.delgarm.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/api\\/analytics-event\\/v1\\/collect",
+            "cookies": 0.000164,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ua"
+            ],
+            "apis": {},
+            "sites": 24,
+            "prevalence": 0.000164,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "analytics_session_token": 0.00017102202763715965
+            },
+            "exampleSites": [
+                "mrbilit.com",
+                "www.khabarfoori.com",
+                "bahalmag.ir",
+                "mosbatesabz.com",
+                "www.varzesh3.com",
+                "kashoob.com",
+                "namnamak.com",
+                "setare.com",
+                "www.namasha.com",
+                "www.zoomit.ir",
+                "www.flytoday.ir",
+                "www.ninisite.com",
+                "www.tala.ir",
+                "tabamusic.com",
+                "www.delgarm.com",
+                "drdr.ir",
+                "www.tgju.org",
+                "www.hamshahrionline.ir",
+                "www.darmankade.com",
+                "basalam.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/utils\\.3\\.1\\.5\\.js",
+            "cookies": 0.000041,
+            "fingerprinting": 2,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 12,
+                "window.innerWidth": 12,
+                "window.innerHeight": 12,
+                "Screen.prototype.width": 12,
+                "Screen.prototype.height": 12,
+                "window.localStorage": 12,
+                "Document.cookie getter": 12,
+                "Document.cookie setter": 6
+            },
+            "sites": 12,
+            "prevalence": 0.0000821,
+            "cnames": [],
+            "responseHashes": [
+                "4c805b49c01bc0a6b74babf517c9f6501cfa3650563967e00456ebf0dafc11c6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "content-view-yn-footer-sticky-19982": {
+                    "ttl": 86410,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "allowed-showable-time": {
+                    "ttl": 25,
+                    "length": 73,
+                    "prevalence": 0.00004104528663291832,
+                    "uniqueness": 1
+                },
+                "content-view-yn-notification-62502": {
+                    "ttl": 86410,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "content-view-yn-footer-sticky-8403": {
+                    "ttl": 86412,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "content-view-yn-footer-sticky-98421": {
+                    "ttl": 86415,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "content-view-yn-notification-98418": {
+                    "ttl": 86415,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "content-view-yn-footer-sticky-101881": {
+                    "ttl": 86416,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "content-view-yn-notification-99038": {
+                    "ttl": 86410,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "content-view-yn-footer-sticky-108727": {
+                    "ttl": 86411,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "balad.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.tala.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bfetch"
+            ],
+            "apis": {},
+            "sites": 13,
+            "prevalence": 0.0000889,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "bama.ir",
+                "balad.ir",
+                "namnamak.com",
+                "namnak.com",
+                "setare.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/api\\/v2\\/load",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nfetch"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/",
+            "cookies": 0.000041,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bfetch"
+            ],
+            "apis": {},
+            "sites": 13,
+            "prevalence": 0.0000889,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "2f13b35374c44705cb1aff110f192e0d72209f0d0797392aabd5bd48adc8ceb3",
+                "ef7bb234b19597d252dcaed43ed954b7cf1c1e8e4729e9896ea1cc3ea20c9dc9",
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+                "fb4d93665e0822f873adbf43bfb5d40d4f8aa5f5918da26f54bd703f0a64fc8c",
+                "b25adb1c7791114a5a38e509e6cea3cd42a2feda763351773d8cadcb11f2d162",
+                "76b2ee85b1c2d6ede6cae0bb5ff26d0491a3e2f010e8276eba438ec04b550cf3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "bama.ir",
+                "balad.ir",
+                "namnamak.com",
+                "namnak.com",
+                "setare.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/api\\/v2\\/load",
+            "cookies": 0.0000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nfetch"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "d3d31265eee6991a35c608ceda28a40e76f620d4eb738290594b5291523874b3",
+                "1d5c0a0ef90c1ce32f71cf7bac0087ebd51d3dcf168f8a339c4942698e6dcbca",
+                "03f1180af6921a8b5d511801758593712161da0f1e66009cb2c7e4c9c7c9a9d6",
+                "387bd054edea0949ebaa77a34011ff965c704a20eefb3dd142ec53999aaa6bec",
+                "46585eb7a6d7b66f8074abcc81e1ea1c1713a880df0879962f21a9ddfdeeac21",
+                "c24d2a08492b0190107ee0c9bceb1328dbc46e020ce2766a596f5f0b80cf836a",
+                "7cdb41d8951dca8ea5cabb05513c4acd1e73ac5a70f3f626571b8a3334b0e4f5",
+                "0ae342e631616c31f5755bd16777c9c6e5cd2ef959fae4188161de39ec31b60c",
+                "3936bd93c90ff714e5b120ae96b638280a0ce5342ee0a8b64586a4dea50fb09b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/cookie\\/set",
+            "cookies": 0.000164,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ua"
+            ],
+            "apis": {},
+            "sites": 24,
+            "prevalence": 0.000164,
+            "cnames": [],
+            "responseHashes": [
+                "3841a410b00612df41da2d056536b6950cae43dbe3a6af37f7f1b799d419357d",
+                "a219417894b3c6f795a38bfb8e90adcec0a1003f57879634e8023cf0eb5f619e",
+                "c28e021a266a46b84d9b6f5606ca01d05f9fb8e0d450ee80abdca4c876d7afa6",
+                "b087aa500518a9a8b3ac1e7978c8905533116933b26c9b4a4a6c2ff333a5f203",
+                "0f2c31aa25aebf3a6a6d68871b3d4e31206776bc4b619bdd17bad029b1ad06a3",
+                "084de81527f059d31fa58c10ef4c644c0013fb9525c83086a3bf54ec7fe64d96",
+                "ab835c9dbd5de2f115e86842c0cee948a525b89f2cc103e12e6ccf60ebfe830d",
+                "0b14a8dd8c85604f6eb84b20a44b939ef16539d58e30357300d3654738060b96",
+                "4fb5b884e3084ff7827202b1dd11f43f65863b3680b7ab30e36253a39f3d8d0e",
+                "031a4cb95d3306c8dfb3c0bb135b52265a2da99984787d5b23fed6218491d13b",
+                "afa1710c4ce55475892e040741696e03106104cfd89a58e42306fa62b3a25058",
+                "1ac7bf56cf1e7c5e5559f5a638bb38aa847e91210857d01e3d8d9949d906c08d",
+                "47350661da820e0dc77e5d3e650a3028e9f486856a1966a60c429cba76201fb0",
+                "bf854e47167f1eb1298d6b061fe374e7ff31e4de977af9e8857f0237c96d5c7c",
+                "eefaf4dc9c67d7ec5dbc843530b5b6b9a51c2ac67f667f39cafa2d023e75a665",
+                "1dcec2447422198214b5b63799600d10e41a9ff15cc10392bd1c008fc9783915",
+                "40abeb15f091e0c198096887995df58b382d67754fd2b3270e8249d5be5a3442",
+                "f50d258446d3cb3d9a0d89153dc3a5784a44c43bec57a9ad9bfc57991f9e84a1",
+                "2f68cb127fe1a1a4252fde72b4d02c5c3aee23b5ca292852f1f5ad83cdbffc9b",
+                "a9fad77685adc863874f910e6139cdf803dd3007b78bf607ed43c066512345b1",
+                "91eb082dd7d65f5054b2f2ad6a433a3dc12e81f2bbad19e3f86616327aa0a38c",
+                "5121769c6cd6863010858829006d8b29ffcba910c5e3848cc0cc4718c16c441a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mrbilit.com",
+                "www.zoomit.ir",
+                "kashoob.com",
+                "www.ninisite.com",
+                "namnak.com",
+                "behtarino.com",
+                "www.plaza.ir",
+                "www.darmankade.com",
+                "balad.ir",
+                "mosbatesabz.com",
+                "basalam.com",
+                "bahalmag.ir",
+                "www.khabarfoori.com",
+                "tabamusic.com",
+                "www.flytoday.ir",
+                "www.varzesh3.com",
+                "www.delgarm.com",
+                "namnamak.com",
+                "drdr.ir",
+                "setare.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/465-2\\.2\\.8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "e07077a89a731a8e57b688b61fd3b1c2a897fae7d5e8f8afa7dc08e774d6d605"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/105-2\\.2\\.8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "2009cdadaacd14a0025f4439dd99e6741eed20a15a04a8324fbff3651ca57507"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/image\\.2\\.3\\.2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "URL.createObjectURL": 4,
+                "window.innerWidth": 1
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "56e709cc2c8a86a892163fcc28b24875a07a7d1764915dd2813c5e01cd0ff298"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/template\\.2\\.3\\.2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "URL.createObjectURL": 6
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "eaff74a5dcb1b49c65bd0664f1e0ce9313be93bc925d94f5ac5c0ab5773175d8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/article\\.3\\.1\\.10\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {
+                "window.innerWidth": 9
+            },
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "4b90cb217059cead34a6b857f332b374c4e99f0d9cd081fedb70bf743a6aa87c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/player\\.2\\.4\\.1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "51032425997e75dd8985cf5a089f250092af56aa02ddaa46232014e9f28504ca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/midContent\\.3\\.2\\.6\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "4855629ba14678d8da07151e32da8faa156f01211607ba3157de90c4cfdb68e3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.khabarfoori.com",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/sticky\\.3\\.1\\.7\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 5
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "cf0038929a2e96e618f662b74c0f6b971c43c1e9b0e8d97e860a0ef91305b0ba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/notif\\.3\\.2\\.6\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "b7b01c411d65d2bf533a189aa54b356741542a636d650689944e241791b35a7e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "www.hamshahrionline.ir",
+                "www.ninisite.com",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/images\\/yn\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "720ac976fdac9cf0c6ffc19f4f45d02bf2fa8e42840cc11f7e309d697eb0bc78"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/images\\/yektanet-logo\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "b1a0dfc441141099e47f15c2d2c7df0bcf08e712afdf4b0a6601a44760d64c2e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.ninisite.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/templates\\/images\\/arrow-left\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "cc1c51ca2cb6bc864e4fc6cd2ef0b61d496662b55141896485bbed2646a09d47"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/public\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000684,
+            "cnames": [],
+            "responseHashes": [
+                "0b3f2dd7a229cb60000f4cea337eb5ae79a8c30032dcd22668aa704b105ffeaa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/images\\/yektanet-logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "687ea0f1cfca1e979411fc48cc99f129f74a5237fa5e2e5083cc7f707cb5ccdb"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "www.delgarm.com",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/images\\/yektanet-logo-txt\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "1859ff6db381b7c3a0ff35a58559b8b3daacacdfede58fe51ebd8545d2e0f739"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "www.delgarm.com",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/image--74107282-45fb-42cb-9feb-1cab4192fe47\\/90\\/300x200\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "ec53e09d4ed3e20f099f25198e7caac8cd7c398c5df56bd5cf3c7f2a06bc39a3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnak.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/fonts\\/faNum\\/woff2\\/IRANSansWeb\\(FaNum\\)_Medium\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "315cf4be3532dfd8d0ae92e6e2ad9365a88b50b1d6b50dd59f9c963196874880"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/fonts\\/IRANSansWeb\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [],
+            "responseHashes": [
+                "49a272f58608e27f6028fe211669ca15338540776fb415df20d3c78c08402c39"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/vast-2\\.2\\.8\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {
+                "window.localStorage": 1
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "2b5a48544d243432695eec3551be67b10aecbb67b950e9c0aef83c4959f75665"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.khabarfoori.com",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/image--74107282-45fb-42cb-9feb-1cab4192fe47\\/90\\/375x250\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "998fdce6f580bca8a5539509004ab8743d2828883d869681532268fcf2c12566"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "www.delgarm.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/images\\/chevron\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "5919246329783346a48d72c2ce3f86c16a60dccc43a6c74be7a3535c96b9daff"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/HLS\\.1\\.0\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {
+                "MediaSource.isTypeSupported": 5
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "2fb57d4547fb46cdc8908d42dcba53b6d452275f70e26dd00eff705a19c71b4a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "namnak.com",
+                "www.delgarm.com",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/api\\/viewed-impression\\/v1\\/collect",
+            "cookies": 0.0000547,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000547,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahalmag.ir",
+                "namnamak.com",
+                "www.delgarm.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.ninisite.com",
+                "www.plaza.ir",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/template\\/bnrs\\/yn_bnr\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 6,
+                "window.innerHeight": 6,
+                "Screen.prototype.width": 6,
+                "Screen.prototype.height": 6,
+                "Navigator.prototype.userAgent": 7,
+                "window.localStorage": 6,
+                "Document.cookie getter": 5
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "2139ac3757717bfebc0d920ec38e4d3c12d37fc190724c5d50bd9c06208cccff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bama.ir",
+                "balad.ir",
+                "setare.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.namasha.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/pixel",
+            "cookies": 0.000041,
+            "fingerprinting": 0,
+            "subdomains": [
+                "biscotti"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.0000752,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "behtarino.com",
+                "kashoob.com",
+                "mosbatesabz.com",
+                "namnak.com",
+                "setare.com",
+                "tabamusic.com",
+                "www.digikala.com",
+                "www.hamshahrionline.ir",
+                "www.khabarfoori.com",
+                "www.plaza.ir",
+                "www.zoomit.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/divarArticle\\.1\\.0\\.22\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a36bd9db2965e9000ab5996bf664fa648213d3eda56c69f284e7c1020fa3b902"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "namnak.com",
+                "www.delgarm.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/images\\/yn-icon\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cace651e975af7bac1f1fe41d3b3807db31d317c1f5bc688174114f751e0c257"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "namnak.com",
+                "www.delgarm.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/fonts\\/faNum\\/woff2\\/IRANSansWeb\\(FaNum\\)_Bold\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ccc7113a5289d61f118dd3cf7de9cb34310e6efa047d81db4b749608b1eb29b8"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "namnak.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/ads\\/image_d26e8854-1a33-4573-a753-d1799ed7171c__1in1wrx9X4\\/90\\/375x250\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "484134bebe5e3141def0778732e4c200ba9cb0e47addfb63dfb2274cae6fcba0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "namnak.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/fetch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delgarm.com",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/fetch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3f52b699ea9213e7960d5d6bbc00082bd35b5b3e81b94fb1b7fb4d2f169ff642"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delgarm.com",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/videoRecommender\\.1\\.2\\.8\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "native-scripts"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a3ba1490d4abea9da4b0847c2e0e4945c927801ac8b2235aaa38d8a27f8d5773"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delgarm.com",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/images\\/svg\\/pause\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delgarm.com",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/assets\\/images\\/svg\\/sound-mute\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "02be96bb49c074dd3d009bde9e3fa004d74bb98bc12bf398b8ab951eafe909b0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delgarm.com",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/videos\\/delgarm\\/delgarm_3dfc9ffc507126dfa9a0b4dd63310121471ea437d41a2d22a46d67f5a9d513e3\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vrec-k"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delgarm.com",
+                "www.delgarm.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/image--74107282-45fb-42cb-9feb-1cab4192fe47\\/90\\/450x300\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "fe6097a893c81f16d4cc79b6066b6e8f6c51109d0750f10f5865d6549c42d6ee"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delgarm.com",
+                "www.delgarm.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/jol2--f73e5a83-89f6-4bf8-b663-49930b073053\\/90\\/450x300\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9a802faa597ce5a4e2285e6d9bbc0ee768cc662c58831c5fe74a93eeee03508b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delgarm.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/image--74107282-45fb-42cb-9feb-1cab4192fe47\\/90\\/150x100\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "1be1788d7614a882789dbce4269c8315d0ef5356ecd79464390d00fb0950a340"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "delgarm.com",
+                "www.delgarm.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/rg_woebegone\\/scripts_v4\\/YYBVsIL4\\/complete\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "window.localStorage": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6aee2656377d398b70eb1c62de7922e4db5e5729f69c709b22221b8c261201cb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "analytics_session_token": {
+                    "ttl": 1815,
+                    "length": 36,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "analytics_token": {
+                    "ttl": 31536004,
+                    "length": 36,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "yektanet_session_last_activity": {
+                    "ttl": 86415,
+                    "length": 9,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_yngt_iframe": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_yngt": {
+                    "ttl": 2592005,
+                    "length": 36,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/assets\\/gif\\/300x100--c65dd229-802a-4403-911e-81b62a5d5cd8\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "18ca399aca6280f49fd5f42cb32965147e00190daf38ab65300aa1e57e7a3c4a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/assets\\/image\\/728\\.90--76ff3a77-e505-4e4b-b5eb-43edc07b6c51\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "15fd8b4833f18945518371da8dd17f03504ea9690d581a6e5f4cbb72f2958507"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/assets\\/gif\\/Opark---300-x-250--d0ca2cb3-79f8-4f40-9e25-2a1fc0cbeba3\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4b5a98549c93b1b3006f43deb7ff14695ecd708dddf85aaf5514175d8cdef99e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/banner_logo\\/logo_f6ce732f-ba5a-4968-be5b-abcf08625c0b__1inXJjpO6Q\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "4f292a3783d39e0970e799427b2c4034f478ce383cb2109f375f4401f07673e4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/banner_templates\\/image_f2dd4163-c182-47a2-bbbb-b3abc4248bc0__1inXJjlQXm\\/90\\/300x200\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f28a861c239017ac4c8236047572186ccad67a482abb207a3c5d25d61fc7d19f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/image--e2310923-f0a1-4425-b374-3c3d54979bfb\\/90\\/150x100\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4bad247fb0dc6f1893d9580c2a3d1e96c71c855f01d5ee90670594454655562f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/image--e2310923-f0a1-4425-b374-3c3d54979bfb\\/90\\/300x200\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "911c81168d209a9d2233e0ef65c77554aabc4657904a2e417713ef1ceaca0f0c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/6--72a556de-7eb5-40aa-a6d8-fd10d5d7a11d\\/90\\/300x200\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "743c6c997546ff97d01c45b9f5943ac345c14390f93afae05febc9f22d4be785"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/2--4505d6f9-0fa6-4586-b026-cdad61ab8bad\\/90\\/300x200\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6a2ff9e7fc67b2cabe0fd28cade4320604eb4a0ad2d510f344dcb6b65272c79f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/2--4505d6f9-0fa6-4586-b026-cdad61ab8bad\\/90\\/150x100\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3ad761bc1b6cb3e861361eb1b9eb4722cc87e78dd64f5507e00801668dbd40d7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/videos\\/hamshahrionline\\/hamshahrionline_f966866f59e092863ab3ca9c156fd59c12977b500f8ec592149c0f388a4a5036\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vrec-k",
+                "vrec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hamshahrionline.ir",
+                "www.hamshahrionline.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/public\\/chunk\\/performance\\.1\\.0\\.5\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "super-script-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "eb9cbe70578952820e64dac91f9d03a6d658c1ea525f1b372899697acf9831e4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/assets\\/image\\/728\\.90-tiggo--dba3b89c-7e54-49bc-b310-ab1fdcc04f94\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4322bf367c06c8b920cefb8b443264ed65993178314aed7af34a493fe37fb331"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/assets\\/image\\/1--d6cd4b37-f727-428a-addd-3e2891ba540e\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ecf1b76e6f16e0b36574ee056f3e50ffcbd9d62e78dad6d5e9adfd0ad78cc02d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/banner_ads\\/120\\.600_9c146a42-9256-4b5f-9de9-05be676d1d13__1huN9rC8ug\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1ec6de7f38bd1eb8d41f535c1f382b9d9aa737fff46fe661a87b7ee94fac40cb"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/assets\\/gif\\/300x250-v2--cafce3ed-0362-48ac-b0b2-47618adb4d14\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "40c5f3aaaf1460a46c954e8ca2029b03d3fbf4033e66c60ff51d23c457a7b182"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/ads\\/image_678f2f37-a5e3-4a3f-abc0-f3919f9d292b__1in2maqioO\\/90\\/300x200\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8852955598c2b3e19ac703bbe55dfac302bb40b932c3f7d4744c596e02218b49"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/ads\\/image_23623df1-46a8-4230-84e5-5db937544050__1in5g4es9Q\\/90\\/150x100\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "affd496ae78872687624d3f29c7a7108334202c248cd570f9a43bf72968b6736"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/ads\\/image_23623df1-46a8-4230-84e5-5db937544050__1in5g4es9Q\\/90\\/300x200\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "74bdb9485f31ea7b3b9251826d46810dd5e7482ab983b8f228fbae2e95f2043d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/banner_templates\\/image_a6e03392-ad0e-4c83-8ed0-5a825864061b__1iijtf1t76\\/90\\/150x100\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "801e1fda837870624a878e230bcbb71eae1f99e43e206ee14f294a552054fd89"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/ads\\/image_23623df1-46a8-4230-84e5-5db937544050__1in5g4es9Q\\/90\\/450x300\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "45b085938ec2288e514afd571a8da76f83e100a5517e2c85acf2466d4e062a4e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "khabarfoori.com",
+                "www.khabarfoori.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/banner_ads\\/Demu_Banners-300x250_px-1_c3351aae-bd2a-4537-af59-005d56b08bba__1ilNo58z2K\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b7e2daeed0a0d5aecbdebfccd0a9d9032eefaa4aa592635c02960d4fd8948dc0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "namasha.com",
+                "www.namasha.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/ads\\/image_b46b79bb-e836-40e5-a4e2-22dbe7b6f70a__1in1wwezta\\/90\\/150x100\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "939f18aa01116840ab32982d88c25549e9c6e0f57b532116652be6880f5ee7ba"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ninisite.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/JOL--6d1952cf-ec69-492d-ae7e-a6d65c42bd2b\\/90\\/300x200\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cdc760419db1460258d74739998a15b1d7f04f24d74bbbb818816126b314aff4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ninisite.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/ads\\/image_16252be5-d128-4f54-8dc4-a44d74f98488__1hZqXGiGdS\\/90\\/150x100\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "939b117aa7f529d9070aa1145a73de26d7e95aa67f655d553a54a6eb5047b34c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ninisite.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/assets\\/image\\/728\\.90\\.yekta\\.2--1d1ded98-68c6-45a5-9759-2ac79724cae7\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "703edde1c1ede76e3f0993862e36ec7836f178cb24b61fe0774e491bccde3b6b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ninisite.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/assets\\/image\\/LG_AiDD_300X100_ebcd4842-2758-4613-b848-e64209e88ceb__1gMojwdHim--9d4420fe-c453-434\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bc020a591583003a083f25eb0d30ce7b23b43007328f7bf66d020c666ef9608d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ninisite.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/assets\\/gif\\/Nahalgasht-Banner-Site--6810af80-c99b-4b3c-8743-990391dd0e19\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fe88cdf9acd34d509b392056ab396a32961db911ac97e43aff0726b8d003c020"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ninisite.com",
+                "www.ninisite.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/ads\\/image_a9f6296b-931f-4e08-b261-08a73166add2__1in1wBVRfA\\/90\\/375x250\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b7ea6606f4361f488dc0775717180a37970705168e9715c1f60eb0a6b14f8366"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ninisite.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/ads\\/image_4bfece77-66a6-482d-bb0e-7a5591d6ca18__1in1wm63VC\\/90\\/375x250\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5dbc7150a4f7ebdd4c92f259a0b6dc8257a023776cef07db413b9028bfd9756f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ninisite.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/banner_templates\\/image_f2dd4163-c182-47a2-bbbb-b3abc4248bc0__1inXJjlQXm\\/90\\/150x100\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "896d99b928c3750c757907457167eb9c2ebc115f1d1505d2f6d2cdaafa5daac5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plaza.ir",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/banner_ads\\/728-90_ea11dfd2-ff7a-4b20-a387-0be963b2860c__1hATjTPe0q\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "030f6c33fb10e1f7e6763306317ef3f61432e3c26a1b34404d2ff8fc4744f8c5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plaza.ir",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/banner_ads\\/728-90_ce126041-cb64-44b9-90c3-7a6ff9de0cbe__1eI5b0ckgq\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "98714c83c09678e360a6931730fda601ba79ffc949e1ea9158d06ec89f03c01b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plaza.ir",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/video_ads\\/converted_videos\\/video_2025-02-17_12-49-25_1ac821a0-5363-4f40-8ac7-7e5fad98cc16__1hGiZ0WBcI_480p\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tasvir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6ca39cc41c00273983d21885ae614b405cf767c8ea268c6bfb7c2cb8cb347ee1"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plaza.ir",
+                "www.plaza.ir"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/superscript\\/IYoZo4ye\\/article\\.v1\\/yn_pub\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "94bcb93094e76d5406fa1ba74c474bff63de15dbc47228661514aa0c4289fa39"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "varzesh3.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/rg_woebegone\\/scripts_v4\\/IYoZo4ye\\/complete\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2034a04ad317d35674bd7267a3dc21886d7a9112e0332006d2794067770ad13c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "analytics_session_token": {
+                    "ttl": 1812,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "analytics_token": {
+                    "ttl": 31536012,
+                    "length": 36,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "yektanet_session_last_activity": {
+                    "ttl": 86412,
+                    "length": 9,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "_yngt_iframe": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "_yngt": {
+                    "ttl": 2592013,
+                    "length": 26,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "varzesh3.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/js\\/5\\.0\\.0\\/varzesh3\\.com\\/article\\.v1\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7ded60fcd68a02ec377c876ae6ec04d9b581c8e6c7b617b836c4636871a4a8a8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "varzesh3.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/rg_woebegone\\/scripts_v3\\/F73Yyq1q\\/publisher\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "53c314701ca21e708218479dd45152cfe178a0bf42017740cdaf21576ac099b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "varzesh3.com",
+                "www.varzesh3.com"
+            ]
+        },
+        {
+            "rule": "yektanet\\.com\\/media\\/CACHE\\/images\\/assets\\/image\\/New_Project_10--85ec91f3-be03-4676-b49e-72f1bfe49651\\/90\\/150x100\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "panel-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9bf1c9dbe4031f69cc4b1e5e034748fb914c749d51e79f060c0ed08a07591958"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "varzesh3.com",
+                "www.varzesh3.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000178,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5425531914893617
+        },
+        {
+            "domain": "najva.com",
+            "prevalence": 0.2127659574468085
+        },
+        {
+            "domain": "mediaad.org",
+            "prevalence": 0.1702127659574468
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05319148936170213
+        },
+        {
+            "domain": "intrack.ir",
+            "prevalence": 0.010638297872340425
+        },
+        {
+            "domain": "tribuneeghtesad.ir",
+            "prevalence": 0.010638297872340425
+        }
+    ],
+    "types": {
+        "XHR": 73,
+        "Document": 24,
+        "Ping": 32,
+        "Script": 121,
+        "Preflight": 25,
+        "Image": 137,
+        "Font": 20,
+        "Media": 6
+    },
+    "nameservers": [
+        "ns.sotoon53.com",
+        "y.ns.sotoon53.com"
+    ]
+}

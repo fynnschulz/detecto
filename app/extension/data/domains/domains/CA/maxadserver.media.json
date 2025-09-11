@@ -1,0 +1,106 @@
+{
+    "domain": "maxadserver.media",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000203,
+    "sites": 2,
+    "subdomains": [
+        "ad",
+        "cdn",
+        "robot"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "maxadserver\\.media\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ad"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "f6602db71275eab99c9b4c8c5c57e213fdca6589feabc6f424e622327d996934"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "matthewbikelog.com",
+                "ranwhenparked.net"
+            ]
+        },
+        {
+            "rule": "maxadserver\\.media\\/css\\/styles\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "dae55fb51a99fb7dbc32f7041dfe45ebf8ac6afc96c127740d89cceb15eae183"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "matthewbikelog.com",
+                "ranwhenparked.net"
+            ]
+        },
+        {
+            "rule": "maxadserver\\.media\\/zone\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "robot"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2301539e4c8a521c4590911bfd7c424ae1c463392d3ec1456e229f9d5dc1412c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "matthewbikelog.com",
+                "ranwhenparked.net"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Stylesheet": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "eva.ns.cloudflare.com",
+        "titan.ns.cloudflare.com"
+    ]
+}

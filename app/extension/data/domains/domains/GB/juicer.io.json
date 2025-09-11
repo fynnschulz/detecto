@@ -1,0 +1,157 @@
+{
+    "domain": "juicer.io",
+    "owner": {
+        "name": "SaaS.group LLC",
+        "displayName": "SaaS.group"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "www",
+        "assets",
+        "static"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "juicer\\.io\\/embed\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Element.prototype.getClientRects": 2,
+                "Date.prototype.getTime": 2,
+                "window.devicePixelRatio": 2,
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "681d1ae4a7aa577b20ab4fce8dbbcc4a07d0010d782f5b09bd79b76034b1c2ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalgrid.com",
+                "www.tkmaxx.ie"
+            ]
+        },
+        {
+            "rule": "juicer\\.io\\/embed\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e9d4caa6eb6f93843dd2f839a62d438da2c219dc60b2ab105c7af56c8d9243f2"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalgrid.com",
+                "www.tkmaxx.ie"
+            ]
+        },
+        {
+            "rule": "juicer\\.io\\/standalone-sprites\\/gallery\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8df188fbf39b45ad5aa355f0335c5a937c93d0e9d1b4e2b4d66d40faee35f857"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalgrid.com",
+                "www.tkmaxx.ie"
+            ]
+        },
+        {
+            "rule": "juicer\\.io\\/fonts\\/fontawesome-5-juicer\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "94657677b3d9bf59b39bb3424604fc2126e8a2066006465d870808f8be4828e4"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalgrid.com",
+                "www.tkmaxx.ie"
+            ]
+        },
+        {
+            "rule": "juicer\\.io\\/api\\/page_views",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalgrid.com",
+                "www.tkmaxx.ie"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Stylesheet": 2,
+        "Image": 2,
+        "Font": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "jason.ns.cloudflare.com",
+        "tori.ns.cloudflare.com"
+    ]
+}

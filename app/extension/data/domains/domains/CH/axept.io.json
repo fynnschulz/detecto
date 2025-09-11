@@ -1,0 +1,387 @@
+{
+    "domain": "axept.io",
+    "owner": {
+        "name": "Axeptio, Ltd",
+        "displayName": "Axeptio"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.00392,
+    "sites": 39,
+    "subdomains": [
+        "static",
+        "client",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "axept\\.io\\/sdk\\.js",
+            "cookies": 0.00342,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 35,
+                "Document.cookie getter": 34,
+                "Document.cookie setter": 34,
+                "window.localStorage": 34,
+                "Navigator.prototype.language": 34,
+                "Event.prototype.timeStamp": 21
+            },
+            "sites": 35,
+            "prevalence": 0.00352,
+            "cnames": [],
+            "responseHashes": [
+                "a2f45c08b645d256600fe824da557c35e62b4f4445fef4d389d2cca598e9d375"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "axeptio_cookies": {
+                    "ttl": 16416005,
+                    "length": 144,
+                    "prevalence": 0.0034163987138263667,
+                    "uniqueness": 1
+                },
+                "axeptio_authorized_vendors": {
+                    "ttl": 16416005,
+                    "length": 6,
+                    "prevalence": 0.0034163987138263667,
+                    "uniqueness": 0.029411764705882353
+                },
+                "axeptio_all_vendors": {
+                    "ttl": 16416005,
+                    "length": 6,
+                    "prevalence": 0.0034163987138263667,
+                    "uniqueness": 0.029411764705882353
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csp.ch",
+                "mistral.ai",
+                "www.jura-tourism.com",
+                "www.vertbaudet.ch",
+                "www.valais2025.ch",
+                "www.dxo.com",
+                "www.la-tour.ch",
+                "www.bcn.ch",
+                "www.carandache.com",
+                "www.aroma-zone.com",
+                "or.fr",
+                "relai.app",
+                "www.cherifaistesvalises.com",
+                "www.anzere.ch",
+                "www.nonstopgym.com",
+                "www.herboristerieduvalmont.com",
+                "de.superprof.ch",
+                "www.romande-energie.ch",
+                "balexert.ch",
+                "www.naef.ch"
+            ]
+        },
+        {
+            "rule": "axept\\.io\\/pack\\/fr-EU",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "607bd8df00c5ee7fb2f07d9f5aa3fa30eb70ee2284132016418945291e11764c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "balexert.ch",
+                "www.anzere.ch",
+                "www.cherifaistesvalises.com",
+                "www.france.fr",
+                "www.recommerce.com"
+            ]
+        },
+        {
+            "rule": "axept\\.io\\/v1\\/analytics\\/evts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 39,
+            "prevalence": 0.00392,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mistral.ai",
+                "www.chuv.ch",
+                "www.nonstopgym.com",
+                "www.lasource.ch",
+                "balexert.ch",
+                "www.anzere.ch",
+                "www.france.fr",
+                "www.aroma-zone.com",
+                "www.swisscaution.ch",
+                "de.superprof.ch",
+                "www.jardiland.com",
+                "www.carandache.com",
+                "www.romande-energie.ch",
+                "www.elsan.care",
+                "www.filmotv.ch",
+                "www.vaudfamille.ch",
+                "www.prestashop.com",
+                "www.misterbandb.com",
+                "www.gammvert.fr",
+                "www.beebs.app"
+            ]
+        },
+        {
+            "rule": "axept\\.io\\/pack\\/fr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.00181,
+            "cnames": [],
+            "responseHashes": [
+                "607bd8df00c5ee7fb2f07d9f5aa3fa30eb70ee2284132016418945291e11764c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csp.ch",
+                "or.fr",
+                "sfl.ch",
+                "www.aroma-zone.com",
+                "www.bcn.ch",
+                "www.beebs.app",
+                "www.elsan.care",
+                "www.filmotv.ch",
+                "www.freevap.ch",
+                "www.gammvert.fr",
+                "www.herboristerieduvalmont.com",
+                "www.jardiland.com",
+                "www.jura-tourism.com",
+                "www.la-tour.ch",
+                "www.lasource.ch",
+                "www.nonstopgym.com",
+                "www.swisscaution.ch",
+                "www.valais.ch"
+            ]
+        },
+        {
+            "rule": "axept\\.io\\/pack\\/de-EU",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "107beeaeddb47e6333e09214f3e5534315d20eb749e31b67bb8bb3ce6969b80c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "superprof.ch",
+                "www.dxo.com"
+            ]
+        },
+        {
+            "rule": "axept\\.io\\/pack\\/en",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "82c55c42a3cab63514558b1baad997f0110dbbf835bd53f20f3bf9b09eea7510"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "relai.app",
+                "www.geneve.com",
+                "www.goldavenue.com",
+                "www.misterbandb.com",
+                "www.prestashop.com",
+                "www.valais2025.ch"
+            ]
+        },
+        {
+            "rule": "axept\\.io\\/sdk-slim\\.js",
+            "cookies": 0.000402,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 4,
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.language": 4,
+                "Event.prototype.timeStamp": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "3344fd0bd6f8e78aad3dfb6aff344755576b1054eafeed1d0adceffeae924b9f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "axeptio_cookies": {
+                    "ttl": 16416002,
+                    "length": 144,
+                    "prevalence": 0.00040192926045016077,
+                    "uniqueness": 1
+                },
+                "axeptio_authorized_vendors": {
+                    "ttl": 16416002,
+                    "length": 6,
+                    "prevalence": 0.00040192926045016077,
+                    "uniqueness": 0.25
+                },
+                "axeptio_all_vendors": {
+                    "ttl": 16416002,
+                    "length": 6,
+                    "prevalence": 0.00040192926045016077,
+                    "uniqueness": 0.25
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sfl.ch",
+                "www.filmotv.ch",
+                "www.gammvert.fr",
+                "www.jardiland.com"
+            ]
+        },
+        {
+            "rule": "axept\\.io\\/ConsentWallStep\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "17c491a376ebd23daa4f7c6f6a2945375d6d7b5a86389a1bbe1e23a2a2e10942"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aroma-zone.com",
+                "www.carandache.com",
+                "www.naef.ch",
+                "www.valais.ch",
+                "www.vertbaudet.ch"
+            ]
+        },
+        {
+            "rule": "axept\\.io\\/pack\\/fr-CH",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000703,
+            "cnames": [],
+            "responseHashes": [
+                "607bd8df00c5ee7fb2f07d9f5aa3fa30eb70ee2284132016418945291e11764c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carandache.com",
+                "www.chuv.ch",
+                "www.lfm.ch",
+                "www.naef.ch",
+                "www.romande-energie.ch",
+                "www.vaudfamille.ch",
+                "www.vertbaudet.ch"
+            ]
+        },
+        {
+            "rule": "axept\\.io\\/ConsentWallStep-slim\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ed5371602007a87b5f012fd6fdb5ce58cba2adc42b49540400d67cf9833721d5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gammvert.fr",
+                "www.jardiland.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00382,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7464788732394366
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2112676056338028
+        },
+        {
+            "domain": "superprof.com",
+            "prevalence": 0.04225352112676056
+        }
+    ],
+    "types": {
+        "Script": 46,
+        "Fetch": 77
+    },
+    "nameservers": [
+        "kami.ns.cloudflare.com",
+        "moura.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,200 @@
+{
+    "domain": "airbridge.io",
+    "owner": {
+        "name": "AB180 Inc.",
+        "displayName": "AirBridge"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "static",
+        "core",
+        "sdk"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "airbridge\\.io\\/sdk\\/latest\\/airbridge\\.min\\.js",
+            "cookies": 0.0000342,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.maxTouchPoints": 5,
+                "Navigator.prototype.language": 5,
+                "window.localStorage": 5,
+                "Document.cookie setter": 5,
+                "Document.cookie getter": 5,
+                "NavigatorUAData.prototype.brands": 5,
+                "NavigatorUAData.prototype.platform": 5,
+                "NavigatorUAData.prototype.getHighEntropyValues": 5,
+                "Date.prototype.getTimezoneOffset": 5,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "cc158a371b3fcbe1cb6d48d2764d1b9c16af4912239c392586c6eb2efd2d1b38"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "airbridge_migration_metadata__manta": {
+                    "ttl": 31536003617,
+                    "length": 35,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "ab180ClientId": {
+                    "ttl": 63072000012,
+                    "length": 36,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                },
+                "airbridge_session": {
+                    "ttl": 31536003614,
+                    "length": 143,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                },
+                "airbridge_user": {
+                    "ttl": 63115200018,
+                    "length": 123,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "airbridge_migration_metadata__ridi": {
+                    "ttl": 31536003612,
+                    "length": 35,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "airbridge_device_alias": {
+                    "ttl": 63115200014,
+                    "length": 6,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "airbridge_migration_metadata__tapas": {
+                    "ttl": 31536003608,
+                    "length": 35,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "airbridge_migration_metadata__tappytoon": {
+                    "ttl": 31536003603,
+                    "length": 35,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manta.net",
+                "ridibooks.com",
+                "tapas.io",
+                "tfd.nexon.com",
+                "www.tappytoon.com"
+            ]
+        },
+        {
+            "rule": "airbridge\\.io\\/api\\/v3\\.1\\/apps\\/tfd\\/events\\/web\\/9320",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4420fe92447dc9721ea3cb374b499fcc7f156abaedd3fa84e9ed85cd017cff20"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nexon.com",
+                "tfd.nexon.com"
+            ]
+        },
+        {
+            "rule": "airbridge\\.io\\/data\\/1\\.10\\.75\\/tappytoon",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9b762dea531b1a808b3e8d40bd038f6b501218484951c797a693799e47229793"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tappytoon.com",
+                "www.tappytoon.com"
+            ]
+        },
+        {
+            "rule": "airbridge\\.io\\/api\\/v3\\.1\\/apps\\/tappytoon\\/events\\/web\\/9120",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "core"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cec6dbba6c10e22523ebe04094f554611c5d3a79990693263119b7f59f312d61"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tappytoon.com",
+                "www.tappytoon.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000479,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7222222222222222
+        },
+        {
+            "domain": "ridicdn.net",
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05555555555555555
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Fetch": 6
+    },
+    "nameservers": [
+        "ns-207.awsdns-25.com",
+        "ns-778.awsdns-33.net",
+        "ns-1134.awsdns-13.org",
+        "ns-2028.awsdns-61.co.uk"
+    ]
+}

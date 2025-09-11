@@ -1,0 +1,89 @@
+{
+    "domain": "influ2.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "www",
+        "t"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "influ2\\.com\\/tracker",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "c74d7a5b2d723d6455b17d2008fda0d9c45d8461c5c3b07cfce1a3a445e6a46d",
+                "c4f33e31cb08209b7a614bace0f91cc205dcd28af94b4eaa97912e8241c806ed"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nvidia.com",
+                "www.nvidia.de",
+                "www.postman.com"
+            ]
+        },
+        {
+            "rule": "influ2\\.com\\/u\\/",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "b5f88c33a35316f144e9d62fc2d4b29c382f2b2cbe98fc5142e24629372c06d1",
+                "b6d0e9d13ca6799472e5c38e26b7814e9249aa9b88d3440d17121d5e2042f0ef"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nvidia.com",
+                "www.nvidia.de",
+                "www.postman.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "nvidia.com",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "dns1.registrar-servers.com",
+        "dns2.registrar-servers.com"
+    ]
+}

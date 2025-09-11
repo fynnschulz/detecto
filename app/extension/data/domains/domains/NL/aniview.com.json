@@ -1,0 +1,130 @@
+{
+    "domain": "aniview.com",
+    "owner": {
+        "name": "ANIVIEW LTD",
+        "displayName": "ANIVIEW"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "track1",
+        "player",
+        "track4"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "aniview\\.com\\/track",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rapidsave.com",
+                "www.lyricsondemand.com"
+            ]
+        },
+        {
+            "rule": "aniview\\.com\\/script\\/6\\.1\\/AVmanager\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "Screen.prototype.orientation": 3,
+                "Navigator.prototype.appVersion": 3,
+                "Navigator.prototype.doNotTrack": 3,
+                "Navigator.prototype.vendor": 3,
+                "Date.prototype.getTime": 3,
+                "window.sessionStorage": 3,
+                "Navigator.prototype.language": 3,
+                "window.innerHeight": 3,
+                "window.innerWidth": 1,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e0511cab3fa9f6ac8d75f445a8e0162fe9420c924e918c95e7a09c2d5dabddc7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rapidsave.com",
+                "www.delftstack.com",
+                "www.lyricsondemand.com"
+            ]
+        },
+        {
+            "rule": "aniview\\.com\\/track",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track4",
+                "track1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "convertunits.com",
+                "www.convertunits.com",
+                "www.lyricsondemand.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "imasdk.googleapis.com",
+            "prevalence": 0.5555555555555556
+        },
+        {
+            "domain": "avplayer.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Image": 2,
+        "Script": 3,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "ns1.dnsmadeeasy.com",
+        "ns4.dnsmadeeasy.com",
+        "ns3.dnsmadeeasy.com",
+        "ns0.dnsmadeeasy.com",
+        "ns2.dnsmadeeasy.com"
+    ]
+}

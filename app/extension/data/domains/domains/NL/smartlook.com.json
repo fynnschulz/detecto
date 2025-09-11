@@ -1,0 +1,93 @@
+{
+    "domain": "smartlook.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "web-sdk"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "smartlook\\.com\\/recorder\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {
+                "window.sessionStorage": 4,
+                "window.localStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "b79263bfdcdeff0539b9c03378ce9bc22f71c9ab476a5fc345000b7bea153018"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allevents.in",
+                "partyflock.nl",
+                "www.baby-dump.nl",
+                "www.productindetail.com"
+            ]
+        },
+        {
+            "rule": "smartlook\\.com\\/es6\\/init\\.cdc840947d17d40acc65\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.webdriver": 4,
+                "window.localStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "b07cba6ccc4a4da2f3f24d000d8a7ac897b629520f404968274a2cab1ce3a60e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allevents.in",
+                "partyflock.nl",
+                "www.baby-dump.nl",
+                "www.productindetail.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 8
+    },
+    "nameservers": [
+        "ns-949.awsdns-54.net",
+        "ns-1600.awsdns-08.co.uk",
+        "ns-1317.awsdns-36.org",
+        "ns-429.awsdns-53.com"
+    ]
+}

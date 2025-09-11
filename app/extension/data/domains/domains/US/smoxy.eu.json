@@ -1,0 +1,313 @@
+{
+    "domain": "smoxy.eu",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "svc",
+        "ingress"
+    ],
+    "cnames": [
+        {
+            "original": "checkout.depot-online.de",
+            "resolved": "ingress.smoxy.eu"
+        },
+        {
+            "original": "lbt.lucky-bike.de",
+            "resolved": "ingress.smoxy.eu"
+        },
+        {
+            "original": "sst.armedangels.com",
+            "resolved": "ingress.smoxy.eu"
+        },
+        {
+            "original": "sst.kirstein.de",
+            "resolved": "ingress.smoxy.eu"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "smoxy\\.eu\\/_sx\\/a\\/perf\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "svc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b470dd79b7ae72a607b06ad759631a700b1cfef3fc38f61ba21682d2d92c391e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sw-motech.us",
+                "www.lucky-bike.de"
+            ]
+        },
+        {
+            "rule": "smoxy\\.eu\\/_sx\\/a\\/core\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "svc"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ce343150d8b172566c41f1341314c9adef3b1571b191b7cf7ff78e4fdf228912"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sw-motech.us",
+                "www.lucky-bike.de"
+            ]
+        },
+        {
+            "rule": "smoxy\\.eu\\/gtm\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ingress"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "sst.armedangels.com",
+                    "resolved": "ingress.smoxy.eu"
+                },
+                {
+                    "original": "sst.kirstein.de",
+                    "resolved": "ingress.smoxy.eu"
+                },
+                {
+                    "original": "lbt.lucky-bike.de",
+                    "resolved": "ingress.smoxy.eu"
+                }
+            ],
+            "responseHashes": [
+                "f75ae52cce0a4922731ccf21dd196cc97186c66ddf278035e8889553932601fb",
+                "35603d75a7389f35068feb42820e929d0e5bde344010aab6ab22e17efc148bf8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "armedangels.com",
+                "www.kirstein.de",
+                "www.lucky-bike.de"
+            ]
+        },
+        {
+            "rule": "smoxy\\.eu\\/gtag\\/js",
+            "cookies": 0.00000684,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ingress"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "sst.armedangels.com",
+                    "resolved": "ingress.smoxy.eu"
+                },
+                {
+                    "original": "sst.kirstein.de",
+                    "resolved": "ingress.smoxy.eu"
+                }
+            ],
+            "responseHashes": [
+                "f717031c2033612b6e9ca33ca8cc70518ff2ae45bf7e58c68b42570f2aeee1e0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "armedangels.com",
+                "www.kirstein.de"
+            ]
+        },
+        {
+            "rule": "smoxy\\.eu\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingress"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "sst.armedangels.com",
+                    "resolved": "ingress.smoxy.eu"
+                },
+                {
+                    "original": "sst.kirstein.de",
+                    "resolved": "ingress.smoxy.eu"
+                }
+            ],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "armedangels.com",
+                "www.armedangels.com",
+                "www.kirstein.de"
+            ]
+        },
+        {
+            "rule": "smoxy\\.eu\\/store-api\\/context",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingress"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "checkout.depot-online.de",
+                    "resolved": "ingress.smoxy.eu"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "depot-online.de",
+                "www.depot-online.de"
+            ]
+        },
+        {
+            "rule": "smoxy\\.eu\\/store-api\\/context",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingress"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "checkout.depot-online.de",
+                    "resolved": "ingress.smoxy.eu"
+                }
+            ],
+            "responseHashes": [
+                "697741670a31b2450020310f4392a3126268f685216a5d8c4de5564067d0eccf"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "depot-online.de",
+                "www.depot-online.de"
+            ]
+        },
+        {
+            "rule": "smoxy\\.eu\\/store-api\\/product-listing\\/01916af99c94750080fba2b66bdc4cf9",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingress"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "checkout.depot-online.de",
+                    "resolved": "ingress.smoxy.eu"
+                }
+            ],
+            "responseHashes": [
+                "dc254c426d7cbb863a5e52fef67f2182ca043c939b6924237da0990df701252b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "depot-online.de",
+                "www.depot-online.de"
+            ]
+        },
+        {
+            "rule": "smoxy\\.eu\\/store-api\\/shipping-method",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingress"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "checkout.depot-online.de",
+                    "resolved": "ingress.smoxy.eu"
+                }
+            ],
+            "responseHashes": [
+                "10686a520b55bffa57a5d4af7b4704582df6210c4d00f806bcabe45050039ab7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "depot-online.de",
+                "www.depot-online.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "sitesearch360.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2777777777777778
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2222222222222222
+        }
+    ],
+    "types": {
+        "Image": 2,
+        "Script": 7,
+        "Fetch": 9,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "blakely.ns.cloudflare.com",
+        "ishaan.ns.cloudflare.com"
+    ]
+}

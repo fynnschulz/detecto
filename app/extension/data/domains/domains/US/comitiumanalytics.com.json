@@ -1,0 +1,100 @@
+{
+    "domain": "comitiumanalytics.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "publisher",
+        "static"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "comitiumanalytics\\.com\\/stats\\/save",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "publisher"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "65ymas.com",
+                "www.autopista.es",
+                "www.elplural.com",
+                "www.lavozdelsur.es"
+            ]
+        },
+        {
+            "rule": "comitiumanalytics\\.com\\/js\\/client\\.modern\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "window.innerHeight": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "16bbf98da8c22079889edff5c72a88826cd6c1240d8acdcc80b4a7e916092c05"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ca_uid": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                },
+                "ca_stat": {
+                    "ttl": 14651358,
+                    "length": 197,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autopista.es",
+                "www.elplural.com",
+                "www.lavozdelsur.es"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Ping": 4,
+        "Script": 3
+    },
+    "nameservers": [
+        "henry.ns.cloudflare.com",
+        "melinda.ns.cloudflare.com"
+    ]
+}

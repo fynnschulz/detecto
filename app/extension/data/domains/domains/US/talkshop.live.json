@@ -1,0 +1,133 @@
+{
+    "domain": "talkshop.live",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "embed",
+        "integration-sh",
+        "integration-sh-proxy"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "talkshop\\.live\\/embed\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 5,
+                "Document.cookie getter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "79fc31a05736ce4d3f6b1dce780d610ef5f564bb1c37d291b100e6e0704c5c72"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "democracyclothing.com",
+                "thedefineddish.com",
+                "thepauselife.com",
+                "www.barefootdreams.com",
+                "www.rocskincare.com"
+            ]
+        },
+        {
+            "rule": "talkshop\\.live\\/static\\/section-load-event-listener\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "integration-sh"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepauselife.com",
+                "www.rocskincare.com"
+            ]
+        },
+        {
+            "rule": "talkshop\\.live\\/feed-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "integration-sh-proxy"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.product": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "754fb359b672134eb5b3930e4dd5db85e65d1c6bc55724d1ec25abba394a5071"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepauselife.com",
+                "www.rocskincare.com"
+            ]
+        },
+        {
+            "rule": "talkshop\\.live\\/auth",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "integration-sh"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thepauselife.com",
+                "www.rocskincare.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "jwplayer.com",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Script": 11
+    },
+    "nameservers": [
+        "ns-1380.awsdns-44.org",
+        "ns-594.awsdns-10.net",
+        "ns-4.awsdns-00.com",
+        "ns-1901.awsdns-45.co.uk"
+    ]
+}

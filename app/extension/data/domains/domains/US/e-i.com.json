@@ -1,0 +1,139 @@
+{
+    "domain": "e-i.com",
+    "owner": {
+        "name": "Europeenne de Traitement de l'Information SAS",
+        "displayName": "Europeenne de Traitement de l'Information"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "cdnii",
+        "cdnsi"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "e-i\\.com\\/SRCH\\/sd\\/exalead\\/1\\.11\\.33\\/javascripts\\/autocomplete_search\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdnii",
+                "cdnsi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b33269f7142f4c6bab4fa31a9c91e433db2fb61f431cee620ad4fc959f160980"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cic.fr",
+                "www.creditmutuel.fr"
+            ]
+        },
+        {
+            "rule": "e-i\\.com\\/SITW\\/sd\\/tools\\/2\\.3\\.10\\/javascripts\\/SITW-tools\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdnii",
+                "cdnsi"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.cookieEnabled": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3abe897e6fd1e79d93304758e159bd54f1fc5669b6aec100d313e6599696b6bb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cic.fr",
+                "www.creditmutuel.fr"
+            ]
+        },
+        {
+            "rule": "e-i\\.com\\/WEBO\\/sd\\/wat\\/1\\.0\\.16\\/\\/javascripts\\/tracking_event\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdnii",
+                "cdnsi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5ab0f808f16fa8b89a1b7cba5ab0d04f6a7363eb07fea54a0cfe8134b1d31405"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cic.fr",
+                "www.creditmutuel.fr"
+            ]
+        },
+        {
+            "rule": "e-i\\.com\\/DCLI\\/sd\\/collector\\/1\\.9\\.5\\/common\\/dclic_common_template\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdnii",
+                "cdnsi"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "85e67a57547fc40297e84ce02594f2e9545b59efc8e10e41900fddcd659ccaca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cic.fr",
+                "www.creditmutuel.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9795918367346939
+        },
+        {
+            "domain": "tagcommander.com",
+            "prevalence": 0.02040816326530612
+        }
+    ],
+    "types": {
+        "Script": 8
+    },
+    "nameservers": [
+        "ldnsse1p.e-i.net",
+        "ldnsse2p.e-i.net",
+        "ldnsie1p.e-i.net",
+        "ldnsie2p.e-i.net"
+    ]
+}

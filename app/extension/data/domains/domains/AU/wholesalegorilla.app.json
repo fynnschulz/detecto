@@ -1,0 +1,104 @@
+{
+    "domain": "wholesalegorilla.app",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "wholesalegorilla\\.app\\/shop_assets\\/wsg-index\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "520113d570e3da1129304f40a6338826468b1a06a0b6bb2907766f86f11dd7ce"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "threadcollective.com.au",
+                "www.threeworlds.com.au"
+            ]
+        },
+        {
+            "rule": "wholesalegorilla\\.app\\/shop_assets\\/wsg-exclusions\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0ce5f85cdfcce0b5a9aff70e1f9569e3597283632cd62ba1cfb01c48c23d6062"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "threadcollective.com.au",
+                "www.threeworlds.com.au"
+            ]
+        },
+        {
+            "rule": "wholesalegorilla\\.app\\/proxy\\/basic-shop-info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0f5e6973887d6f7a85fedad448ddb6f7bec3361f3a42f6fe4584c4c5187cc58b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "threadcollective.com.au",
+                "www.threeworlds.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "roxy.ns.cloudflare.com",
+        "vick.ns.cloudflare.com"
+    ]
+}

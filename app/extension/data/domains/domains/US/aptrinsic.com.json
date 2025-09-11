@@ -1,0 +1,399 @@
+{
+    "domain": "aptrinsic.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000144,
+    "sites": 21,
+    "subdomains": [
+        "web-sdk",
+        "web-sdk-us2",
+        "esp",
+        "esp-us2"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "aptrinsic\\.com\\/api\\/aptrinsic\\.js",
+            "cookies": 0.000123,
+            "fingerprinting": 2,
+            "subdomains": [
+                "web-sdk",
+                "web-sdk-us2"
+            ],
+            "apis": {
+                "window.localStorage": 18,
+                "Document.cookie getter": 18,
+                "Navigator.prototype.userAgent": 18,
+                "window.sessionStorage": 18,
+                "Navigator.prototype.platform": 18,
+                "Date.prototype.getTime": 18,
+                "Document.cookie setter": 18,
+                "window.innerHeight": 18,
+                "window.innerWidth": 18
+            },
+            "sites": 18,
+            "prevalence": 0.000123,
+            "cnames": [],
+            "responseHashes": [
+                "01e274980eb5baed2ea9c4673e98be15fe8b785b1ebdbe36ad4de6c93f8c7c00",
+                "e789418976ca5763516e072540e976d68a8cb88f9e00a098b8875d33d3c35c2d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "apt.uid": {
+                    "ttl": 31536005,
+                    "length": 50,
+                    "prevalence": 0.00008893145437132303,
+                    "uniqueness": 1
+                },
+                "apt.sid": {
+                    "ttl": 1806,
+                    "length": 40,
+                    "prevalence": 0.00008893145437132303,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ballastshop.com",
+                "community.docusign.com",
+                "community.f5.com",
+                "danasafetysupply.com",
+                "experienceleaguecommunities.adobe.com",
+                "geospatial.trimble.com",
+                "help.sketchup.com",
+                "my.f5.com",
+                "sketchup.trimble.com",
+                "static.practicefusion.com",
+                "student.naviance.com",
+                "techdocs.f5.com",
+                "www.fossilera.com",
+                "www.gradescope.com",
+                "www.ledsupply.com",
+                "www.partssource.com",
+                "www.riverview.org",
+                "www.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/configuration\\/AP-7KSJ96CLI4DB-2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "ead2525bb9a1dcd0866062367de9cbbae289d9552fa1b8e5da94da0db40def26"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ballastshop.com",
+                "danasafetysupply.com",
+                "www.fossilera.com",
+                "www.ledsupply.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-sdk",
+                "web-sdk-us2"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.000123,
+            "cnames": [],
+            "responseHashes": [
+                "60ec4783f17368f6f08562b73fe100097a1735289a9de3f154ff98062b6ad7b5"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ballastshop.com",
+                "community.docusign.com",
+                "community.f5.com",
+                "danasafetysupply.com",
+                "experienceleaguecommunities.adobe.com",
+                "geospatial.trimble.com",
+                "help.sketchup.com",
+                "my.f5.com",
+                "sketchup.trimble.com",
+                "static.practicefusion.com",
+                "student.naviance.com",
+                "techdocs.f5.com",
+                "www.fossilera.com",
+                "www.gradescope.com",
+                "www.ledsupply.com",
+                "www.partssource.com",
+                "www.riverview.org",
+                "www.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/command",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp",
+                "esp-us2"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.000123,
+            "cnames": [],
+            "responseHashes": [
+                "3431d1fa6f5f9e802c75fe6c01c6fbf87027d0fa3a4059c416b7bfd8bbd5a8c9",
+                "1b5c8e4aa21c6728834dc970af2fd2965a06303e029876f145602df505e2e992",
+                "c7b6fc803d1d761e048c5967411cbfaa326df813915344ebf455b7be0a5fae8b",
+                "fe10c24709a475968618597b9ba7b86d9dfb1a2e86c4250ebd780fbda3ea26fe",
+                "4a6feb193799b4f729f1b4e2434a26382d48b85b8f37efe8a7563785227fad24",
+                "44eecfe6637785d3671f1423cd1a6dd1fd82cd71b5cfb22590fc97e3132af37f",
+                "5d291d566df39bbd84ac452d977b82c4ffc424891c3d9cf2a7e0785b1c5fe0dc",
+                "5cb9e96a24316c92d7ac5c526d7332e00117a2c6863c7fff5dc3c0a08acd30ed",
+                "415a8015cd98a846172c8ba9acbdcd5916686b70621611775f7ef15332ec95c5",
+                "ca5abb0f6ef09d5cc88d12689b5de9f85c319ffcf3b340bbd59dd8707d505837",
+                "14f4f5ef653b4873aa3c39f6faafe410387451bd7d1b9d26136b1213f85177c4",
+                "18cb007456173c427d89625ec5e6336a5555098f22545d79d3f7a0e56e2be976",
+                "8fc8095330f7ef56c50c643119bfece6119e470224f8a2691f1e29b655412cd0",
+                "a371c3e573c040097a39d2592f3ddf7048facead1bd6267f71aa4cfdc55c4c4a",
+                "d058aedc41a08e9b2478312495a8008748795d36a9f67f9f80661e35ed27b006",
+                "a364812d1ee02c529152e65bc31a2044d22ce0c20a4a91d87d548fca7bf6b544",
+                "e8b7509f72091bd118632019f4275d3c61ea2fc83c1d0898d59b30e096aa186a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apt.sid": 0.00007524969216035026
+            },
+            "exampleSites": [
+                "ballastshop.com",
+                "community.docusign.com",
+                "community.f5.com",
+                "danasafetysupply.com",
+                "experienceleaguecommunities.adobe.com",
+                "geospatial.trimble.com",
+                "help.sketchup.com",
+                "my.f5.com",
+                "sketchup.trimble.com",
+                "static.practicefusion.com",
+                "student.naviance.com",
+                "techdocs.f5.com",
+                "www.fossilera.com",
+                "www.gradescope.com",
+                "www.ledsupply.com",
+                "www.partssource.com",
+                "www.riverview.org",
+                "www.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/api\\/v1\\/feature\\/client",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp",
+                "esp-us2"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.000123,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "6978f746c7db3167f05097296d88feff7fd67c62ba73b996ba9f3aabcba6a238",
+                "b96f504431c6585bf65d8cb6f08b4019e3328fc3a37cf7ec96258b3f5f40db25",
+                "6cc59a7b772db1cf7c91af1eb6aead29179cf6da2801bcb947f0215c4db39900",
+                "773ae842c2bb612fc7cb955f3330c9f00e57900f31e6247da8a15840416a7a72",
+                "2b137d0770c9a0103cf63183fe7011ed71437551c1a57ee9295c5fe946ea468d",
+                "98e6e61a737f2c7b1f0ec9526839d0906730b1b450decbb6dd2c070a7bc57f01",
+                "8074086b4fbeb188022eeb5aa17613f37313b1f4eff97437eeb943ef6c45dfc8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apt.sid": 0.00007524969216035026
+            },
+            "exampleSites": [
+                "ballastshop.com",
+                "community.docusign.com",
+                "community.f5.com",
+                "danasafetysupply.com",
+                "experienceleaguecommunities.adobe.com",
+                "geospatial.trimble.com",
+                "help.sketchup.com",
+                "my.f5.com",
+                "sketchup.trimble.com",
+                "static.practicefusion.com",
+                "student.naviance.com",
+                "techdocs.f5.com",
+                "www.fossilera.com",
+                "www.gradescope.com",
+                "www.ledsupply.com",
+                "www.partssource.com",
+                "www.riverview.org",
+                "www.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v3\\/kc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apt.sid": 0.00004104528663291832
+            },
+            "exampleSites": [
+                "ballastshop.com",
+                "community.f5.com",
+                "danasafetysupply.com",
+                "www.fossilera.com",
+                "www.ledsupply.com",
+                "www.riverview.org"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/inapp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp",
+                "esp-us2"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.000123,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apt.sid": 0.00008209057326583664
+            },
+            "exampleSites": [
+                "ballastshop.com",
+                "community.docusign.com",
+                "community.f5.com",
+                "danasafetysupply.com",
+                "experienceleaguecommunities.adobe.com",
+                "geospatial.trimble.com",
+                "help.sketchup.com",
+                "my.f5.com",
+                "sketchup.trimble.com",
+                "static.practicefusion.com",
+                "student.naviance.com",
+                "techdocs.f5.com",
+                "www.fossilera.com",
+                "www.gradescope.com",
+                "www.ledsupply.com",
+                "www.partssource.com",
+                "www.riverview.org",
+                "www.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/configuration\\/AP-UNM677VB2XAD-2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "acf570aa687d88bde3043209f01b1304c490788f5ec1538faef47a27eb004cda"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sketchup.com",
+                "sketchup.trimble.com",
+                "www.trimble.com"
+            ]
+        },
+        {
+            "rule": "aptrinsic\\.com\\/rte\\/v1\\/configuration\\/AP-NITRFA1GYZ8C-2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "esp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "0710464dfdec536c44df4b2dd222172ccdc610340e1c5c9f33907d6b7313b773"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "f5.com",
+                "my.f5.com",
+                "techdocs.f5.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000144,
+    "topInitiators": [
+        {
+            "domain": "hiverhq.com",
+            "prevalence": 0.625
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3392857142857143
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.017857142857142856
+        },
+        {
+            "domain": "trimble.com",
+            "prevalence": 0.008928571428571428
+        },
+        {
+            "domain": "fullstory.com",
+            "prevalence": 0.008928571428571428
+        }
+    ],
+    "types": {
+        "Script": 18,
+        "XHR": 70,
+        "Stylesheet": 18
+    },
+    "nameservers": [
+        "ns33.domaincontrol.com",
+        "ns34.domaincontrol.com"
+    ]
+}

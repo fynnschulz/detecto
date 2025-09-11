@@ -1,0 +1,153 @@
+{
+    "domain": "us-east-2.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000812,
+    "sites": 8,
+    "subdomains": [
+        "kinesis",
+        "firehose",
+        "cognito-identity",
+        "9kvu81ddh3.execute-api"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kinesis",
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "458dc4da76c1b527b7693d15c79dadb1af76a00700433872a7b50c4dddd5c969",
+                "5c8313798c048daa1c4e7c2f626e64c075e54763865850c184d3f0f13de8ce47",
+                "1caafc284df0800267a95743f200f038c76b4dde6b38d262c4cc23be99a11ec7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goodmenproject.com",
+                "songmeanings.com",
+                "www.pravda.com.ua",
+                "www.zleague.gg"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kinesis",
+                "cognito-identity",
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goodmenproject.com",
+                "songmeanings.com",
+                "woodbine.com",
+                "www.pravda.com.ua",
+                "www.zleague.gg"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/prod\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "9kvu81ddh3.execute-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "collingwoodtoday.ca",
+                "www.guelphtoday.com",
+                "www.newmarkettoday.ca"
+            ]
+        },
+        {
+            "rule": "us-east-2\\.amazonaws\\.com\\/prod\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "9kvu81ddh3.execute-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "912d0c07da7bdb22cdae025b96da26d01523aaab7362edb28544e3949deb369d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "collingwoodtoday.ca",
+                "www.guelphtoday.com",
+                "www.newmarkettoday.ca"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "membrana.media",
+            "prevalence": 0.4375
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.375
+        },
+        {
+            "domain": "mailchimp.com",
+            "prevalence": 0.1875
+        }
+    ],
+    "types": {
+        "Fetch": 7,
+        "Preflight": 8
+    },
+    "nameservers": [
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.com",
+        "ns2.amzndns.org",
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns1.amzndns.net"
+    ]
+}

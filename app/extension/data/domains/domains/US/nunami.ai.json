@@ -1,0 +1,104 @@
+{
+    "domain": "nunami.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "t",
+        "p",
+        "r"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "nunami\\.ai\\/recova_client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {
+                "window.localStorage": 6,
+                "window.sessionStorage": 6
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "a218fb2d1d7380d17bfe8e8960e5cd0ca51368fb6b8ed5713eb385050236ef7d",
+                "eaf46d77ad4268178250a895b0330324106f5df5099c3d149880f359cbf540aa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "conrad.de",
+                "forme.science",
+                "www.conrad.de",
+                "www.damart.co.uk",
+                "www.ninjakitchen.de",
+                "www.protyre.co.uk",
+                "www.schuhcenter.de"
+            ]
+        },
+        {
+            "rule": "nunami\\.ai\\/redirect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p",
+                "r"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "051ced7ec7acc0e26a4e29f1dd3fd629f64be37b71577559a756b3c6eae0c316",
+                "715d28d3e815231276e11a5ab48d2240fa2321160837c16009b288e810af22c7",
+                "8bd7773acd7776193ed1634fa2416bd6d3086723d7de7aaa1c4d447b288485e1",
+                "7726b806a26e83a43bfb519b06037346cd20ebc7c259be00bd5160dcac63d6ee",
+                "bf7875d00e72d3d0947de5c39f15ea5a11f876d2f9ad145987a940238c205aa7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "AwinChannelCookie": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "conrad.de",
+                "forme.science",
+                "www.conrad.de",
+                "www.damart.co.uk",
+                "www.ninjakitchen.de",
+                "www.protyre.co.uk",
+                "www.schuhcenter.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "dwin1.com",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Fetch": 7
+    },
+    "nameservers": [
+        "dns1.registrar-servers.com",
+        "dns2.registrar-servers.com"
+    ]
+}

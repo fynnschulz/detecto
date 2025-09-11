@@ -1,0 +1,124 @@
+{
+    "domain": "cpmstar.com",
+    "owner": {
+        "name": "Tactics Network, LLC",
+        "displayName": "Tactics Network"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "server",
+        "ssl.cdne"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "cpmstar\\.com\\/view\\.aspx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mydramalist.com",
+                "www.iplocation.net"
+            ]
+        },
+        {
+            "rule": "cpmstar\\.com\\/view\\.aspx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "81fa0bd89df6503f374b16b4f1d39ecf73e3660b55591bf9d15a90d19b36a202"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "playclassic.games",
+                "www.mobafire.com"
+            ]
+        },
+        {
+            "rule": "cpmstar\\.com\\/cached\\/zonemasters\\/mobilemodules\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ssl.cdne"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "Date.prototype.getTime": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e9b1141aca43d36717507f5a80365189d4062a5425e13e1b0a21f6308e18e8c7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tracker.network",
+                "www.mobafire.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "aditude.io",
+            "prevalence": 0.4166666666666667
+        },
+        {
+            "domain": "adpushup.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "trackercdn.com",
+            "prevalence": 0.08333333333333333
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Script": 4
+    },
+    "nameservers": [
+        "ns-1725.awsdns-23.co.uk",
+        "ns-617.awsdns-13.net",
+        "ns-142.awsdns-17.com",
+        "ns-1521.awsdns-62.org"
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "domain": "geberit.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "login-eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "geberit\\.com\\/sdk\\.config\\.get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0bbe160cd5d9442f2078b9bd3f901cbca0ad07fbd82510044a16e67605e982a5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geberit.nl",
+                "www.geberit.nl"
+            ]
+        },
+        {
+            "rule": "geberit\\.com\\/js\\/sso\\.htm",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "login-eu"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "449c57873bf0a45afb76910e0fdfdf21600fd0df8af68ac04677d4d5c63197f0"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geberit.nl",
+                "www.geberit.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Document": 2
+    },
+    "nameservers": [
+        "ns.geberit.de",
+        "ns.geberit.ch",
+        "ns-geberit.is-fun.net"
+    ]
+}

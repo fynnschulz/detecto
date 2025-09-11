@@ -1,0 +1,153 @@
+{
+    "domain": "ingest-lr.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "cdn",
+        "r"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "ingest-lr\\.com\\/logger-1\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "window.sessionStorage": 6,
+                "window.localStorage": 6,
+                "URL.createObjectURL": 6,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.appVersion": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Performance.prototype.memory": 2
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "a3b30d7005f1e26e846ba279f4800c1d07d700191a71102f07bd1bc7dabbd43a",
+                "09150b3a1dd3eb6ae06caad851b420ba886e5bd65a93ac8923a1db0ad73eef21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_lr_tabs_-swqe6j%2Fauctioneer-software": {
+                    "ttl": 86410,
+                    "length": 204,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_lr_hb_-swqe6j%2Fauctioneer-software": {
+                    "ttl": 86408,
+                    "length": 31,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_lr_tabs_-zvhuxj%2Ftendaenlinea": {
+                    "ttl": 86405,
+                    "length": 204,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_lr_hb_-zvhuxj%2Ftendaenlinea": {
+                    "ttl": 86404,
+                    "length": 31,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rippling.com",
+                "bids.aumannauctions.com",
+                "www.auctionohio.com",
+                "www.bidnow.us",
+                "www.chedraui.com.mx",
+                "www.marshallbid.com"
+            ]
+        },
+        {
+            "rule": "ingest-lr\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "r"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aumannauctions.com",
+                "www.chedraui.com.mx"
+            ]
+        },
+        {
+            "rule": "ingest-lr\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "r"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f4536be2d13577a57d04844e7f5ffe79ecb3436eb19a745544f14db40e5a7d25"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aumannauctions.com",
+                "www.chedraui.com.mx"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.625
+        },
+        {
+            "domain": "ripplingcdn.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "d3oty47m4rtfus.cloudfront.net",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Preflight": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "dan.ns.cloudflare.com",
+        "rita.ns.cloudflare.com"
+    ]
+}

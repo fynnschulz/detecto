@@ -1,0 +1,94 @@
+{
+    "domain": "rvu.co.uk",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "fusion-id"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "rvu\\.co\\.uk\\/client\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "fusion-id"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "d4b00253191c23369f6e763e9fc10b836bb0460585dc9e6c24af26195fa3084f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "rvu_device_id": {
+                    "ttl": 48658136627,
+                    "length": 7,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uswitch.com",
+                "www.money.co.uk",
+                "www.uswitch.com"
+            ]
+        },
+        {
+            "rule": "rvu\\.co\\.uk\\/",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fusion-id"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "4ee9ecac8f6f7a2d6f8678c4148a4a25b5f18a906c4bace8bc45d7d661b76d3e",
+                "faa67afc82894856f69ae2e1e1756acd8dbc55dd140c63afad5c6d940b691253"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uswitch.com",
+                "www.money.co.uk",
+                "www.uswitch.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "ns1-06.azure-dns.com",
+        "ns2-06.azure-dns.net",
+        "ns4-06.azure-dns.info",
+        "ns3-06.azure-dns.org"
+    ]
+}

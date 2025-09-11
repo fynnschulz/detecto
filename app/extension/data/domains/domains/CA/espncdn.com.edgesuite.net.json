@@ -1,0 +1,147 @@
+{
+    "domain": "espncdn.com.edgesuite.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000508,
+    "sites": 5,
+    "subdomains": [
+        "secure",
+        "a1"
+    ],
+    "cnames": [
+        {
+            "original": "a1.espncdn.com",
+            "resolved": "a1.espncdn.com.edgesuite.net"
+        },
+        {
+            "original": "secure.espn.com",
+            "resolved": "secure.espncdn.com.edgesuite.net"
+        },
+        {
+            "original": "secure.espncdn.com",
+            "resolved": "secure.espncdn.com.edgesuite.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "espncdn\\.com\\.edgesuite\\.net\\/i\\/espnicons\\/Symbol_Defs--v45\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "secure.espncdn.com",
+                    "resolved": "secure.espncdn.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "58e528dc18312bd18a71033410044743ccf6976c72e470e5d48df4d16e62db08"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "go.com",
+                "abc.com"
+            ]
+        },
+        {
+            "rule": "espncdn\\.com\\.edgesuite\\.net\\/js\\/dcf\\/tags\\/vision\\/latest\\/vision-media\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "secure"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [
+                {
+                    "original": "secure.espn.com",
+                    "resolved": "secure.espncdn.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "55a9c027b03c3e2d8247578cabd92668fedfc09b4c73eaafc138121ed013b746"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "go.com",
+                "abc.com",
+                "www.marvel.com",
+                "www.nationalgeographic.com"
+            ]
+        },
+        {
+            "rule": "espncdn\\.com\\.edgesuite\\.net\\/combiner\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "a1.espncdn.com",
+                    "resolved": "a1.espncdn.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "79237edbceccf88defaf100f47760d88eb1fc24607f4753ae138e1f7424d0d2b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.com",
+                "www.espn.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.918918918918919
+        },
+        {
+            "domain": "espncdn.com",
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.02702702702702703
+        }
+    ],
+    "types": {
+        "XHR": 2,
+        "Script": 4,
+        "Image": 2
+    },
+    "nameservers": []
+}

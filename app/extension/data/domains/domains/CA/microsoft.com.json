@@ -1,0 +1,467 @@
+{
+    "domain": "microsoft.com",
+    "owner": {
+        "name": "Microsoft Corporation",
+        "displayName": "Microsoft",
+        "privacyPolicy": "https://privacy.microsoft.com/en-us/privacystatement",
+        "url": "http://microsoft.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.00579,
+    "sites": 57,
+    "subdomains": [
+        "browser.events.data",
+        "mobile.events.data",
+        "us-mobile.events.data",
+        "noam.events.data",
+        "edge-auth",
+        "wcpstatic",
+        "browser.pipe.aria",
+        "copilotstudio",
+        "csp",
+        "get",
+        "minecraftprivacy"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0.000609,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.events.data",
+                "mobile.events.data",
+                "us-mobile.events.data",
+                "noam.events.data"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00122,
+            "cnames": [],
+            "responseHashes": [
+                "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58",
+                "cde29f11345d261b0704b1ea2dcf40a4702c920c46adb096dcd7d0ef3cb864df",
+                "ec4674ab124eae3b2c3fe31d5d342ee0dc293fd0d2d47f622c547037bb2c1c47",
+                "b4e2bb7c58f3c4c20d731b53dd9961b629ce37b7abed6b62ba6c1b546f82f524",
+                "25847a18a7607d7d32f72b0163e51b2a33b675c4e6418ec1a0be3b647c394cad",
+                "326567626194edfb7173cd582dbf0270085d5cb8df53a688deb2d2d76078076f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aircanada.ca",
+                "cfmws.ca",
+                "clipchamp.com",
+                "eservices.canada.ca",
+                "one.rbc.com",
+                "register.cpso.on.ca",
+                "support.sasktel.com",
+                "uozone2.uottawa.ca",
+                "www.canex.ca",
+                "www.minecraft.net",
+                "www.mnp.ca",
+                "www.trekbikes.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.events.data",
+                "mobile.events.data",
+                "us-mobile.events.data",
+                "noam.events.data"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00112,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aircanada.ca",
+                "cfmws.ca",
+                "clipchamp.com",
+                "eservices.canada.ca",
+                "one.rbc.com",
+                "register.cpso.on.ca",
+                "support.sasktel.com",
+                "uozone2.uottawa.ca",
+                "www.canex.ca",
+                "www.minecraft.net",
+                "www.mnp.ca"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/js\\/ms_auth_client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "edge-auth"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 20,
+                "window.localStorage": 20,
+                "window.sessionStorage": 20,
+                "window.indexedDB": 20
+            },
+            "sites": 29,
+            "prevalence": 0.00294,
+            "cnames": [],
+            "responseHashes": [
+                "33cc6e61cbb1addafa75cc8ed40216823ee7e50631bb8d2b71eda77ca81a77f3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "driving.ca",
+                "calgarysun.com",
+                "www.stratfordbeaconherald.com",
+                "ottawasun.com",
+                "www.timminspress.com",
+                "www.owensoundsuntimes.com",
+                "www.brantfordexpositor.ca",
+                "tj.news",
+                "calgaryherald.com",
+                "ottawacitizen.com",
+                "www.saltwire.com",
+                "www.thewhig.com",
+                "canoe.com",
+                "www.nugget.ca",
+                "www.thesudburystar.com",
+                "vancouversun.com",
+                "leaderpost.com",
+                "financialpost.com",
+                "edmontonjournal.com",
+                "windsorstar.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/v0\\.5\\/signinprompt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge-auth"
+            ],
+            "apis": {},
+            "sites": 21,
+            "prevalence": 0.00213,
+            "cnames": [],
+            "responseHashes": [
+                "209ae4d12f6e10295f76f35ff1ab33a068e1e97ede4300f46124300804c92dcf",
+                "0b0295c77aa93e7377460fd0a5e498af4edc17b6214e25856bdd2a34987995a6",
+                "f6e48249139605166d7fa0a5bb830b6185f1e331e3292358f68c0ea459c4fdf6",
+                "19a8a4c7312b533fd289412e8b87cca06b23e976d2bfa830e56007a82e40c82e",
+                "73fc0464d3ab163d51433ba0140218f90011b97115b8e38e65c7675af07bca7f",
+                "bc4bb4c22d94d1d3e4f3c803d9cfa16ceb3559c751b5d9ae727fb127f8079a90",
+                "8f9bc4b18548acbc181366b898782c21ed620b4741965d22b2ebfcd68e9101e3",
+                "5c6479d0e0cbaefd93c22d74efde6a040d1831a1c6eb4e59230325526fe448f4",
+                "4022a85ad6e85f604a11d5e66761da921f43b1603fb20666ab183db998fcb7ad",
+                "4624e365c59081b7a66a2837b598731efda6ae8ee31ab5889907755e6dd4c8e4"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tj.news",
+                "driving.ca",
+                "ottawasun.com",
+                "theprovince.com",
+                "lfpress.com",
+                "windsorstar.com",
+                "edmontonsun.com",
+                "canoe.com",
+                "winnipegsun.com",
+                "leaderpost.com",
+                "edmontonjournal.com",
+                "thestarphoenix.com",
+                "www.thesudburystar.com",
+                "calgarysun.com",
+                "www.owensoundsuntimes.com",
+                "vancouversun.com",
+                "torontosun.com",
+                "calgaryherald.com",
+                "nationalpost.com",
+                "ottawacitizen.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/mscc\\/lib\\/v2\\/wcp-consent\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wcpstatic"
+            ],
+            "apis": {
+                "Document.cookie getter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "c688d3f2135b6b51617a306a0b1a665324402a00a6bceba475881af281503ad9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clipchamp.com",
+                "community.powerplatform.com",
+                "microsoft.github.io",
+                "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/v0\\.5\\/js\\/ms_auth_server_button\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge-auth"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.00142,
+            "cnames": [],
+            "responseHashes": [
+                "30e04b0327c493e1908f631a846432f500e47426ecc0fdc22206eae547e63229"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "driving.ca",
+                "edmontonjournal.com",
+                "edmontonsun.com",
+                "leaderpost.com",
+                "lfpress.com",
+                "nationalpost.com",
+                "ottawacitizen.com",
+                "ottawasun.com",
+                "thestarphoenix.com",
+                "torontosun.com",
+                "vancouversun.com",
+                "winnipegsun.com",
+                "www.owensoundsuntimes.com",
+                "www.thesudburystar.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.pipe.aria"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000711,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "exo.quebec",
+                "my.clevelandclinic.org",
+                "www.airnewzealand.ca",
+                "www.cyberpowersystems.com",
+                "www.lethbridge.ca",
+                "www.stm.info",
+                "www.toastmasters.org"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/environments\\/5b416c87-4097-ec59-b5f3-07e86cd704f0\\/bots\\/cr6ef_customerSupportBot\\/webchat",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "copilotstudio"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "ab48437b12f5c51340c634cac78fe7edf73c1ffc2e1ce253570cf8eef1aaa4d0"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sasktel.com",
+                "support.sasktel.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/report\\/PPUX-Hosting",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sasktel.com",
+                "support.sasktel.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/badge\\/ms-store-badge\\.bundled\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "get"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.language": 2,
+                "NavigatorUAData.prototype.brands": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "88da0b58e446ff617565bcf98858d29af6cc41f9ffdb6053df24fa6ec4e49c7b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vsco.co",
+                "www.vsco.co"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "get",
+                "minecraftprivacy"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "6dfd186c43cbea124a698f3e42afaf5cdf7bbf720dfb52403315fca839279e08",
+                "e4172122f898917039bf00d1f14ca39d42da109c83c0d74ce8ffe9b2cb5bac8c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vsco.co",
+                "www.minecraft.net",
+                "www.vsco.co"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/images\\/en-us%20light\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "get"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "99a73f61a0dd72dbfffb1645abdbae142ebb8df4fc2aaf6901309944359cb8d2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vsco.co",
+                "www.vsco.co"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000609,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4067796610169492
+        },
+        {
+            "domain": "postmedia.digital",
+            "prevalence": 0.17796610169491525
+        },
+        {
+            "domain": "azureedge.net",
+            "prevalence": 0.17796610169491525
+        },
+        {
+            "domain": "powerapps.com",
+            "prevalence": 0.059322033898305086
+        },
+        {
+            "domain": "p-airnz.com",
+            "prevalence": 0.059322033898305086
+        },
+        {
+            "domain": "windows.net",
+            "prevalence": 0.025423728813559324
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.025423728813559324
+        },
+        {
+            "domain": "msauth.net",
+            "prevalence": 0.01694915254237288
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.01694915254237288
+        },
+        {
+            "domain": "msftauth.net",
+            "prevalence": 0.00847457627118644
+        }
+    ],
+    "types": {
+        "XHR": 19,
+        "Preflight": 11,
+        "Script": 49,
+        "Document": 26,
+        "Other": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns4-39.azure-dns.info",
+        "ns1-39.azure-dns.com",
+        "ns3-39.azure-dns.org",
+        "ns2-39.azure-dns.net"
+    ]
+}

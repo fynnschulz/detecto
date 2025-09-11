@@ -1,0 +1,137 @@
+{
+    "domain": "thoughtmetric.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "pixel",
+        "data"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "thoughtmetric\\.io\\/tmpixel\\.min\\.js",
+            "cookies": 0.0000342,
+            "fingerprinting": 3,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {
+                "window.localStorage": 5,
+                "Document.cookie getter": 5,
+                "window.sessionStorage": 5,
+                "Date.prototype.getTime": 6,
+                "Document.cookie setter": 5,
+                "Navigator.prototype.vendor": 6,
+                "OfflineAudioContext.prototype.constructor": 6,
+                "Screen.prototype.availTop": 6,
+                "Screen.prototype.width": 6,
+                "Screen.prototype.availWidth": 6,
+                "Screen.prototype.availLeft": 6,
+                "Screen.prototype.height": 6,
+                "Screen.prototype.availHeight": 6,
+                "AudioBuffer.prototype.getChannelData": 6,
+                "Navigator.prototype.language": 6,
+                "Navigator.prototype.languages": 6,
+                "Screen.prototype.colorDepth": 6,
+                "Navigator.prototype.deviceMemory": 5,
+                "Navigator.prototype.hardwareConcurrency": 6,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 6,
+                "window.indexedDB": 6,
+                "Navigator.prototype.platform": 6,
+                "Navigator.prototype.plugins": 6,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 6,
+                "HTMLCanvasElement.prototype.toDataURL": 6,
+                "Navigator.prototype.maxTouchPoints": 6,
+                "Navigator.prototype.userAgent": 6
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "b39d5288f6f52f128e240b84b65e233b1a4fa13d1238b4e6f485c3554c8f5469"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__thoughtmetric_uid": {
+                    "ttl": 63072003,
+                    "length": 36,
+                    "prevalence": 0.000034204405527431934,
+                    "uniqueness": 1
+                },
+                "cookietest": {
+                    "ttl": -1755340385,
+                    "length": 1,
+                    "prevalence": 0.000034204405527431934,
+                    "uniqueness": 0.2
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbioffroadfab.com",
+                "kifaru.net",
+                "www.clearbags.com",
+                "www.elyxr.com",
+                "www.homewizard.com",
+                "www.sportrx.com",
+                "www.theceshop.com"
+            ]
+        },
+        {
+            "rule": "thoughtmetric\\.io\\/d",
+            "cookies": 0.000041,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__thoughtmetric_uid": 0.000034204405527431934,
+                "_fbp": 0.000027363524421945548,
+                "IR_gbd": 0.000006840881105486387,
+                "_li_dcdm_c": 0.000006840881105486387
+            },
+            "exampleSites": [
+                "cbioffroadfab.com",
+                "kifaru.net",
+                "www.clearbags.com",
+                "www.elyxr.com",
+                "www.homewizard.com",
+                "www.sportrx.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000547,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Ping": 6
+    },
+    "nameservers": [
+        "nitin.ns.cloudflare.com",
+        "love.ns.cloudflare.com"
+    ]
+}

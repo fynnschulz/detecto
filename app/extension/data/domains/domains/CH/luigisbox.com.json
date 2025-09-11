@@ -1,0 +1,172 @@
+{
+    "domain": "luigisbox.com",
+    "owner": {
+        "name": "Luigi's Box, s.r.o.",
+        "displayName": "Luigi's Box"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000603,
+    "sites": 6,
+    "subdomains": [
+        "cdn",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "luigisbox\\.com\\/autocomplete\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 3,
+                "Date.prototype.getTime": 3,
+                "window.innerHeight": 3,
+                "window.innerWidth": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "4d71f26a19d97d221a944525e6796980e679477cfd2823334aa85b41ea97f102"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dopplerschirme.com",
+                "www.grillfuerst.de",
+                "www.vbs-hobby.ch"
+            ]
+        },
+        {
+            "rule": "luigisbox\\.com\\/autocomplete\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "87a632e50f8c1be0cb2b8517d97196de479192eb953983db2558df3ade231fc1"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dopplerschirme.com",
+                "www.grillfuerst.de",
+                "www.vbs-hobby.ch"
+            ]
+        },
+        {
+            "rule": "luigisbox\\.com\\/search\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.product": 2,
+                "window.innerHeight": 2,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0085b7b1fcc841d6b3aaea61953de420fadd292af1ceae2fe367fe7fb20b1cd8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dopplerschirme.com",
+                "www.grillfuerst.de"
+            ]
+        },
+        {
+            "rule": "luigisbox\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "7d357b0ef1f85ba71c5ccebb6671b0c34f4b3950f5b21d2af7b4a3d4e9dcd570"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dopplerschirme.com",
+                "www.11teamsports.com",
+                "www.grillfuerst.de",
+                "www.notino.ch",
+                "www.vbs-hobby.ch"
+            ]
+        },
+        {
+            "rule": "luigisbox\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dopplerschirme.com",
+                "www.11teamsports.com",
+                "www.grillfuerst.de",
+                "www.notino.ch",
+                "www.vbs-hobby.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000502,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9166666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.08333333333333333
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Stylesheet": 3,
+        "XHR": 5,
+        "Preflight": 5
+    },
+    "nameservers": [
+        "ns-1212.awsdns-23.org",
+        "ns-649.awsdns-17.net",
+        "ns-1856.awsdns-40.co.uk",
+        "ns-72.awsdns-09.com"
+    ]
+}

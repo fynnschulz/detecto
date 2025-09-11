@@ -1,0 +1,142 @@
+{
+    "domain": "exchangesolutions.com",
+    "owner": {
+        "name": "Exchange Solutions Inc.",
+        "displayName": "Exchange Solutions"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000305,
+    "sites": 3,
+    "subdomains": [
+        "rona-esengage.live",
+        "staplesca-esengage.live",
+        "rona-ca-api.live"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "exchangesolutions\\.com\\/v4\\/esRd-min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rona-esengage.live",
+                "staplesca-esengage.live"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "1e61d0017e6024e8281201c0a619132dbad370ecafc909683462ddcb4ea3b2ab",
+                "b17ab3f3b43fcfeebc70dd2c5dc98ee96f1b34bd8b3e6f7b3f1f3aadb0cb61fb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rona.ca",
+                "www.bureauengros.com",
+                "www.rona.ca"
+            ]
+        },
+        {
+            "rule": "exchangesolutions\\.com\\/v4\\/esStyles-min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rona-esengage.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "0ba52c7e71b1567b2ebaa92483e02fba3721f14b52f69b0fe2b3c17e767d16ad"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rona.ca",
+                "www.rona.ca"
+            ]
+        },
+        {
+            "rule": "exchangesolutions\\.com\\/ronaprod-engage\\/api\\/client\\/rona\\.web\\.ronaca\\/sessions\\/current",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rona-ca-api.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "b8acffa74ad26f8ce1c9f300d14d0b90843854350b551f7b3603a7dacfbca51c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rona.ca",
+                "www.rona.ca"
+            ]
+        },
+        {
+            "rule": "exchangesolutions\\.com\\/ronaprod-engage\\/api\\/client\\/rona\\.web\\.ronaca\\/sessions\\/current",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rona-ca-api.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rona.ca",
+                "www.rona.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "quantummetric.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Stylesheet": 2,
+        "Fetch": 2,
+        "Preflight": 2
+    },
+    "nameservers": [
+        "ns-1251.awsdns-28.org",
+        "ns-6.awsdns-00.com",
+        "ns-1746.awsdns-26.co.uk",
+        "ns-536.awsdns-03.net"
+    ]
+}

@@ -1,0 +1,203 @@
+{
+    "domain": "framer.com",
+    "owner": {
+        "name": "Motif Tools B.V.",
+        "displayName": "Motif Tools"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000502,
+    "sites": 5,
+    "subdomains": [
+        "events",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "framer\\.com\\/script",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 5,
+                "Date.prototype.getTime": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "969cf266dd38b3c86f62034e4bd0fb9e0604064ec82494e8176731a76b9670c4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mybabes.ai",
+                "transitapp.com",
+                "www.legacy.com",
+                "www.neon-free.ch",
+                "www.simply-onno.com"
+            ]
+        },
+        {
+            "rule": "framer\\.com\\/anonymous",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mybabes.ai",
+                "landing.mybabes.ai",
+                "transitapp.com",
+                "www.legacy.com",
+                "www.neon-free.ch",
+                "www.simply-onno.com"
+            ]
+        },
+        {
+            "rule": "framer\\.com\\/edit\\/init\\.mjs",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.maxTouchPoints": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.platform": 5,
+                "window.localStorage": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "f4b71ebb7b60db27841a0ebeabfaa162ddedaa459fbc94ebf64a5f281bebbc2a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mybabes.ai",
+                "transitapp.com",
+                "www.legacy.com",
+                "www.neon-free.ch",
+                "www.simply-onno.com"
+            ]
+        },
+        {
+            "rule": "framer\\.com\\/edit",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "window.localStorage": 4,
+                "window.matchMedia(\"prefers-color-scheme\")": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "24519497e98695d0fe57572e81296c45ba019ca014880af4e4e916ae7e1aedf8"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mybabes.ai",
+                "transitapp.com",
+                "www.legacy.com",
+                "www.neon-free.ch",
+                "www.simply-onno.com"
+            ]
+        },
+        {
+            "rule": "framer\\.com\\/bootstrap\\.a44d8cf3a1d3321f13d3cc42d68ddcc994c376d6\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "4eb58faabae9aea8c5d4a0cb95c3b7a7b208a7c8e37e33897f2061b6b40151c4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mybabes.ai",
+                "transitapp.com",
+                "www.legacy.com",
+                "www.neon-free.ch",
+                "www.simply-onno.com"
+            ]
+        },
+        {
+            "rule": "framer\\.com\\/auth\\/web\\/access-token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mybabes.ai",
+                "transitapp.com",
+                "www.legacy.com",
+                "www.neon-free.ch",
+                "www.simply-onno.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "framerusercontent.com",
+            "prevalence": 0.7619047619047619
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.11904761904761904
+        },
+        {
+            "domain": "framerstatic.com",
+            "prevalence": 0.11904761904761904
+        }
+    ],
+    "types": {
+        "Script": 15,
+        "Ping": 6,
+        "Document": 5,
+        "Fetch": 5
+    },
+    "nameservers": [
+        "ns-1361.awsdns-42.org",
+        "ns-1759.awsdns-27.co.uk",
+        "ns-318.awsdns-39.com",
+        "ns-635.awsdns-15.net"
+    ]
+}

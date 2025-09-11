@@ -1,0 +1,604 @@
+{
+    "domain": "etracker.com",
+    "owner": {
+        "name": "etracker GmbH",
+        "displayName": "etracker",
+        "privacyPolicy": "https://www.gametracker.com/about/privacy.php",
+        "url": "http://gametracker.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000616,
+    "sites": 90,
+    "subdomains": [
+        "code",
+        "customer",
+        "static",
+        "customer2"
+    ],
+    "cnames": [
+        {
+            "original": "estats.globus.de",
+            "resolved": "customer.etracker.com"
+        },
+        {
+            "original": "pse.gabor.com",
+            "resolved": "customer.etracker.com"
+        },
+        {
+            "original": "stats.ekd.de",
+            "resolved": "customer2.etracker.com"
+        },
+        {
+            "original": "stats.mopo.de",
+            "resolved": "customer.etracker.com"
+        },
+        {
+            "original": "stats.rumundco.de",
+            "resolved": "customer.etracker.com"
+        },
+        {
+            "original": "stats.umziehen.de",
+            "resolved": "customer.etracker.com"
+        },
+        {
+            "original": "webcontr.l.de",
+            "resolved": "customer.etracker.com"
+        },
+        {
+            "original": "webcontr.wgv.de",
+            "resolved": "customer.etracker.com"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "etracker\\.com\\/code\\/e\\.js",
+            "cookies": 0.000233,
+            "fingerprinting": 2,
+            "subdomains": [
+                "code",
+                "customer",
+                "static",
+                "customer2"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 76,
+                "Screen.prototype.width": 72,
+                "Screen.prototype.height": 72,
+                "Screen.prototype.pixelDepth": 72,
+                "Navigator.prototype.language": 72,
+                "Document.cookie getter": 75,
+                "window.sessionStorage": 75,
+                "window.localStorage": 75,
+                "window.name": 73,
+                "Document.cookie setter": 27,
+                "Navigator.prototype.platform": 71,
+                "Navigator.prototype.doNotTrack": 38,
+                "Navigator.prototype.cookieEnabled": 4
+            },
+            "sites": 86,
+            "prevalence": 0.000588,
+            "cnames": [
+                {
+                    "original": "estats.globus.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.umziehen.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.ekd.de",
+                    "resolved": "customer2.etracker.com"
+                },
+                {
+                    "original": "pse.gabor.com",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "webcontr.l.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.mopo.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.rumundco.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "webcontr.wgv.de",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "0bee61de50521df31b97cc90e6f38374540db8adb843ef46661060796775cdba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookiesAvailable": {
+                    "ttl": -1755277479,
+                    "length": 4,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 0.25
+                },
+                "isSdEnabled": {
+                    "ttl": 86405,
+                    "length": 5,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 0.3333333333333333
+                },
+                "et_oi_v2": {
+                    "ttl": 1576800009,
+                    "length": 2,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "et_allow_cookies": {
+                    "ttl": 41472005,
+                    "length": 1,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_et_coid": {
+                    "ttl": 62208005,
+                    "length": 32,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                },
+                "et_oip": {
+                    "ttl": 2592013,
+                    "length": 6,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.metabo.com",
+                "www.raiffeisenmarkt.de",
+                "www.reimo.com",
+                "www.mopo.de",
+                "www.ihk.de",
+                "www.deutsche-handwerks-zeitung.de",
+                "www.rumundco.de",
+                "www.englisch-hilfen.de",
+                "www.hansemerkur.de",
+                "www.iwkoeln.de",
+                "www.juraindividuell.de",
+                "www.auto-werkstatt.de",
+                "www.afd.de",
+                "www.wgv.de",
+                "www.boerse.de",
+                "www.bmf.gv.at",
+                "www.patienteninfo-service.de",
+                "www.krefeld.de",
+                "gruenes.haus",
+                "www.bfn.de"
+            ]
+        },
+        {
+            "rule": "etracker\\.com\\/t\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "code",
+                "customer",
+                "customer2"
+            ],
+            "apis": {
+                "window.sessionStorage": 74,
+                "Notification.permission": 70,
+                "Document.cookie getter": 56,
+                "window.innerWidth": 8,
+                "window.innerHeight": 8,
+                "Navigator.prototype.userAgent": 7,
+                "Navigator.prototype.platform": 8,
+                "Navigator.prototype.maxTouchPoints": 7,
+                "Date.prototype.getTime": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.pixelDepth": 1,
+                "Navigator.prototype.language": 1,
+                "window.localStorage": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 87,
+            "prevalence": 0.000595,
+            "cnames": [
+                {
+                    "original": "estats.globus.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.umziehen.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.ekd.de",
+                    "resolved": "customer2.etracker.com"
+                },
+                {
+                    "original": "pse.gabor.com",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "webcontr.l.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.mopo.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.rumundco.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "webcontr.wgv.de",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "bf968ba0adc595599ed00f22abc92e8ef2ac855f596a91edea78a97fedede409",
+                "1e9cf8e615f886f369191ae8770e10ff3c50b5670b5e3f3b3639d557bfe29fe9",
+                "a0afb6d0612a6a04ba4536ce89065f8aaa50e917407b00b08b1342adf74a1a7b",
+                "524305a18bfe3f0dc305118e1bf4f4ea68aad62b24a8880a99a115a3f0e7d488",
+                "353ef2debd669f2baff92115e7c1c83753887470b2fe127032d5bfff6e91b363",
+                "1357574295e9f947d367fa39b0b969ece83f8355ca212d3004a237c3528e145c",
+                "d51dd6c856ec9e79b6aac4b0fc7061742237cefdd38b204d14b088de7956cac6",
+                "f971b6541a8639a56c3d07b9552a42b03894f1828ec5aeb9824a624d11174deb",
+                "b6ab8e7739d1bf955f6f213cdeab778621d8c0d9c5e6d51e4331f454e8ea7540",
+                "c2e0f3416849adec54634c50b9edbebe9f2a4604d8e17c90c006c730d1a6800b",
+                "9b57a675179685ee5feaf0d51b9fafd318f2b7f19389b0f6e8c2ccf2f235fdda",
+                "372d1584c9338d9bb0a3ab6ec454642a55550ee284a6ced4e152b9c0df9f9cce",
+                "fdbc1dcb5833fe205617b5f8eb7fbf64da1ddd6b9621a328c785b9a00ca2179d",
+                "0bd5111d1d9a3f212f786fd4417b9aa3d0b09098f15f15cf006a6b2da15fa463",
+                "430813ea3f31487c21f49f1b9f260b542fab500a6092bdab4c65c508fb41c809",
+                "598599e85bea4b6f1c8a5297c31568726673452f4bc804b2e84656ba3eada7ac",
+                "fa1afeee52650892b91cbfa7b03b2a0ba241aca3248412f5738d367dfea8278e",
+                "7818b0aeb4d711ab4d54d677c83db075ca2dc8426f816052e15d0f9d326b3949",
+                "bf95e45f3c8b248468e9b6187581e4922faaf2e945fb1c59663a6fb7a599e8b9",
+                "c9292cf6096349a6b52a37ba1e3f25eb66499d7dd6bb69653d5f74e50888fd25",
+                "97170538b79ef5b7d3efc3b92e670c92b85c5a6b4aa7f3cba5036b3fe477adee",
+                "1bf759a55cc716e4ee46e02e33d3ba0240d872da0ddf19f50f3e9fbe5c65f809",
+                "bfab35d076627b6926f2c32441d5b22df8e8ab51b0e2d8c769c34dfe18cb2474",
+                "c621594cc2422f6c9c264e01c1d38b266bd23112f86c0cd008e6a7686ff0a25f",
+                "65861bb51da86c8d560a55120ee06c13fb513619c37569786577d1d83a4fe9fc",
+                "fa574ac8201cc89a4f3eb6e012762d5711eaa199f58819be0829d2ff838ef143",
+                "05450908204b2d2280a2cd6f82c5e2fd119b589e7e88c215541bbb396f343c88",
+                "c85b4d0a5c14da1d1a9ae70afd302ca8c65de0ba79e460cf85e15d814c5f71a7",
+                "f921a732ec886e44bdefcb16a0ad168a8e433c03ec76ad375cb7a5f13a5b9061",
+                "1e32f9525fc7808b7068e6be086fe95a710ed0e493d20b49a6dfcad8b4bdd771",
+                "d2c961b8d5cd83b1307b54c2b00f17006df0dca28f13d9bc0bc3b3d2df50f70a",
+                "e377a3e4de33bf334d928ba2d6e9d773d7971343fe6005a4c4175ac6476fccbe",
+                "b91c3e19a81b675c2ec01fed0d1a47951fb62a526137587540ac538090b8dd1f",
+                "e8214fe820930ddcc2ed3fb4c2af18cc1b34fb6f80e07271819825338fa35c3a",
+                "2819a9eda17726575c59f181ae33fe5199435ec63c6150c772d3d235fd4fe1ed",
+                "53d8bbf76a1735376a79a0f19adce03ecee5dd4252bc7220d73c81ec3a3e4bb6",
+                "0b98b8d3b7fcd4bcce53793eee84a4f17402affe7851ac5b772f47c3c3841df1",
+                "3a6cf492a2369e48562c80010dc31b7a27ea24d36b4e45c6eb0b98f017d59441",
+                "ebda9a8b14e2710e52b42944299da158a83a09e7af989f75de45ed900a1f1ff6",
+                "5d615b6631f699bdfeea4c6b6161a1836e296075d5f89a0c0feeb355ee86db90",
+                "9d8b4af7acc9bcbd202af6b85c8fe75ea632234d1a3f6704d68aecc98b805036",
+                "43519750c05aee3eb60b74d10fa30e0c8def830db5afe566cabffd03c8d943d3",
+                "923d0a7920781ff64e6f444139b4bef1602842570192b7b9b3081131933d51ea",
+                "afb0c4a3919813f1a09b5f93a9498bee2ba4d9c084b83776198803175331fadd",
+                "393e19a5b5042094ffc79a9f11cf71c38ec8636fad8355219b53afa27ca256e7",
+                "881c4f475e70fda922db5b20d8e9da91c44d3613898c8d4c314c5a36a827c92a",
+                "34e8c7f5fa49d649631cf6ed554d3804224f436822471a69d9fdf9bb5eb3c0d6",
+                "239601c422cedc12c061b7e1f1bda8fdb45402fb57bb0c9c96089df492d4a4a3",
+                "e31c5af93720f92eae6241172f851fe276078c2976617cb447c6da50266be33d",
+                "4550cebbed177a27426807ce30cff70021fde4899d739af6ad13696a22843a01",
+                "a6cd485329f1e095e9c8cd9954cb80c11bcd5c7490a8b9c0cb053210341d7b88",
+                "b50298238211555b38d7b9c219160190823aeec5aacd4bc015bdf56361da8bca",
+                "dde96ef42312b2f91ddfcaf4821e6d84ddd5a9d698a3e6df070bc11f6a84c305",
+                "ef597aa793964620acde49c672b8354100e9bc171310af2fcd79648ce050c86a",
+                "1ba6577773a0c6b2bcc7c5156c2258f021d52a3edafb1e3f0e026de2f467bce8",
+                "e547f9357ebabe7012886b869de9c5c2124504523bc09c51bcb101670cb8de4f",
+                "86d9067044428281fb5770df33cfa32837aa1b32ce0b2d205a4a987855cb7b52",
+                "735ea06d0aa180ca83f7b2d1e25718f9ea81185351f06e83096c6dbec0045690",
+                "e539c3ca9c1a582d0ed2852ab647adfd04dfb3443bd920cf0b4e38483b25f27e",
+                "5c8a5687e6da69f91d5ff053d856c9e4e085a7d0fc225f1a1e1acba411d8a48f",
+                "9caa82e1550f2cf22279067db137f2cb4543fb4bb01b9481cfc359707ccba48b",
+                "13075e2b89b334b2fb159ce0929a6a8a48fc13e0949beef2e37237a1bdd3e08d",
+                "7d93cea8f414169264f2b01c944612ebc87178ed85b60f6f5024ec52d485c651",
+                "6c13c9caaca014805182c9eb760524ef5e970637270c5bfb1e864871c0b941f3",
+                "e06a8c4bbe34035635089a20f24179991aa72cd9c5939fb078cee9f979b5cd27",
+                "7d01ab491a516d07178fcfa7b40954573ee27f363759129f79a64063f3781ad1",
+                "bf1aa674f035e195cbe1d571fa347e3ac32ad0c683e1bc664bb1e2361a03a3e5",
+                "50e73815771da03dbb2debb99786163d5f85c52cc127a604fc5ec43fc29684f9",
+                "9657f54c0a75f099e1e09c70fa60763a51c61ea88fc104edc27543ff973aba43",
+                "661874abd687605b12ad46eb35b55e5c90146db65fd5c2e0280af27f955e7268",
+                "6ab556effb713b050fe5b5c180bc912bffdc9a09f0785ee1a52d72dab1faf377",
+                "e6c1a81cc1ab82ba912c56484b1e9b983db1e7458e66eb89802fd10ae77d364c",
+                "d86c404e4ac42e0a8ff1d65eb9be6be6b6cbc79b74cb443105e429f60c1adac0",
+                "75176cece7c2b73afe92309ba0f94613d937eb88009ad2304c763d14d70776c2",
+                "7aca547eaab3c088cf544c6d07c5ae1126663d3a3ea70f821091086bb8e5911b",
+                "205af6a84969711ba2583b8a8fabccc32962790206b594868c504aebbf76db5b",
+                "85352cc1e68c126a15a507dc318cfb733bdca698e637d626afd47eafe7f780b3",
+                "a711dacde48f6f09bb25353fd09889bf36d4fa0f9a745b04e7ad2d232dbebf54",
+                "a028b4b30f12b5fd9600cfac1e21aa5eaf13748b3213d15e2024eea9266e883c",
+                "56f2cc728351561b751ad5a0fc577fe3656a02b87edde4e8bbd5934f05d26294",
+                "95cdf3261915db53798b6a4fdc704e189d1dfd1580fa57b4d6cebf1ed70c2951",
+                "17569cdaad34ec8cdf5eb8bca4c10f817ce17a23530b1351f4cb523e3835dc02",
+                "478d83e0f792d0df0b7c4a8c3e236179596951f855d7c9a8f5e516dda5f6eeb6",
+                "3f15d470af508a59ee25aa2ac4e2e15f92bb8bab6262fee6e72a4779e76fedb1",
+                "dd3dd0c31e6dae8006fb3b49e08c7e970ec9b861cfe5ef8c3cfc32e225e5eb27"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookiesAvailable": {
+                    "ttl": -1755264220,
+                    "length": 4,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                },
+                "_et_coid": {
+                    "ttl": 62208010,
+                    "length": 32,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.th-koeln.de",
+                "www.patienteninfo-service.de",
+                "shop.apotal.de",
+                "www.einfachmalene.de",
+                "www.gruender.de",
+                "www.raiffeisenmarkt.de",
+                "www.saarbruecken.de",
+                "www.deutsche-handwerks-zeitung.de",
+                "www.hipp.de",
+                "www.gartenbau.org",
+                "www.sozialministerium.gv.at",
+                "www.igmetall.de",
+                "www.fitx.de",
+                "www.hanser-literaturverlage.de",
+                "www.psychologie-heute.de",
+                "www.bfn.de",
+                "www.hamburg.de",
+                "www.metabo.com",
+                "www.bgw-online.de",
+                "www.muenchen.de"
+            ]
+        },
+        {
+            "rule": "etracker\\.com\\/v2\\/consent-banners\\/z4snw3\\/banner",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "customer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "estats.globus.de",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "bf9dd52781803b96fecb354e3ee57765426156170cf4eacb37e89ca0c107370b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globus.de",
+                "www.globus.de"
+            ]
+        },
+        {
+            "rule": "etracker\\.com\\/cntcc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer",
+                "customer2"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000616,
+            "cnames": [
+                {
+                    "original": "estats.globus.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.umziehen.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.ekd.de",
+                    "resolved": "customer2.etracker.com"
+                },
+                {
+                    "original": "pse.gabor.com",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "webcontr.l.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.mopo.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.rumundco.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "webcontr.wgv.de",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "a2c2339691fc48fbd14fb307292dff3e21222712d9240810742d7df0c6d74dfb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globus.de",
+                "umziehen.de",
+                "www.ekd.de",
+                "www.gabor.com",
+                "www.globus.de",
+                "www.l.de",
+                "www.mopo.de",
+                "www.rumundco.de",
+                "www.wgv.de"
+            ]
+        },
+        {
+            "rule": "etracker\\.com\\/api\\/v6\\/tracking\\/webEvents",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [
+                {
+                    "original": "estats.globus.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "pse.gabor.com",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.mopo.de",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globus.de",
+                "produkte.globus.de",
+                "www.gabor.com",
+                "www.globus.de",
+                "www.mopo.de"
+            ]
+        },
+        {
+            "rule": "etracker\\.com\\/cntcc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "estats.globus.de",
+                    "resolved": "customer.etracker.com"
+                },
+                {
+                    "original": "stats.rumundco.de",
+                    "resolved": "customer.etracker.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "globus.de",
+                "www.rumundco.de"
+            ]
+        },
+        {
+            "rule": "etracker\\.com\\/code\\/e\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "code"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Navigator.prototype.language": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.name": 2,
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oktoberfest.de",
+                "www.oktoberfest.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000246,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9176470588235294
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.03529411764705882
+        },
+        {
+            "domain": "ypsilon.net",
+            "prevalence": 0.011764705882352941
+        },
+        {
+            "domain": "usercentrics.eu",
+            "prevalence": 0.011764705882352941
+        },
+        {
+            "domain": "epccm19.com",
+            "prevalence": 0.011764705882352941
+        },
+        {
+            "domain": "taboola.com",
+            "prevalence": 0.011764705882352941
+        }
+    ],
+    "types": {
+        "Script": 184,
+        "XHR": 5,
+        "Image": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "reza.ns.cloudflare.com",
+        "greg.ns.cloudflare.com"
+    ]
+}

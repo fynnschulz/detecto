@@ -1,0 +1,85 @@
+{
+    "domain": "custompricecalculator.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000274,
+    "sites": 4,
+    "subdomains": [
+        "cdn-assets",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "custompricecalculator\\.com\\/shopify\\/calculator\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-assets"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "40a81a0a6c690a13e3137f51ff62e013c9cf6ff6ef0f4392f4d3d9f39a75d2d2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boutiquerugs.com",
+                "churchsupplies.com",
+                "forgenflame.com",
+                "growerssolution.com"
+            ]
+        },
+        {
+            "rule": "custompricecalculator\\.com\\/api\\/v1\\/calculator\\/app\\/pageurl",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boutiquerugs.com",
+                "churchsupplies.com",
+                "forgenflame.com",
+                "growerssolution.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 4
+    },
+    "nameservers": [
+        "sevki.ns.cloudflare.com",
+        "melinda.ns.cloudflare.com"
+    ]
+}

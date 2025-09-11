@@ -1,0 +1,143 @@
+{
+    "domain": "lr-in-prod.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000508,
+    "sites": 5,
+    "subdomains": [
+        "cdn",
+        "r"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "lr-in-prod\\.com\\/logger-1\\.min\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.sessionStorage": 5,
+                "window.localStorage": 5,
+                "URL.createObjectURL": 5,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.appVersion": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Performance.prototype.memory": 2
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "a3b30d7005f1e26e846ba279f4800c1d07d700191a71102f07bd1bc7dabbd43a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_lr_tabs_-edny8h%2Fcopacom": {
+                    "ttl": 86406,
+                    "length": 203,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "_lr_hb_-edny8h%2Fcopacom": {
+                    "ttl": 86405,
+                    "length": 31,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "_lr_tabs_-wmzjng%2Ftimeout_gp-web": {
+                    "ttl": 86412,
+                    "length": 204,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                },
+                "_lr_hb_-wmzjng%2Ftimeout_gp-web": {
+                    "ttl": 86411,
+                    "length": 31,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anthropic.com",
+                "docs.cursor.com",
+                "docs.comfy.org",
+                "www.copaair.com",
+                "www.timeout.com"
+            ]
+        },
+        {
+            "rule": "lr-in-prod\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "r"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "copaair.com",
+                "www.timeout.com"
+            ]
+        },
+        {
+            "rule": "lr-in-prod\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "r"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "b8a103671fc375097d1276cf0f13313ef9926757f497fa4522175f586a5a124b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "copaair.com",
+                "www.timeout.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Preflight": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "dan.ns.cloudflare.com",
+        "rita.ns.cloudflare.com"
+    ]
+}

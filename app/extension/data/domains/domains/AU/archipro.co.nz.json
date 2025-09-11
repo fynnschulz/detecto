@@ -1,0 +1,90 @@
+{
+    "domain": "archipro.co.nz",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "pixel"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "archipro\\.co\\.nz\\/ap-analytics\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "67ff4fd01fc68f3e92f320795901ce6c5f415c3ae8ef9e8b6508977904a12a8a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cultdesign.com.au",
+                "www.clipsal.com",
+                "www.nover.com.au"
+            ]
+        },
+        {
+            "rule": "archipro\\.co\\.nz\\/ping",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "912d0c07da7bdb22cdae025b96da26d01523aaab7362edb28544e3949deb369d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cultdesign.com.au",
+                "www.clipsal.com",
+                "www.nover.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "slideruletools.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "chuck.ns.cloudflare.com",
+        "amy.ns.cloudflare.com"
+    ]
+}

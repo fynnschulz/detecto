@@ -1,0 +1,174 @@
+{
+    "domain": "atp.fox",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "prod.pyxis",
+        "prod.fennec"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "atp\\.fox\\/pyxis\\/submit",
+            "cookies": 0.000404,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.pyxis"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "f59b8d7d31c437c0eb64e2bffec4a9cd224cf60521e2e52a5f91399558666d91",
+                "d7dbd5ac224e746407bf06b71231d0c235c3b4cdbb48b2ffae9275b0bb9cfcfd",
+                "a82af2d3e47dd396bca3b08a9c904b9b0dc2e5a1d1b94137b93ec231454a4c66"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com",
+                "www.foxsports.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/pyxis\\/submit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.pyxis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxsports.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/js\\/fennec\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3ff3c5a4680bea779a88a819574d6efd5320ae14f7e3c1ffa8368db4eaeedf62"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxsports.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/config\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7078c49328499e056d49ec4dab0157a74e84f8da71b7366256d1a76ce80b9ff8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxsports.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/config\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxsports.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "webcontentassessor.global.ssl.fastly.net",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "kts.fox",
+            "prevalence": 0.1
+        }
+    ],
+    "types": {
+        "Fetch": 4,
+        "Preflight": 5,
+        "Script": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns02.dns.fox",
+        "ns03.dns.fox",
+        "ns04.dns.fox",
+        "ns01.foxdoua.com",
+        "ns02.foxdoua.com",
+        "ns03.foxdoua.com",
+        "ns04.foxdoua.com",
+        "ns01.dns.fox"
+    ]
+}

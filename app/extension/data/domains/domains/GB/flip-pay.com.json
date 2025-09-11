@@ -1,0 +1,111 @@
+{
+    "domain": "flip-pay.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "flip-pay\\.com\\/flip-pay\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "window.sessionStorage": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "90096dfc447e254c8b47a25fe1a5870bb0dfc524c27d7d43a02c4cd2be1e059e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fp.auth_type": {
+                    "ttl": null,
+                    "length": 74,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 0.3333333333333333
+                },
+                "fp.browser_session_id": {
+                    "ttl": null,
+                    "length": 38,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 1
+                },
+                "fp.subscription": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pressgazette.co.uk",
+                "www.cityam.com",
+                "www.thedailymash.co.uk"
+            ]
+        },
+        {
+            "rule": "flip-pay\\.com\\/clients\\/mh\\/inm\\/19\\/flip-pay\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1b14ddc95d8cd1c217e677e546c0ae407b0088f23f3545a6a9fe07381c7764b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "fp.browser_session_id": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belfasttelegraph.co.uk",
+                "www.independent.ie"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000503,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5
+    },
+    "nameservers": [
+        "woz.ns.cloudflare.com",
+        "bella.ns.cloudflare.com"
+    ]
+}

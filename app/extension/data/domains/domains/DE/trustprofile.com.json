@@ -1,0 +1,82 @@
+{
+    "domain": "trustprofile.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000706,
+    "sites": 7,
+    "subdomains": [
+        "dashboard"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "trustprofile\\.com\\/banners\\/4000167\\/4034064\\/1699356718\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dashboard"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3e9aef143a956c8b13bf8e9c6352d6e3878a3ced0a86b16aa6a84eedd41931a0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "connox.de",
+                "www.connox.de"
+            ]
+        },
+        {
+            "rule": "trustprofile\\.com\\/sidebar\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dashboard"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 2,
+                "window.sessionStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "92395c727f1d0a2fa0a88bf93367c287811804c1f3eb142509355a207109d441"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boesner.com",
+                "www.waffenfuzzi.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Image": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "barbara.ns.cloudflare.com",
+        "tony.ns.cloudflare.com"
+    ]
+}

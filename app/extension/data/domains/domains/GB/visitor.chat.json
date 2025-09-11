@@ -1,0 +1,132 @@
+{
+    "domain": "visitor.chat",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "cdn",
+        "chat2",
+        "chat"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "visitor\\.chat\\/vc-loader\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fb6bd2ec54fa41df8f8ccdf833818c4149a605332ac1344abdb593ccd8cd81ab"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bigmotoringworld.co.uk",
+                "www.hendy.co.uk"
+            ]
+        },
+        {
+            "rule": "visitor\\.chat\\/assets\\/index-853f855d\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "window.localStorage": 3,
+                "window.innerWidth": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "3b2ade95a5e2a7e7b20e31f452753b5b9f4b9a51e346523452293af36d6c92e9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bigmotoringworld.co.uk",
+                "www.hendy.co.uk",
+                "www.pentagon-group.co.uk"
+            ]
+        },
+        {
+            "rule": "visitor\\.chat\\/api\\/v2\\/webSettings",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "1110ac44a95227e7847758775bcdde1853e7684f03783b19149058c2b788465e",
+                "5fd1afc3282996cbd17f538a54793462c994ca17792e87e03e91f6b681896448"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bigmotoringworld.co.uk",
+                "www.hendy.co.uk",
+                "www.pentagon-group.co.uk"
+            ]
+        },
+        {
+            "rule": "visitor\\.chat\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bigmotoringworld.co.uk",
+                "www.hendy.co.uk",
+                "www.pentagon-group.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "XHR": 3,
+        "WebSocket": 3
+    },
+    "nameservers": [
+        "jean.ns.cloudflare.com",
+        "jonah.ns.cloudflare.com"
+    ]
+}

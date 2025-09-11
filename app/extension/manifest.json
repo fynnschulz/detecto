@@ -2,71 +2,42 @@
   "name": "Protecto by Detecto",
   "short_name": "Protecto",
   "description": "Stealthy cookie, tracker & fingerprint protection with adaptive risk engine.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minimum_chrome_version": "109",
   "manifest_version": 3,
+
   "action": {
     "default_title": "Protecto",
     "default_icon": { "16": "assets/icon16.png", "48": "assets/icon48.png", "128": "assets/icon128.png" },
-    "default_popup": "src/popup.html"
+    "default_popup": "popup/popup.html"
   },
-  "background": { "service_worker": "src/service-worker.js" },
+
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+
   "icons": {
     "16": "assets/icon16.png",
     "48": "assets/icon48.png",
     "128": "assets/icon128.png"
   },
+
   "permissions": [
     "storage",
     "declarativeNetRequest",
-    "declarativeNetRequestFeedback",
-    "webRequest",
-    "scripting",
-    "tabs",
-    "alarms"
+    "declarativeNetRequestFeedback"
   ],
+
   "host_permissions": [
     "<all_urls>"
   ],
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "static-main",
-        "enabled": true,
-        "path": "src/static-rules.fixed.json"
-      },
-      {
-        "id": "static-generated",
-        "enabled": true,
-        "path": "src/static-rules.json"
-      },
-      {
-        "id": "catchall",
-        "enabled": true,
-        "path": "src/rules.catchall.json"
-      }
-    ]
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["src/content.js"],
-      "run_at": "document_start"
-    }
-  ],
-  "options_ui": {
-    "page": "src/options.html",
-    "open_in_tab": true
-  },
+
   "web_accessible_resources": [
     {
       "resources": [
-        "stubs/generic.js",
-        "stubs/ga.js",
-        "stubs/gtm.js",
-        "stubs/fbq.js",
-        "assets/blank.gif",
-        "assets/empty.json"
+        "stubs/*.js",
+        "data/seeds.json"
       ],
       "matches": ["<all_urls>"]
     }

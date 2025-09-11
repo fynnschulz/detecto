@@ -1,0 +1,93 @@
+{
+    "domain": "pages05.net",
+    "owner": {
+        "name": "International Business Machines Corporation",
+        "displayName": "International Business Machines",
+        "privacyPolicy": "https://www.ibm.com/privacy/us/en/",
+        "url": "http://ibm.com"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "sc",
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "pages05\\.net\\/lp\\/static\\/js\\/iMAWebCookie\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sc"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e0447961a33816f0c4e3857863982dbc864a67748c596b78678a7622a8f69282"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "emeraldcruises.com.au",
+                "www.emeraldcruises.com.au",
+                "www.scenic.com.au"
+            ]
+        },
+        {
+            "rule": "pages05\\.net\\/WTS\\/event\\.jpeg",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "com.silverpop.iMAWebCookie": 0.0003028161905723226,
+                "com.silverpop.iMA.session": 0.0003028161905723226
+            },
+            "exampleSites": [
+                "emeraldcruises.com.au",
+                "www.emeraldcruises.com.au",
+                "www.scenic.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "osano.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Image": 3
+    },
+    "nameservers": [
+        "ns1.acoustic-adm.com",
+        "ns2.acoustic-adm.com",
+        "ns3.acoustic-adm.com",
+        "ns4.acoustic-adm.com"
+    ]
+}

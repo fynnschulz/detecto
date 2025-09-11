@@ -1,0 +1,107 @@
+{
+    "domain": "extole.io",
+    "owner": {
+        "name": "Extole",
+        "displayName": "Extole"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "revzilla",
+        "seabourn",
+        "udemy"
+    ],
+    "cnames": [
+        {
+            "original": "refer.seabourn.com",
+            "resolved": "seabourn.extole.io"
+        },
+        {
+            "original": "refer.udemy.com",
+            "resolved": "udemy.extole.io"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "extole\\.io\\/core\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "revzilla",
+                "seabourn",
+                "udemy"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "refer.seabourn.com",
+                    "resolved": "seabourn.extole.io"
+                },
+                {
+                    "original": "refer.udemy.com",
+                    "resolved": "udemy.extole.io"
+                }
+            ],
+            "responseHashes": [
+                "b30d3e3f5a6cb8eb2b9a85b97f8662293552fd277e003cd60150304fd59ecde7",
+                "fb9e7a11815724f5b84256f3ec326446a09901bf9004c75fb47aa4113d4094f4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "extole_access_token": {
+                    "ttl": 31536008,
+                    "length": 26,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "revzilla.com",
+                "www.seabourn.com",
+                "www.udemy.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "quantummetric.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 3
+    },
+    "nameservers": [
+        "ns-1867.awsdns-41.co.uk",
+        "ns-231.awsdns-28.com",
+        "ns-1510.awsdns-60.org",
+        "ns-603.awsdns-11.net"
+    ]
+}

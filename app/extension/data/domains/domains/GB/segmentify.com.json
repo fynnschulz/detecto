@@ -1,0 +1,188 @@
+{
+    "domain": "segmentify.com",
+    "owner": {
+        "name": "Segmentify Yazilim A.S.",
+        "displayName": "Segmentify Yazilim"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "gandalf-eu",
+        "cdn",
+        "gimli-eu"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "segmentify\\.com\\/get\\/key\\/v1\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gandalf-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7d5a7309d56800e78307b3e30be327d780fbece03730e1f3014533747b6aaf4d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "charlies.co.uk",
+                "www.houseofwatches.co.uk"
+            ]
+        },
+        {
+            "rule": "segmentify\\.com\\/add\\/events\\/v1\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gandalf-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "charlies.co.uk",
+                "www.houseofwatches.co.uk"
+            ]
+        },
+        {
+            "rule": "segmentify\\.com\\/add\\/events\\/v1\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gandalf-eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a22579387e7ec9bf3e2b8f5ec56f9d33321ffe2083b0db3dd699d06595b97c4c",
+                "9c29e682a406bbccffc7da7f38b04b74368a476550c972d774abe550b7840f99"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "charlies.co.uk",
+                "www.charlies.co.uk",
+                "www.houseofwatches.co.uk"
+            ]
+        },
+        {
+            "rule": "segmentify\\.com\\/v3\\/push\\/sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4d6dfe37fdd308cf6d789aabc9fb7ad004d1d35ee4141d0670631728fafb91ed"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "houseofwatches.co.uk",
+                "www.josephturner.co.uk"
+            ]
+        },
+        {
+            "rule": "segmentify\\.com\\/subscription\\/deny",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gimli-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a9500808b450199db2fa076637c6866d74d28edd8f71dd4331b59280f23e9f05"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_sgf_user_id": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "houseofwatches.co.uk",
+                "www.josephturner.co.uk"
+            ]
+        },
+        {
+            "rule": "segmentify\\.com\\/\\/add\\/events\\/v1\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gandalf-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7fb04986ca4cff7bb1b92bbc40659f49a8c7eacfab134b92ee192a9b8e13b9fa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "josephturner.co.uk",
+                "www.josephturner.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000302,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "noibu.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "XHR": 7,
+        "Preflight": 2,
+        "Other": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-cloud-b3.googledomains.com",
+        "ns-cloud-b1.googledomains.com",
+        "ns-cloud-b4.googledomains.com",
+        "ns-cloud-b2.googledomains.com"
+    ]
+}

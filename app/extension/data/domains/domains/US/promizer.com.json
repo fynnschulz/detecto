@@ -1,0 +1,114 @@
+{
+    "domain": "promizer.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "cdn-my"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "promizer\\.com\\/api\\/public\\/_\\/20250815\\/sdk\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-my"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e8537996aef2a61354c1f2e4307edb98ada61f8cfe18750000f616dbbe6d4814"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sharghdaily.com",
+                "www.zoomit.ir"
+            ]
+        },
+        {
+            "rule": "promizer\\.com\\/api\\/public\\/_\\/20250815\\/sdk\\/app\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn-my"
+            ],
+            "apis": {
+                "Notification.permission": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.permissions": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "aef4e27c1cc976d81850249a8f0798c9cf966474c4cfd622127927d34df7bb96"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_promizer_psh_fcm_apn": {
+                    "ttl": 315360009,
+                    "length": 86,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sharghdaily.com",
+                "www.zoomit.ir"
+            ]
+        },
+        {
+            "rule": "promizer\\.com\\/api\\/public\\/sdk\\/style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-my"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c468b1e0be718c4a64f1303064d0b2b27a1e9f161d2c596db46eb02b21908165"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sharghdaily.com",
+                "www.zoomit.ir"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "ada.ns.cloudflare.com",
+        "logan.ns.cloudflare.com"
+    ]
+}

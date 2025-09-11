@@ -1,0 +1,95 @@
+{
+    "domain": "ign.map.fastly.net",
+    "owner": {
+        "name": "Fastly, Inc.",
+        "displayName": "Fastly",
+        "privacyPolicy": "https://www.fastly.com/privacy",
+        "url": "http://fastly.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000305,
+    "sites": 3,
+    "subdomains": [],
+    "cnames": [
+        {
+            "original": "mollusk.apis.ign.com",
+            "resolved": "ign.map.fastly.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "ign\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "mollusk.apis.ign.com",
+                    "resolved": "ign.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "0cfa0e88b79a9ce9d99fed9ca2a4bab5e19c50ec3db27272da46f5c2231a6a30"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ign.com",
+                "www.ign.com"
+            ]
+        },
+        {
+            "rule": "ign\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "mollusk.apis.ign.com",
+                    "resolved": "ign.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ign.com",
+                "www.ign.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Third-Party Analytics Marketing",
+        "Action Pixels",
+        "CDN",
+        "Embedded Content",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "ignimgs.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Preflight": 2
+    },
+    "nameservers": []
+}

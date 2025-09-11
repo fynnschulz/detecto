@@ -1,0 +1,556 @@
+{
+    "domain": "futurecdn.net",
+    "owner": {
+        "name": "Future Plc",
+        "displayName": "Future"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.00152,
+    "sites": 15,
+    "subdomains": [
+        "champagne",
+        "bordeaux",
+        "freyr",
+        "search-api.fie",
+        "slice.vanilla",
+        "vanilla"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "futurecdn\\.net\\/champagne\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "champagne"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 13,
+                "Document.cookie getter": 13,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "PerformanceTiming.prototype.navigationStart": 13
+            },
+            "sites": 13,
+            "prevalence": 0.00131,
+            "cnames": [],
+            "responseHashes": [
+                "8b9322bad4979006769c065eb84a60e8a22a40c0e6526b7d5ea74b8e676506e0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "usprivacy": {
+                    "ttl": 31536002,
+                    "length": 4,
+                    "prevalence": 0.0003030915336431602,
+                    "uniqueness": 0.3333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomshardware.com",
+                "www.androidcentral.com",
+                "www.cinemablend.com",
+                "www.cyclingnews.com",
+                "www.cyclingweekly.com",
+                "www.digitalcameraworld.com",
+                "www.imore.com",
+                "www.laptopmag.com",
+                "www.livescience.com",
+                "www.marieclaire.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/bordeaux\\.js",
+            "cookies": 0.00152,
+            "fingerprinting": 2,
+            "subdomains": [
+                "bordeaux"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 15,
+                "Document.cookie getter": 15,
+                "Navigator.prototype.userAgent": 15,
+                "Navigator.prototype.connection": 15,
+                "window.sessionStorage": 15,
+                "window.localStorage": 13,
+                "Date.prototype.getTime": 15,
+                "Document.cookie setter": 15
+            },
+            "sites": 15,
+            "prevalence": 0.00152,
+            "cnames": [],
+            "responseHashes": [
+                "2aa3c1fa6d17027660215e93958034e636f43c301eeb5c20a72ea47ffe9ce032"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "h_id": {
+                    "ttl": 86404,
+                    "length": 32,
+                    "prevalence": 0.0015154576682158013,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomshardware.com",
+                "www.androidcentral.com",
+                "www.cinemablend.com",
+                "www.cyclingnews.com",
+                "www.cyclingweekly.com",
+                "www.digitalcameraworld.com",
+                "www.imore.com",
+                "www.laptopmag.com",
+                "www.livescience.com",
+                "www.marieclaire.com",
+                "www.sciencealert.com",
+                "www.techspot.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/freyr\\.js",
+            "cookies": 0.00121,
+            "fingerprinting": 1,
+            "subdomains": [
+                "freyr"
+            ],
+            "apis": {
+                "Document.cookie getter": 15,
+                "Date.prototype.getTime": 12,
+                "Document.cookie setter": 12,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 15,
+            "prevalence": 0.00152,
+            "cnames": [],
+            "responseHashes": [
+                "969f5664819439a5eb6de7584272643ec14d98581f96b827a1d9ac24d9abfa5c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "usprivacy": {
+                    "ttl": 31536002,
+                    "length": 4,
+                    "prevalence": 0.0012123661345726409,
+                    "uniqueness": 0.08333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomshardware.com",
+                "www.androidcentral.com",
+                "www.cinemablend.com",
+                "www.cyclingnews.com",
+                "www.cyclingweekly.com",
+                "www.digitalcameraworld.com",
+                "www.imore.com",
+                "www.laptopmag.com",
+                "www.livescience.com",
+                "www.marieclaire.com",
+                "www.sciencealert.com",
+                "www.techspot.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/merchant-domains\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000909,
+            "cnames": [],
+            "responseHashes": [
+                "17859b81f9261a81d5d938f385e536c308eb27d27e5c8e9dbeb189a1ca53c7ac",
+                "a07b8fbc6259b1e900b5dd154c70dee336a3d67e55dda92b3fb1294725724843",
+                "0b9986f7dfed08bb7b94665db33d501023e771495a9aaa9aef035bff6e732552",
+                "e4bb697dec38fa8d1b4760da4c8fb46d3905b4a796321dc7a7df08f83f479c4a",
+                "e00d5da9de3ebc012c0d01ae3150c11bfcb64116e369d487f0e5ae37ad809c9a",
+                "4f2f287a6ff8f285caa2a41332f94fd7b8a8cc197ce2e5f25380ff245fad6b54",
+                "88ae26d025038fffa980e47cf6706bcf0ad7c342bcf9191cfeeefa8094ffb0eb",
+                "22779cabe9931d4c3cf7f607270f17bec6b32ab2fcaeee9b757ee4233e5265fa"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomshardware.com",
+                "www.androidcentral.com",
+                "www.cinemablend.com",
+                "www.cyclingweekly.com",
+                "www.cyclingnews.com",
+                "www.imore.com",
+                "www.livescience.com",
+                "www.marieclaire.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/css\\/browser\\/17\\.10\\.14-cc88f130fbc9fd057f8c65058bc216e9930999f2\\/responsive\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "acedf233e50a172946603231648495eec6eae0bf489ac805136c6d1edfae1537"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidcentral.com",
+                "www.cinemablend.com",
+                "www.laptopmag.com",
+                "www.livescience.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/js\\/w\\/es6\\/17\\.10\\.14-cc88f130fbc9fd057f8c65058bc216e9930999f2\\/responsive\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {
+                "Document.cookie getter": 10,
+                "window.localStorage": 10,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "89cd6eba4bb45881dcf596ac51555f33b582f516ebdd02ccc2c0d09de6ee3f76"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidcentral.com",
+                "www.cinemablend.com",
+                "www.cyclingnews.com",
+                "www.digitalcameraworld.com",
+                "www.imore.com",
+                "www.laptopmag.com",
+                "www.livescience.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/13-4-6\\/js\\/externals\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slice.vanilla"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "e9655cf4d062b1833393afcb7cd37044219d6467f524201b6147d2508618d002"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidcentral.com",
+                "www.cinemablend.com",
+                "www.cyclingnews.com",
+                "www.cyclingweekly.com",
+                "www.digitalcameraworld.com",
+                "www.imore.com",
+                "www.laptopmag.com",
+                "www.livescience.com",
+                "www.marieclaire.com",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/translations\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "32d5bdc6d0302d1dc45608fad322906c9dc264a1e17ec25147a7e7b7682f18c3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidcentral.com",
+                "www.cinemablend.com",
+                "www.cyclingweekly.com",
+                "www.cyclingnews.com",
+                "www.imore.com",
+                "www.livescience.com",
+                "www.marieclaire.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/13-4-6\\/js\\/localeSelector\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "slice.vanilla"
+            ],
+            "apis": {
+                "Document.cookie getter": 7
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "9d355872e64ecbb8700692990001d4e5350ce79db3bf58da0f81f9e4fe4b0d84"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidcentral.com",
+                "www.cinemablend.com",
+                "www.cyclingweekly.com",
+                "www.digitalcameraworld.com",
+                "www.imore.com",
+                "www.laptopmag.com",
+                "www.tomshardware.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/13-4-6\\/js\\/regionRedirectBanner\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "slice.vanilla"
+            ],
+            "apis": {
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "9ba5db1a7038b832533412b19e91761f5e7281b1175c67ffedfd5ae73041608f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "androidcentral.com",
+                "www.laptopmag.com",
+                "www.windowscentral.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/js\\/w\\/es6\\/17\\.10\\.14-cc88f130fbc9fd057f8c65058bc216e9930999f2\\/promotion\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "51d7a83c1f7bbac11f68e05f0350776065740b17df5e1e6cb48840b691df66ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cyclingnews.com",
+                "www.cyclingweekly.com",
+                "www.digitalcameraworld.com",
+                "www.imore.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/cyclingweekly\\/listing\\.BUEJZvDQ\\.es6\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vanilla"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "55c6ab30684fcd7c09b9d5dbfdcec045e1a9df81ce1a52583b7dcabc23d0b1a2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cyclingweekly.com",
+                "www.cyclingweekly.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/js\\/w\\/es6\\/17\\.10\\.14-cc88f130fbc9fd057f8c65058bc216e9930999f2\\/progressive\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bfa4dafe01621a205caa8d86e68ab5739c2ba8973fc04066e33e35704becfcd4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cyclingweekly.com",
+                "www.marieclaire.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/widget\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "6eb1a15955f3ae9c053c631357137f110ee88b6412d15d7fe5bb0266803d1d80",
+                "0452ca588f9936e005adf9348945db31b4883b1194650feff5658bc79fdb20fc"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cyclingweekly.com",
+                "www.cyclingnews.com",
+                "www.imore.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/js\\/w\\/es6\\/17\\.10\\.14-cc88f130fbc9fd057f8c65058bc216e9930999f2\\/analytics-library-entry-getCustomTrackingId\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "search-api.fie"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "821aa1b667d3679809a12f850aeeb62067ec23d87c3036d091811d9c3b385b0b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cyclingweekly.com",
+                "www.cyclingnews.com"
+            ]
+        },
+        {
+            "rule": "futurecdn\\.net\\/marieclaireus\\/listing\\.BUEJZvDQ\\.es6\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vanilla"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "55c6ab30684fcd7c09b9d5dbfdcec045e1a9df81ce1a52583b7dcabc23d0b1a2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marieclaire.com",
+                "www.marieclaire.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.00152,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9637681159420289
+        },
+        {
+            "domain": "future.net.uk",
+            "prevalence": 0.028985507246376812
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.007246376811594203
+        }
+    ],
+    "types": {
+        "Script": 87,
+        "Fetch": 20,
+        "Stylesheet": 7
+    },
+    "nameservers": [
+        "ns-1028.awsdns-00.org",
+        "ns-1944.awsdns-51.co.uk",
+        "ns-407.awsdns-50.com",
+        "ns-554.awsdns-05.net"
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "domain": "pikapod.net",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000301,
+    "sites": 3,
+    "subdomains": [
+        "noisy-mackerel",
+        "spotted-potoo"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "pikapod\\.net\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "noisy-mackerel",
+                "spotted-potoo"
+            ],
+            "apis": {
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Navigator.prototype.language": 3,
+                "Navigator.prototype.doNotTrack": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "a656812a02ca34d8dc65b86430b3434eb5f17e56bd904b4761566cf542d08b55"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itsfoss.com",
+                "linuxhandbook.com",
+                "www.tecmint.com"
+            ]
+        },
+        {
+            "rule": "pikapod\\.net\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "noisy-mackerel",
+                "spotted-potoo"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itsfoss.com",
+                "linuxhandbook.com",
+                "www.tecmint.com"
+            ]
+        },
+        {
+            "rule": "pikapod\\.net\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "noisy-mackerel",
+                "spotted-potoo"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "5c55ccc4220a219dc260ae6dce539e3fa1f1ed8943ed1cd514a79c9c1c391ad7",
+                "b00b0cc02793c0f60ba6ace32794d5ed27a8c3f60f33f47d6d28895fcf6abed8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itsfoss.com",
+                "linuxhandbook.com",
+                "www.tecmint.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Preflight": 3,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "ns1.dnsimple.com",
+        "ns2.dnsimple.com",
+        "ns3.dnsimple.com",
+        "ns4.dnsimple.com"
+    ]
+}

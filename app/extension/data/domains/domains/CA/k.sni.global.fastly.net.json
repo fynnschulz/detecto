@@ -1,0 +1,103 @@
+{
+    "domain": "k.sni.global.fastly.net",
+    "owner": {
+        "name": "Fastly, Inc.",
+        "displayName": "Fastly",
+        "privacyPolicy": "https://www.fastly.com/privacy",
+        "url": "http://fastly.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000406,
+    "sites": 4,
+    "subdomains": [],
+    "cnames": [
+        {
+            "original": "analytics.gadventures.com",
+            "resolved": "k.sni.global.fastly.net"
+        },
+        {
+            "original": "cdn.benzinga.com",
+            "resolved": "k.sni.global.fastly.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "k\\.sni\\.global\\.fastly\\.net\\/files\\/images\\/story\\/2025\\/08\\/15\\/Us-Capitol-Lights-North-Side-Illuminated\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "cdn.benzinga.com",
+                    "resolved": "k.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "3f5bff65bcfc5a15ea7b6614196cbbe480d1b4f99a0b069eaa19d56eebb26057"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "benzinga.com",
+                "www.benzinga.com"
+            ]
+        },
+        {
+            "rule": "k\\.sni\\.global\\.fastly\\.net\\/g\\/collect",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "analytics.gadventures.com",
+                    "resolved": "k.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "bf5bf9608de683bcd57f89739680324cbe842c1ff1221efbd1452a90d9692d82"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.00020302507359658918
+            },
+            "exampleSites": [
+                "gadventures.com",
+                "www.gadventures.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Third-Party Analytics Marketing",
+        "Action Pixels",
+        "CDN",
+        "Embedded Content",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Image": 2,
+        "Fetch": 2
+    },
+    "nameservers": []
+}

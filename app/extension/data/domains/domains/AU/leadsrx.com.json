@@ -1,0 +1,101 @@
+{
+    "domain": "leadsrx.com",
+    "owner": {
+        "name": "Sargents, Inc.",
+        "displayName": "Sargents"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "leadsrx\\.com\\/visitor\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {
+                "Date.prototype.getTimezoneOffset": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c3eb7e86a765407a84e441b80826ebf715ae95736b33752f34d8180fbfe6a9c5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_lab": {
+                    "ttl": 31536000,
+                    "length": 16,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "norton.com",
+                "www.globalshop.com.au"
+            ]
+        },
+        {
+            "rule": "leadsrx\\.com\\/visitor\\.php",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "60a78d8ed7cfa1c396372cc455fbe025c9a3a10ed8f89534a8ff4005b03e1ef5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "norton.com",
+                "www.globalshop.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "content-cms.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns-98.awsdns-12.com",
+        "ns-1766.awsdns-28.co.uk",
+        "ns-774.awsdns-32.net",
+        "ns-1509.awsdns-60.org"
+    ]
+}

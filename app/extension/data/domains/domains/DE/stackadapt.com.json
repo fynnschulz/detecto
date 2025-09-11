@@ -1,0 +1,340 @@
+{
+    "domain": "stackadapt.com",
+    "owner": {
+        "name": "Collective Roll",
+        "displayName": "Collective Roll",
+        "privacyPolicy": "https://www.stackadapt.com/privacy",
+        "url": "http://stackadapt.com"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00182,
+    "sites": 18,
+    "subdomains": [
+        "sync.srv",
+        "tags.srv",
+        "pjs.srv"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "stackadapt\\.com\\/sync",
+            "cookies": 0.000504,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync.srv"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000605,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "downdetector.com",
+                "techcrunch.com",
+                "www.avclub.com",
+                "www.behindthename.com",
+                "www.coolibri.de",
+                "www.topcpu.net"
+            ]
+        },
+        {
+            "rule": "stackadapt\\.com\\/events\\.js",
+            "cookies": 0.000908,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tags.srv"
+            ],
+            "apis": {
+                "Document.cookie getter": 9,
+                "Date.prototype.getTime": 9,
+                "Document.cookie setter": 9,
+                "window.localStorage": 9,
+                "Navigator.prototype.userAgent": 8
+            },
+            "sites": 9,
+            "prevalence": 0.000908,
+            "cnames": [],
+            "responseHashes": [
+                "0463dc29d4a4a244d781c898da4408d713f0d7e49cff98906c2a97a2ec2d1709",
+                "2c77d4e22644241de43db39a82266f92b8672c38fdc163f7fc591cade747b3b2",
+                "43f1daca6739c4d32b0c976e1c743066be776c5df2e9c24510dcde94c2aeb2ec",
+                "39414f8fed8ecce5661dd72365ee8df74137a36eafbff1a5b61eae7bf13422f2",
+                "ffcf9235b4e37a9a0c4e950048775b2702795db96493b4b445cadd023566547c",
+                "a22e5266aa8adbbc4e247f213484f7666cbe3986ac2079d668daa5c07da48dfe",
+                "382203f694bd9f7486d6c787e10cf2a71bdb05bd12e8d14ff66f16da37711ae0",
+                "f4820490c23001a9f05ef1abbbe829334df06e525d45a74d7a20e8c6699682b5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sa-user-id": {
+                    "ttl": 31536004,
+                    "length": 88,
+                    "prevalence": 0.0009080819291696096,
+                    "uniqueness": 0.1111111111111111
+                },
+                "sa-user-id-v2": {
+                    "ttl": 31536004,
+                    "length": 81,
+                    "prevalence": 0.0009080819291696096,
+                    "uniqueness": 0.1111111111111111
+                },
+                "sa-user-id-v3": {
+                    "ttl": 31536004,
+                    "length": 137,
+                    "prevalence": 0.0009080819291696096,
+                    "uniqueness": 1
+                },
+                "sa-r-source": {
+                    "ttl": 2592008,
+                    "length": 15,
+                    "prevalence": 0.00010089799212995662,
+                    "uniqueness": 1
+                },
+                "sa-r-date": {
+                    "ttl": 2592008,
+                    "length": 24,
+                    "prevalence": 0.00010089799212995662,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hackaday.com",
+                "portswigger.net",
+                "sailgp.com",
+                "seekingalpha.com",
+                "www.alldatasheet.com",
+                "www.eevblog.com",
+                "www.lottoland.com",
+                "www.postman.com",
+                "www.techrepublic.com"
+            ]
+        },
+        {
+            "rule": "stackadapt\\.com\\/sa\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tags.srv"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "bf92ee31add3362471dddddf4ba2ff296381bcbccefbef5f5b84c4a7324cc41d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hackaday.com",
+                "portswigger.net",
+                "sailgp.com",
+                "seekingalpha.com",
+                "www.alldatasheet.com",
+                "www.eevblog.com",
+                "www.lottoland.com",
+                "www.techrepublic.com"
+            ]
+        },
+        {
+            "rule": "stackadapt\\.com\\/sa\\.jpeg",
+            "cookies": 0.000807,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tags.srv"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hackaday.com",
+                "portswigger.net",
+                "sailgp.com",
+                "seekingalpha.com",
+                "www.alldatasheet.com",
+                "www.eevblog.com",
+                "www.lottoland.com",
+                "www.techrepublic.com"
+            ]
+        },
+        {
+            "rule": "stackadapt\\.com\\/saq_pxl",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tags.srv"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "b39055a23b56fb3cc91932ae34bb6799d2e5440629d23cd24f38321c8b11b26b",
+                "078f3dd88e751c3c421b2007e1cb27bcb65a95daf278bd25de81ba7b2bf3c4e4",
+                "1d31b9f6f1ee9dcf0b54033eaf40bb787f397c9b1b771872a82b9d534223e669",
+                "991cf7e0e7e51c413e1005ed83e8339375082a55b53cd0a58049d48c0b43f997",
+                "ecc025f73fecf40c9491bef6703410500b1d8f86a701a32aeb06cebd56ccea0e",
+                "885f2834b2bbeac26211719030ffabacce6389829e53e8fc95e7d9d43c4920e5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "sa-user-id": 0.000807183937039653,
+                "sa-user-id-v2": 0.000807183937039653,
+                "sa-user-id-v3": 0.000807183937039653,
+                "sa-r-source": 0.00010089799212995662,
+                "_li_dcdm_c": 0.00010089799212995662
+            },
+            "exampleSites": [
+                "hackaday.com",
+                "portswigger.net",
+                "sailgp.com",
+                "seekingalpha.com",
+                "www.alldatasheet.com",
+                "www.eevblog.com",
+                "www.lottoland.com",
+                "www.techrepublic.com"
+            ]
+        },
+        {
+            "rule": "stackadapt\\.com\\/br",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pjs.srv"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mtgdecks.net",
+                "www.exceldemy.com",
+                "www.merriam-webster.com"
+            ]
+        },
+        {
+            "rule": "stackadapt\\.com\\/js_tracking",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tags.srv"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010089799212995662
+            },
+            "exampleSites": [
+                "sailgp.com",
+                "seekingalpha.com",
+                "www.lottoland.com",
+                "www.techrepublic.com"
+            ]
+        },
+        {
+            "rule": "stackadapt\\.com\\/rt",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tags.srv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "postman.com",
+                "www.postman.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Audience Measurement",
+        "Action Pixels"
+    ],
+    "performance": {},
+    "cookies": 0.00141,
+    "topInitiators": [
+        {
+            "domain": "adthrive.com",
+            "prevalence": 0.2962962962962963
+        },
+        {
+            "domain": "gumgum.com",
+            "prevalence": 0.18518518518518517
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.14814814814814814
+        },
+        {
+            "domain": "supplyframe.com",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "growth-channel.net",
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "piwik.pro",
+            "prevalence": 0.037037037037037035
+        },
+        {
+            "domain": "htlbid.com",
+            "prevalence": 0.037037037037037035
+        }
+    ],
+    "types": {
+        "Image": 8,
+        "Script": 9,
+        "Stylesheet": 8,
+        "Fetch": 8,
+        "XHR": 15
+    },
+    "nameservers": [
+        "ns-1201.awsdns-22.org",
+        "ns-1614.awsdns-09.co.uk",
+        "ns-263.awsdns-32.com",
+        "ns-926.awsdns-51.net"
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "domain": "contobox.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000305,
+    "sites": 3,
+    "subdomains": [
+        "ws",
+        "cbdp"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "contobox\\.com\\/getcode\\.js",
+            "cookies": 0.000305,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "a7cc4f96428d7564d4aab3114c6d7816a068c7645c276e87946cbb8654740e7b",
+                "6f4f6867c62e6b3884421a93d058ae59a7b593fd8e83d2d64196623914d2628a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "weiserlock.com",
+                "www.acehardware.com",
+                "www.fountaintire.com"
+            ]
+        },
+        {
+            "rule": "contobox\\.com\\/wsrule",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cbdp"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "b32e758b40029abdededbdbbfa35ceef9d8620a2f1f2a15caa97bf1208701cd7",
+                "2d572e2e7432d66183eafa7dbc2a7ecb83fabb934923c8d791ea1968cb9ad2cc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weiserlock.com",
+                "www.acehardware.com",
+                "www.fountaintire.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000305,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "XHR": 3
+    },
+    "nameservers": [
+        "ns-501.awsdns-62.com",
+        "ns-868.awsdns-44.net",
+        "ns-1616.awsdns-10.co.uk",
+        "ns-1257.awsdns-29.org"
+    ]
+}

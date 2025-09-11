@@ -1,0 +1,430 @@
+{
+    "domain": "monsido.com",
+    "owner": {
+        "name": "Monsido Inc.",
+        "displayName": "Monsido"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.0159,
+    "sites": 158,
+    "subdomains": [
+        "app-script",
+        "tracking",
+        "heatmaps",
+        "cdn",
+        "pagecorrect"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "monsido\\.com\\/v2\\/monsido-script\\.js",
+            "cookies": 0.00828,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app-script"
+            ],
+            "apis": {
+                "Document.cookie getter": 125,
+                "Date.prototype.getTime": 125,
+                "Document.cookie setter": 82,
+                "Screen.prototype.width": 105,
+                "Screen.prototype.height": 105
+            },
+            "sites": 128,
+            "prevalence": 0.0129,
+            "cnames": [],
+            "responseHashes": [
+                "0ace3ba67703f32511b94e9d72c938f352f7dbc66ed1b17cb15624594b8cf9ca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "monsido": {
+                    "ttl": 2592010,
+                    "length": 16,
+                    "prevalence": 0.008276975875643484,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.canon.com.au",
+                "www.museum.qld.gov.au",
+                "www.manningham.vic.gov.au",
+                "www.portphillip.vic.gov.au",
+                "www.sea.museum",
+                "www.georgesriver.nsw.gov.au",
+                "visitperth.com",
+                "login.aware.com.au",
+                "www.accc.gov.au",
+                "www.queenslandcountry.bank",
+                "www.opal.com.au",
+                "transportnsw.info",
+                "www.education.gov.au",
+                "www.murdoch.edu.au",
+                "www.afp.gov.au",
+                "nt.gov.au",
+                "www.gleneira.vic.gov.au",
+                "www.melbournepolytechnic.edu.au",
+                "www.sydneyoperahouse.com",
+                "www.vu.edu.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 155,
+            "prevalence": 0.0156,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "monsido": 0.010598566670031291,
+                "_hjTLDTest": 0.0008075098415261935
+            },
+            "exampleSites": [
+                "www.safeworkaustralia.gov.au",
+                "jellycat.com",
+                "www.sea.museum",
+                "www.queenslandcountry.bank",
+                "www.acma.gov.au",
+                "www.epa.nsw.gov.au",
+                "www.aer.gov.au",
+                "www.accc.gov.au",
+                "www.countycourt.vic.gov.au",
+                "www.betterhealth.vic.gov.au",
+                "www.cockburn.wa.gov.au",
+                "grdc.com.au",
+                "www.vicroads.vic.gov.au",
+                "www.chisholm.edu.au",
+                "www.cairns.qld.gov.au",
+                "www.sydneyoperahouse.com",
+                "www.racgp.org.au",
+                "www.darwin.nt.gov.au",
+                "www.vinnies.org.au",
+                "www.cabrini.com.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/v1\\/heatmaps\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "heatmaps"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 49
+            },
+            "sites": 50,
+            "prevalence": 0.00505,
+            "cnames": [],
+            "responseHashes": [
+                "df3bc31eb27cba101d7e3918ebd94dc5ba21065e91983d1d55a67e9a621aaaec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www1.racgp.org.au",
+                "www.supersa.sa.gov.au",
+                "www.manningham.vic.gov.au",
+                "www.nswtrainlink.info",
+                "rslqld.org",
+                "www.hamiltonisland.com.au",
+                "www.australiansuper.com",
+                "www.esafety.gov.au",
+                "www.torrens.edu.au",
+                "www.vinnies.org.au",
+                "www.queenslandcountry.bank",
+                "www.accc.gov.au",
+                "www.acma.gov.au",
+                "www.fire.qld.gov.au",
+                "www.vu.edu.au",
+                "www.pork.com.au",
+                "www.melbourne.vic.gov.au",
+                "www.aer.gov.au",
+                "www.planning.nsw.gov.au",
+                "www.afp.gov.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/tool\\/javascripts\\/monsido\\.js",
+            "cookies": 0.00222,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 22,
+                "Date.prototype.getTime": 27,
+                "Document.cookie setter": 22,
+                "Screen.prototype.width": 24,
+                "Screen.prototype.height": 24,
+                "PerformanceTiming.prototype.navigationStart": 24
+            },
+            "sites": 29,
+            "prevalence": 0.00293,
+            "cnames": [],
+            "responseHashes": [
+                "17dd560fed5a0713a3f47f70269fe1d3f9e1cdc3bc47fbcd114c6ebcb56d295f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "monsido": {
+                    "ttl": 2592007,
+                    "length": 16,
+                    "prevalence": 0.0022206520641970323,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.sydney.com",
+                "www.icare.nsw.gov.au",
+                "www.mq.edu.au",
+                "www.adfcareers.gov.au",
+                "www.cityofadelaide.com.au",
+                "www.screenaustralia.gov.au",
+                "www.yourtown.com.au",
+                "www.seniors.com.au",
+                "www.sace.sa.edu.au",
+                "www.visitnsw.com",
+                "www.education.vic.gov.au",
+                "www.supremecourt.vic.gov.au",
+                "www.discovertasmania.com.au",
+                "www.bankfirst.com.au",
+                "www.abf.gov.au",
+                "www.northernbeaches.nsw.gov.au",
+                "students.mq.edu.au",
+                "www.esc.vic.gov.au",
+                "www.westernaustralia.com",
+                "immi.homeaffairs.gov.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/v1\\/page-correct\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pagecorrect"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "d141769570c57f86e87777d2093d36608c97f30872dbc3ce9c918b35793c180f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "grdc.com.au",
+                "www.canberraimaging.com.au",
+                "www.museum.qld.gov.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/page-assist\\/v2\\/mon-page-assist-loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "15a546379ed1abe222c70085a95c3eac60b92cc3de1bc35053a396613f71dde7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perth.wa.gov.au",
+                "visitperth.com",
+                "www.digitalhealth.gov.au",
+                "www.tastafe.tas.edu.au",
+                "www.townsville.qld.gov.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/page-assist\\/v2\\/assets\\/img\\/uaccess\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "a8736570a64359b53f2fb2cbf5b180e97d87548a208fa3e931156b11d40dc491"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perth.wa.gov.au",
+                "visitperth.com",
+                "www.digitalhealth.gov.au",
+                "www.tastafe.tas.edu.au",
+                "www.townsville.qld.gov.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/page-assist\\/v2\\/assets\\/img\\/default-spinner\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "ab724be76a60db20138ba8a49c4e69517e49404a9a0594b3e8923fafce7f89c1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "perth.wa.gov.au",
+                "visitperth.com",
+                "www.digitalhealth.gov.au",
+                "www.tastafe.tas.edu.au",
+                "www.townsville.qld.gov.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/v1\\/settings\\/WP3hH7Zf5AKO11L1iNHnXg\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "heatmaps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "969f59eaf7e56ef24762db312149dd7280d71cb1c849e9a53f2a69fc55a88332"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transport.vic.gov.au",
+                "www.ptv.vic.gov.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/v1\\/settings\\/WCqLPWNQ_fHGp3fHxILH-w\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "heatmaps"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "04da1607ddb93ae9b7e6b58423cdf8141b2e86fdc87dce6bb2a6e060b6bcc83c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transportnsw.info",
+                "www.nswtrainlink.info",
+                "www.opal.com.au"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/v1\\/settings\\/R_-aTY-taou38xiHZ0ak1Q\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "heatmaps"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a71a73a100b6b1822589778264303e99bdd010a1bb50df9a0b534d93e6206415"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "racgp.org.au",
+                "www1.racgp.org.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0105,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5425531914893617
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.4095744680851064
+        },
+        {
+            "domain": "signalfx.com",
+            "prevalence": 0.015957446808510637
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.010638297872340425
+        },
+        {
+            "domain": "onetrust.com",
+            "prevalence": 0.005319148936170213
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.005319148936170213
+        },
+        {
+            "domain": "msecnd.net",
+            "prevalence": 0.005319148936170213
+        },
+        {
+            "domain": "raygun.io",
+            "prevalence": 0.005319148936170213
+        }
+    ],
+    "types": {
+        "Script": 215,
+        "Image": 165,
+        "XHR": 7
+    },
+    "nameservers": [
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e1.googledomains.com"
+    ]
+}

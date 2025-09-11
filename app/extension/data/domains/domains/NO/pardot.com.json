@@ -1,0 +1,183 @@
+{
+    "domain": "pardot.com",
+    "owner": {
+        "name": "Salesforce.com, Inc.",
+        "displayName": "Salesforce.com",
+        "privacyPolicy": "https://www.salesforce.com/company/privacy/",
+        "url": "http://salesforce.com"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "pi",
+        "go"
+    ],
+    "cnames": [
+        {
+            "original": "go.esri.com",
+            "resolved": "go.pardot.com"
+        },
+        {
+            "original": "tracking.heimdalsecurity.com",
+            "resolved": "go.pardot.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "pardot\\.com\\/pd\\.js",
+            "cookies": 0.000403,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pi",
+                "go"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 3
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [
+                {
+                    "original": "tracking.heimdalsecurity.com",
+                    "resolved": "go.pardot.com"
+                }
+            ],
+            "responseHashes": [
+                "41402adfc915ad6dfd6328c06c8038763d25fe603e63beba4a2638a2bbc03136"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "visitor_id82202": {
+                    "ttl": 31536011,
+                    "length": 9,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "visitor_id82202-hash": {
+                    "ttl": 31536011,
+                    "length": 104,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "visitor_id919133": {
+                    "ttl": 315360008,
+                    "length": 10,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "visitor_id919133-hash": {
+                    "ttl": 315360008,
+                    "length": 104,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "visitor_id577561": {
+                    "ttl": 94608009,
+                    "length": 10,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "visitor_id577561-hash": {
+                    "ttl": 94608009,
+                    "length": 104,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "esri.com",
+                "heimdalsecurity.com",
+                "letsencrypt.org",
+                "opencorporates.com",
+                "www.noroff.no"
+            ]
+        },
+        {
+            "rule": "pardot\\.com\\/analytics",
+            "cookies": 0.000604,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pi",
+                "go"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [
+                {
+                    "original": "go.esri.com",
+                    "resolved": "go.pardot.com"
+                },
+                {
+                    "original": "tracking.heimdalsecurity.com",
+                    "resolved": "go.pardot.com"
+                }
+            ],
+            "responseHashes": [
+                "dcf430710cdd1359115293f45d5023b2a560aef8a2c1e59d578b8b1e10a216d3",
+                "a2d36e1489f59863041d7c85a975128db2c54313dc5bcb95f3d60605b63ba126",
+                "8ad317c0060a79e84c2afcc7ceda66cdd828f5d9321514326c70561138b2d3ae",
+                "835618858fae984f15ccd6a0372d6ed4e5db56f2fd820be848d63f97dff999a7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "visitor_id82202": 0.00010064412238325282,
+                "visitor_id82202-hash": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "esri.com",
+                "community.esri.com",
+                "heimdalsecurity.com",
+                "letsencrypt.org",
+                "opencorporates.com",
+                "www.noroff.no"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.000503,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.42857142857142855
+        },
+        {
+            "domain": "pardot.com",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "abetterinternet.org",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Script": 11
+    },
+    "nameservers": [
+        "dns1.p06.nsone.net",
+        "dns2.p06.nsone.net",
+        "dns3.p06.nsone.net",
+        "dns4.p06.nsone.net",
+        "ns02.salesforce-dns.com",
+        "ns01.salesforce-dns.com",
+        "ns03.salesforce-dns.com",
+        "ns04.salesforce-dns.com"
+    ]
+}

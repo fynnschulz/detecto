@@ -1,0 +1,150 @@
+{
+    "domain": "shop.pe",
+    "owner": {
+        "name": "Add Shoppers",
+        "displayName": "Add Shoppers"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000503,
+    "sites": 5,
+    "subdomains": [
+        "shopper",
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "shop\\.pe\\/widget\\/widget_async\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.ancient-origins.net",
+                "www.anker.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/widget\\/main\\/init\\/params",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "62c54f1d8aaf558136d0eabe49c8d170b5400fed2fee9c4b8a8bf1d7427c7cfc",
+                "0531f76c23590758b2c7a4129d29f1f801cca1e31d793de8fca894a9cf78a73b",
+                "4edbfbc5fa9b38c4720dfdae2dd7208e380f0caffd1df0de9d621061910d4743"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ju_dm": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "draxe.com",
+                "www.anker.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/input\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "shopper"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 4,
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "a60b91c0826c2f6e38d6d42a608764f34cfe6ea7419b69770b47463d9d962ce7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.anker.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/app\\/datapartners\\/status",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "b4435b5ac2f1916ed1135fb1738a1cef87cb666f4356a6678fb1c77e1273f9e1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.anker.com",
+                "www.easeus.com",
+                "www.imobie.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000403,
+    "topInitiators": [
+        {
+            "domain": "d2mjzob2nc713b.cloudfront.net",
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.09523809523809523
+        },
+        {
+            "domain": "impactcdn.com",
+            "prevalence": 0.047619047619047616
+        }
+    ],
+    "types": {
+        "Script": 13,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-482.awsdns-60.com",
+        "ns-601.awsdns-11.net",
+        "ns-1375.awsdns-43.org",
+        "ns-1678.awsdns-17.co.uk"
+    ]
+}

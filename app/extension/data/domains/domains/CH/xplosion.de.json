@@ -1,0 +1,131 @@
+{
+    "domain": "xplosion.de",
+    "owner": {
+        "name": "emetriq GmbH",
+        "displayName": "emetriq",
+        "privacyPolicy": "https://www.emetriq.com/datenschutz/",
+        "url": "http://emetriq.com"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000603,
+    "sites": 6,
+    "subdomains": [
+        "uss",
+        "cdn",
+        "ups"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "xplosion\\.de\\/usersync",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uss"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fernsehserien.de",
+                "www.kleinreport.ch",
+                "www.swisswebcams.ch",
+                "www.wetter.ch"
+            ]
+        },
+        {
+            "rule": "xplosion\\.de\\/adp\\/profiling\\/1\\.0\\.0\\/p\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.availWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8f192b52f249f5c4fad0cf86aa4cb0cce6b55d6ec72f706eacf8bb5defb6d317"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vielfliegertreff.de",
+                "www.vol.at"
+            ]
+        },
+        {
+            "rule": "xplosion\\.de\\/data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ups"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vielfliegertreff.de",
+                "www.vol.at"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising"
+    ],
+    "performance": {},
+    "cookies": 0.000402,
+    "topInitiators": [
+        {
+            "domain": "visx.net",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "yoc.com",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "netpoint-media.de",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Image": 4,
+        "Script": 4
+    },
+    "nameservers": [
+        "ns-514.awsdns-00.net",
+        "ns-1510.awsdns-60.org",
+        "ns-318.awsdns-39.com",
+        "ns-1755.awsdns-27.co.uk"
+    ]
+}

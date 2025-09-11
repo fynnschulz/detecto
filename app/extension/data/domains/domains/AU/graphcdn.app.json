@@ -1,0 +1,103 @@
+{
+    "domain": "graphcdn.app",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "rugby-au-cms",
+        "drive-tailpipe-prod",
+        "drive-carsforsale-prod"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "graphcdn\\.app\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rugby-au-cms",
+                "drive-tailpipe-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wallabies.rugby",
+                "www.drive.com.au",
+                "www.rugby.com.au"
+            ]
+        },
+        {
+            "rule": "graphcdn\\.app\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rugby-au-cms"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d9c6ff3316e5e74b5e5eb253aa24c95f00b2a3020c1b4c517498566d5d24237b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wallabies.rugby",
+                "www.rugby.com.au"
+            ]
+        },
+        {
+            "rule": "graphcdn\\.app\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "drive-tailpipe-prod",
+                "drive-carsforsale-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "02cdbbc3e28e6be6a8ab9d18c2516ffa3c67e88925d3a558cecd2243e3b3423a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drive.com.au",
+                "www.drive.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 3,
+        "Fetch": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "yadiel.ns.cloudflare.com",
+        "sloan.ns.cloudflare.com"
+    ]
+}

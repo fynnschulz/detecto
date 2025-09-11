@@ -1,0 +1,410 @@
+{
+    "domain": "swymrelay.com",
+    "owner": {
+        "name": "Swym Corporation",
+        "displayName": "Swym"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00131,
+    "sites": 13,
+    "subdomains": [
+        "swymstore-v3pro-01",
+        "swymstore-v3premium-01",
+        "swymstore-v3free-01",
+        "swymstore-v3enterprise-01",
+        "procdn",
+        "premcdn",
+        "freecdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "swymrelay\\.com\\/api\\/v3\\/provider\\/checkAndGet",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "swymstore-v3pro-01",
+                "swymstore-v3premium-01",
+                "swymstore-v3free-01",
+                "swymstore-v3enterprise-01"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "5c4a75e5194ccc894803875d51e05c17b24357a4c928106c07eea6a724fbe607",
+                "32f7ecc38225a67dd6aa9602dffc170f25ca5b394f686454f39dea67f1af7a28",
+                "cb2db45e2a09c0d6c77073dae2d35f6d4a3de5346c01bdd0733f581537683769",
+                "4c2d790f5dd36f13830bd18093475f5770f5187adabfe3ce2b35f963f81c7dbf",
+                "2fe15b9d34fd10ce56c1a406e5d3d6371bfc7a80839ded58574bcee34cc53dc8",
+                "b8854748a41546cba51c1c8411ce6ea8bb43ae8e56e9f0a586a6436a1922230d",
+                "e473e48def8473fa77d34a0686ac300ae3cbf7ac32e69c0f129ff0a57998ae6a",
+                "b7177df624b4674dbe79ac0bc2dadbfbe55e37eeae72f9d7116dee2f7f9cf353",
+                "909ce8475b2c4e4ddd0b0dc9e524914b9e512a80f57ccc5795c43d962b208389",
+                "0216029df85db8af5c064875d35ffd51d652850ded5b562df949b81957d94056",
+                "970234ec79f7ed0d778e5c2fd9b80fc1f33619510b0629134082d04c72dce203"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jellycat.com",
+                "lucyandyak.com",
+                "mr-fothergills.co.uk",
+                "railsofsheffield.com",
+                "widefitshoes.co.uk",
+                "www.e-bikeshop.co.uk",
+                "www.fabricsgalore.co.uk",
+                "www.farmergracy.co.uk",
+                "www.gardenersdream.co.uk",
+                "www.golfclubs4cash.co.uk",
+                "www.pooky.com",
+                "www.worldofbooks.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/code\\/v3\\/apps\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "procdn",
+                "premcdn",
+                "freecdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "36bf089484079ec128e9956460c3ddb6ec374dbc429fdaab66a4ef3961627369",
+                "2c60ff1f847a47849f19435f175bd1a4252161697d78cde6abc292ba89a1751f",
+                "53283feccf41b5cf33613627bedd95b300d5a4a19060d9f4b244652db38c2cf8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jellycat.com",
+                "lucyandyak.com",
+                "mr-fothergills.co.uk",
+                "www.e-bikeshop.co.uk",
+                "www.farmergracy.co.uk",
+                "www.pooky.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/code\\/v3\\/loadStrings1\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "procdn",
+                "premcdn",
+                "freecdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "fc59f2c566f2175087817e07914f92e04958fd434d7cac188eff4cfb7e159fb7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jellycat.com",
+                "lucyandyak.com",
+                "mr-fothergills.co.uk",
+                "www.e-bikeshop.co.uk",
+                "www.farmergracy.co.uk",
+                "www.pooky.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/code\\/v3\\/secondaryStyles\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "procdn",
+                "premcdn",
+                "freecdn"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "08f8a333323941ee908839c18cb1fe5eb98049b5f74f2880879824317afc4331",
+                "8cb35b556a9fb8335f1fa4072121e7b192aa96b3d93dd14b9695b25b46668417",
+                "8fd5fedc5c0560b68aff420dd5caa2e3c1962acd8e7b0c39a34f334d888af233"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jellycat.com",
+                "lucyandyak.com",
+                "mr-fothergills.co.uk",
+                "www.e-bikeshop.co.uk",
+                "www.farmergracy.co.uk",
+                "www.pooky.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/api\\/v2\\/provider\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "swymstore-v3pro-01",
+                "swymstore-v3premium-01",
+                "swymstore-v3free-01",
+                "swymstore-v3enterprise-01"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "c0339e73227ac76402fe42961603cca060214336edab0f5dac04e62496ec3e9c",
+                "629b1437b6dc56c5c30a948f41f57b0678ce430c86adb6aad1f23eb97f049e91",
+                "f45419876df2ee939a4c41710eedfbf94e518acf846afcd77db193cc401b8bb3",
+                "169f2e5cdccf09ce6b4c44a3018bebd5c980735e18e0e9a6117a4a4430d6437e",
+                "353712f4996eaa81a4f7b90ab1e14d31b834a6baa161d5f0d151e6d7f0c09484",
+                "c70b7e8236e47245f05d515455163a59352f358eb24854a2096d4621f3cfd8a4",
+                "7952e1a1087190a4db05e2c4fec21e9f264f2da6920cebc0e97d268f19042601",
+                "156240523d2f7767eedce3f0c6a1a16e63352f4147188d2ee506afcee8faa620",
+                "4e1c0c7564dbe614043e3fe8831c3530716a57c4affad9ad76feb9332dbe7026",
+                "9e000902d24ac5901d39dbfb5fc3e490d07746b64337292633e90859d0757e26",
+                "84c265a7efc127d390756f793e19cbabdb3f6e4eac5403274ac70cc40090087d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jellycat.com",
+                "lucyandyak.com",
+                "mr-fothergills.co.uk",
+                "railsofsheffield.com",
+                "widefitshoes.co.uk",
+                "www.e-bikeshop.co.uk",
+                "www.fabricsgalore.co.uk",
+                "www.farmergracy.co.uk",
+                "www.gardenersdream.co.uk",
+                "www.golfclubs4cash.co.uk",
+                "www.pooky.com",
+                "www.worldofbooks.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/script-tag-check",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "swymstore-v3premium-01",
+                "swymstore-v3free-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "651aec0129bab31e37fcd05296184bb1f804d8e1999080c0bfa8d6fffa08a12a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lucyandyak.com",
+                "www.meaco.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/code\\/v3\\/5905\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "premcdn",
+                "freecdn",
+                "procdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "a720caef21d5ec4bd61a29f535c9d8d43e8d6fa63347755f4784cf9dcafeeb76"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lucyandyak.com",
+                "mr-fothergills.co.uk",
+                "www.e-bikeshop.co.uk",
+                "www.farmergracy.co.uk",
+                "www.pooky.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/code\\/v3\\/4820\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "premcdn",
+                "freecdn",
+                "procdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "789e1b3725fedbd858207cdd56de0cbc538b8b3653c91332231988f5b473868c",
+                "8478e322fdf926f4789541319ea59bc50ff36511bba889141cc80f81a7595980"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lucyandyak.com",
+                "mr-fothergills.co.uk",
+                "www.e-bikeshop.co.uk",
+                "www.farmergracy.co.uk",
+                "www.pooky.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/code\\/v3\\/atw_nudge\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "premcdn",
+                "freecdn",
+                "procdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "55e45fb7a47dee24f5e60f5ca996408f5fbbc0c17672b7edc7dcf6f71153620f",
+                "db48dd5447cf96abe7c0a173e5dfdab53d1b1c91e310c259223dc13100e47eb7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lucyandyak.com",
+                "mr-fothergills.co.uk",
+                "www.e-bikeshop.co.uk",
+                "www.farmergracy.co.uk",
+                "www.pooky.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/code\\/v3\\/swym_fonts\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "freecdn",
+                "procdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "eec39015505be5c8f43e0bea54219f165ce607be9c07ce433f9c79a6ac3c2c01"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mr-fothergills.co.uk",
+                "www.fabricsgalore.co.uk",
+                "www.golfclubs4cash.co.uk"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/config\\/themes\\/887",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "swymstore-v3premium-01",
+                "swymstore-v3enterprise-01"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "c5689c0d0cca74b560a25d3accc8830bc6f9f21892b914f6db69fd7a067936c7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gardenersdream.co.uk",
+                "www.gardenersdream.co.uk",
+                "www.worldofbooks.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/api\\/v3\\/lists\\/sfl\\/fetch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "swymstore-v3premium-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bbf833d2193234f7ef4c6b655aebe173a434ce70df7afc3aee8a92e95231aa75"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "golfclubs4cash.co.uk",
+                "www.golfclubs4cash.co.uk"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5362318840579711
+        },
+        {
+            "domain": "azureedge.net",
+            "prevalence": 0.4492753623188406
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.014492753623188406
+        }
+    ],
+    "types": {
+        "XHR": 29,
+        "Script": 33,
+        "Fetch": 2,
+        "Font": 3
+    },
+    "nameservers": [
+        "ns66.domaincontrol.com",
+        "ns65.domaincontrol.com"
+    ]
+}

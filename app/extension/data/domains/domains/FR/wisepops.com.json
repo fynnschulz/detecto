@@ -1,0 +1,219 @@
+{
+    "domain": "wisepops.com",
+    "owner": {
+        "name": "Benjamin Cahen",
+        "displayName": "Benjamin Cahen"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00151,
+    "sites": 15,
+    "subdomains": [
+        "activity",
+        "loader",
+        "tracking"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "wisepops\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "activity"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.00141,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buycycle.com",
+                "my-foncia.fonciamillenium.net",
+                "particulier.malakoffhumanis.com",
+                "www.assoconnect.com",
+                "www.avenue-privee.com",
+                "www.indy.fr",
+                "www.lanutrition.fr",
+                "www.lelo.com",
+                "www.lesitedumadeinfrance.fr",
+                "www.recyclivre.com",
+                "www.santevet.com",
+                "www.swile.co",
+                "www.tikamoon.com",
+                "www.zamnesia.fr"
+            ]
+        },
+        {
+            "rule": "wisepops\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "activity"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.00141,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buycycle.com",
+                "my-foncia.fonciamillenium.net",
+                "particulier.malakoffhumanis.com",
+                "www.assoconnect.com",
+                "www.avenue-privee.com",
+                "www.indy.fr",
+                "www.lanutrition.fr",
+                "www.lelo.com",
+                "www.lesitedumadeinfrance.fr",
+                "www.recyclivre.com",
+                "www.santevet.com",
+                "www.swile.co",
+                "www.tikamoon.com",
+                "www.zamnesia.fr"
+            ]
+        },
+        {
+            "rule": "wisepops\\.com\\/get-loader\\.js",
+            "cookies": 0.000808,
+            "fingerprinting": 2,
+            "subdomains": [
+                "loader"
+            ],
+            "apis": {
+                "window.sessionStorage": 8,
+                "window.localStorage": 8,
+                "Document.cookie getter": 8,
+                "Document.cookie setter": 8,
+                "Date.prototype.getTime": 8,
+                "window.innerHeight": 8,
+                "window.innerWidth": 8,
+                "Navigator.prototype.cookieEnabled": 7,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 7
+            },
+            "sites": 9,
+            "prevalence": 0.000909,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {
+                "wisepops_tld": {
+                    "ttl": 6,
+                    "length": 1,
+                    "prevalence": 0.000807999192000808,
+                    "uniqueness": 0.125
+                },
+                "wisepops_visitor": {
+                    "ttl": 63072000,
+                    "length": 67,
+                    "prevalence": 0.000706999293000707,
+                    "uniqueness": 1
+                },
+                "wisepops": {
+                    "ttl": 63072000,
+                    "length": 162,
+                    "prevalence": 0.000706999293000707,
+                    "uniqueness": 1
+                },
+                "wisepops_session": {
+                    "ttl": null,
+                    "length": 298,
+                    "prevalence": 0.000706999293000707,
+                    "uniqueness": 1
+                },
+                "wisepops_visits": {
+                    "ttl": 63072000,
+                    "length": 40,
+                    "prevalence": 0.000605999394000606,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "malakoffhumanis.com",
+                "www.dunod.com",
+                "www.indy.fr",
+                "www.lanutrition.fr",
+                "www.lelo.com",
+                "www.lesitedumadeinfrance.fr",
+                "www.santevet.com",
+                "www.swile.co",
+                "www.zamnesia.fr"
+            ]
+        },
+        {
+            "rule": "wisepops\\.com\\/_\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "recyclivre.com",
+                "www.santevet.com",
+                "www.zamnesia.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000808,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.3076923076923077
+        },
+        {
+            "domain": "wisepops.net",
+            "prevalence": 0.3076923076923077
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.23076923076923078
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "tagcommander.com",
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "requestmetrics.com",
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "prismic.io",
+            "prevalence": 0.038461538461538464
+        }
+    ],
+    "types": {
+        "Preflight": 14,
+        "Fetch": 14,
+        "Script": 9,
+        "Ping": 3
+    },
+    "nameservers": [
+        "wally.ns.cloudflare.com",
+        "marek.ns.cloudflare.com"
+    ]
+}

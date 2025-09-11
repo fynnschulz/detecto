@@ -1,0 +1,204 @@
+{
+    "domain": "oraclecloud.com",
+    "owner": {
+        "name": "Oracle Corporation",
+        "displayName": "Oracle",
+        "privacyPolicy": "https://www.oracle.com/legal/privacy/privacy-policy.html",
+        "url": "http://oracle.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000812,
+    "sites": 8,
+    "subdomains": [
+        "ee.channels.ocs",
+        "rules.ee.channels.ocs"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "oraclecloud\\.com\\/js\\/eesvcs\\.js",
+            "cookies": 0.000508,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ee.channels.ocs"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.appName": 5,
+                "Navigator.prototype.appVersion": 5,
+                "Document.cookie getter": 5,
+                "Document.cookie setter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "f30002eca7cc98a2bb364599c9d490909242376de9cb94c6e6808282f67c3446"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "xdVisitorId": {
+                    "ttl": null,
+                    "length": 51,
+                    "prevalence": 0.00040605014719317836,
+                    "uniqueness": 1
+                },
+                "atgRecVisitorId": {
+                    "ttl": 390552827,
+                    "length": 51,
+                    "prevalence": 0.00040605014719317836,
+                    "uniqueness": 1
+                },
+                "atgRecSessionId": {
+                    "ttl": null,
+                    "length": 74,
+                    "prevalence": 0.00040605014719317836,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "razer.com",
+                "support.brother.ca",
+                "www.bissell.com",
+                "www.brother.ca",
+                "www.razer.com"
+            ]
+        },
+        {
+            "rule": "oraclecloud\\.com\\/EERules\\/xd\\/3\\.0\\/json\\/202007311935655\\/xd\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rules.ee.channels.ocs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e6ac1c09efb488df7c72c1a3fbc09d45476f1091a56f2f43edbdcd52d84b6af7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "razer.com",
+                "www.razer.com"
+            ]
+        },
+        {
+            "rule": "oraclecloud\\.com\\/EERules\\/xd\\/3\\.0\\/json\\/200106309357\\/xd\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rules.ee.channels.ocs"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "388c8ca76ed3acdf241cf7cd779620bf8fbf3ef4f5a9ffb3aa90ef08218e47b9",
+                "db1ca3b6f8073f991ecb73a6a04a64028b34d2e409cf671612a79c016d79a8f4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brother.ca",
+                "support.brother.ca",
+                "www.brother.ca"
+            ]
+        },
+        {
+            "rule": "oraclecloud\\.com\\/EERules\\/view\\/rules\\/3\\.0\\/json\\/200106309357\\/1110r62lN89UUcNYN3UDmWdeSPismxedZQ_e5StTnE6jyis6779",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rules.ee.channels.ocs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8cf04f06623bfd7e1e5db96eef6c5fff97a958848e2b4c6efa1a75fe38ba48c3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "xdVisitorId": 0.00020302507359658918,
+                "atgRecVisitorId": 0.00020302507359658918
+            },
+            "exampleSites": [
+                "brother.ca",
+                "support.brother.ca"
+            ]
+        },
+        {
+            "rule": "oraclecloud\\.com\\/EERules\\/view\\/rules\\/3\\.0\\/json\\/200106309357\\/12E2RnQJ7bUDmQt7soZtd6Ho9KYpQT8mHe5ddqy-WQHre7Y47D7",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rules.ee.channels.ocs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "b0cdae6c729d3ed0385383120a115ea5a89dce4f40da670dc53ba2f08cad74d5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "xdVisitorId": 0.00020302507359658918,
+                "atgRecVisitorId": 0.00020302507359658918,
+                "atgRecSessionId": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "brother.ca",
+                "www.brother.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000609,
+    "topInitiators": [
+        {
+            "domain": "transcend-cdn.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.39285714285714285
+        },
+        {
+            "domain": "yottaa.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "intrasee.com",
+            "prevalence": 0.03571428571428571
+        }
+    ],
+    "types": {
+        "Script": 10,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns2.p10.dynect.net",
+        "ns1.p10.dynect.net",
+        "n2-a11.aka-ns.net",
+        "n2-a1.aka-ns.net",
+        "ns3.p10.dynect.net",
+        "ns4.p10.dynect.net",
+        "n2-a18.aka-ns.net",
+        "n2-a13.aka-ns.net"
+    ]
+}

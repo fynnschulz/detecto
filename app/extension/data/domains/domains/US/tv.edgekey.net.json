@@ -1,0 +1,151 @@
+{
+    "domain": "tv.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "polyfill.arte",
+        "api.arte"
+    ],
+    "cnames": [
+        {
+            "original": "api.arte.tv",
+            "resolved": "api.arte.tv.edgekey.net"
+        },
+        {
+            "original": "polyfill.arte.tv",
+            "resolved": "polyfill.arte.tv.edgekey.net"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "tv\\.edgekey\\.net\\/polyfill\\/v3\\/polyfill\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "polyfill.arte"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "polyfill.arte.tv",
+                    "resolved": "polyfill.arte.tv.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "0e0e9dea1627ab76941bc120a82dfdb5059afbe3eaecefe536cbb2a68715468d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arte.tv",
+                "www.arte.tv"
+            ]
+        },
+        {
+            "rule": "tv\\.edgekey\\.net\\/api\\/sso\\/v3\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.arte"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.arte.tv",
+                    "resolved": "api.arte.tv.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "ddf854845ecf379575442623dc75f4d07e839b7eb9beec8b60d7f39131287828"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arte.tv",
+                "www.arte.tv"
+            ]
+        },
+        {
+            "rule": "tv\\.edgekey\\.net\\/api\\/sso\\/v3\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.arte"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.arte.tv",
+                    "resolved": "api.arte.tv.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arte.tv",
+                "www.arte.tv"
+            ]
+        },
+        {
+            "rule": "tv\\.edgekey\\.net\\/api\\/sso\\/v3\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.arte"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.arte.tv",
+                    "resolved": "api.arte.tv.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arte.tv",
+                "www.arte.tv"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2,
+        "Preflight": 2,
+        "Other": 2
+    },
+    "nameservers": []
+}

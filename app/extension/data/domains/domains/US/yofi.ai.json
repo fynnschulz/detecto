@@ -1,0 +1,347 @@
+{
+    "domain": "yofi.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "static-resources",
+        "server.telemetry.services",
+        "pcap.services"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "yofi\\.ai\\/sdk\\/yofi-telemetry\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
+            "subdomains": [
+                "static-resources"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "window.devicePixelRatio": 2,
+                "Screen.prototype.height": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Screen.prototype.orientation": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Navigator.prototype.getBattery": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.connection": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.permissions": 2,
+                "CanvasRenderingContext2D.prototype.getImageData": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.platform": 2,
+                "CanvasRenderingContext2D.prototype.measureText": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "window.sessionStorage": 2,
+                "window.indexedDB": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "WebGLRenderingContext.prototype.getContextAttributes": 2,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 2,
+                "Navigator.prototype.webkitTemporaryStorage": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.onLine": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Notification.permission": 2,
+                "Performance.prototype.memory": 2,
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1afcf9b97a125ddf00493fc42a7e186fb8f264b798a62f657810cf5d47c87ea4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_yo_1755317865908_cookietest": {
+                    "ttl": -1755317861,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "_yo_1755317869329_cookietest": {
+                    "ttl": -1755317861,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shipstation.com",
+                "ship.shipstation.com"
+            ]
+        },
+        {
+            "rule": "yofi\\.ai\\/v2\\/tokens\\/upgrade",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server.telemetry.services"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "b683c79d9ec9df74c00c625392ffc231d49ebb6dffcd59fe5406365c5472779a",
+                "d3fcfc5ce7741280a30b23a701ee03faf0fcf3458d82d4d0423b40563666d23d",
+                "fc1eb2cf381cf3f87c25984f19cbf030ff60e1ae9229e065d0a40e2a089f4468",
+                "2a4cc8daf51415f4224bcfe2930895ae315402745229ddcc2c5bf6550441d4ed",
+                "411bce08d74401c5aa2d9acbbb61d0ba1145d321a307d12a3d361e27487d8792",
+                "fcd44a3369aaf6cf03b890c1d08d4cd594b249b70390a82c9ea8d7a650ca4877"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shipstation.com",
+                "ship.shipstation.com",
+                "us.organicbasics.com",
+                "www.dtlr.com",
+                "www.getquip.com",
+                "www.ponchooutdoors.com",
+                "www.rhodeskin.com"
+            ]
+        },
+        {
+            "rule": "yofi\\.ai\\/v2\\/tokens\\/upgrade",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server.telemetry.services"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shipstation.com",
+                "ship.shipstation.com",
+                "us.organicbasics.com",
+                "www.dtlr.com",
+                "www.getquip.com",
+                "www.ponchooutdoors.com",
+                "www.rhodeskin.com"
+            ]
+        },
+        {
+            "rule": "yofi\\.ai\\/v2\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server.telemetry.services"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "7228ca14512ebcd0a2ba3746e3058c5aec77021ff7f333b78202485c994e7441",
+                "067e6d246d365cfa34b6503583f429818e87ace6345689c3dd3e9e859f873f4d",
+                "b0234ad730074cd2bce018242eeb2d7cf90eb5513a446c6088a1520001bc4b6b",
+                "420cdfffb538f2be52712d224bfa6550b2ac4b4d79f3bed6d6b09cd92fc39a0e",
+                "407addee46d092346a83b1a6ab2df9569cbd5e7afb46919087d028f2957cb154",
+                "1b51ff8a2635e072ef2b0d95f148807b522342643249fcd35193c3531d5ce406"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shipstation.com",
+                "ship.shipstation.com",
+                "us.organicbasics.com",
+                "www.dtlr.com",
+                "www.getquip.com",
+                "www.ponchooutdoors.com",
+                "www.rhodeskin.com"
+            ]
+        },
+        {
+            "rule": "yofi\\.ai\\/v2\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server.telemetry.services"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shipstation.com",
+                "ship.shipstation.com",
+                "us.organicbasics.com",
+                "www.dtlr.com",
+                "www.getquip.com",
+                "www.ponchooutdoors.com",
+                "www.rhodeskin.com"
+            ]
+        },
+        {
+            "rule": "yofi\\.ai\\/v2\\/pc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pcap.services"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shipstation.com",
+                "ship.shipstation.com",
+                "us.organicbasics.com",
+                "www.dtlr.com",
+                "www.getquip.com",
+                "www.ponchooutdoors.com",
+                "www.rhodeskin.com"
+            ]
+        },
+        {
+            "rule": "yofi\\.ai\\/v2\\/bundles",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server.telemetry.services"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shipstation.com",
+                "ship.shipstation.com",
+                "us.organicbasics.com",
+                "www.dtlr.com",
+                "www.getquip.com",
+                "www.ponchooutdoors.com",
+                "www.rhodeskin.com"
+            ]
+        },
+        {
+            "rule": "yofi\\.ai\\/v2\\/pc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pcap.services"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "762c2749580c286a68d4528d912a4afa02a17dc2025c6c65b17b0dfab8291408"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shipstation.com",
+                "ship.shipstation.com",
+                "us.organicbasics.com",
+                "www.dtlr.com",
+                "www.getquip.com",
+                "www.ponchooutdoors.com",
+                "www.rhodeskin.com"
+            ]
+        },
+        {
+            "rule": "yofi\\.ai\\/v2\\/bundles",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server.telemetry.services"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "f077754fabc6572b6f7b4336a3b8187af212e5f93d3dd35a849d9aeab9c7c77f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shipstation.com",
+                "ship.shipstation.com",
+                "us.organicbasics.com",
+                "www.dtlr.com",
+                "www.getquip.com",
+                "www.ponchooutdoors.com",
+                "www.rhodeskin.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.7755102040816326
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.12244897959183673
+        },
+        {
+            "domain": "narvar.com",
+            "prevalence": 0.10204081632653061
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 28,
+        "Preflight": 28
+    },
+    "nameservers": [
+        "ns-252.awsdns-31.com",
+        "ns-874.awsdns-45.net",
+        "ns-1173.awsdns-18.org",
+        "ns-1744.awsdns-26.co.uk"
+    ]
+}

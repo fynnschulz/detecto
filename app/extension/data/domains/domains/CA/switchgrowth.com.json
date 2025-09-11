@@ -1,0 +1,79 @@
+{
+    "domain": "switchgrowth.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000406,
+    "sites": 4,
+    "subdomains": [
+        "pixel"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "switchgrowth\\.com\\/pixel\\.js",
+            "cookies": 0.000406,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4,
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "248e116b56c8e95f2e7a0bd73d8028e8603dd4cd372d8800d2e8eb3882b15a11"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_switch_session_id": {
+                    "ttl": 604811,
+                    "length": 36,
+                    "prevalence": 0.00040605014719317836,
+                    "uniqueness": 1
+                },
+                "_switch_session": {
+                    "ttl": 604831,
+                    "length": 688,
+                    "prevalence": 0.00040605014719317836,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autohebdo.net",
+                "www.autotrader.ca",
+                "www.kits.ca",
+                "www.koho.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000406,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "trey.ns.cloudflare.com",
+        "wren.ns.cloudflare.com"
+    ]
+}

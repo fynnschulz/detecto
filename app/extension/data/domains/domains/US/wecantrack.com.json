@@ -1,0 +1,160 @@
+{
+    "domain": "wecantrack.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "api",
+        "fallback"
+    ],
+    "cnames": [
+        {
+            "original": "w.vpnalert.com",
+            "resolved": "fallback.wecantrack.com"
+        },
+        {
+            "original": "wct.filehippo.com",
+            "resolved": "api.wecantrack.com"
+        },
+        {
+            "original": "wct.softonic.com",
+            "resolved": "api.wecantrack.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "wecantrack\\.com\\/wct\\.js",
+            "cookies": 0.0000342,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api",
+                "fallback"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [
+                {
+                    "original": "wct.softonic.com",
+                    "resolved": "api.wecantrack.com"
+                },
+                {
+                    "original": "wct.filehippo.com",
+                    "resolved": "api.wecantrack.com"
+                },
+                {
+                    "original": "w.vpnalert.com",
+                    "resolved": "fallback.wecantrack.com"
+                }
+            ],
+            "responseHashes": [
+                "9dac1b2733e80a5164fcdae736e24074848592877ad6cefbbf7c1689070a887c",
+                "c834ba68f416b49806b8e2e82f19ef846d5bca11542e0131cc22b56ec7fb78b9",
+                "33d416894e20b023ddfd372de24941b859392255b0909de699216d02ab46fcf1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "softonic.com",
+                "capcut.en.softonic.com",
+                "clash-royale.en.softonic.com",
+                "filehippo.com",
+                "microsoft-word.en.softonic.com",
+                "simontok.en.softonic.com",
+                "vpnalert.com"
+            ]
+        },
+        {
+            "rule": "wecantrack\\.com\\/wct\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [
+                {
+                    "original": "wct.softonic.com",
+                    "resolved": "api.wecantrack.com"
+                },
+                {
+                    "original": "wct.filehippo.com",
+                    "resolved": "api.wecantrack.com"
+                }
+            ],
+            "responseHashes": [
+                "cda8a2abbbde5f3c857670fee3c9d779742631e1619ee6caca84d0631a34c82e",
+                "8f6d3fa36ca2c563be84a05b8a6d943e5871f800e30ee8323ffbc3e980824a85"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "softonic.com",
+                "clash-royale.en.softonic.com",
+                "filehippo.com",
+                "microsoft-word.en.softonic.com",
+                "simontok.en.softonic.com"
+            ]
+        },
+        {
+            "rule": "wecantrack\\.com\\/track\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [
+                {
+                    "original": "wct.softonic.com",
+                    "resolved": "api.wecantrack.com"
+                },
+                {
+                    "original": "wct.filehippo.com",
+                    "resolved": "api.wecantrack.com"
+                }
+            ],
+            "responseHashes": [
+                "61c3616593eb04168236c7bd7567fee81638969660fe169428d6076b04eddc77"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "softonic.com",
+                "clash-royale.en.softonic.com",
+                "filehippo.com",
+                "microsoft-word.en.softonic.com",
+                "simontok.en.softonic.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000342,
+    "topInitiators": [
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 7,
+        "Fetch": 5,
+        "XHR": 5
+    },
+    "nameservers": [
+        "beau.ns.cloudflare.com",
+        "jo.ns.cloudflare.com"
+    ]
+}

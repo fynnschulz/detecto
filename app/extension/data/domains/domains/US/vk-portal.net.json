@@ -1,0 +1,134 @@
+{
+    "domain": "vk-portal.net",
+    "owner": {
+        "name": "VK Company Ltd.",
+        "displayName": "VK"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "stats",
+        "akashi",
+        "stacks"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "vk-portal\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rt.com",
+                "lumpics.ru",
+                "m.vkvideo.ru"
+            ]
+        },
+        {
+            "rule": "vk-portal\\.net\\/web-stats\\/p",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rt.com",
+                "lumpics.ru",
+                "m.vkvideo.ru"
+            ]
+        },
+        {
+            "rule": "vk-portal\\.net\\/api\\/v1\\/web",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "akashi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vkvideo.ru",
+                "m.vkvideo.ru"
+            ]
+        },
+        {
+            "rule": "vk-portal\\.net\\/api\\/69\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stacks"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "livelib.ru",
+                "www.zen.yandex.ru"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000274,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6470588235294118
+        },
+        {
+            "domain": "vk.com",
+            "prevalence": 0.23529411764705882
+        },
+        {
+            "domain": "vkvideo.ru",
+            "prevalence": 0.11764705882352941
+        }
+    ],
+    "types": {
+        "Fetch": 5,
+        "Ping": 5
+    },
+    "nameservers": [
+        "ns1.vkontakte.ru",
+        "ns2.vkontakte.ru",
+        "ns4.vkontakte.ru",
+        "ns3.vkontakte.ru"
+    ]
+}

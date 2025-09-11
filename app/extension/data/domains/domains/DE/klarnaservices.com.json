@@ -1,0 +1,139 @@
+{
+    "domain": "klarnaservices.com",
+    "owner": {
+        "name": "Klarna Bank AB",
+        "displayName": "Klarna Bank"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000908,
+    "sites": 9,
+    "subdomains": [
+        "eu-library",
+        "osm",
+        "na-library"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "klarnaservices\\.com\\/lib\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "eu-library",
+                "osm"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 8,
+                "Navigator.prototype.language": 8,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 8,
+                "Navigator.prototype.connection": 8,
+                "window.localStorage": 8,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "30758c1979a4bbb68b0d9d042f5403464be9d2729320e3352d8d37d14ae27584"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alditalk.de",
+                "de.ecoflow.com",
+                "www.akkushop.de",
+                "www.alditalk.de",
+                "www.fiskars.com",
+                "www.haertle.de",
+                "www.sony.de",
+                "www.weber.com"
+            ]
+        },
+        {
+            "rule": "klarnaservices\\.com\\/config\\/runtime-config\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "na-library"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "c78e70725a5cd2abbad4c1d8c25e026f11b0c9bcbe6c5e253b77d4843dd394c5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alditalk.de",
+                "de.ecoflow.com",
+                "www.akkushop.de",
+                "www.alditalk.de",
+                "www.fiskars.com",
+                "www.haertle.de",
+                "www.sony.de",
+                "www.weber.com"
+            ]
+        },
+        {
+            "rule": "klarnaservices\\.com\\/v1\\/1\\.0\\.94\\/sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "na-library"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 8,
+                "window.sessionStorage": 8,
+                "Navigator.prototype.language": 8,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 8,
+                "Navigator.prototype.connection": 8,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 8,
+            "prevalence": 0.000807,
+            "cnames": [],
+            "responseHashes": [
+                "e0c6bd206e0fe71cf46c7461989178c10892ca30db8b4d4e44cf1ea275639d17"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alditalk.de",
+                "de.ecoflow.com",
+                "www.akkushop.de",
+                "www.alditalk.de",
+                "www.fiskars.com",
+                "www.haertle.de",
+                "www.sony.de",
+                "www.weber.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 16,
+        "Fetch": 8
+    },
+    "nameservers": [
+        "ns-745.awsdns-29.net",
+        "ns-334.awsdns-41.com",
+        "ns-1786.awsdns-31.co.uk",
+        "ns-1262.awsdns-29.org"
+    ]
+}

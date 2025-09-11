@@ -1,0 +1,562 @@
+{
+    "domain": "dotmetrics.net",
+    "owner": {
+        "name": "Dotmetrics",
+        "displayName": "Dotmetrics"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.0142,
+    "sites": 141,
+    "subdomains": [
+        "uk-script",
+        "rm-script",
+        "au-script"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "dotmetrics\\.net\\/Scripts\\/DotmetricsVideoTracking\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "uk-script"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "cbf0f077dbad50355da62a9fa700224b4432c27559316ab54173d564d8f82687"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boxrec.com",
+                "www.londonnet.co.uk",
+                "www.s24su.com",
+                "www.themag.co.uk",
+                "www.totalrl.com",
+                "www.twtd.co.uk",
+                "www.wheresthematch.com"
+            ]
+        },
+        {
+            "rule": "dotmetrics\\.net\\/VideoPluginConfig\\.dotmetrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uk-script"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "cae63910757de9236f89cfe6b088e9c2ca39eafba7b9f3a000b28e0577490b1e",
+                "1df953003e3412db11e2304126bb62d19d509ddd617ce59f1a9b4006dc5e8d6b",
+                "1ff33eca24e1347026c64a84f284caa432556e3d371e395a099c065cc031f182",
+                "c631357b21e1432fea3cd518875f3c3d0f52524e4c1ab0e236dae18cfbe986fd",
+                "0db12a892fc0736b2a2af99cacf26379f36f15361043ccc88aaa5bc3583130bc",
+                "0a05aec40e3502d477a58967bf350ae68cb30970f6ab10ea8831640dfc4ec83a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boxrec.com",
+                "www.londonnet.co.uk",
+                "www.s24su.com",
+                "www.themag.co.uk",
+                "www.totalrl.com",
+                "www.twtd.co.uk",
+                "www.wheresthematch.com"
+            ]
+        },
+        {
+            "rule": "dotmetrics\\.net\\/videopluginhit\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rm-script"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "57640b6d8ccf4070239d260940ca7576d90563d6f87b744f1a9928266930de46"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boxrec.com",
+                "www.totalrl.com"
+            ]
+        },
+        {
+            "rule": "dotmetrics\\.net\\/door\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "uk-script",
+                "au-script"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 132,
+                "Date.prototype.getTimezoneOffset": 132,
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 134,
+            "prevalence": 0.0135,
+            "cnames": [],
+            "responseHashes": [
+                "ff3e3165712513112ecbf9f70d28121f5d4268bfb4d2bc1006b21fffb5f81900",
+                "1c9ff8e065f3dbd48c2c97c9539f65deffdaef2462b37b3a2296d15cf029205e",
+                "47259daf3e616f06c971a3b453df2abbf7b08d3e93384c7cd405a58d6d2559b9",
+                "175f6ad0a988413a08d9ebf6589fa1e6725308fdd53c90580750f85c5b2e52fe",
+                "8fcad1f450541e6acea5d60e5ab4a76e130cf05442dd3d6b3b10a621b6b18674",
+                "07baa57f253768fb3b2fb59697f40f8e8cb7b1855eb32f4c50ff8bb9f90e4f96",
+                "205ac1c8aa3a7e5f7930bd84e5890ea739e9e6fe466e3637010aa680a752c5c4",
+                "666da7c90f273c7c8438dba9eb2ddf8fdf1855ff1bedc4a8c0157493fc793018",
+                "52f65a8f8287fa16de45eda87e7a35160ad5b87a07d8436732210de9abeb4b37",
+                "c3fde9b2f5b8f892fb6e31b9c2de3c6b2cd9fde71ee90525f4897f2a6e92b002",
+                "60e5db8d3c54d3068672f8eb9a21676e7f94aa23bc71cee53169e7dacb134ebf",
+                "fac8c9ff8386f9b16bd36a7c0d69c30d84dbf52bd4ab6d8b563a8fba8630ca8a",
+                "8e9c2e4884635fb0bca89a06ad0b002e84187a09fc81c9da4b4f914dd7049533",
+                "bdb9cde203a2cdd76859925fe4c61e160165395539653c94602cae423064f1ad",
+                "a84aa2f6d630398da39cb606d24d30302fcb9baec5a9ed5842e88a6e99a9d47c",
+                "8c4714eebfbaf583de73226e619d2957db944643acb5b8559b91bf699beb5299",
+                "76ff38b1ce8eeb1de4ff1c1a78e24756a811dc6e8219cef58008c39e170c908c",
+                "6f33d40b8d47902168c1d02e3e4bd1425d2b382b58935623fdc1f4978cc39ac7",
+                "f9b5e43b73749d4d49b981e3c54a79ae33c7c5ccea748525b8071c8754e5c593",
+                "04039c031b566d5664a63022bba59791fd4ac4b0c7e882705f7a78e07e1f3ef2",
+                "d8131725d209c91c495b15c3f2bebfede6305eabfce39b01e61580f05c382e15",
+                "46bb8b328e01ef977857083a6a5408c798b49c877341b2cfb7eafd4e96600e20",
+                "0859d74d7fe0bb1388f1695d03ea6bedba7d66b840bcae88720fa01a25a5d4cd",
+                "1bf40b65e845a72a3363126bb4bb40362c66f249e8e35ea2f19a0fd2afc2f241",
+                "6a010a235032401b6dda5a1db1bce4af144807708bdb3173934daf3411abd2c7",
+                "1610cea3d1008a6907596bf9134eb9e0d12ea3ed58542ff982ac8b79c614b206",
+                "3cf3ace9b34463608748e7f4dffdf14acefef2b62ad336017f43a01512bbb1a2",
+                "8e8b0cc93f074a2bb85050b9252febfba3f37703a6ab4c35ae1b1bf3a6d20958",
+                "608f1b70afe4c1510324111624d4eca4a26ed0a2121eaa60000a0a2aced05c28",
+                "66f4b96ebddb6ad47950c1c7d21da6ab0803f09fd514091ab9d1cf1e126e7c1e",
+                "8be0eb22a3d8ad096754656f44cdeb8834f6e939806407c1f159228ce14607f6",
+                "b3a10f99b44d6b77d90a5787aa5b8d5ac80fd1e6588be46a3428a610d96372f3",
+                "b475fc29bbf1fdc2758037e0dfadf7bfeee1a05bbd54aceaf0f9be7e64b1e2f2",
+                "14d7a8c45e52f163040b40933690333752ed73da288c40723b2de90b7e2f2595",
+                "eadfcdcee601196ab7de86a5c04e68a08d9f9f0a7e34a7933fcaf44868c6cf6f",
+                "77651e17f533290d78a79c3e2fa42166fc1e2e3f749b68895010e310f2392f98",
+                "10a19afb8421f4a16283f6aded0938e07dc3cb9c1c9ea9db0c2028ae2deeb4b5",
+                "a39e61fc90d1fbe1c91831df6dc46b5710a8adf08e3e842b8867905257a62181",
+                "145fd809eaeca733fb41b17fa43433253cfc8b9fd56a9d3e161c902acea0f9ab",
+                "72fed77cfe0ca6f3481674a7f9c163d1e6fd76a98b3361ecd0093cbd5c4bfacf",
+                "d522bd04fa1e7424d4c68059e8a55564197d86aedf67e1f9837068de26e05971",
+                "33e96aa80bf4bd574283050e48c7903ea309c283a11781467228ef9ff52714ae",
+                "76c5b8535ab0784784950d2929e70c99f66aadd34f8e3673e1987395e707649f",
+                "c4c5b000a372e0cfce6d4b127582bce0ba77aac464447646d48b37b25ccc2240",
+                "6ab3b829b3c4c82fb398386944cc31c9ce70514e7318ce415e41aef7f58b6568",
+                "c64ab840057b6ab6c611e4ef0df809fba0b75206131cfee56e5b4ef195777024",
+                "bdfa91b9e658aa2143bfb329da030385a4b63b7d9391c7f220bcf4907cd86df2",
+                "aec982793d6d91682dfd7cb718ac15f3315f67e439a1f9caca87f4ad78186364",
+                "335d735770bc09f988bf43de996512594a9a5c130fb419817976a42f2bd133d4",
+                "b1578949ded59c9e1267eec13d539509f0e216f65b04a62613f857ead2e70e33",
+                "beca62b671414545bf310121d4f0c43d30d55d8752625cdd490fefd4eca6e740",
+                "75b5a7a259e4fdbbb087ae91b733fbfcb9d359330ccb95d89b92f0dd27aa3548",
+                "942f1d927b02b9d542b05cf3b62e129f74c0ad064f67045ea3951ec666f8ca94",
+                "c9e40b1412f835dc1e9cfe883023f7db3bb3e4c76971af796042b224179b2b0b",
+                "8e62ba06aa06f353e1e09e316040d542df82e0c9dbeb3ecc7f3e3d8d4147f09f",
+                "03231347999cf918016b6adba4eeb5c040af3a9a8f87b57147281085b23f406a",
+                "d563b3df7520b349e7904d7db56aacb48972915fccebe5469d48290040b3abdc",
+                "73bdef8fc39b11e76d0e13d8cde4a78e6c01b2ee4881e58e08ea3dc2fb9bec4d",
+                "2ecc5b488efe7e2eec400c78f504125181d0f3a037a5fb5c052501c45b5d3663",
+                "df21e236d46c0d8a3f57ffb12587645d4bbd79237c1413d5fd1a95ff960f6352",
+                "e3a6be563b410334132d12f75ebc34098dad77bd5b40c3e8a0ecaeee05b7c7a3",
+                "cee9371c5f95bd362401191315fb9bfe12efe18ff09ec4c343c439ba46961623",
+                "b63aa3c40d52c2f1df411b963b4e3d1e99fe813d19b6c449ea2d7ec80e04c378",
+                "d7725eeaaf6da630028eaa637752f85edd51e3eefb4354d9fa0df585f6787cb3",
+                "f8d4cfbb6c15e003a63211405164d26b223d62958054de0c70281c9f86822bfb",
+                "5236a6f7fdf69eaf6a8acd697e3b335fe417f73de682d186ff9ecb641edba06f",
+                "ecfd35744088ef1bb436273b3030fb9106dba903ee76cc35edb4e3f60ecf5377",
+                "9e2fd2c521afabe40228f64715d151e7f785f918c227809fdb7474963441bb89",
+                "5125b81caead834d480ea097e59198e046ef97bbe36e7655e1f6e74fe9de8060",
+                "33f16bc7ceddfc428060542c341f7658423c169e08100e964f71f419256b9166",
+                "f09b653e2e318ad0b8647bcbd91c71ae8d7f054f6142ad10524f89a4f35d79bc",
+                "5a2a6f431570c2a52f77e3be41e67478c6db1596c46ae841956e741d541f25f5",
+                "bc590c8292352f73a9a54e8faacdbb81e64c172861728b6e553689196c586634",
+                "7898440595b502a2d1f67a1b7e056b78eaa083af92e4f1e3ba88d0a4324dcf49",
+                "1d94fdc76e164b098eabaa04882f480b0a8532a6b03844449e3909d9217e552f",
+                "10befa1930f86b9092f08c0a29774eb18fc7f660b8f723893b0701b6aeb14145",
+                "67a88323a2b8c755e360920e2bce337c4ba7bea0a60988e802d27c3d44b7ccc8",
+                "56bb06b01061c3c2f99a2568841fca3ffadd98f57f3ff0a607f900202b1fc7b4",
+                "45628fcf37ebedee8f92875f525c9e1af53157530f96f6dbb6e67e70d6e66853",
+                "dec267a852242944e781de637d1fdeb261507d92d40dcc45ae002de413b1046f",
+                "2e9986855571d0fc9e4b5c3e8f40e25028a42808dacf15b72eff7a48305e93e9",
+                "71ce64f0331c231efa5390b9bf62a1ddf645695f9dd56e9fbd9d4ff99b4eb386",
+                "c23cbde0ae62268ec45e9852621c963ac20b3d99092a68c26d184bd57ca1edfd",
+                "d15159002e49aecff42aebe4f330613e06d1851c3da0773407eed3bab16df458",
+                "23e0c0568aade8e2210c93bac90bc827c28575a03c00a8ea68d9de08abeeda94",
+                "e6ada4a49ba369804517220f36dc4832e45fd7d20e175f74ca0c46a2992c01d5",
+                "b56a7c0bec50efeb93ef17ae847d847fc6b565f32b95612152add7b5b248c12b",
+                "3ca40ccc88b3dc221e3082bd673a6f83255494f7607db8f82fb2da62cc346cd3",
+                "7d592b580e60806577316756cee53a85f7778870bbfd765c0ee7b544507b7220",
+                "dd95cf49c3ea98abe91f441274fe82179937f2b02cdb6cd7b5301c2f05b8a0d7",
+                "8499e37bc9a1fffec5011a516848178f77b4b49eea48ee0c1961787746425220",
+                "ce027e99434b0843c17973b146d55915f2c915bbb4cd144f186172ef10397d55",
+                "bba3675650acb748a9ee36ed9da6b2f8c73f01b3700967baf3606674e90d840c",
+                "67d5e863faa7eb800fece62ef949dc8683d0438c4235d53898df09427f77aa4d",
+                "52109176c604fe29691490867aef89a6d74fd229f55ac6f3903f696dc7270ced",
+                "dc7a4be4403d24918d6a37c9b13678f9c9ce400b7d90484cf610297ace35d1fa",
+                "d6fc1a5c65ad72846a61a491d443f9697ed74f864700681d913fd1653cc25e97",
+                "a8293075656307139917c0812bec7d365ffdb689e9ac8980cf989e5348f6bc1b",
+                "97afc97e5f3dbd372d29507f7d0374e2bc1a1d95e5c074a1b7a80bcb3e710087",
+                "5cddfda148b5bad71e99c271d9f208044d7800a69ce00fae31cc23a8244aebac",
+                "a0dd7c7c83a01e6dc4ebcb6f270a36319ded8ed8b5e1a5e39a355a8ac9158ce1",
+                "f453ddfc6b9f22352ff79f07a237632c896cf5c77c6797e94415728012f4d335",
+                "1d50dc0b366c8e73645799235921115670d4ecf7b49a790a9e2fbb143680f96d",
+                "4e6ae367abb0839c0d3d1deaf81f35e0acc670415030cada2dc0fa302396c958",
+                "09c6301518e074d8e4378cf70adc1f6e8f75c64553579651d1cf00c17dd3c6a8",
+                "fd214743834c0cc640078f9254bbbee59e6354dbcfe3a98f7dc9609bce6f4bc2",
+                "f7af47246432b4d3cbb40e8c1ab6f25d22f495ffad3d7986bc007a9ee6b18973",
+                "cdea902a7010672b6780e47dac9849433ed42dd409506a0b554e73885a32e941",
+                "9d26bb6b20dfa4602db653572e4186786a880647f007cc81be7d500e7946d42b",
+                "11d7b87a16ab341e2acc96d498cc1829ac190292064b38f2664d95c0c51967ed",
+                "f7eac9deb4869b6cd03e217237f42884a53f62dbf5148e5a32272bcb2c22208a",
+                "40185c669875416019bc913cc2c3ac36198e799e5dd77a1510c6ac94457db6c4",
+                "2b736b9120f766f9ebd8ab88016e1325cc1c6ffd2043f9ed68e3474819ac30e5",
+                "72a34a47baddaa5cd114c61011db416119bcb741ef2a092627606e865fffe4a8",
+                "02cb96d92222a651f14964494307517e4ea7f0eec087f8dcca5f7c6b38aa1b0a",
+                "23e9695d3df68d489c3e98026aa147c258bbf89ac1159e5e202a61305e856351",
+                "c28dfbfab01af33efcc88d65b25a987adfe383d8f18749b950985c40bb40fe9c",
+                "9559ba38a09bdd37458c9adc846229073e660b506ae89667f4c4340d801cdc68",
+                "b7a7b2c918c066333da7d9ac9fb3de0f59378c79d40960ca4b66ff4a833e441f",
+                "1402a26ac251da17ef8816f583b47911d7a49733b5bc0742a4735cfa699ec6e4",
+                "5aa337e87e21b620a289d615355fe23b979ef8ed6313d2ea8433596d405dfbd2",
+                "b057ad708dc28cf7b1a0870abb07d981461dd6e0d10a0d20a70b0143f399a395",
+                "5f386a10001fdb9eb1055bfcc5794f10f398cfd05551382c55e06f53c3ffbe85",
+                "ad84b9dbbaa372a0fd4aa9e22ceac9afb79c994cf88bfb97c06c7c04ee1432af",
+                "fc306e84c2b4df7b1c57be6e4b4f6e24401674c4fd924b43a22033ef430e5b47",
+                "6c547c6d983eaf56f8d6fb064c0dd57b60c1e697f2491cf8f432cd22cbcdd28c",
+                "da46938428dc753e5e2664a206b0ea2037d29d1812d87b62e670d58ab640eed6",
+                "26c9f4a01668a1b94ff3b6aa9ce817333be2f4fd2b30b9658bc5eab8962a3e2a",
+                "67be8f1ab82b275f5b9005fcd5b5903decbc44abc48ad0fd6ad4517a544888ce",
+                "59e1348ca2e7e346f182e98f24ea083c5addbbee64432ca0e39428804c8cf765",
+                "77d342c95a50757ac2901bbdcfc184c616b09cccae621297c29b7c1accef64ea",
+                "7c001230859b21dc4010d1a2115062e21e21ecaa972a235024c505f4a34a184e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "DotMetrics.DomainCookie": {
+                    "ttl": 31536004,
+                    "length": 64,
+                    "prevalence": 0.00030193236714975844,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.dailymail.co.uk",
+                "www.express.co.uk",
+                "www.independent.co.uk",
+                "www.mirror.co.uk",
+                "www.techradar.com",
+                "www.thesun.co.uk",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.birminghammail.co.uk",
+                "www.walesonline.co.uk",
+                "www.golfmonthly.com",
+                "www.glasgowlive.co.uk",
+                "forums.horseandhound.co.uk",
+                "news.bbc.co.uk",
+                "www.dreamteamfc.com",
+                "www.creativebloq.com",
+                "www.motorcyclenews.com",
+                "moneyweek.com"
+            ]
+        },
+        {
+            "rule": "dotmetrics\\.net\\/hit\\.gif",
+            "cookies": 0.000705,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uk-script",
+                "au-script"
+            ],
+            "apis": {},
+            "sites": 133,
+            "prevalence": 0.0134,
+            "cnames": [],
+            "responseHashes": [
+                "07383c96980710a04144e5a39ae59e7f9f74bcfd6462a6932ded48efe6d73bce"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.bbc.co.uk",
+                "www.bbc.com",
+                "www.dailymail.co.uk",
+                "www.express.co.uk",
+                "www.independent.co.uk",
+                "www.mirror.co.uk",
+                "www.techradar.com",
+                "www.thesun.co.uk",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.olivemagazine.com",
+                "www.empireonline.com",
+                "www.dailypost.co.uk",
+                "www.sussexlive.co.uk",
+                "www.coventrytelegraph.net",
+                "www.cambridge-news.co.uk",
+                "news.sky.com",
+                "www.windowscentral.com",
+                "www.belfastlive.co.uk",
+                "www.gardenersworld.com"
+            ]
+        },
+        {
+            "rule": "dotmetrics\\.net\\/Scripts\\/ncs-script\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uk-script",
+                "au-script"
+            ],
+            "apis": {},
+            "sites": 122,
+            "prevalence": 0.0123,
+            "cnames": [],
+            "responseHashes": [
+                "20f8c66290f040a84fd2e8d6046bf55a1ef5d1bbc9ce9d36a7212b3f7c9fd1c2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.dailymail.co.uk",
+                "www.express.co.uk",
+                "www.independent.co.uk",
+                "www.mirror.co.uk",
+                "www.techradar.com",
+                "www.thesun.co.uk",
+                "www.tomsguide.com",
+                "www.tomshardware.com",
+                "www.whathifi.com",
+                "www.irishmirror.ie",
+                "www.classiccarsforsale.co.uk",
+                "www.gamesradar.com",
+                "theweek.com",
+                "www.leeds-live.co.uk",
+                "www.golfmonthly.com",
+                "www.dailyrecord.co.uk",
+                "www.edinburghlive.co.uk",
+                "news.sky.com",
+                "www.stokesentinel.co.uk",
+                "www.todays-golfer.com"
+            ]
+        },
+        {
+            "rule": "dotmetrics\\.net\\/Scripts\\/script\\.js",
+            "cookies": 0.000705,
+            "fingerprinting": 1,
+            "subdomains": [
+                "uk-script",
+                "au-script"
+            ],
+            "apis": {
+                "window.localStorage": 7,
+                "Document.cookie getter": 7,
+                "Date.prototype.getTimezoneOffset": 7,
+                "Date.prototype.getTime": 7,
+                "Document.cookie setter": 7
+            },
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "52da95e00abf3bb0158842b3cf087914764b356156931de79cb3e06388d63977"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "DM_SitId1006": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "DM_SitId1006SecId5463": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "DotMetricsTimeOnPage": {
+                    "ttl": 5,
+                    "length": 4,
+                    "prevalence": 0.0007045088566827697,
+                    "uniqueness": 0.14285714285714285
+                },
+                "DM_SitId1041": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "DM_SitId1041SecId5551": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "DM_SitId1383": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00040257648953301127,
+                    "uniqueness": 0.25
+                },
+                "DM_SitId1383SecId11815": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "DM_SitId1383SecId11871": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "DM_SitId1615": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "DM_SitId1615SecId13803": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "DM_SitId1383SecId11826": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "horseandhound.co.uk",
+                "forums.ybw.com",
+                "genome.ch.bbc.co.uk",
+                "news.bbc.co.uk",
+                "www.abc.net.au",
+                "www.bbc.co.uk",
+                "www.bbc.com"
+            ]
+        },
+        {
+            "rule": "dotmetrics\\.net\\/SiteEvent\\.dotmetrics",
+            "cookies": 0.000705,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uk-script",
+                "au-script"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "b5fc2bf07d402310dc3c546c2f72b324f853b6ae31d73c717e3d33393115c736",
+                "e66169e7d156cbe8b07c423b35686ef21b4bacd54dcbca45e34dada8853d72bd",
+                "5b8c00a8c243db967b9e675b80171a608a7b6c6fff870fc2c02b3e148d0b1fc0",
+                "5d8e5f4b38f989b873ccba19f0a0a16a9b1fc95560ddb884ccbc75db72575d52",
+                "68e4cf357a322fc95165839305cf374f99af6ccea6cf1df1e89c008bec253ed8",
+                "8d5567f2f94a7d5f9a553d626a791039a9467d7fa5ab7049a1b9116b5e69e7f0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "horseandhound.co.uk",
+                "forums.ybw.com",
+                "genome.ch.bbc.co.uk",
+                "news.bbc.co.uk",
+                "www.abc.net.au",
+                "www.bbc.co.uk",
+                "www.bbc.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000705,
+    "topInitiators": [
+        {
+            "domain": "privacy-mgmt.com",
+            "prevalence": 0.2838095238095238
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2419047619047619
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.18476190476190477
+        },
+        {
+            "domain": "webcontentassessor.com",
+            "prevalence": 0.18095238095238095
+        },
+        {
+            "domain": "4strokemedia.com",
+            "prevalence": 0.030476190476190476
+        },
+        {
+            "domain": "ay.delivery",
+            "prevalence": 0.02095238095238095
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.02095238095238095
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.013333333333333334
+        },
+        {
+            "domain": "bbci.co.uk",
+            "prevalence": 0.007619047619047619
+        },
+        {
+            "domain": "thetimes.com",
+            "prevalence": 0.007619047619047619
+        }
+    ],
+    "types": {
+        "Script": 277,
+        "Fetch": 7,
+        "Image": 135
+    },
+    "nameservers": [
+        "ns-207.awsdns-25.com",
+        "ns-720.awsdns-26.net",
+        "ns-1850.awsdns-39.co.uk",
+        "ns-1476.awsdns-56.org"
+    ]
+}

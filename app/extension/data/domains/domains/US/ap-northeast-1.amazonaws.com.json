@@ -1,0 +1,248 @@
+{
+    "domain": "ap-northeast-1.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.00026,
+    "sites": 38,
+    "subdomains": [
+        "cognito-identity",
+        "kinesis",
+        "hm2wjuuus3.execute-api",
+        "8n3tgod6p4.execute-api",
+        "qoeujrgmve.execute-api",
+        "pinpoint"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ap-northeast-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "kinesis",
+                "hm2wjuuus3.execute-api"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bangumi.org",
+                "eplus.jp",
+                "www.ankerjapan.com",
+                "www.askdoctors.jp",
+                "www.benq.com",
+                "www.flowerkitchen-web.com"
+            ]
+        },
+        {
+            "rule": "ap-northeast-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "kinesis",
+                "hm2wjuuus3.execute-api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "b72c8d7657882849441d0e0ff41ded7eac9c01afcd193a53f91ae2d53e29f693",
+                "ab844b3df71062170dd7adc3115458300505a9dddbae4f9aad652b391608b73f",
+                "308d1bb97a64e905c8c7cf0d9371c10f61ae09f130f7ef8765837d9383f7b5b2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bangumi.org",
+                "eplus.jp",
+                "www.benq.com",
+                "www.flowerkitchen-web.com"
+            ]
+        },
+        {
+            "rule": "ap-northeast-1\\.amazonaws\\.com\\/beacon",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "8n3tgod6p4.execute-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "10f733259f56a9a54dfaacc9cace765c53c3e0d618f7af96e738d54864b3d78f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coloria.jp",
+                "www.irisohyama.co.jp",
+                "www.nta.co.jp"
+            ]
+        },
+        {
+            "rule": "ap-northeast-1\\.amazonaws\\.com\\/prod\\/report",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qoeujrgmve.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "developer.cisco.com"
+            ]
+        },
+        {
+            "rule": "ap-northeast-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "241091103e852dc40cb8dff8257a946a34a28ccc1175e95ba75eb58c6e8ae309",
+                "b6fceaa9b851a50d6510a56c88e9129db583b0dc488240689ff5c69282fdc97c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ankerjapan.com",
+                "www.ankerjapan.com",
+                "www.askdoctors.jp"
+            ]
+        },
+        {
+            "rule": "ap-northeast-1\\.amazonaws\\.com\\/v1\\/apps\\/0dfa6ba500dc49bd9e9886ebbea90d87\\/endpoints\\/ae02ead0-7a04-11f0-984f-c7cd4ebcc6f6",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pinpoint"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "01b4724a1d1958b1ecacb8a0cbb189410d7838628ed0c2f02d4bbbf97d8e5967"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ankerjapan.com",
+                "www.ankerjapan.com"
+            ]
+        },
+        {
+            "rule": "ap-northeast-1\\.amazonaws\\.com\\/v1\\/apps\\/0dfa6ba500dc49bd9e9886ebbea90d87\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pinpoint"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5a1aa4759b74411f329215469e796ebd74fa003c5f92c7f86850d74442b3bc5d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ankerjapan.com",
+                "www.ankerjapan.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9300411522633745
+        },
+        {
+            "domain": "minmaxify.com",
+            "prevalence": 0.03292181069958848
+        },
+        {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.012345679012345678
+        },
+        {
+            "domain": "clipkit.co",
+            "prevalence": 0.00823045267489712
+        },
+        {
+            "domain": "socdm.com",
+            "prevalence": 0.00411522633744856
+        },
+        {
+            "domain": "kuzen.io",
+            "prevalence": 0.00411522633744856
+        },
+        {
+            "domain": "team-rec.jp",
+            "prevalence": 0.00411522633744856
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.00411522633744856
+        }
+    ],
+    "types": {
+        "Preflight": 6,
+        "XHR": 7,
+        "Other": 2,
+        "Fetch": 7
+    },
+    "nameservers": [
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.com",
+        "ns1.amzndns.net",
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
+    ]
+}

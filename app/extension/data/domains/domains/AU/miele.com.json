@@ -1,0 +1,156 @@
+{
+    "domain": "miele.com",
+    "owner": {
+        "name": "Miele & Cie. KG",
+        "displayName": "Miele & Cie. KG"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "api-crm"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "miele\\.com\\/js\\/exponea\\.min\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api-crm"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4364d5aca9f23b4e9cbdf1c606086334e9238ee74c03e31c2fe38096c0eff75f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__exponea_etc__": {
+                    "ttl": 94608015,
+                    "length": 36,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                },
+                "__exponea_time2__": {
+                    "ttl": 3616,
+                    "length": 20,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miele.com.au",
+                "www.miele.com.au"
+            ]
+        },
+        {
+            "rule": "miele\\.com\\/webxp\\/projects\\/0b8faaa8-f743-11ee-a915-a61d664545c0\\/bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-crm"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "59dbe7d634ad83e4c0a2301f6cedb726975ab032b1ba76dc6f27d18e3c1b67a2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miele.com.au",
+                "shop.miele.com.au",
+                "www.miele.com.au"
+            ]
+        },
+        {
+            "rule": "miele\\.com\\/bulk",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-crm"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "01873210f17899fb474cb9b7da60b9a2bdd68e410e78e123cf2a60c8a51c6a32",
+                "821f65076f851d7dda29f6601174cb176b2785a0277a722c593a5a27c48f6384"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miele.com.au",
+                "shop.miele.com.au",
+                "www.miele.com.au"
+            ]
+        },
+        {
+            "rule": "miele\\.com\\/managed-tags\\/show",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-crm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5c858b1c80e2a37e46abc26525a908fe14db93ebdce1dbdbdd2828cd180bbeec"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miele.com.au",
+                "www.miele.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9375
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0625
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 8
+    },
+    "nameservers": [
+        "a5-67.akam.net",
+        "a9-65.akam.net",
+        "a1-31.akam.net",
+        "a6-67.akam.net",
+        "a2-66.akam.net",
+        "a20-67.akam.net"
+    ]
+}

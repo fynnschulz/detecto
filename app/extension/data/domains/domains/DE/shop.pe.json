@@ -1,0 +1,84 @@
+{
+    "domain": "shop.pe",
+    "owner": {
+        "name": "Add Shoppers",
+        "displayName": "Add Shoppers"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "shop\\.pe\\/widget\\/widget_async\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.imobie.com"
+            ]
+        },
+        {
+            "rule": "shop\\.pe\\/widget\\/main\\/init\\/params",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "24707ac6337a4641c50fc80f4f3ed6e5f8984d34967175bb30065b868541362f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "addshoppers.com": 0.00010089799212995662
+            },
+            "exampleSites": [
+                "anker.com",
+                "www.anker.com",
+                "www.imobie.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "d2mjzob2nc713b.cloudfront.net",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "impactcdn.com",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Script": 5
+    },
+    "nameservers": [
+        "ns-1375.awsdns-43.org",
+        "ns-601.awsdns-11.net",
+        "ns-482.awsdns-60.com",
+        "ns-1678.awsdns-17.co.uk"
+    ]
+}

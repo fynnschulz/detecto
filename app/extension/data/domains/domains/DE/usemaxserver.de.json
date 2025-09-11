@@ -1,0 +1,100 @@
+{
+    "domain": "usemaxserver.de",
+    "owner": {
+        "name": "Emego GmbH",
+        "displayName": "Emego"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "usemaxserver\\.de\\/d\\.php",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerHeight": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "08acba127fedc277d1c205de1373e946d3e1a1e8dc3e4509aad512d057d44313"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "usm_um_rt": {
+                    "ttl": 31536006,
+                    "length": 10,
+                    "prevalence": 0.00010089799212995662,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lizenzguru.de",
+                "www.matratzen-concord.de"
+            ]
+        },
+        {
+            "rule": "usemaxserver\\.de\\/rt\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8231da870c1457d43726e548471b12ae483e7bf6f9e20a4996c2c829436092b7"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lizenzguru.de",
+                "www.matratzen-concord.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "adcell.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "dwin1.com",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Document": 2
+    },
+    "nameservers": [
+        "dns.dns2.de",
+        "dns.dns4.de",
+        "dns.dns1.de",
+        "dns.dns3.de"
+    ]
+}

@@ -1,0 +1,328 @@
+{
+    "domain": "seznam.cz",
+    "owner": {
+        "name": "Seznam.cz, a.s.",
+        "displayName": "Seznam.cz"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000603,
+    "sites": 6,
+    "subdomains": [
+        "c",
+        "h",
+        "ssp"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "seznam\\.cz\\/js\\/rc\\.js",
+            "cookies": 0.000502,
+            "fingerprinting": 1,
+            "subdomains": [
+                "c"
+            ],
+            "apis": {
+                "window.name": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 5,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 5,
+            "prevalence": 0.000502,
+            "cnames": [],
+            "responseHashes": [
+                "e2fb283c17181b0b0ca5eca40c843a60e005030ebc28f6b6e5eabfbdbcc8e128"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "udid": {
+                    "ttl": 2592008,
+                    "length": 50,
+                    "prevalence": 0.00010048231511254019,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "prusa3d.com",
+                "help.prusa3d.com",
+                "mapy.com",
+                "www.printables.com",
+                "www.prusa3d.com"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/retargeting",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "prusa3d.com",
+                "help.prusa3d.com",
+                "www.printables.com",
+                "www.prusa3d.com"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/js\\/dot-small\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5d06a42fbe51a489e747bd15ac12b795aee4ac1a549f01e14c15fca727379408"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.csfd.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/static\\/js\\/ssp\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a5103c85d41538236b99e7dded45617eb3dc21622942999368ad9e02370ab0db"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.csfd.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/udid",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "b5927930bcd59bc412a2eacd7496314716f622fdfaef73c474bec7252e6daff8",
+                "021ae47534571b629c1ee679be360efd8a3edc87716d5bb3518154e1f06c655a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.csfd.cz",
+                "www.prusa3d.com"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/udid",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.csfd.cz",
+                "www.prusa3d.com"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.csfd.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.csfd.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.csfd.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/v1\\/xhr",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "dd0187cdd8fccf83b9175bf4e8a213a1bb4080c5b3335c6082dde25e91ba98f0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csfd.cz",
+                "www.csfd.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/v1\\/xhr",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csfd.cz",
+                "www.csfd.cz"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000603,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.43333333333333335
+        },
+        {
+            "domain": "r2b2.cz",
+            "prevalence": 0.26666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.23333333333333334
+        },
+        {
+            "domain": "seznam.cz",
+            "prevalence": 0.06666666666666667
+        }
+    ],
+    "types": {
+        "Script": 9,
+        "Image": 4,
+        "Fetch": 5,
+        "Preflight": 7,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ams.seznam.cz",
+        "ans.seznam.cz"
+    ]
+}

@@ -1,0 +1,246 @@
+{
+    "domain": "seznam.cz",
+    "owner": {
+        "name": "Seznam.cz, a.s.",
+        "displayName": "Seznam.cz"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "h",
+        "c",
+        "ssp"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "seznam\\.cz\\/js\\/dot-small\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5d06a42fbe51a489e747bd15ac12b795aee4ac1a549f01e14c15fca727379408"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/js\\/rc\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "c"
+            ],
+            "apis": {
+                "window.name": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e2fb283c17181b0b0ca5eca40c843a60e005030ebc28f6b6e5eabfbdbcc8e128"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.printables.com"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/static\\/js\\/ssp\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ssp"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a5103c85d41538236b99e7dded45617eb3dc21622942999368ad9e02370ab0db"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/udid",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/udid",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "737a81dc0125dc4e93aacf6c887ef079ed1450ea5b44518dd27ba210e7269fdd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.rajce.idnes.cz"
+            ]
+        },
+        {
+            "rule": "seznam\\.cz\\/hit",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mapy.com",
+                "www.rajce.idnes.cz"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "r2b2.cz",
+            "prevalence": 0.3
+        },
+        {
+            "domain": "seznam.cz",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "Preflight": 4,
+        "Fetch": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ams.seznam.cz",
+        "ans.seznam.cz"
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "domain": "sendinblue.com",
+    "owner": {
+        "name": "Dual Technologies Services",
+        "displayName": "Dual Technologies Services"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "conversations-widget"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "sendinblue\\.com\\/sib-conversations\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "conversations-widget"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "recyclivre.com",
+                "www.velobrival.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "sibautomation.com",
+            "prevalence": 0.4
+        }
+    ],
+    "types": {
+        "Script": 2
+    },
+    "nameservers": [
+        "mary.ns.cloudflare.com",
+        "josh.ns.cloudflare.com"
+    ]
+}

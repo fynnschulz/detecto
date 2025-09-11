@@ -1,0 +1,1306 @@
+{
+    "domain": "sharethis.com",
+    "owner": {
+        "name": "ShareThis, Inc",
+        "displayName": "ShareThis",
+        "privacyPolicy": "https://www.sharethis.com/privacy/",
+        "url": "http://sharethis.com"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00815,
+    "sites": 81,
+    "subdomains": [
+        "platform-api",
+        "l",
+        "count-server",
+        "platform-cdn",
+        "w",
+        "ws",
+        "s",
+        "ss",
+        "buttons-config",
+        "datasphere-sbsvc",
+        "gdpr-api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "sharethis\\.com\\/js\\/sharethis\\.js",
+            "cookies": 0.00654,
+            "fingerprinting": 1,
+            "subdomains": [
+                "platform-api"
+            ],
+            "apis": {
+                "Document.cookie setter": 65,
+                "Document.cookie getter": 65,
+                "window.localStorage": 65,
+                "Navigator.prototype.userAgent": 66,
+                "Date.prototype.getTime": 65,
+                "window.innerWidth": 12,
+                "Document.prototype.interestCohort": 61,
+                "NavigatorUAData.prototype.brands": 59,
+                "NavigatorUAData.prototype.platform": 59,
+                "NavigatorUAData.prototype.getHighEntropyValues": 59
+            },
+            "sites": 71,
+            "prevalence": 0.00715,
+            "cnames": [],
+            "responseHashes": [
+                "fd70a1b43954ed8a96aeda2aa011ad0632243c3b09a12ba503f10f3746374f2e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.hifichoice.com",
+                "www.asknumbers.com",
+                "ikeahackers.net",
+                "www.thecricketer.com",
+                "www.swiftgroup.co.uk",
+                "archaeologydataservice.ac.uk",
+                "fastercapital.com",
+                "xnxx3.net",
+                "www.bloomsbury.com",
+                "www.comedy.co.uk",
+                "northwestguitars.co.uk",
+                "www.wheelbase.co.uk",
+                "www.cruisemummy.co.uk",
+                "www.redbridge.gov.uk",
+                "www.amoyshare.com",
+                "babesource.com",
+                "vinsights.co.uk",
+                "www.xnxx.dev",
+                "www.mtw.nhs.uk",
+                "spfl.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/pview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "l"
+            ],
+            "apis": {},
+            "sites": 75,
+            "prevalence": 0.00755,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__cmpconsentx86685": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "ancensored.com",
+                "ikeahackers.net",
+                "www.wheelbase.co.uk",
+                "www.scam-detector.com",
+                "mcpedl.com",
+                "www.redbridge.gov.uk",
+                "www.understandingwar.org",
+                "www.englandgolf.org",
+                "www.whatsonglasgow.co.uk",
+                "howik.com",
+                "www.supercheats.com",
+                "nhentai.to",
+                "fmoviesz.sc",
+                "www.comedy.co.uk",
+                "gameplay.tips",
+                "animekai.to",
+                "www.majorgeeks.com",
+                "vinsights.co.uk",
+                "www.waveshare.com",
+                "www.amoyshare.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/v2\\.0\\/get_counts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "count-server"
+            ],
+            "apis": {},
+            "sites": 22,
+            "prevalence": 0.00221,
+            "cnames": [],
+            "responseHashes": [
+                "aff8846d9b87f12a5348d7eee5145f47a4a3a5f31f8fd246399034c71c02f6fe",
+                "ff0162bd57e64ae3ebbc1caeae5a70574c17f2ba89c538d34edd62f0b1e56da0",
+                "3c54cfbab945bf62d7775c56a699e720c102b7c9c1670b75e7c018c0d962a8e0",
+                "6b4262bd74b69f3874f2a8dacba5255afa32d4df59e721a499d3a7f4e4ea0b9f",
+                "3bf5b2cef92a0ac054dced74a5df78ec8429c8039c36857e31a9b80b425c4223",
+                "21d9a38d00fa0fb4a8eb85982ed2613a451b108959015e79dec39934161fea7d",
+                "a48159fd40213279a2d92b0e795c1bb4e6d2002394576d95fc7338cf7f300f28",
+                "5d307250ce977d8e56a79be60300f7912719ebbf4b16e7900387ee1561d20a40",
+                "6ffe59e6605bc79f953f558b0dcba913ea4f7b5a8609b0c301edb88a948b333a",
+                "a2ada426a2a07f778682a4655a2b533623f1c87f4ea974e02d79616a36f07c2a",
+                "568783d210381056668bfaacd69a7201b457dd69f925b87a5cb2e174bd898c70",
+                "d962ec71234e8419bd2aeba3764969cedefff225b6badaaa3d81c5397e2ebcba",
+                "6b2dd9d5a7b67d7db18e14441dea11cb48bac82d3f42eff8cf2e42890b8bc58d",
+                "aaf758ecf4d4b4573d6708751607e1ec5e35bf1c6adbe8bc65e94637bcebb1ef",
+                "ea1a02824625970f453d2657ecd0a24e1ca55bc09692c8c6c28913925d6c022a",
+                "d8f0412cc0a1c4191175bdfdd4caf8303f3c3c2368aacc72cc76a82d33a629ec",
+                "72fd20f5a2a6cd066f6f75e00296b8a7cfced7413f24e2077b414fc902a724fe",
+                "84ece20f064b1ee5d3b1cc0ef63e697632e51eaeacb875f4b98c679e6f628b30",
+                "d7b8d5765ad64d55c7feac7214a8fb31774a0a4d3b96356bec8fd176b6450cea",
+                "0e7c3e6e59759d5578a2e4e07fcdef54df84976b96b63f28cca8dad670538098"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.majorgeeks.com",
+                "mcpedl.com",
+                "westream.to",
+                "animekai.to",
+                "wordly.org",
+                "vinsights.co.uk",
+                "9animetv.to",
+                "www.comedy.co.uk",
+                "nhentai.to",
+                "fmoviesz.sc",
+                "ytbdownload.com",
+                "quordlegame.com",
+                "www.amoyshare.com",
+                "spellbee.org",
+                "thejigsawpuzzles.com",
+                "fastercapital.com",
+                "thaipornhd.com",
+                "www.cruisemummy.co.uk",
+                "rtgallery.net",
+                "www.cutyt.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/twitter\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 25,
+            "prevalence": 0.00252,
+            "cnames": [],
+            "responseHashes": [
+                "76ffdc5337cd5a509f15d70767b85a793aead82975d0d86912e1607e963c9aed"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.majorgeeks.com",
+                "www.cruisemummy.co.uk",
+                "wordly.org",
+                "thaipornhd.com",
+                "rtgallery.net",
+                "live-tennis.eu",
+                "animekai.to",
+                "brickset.com",
+                "hianime.to",
+                "9animetv.to",
+                "quordlegame.com",
+                "vinsights.co.uk",
+                "www.plotaroute.com",
+                "www.comedy.co.uk",
+                "spellbee.org",
+                "westream.to",
+                "www.amoyshare.com",
+                "ytbdownload.com",
+                "fastercapital.com",
+                "thejigsawpuzzles.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/facebook\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 25,
+            "prevalence": 0.00252,
+            "cnames": [],
+            "responseHashes": [
+                "768d97ec0916217ae82c70aeda3a61b9b0dab344edc4a3240a4f7cd94af00307"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westream.to",
+                "ytbdownload.com",
+                "animekai.to",
+                "fmoviesz.sc",
+                "nhentai.to",
+                "fastercapital.com",
+                "www.cutyt.com",
+                "www.plotaroute.com",
+                "thaipornhd.com",
+                "www.cruisemummy.co.uk",
+                "9animetv.to",
+                "www.majorgeeks.com",
+                "hianime.to",
+                "spellbee.org",
+                "rtgallery.net",
+                "www.amoyshare.com",
+                "wordly.org",
+                "www.comedy.co.uk",
+                "quordlegame.com",
+                "live-tennis.eu"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/whatsapp\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.00151,
+            "cnames": [],
+            "responseHashes": [
+                "847eb36b4dc4b05f94052dcd98077319e74d882334a106bb9ca451ba211c9c2c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "animekai.to",
+                "brickset.com",
+                "fastercapital.com",
+                "fmoviesz.sc",
+                "quordlegame.com",
+                "rtgallery.net",
+                "thaipornhd.com",
+                "thejigsawpuzzles.com",
+                "vinsights.co.uk",
+                "westream.to",
+                "www.amoyshare.com",
+                "www.comedy.co.uk",
+                "www.plotaroute.com",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/reddit\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.00161,
+            "cnames": [],
+            "responseHashes": [
+                "dadbb59b37bfea4c78c6e15c8cbb96dfba84526e43a0767dc244fd062a841aba"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "9animetv.to",
+                "animekai.to",
+                "babesource.com",
+                "brickset.com",
+                "fmoviesz.sc",
+                "hianime.to",
+                "nhentai.to",
+                "quordlegame.com",
+                "thaipornhd.com",
+                "westream.to",
+                "www.amoyshare.com",
+                "www.comedy.co.uk",
+                "www.majorgeeks.com",
+                "www.plotaroute.com",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/telegram\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "03e42b95e9049816d901eabbe2a2247deda61a85972e3a50e3c8274e6c5fe39b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "9animetv.to",
+                "animekai.to",
+                "fastercapital.com",
+                "fmoviesz.sc",
+                "hianime.to",
+                "nhentai.to",
+                "westream.to"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/messenger\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "2986551fd9e82929eabb8cba7c44f74a28d8496c744893432f067b320dff55da"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "animekai.to",
+                "brickset.com",
+                "fmoviesz.sc",
+                "quordlegame.com",
+                "westream.to",
+                "wordly.org",
+                "www.comedy.co.uk",
+                "www.plotaroute.com",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/email\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "5f5012132c752db2433e17712d91ef8689f1bc95167b2720e23224c2ae62e009"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "babesource.com",
+                "fastercapital.com",
+                "live-tennis.eu",
+                "rtgallery.net",
+                "spellbee.org",
+                "thejigsawpuzzles.com",
+                "wordly.org",
+                "www.comedy.co.uk",
+                "www.cruisemummy.co.uk",
+                "www.plotaroute.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/sharethis\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.00161,
+            "cnames": [],
+            "responseHashes": [
+                "9a83c65bdd0ff9488af9d25720686457ea7295c9c44f9f1d285a0c9ec89bab99"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "9animetv.to",
+                "babesource.com",
+                "fastercapital.com",
+                "hianime.to",
+                "nhentai.to",
+                "rtgallery.net",
+                "thaipornhd.com",
+                "thejigsawpuzzles.com",
+                "www.amoyshare.com",
+                "www.comedy.co.uk",
+                "www.cruisemummy.co.uk",
+                "www.cutyt.com",
+                "www.majorgeeks.com",
+                "www.plotaroute.com",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/copy\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6b959d4422402c39edb23d3d2592e7789bcb24516aaf8ba8f269eaa9d7d2b251"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.comedy.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/arrow_left\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "5c833b1818762f1e134fbb158447fb0b92f2b018b15aa36f2e2405213f830d38"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fastercapital.com",
+                "rtgallery.net",
+                "spellbee.org",
+                "thaipornhd.com",
+                "vinsights.co.uk",
+                "www.amoyshare.com",
+                "www.comedy.co.uk",
+                "www.cruisemummy.co.uk",
+                "www.cutyt.com",
+                "www.majorgeeks.com",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/arrow_right\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.00121,
+            "cnames": [],
+            "responseHashes": [
+                "1bae747c7fd090f56608956a97c870391e1c43f89d24d5766129b75628985c1e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fastercapital.com",
+                "rtgallery.net",
+                "spellbee.org",
+                "thaipornhd.com",
+                "vinsights.co.uk",
+                "www.amoyshare.com",
+                "www.comedy.co.uk",
+                "www.cruisemummy.co.uk",
+                "www.cutyt.com",
+                "www.majorgeeks.com",
+                "ytbdownload.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/button\\/buttons\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "w",
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 8,
+                "Date.prototype.getTime": 8,
+                "Document.cookie getter": 8,
+                "NavigatorUAData.prototype.brands": 6,
+                "NavigatorUAData.prototype.platform": 6,
+                "NavigatorUAData.prototype.getHighEntropyValues": 6
+            },
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "c06ec88641687c7f653a3e6b3a601130400dc1698afe67c531d693406cd99440"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "southfront.press",
+                "www.bristan.com",
+                "www.gps-routes.co.uk",
+                "www.radioworld.co.uk",
+                "www.scam-detector.com",
+                "www.understandingwar.org",
+                "www.wildswimming.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/loader\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s",
+                "ss"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.appName": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "65b86fc12f3832f3046d33dca119811267d118182b6e504d3862d8556e3cc71b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__unam": {
+                    "ttl": 23528577,
+                    "length": 30,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "www.scam-detector.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/button\\/async-buttons\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "window.name": 8,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "c92c3814d5c8ef8bd016d9cb4dec18ff0dfca4a3f2b4968207888383095e0197"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "southfront.press",
+                "www.bristan.com",
+                "www.gps-routes.co.uk",
+                "www.radioworld.co.uk",
+                "www.scam-detector.com",
+                "www.understandingwar.org",
+                "www.wildswimming.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/pview",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "l"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "southfront.press",
+                "www.bristan.com",
+                "www.gps-routes.co.uk",
+                "www.radioworld.co.uk",
+                "www.scam-detector.com",
+                "www.understandingwar.org",
+                "www.wildswimming.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/button\\/css\\/buttons-secure\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "95dc1b83a7c030dd13ab3e29df921f10e04208b28734f172ea232854264c3b05"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "southfront.press",
+                "www.bristan.com",
+                "www.gps-routes.co.uk",
+                "www.radioworld.co.uk",
+                "www.scam-detector.com",
+                "www.understandingwar.org",
+                "www.wildswimming.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure5x\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "61fb5ada883b89031df45d3c5d34d106b47ef3610964a4150e8b4c3ad364c35b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "southfront.press",
+                "www.bristan.com",
+                "www.gps-routes.co.uk",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure5x\\/js\\/stcommon\\.1f60705adac788a51a8240cf535237b0\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "2d200d90966b8380a648972d71130785371751cf24bb7398f2854be23afb4a65"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "southfront.press",
+                "www.bristan.com",
+                "www.gps-routes.co.uk",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure5x\\/js\\/st\\.d46c567ef2d922f9ad89eca462444ab6\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 5
+            },
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "5d4a01feb41d13176ee653921d64c3f479fc698fe9e5f18e217296b756835900"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "southfront.press",
+                "www.bristan.com",
+                "www.gps-routes.co.uk",
+                "www.scam-detector.com",
+                "www.understandingwar.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/facebook_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c2c42136f43a28599c5b6b810653b070787865c7f899c564e9e24926576fee71"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "www.gps-routes.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/twitter_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "70eccff462770396939013e653c1087f32b6e9bf2baa91dc2e0d3a051be70168"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "www.gps-routes.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/googleplus_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2229cfde42969c50a86112023d8a66e0c7caf00fb4252ffae45ead5e15fcdf7c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "www.gps-routes.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/pinterest_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "db448e9856e01265779cc5032ee53323eef76ddc12a2b180b290200bb09c8d61"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "www.gps-routes.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/linkedin_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "91832dd0430ec0feca31e4f008e6dd71db9764ee1e080e9a0a80c8340b4f4b27"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "www.gps-routes.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/images\\/2017\\/email_32\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e26d8557ab64ce50c2e88c804463c25c3cfc8aa15ee6d70af951dba8990dd704"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ancensored.com",
+                "www.gps-routes.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/pinterest\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000805,
+            "cnames": [],
+            "responseHashes": [
+                "efc737b4f58cfe73a9bd0e57d7570365701381da31e628b269e7217a0ce3359d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "babesource.com",
+                "quordlegame.com",
+                "rtgallery.net",
+                "spellbee.org",
+                "vinsights.co.uk",
+                "www.comedy.co.uk",
+                "www.cruisemummy.co.uk",
+                "www.cutyt.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/ppg\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d1690bddf6e84d768801f264b82cf81ace128702efcc7dd01d44791a8b497360"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "brickset.com",
+                "www.waveshare.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/linkedin\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "cb8c2b19fd9b56c41db14bd71b5c0616c1ba4e99b08c8e75084cf695f74b7120"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fastercapital.com",
+                "live-tennis.eu",
+                "rtgallery.net",
+                "vinsights.co.uk",
+                "wordly.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/js\\/64a3d891df473b0019d1b0da\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buttons-config"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a3d04c97f2b874ccf3b735b3a2929447e2097fce58d1e59cbe8d67383bddb763"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hianime.to",
+                "nhentai.to"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "datasphere-sbsvc"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "0d4ae869406e3b89399a0c095286b55b012b0a557d91c61426326a013c5a0b74",
+                "8a31729d0424027c3fd5e72fa352807544ee4de66ec751f31097d5276938864e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spellbee.org",
+                "wordly.org",
+                "www.cutyt.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/img\\/print\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "30e817756a474c7f893057d069f7ed56e1fd4617d70fcf40ac5d58fae5890ede"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spellbee.org",
+                "wordly.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "l"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spellbee.org",
+                "wordly.org"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/js\\/5beaef58443c26001b064e1b\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "buttons-config"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "415a732dcf8c566cee0b9ede5426cd5491cc816d8557b8ac23a885ddd437286a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cyclesuk.com",
+                "www.theelectricbikeshop.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure\\/index\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a8be6d04466f8a2b2117e386c68248fa254b675420c346a10ffaf47ee1c4e533"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "radioworld.co.uk",
+                "www.wildswimming.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/secure\\/js\\/st\\.3b9f3f69dc50facea4e7ccac2c236448\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ws"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3d0d76fdc0b6003bf282c7c3ad68d43c77488139d1b3f05c24dea95fc5729c1d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "radioworld.co.uk",
+                "www.wildswimming.co.uk"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/cmp-v2\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gdpr-api"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "55065824cade0323f98d18691514bb1f8c8c1d606d7639f9b0e014d79cde6d60"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "st_samesite_v2": {
+                    "ttl": 0,
+                    "length": 1,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stereonet.com",
+                "www.waveshare.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/portal-v2\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gdpr-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8bc62c9ef81390af989b3829ace60aae916e299dab9df7ec5e49db2d07a956b6"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stereonet.com",
+                "www.waveshare.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/v3\\/vendor-list\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gdpr-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "62afe5f3bde659f8866d3943f9ea28fb33f9cf5127d73ffa43d1d5a258cecc70"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stereonet.com",
+                "www.waveshare.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/v2\\/cmp-list\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gdpr-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f0b4799c54e3c4bcd9b470157e8abb475bf57a26ac419605fb17b9803de1f6f8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stereonet.com",
+                "www.waveshare.com"
+            ]
+        },
+        {
+            "rule": "sharethis\\.com\\/static\\/media\\/gear\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gdpr-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2cc8dba0631458973e434785f45b04984a870529cff43b7e091ea24ad16eb968"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stereonet.com",
+                "www.waveshare.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Third-Party Analytics Marketing",
+        "Social - Share",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.00674,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9310344827586207
+        },
+        {
+            "domain": "animekai.me",
+            "prevalence": 0.06206896551724138
+        },
+        {
+            "domain": "getlasso.co",
+            "prevalence": 0.006896551724137931
+        }
+    ],
+    "types": {
+        "Script": 133,
+        "XHR": 80,
+        "Image": 191,
+        "Stylesheet": 8,
+        "Document": 10,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-378.awsdns-47.com",
+        "ns-773.awsdns-32.net",
+        "ns-1617.awsdns-10.co.uk",
+        "ns-1529.awsdns-63.org"
+    ]
+}

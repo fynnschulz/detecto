@@ -1,0 +1,182 @@
+{
+    "domain": "servenobid.com",
+    "owner": {
+        "name": "Prebid.org",
+        "displayName": "Prebid.org"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00101,
+    "sites": 10,
+    "subdomains": [
+        "ads",
+        "public"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "servenobid\\.com\\/adreq",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "99233db47bce7fb56dc234e0ac06e82ab9ffab5c9d4e141ea619a51662723423",
+                "e48324f95c0966c522cb72fcb3787f6fd0b2d9ead143fd38df1ecaa62aed48f5",
+                "0ad75c44203e9d04b242e42fc4265a8b0c05bf4ef2f9a0b539f6640cfd61e765",
+                "51ff56d2601a8507d66404b8b4636379747f5ad07f0aea7ebd74dc039ddd1deb",
+                "16e4f9cc4da5cf68b0ddef8e0831b8eb8565d8bd2e494cc58512f3b9500a8c40",
+                "89c347f3be9ce73098b762dcc356e2740263b675456b8ca59eef3592aa4497b4",
+                "8e0fab92701b347febd0de049a597e178328da6f0953199f69853fc7342b7697",
+                "ca228a5ee96ce49bc356de6dd0f00c47f365def613a4bf0f65310e83a92db188",
+                "2c7edfdde8c67db5b4999615f405dd86aef9a1b43f90175b131629791670357c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "appleinsider.com",
+                "biblehub.com",
+                "sonichits.com",
+                "techcrunch.com",
+                "www.delftstack.com",
+                "www.freenews.fr",
+                "www.hardreset.info",
+                "www.iplocation.net",
+                "www.topcpu.net",
+                "www.zerohedge.com"
+            ]
+        },
+        {
+            "rule": "servenobid\\.com\\/sync\\.html",
+            "cookies": 0.000808,
+            "fingerprinting": 1,
+            "subdomains": [
+                "public"
+            ],
+            "apis": {
+                "Document.cookie getter": 8,
+                "Date.prototype.getTime": 8,
+                "Document.cookie setter": 8
+            },
+            "sites": 9,
+            "prevalence": 0.000909,
+            "cnames": [],
+            "responseHashes": [
+                "587bd918a4110df6b3704e6fbb0e956264b1706560d6c32a6e899de8ccf12be7"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "_nbxc_": {
+                    "ttl": 22394880017,
+                    "length": 1,
+                    "prevalence": 0.000807999192000808,
+                    "uniqueness": 0.125
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "appleinsider.com",
+                "biblehub.com",
+                "techcrunch.com",
+                "www.delftstack.com",
+                "www.freenews.fr",
+                "www.hardreset.info",
+                "www.iplocation.net",
+                "www.topcpu.net",
+                "www.zerohedge.com"
+            ]
+        },
+        {
+            "rule": "servenobid\\.com\\/sync",
+            "cookies": 0.000505,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000808,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biblehub.com",
+                "techcrunch.com",
+                "www.delftstack.com",
+                "www.freenews.fr",
+                "www.hardreset.info",
+                "www.iplocation.net",
+                "www.topcpu.net",
+                "www.zerohedge.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000808,
+    "topInitiators": [
+        {
+            "domain": "adpushup.com",
+            "prevalence": 0.16216216216216217
+        },
+        {
+            "domain": "gumgum.com",
+            "prevalence": 0.16216216216216217
+        },
+        {
+            "domain": "smartadserver.com",
+            "prevalence": 0.13513513513513514
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.10810810810810811
+        },
+        {
+            "domain": "undrads.com",
+            "prevalence": 0.10810810810810811
+        },
+        {
+            "domain": "admetricspro.com",
+            "prevalence": 0.08108108108108109
+        },
+        {
+            "domain": "bidmatic.io",
+            "prevalence": 0.05405405405405406
+        },
+        {
+            "domain": "dev2pub.com",
+            "prevalence": 0.05405405405405406
+        },
+        {
+            "domain": "buysellads.net",
+            "prevalence": 0.05405405405405406
+        },
+        {
+            "domain": "stpd.cloud",
+            "prevalence": 0.05405405405405406
+        }
+    ],
+    "types": {
+        "Fetch": 10,
+        "Document": 9,
+        "Image": 8
+    },
+    "nameservers": [
+        "ns-736.awsdns-28.net",
+        "ns-396.awsdns-49.com",
+        "ns-1852.awsdns-39.co.uk",
+        "ns-1273.awsdns-31.org"
+    ]
+}

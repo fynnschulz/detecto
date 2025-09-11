@@ -1,0 +1,136 @@
+{
+    "domain": "akamai.com",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000547,
+    "sites": 8,
+    "subdomains": [
+        "time",
+        "content"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "akamai\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "time"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "2891c1d38f6d3cfc74b8def04dae4d1961a5fe031b6d4b236e6a6eaec26035d1",
+                "5d4b67e37295f188e4a63fd868af69611171958f664347b7094893897d935732",
+                "d5d920c4079441182d8b5eac73b208b4b57a5b88cc83adba57634c00aea47d64",
+                "17c4a50de14b42edb12a2e0a00997920fbe525aa5b73b9d76ea53aaf533d7115",
+                "24cabc5fa13a332d67ad6c5fc1515b38a50ddf282600fe14211a8bc1453191db"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aftenposten.no",
+                "www.aftenposten.no",
+                "www.benefitcosmetics.com",
+                "www.bt.no",
+                "www.dior.com",
+                "www.guerlain.com"
+            ]
+        },
+        {
+            "rule": "akamai\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "time"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "64e306ca1d14df792cdea13aa6da7c0c59b65a1715ba9779e8b919b1e5816ac1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eitb.eus",
+                "www.eitb.eus"
+            ]
+        },
+        {
+            "rule": "akamai\\.com\\/js\\/forms2\\/js\\/forms2\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Element.prototype.getClientRects": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1d8f29fefcf1c3c78ed278f87273b54e272722c4672bbcfd903092881e0fd3ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "linode.com",
+                "www.linode.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "freecaster.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "Fetch": 6,
+        "XHR": 2,
+        "Script": 2
+    },
+    "nameservers": [
+        "a11-66.akam.net",
+        "a9-66.akam.net",
+        "a13-66.akam.net",
+        "a1-66.akam.net",
+        "a6-66.akam.net",
+        "a16-66.akam.net",
+        "a3-66.akam.net",
+        "a8-66.akam.net",
+        "a7-66.akam.net",
+        "a18-66.akam.net",
+        "a12-66.akam.net",
+        "a28-66.akam.net",
+        "a5-66.akam.net"
+    ]
+}

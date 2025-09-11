@@ -1,0 +1,803 @@
+{
+    "domain": "mida.so",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000287,
+    "sites": 42,
+    "subdomains": [
+        "cdn",
+        "api"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "mida\\.so\\/js\\/optimize\\.js",
+            "cookies": 0.000198,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 30,
+                "window.sessionStorage": 29,
+                "Document.cookie getter": 30,
+                "CanvasRenderingContext2D.prototype.getImageData": 29,
+                "Navigator.prototype.userAgent": 29,
+                "Navigator.prototype.language": 29,
+                "Navigator.prototype.platform": 29,
+                "Screen.prototype.height": 29,
+                "Screen.prototype.width": 29,
+                "Screen.prototype.colorDepth": 29,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 31,
+                "Document.cookie setter": 29,
+                "Date.prototype.getTime": 31
+            },
+            "sites": 31,
+            "prevalence": 0.000212,
+            "cnames": [],
+            "responseHashes": [
+                "9840e91ff4903b7278602aea9aced895cab81270b87e398e073ef7147a507c92"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "optimize_uuid": {
+                    "ttl": 31536004,
+                    "length": 50,
+                    "prevalence": 0.00019154467095361882,
+                    "uniqueness": 0.9642857142857143
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabb.com",
+                "www.lonestar.edu",
+                "www.ministrybrands.com",
+                "rightwayparking.com",
+                "www.carahsoft.com",
+                "vnsh.com",
+                "spinoffmagazine.com",
+                "www.edc.dk",
+                "nrsworld.com",
+                "www.zerorez.com",
+                "drwillcole.com",
+                "handwovenmagazine.com",
+                "www.thomas-philipps.de",
+                "www.justkampers.com",
+                "beerandbrewing.com",
+                "physiqz.com",
+                "fmcsaregistration.com",
+                "astor.id",
+                "writingmate.ai",
+                "pawsafe.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/init\\/uuid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 32,
+            "prevalence": 0.000219,
+            "cnames": [],
+            "responseHashes": [
+                "f0d9acc8617549eecdb99cbca0a5e591f5aebd28480f092565add97b9e2f8dc2",
+                "a83da3b70c9ddec61e17364a31f676637af9558dc9a4dc1317ac693a9e70b96f",
+                "4cc7714819737e072b1bdeee3905b556e50041718b71730d17bbd10dc679cecf",
+                "ca1406fd225e62cd28053ca80b2fab8d34762a0afc0022e926bd3c6faeb7bdce",
+                "48713a00fb6dafd3b584136c83f20474e8f273179f67672f1cb413ebe13f1863",
+                "f1459c0e659efd214a39dd2c84368fa1d0a427d66364009c71b5bbc5646c7a2b",
+                "8893c373d76b7cb4588a370e323ee54573deda94b61b51d2970e00d2e4c8c08d",
+                "56b3cab5257e1049c312f2cc40976dfe48ab6d99a4294f1c4d1f927bf1f6045e",
+                "ec4659f1754e93284c26df5eef90988e90fb4f16b18f8e1d792174660b6b0ae4",
+                "7d6c7f6b9547baa998ff62bedd3e55531f08ded47d62280519f4e9f41fc1a0e5",
+                "7675d51c434632e7e57fc20824736925696e6894d2f9ade9e177b0e303504a28",
+                "8a912bc5791e6d60748807f4dc9f22ffa297ef5ae58e77f6f5698ba37f1f8288",
+                "79a1b6f7942a09ec702a609ef27df96fe9d7fbcb085391f8c76f3ff7e82240f6",
+                "6b6f36f6b64e828c5c710b8d7fe35816c6ff801a6dd16e62010888ee8bd14ead",
+                "9c11f58a50d4d38e91ab490826f679753f3f41c8ceb344da45c80e1bfb76cdfb",
+                "56077d3024c48a66ed07999cdb18afa347ab104685557718ccd18de6b3e49aa6",
+                "0719e6e8075305b2d5aef33f4146777b7423c7679a3f49a4862e6e7e14754538",
+                "b634304756321300d80bff55a3bd8a57263c5592def6ea1f51ecd50c4bd5906e",
+                "bfb34ec015cc8b3cb9e20d6ad2b9f986f1fb46a1397626e388583114b455c24f",
+                "ebce3393396cab96b5982dea5e79edf0aad657d48ee14912771ed470a3ac47e5",
+                "b496990626436ca1344c4d381a120b41ddb7db7a426183fff70bf72e11dbedfe",
+                "05d3e2c1f1d90aac344e83874df9facf3dc35e24f20f89e5b7fc10b7d27a6753",
+                "faf0308e879605811298fec216e64db62891e58ee305c5260f4ea4a3cf2fa71a",
+                "76d49d103d565c17b2ffb28b2a6179e9e6e1a3d9b775aae0353b26fe5824490d",
+                "8f8df7a752c8a45dbc7c9eaeb069b4a3c678b085b7ee0be4fbd78a315729fb3e",
+                "78457882bc9fde80fe05804728ae0e035b21d8cba9d22dbf853d460016b2d630",
+                "faf3de23dd2f82d1222d29565fd7f7bf3432a584ea76d572675350ce9c81fa5b",
+                "1516c51d95f425321457e304650cbb18b3d5b3fa93a84bc5edae5adb5c0ad15c",
+                "5bf07f042feb9fa9058cde41aa78e9c38360f34ca6db831e2904159d46a38868",
+                "4f629ba236800e555e549aeb8c8f142f538695314301e1c4780572f0654b8bcc",
+                "79a72136fc0aa47a075f4e681b345e3576088e1ac20a0f2b52942a8a6b3f2b25"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabb.com",
+                "networklessons.com",
+                "spinoffmagazine.com",
+                "fmcsaregistration.com",
+                "baselang.com",
+                "writingmate.ai",
+                "astor.id",
+                "www.teamout.com",
+                "beerandbrewing.com",
+                "www.lonestar.edu",
+                "govplus.com",
+                "www.printique.com",
+                "prattmodular.com",
+                "www.thomas-philipps.de",
+                "gemplers.com",
+                "www.justkampers.com",
+                "sundaysfordogs.com",
+                "gifts.thechosen.tv",
+                "renpho.com",
+                "www.edc.dk"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/js\\/mida-integration\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 15
+            },
+            "sites": 32,
+            "prevalence": 0.000219,
+            "cnames": [],
+            "responseHashes": [
+                "67707897dbd883b932e329fef9afc40c76d9ee59d1cca5cf15004bfd1f2cb951"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rightwayparking.com",
+                "sundaysfordogs.com",
+                "spinoffmagazine.com",
+                "writingmate.ai",
+                "gifts.thechosen.tv",
+                "vnsh.com",
+                "gemplers.com",
+                "pawsafe.com",
+                "www.printique.com",
+                "www.lonestar.edu",
+                "baselang.com",
+                "astor.id",
+                "www.edc.dk",
+                "prattmodular.com",
+                "www.carahsoft.com",
+                "www.thomas-philipps.de",
+                "drwillcole.com",
+                "www.ministrybrands.com",
+                "physiqz.com",
+                "handwovenmagazine.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/abtest\\/visitor",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 32,
+            "prevalence": 0.000219,
+            "cnames": [],
+            "responseHashes": [
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+                "224ba190c5c81f3d59b3364d64665d46916b139a1d7f3df95c7defb8c6bf9e39"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beerandbrewing.com",
+                "www.thomas-philipps.de",
+                "www.carahsoft.com",
+                "www.lonestar.edu",
+                "physiqz.com",
+                "www.justkampers.com",
+                "spinoffmagazine.com",
+                "writingmate.ai",
+                "gifts.thechosen.tv",
+                "handwovenmagazine.com",
+                "govplus.com",
+                "www.zerorez.com",
+                "www.ministrybrands.com",
+                "sundaysfordogs.com",
+                "www.printique.com",
+                "gabb.com",
+                "nrsworld.com",
+                "www.edc.dk",
+                "gemplers.com",
+                "drwillcole.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/abtest\\/visitor",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 32,
+            "prevalence": 0.000219,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beerandbrewing.com",
+                "www.ministrybrands.com",
+                "gifts.thechosen.tv",
+                "renpho.com",
+                "www.lonestar.edu",
+                "baselang.com",
+                "fmcsaregistration.com",
+                "www.teamout.com",
+                "networklessons.com",
+                "drwillcole.com",
+                "www.basepowercompany.com",
+                "handwovenmagazine.com",
+                "govplus.com",
+                "typetype.org",
+                "gabb.com",
+                "astor.id",
+                "physiqz.com",
+                "prattmodular.com",
+                "pawsafe.com",
+                "nrsworld.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/js\\/mida-event\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 32,
+            "prevalence": 0.000219,
+            "cnames": [],
+            "responseHashes": [
+                "a92de69297dcaaba09b17d42a9c052234a293fd05dbc856799d00d990c187d77"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "renpho.com",
+                "drwillcole.com",
+                "astor.id",
+                "www.ministrybrands.com",
+                "beerandbrewing.com",
+                "www.basepowercompany.com",
+                "baselang.com",
+                "vnsh.com",
+                "govplus.com",
+                "rightwayparking.com",
+                "www.edc.dk",
+                "typetype.org",
+                "www.lonestar.edu",
+                "nrsworld.com",
+                "prattmodular.com",
+                "gabb.com",
+                "fmcsaregistration.com",
+                "www.zerorez.com",
+                "pawsafe.com",
+                "spinoffmagazine.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/js\\/mida-goal\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 32,
+            "prevalence": 0.000219,
+            "cnames": [],
+            "responseHashes": [
+                "92c98fdc4e3935ac90ac672ab5bc94836c79483409993d6c0390412fa6716b66"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nrsworld.com",
+                "pawsafe.com",
+                "baselang.com",
+                "handwovenmagazine.com",
+                "fmcsaregistration.com",
+                "www.printique.com",
+                "www.thomas-philipps.de",
+                "www.ministrybrands.com",
+                "spinoffmagazine.com",
+                "physiqz.com",
+                "sundaysfordogs.com",
+                "gemplers.com",
+                "www.carahsoft.com",
+                "govplus.com",
+                "www.justkampers.com",
+                "www.edc.dk",
+                "renpho.com",
+                "networklessons.com",
+                "astor.id",
+                "www.basepowercompany.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/test\\/goal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 32,
+            "prevalence": 0.000219,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.ministrybrands.com",
+                "www.thomas-philipps.de",
+                "gabb.com",
+                "www.lonestar.edu",
+                "spinoffmagazine.com",
+                "writingmate.ai",
+                "nrsworld.com",
+                "www.carahsoft.com",
+                "beerandbrewing.com",
+                "vnsh.com",
+                "fmcsaregistration.com",
+                "drwillcole.com",
+                "www.zerorez.com",
+                "gemplers.com",
+                "www.justkampers.com",
+                "typetype.org",
+                "sundaysfordogs.com",
+                "gifts.thechosen.tv",
+                "www.teamout.com",
+                "pawsafe.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/test\\/goal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 32,
+            "prevalence": 0.000219,
+            "cnames": [],
+            "responseHashes": [
+                "a95afc60dd5cccfd72adbec34b74e584daf22925aae935391ebdce17dd58611b",
+                "4d5cc8889dd2b35e5625e7af05dc7b2097dbbdef933f4f95d628dc4be8b2a6e9",
+                "334b29662622f979413e893925c13ff6ae0cfcb888490397adc0d32d206ae856",
+                "b970169298a63f1228698a73fa63966b6a6eca5e2ac89db4297f85ae4d6ac9cb",
+                "531fca531dc334ba8f1e685d935bd2323ea46507cae9fa1f7bd634e0bcc400fb",
+                "b0ede19d04f4a0536ccea5e22a805c454bae0b51c4a73d65ea32abc80f14cf00",
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+                "fac5ab7d3fcaee15f255e3be8b18b1deac51571479caa5a2d058a2ff898d75a3",
+                "76302d3562ef59b14609678a18c76ddf7be97cae6ce0561d6e0fd2d83a7a3717",
+                "f1234dd23893feb820a5903f2a1f2a5ef6ade2c10fdf45c477610a69582bb48f",
+                "fdd07a7ec775f706d69844bc0c3850df7c540eb642f17a19d85fd50389a01861",
+                "e3f7ca879722acd066d14515e6d94aeee3edc59128e85f73cd0d39d363001048",
+                "fab35a48e9b8ab8809e1254a924e3c4c9b0bd674ce72371d0877f19083987b92",
+                "5c290a4549cd94399cdcf8fd137a4b99807c05c4b63a1b67cd826973d61ea0ec",
+                "a0dd5654f6ef3feaaa39f5a971dadcbddf31b15a6df5e0c6325a0b086b0a61ac",
+                "d71e5b07e340be39c9b2a17820fb19c4e46cb955ac73e313852ce09a3256365e",
+                "8b1fe5c786d4830ce91cd041b8eecfbf2e95011f22dcdb7cdf34e04cf0f69630",
+                "a43263303ab864a0d311b6e2a2bde0a452082379f4d546847b1e2a43bf93fb84",
+                "5bcfc0b01dd0c23c6888ed2666f38dc1c612ac3e641ebf128b90917bf8ddfae2",
+                "8accfba9a139ec9b177fdcfed4d99f517c4fc0240812901ed3516e8ce5c30254",
+                "1c0608ea9aa78516e2ac3218c5afc7c25bf1bc1f80d2ddcb694e0c8ada5c6db1",
+                "8fcfdd105676e5e9421712f4af9f0d83dd9323ee7dc139ea62433c52db638de6",
+                "68950fe21dd100950d8adfae260e23d98beb2dfae9c23f3b25ac8272e7441222",
+                "4604aae7112d8e66a896d42ca8c5db785e884aae5c85c0d6e88ff174b42755a1",
+                "61c73d26141adeec2abae89629eae1207c93a3868c3e5def04934d99d217c60d",
+                "c8e81206f4803825bfba18a3b08b8d9ee8e78299da5236cf0a06f3472169f621",
+                "8b8020c7fbf53bb3f33db52c6953d043c3ce17221af36f1d1219b911f91eb267",
+                "771d86b45bd4e26a8013fcb354c4525c00fa3e7807c0afe6550b2b603e7324db",
+                "108148d8c37f5503b5bfb5ac552a0d1050dc1c80bf5babea8a82786cc39039ff"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vnsh.com",
+                "physiqz.com",
+                "gemplers.com",
+                "networklessons.com",
+                "handwovenmagazine.com",
+                "govplus.com",
+                "www.basepowercompany.com",
+                "writingmate.ai",
+                "fmcsaregistration.com",
+                "baselang.com",
+                "beerandbrewing.com",
+                "www.justkampers.com",
+                "www.edc.dk",
+                "typetype.org",
+                "www.teamout.com",
+                "drwillcole.com",
+                "www.ministrybrands.com",
+                "nrsworld.com",
+                "gifts.thechosen.tv",
+                "pawsafe.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/event\\/addv3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabb.com",
+                "vnsh.com",
+                "www.lonestar.edu"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/abtest\\/convertedv3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabb.com",
+                "vnsh.com",
+                "www.lonestar.edu"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/event\\/addv3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabb.com",
+                "vnsh.com",
+                "www.lonestar.edu"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/abtest\\/convertedv3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "a00fb0c50741f81bb51d35b4475a4357f8039aabd896a21036bc516839401595"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gabb.com",
+                "vnsh.com",
+                "www.lonestar.edu"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/integration\\/enabled\\/X97e1krLYEeNkYN2WEM0vV",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "handwovenmagazine.com",
+                "spinoffmagazine.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/integration\\/enabled\\/X97e1krLYEeNkYN2WEM0vV",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "handwovenmagazine.com",
+                "spinoffmagazine.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/widget\\/event\\/X97e1krLYEeNkYN2WEM0vV",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "handwovenmagazine.com",
+                "spinoffmagazine.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/widget\\/event\\/X97e1krLYEeNkYN2WEM0vV",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "handwovenmagazine.com",
+                "spinoffmagazine.com"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/integration\\/enabled\\/XZbzAeVxR9yvwRo9DGmWNy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4d46e1fe85991d7f37e07151d3403cb76be6cf60ac41800f27bef8015bf4585c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lonestar.edu",
+                "www.lonestar.edu"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/integration\\/enabled\\/XZbzAeVxR9yvwRo9DGmWNy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lonestar.edu",
+                "www.lonestar.edu"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/widget\\/event\\/XZbzAeVxR9yvwRo9DGmWNy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lonestar.edu",
+                "www.lonestar.edu"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/widget\\/event\\/XZbzAeVxR9yvwRo9DGmWNy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lonestar.edu",
+                "www.lonestar.edu"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/test\\/exposure",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lonestar.edu",
+                "www.lonestar.edu"
+            ]
+        },
+        {
+            "rule": "mida\\.so\\/test\\/exposure",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lonestar.edu",
+                "www.lonestar.edu"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000267,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5757575757575758
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.10606060606060606
+        },
+        {
+            "domain": "heyhalda.com",
+            "prevalence": 0.09848484848484848
+        },
+        {
+            "domain": "rollbar.com",
+            "prevalence": 0.07575757575757576
+        },
+        {
+            "domain": "howuku.com",
+            "prevalence": 0.045454545454545456
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.030303030303030304
+        },
+        {
+            "domain": "wsimg.com",
+            "prevalence": 0.030303030303030304
+        },
+        {
+            "domain": "figpii.com",
+            "prevalence": 0.030303030303030304
+        },
+        {
+            "domain": "littlelooms.com",
+            "prevalence": 0.007575757575757576
+        }
+    ],
+    "types": {
+        "Script": 127,
+        "XHR": 112,
+        "Preflight": 80
+    },
+    "nameservers": [
+        "felipe.ns.cloudflare.com",
+        "love.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "domain": "us-west-2.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb"
+    ],
+    "cnames": [
+        {
+            "original": "cza.crazygames.com",
+            "resolved": "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb.us-west-2.amazonaws.com"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "cza.crazygames.com",
+                    "resolved": "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb.us-west-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crazygames.com",
+                "www.crazygames.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Ping": 2
+    },
+    "nameservers": [
+        "ns2.amzndns.co.uk",
+        "ns1.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.com",
+        "ns1.amzndns.net",
+        "ns2.amzndns.org",
+        "ns1.amzndns.org",
+        "ns1.amzndns.co.uk"
+    ]
+}

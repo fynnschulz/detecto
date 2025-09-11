@@ -1,0 +1,110 @@
+{
+    "domain": "grade.us",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "static",
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "grade\\.us\\/assets\\/manifests\\/stream-d63a268fc3cde25d877a4c575c6b6c3d48256cbdbe6e44f27aad962cf5301cde\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "d63a268fc3cde25d877a4c575c6b6c3d48256cbdbe6e44f27aad962cf5301cde"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "camera-warehouse.com.au",
+                "www.camera-warehouse.com.au",
+                "www.wagneronline.com.au"
+            ]
+        },
+        {
+            "rule": "grade\\.us\\/stream\\/wagneronline\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bda27240ce6d70666bce10bfd393bdfb15ed06e35648d10d62fb3c877441f139"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wagneronline.com.au",
+                "www.wagneronline.com.au"
+            ]
+        },
+        {
+            "rule": "grade\\.us\\/stream\\/wagneronline\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8583dab861112bd1b169391e05cb739b6fde7e1236f8a0dafcffc09eed9b5bd9"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wagneronline.com.au",
+                "www.wagneronline.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "reviewmgr.com",
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 2,
+        "Document": 2
+    },
+    "nameservers": [
+        "kara.ns.cloudflare.com",
+        "rudy.ns.cloudflare.com"
+    ]
+}

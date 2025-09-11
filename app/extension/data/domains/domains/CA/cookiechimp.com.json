@@ -1,0 +1,156 @@
+{
+    "domain": "cookiechimp.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000305,
+    "sites": 3,
+    "subdomains": [],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "cookiechimp\\.com\\/api\\/v1\\/visitors",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "awesomeaitools.com",
+                "www.newswire.ca",
+                "www.prnewswire.com"
+            ]
+        },
+        {
+            "rule": "cookiechimp\\.com\\/api\\/v1\\/visitors",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "92edbd73d8d8b81385cd9c97abe4ee85dd1078fff702f737263834e3e40791a4",
+                "54ee8f12a57ae689619948758ae77943c1639d4adddca174a3c164f7351baa42"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "awesomeaitools.com",
+                "www.newswire.ca",
+                "www.prnewswire.com"
+            ]
+        },
+        {
+            "rule": "cookiechimp\\.com\\/widget\\/5J4t382\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookiechimp_uuid": {
+                    "ttl": 15811210,
+                    "length": 36,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newswire.ca",
+                "www.prnewswire.com"
+            ]
+        },
+        {
+            "rule": "cookiechimp\\.com\\/cf\\/widget\\/5J4t382\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "1ad9f75276abdf4159f599cc7e9a43f39fcb7f69b207023eb3ed79331d9ec56a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newswire.ca",
+                "www.prnewswire.com"
+            ]
+        },
+        {
+            "rule": "cookiechimp\\.com\\/widget\\/5J4t382\\/3pPu8DB\\/en\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "494dcf9a41634d4d12e819e61f7ea9a2f302ad7cfdffef37175eb9cb2a51911c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newswire.ca",
+                "www.prnewswire.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000305,
+    "topInitiators": [
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.4444444444444444
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Preflight": 3,
+        "Fetch": 5,
+        "Script": 4
+    },
+    "nameservers": [
+        "pat.ns.cloudflare.com",
+        "seth.ns.cloudflare.com"
+    ]
+}

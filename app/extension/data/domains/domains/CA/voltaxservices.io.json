@@ -1,0 +1,190 @@
+{
+    "domain": "voltaxservices.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000711,
+    "sites": 7,
+    "subdomains": [
+        "players",
+        "content",
+        "factor-service.prod",
+        "player-prediction"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "voltaxservices\\.io\\/players\\/01h7sgvh628s\\/code",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "players"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "ff70aec91339a7cf7bd1049c50b5b9f9723ef5b1527013e84fcb7c7c0284c765"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "mm-src-01hxpdepb18s7wqv": {
+                    "ttl": 1800,
+                    "length": 55,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "investing.com",
+                "www.investing.com"
+            ]
+        },
+        {
+            "rule": "voltaxservices\\.io\\/playlists\\/01hxpe6hqsfa2epw5r\\/videos",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "5c52ce854aea214db8215721997998e932de8efc36c28dcf8bbc4902ea1d1070"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "investing.com",
+                "www.investing.com"
+            ]
+        },
+        {
+            "rule": "voltaxservices\\.io\\/factors\\/data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "factor-service.prod"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000609,
+            "cnames": [],
+            "responseHashes": [
+                "497ae7561e88eaa26b781b038ab4357ffc4555f9a17e6578ce82715f643508f2",
+                "59997788df200a5dd4065244c7a6bfe4168ae05931a901591f9f2d1b6bc36a59",
+                "bcbf35e1c1d6f651851a11863e81a64e7ec7955f11dcb9eff215273bbcbbc19b",
+                "9e445baf4d5470a33e1ae42deedf76735c8ec399587939ece0c123d1d2525a6a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00030453761039488374
+            },
+            "exampleSites": [
+                "investing.com",
+                "oilerhockey.com",
+                "www.firstforwomen.com",
+                "www.investing.com",
+                "www.nba.com",
+                "www.nydailynews.com"
+            ]
+        },
+        {
+            "rule": "voltaxservices\\.io\\/bidders",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player-prediction"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "5e7d354421f7c989eace47504dda5bda3ea5dc9f8ee3e54e4d2ad27cbd055de9",
+                "857b308da74e37cb5bc0f223c1aa788c6f181b986aa579d39e62962cc4f965ea",
+                "02dea5e965a85575464231e90e7587a9dc1e33d124d18037e99c0baf39b42319"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "investing.com",
+                "oilerhockey.com",
+                "www.investing.com",
+                "www.nba.com",
+                "www.nydailynews.com"
+            ]
+        },
+        {
+            "rule": "voltaxservices\\.io\\/dcd",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "factor-service.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "03952beaea4b1a5c9fbefaa1f9ad7c26a1d602f63da922b5e5f4bc043c8079aa"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "oilerhockey.com",
+                "www.nydailynews.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "mmvideocdn.com",
+            "prevalence": 0.4444444444444444
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3888888888888889
+        },
+        {
+            "domain": "invmed.co",
+            "prevalence": 0.05555555555555555
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.05555555555555555
+        },
+        {
+            "domain": "minutemediacdn.com",
+            "prevalence": 0.05555555555555555
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 15
+    },
+    "nameservers": [
+        "ns-1346.awsdns-40.org",
+        "ns-237.awsdns-29.com",
+        "ns-1968.awsdns-54.co.uk",
+        "ns-938.awsdns-53.net"
+    ]
+}

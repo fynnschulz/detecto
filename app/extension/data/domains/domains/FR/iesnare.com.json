@@ -1,0 +1,139 @@
+{
+    "domain": "iesnare.com",
+    "owner": {
+        "name": "TransUnion LLC",
+        "displayName": "TransUnion"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "mpsnare"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "iesnare\\.com\\/general5\\/wdp\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 3,
+            "subdomains": [
+                "mpsnare"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.getBattery": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "window.localStorage": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "OfflineAudioContext.prototype.constructor": 2,
+                "CanvasRenderingContext2D.prototype.measureText": 2,
+                "Navigator.prototype.webkitTemporaryStorage": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "AudioBuffer.prototype.getChannelData": 2,
+                "Performance.prototype.memory": 2,
+                "DeviceMotionEvent.prototype.accelerationIncludingGravity": 2,
+                "DeviceOrientationEvent.prototype.gamma": 2,
+                "DeviceOrientationEvent.prototype.beta": 2,
+                "DeviceOrientationEvent.prototype.alpha": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2f56c5894a2978a4e32b8ed142a452f1c67fada3dd120125483e86746026ea84"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hachette-collections.com",
+                "www.upwork.com"
+            ]
+        },
+        {
+            "rule": "iesnare\\.com\\/5\\.10\\.0\\/logo\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpsnare"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "539d907c0b6cf1867e05fdf8eedbf2d972865e77914cf241fb0a97be5f21625b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hachette-collections.com",
+                "www.upwork.com"
+            ]
+        },
+        {
+            "rule": "iesnare\\.com\\/star",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpsnare"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hachette-collections.com",
+                "www.upwork.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Fraud Prevention"
+    ],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8
+        },
+        {
+            "domain": "hipay.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "WebSocket": 2
+    },
+    "nameservers": [
+        "dns3.p05.nsone.net",
+        "dns2.p05.nsone.net",
+        "dns1.p05.nsone.net",
+        "dns4.p05.nsone.net"
+    ]
+}

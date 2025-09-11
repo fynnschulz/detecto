@@ -1,0 +1,459 @@
+{
+    "domain": "qumucloud.com",
+    "owner": {
+        "name": "Qumu",
+        "displayName": "Qumu"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000041,
+    "sites": 6,
+    "subdomains": [
+        "cvsh-tv",
+        "thrivent",
+        "cdn",
+        "fanniemae",
+        "analytics"
+    ],
+    "cnames": [
+        {
+            "original": "video.thrivent.com",
+            "resolved": "thrivent.qumucloud.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "qumucloud\\.com\\/widgets\\/application\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cvsh-tv",
+                "thrivent"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "video.thrivent.com",
+                    "resolved": "thrivent.qumucloud.com"
+                }
+            ],
+            "responseHashes": [
+                "a421b3c26e7858bed899cf3a089fa5092fbf025858d04358b6517705b2725eb3",
+                "efb9a79ead426c1c0fab422a79f7c8ac68edc6627f2c60630d18550084c7ee8a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com",
+                "www.thrivent.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/origin\\/public\\/cvsh-tv\\.qumucloud\\.com\\/staticcontent\\/768\\/client\\/js-lib\\/widgets\\/jquery\\.min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "717dd26f0a6497c5d239f8ddbbd2ad64470643a2c9ce5a03b4ddd00ce95a2ffe"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/origin\\/public\\/cvsh-tv\\.qumucloud\\.com\\/staticcontent\\/768\\/client\\/application\\/widgets\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "18df3c54a4cac4242ecfe8b9691cea9659efa3d0b57d19a29fb8c9d44f085b16"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/widgets\\/reporting",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cvsh-tv",
+                "thrivent"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "video.thrivent.com",
+                    "resolved": "thrivent.qumucloud.com"
+                }
+            ],
+            "responseHashes": [
+                "e15f9805b6f974f3262b9bcbd41b2248ec7ccf589e2adb1e53765c5d889bad03",
+                "26d41999b9fb8a6de8fb46096f8a0fea5d095c153f6b1a81c3f248858b0dbdbd"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com",
+                "www.thrivent.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/origin\\/public\\/cvsh-tv\\.qumucloud\\.com\\/staticcontent\\/768\\/client\\/application\\/widgets\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "d98ce8caf325bd02da317a10b5ba4f79a125fd29cc5bd679e534e854616a8e34"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "info.caremark.com",
+                "www.caremark.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/768\\/widgets\\/resources\\/widget\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cvsh-tv"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "info.caremark.com",
+                "www.caremark.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/api\\/2\\.2\\/rest\\/widgets\\/zgJdb41ub42svOofo0raqz\\.json",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cvsh-tv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "28e89ac41740b9c04747c9f6822f7838aa5844b8a21ae7e749d6d98235a9fd7f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/origin\\/public\\/cvsh-tv\\.qumucloud\\.com\\/staticcontent\\/768\\/client\\/application\\/widget-reporting\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8f18ad85152a7b39c0d8c9640993a74126d714c213e54977c839daaaa691ee37"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/asset\\/cvsh-tv\\.qumucloud\\.com\\/oMIr94exmYfXzD08RTke3p",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cd9e9ad8125fa744cadf492dfd8e8f0e91711920c61696ccb324b26899dc4ed9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/nr-spa-1215\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 4,
+                "PerformanceTiming.prototype.navigationStart": 4,
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "dd2d8d288526b88b0eae53168e31b4092acf39ed38d40ffcbc6d0ab2f7a4aa66"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com",
+                "www.thrivent.com",
+                "yourhome.fanniemae.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/cdn-cgi\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cvsh-tv",
+                "thrivent",
+                "fanniemae"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "video.thrivent.com",
+                    "resolved": "thrivent.qumucloud.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com",
+                "www.thrivent.com",
+                "yourhome.fanniemae.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/1\\/245c3146b4",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "300735ac477bb7e09ce2725f0031b085e5c86f09903d053ac8e44596731d8780"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com",
+                "www.thrivent.com",
+                "yourhome.fanniemae.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/ins\\/1\\/245c3146b4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "www.caremark.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/events\\/1\\/245c3146b4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "0c9cf152a0ad00d4f102c93c613c104914be5517ac8f8e0831727f8bfbe8b300"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caremark.com",
+                "info.caremark.com",
+                "www.caremark.com",
+                "www.thrivent.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/view\\/omrhAJL5QHGMNRGL6EaDyS",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "fanniemae"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0506d233952110e9dfe5475a6ef282f3efee0b82bbec3b31694d69b8262a4679"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fanniemae.com",
+                "yourhome.fanniemae.com"
+            ]
+        },
+        {
+            "rule": "qumucloud\\.com\\/origin\\/public\\/fanniemae\\.qumucloud\\.com\\/staticcontent\\/792\\/client\\/application\\/player-v2\\.loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "59544fe2bbcfc33c46f90cb5562a5d18bc014d04887d9211ea56b88bb358e4e9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fanniemae.com",
+                "yourhome.fanniemae.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000041,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8478260869565217
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.10869565217391304
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.021739130434782608
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.021739130434782608
+        }
+    ],
+    "types": {
+        "Script": 15,
+        "XHR": 16,
+        "Document": 5,
+        "Stylesheet": 6,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns-1096.awsdns-09.org",
+        "ns-735.awsdns-27.net",
+        "ns-1959.awsdns-52.co.uk",
+        "ns-299.awsdns-37.com"
+    ]
+}

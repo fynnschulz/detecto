@@ -1,0 +1,92 @@
+{
+    "domain": "technoratimedia.com",
+    "owner": {
+        "name": "Synacor, Inc.",
+        "displayName": "Synacor"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "ad-cdn",
+        "sync"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "technoratimedia\\.com\\/html\\/usersync\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ad-cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "9a850616019c624844d1ccce603220efc2f86ebf987afea7021d6c47ed230a5d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kookfans.nl",
+                "www.koreaboo.com",
+                "www.thephoblographer.com"
+            ]
+        },
+        {
+            "rule": "technoratimedia\\.com\\/services",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kookfans.nl",
+                "www.thephoblographer.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Ad Fraud"
+    ],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "blogcluster.nl",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "receptivity.io",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Document": 3,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns1.synacortechnologies.com",
+        "ns2.synacortechnologies.com",
+        "ns3.synacortechnologies.com",
+        "ns4.synacortechnologies.com"
+    ]
+}

@@ -1,0 +1,149 @@
+{
+    "domain": "sparkloop.app",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000305,
+    "sites": 3,
+    "subdomains": [
+        "dash",
+        "js",
+        "script"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "sparkloop\\.app\\/styles\\/default\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dash"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "dba2a8a0c69fe8eb741b37eaa11cb502bfb79edc886a9cb81f062006d5953024"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fourwheeltrends.com",
+                "www.frenchlearner.com"
+            ]
+        },
+        {
+            "rule": "sparkloop\\.app\\/team_d0df3e0252c1\\.js",
+            "cookies": 0.000102,
+            "fingerprinting": 3,
+            "subdomains": [
+                "js",
+                "script"
+            ],
+            "apis": {
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.webdriver": 1,
+                "Navigator.prototype.language": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Navigator.prototype.deviceMemory": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availHeight": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.plugins": 1,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 1,
+                "HTMLCanvasElement.prototype.toDataURL": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1,
+                "WebGLRenderingContext.prototype.getContextAttributes": 1,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 1,
+                "Navigator.prototype.languages": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Navigator.prototype.productSub": 1,
+                "OfflineAudioContext.prototype.constructor": 1,
+                "AudioBuffer.prototype.getChannelData": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "1d8f074039ed84bd3a86bac7f7ea0a6f67a0f6082e46486ec852ee3789ed90ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__sl-fingerprint": {
+                    "ttl": 2592003,
+                    "length": 32,
+                    "prevalence": 0.00010151253679829459,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frenchlearner.com",
+                "www.frenchlearner.com"
+            ]
+        },
+        {
+            "rule": "sparkloop\\.app\\/team_2e5e467c056a\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js",
+                "script"
+            ],
+            "apis": {
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2a45122f91ba61b8e8408e3c6539949b5f0790bdf43e0e2e904ba3705d181497"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kelownanow.com",
+                "www.kelownanow.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Stylesheet": 2,
+        "Script": 4
+    },
+    "nameservers": [
+        "jill.ns.cloudflare.com",
+        "jakub.ns.cloudflare.com"
+    ]
+}

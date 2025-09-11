@@ -1,0 +1,109 @@
+{
+    "domain": "pubadx.one",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000301,
+    "sites": 3,
+    "subdomains": [
+        "platform",
+        "imp9"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "pubadx\\.one\\/pubadx-ad\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "platform"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "dd51871982b0a0562c4540701e2167196fab5890a76311eb96d732746bb74c71"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pmvhaven.com",
+                "ww12.readonepiece.com",
+                "www.mangaread.org"
+            ]
+        },
+        {
+            "rule": "pubadx\\.one\\/async-v2\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "0649b4b69aacff6337486cf36d9901be3969b8f475d9c8b4b82afa3d89c97930",
+                "34f6591ab5e8e4153a9ab0bf4fbaa822455dab07085fbd9d543cc43bdb060dd8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pmvhaven.com",
+                "ww12.readonepiece.com",
+                "www.mangaread.org"
+            ]
+        },
+        {
+            "rule": "pubadx\\.one\\/rec",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imp9"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ym_d": 0.00010048231511254019
+            },
+            "exampleSites": [
+                "pmvhaven.com",
+                "ww12.readonepiece.com",
+                "www.mangaread.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 3,
+        "Image": 3
+    },
+    "nameservers": [
+        "jobs.ns.cloudflare.com",
+        "alexandra.ns.cloudflare.com"
+    ]
+}

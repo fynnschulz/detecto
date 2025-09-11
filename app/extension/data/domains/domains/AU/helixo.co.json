@@ -1,0 +1,112 @@
+{
+    "domain": "helixo.co",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000505,
+    "sites": 5,
+    "subdomains": [
+        "ufe",
+        "engine.ufe"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "helixo\\.co\\/scripts\\/sdk\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ufe"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4,
+                "window.sessionStorage": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "aa2bb89999efa44979ed835f64985251c29df6bb22a79e274d959221ec665cae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bagstogo.com.au",
+                "mywaterfilter.com.au",
+                "ozmobiles.com.au",
+                "shop.greengadgets.net.au",
+                "www.untech.com.au"
+            ]
+        },
+        {
+            "rule": "helixo\\.co\\/scripts\\/ufe\\.styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ufe"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "bf3f77dbf4dd5ed6a220bfaeb7c094efdf20d2a0a535db3c531211fe891bf30d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bagstogo.com.au",
+                "ozmobiles.com.au",
+                "shop.greengadgets.net.au",
+                "www.untech.com.au"
+            ]
+        },
+        {
+            "rule": "helixo\\.co\\/api\\/v1\\/public\\/funnel",
+            "cookies": 0.000404,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engine.ufe"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "47ac84fe50e0bf21fa39edc152543cb14e02675cdf428abcb9b8f24beec40965"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bagstogo.com.au",
+                "ozmobiles.com.au",
+                "shop.greengadgets.net.au",
+                "www.untech.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Stylesheet": 4,
+        "XHR": 4
+    },
+    "nameservers": [
+        "newt.ns.cloudflare.com",
+        "barbara.ns.cloudflare.com"
+    ]
+}

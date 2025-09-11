@@ -1,0 +1,119 @@
+{
+    "domain": "vbt.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000616,
+    "sites": 9,
+    "subdomains": [
+        "www"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "vbt\\.io\\/tracker",
+            "cookies": 0.0000274,
+            "fingerprinting": 2,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "Navigator.prototype.appCodeName": 4,
+                "Navigator.prototype.appName": 4,
+                "Navigator.prototype.appVersion": 4,
+                "Navigator.prototype.language": 4,
+                "Navigator.prototype.platform": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4,
+                "Notification.permission": 2
+            },
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "3f0ed57c070dc3d1e5ebb56a2dfd4b6a7a48ae1ef07b8ec89165b0cbf01d3122",
+                "fba8f3a46fc5071c5bd4feab722e668da3b38bcd923102762352ce04733a7d12",
+                "2eef3453797a04e09885dd2102df2b2bcfd6e173478e7c3ea6689f6b10031386"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__vbsess": {
+                    "ttl": 604804,
+                    "length": 25,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                },
+                "__vbupage": {
+                    "ttl": 604804,
+                    "length": 29,
+                    "prevalence": 0.000027363524421945548,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stlouiscalendar.com",
+                "www.allied.com",
+                "www.fdu.edu",
+                "www.hickoryfurniture.com",
+                "www.longancraft.com",
+                "www.pathologyoutlines.com"
+            ]
+        },
+        {
+            "rule": "vbt\\.io\\/tracker\\/process",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__vbsess": 0.000027363524421945548
+            },
+            "exampleSites": [
+                "stlouiscalendar.com",
+                "www.fdu.edu",
+                "www.hickoryfurniture.com",
+                "www.longancraft.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000041,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6923076923076923
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3076923076923077
+        }
+    ],
+    "types": {
+        "Script": 6,
+        "XHR": 4
+    },
+    "nameservers": [
+        "eric.ns.cloudflare.com",
+        "dina.ns.cloudflare.com"
+    ]
+}

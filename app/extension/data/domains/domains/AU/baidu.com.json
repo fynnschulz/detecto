@@ -1,0 +1,387 @@
+{
+    "domain": "baidu.com",
+    "owner": {
+        "name": "Baidu, Inc.",
+        "displayName": "Baidu"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.00151,
+    "sites": 15,
+    "subdomains": [
+        "fxgate",
+        "fclog",
+        "hm",
+        "pos",
+        "eclick",
+        "wn.pos"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "baidu\\.com\\/angelia\\/fcagl\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "fxgate"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b885b2a064af69b6dbbaa1f82502d7d5e2ca52bfeebc2db3d5899f42ea47810e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "AGL_USER_ID": {
+                    "ttl": 251646905591,
+                    "length": 36,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adelaideuni.edu.au",
+                "www.cpaaustralia.com.au"
+            ]
+        },
+        {
+            "rule": "baidu\\.com\\/log\\/ocpcagl",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fclog"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adelaideuni.edu.au",
+                "www.cpaaustralia.com.au"
+            ]
+        },
+        {
+            "rule": "baidu\\.com\\/hm\\.js",
+            "cookies": 0.00101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "hm"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 10,
+                "Navigator.prototype.cookieEnabled": 10,
+                "Navigator.prototype.javaEnabled": 10,
+                "Navigator.prototype.language": 10,
+                "Screen.prototype.width": 10,
+                "Screen.prototype.height": 10,
+                "Screen.prototype.colorDepth": 10,
+                "Screen.prototype.orientation": 10,
+                "window.innerWidth": 10,
+                "window.localStorage": 10,
+                "Document.cookie getter": 10,
+                "window.sessionStorage": 10,
+                "Date.prototype.getTime": 10,
+                "Document.cookie setter": 10,
+                "window.innerHeight": 10
+            },
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "14ac69a7ce9ff4ad02dfa7f97e243e98364e03db31eb30fe457f6c40f045b1fe",
+                "b5299aca0668b5a3d822a8572fd00751122fed94161bd586ea376b5c5e44fcf8",
+                "a3b6dac52fb012228b00a5612524b0ba77eb023abe485afd530e3f405f372166",
+                "75629acd61f34119046131f295841f1bbb2f66509a4999e35851490aaea57219",
+                "052fd684a50345d66d6bc2a47058d1baeee27bf29591ff54cacec57ca44ed034",
+                "ec397c61ef9bf15ea0176d300bf0fcd698e0cdd77b2738adbadbb1da0f4103f6",
+                "93ae912ee11e3897dbe9949c5ee4e94cfc46ad78ac0a7527b0a45d0c67d6ec0c",
+                "4bea22b3967e469777481816a4a9eb0b6f902f1cdd5ffeaacabb4f4df4450be4",
+                "f2a52e1edafa839967913a5fe1ec6568dd4332020460907f2cd63ea00d8cf374"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "Hm_lvt_6bcd52f51e9b3dce32bec4a3997715ac": {
+                    "ttl": 31536018,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lpvt_6bcd52f51e9b3dce32bec4a3997715ac": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "HMACCOUNT": {
+                    "ttl": null,
+                    "length": 16,
+                    "prevalence": 0.001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lvt_1d5ba5cbc559273825f37fdd6ecdfe28": {
+                    "ttl": 31536010,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lpvt_1d5ba5cbc559273825f37fdd6ecdfe28": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lvt_da0619047856c9fcb34c38649c466107": {
+                    "ttl": 31536006,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lpvt_da0619047856c9fcb34c38649c466107": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lvt_a7025e25c8500c732b8f48cc46e21467": {
+                    "ttl": 31536012,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lpvt_a7025e25c8500c732b8f48cc46e21467": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lvt_9b5771e463d0599e345ad9f76084fec5": {
+                    "ttl": 31536006,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lpvt_9b5771e463d0599e345ad9f76084fec5": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lvt_49837ffab1a11b30b9dc9143593b0499": {
+                    "ttl": 31536018,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lpvt_49837ffab1a11b30b9dc9143593b0499": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lvt_59317e5849f38e9ec82d03f6fb1a84d7": {
+                    "ttl": 31536008,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lpvt_59317e5849f38e9ec82d03f6fb1a84d7": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lvt_427c0b22bf914797e3b57a7be7db74fe": {
+                    "ttl": 31536013,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lpvt_427c0b22bf914797e3b57a7be7db74fe": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.0001009387301907742,
+                    "uniqueness": 1
+                },
+                "Hm_lvt_98beee57fd2ef70ccdd5ca52b9740c49": {
+                    "ttl": 31536007,
+                    "length": 10,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                },
+                "Hm_lpvt_98beee57fd2ef70ccdd5ca52b9740c49": {
+                    "ttl": null,
+                    "length": 10,
+                    "prevalence": 0.0002018774603815484,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csdn.net",
+                "docs.espressif.com",
+                "fanfox.net",
+                "mangapark.net",
+                "www.ceicdata.com",
+                "www.fiio.com",
+                "www.mangatown.com",
+                "www.similarweb.com",
+                "www.ventoy.net",
+                "www.zhihu.com",
+                "zhuanlan.zhihu.com"
+            ]
+        },
+        {
+            "rule": "baidu\\.com\\/hm\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hm"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "HMACCOUNT": 0.001009387301907742
+            },
+            "exampleSites": [
+                "csdn.net",
+                "docs.espressif.com",
+                "fanfox.net",
+                "mangapark.net",
+                "www.ceicdata.com",
+                "www.fiio.com",
+                "www.mangatown.com",
+                "www.similarweb.com",
+                "www.zhihu.com",
+                "zhuanlan.zhihu.com"
+            ]
+        },
+        {
+            "rule": "baidu\\.com\\/s",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pos"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "eb0cb16fcc5b1d832945944aa21f6e7c4988bae3d61850d278c986b890e1f3e5"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sohu.com",
+                "www.sohu.com"
+            ]
+        },
+        {
+            "rule": "baidu\\.com\\/se\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eclick"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sohu.com",
+                "www.sohu.com"
+            ]
+        },
+        {
+            "rule": "baidu\\.com\\/adx\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wn.pos"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "568ab454c055f7876b08365cdc44d018d982a890eda07a1df058e337ea45e257"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sohu.com",
+                "www.sohu.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00131,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "baidustatic.com",
+            "prevalence": 0.38235294117647056
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "csdnimg.cn",
+            "prevalence": 0.029411764705882353
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.029411764705882353
+        }
+    ],
+    "types": {
+        "Script": 13,
+        "XHR": 2,
+        "Image": 14,
+        "Document": 2
+    },
+    "nameservers": [
+        "ns2.baidu.com",
+        "ns3.baidu.com",
+        "ns4.baidu.com",
+        "ns1.baidu.com",
+        "ns7.baidu.com"
+    ]
+}

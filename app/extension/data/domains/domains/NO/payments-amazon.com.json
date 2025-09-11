@@ -1,0 +1,125 @@
+{
+    "domain": "payments-amazon.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "static-na"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "payments-amazon\\.com\\/OffAmazonPayments\\/us\\/js\\/Widgets\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static-na"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.devicePixelRatio": 1,
+                "Element.prototype.getClientRects": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f6801b810ec35760ffff88a5ac2b398d71f687063246bd1531077350ea8b9730"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "language": {
+                    "ttl": 86407,
+                    "length": 5,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "amazon-pay-connectedAuth": {
+                    "ttl": null,
+                    "length": 21,
+                    "prevalence": 0.00010064412238325282,
+                    "uniqueness": 1
+                },
+                "apay-session-set": {
+                    "ttl": 86414,
+                    "length": 76,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathway.com",
+                "www.merrell.com"
+            ]
+        },
+        {
+            "rule": "payments-amazon\\.com\\/v2\\/login\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-na"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bd37efe1441591168feef8c83118a3fd09ca8b5b3e69dc305a9ea46a6be0fa2b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mathway.com",
+                "www.merrell.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Analytics",
+        "Audience Measurement",
+        "Federated Login",
+        "Online Payment",
+        "Badge",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 4
+    },
+    "nameservers": [
+        "pdns3.ultradns.org",
+        "pdns4.ultradns.org",
+        "pdns1.ultradns.net",
+        "pdns2.ultradns.net",
+        "pdns5.ultradns.info",
+        "pdns6.ultradns.co.uk"
+    ]
+}

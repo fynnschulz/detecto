@@ -1,0 +1,96 @@
+{
+    "domain": "wildcard3-net-alb-545423735.us-east-1.elb.amazonaws.com",
+    "owner": {
+        "name": "Amazon Technologies, Inc.",
+        "displayName": "Amazon.com",
+        "privacyPolicy": "https://www.amazon.com/gp/help/customer/display.html?nodeId=468496",
+        "url": "http://amazon.com"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000102,
+    "sites": 1,
+    "subdomains": [],
+    "cnames": [
+        {
+            "original": "b.bostonglobemedia.com",
+            "resolved": "wildcard3-net-alb-545423735.us-east-1.elb.amazonaws.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "wildcard3-net-alb-545423735\\.us-east-1\\.elb\\.amazonaws\\.com\\/DG\\/DEFAULT\\/rest\\/rpc\\/306",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "b.bostonglobemedia.com",
+                    "resolved": "wildcard3-net-alb-545423735.us-east-1.elb.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "cdae6916d019b22bf73140a36624a972f95ada7e0907db2db739ee426d112871"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "BCSessionID": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "bostonglobe.com",
+                "www.bostonglobe.com"
+            ]
+        },
+        {
+            "rule": "wildcard3-net-alb-545423735\\.us-east-1\\.elb\\.amazonaws\\.com\\/rest\\/v2\\/dialogues\\/files\\/3b96a889-5e84-4bd5-94a7-174995c46ae2\\/Boston-Globe-Logo-Digital-Black\\.png",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "b.bostonglobemedia.com",
+                    "resolved": "wildcard3-net-alb-545423735.us-east-1.elb.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "db1aa7bbff3133734fd6de699b0a6723fc8367de064185e8adf385af2a7f323f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bostonglobe.com",
+                "www.bostonglobe.com"
+            ]
+        }
+    ],
+    "categories": [
+        "CDN"
+    ],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "blueconic.net",
+            "prevalence": 0.9230769230769231
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.07692307692307693
+        }
+    ],
+    "types": {
+        "XHR": 2,
+        "Image": 2
+    },
+    "nameservers": []
+}

@@ -1,0 +1,128 @@
+{
+    "domain": "4dsply.com",
+    "owner": {
+        "name": "AdSupply, Inc.",
+        "displayName": "AdSupply"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000201,
+    "sites": 2,
+    "subdomains": [
+        "cdn.engine",
+        "engine"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "4dsply\\.com\\/Scripts\\/infinity\\.js\\.aspx",
+            "cookies": 0.000201,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn.engine"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.screenLeft": 2,
+                "window.innerWidth": 2,
+                "window.screenTop": 2,
+                "window.innerHeight": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1650f04ecd688d96bb52707d5306d99ee28ce0d3242341e92452ea1e2cdd9f75"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "g36FastPopSessionRequestNumber": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thegatewaypundit.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "4dsply\\.com\\/Tag\\.vrfy",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engine"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a529e4496a1d95602c7e75f32b2d152574e440655363d35706dd40d790a546fe"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thegatewaypundit.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "4dsply\\.com\\/verify",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engine"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "39ca3c85734717cf31f55ab2e7d04d8ad2438a3bd9f6f46fae350d12506b4699"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "token_QlJAAAAAAAAArRMIRsGBk-hpXXMDyS9EWV8qBEI": 0.00020128824476650564
+            },
+            "exampleSites": [
+                "thegatewaypundit.com",
+                "www.wikifeet.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000201,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2
+    },
+    "nameservers": [
+        "amy.ns.cloudflare.com",
+        "jim.ns.cloudflare.com"
+    ]
+}

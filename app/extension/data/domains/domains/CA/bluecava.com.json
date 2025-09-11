@@ -1,0 +1,206 @@
+{
+    "domain": "bluecava.com",
+    "owner": {
+        "name": "ALC",
+        "displayName": "ALC"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000609,
+    "sites": 6,
+    "subdomains": [
+        "sync.graph"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "bluecava\\.com\\/ds\\.png",
+            "cookies": 0.000406,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync.graph"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "cookies.js_dtest": 0.00010151253679829459,
+                "parsely_uuid": 0.00010151253679829459,
+                "_li_dcdm_c": 0.00030453761039488374,
+                "lotame_domain_check": 0.00010151253679829459
+            },
+            "exampleSites": [
+                "americastestkitchen.com",
+                "www.forbes.com",
+                "www.usmagazine.com",
+                "www.womansworld.com"
+            ]
+        },
+        {
+            "rule": "bluecava\\.com\\/Scripts\\/BlueCava\\.Lib\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync.graph"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "832ba02090c8d0aa9cbf6b46da2c8469e6e28a17d8e23706a92dc49e3af66cf9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autotrader.com",
+                "www.kbb.com"
+            ]
+        },
+        {
+            "rule": "bluecava\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync.graph"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "f1f0dd59343c0a85437054adc844c446758d72ec4c63604f177f4e49571da407"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "abc": 0.00020302507359658918
+            },
+            "exampleSites": [
+                "autotrader.com",
+                "www.kbb.com"
+            ]
+        },
+        {
+            "rule": "bluecava\\.com\\/js\\/bc\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 2,
+            "subdomains": [
+                "sync.graph"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.plugins": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appCodeName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.devicePixelRatio": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "79e7054aff25bee64e71bb2968b06dd85e9f88442171b40581f2783e228ddd4c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autotrader.com",
+                "www.kbb.com"
+            ]
+        },
+        {
+            "rule": "bluecava\\.com\\/init\\.bci",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync.graph"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "82fa05a764a89634551e86b1a0077e9835cb3b2ea8321aac3b9c215b1cd7d6c5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autotrader.com",
+                "www.kbb.com"
+            ]
+        },
+        {
+            "rule": "bluecava\\.com\\/req\\.bci",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync.graph"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "de58292954603a1c5d5d4b0f0f39217f7d4af25fb6e8e1c714e9c2e4bf0e6cdb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autotrader.com",
+                "www.kbb.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Ad Fraud",
+        "Analytics",
+        "Audience Measurement"
+    ],
+    "performance": {},
+    "cookies": 0.000609,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.625
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.375
+        }
+    ],
+    "types": {
+        "Image": 4,
+        "Script": 4,
+        "Document": 2,
+        "XHR": 4
+    },
+    "nameservers": [
+        "ns-134.awsdns-16.com",
+        "ns-699.awsdns-23.net",
+        "ns-1767.awsdns-28.co.uk",
+        "ns-1521.awsdns-62.org"
+    ]
+}

@@ -1,0 +1,655 @@
+{
+    "domain": "captcha-delivery.com",
+    "owner": {
+        "name": "DataDome",
+        "displayName": "DataDome"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00434,
+    "sites": 43,
+    "subdomains": [
+        "ct",
+        "geo",
+        "static"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "captcha-delivery\\.com\\/i\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {
+                "window.sessionStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "9c15da5292b7e47136d41b9934279d4a8db7742bc31d078118875ca0dc39f3fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.leboncoin.fr",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/interstitial\\/",
+            "cookies": 0.000303,
+            "fingerprinting": 3,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.languages": 3,
+                "window.outerHeight": 3,
+                "window.outerWidth": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.hardwareConcurrency": 3,
+                "Navigator.prototype.webdriver": 3,
+                "Navigator.prototype.platform": 3,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "Navigator.prototype.onLine": 3,
+                "Navigator.prototype.deviceMemory": 3,
+                "Navigator.prototype.keyboard": 3,
+                "NavigatorUAData.prototype.getHighEntropyValues": 3,
+                "Navigator.prototype.getBattery": 3,
+                "WebGLRenderingContext.prototype.getExtension": 3,
+                "WebGLRenderingContext.prototype.getParameter": 3,
+                "Navigator.prototype.permissions": 3,
+                "URL.createObjectURL": 3,
+                "HTMLMediaElement.prototype.canPlayType": 3,
+                "MediaSource.isTypeSupported": 3,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
+                "Navigator.prototype.language": 3,
+                "Navigator.prototype.connection": 3,
+                "Navigator.prototype.vendor": 3,
+                "Navigator.prototype.mediaDevices": 3,
+                "NavigatorUAData.prototype.brands": 3,
+                "Navigator.prototype.plugins": 3,
+                "Document.cookie setter": 3,
+                "Document.cookie getter": 3,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3,
+                "Screen.prototype.availWidth": 3,
+                "Screen.prototype.availHeight": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.colorDepth": 3,
+                "window.devicePixelRatio": 3,
+                "Screen.prototype.orientation": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Navigator.prototype.mimeTypes": 3,
+                "MediaDevices.prototype.enumerateDevices": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "b246a179a53bee57db1599e5f14f1f50e703eeb2685f64864c0e6b688af306b3",
+                "23b92deaf83913ff267e73df54615d0da97cfee3317f1727a0dfca00018e519d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "dd_testcookie": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.0003026939763898698,
+                    "uniqueness": 0.3333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.leboncoin.fr",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/interstitial\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "48181d1ecf7515208e98de00407d3b12b008290a91edf9918b1861b9d1db7c3f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.leboncoin.fr",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/",
+            "cookies": 0.00283,
+            "fingerprinting": 3,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 29,
+                "Navigator.prototype.languages": 28,
+                "window.outerHeight": 28,
+                "window.outerWidth": 28,
+                "Navigator.prototype.userAgent": 29,
+                "Navigator.prototype.hardwareConcurrency": 29,
+                "Navigator.prototype.webdriver": 28,
+                "Navigator.prototype.platform": 28,
+                "Navigator.prototype.maxTouchPoints": 28,
+                "Navigator.prototype.onLine": 29,
+                "Navigator.prototype.deviceMemory": 25,
+                "Navigator.prototype.keyboard": 25,
+                "NavigatorUAData.prototype.getHighEntropyValues": 26,
+                "WebGLRenderingContext.prototype.getExtension": 29,
+                "WebGLRenderingContext.prototype.getParameter": 29,
+                "Navigator.prototype.permissions": 29,
+                "URL.createObjectURL": 28,
+                "Navigator.prototype.getBattery": 29,
+                "speechSynthesis.__proto__.getVoices": 29,
+                "Navigator.prototype.connection": 29,
+                "Navigator.prototype.vendor": 29,
+                "Navigator.prototype.mediaDevices": 26,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 29,
+                "Navigator.prototype.plugins": 28,
+                "NavigatorUAData.prototype.brands": 26,
+                "HTMLMediaElement.prototype.canPlayType": 28,
+                "MediaSource.isTypeSupported": 28,
+                "window.innerWidth": 28,
+                "window.innerHeight": 28,
+                "Screen.prototype.availWidth": 28,
+                "Screen.prototype.availHeight": 28,
+                "Screen.prototype.width": 28,
+                "Screen.prototype.height": 28,
+                "Screen.prototype.colorDepth": 28,
+                "window.devicePixelRatio": 28,
+                "Screen.prototype.orientation": 28,
+                "Navigator.prototype.mimeTypes": 28,
+                "Date.prototype.getTimezoneOffset": 28,
+                "Document.cookie setter": 28,
+                "Document.cookie getter": 28,
+                "window.localStorage": 28,
+                "HTMLCanvasElement.prototype.toDataURL": 28,
+                "MediaDevices.prototype.enumerateDevices": 25,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 42,
+            "prevalence": 0.00424,
+            "cnames": [],
+            "responseHashes": [
+                "608e7a7ecb481ae24f1d5c9b7b79b6be81ddfc9a60891f462b605c45248d9c32",
+                "5ed3bdc821e4098d1d85d62978a6ed1f6c500c3b999acf125b2f03f097de85f7",
+                "78edff2a0380a5ef0359d3a14bd774730e1e4faf6d48e6a9727e65e9967e34db",
+                "261ac23a60346aad927a26500b8f2c067fc3d2d0a91e43334b268ebe34c9d8c0",
+                "6d99f26381a7c61f84125884d428c4fb1cdb40f83bea4672852c5deb9a98c683",
+                "d597e05039d6c909b413dc3fe0bf232bc770bcd5d0d495ca2237604e5e98d789",
+                "bedfc7f88fb7f1f79ec3364ba5e4a4d6bfba5c77cf072259727eb04592684bdf",
+                "60aa1a12c346400c0eabd8129b99071f6fb672bf4d67b5048e012d0add925ebb",
+                "61274489deb39f08d2b198b328f962c1a0a636694195ac9b08dc1217bcd87162",
+                "4cb1e919cadcd63d525f817e29ba388dd6139ec081baece8e8113339e23ea68b",
+                "3386818a3feac2b489385ea16b0bb8ffe02f21551727fcef93fa14311e6ef9ec",
+                "c27c888db5cf2db1e0e507f78fcdc1c272c3da02e87e15a782c74038a75e5303",
+                "49f1b7fba97fa0742ba13000e5c11f6e3427c7e354830aa0efb1691acedf625f",
+                "4eb78c4d8b2e57f0bd3498473d50982ec2c1f0ab7e380ab27862d918317f67ba",
+                "90a5487d085508c9e17930d08a4d200146f7ec0481bc68293e70b4134e44e2e1",
+                "1e178bd0cd6945bc1ace35dc1c3c7d7c91097714c8efb6b0e4b0df7a3c544b1c",
+                "623ba309778be9045377957787d836624e15c439b05459525dd958ce1b6de667",
+                "b5dc3cc16b738ba0714d1970fb5761fe016ca2e9ea5ec495bab4669f6c9a041c",
+                "935cff6b0a78c5396ee5ebd136807c1042a2a58f44d6b0320024dcbcd19729db",
+                "5738b0872c2627931944a1b64f8f4be0de4b8e6cb81f0d7443613a61f7dc04ea",
+                "b594b14a4ca1456083a71c3a7102b761f465c625b5f454843a93bdac8c7f05b6",
+                "933a2d0612c23cc427013ccbff864ee091426877620fb533cea6fda1f672663a",
+                "21a094312d7203fb9afbc1488d6e5c0163b1a7357248dc6655de6e97fa521906",
+                "a6854e6c44975a00aa4aa8f5c51a30a432806773938e2c7e0bb0853a193d033c",
+                "c064486ec1505c18408d45cf6352ed5bffad202a2a185a22f4d1ca5b21880db7",
+                "c0cd3cc0d42baed722f04fffc30a63f43d6f568cb5b96ee31934e29cdbf70c8d",
+                "bf365d09a9328ace2243c64299fb8116265e679bfb2d60c67d41ea95f1ccb2bf",
+                "f20b33e0fe66af37c70e63861bb9bbf4f0d53655d7d6687ca494c54104638218",
+                "d6f539c90895ee493aaec85c2acb8f2c4f27f26f933d5996d1425d077bc025b9",
+                "6ebd84304103632ac5c5d587907f310e13dbba65bb9abbce64ea238ba7a7eaa0",
+                "32cbad59267002179c4d584aea85ed8ad73c37f48a7a57f5587c19c65e9a696e",
+                "54e6c0e44689b2be7fb53f1ca59648b5f5793edf6ae671dada56a171725464e0",
+                "c3a0725fc29623b251b2f267e5b5f5af372f95975d6e37a091538b3e673cb795",
+                "0b12f99a66b3d4be3101eebc1470c7b16069ad43b5043875627e909d0bbdfae4",
+                "74729215579609a47ff46c20630599f4e357141bbee38646fae8e1ac2518931d",
+                "72cc14915259c847a39f1c210c815d10b7234957bdab61004450ee4e6adfec72",
+                "c1b3668ccc561a09a9c0643fb599c59e1943d58db2818c60d46e0ff92a82ac59",
+                "594266f3247071d47fe18811293130e0adee9c21f166bfbd3cd040e80f278a68",
+                "09976c169489204364c3a45b18fe3a160c130d6e29fa64cc58f7270aa4d124da",
+                "07140a3cde9a6afde48f42affaaadfe2207f77d9cdd7a4dbca257ed9fb214da0",
+                "599cf63411f14d34fe0eb8dd8f8542f1e6244fb6970a61a345a3a078ff42c11e"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "dd_testcookie": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.0028251437796387854,
+                    "uniqueness": 0.03571428571428571
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "tripadvisor.de",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.g2.com",
+                "www.atu.de",
+                "www.thefork.de",
+                "www.viator.com",
+                "www.tripadvisor.ch",
+                "www.comparis.ch",
+                "www.raileurope.com",
+                "www.turbosquid.com",
+                "gopro.com",
+                "www.hermes.com",
+                "www.idealista.com",
+                "www.tripadvisor.at",
+                "eu.mouser.com",
+                "atu.de",
+                "www.vivobarefoot.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/tpl\\/6dc485c0c428c35b53577b146dc6f9179f55ef9ad41b327a2a179998839364bf\\/index\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 42,
+            "prevalence": 0.00424,
+            "cnames": [],
+            "responseHashes": [
+                "d49fce4d3745c6d9f755f6be625eb218238baec337cfdb30be0e87d8c0ff6653"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "tripadvisor.de",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.idealista.it",
+                "www.shutterstock.com",
+                "de.kompass.com",
+                "www.reuter.de",
+                "www.tripadvisor.de",
+                "reuter.de",
+                "www.turbosquid.com",
+                "www.vivobarefoot.com",
+                "www.sezane.com",
+                "www.tripadvisor.co.uk",
+                "gopro.com",
+                "www.comparis.ch",
+                "www.traktorpool.de",
+                "www.thefork.de",
+                "www.wsj.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/font-face\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "a1364e82ab23f2b2d2f20da412e83cac79e6310fb784b58ebb8edf5973ea9d90"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.blablacar.de",
+                "www.idealista.com",
+                "www.idealista.it",
+                "www.idealista.pt"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/open-sans\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "778b8cd899b9ebf3913aaa46e397ce897bb192b100b276982869f5f00525b39f"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.blablacar.de"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/open-sans-300\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "57448185041ed1b29f54c778c6d48af032778fb2497b5a08f7b2a77dff712fcf"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.blablacar.de",
+                "www.idealista.com",
+                "www.idealista.it",
+                "www.idealista.pt"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/c\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {
+                "window.sessionStorage": 38,
+                "Navigator.prototype.userAgent": 38,
+                "Document.cookie getter": 38
+            },
+            "sites": 38,
+            "prevalence": 0.00383,
+            "cnames": [],
+            "responseHashes": [
+                "fc732c544e858efbdc4431618157025cac5cb5e2118893d904b0ef91c081d6ef"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tripadvisor.de",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.atu.de",
+                "www.raileurope.com",
+                "www.maisonsdumonde.com",
+                "www.idealista.it",
+                "www.tripadvisor.at",
+                "parade.com",
+                "www.tripadvisor.de",
+                "www.g2.com",
+                "www.hermes.com",
+                "www.viator.com",
+                "www.traktorpool.de",
+                "www.idealista.com",
+                "www.pond5.com",
+                "www.tripadvisor.co.uk",
+                "www.wsj.com",
+                "www.idealista.pt"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/roboto\\/font-face\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 36,
+            "prevalence": 0.00363,
+            "cnames": [],
+            "responseHashes": [
+                "66599c34190f7a6a402b38664a30a9b564fc22510f51fa3c5f027fb91e7a0e51"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tripadvisor.de",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.thefork.de",
+                "www.shutterstock.com",
+                "www.tripadvisor.ch",
+                "www.reuters.com",
+                "maisonsdumonde.com",
+                "www.vivobarefoot.com",
+                "www.leboncoin.fr",
+                "www.pond5.com",
+                "www.atu.de",
+                "eu.mouser.com",
+                "www.tripadvisor.co.uk",
+                "www.comparis.ch",
+                "de.kompass.com",
+                "www.tripadvisor.fr",
+                "www.viator.com",
+                "www.reuter.de"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/43f1af9a16ebfc064128d305f6ae27068d1d3d3d\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "68006b3fb63710f09540ae4413be1df4b65a8914c00fe6484f6377b884271863"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atu.de",
+                "www.atu.de"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/roboto\\/roboto\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 36,
+            "prevalence": 0.00363,
+            "cnames": [],
+            "responseHashes": [
+                "81d931a8c973b5bc8f9ded86a3440bd247a58e592b3897bf755c1a5d8390d763"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tripadvisor.de",
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "gopro.com",
+                "www.tripadvisor.co.uk",
+                "www.g2.com",
+                "www.reuters.com",
+                "www.reuter.de",
+                "www.shutterstock.com",
+                "atu.de",
+                "www.viator.com",
+                "www.leboncoin.fr",
+                "www.tripadvisor.fr",
+                "de.kompass.com",
+                "www.comparis.ch",
+                "www.tripadvisor.at",
+                "www.tripadvisor.ch",
+                "parade.com",
+                "www.immowelt.de"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/5efcecdb799ce97a35b39883c859ebc01b9320ed\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "cec4de6d8de4c60f046c555e9349365d566e8244b4c29a5b91666aae59ce4957"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "maisonsdumonde.com",
+                "www.maisonsdumonde.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/cca65a08c4f3cd6f651481d997245d51bcc36996\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e6a64960919842377868a32c907a6679e557c4f457c9419534cb2313700714a1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reuter.de",
+                "www.reuter.de"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/a9f0e9523bb464dc97737c4749c9335e29175c0c\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000706,
+            "cnames": [],
+            "responseHashes": [
+                "0f4a12a29f8f3f4a64969a5b87b1eb19cebaab653928b7214727634172a47ec4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tripadvisor.de",
+                "www.tripadvisor.at",
+                "www.tripadvisor.ch",
+                "www.tripadvisor.co.uk",
+                "www.tripadvisor.com",
+                "www.tripadvisor.de",
+                "www.tripadvisor.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/open-sans-700\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "5c1f54ca8eef30134b982ad229a441645d3f83f0d77f6f215006f5d0db404154"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idealista.com",
+                "www.idealista.it",
+                "www.idealista.pt"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9767441860465116
+        },
+        {
+            "domain": "blablacar.com",
+            "prevalence": 0.023255813953488372
+        }
+    ],
+    "types": {
+        "Script": 41,
+        "Document": 45,
+        "XHR": 3,
+        "Stylesheet": 83,
+        "Font": 46,
+        "Image": 13
+    },
+    "nameservers": [
+        "ns-1456.awsdns-54.org",
+        "ns-1890.awsdns-44.co.uk",
+        "ns-257.awsdns-32.com",
+        "ns-730.awsdns-27.net"
+    ]
+}

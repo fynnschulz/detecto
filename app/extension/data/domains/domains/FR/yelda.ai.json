@@ -1,0 +1,109 @@
+{
+    "domain": "yelda.ai",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000202,
+    "sites": 2,
+    "subdomains": [
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "yelda\\.ai\\/chat",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "cc19f7627ddd9c628cbb9bc12039669051dfa4684f42dc9f815b2fb92ba4a925"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestwestern.fr",
+                "www.lpo.fr"
+            ]
+        },
+        {
+            "rule": "yelda\\.ai\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestwestern.fr",
+                "www.bestwestern.fr",
+                "www.lpo.fr"
+            ]
+        },
+        {
+            "rule": "yelda\\.ai\\/socket\\.io\\/",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df",
+                "753929941590c7232b021782b66df83640dc1ad668eecb635c966a93db0503c1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bestwestern.fr",
+                "www.bestwestern.fr",
+                "www.lpo.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000202,
+    "topInitiators": [
+        {
+            "domain": "yelda-chat.s3.eu-west-3.amazonaws.com",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "yelda-webchat.s3.eu-west-3.amazonaws.com",
+            "prevalence": 0.125
+        }
+    ],
+    "types": {
+        "Document": 2,
+        "WebSocket": 3,
+        "XHR": 3
+    },
+    "nameservers": [
+        "ns02.trademarkarea.com",
+        "ns01.trademarkarea.com"
+    ]
+}

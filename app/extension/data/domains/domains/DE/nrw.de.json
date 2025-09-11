@@ -1,0 +1,99 @@
+{
+    "domain": "nrw.de",
+    "owner": {
+        "name": "Bezirksregierung Koeln",
+        "displayName": "Bezirksregierung Koeln"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000706,
+    "sites": 7,
+    "subdomains": [
+        "analytics"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "nrw\\.de\\/matomo\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Document.cookie getter": 4,
+                "window.name": 4,
+                "NavigatorUAData.prototype.brands": 4,
+                "NavigatorUAData.prototype.platform": 4,
+                "NavigatorUAData.prototype.getHighEntropyValues": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.mimeTypes": 4,
+                "Navigator.prototype.javaEnabled": 4,
+                "Navigator.prototype.cookieEnabled": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.doNotTrack": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "a3b5d74233c65818946c2ae1e6fab1bdc04b8e051bdec7523ba4483c8058eda0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "justiz.de",
+                "www.bezreg-muenster.de",
+                "www.land.nrw",
+                "www.schulministerium.nrw"
+            ]
+        },
+        {
+            "rule": "nrw\\.de\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "justiz.de",
+                "www.land.nrw"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Ping": 2
+    },
+    "nameservers": [
+        "deneb.dfn.de",
+        "c.nrw.de",
+        "b.nrw.de",
+        "a.it.nrw",
+        "dns.globvill.de"
+    ]
+}

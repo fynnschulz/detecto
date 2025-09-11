@@ -1,0 +1,72 @@
+{
+    "domain": "adn.cloud",
+    "owner": {
+        "name": "ADN-Advanced Digital Network Distribution GmbH",
+        "displayName": "ADN"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.00101,
+    "sites": 10,
+    "subdomains": [
+        "tags.pw"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "adn\\.cloud\\/O7PXAR\\/activation\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tags.pw"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "17e2efb731c57bbc3a0edb99b9736bd50158fb28fe772b71446752a11efc3ce2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ecco.com",
+                "nl.ecco.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3
+        },
+        {
+            "domain": "tagcommander.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.1
+        }
+    ],
+    "types": {
+        "Script": 2
+    },
+    "nameservers": [
+        "patryk.ns.cloudflare.com",
+        "kiki.ns.cloudflare.com"
+    ]
+}

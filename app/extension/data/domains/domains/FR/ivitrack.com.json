@@ -1,0 +1,131 @@
+{
+    "domain": "ivitrack.com",
+    "owner": {
+        "name": "Ividence",
+        "displayName": "Ividence",
+        "privacyPolicy": "http://blog.ividence.com/privacy-policy/?lang=en",
+        "url": "http://ividence.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000909,
+    "sites": 9,
+    "subdomains": [
+        "itm"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ivitrack\\.com\\/v1\\/commander-frame\\/2\\.2528\\.1\\/itm\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "itm"
+            ],
+            "apis": {
+                "Document.cookie getter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "037e2e509d8d443f85076eb32ce2ad4b49235b92dafca993a8e991ed6cd9a63b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lasanteauquotidien.com",
+                "www.cybercartes.com",
+                "www.e-sante.fr",
+                "www.planet.fr"
+            ]
+        },
+        {
+            "rule": "ivitrack\\.com\\/v1\\/reworldmedia-tag\\/itm\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "itm"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "820edaaa1e234fb72e49b30cdb97403b0f09473f447af6470677f70e7accfced"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "maison-travaux.fr",
+                "www.lejournaldelamaison.fr",
+                "www.viepratique.fr"
+            ]
+        },
+        {
+            "rule": "ivitrack\\.com\\/v1\\/planet-tag\\/itm\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "itm"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "46fd458f5afe2d2ab6ad37ec402606519c3567baa1be6c53b2e116306937e535"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ivid_dev": {
+                    "ttl": 33696004,
+                    "length": 36,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e-sante.fr",
+                "www.planet.fr"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics"
+    ],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8888888888888888
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1111111111111111
+        }
+    ],
+    "types": {
+        "Document": 4,
+        "Script": 5
+    },
+    "nameservers": [
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
+    ]
+}

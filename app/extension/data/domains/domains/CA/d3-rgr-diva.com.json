@@ -1,0 +1,80 @@
+{
+    "domain": "d3-rgr-diva.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000102,
+    "sites": 1,
+    "subdomains": [
+        "production-static",
+        "production-cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "d3-rgr-diva\\.com\\/shain\\/v1\\/dataservice\\/ResizeImage\\/$value",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "878233c0728706e6f1369fcf8662ab2f040ebe88506799752ca583552daf048d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsnet.ca",
+                "watch.sportsnet.ca"
+            ]
+        },
+        {
+            "rule": "d3-rgr-diva\\.com\\/api\\/lists",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "production-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "86c991f7dff6276b3a6b5ec416f042a5f17afcbeb1fe18a68fc1de4627cade11"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsnet.ca",
+                "watch.sportsnet.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000102,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Image": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "ns-354.awsdns-44.com",
+        "ns-849.awsdns-42.net",
+        "ns-1897.awsdns-45.co.uk",
+        "ns-1247.awsdns-27.org"
+    ]
+}

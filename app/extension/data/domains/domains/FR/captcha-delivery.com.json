@@ -1,0 +1,1082 @@
+{
+    "domain": "captcha-delivery.com",
+    "owner": {
+        "name": "DataDome",
+        "displayName": "DataDome"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.0115,
+    "sites": 114,
+    "subdomains": [
+        "ct",
+        "geo",
+        "static"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "captcha-delivery\\.com\\/i\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {
+                "window.sessionStorage": 7,
+                "Navigator.prototype.userAgent": 7,
+                "Document.cookie getter": 7
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "9c15da5292b7e47136d41b9934279d4a8db7742bc31d078118875ca0dc39f3fd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "ra.co",
+                "shs.cairn.info",
+                "www.intermarche.com",
+                "www.leboncoin.fr",
+                "www.macif.fr",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/interstitial\\/",
+            "cookies": 0.000707,
+            "fingerprinting": 3,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {
+                "window.localStorage": 6,
+                "Navigator.prototype.languages": 7,
+                "window.outerHeight": 7,
+                "window.outerWidth": 7,
+                "Navigator.prototype.userAgent": 7,
+                "Navigator.prototype.hardwareConcurrency": 7,
+                "Navigator.prototype.webdriver": 7,
+                "Navigator.prototype.platform": 7,
+                "Navigator.prototype.maxTouchPoints": 7,
+                "Navigator.prototype.onLine": 7,
+                "Navigator.prototype.deviceMemory": 7,
+                "Navigator.prototype.keyboard": 7,
+                "NavigatorUAData.prototype.getHighEntropyValues": 7,
+                "Navigator.prototype.getBattery": 7,
+                "WebGLRenderingContext.prototype.getExtension": 7,
+                "WebGLRenderingContext.prototype.getParameter": 7,
+                "Navigator.prototype.permissions": 7,
+                "URL.createObjectURL": 7,
+                "HTMLMediaElement.prototype.canPlayType": 7,
+                "MediaSource.isTypeSupported": 7,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 7,
+                "Navigator.prototype.language": 7,
+                "Navigator.prototype.connection": 7,
+                "Navigator.prototype.vendor": 7,
+                "Navigator.prototype.mediaDevices": 7,
+                "NavigatorUAData.prototype.brands": 7,
+                "Navigator.prototype.plugins": 7,
+                "Document.cookie setter": 7,
+                "Document.cookie getter": 7,
+                "window.innerWidth": 7,
+                "window.innerHeight": 7,
+                "Screen.prototype.availWidth": 7,
+                "Screen.prototype.availHeight": 7,
+                "Screen.prototype.width": 7,
+                "Screen.prototype.height": 7,
+                "Screen.prototype.colorDepth": 7,
+                "window.devicePixelRatio": 7,
+                "Screen.prototype.orientation": 7,
+                "Date.prototype.getTimezoneOffset": 7,
+                "Navigator.prototype.mimeTypes": 7,
+                "MediaDevices.prototype.enumerateDevices": 7
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "5a99ccdfae0d0b9479e1822a67b04ac4b646ad0f853a232934ecc241a408a7cc",
+                "5a982fe8b353ff9f47d07fd0b48510a0aa92cc90d9e53ad9c3b73ece22956da5",
+                "184c4051ddd108052c45775291de62d26e10cbcfe9852b1dc2dd26a1ecfb3976",
+                "9d52d927fd93557666d4d7149d5974612c0036ac00dc5642cc7fdaaeaee385b7",
+                "bf22d682749e707949aa6d2a8bbc2f746dcea363e9ee3196c5839f6ef6924f84",
+                "a9b2555e5ac3bd1100291c18038f9f34d10b670890030ab4fa7809ad28f3c614"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "dd_testcookie": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000706999293000707,
+                    "uniqueness": 0.14285714285714285
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "ra.co",
+                "shs.cairn.info",
+                "www.intermarche.com",
+                "www.leboncoin.fr",
+                "www.macif.fr",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/interstitial\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "5225430e5ca00fdcb84e81190f537db65d8fe31bb306ffdb0263a77319b51a12",
+                "f5e30563b697759d5663a87d8d0ef6135fe3972024577ccfadcb71024cdd7cd9",
+                "68ee46d1b0d3334509d1a35ca624f9c56ff3ffbd77d4305fca76d9fb7188fa66",
+                "49aa1dc077d84d2f82b740d6893b0a9fe95a30d2be077416a817c688030ec547",
+                "8351cfdbc20af2534ce662440aa470b891accf5499c012caa6f3395d445e46d7",
+                "29ec1670e6506fa03c10ca5b9c5a424d64f688eb2460618dbed482f2fe4c2520"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "ra.co",
+                "shs.cairn.info",
+                "www.intermarche.com",
+                "www.leboncoin.fr",
+                "www.macif.fr",
+                "www.shutterstock.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/",
+            "cookies": 0.00838,
+            "fingerprinting": 3,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {
+                "Navigator.prototype.language": 83,
+                "Navigator.prototype.languages": 83,
+                "window.outerHeight": 83,
+                "window.outerWidth": 83,
+                "Navigator.prototype.userAgent": 83,
+                "Navigator.prototype.hardwareConcurrency": 83,
+                "Navigator.prototype.webdriver": 83,
+                "Navigator.prototype.platform": 83,
+                "Navigator.prototype.maxTouchPoints": 83,
+                "Navigator.prototype.onLine": 83,
+                "Navigator.prototype.deviceMemory": 73,
+                "Navigator.prototype.keyboard": 73,
+                "NavigatorUAData.prototype.getHighEntropyValues": 73,
+                "WebGLRenderingContext.prototype.getExtension": 83,
+                "WebGLRenderingContext.prototype.getParameter": 83,
+                "Navigator.prototype.permissions": 83,
+                "URL.createObjectURL": 83,
+                "Navigator.prototype.getBattery": 83,
+                "speechSynthesis.__proto__.getVoices": 83,
+                "Navigator.prototype.connection": 83,
+                "Navigator.prototype.vendor": 83,
+                "Navigator.prototype.mediaDevices": 73,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 83,
+                "Navigator.prototype.plugins": 83,
+                "NavigatorUAData.prototype.brands": 73,
+                "HTMLMediaElement.prototype.canPlayType": 83,
+                "MediaSource.isTypeSupported": 83,
+                "window.innerWidth": 83,
+                "window.innerHeight": 83,
+                "Screen.prototype.availWidth": 83,
+                "Screen.prototype.availHeight": 83,
+                "Screen.prototype.width": 83,
+                "Screen.prototype.height": 83,
+                "Screen.prototype.colorDepth": 83,
+                "window.devicePixelRatio": 83,
+                "Screen.prototype.orientation": 83,
+                "Navigator.prototype.mimeTypes": 83,
+                "Date.prototype.getTimezoneOffset": 83,
+                "Document.cookie setter": 83,
+                "Document.cookie getter": 83,
+                "window.localStorage": 83,
+                "HTMLCanvasElement.prototype.toDataURL": 82,
+                "MediaDevices.prototype.enumerateDevices": 72,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 114,
+            "prevalence": 0.0115,
+            "cnames": [],
+            "responseHashes": [
+                "d4227a3c688bf27a4e0fe89262880bcd067fe993ab167c59d2b4e5c473443897",
+                "6420c749d46f92e09591ec506813e041bf059401429b318d7645744eb379a414",
+                "08aa77c86352ac2c84c0346ed888e15f7833360d76e52a3f03a0340c0caefa52",
+                "2b869263ca3bfa2e0aeeb1b60d75e16e1743a60c749cfc2c1430c55a9bab8fd9",
+                "c902bad4b05d80ab10d49dcd863ab6e57390ddf145cfeae263b1c6885bb5b172",
+                "d619ea3af39dc493b3cf812b0edd9bcd769972e80f53559f0044bdb840e079b8",
+                "42af7d2351cf36064ff6c8a96479988d6e8063d82ad8164d2be02f6a607dd058",
+                "d0429cdc9c340db1105408a50a7c327f42f52503756fd170a34bd0cd5ac65af6",
+                "ffcb2bd72fac9d2729f1f87a60b92bcc38a7c7ceae3a42725e9aac1654320323",
+                "b0ea5fbd5a65c9fdde5a6ac2ce75ff4306de1bb4ae7d84f2a38a8f9817c626ce",
+                "bd7dbccd6fb6768058665540cc734d5f2c98db5030320f9302e81de4e502bd8a",
+                "9a33e69fd872880fc28bf50b86ec3191e2a9fd07f5963b0791fc1d3ac1d98bb7",
+                "a0cc2944f9cf0c869d2f0c1681109c79488b28af6db94e9c35553190a64ce6f7",
+                "5111a866a4c3fa9b508937730d013f7a6593b964d006edecf4b26fa33c1fdfe3",
+                "b5f23749d6b7c170d6a133043a815226770e9098d87da8e74324ab031b260242",
+                "5560c2b8737988bb89178c153ff8beaf791f2c3cc57e12b0c97901f0d299d97b",
+                "8a7429627072cea34eddb069ff83f76155e0d3d52d0fccdc9914501dbc0c0551",
+                "9c87c7afb029aa04d1e17666a9478b26335be38ac3e25b6fa1f4d77ba28c662a",
+                "3193cbada0ec85be57aeaac14b32cd4d2c6e9366f2afeb09c1e19d9ee6d312f9",
+                "c95de389e7093062f0588d032761f24425e5c5637c5d890ae2a70c7fd622b007",
+                "bad1d067395d36fb36ba64e818e30401c22af3547d9ac11a67e6e6511a69da91",
+                "a7934bab626641eb99caff41574b61432167144dc4062addb0aec81316cdf2e9",
+                "3baaf58b56981ec1350bcc7921c75209432a3ad0453940503faa7b86fa1cfa57",
+                "c24ade7614a3276941137ebeb467f7d5acacdb24ed640b3275bb9d67bbe39d59",
+                "e2ec5b9517856f57e783b985e2dfbcf42e7548c11054b439bbb87b6d948eb16c",
+                "33a9bc9aed113f784049b1de26e959016c5ddeef11b59a702e578a8b30da4745",
+                "360d5351a12010f0ec1d7d25e55bde07d205072d8edbdeb3303aa7f66bc7bcc9",
+                "e210abfdc5f6fa9cc875fedf7d7a494962fab360a7bee1b5968867f1f99d21bc",
+                "5e4710057d06756d09bdcaff3fa635452ad7c907fb8a6c39d65227ed36277eea",
+                "d23be772062200097a64810732213bda96c7ce97f2c788bb5c7d08a9a6d52087",
+                "7169b00fe17fe5c16c6b8bc5271cfe6b7534dfb931c38c3285d11575854f19a6",
+                "52783c6971022d0da24a9dfd96ccbdc6a0bb95e4bd5baa77abf1c7477798ad81",
+                "752c98984b0e6ac826da8d51a89f6123034192b76ba29afb526ff0848611add1",
+                "aa40087f8496cab21e81b1c68ed593726b1493ff93e620ba26a8e32499e6eb85",
+                "368858cbc4f7d3f63f6b4341966271b462dc4c181d1c602e3d9eac7df61253e7",
+                "e2d5ff9e16f00dfc8f5b3c5be9cfdb787c986b800520434d3b90a083c64fb5f7",
+                "e7bb306da9b10f2d2d1aa4f569279fad7d87251c03ba242f510cd736c2938412",
+                "a500f820730f185213536726cd0f551b6ffa7e0dc169eb27cb2b2d5c5e1c5b5f",
+                "f672d685c3fdc5a405a06975336a0d421426fe32031dd5d7a5895d47ea3d0fea",
+                "703bcef76e24a6203cf5b2eea8e7c6a8b7d559b40ed0276b5ba720816352bac3",
+                "d049d91de0a2a60f3ad7af9a9b1a2f95ea48b0a0c60ac46594bd8fd0705c7f43",
+                "a37755ebca9c658e505476655733d4167c16cedd4cbf549e949fb28f7801d57a",
+                "14795cfdf1e22108bf72dbf7144235e55710a2d1e2a786b87687748bfe36dad4",
+                "f28b54331e1f0fa82c009372f57672c4be719642a7283b9ad0e301c34f3e163d",
+                "d8226b797f521a1d0e06a3e1aa000d352777c963f7df5dc52600ec263d155bb9",
+                "39d9c1b2f0e8c318ba20e17f32025e3bd1e6a3c928b931f0518ddc266100faa8",
+                "167ce2fffec95d26382a7d58f7f4b88bf7e4bdbd8f39c060726fc2ee71208872",
+                "e5a647fff85b7f11c51f0bbac8b4d13502b184078226e92f295b1914ae6f0980",
+                "3a8e2495bf62c9e2bcf1f6d7f38f11d48f5d63ed5263639ee8de25fa51c9a18d",
+                "7f1b504af773d6aa13b98a193b4f5dfad30a0bd8c59cb558ccfea28112514550",
+                "3920feaaa33cf70ece2c62330a8d3af7a48be47e2aa115ca5e93adc37b8a4d7b",
+                "b78c1750d742442b77574a34c284f4762385d60c4d6c8441f9867a58aed7e3e7",
+                "e309bce4f5004b600316df0409ed436457f707bde468101ffaadb8b09bbd15ae",
+                "cc55846348d143356f513a8e83f4a495dd904abbc882fad5dfa511904073ec70",
+                "01d09af5f6ecec2b9a84f9894548cd47934e9988d535e70b468d21b57584289a",
+                "c7eee2b1291478852633ff14663c3735b3c7efdef28214aa5834446f62bd8ca6",
+                "97a7ea4f92e0c26e583c9ee7d7b1eef3e81173228e6a681873975696382d4ead",
+                "a1005cad357afd410efc6a8098bcfa99397f890ebe45fb831db24da07b8bdb95",
+                "5621537ab9e56a560e3ce1a2668d3d36c901d7be5ff43d17eb2e2f291fe1852d",
+                "25bab7df086229f19ccd37f2ce9e3b0c4fbc72beb53bd5dfdf77450165298e24",
+                "c793b18e5634e3062dd422e7af663afaac9362b3b3c13959cd0a0e511e9fa6cb",
+                "86a3307a23019ccda23573560a01064563984e29bd3665b4ca547f32d14c5208",
+                "7df22280711fad03805aa695c9a47352633c64b8bf05254777d1b7fab6a0ee72",
+                "dc35967da686062f9b36cb242c61d7bf5e8bb89cc4f90f3bb1bfd223d0868562",
+                "661b0d95f24aafe39838424f1a3e9c0cf43d523a0f08115c551545e7578d1d0a",
+                "4df1de7625988c85b836aef72732c6bfc85ef8f65004d6a8096a8ef64a54bf39",
+                "a366af86e8185839b9792d7ba8c46c1b7c5cccd977a16c9e6d282e7dca2ed756",
+                "75af6ba81d46234667d23f947ef4d7690156aa94b625346a6d809236a12f4a0c",
+                "423e03c80ae8066682f416bd94a962015dbd03d59d55c959543986aeccd2baa2",
+                "5c1ff9e0a69bdf849df8810cab5d27af8632ce51dfab76d97f6e935ff267e43c",
+                "1a7f09cf49f927cd8cc00f3137cfb13bec2cbe710f5f9e613ef8979868533698",
+                "37b453ac0e64a3cf244365ffe5cf79aa7b0b647f37c7cac045ea460cb6c8e671",
+                "559ecbadba17d74958385c059b580132053e69fddf11724b6318f6bb154b3d8c",
+                "d0dbe73a847acb956dc054eb8cab22e1c04767dfc852e4d4149702c03437e4af",
+                "e1fb17006c15a5c37cec14191c6010efcb8e23d6c38886875975735b310a58b6",
+                "dcb058f52b4b5a611ba5719dc04f59bc69eff10a19f5fa1c7b0abf533bd6b47d",
+                "d342133c5ddc52ded6e451f54326fb0d26cc60423f2d85e7e44104a49b544e69",
+                "f7a911eb799c66438794d7d1c64f244c9c9cac0602b233e680bee3ac703abff1",
+                "3b7ff3b54f1f47a16b486860fc292f8dea8186c8aa0da7b2c16e137812670f62",
+                "654365b1a6e264a6f9251cd513d897f96c00fe62ae5487f661d830304ff0efc4",
+                "f0963025481e8555f682e742ae0180a0ba53b085cec9eb87219e70ef584c4415",
+                "79ccfcf8da901cfbff72687d602591bb6b7b891e094c70d248ee41ab7bdfce73",
+                "05f3cd9e2c8f308baceba754e4ae656225bc7902fc802338118ceacdd797f3b4",
+                "33dc74b54ccb1a53ecb301069f2496ceaa2a29ca2c9ef94e4d4bbd59eb51f2c1",
+                "b1169c115eb952caab60231dbcf1fdc48c8558eeffe5161ce5e19b42867d1e10",
+                "a7939b9c869d7ca8949249ec84f62278ddf6b7a4de9ff699c5fc5ae8b1338cc7",
+                "dc1ea3ae7b57ce4cb1ac85f497cc3f9f23df2d8615b571149f68779535caace0",
+                "6041b67768c822309b9c7547871d60adcd3b5965fecbe5d098cd16bdefe5d26f",
+                "e8a7ec42852c0a2d7d6d87908cb3dd36bdd97ebef8f75896e00a375d6a510bbb",
+                "de40bf920882557f69326107c64e4a3b8de3db90a436daafab0f1fb3d6ac0a2a",
+                "4b9c6704303d79e5a98fdd01aa3115994581ef8919083dea65be9db9864a71d8",
+                "5deddfb60f83ba4a64ae03e1b68306c03afb3beec63e1e322d8f139e471595f6",
+                "51a39da4646b744f3cf871c8b9230b0adadf1e94c3575bbd0003173d35eee06b",
+                "b51fff8260b60d79be9c3d06cb2d0cd7e8aab47eea9c162c1699ce62e93edf14",
+                "c6956f6f013df0a80b5ef4e4b2f9ad1e2575c07e80d64127686728a619ec0e61",
+                "b98a352ad2e526151c07362a21aebebeca0850bad7827e9597439a3f34bceae5",
+                "99a6fc39c845949ff07a8b49c28d1ff07e7cee0b2603fa016a06fde21e685ad5",
+                "0a6b31fbe30fe6568c27104c0e1cd7e7506e4f8cdfdb33a4ccf5702be40c4ce9",
+                "4b51729dd42f8f4945974c7cd7a4abc5fd7ce45e318704ca9c1d8f067b64bb75",
+                "1b87df7d6687a9c8667a3763f456b6cb6f46807c1f4edc6a4018a9c19e8f5953",
+                "144f4f1572aecb3ff870b8b542c4da641a7935d4c7a025b74956b220e3b13ebb",
+                "f88c871cd6f62136587467cdc230765db8144f03d6bcc8bb3f2c274864836864",
+                "2a96ca7141f64df66e472b6c27b444f96589133eb392eef24c2bbfedc1473c8f",
+                "af3c28d4aad56e6cbbeb9de2e756d206ac0d53b6aa1deefcd64fa5a0bcbe62dd",
+                "17e71beb807b203c396d512382a60ad47f20894f13dfbc810827df845c68dfe4",
+                "ecc5dbe96ad3c0afa79b416d3924f9d1e3ff807df526859233e39dff4ade1080",
+                "a745dedd69874b35f40de51c1d1175c780fed870ffea084c6cd6c6b2ee2a6295",
+                "7350e08dc3948276f3ec5108767e433c651a61432e9720e82ece286e912d4c07",
+                "7d0030924e0e10f4dbecf974b0f74fef70d2a1cebebfd40249445fdf3bf22f26",
+                "46bde46c2b67e0f8d1a5602e321a1d4de4a4a15b39e7f990f0144a8ca36279a3",
+                "d9e30f472156d8e0be53cc3db3c0801c0b84ccd0fdf4983b97b56d46a04e0875",
+                "4a3c7985c1ecd043d37100deba083af08cb4f5a065669243433be2e4b156ea01",
+                "a6191190910448dfaa29b7b8ce328b93c39a0ff4fd9ad514f503fcacdf21a9dc"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "dd_testcookie": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.008382991617008383,
+                    "uniqueness": 0.012048192771084338
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.etsy.com",
+                "www.expedia.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.agrizone.net",
+                "www.feuvert.fr",
+                "www.mma.fr",
+                "www.shutterstock.com",
+                "leroymerlin.fr",
+                "stm.cairn.info",
+                "www.ubaldi.com",
+                "www.illicado.com",
+                "free3d.com",
+                "www.weldom.fr",
+                "www.seloger.com",
+                "www.cultura.com",
+                "www.oogarden.com",
+                "www.logic-immo.com",
+                "www.reuters.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/tpl\\/6dc485c0c428c35b53577b146dc6f9179f55ef9ad41b327a2a179998839364bf\\/index\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 114,
+            "prevalence": 0.0115,
+            "cnames": [],
+            "responseHashes": [
+                "d49fce4d3745c6d9f755f6be625eb218238baec337cfdb30be0e87d8c0ff6653"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.etsy.com",
+                "www.expedia.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.cedeo.fr",
+                "www.feuvert.fr",
+                "fr.shopping.rakuten.com",
+                "www.leclercdrive.fr",
+                "www.tripadvisor.de",
+                "www.celio.com",
+                "nosdevoirs.fr",
+                "fr.jbl.com",
+                "www.sncf.com",
+                "www.tripadvisor.in",
+                "www.bellesdemeures.com",
+                "www.idealista.pt",
+                "www.maisonsdumonde.com",
+                "www.agriaffaires.com",
+                "www.viator.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/font-face\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "a1364e82ab23f2b2d2f20da412e83cac79e6310fb784b58ebb8edf5973ea9d90"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.blablacar.fr",
+                "www.idealista.com",
+                "www.idealista.it",
+                "www.idealista.pt"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/open-sans\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "778b8cd899b9ebf3913aaa46e397ce897bb192b100b276982869f5f00525b39f"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.blablacar.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/open-sans-300\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "57448185041ed1b29f54c778c6d48af032778fb2497b5a08f7b2a77dff712fcf"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allegro.pl",
+                "www.blablacar.fr",
+                "www.idealista.com",
+                "www.idealista.it",
+                "www.idealista.pt"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/c\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ct"
+            ],
+            "apis": {
+                "window.sessionStorage": 102,
+                "Navigator.prototype.userAgent": 102,
+                "Document.cookie getter": 102
+            },
+            "sites": 104,
+            "prevalence": 0.0105,
+            "cnames": [],
+            "responseHashes": [
+                "fc732c544e858efbdc4431618157025cac5cb5e2118893d904b0ef91c081d6ef",
+                "8f46906c5c13abc76c809aaa8b0a16c053fcfe5a50d063378ff721b8cdd3c9f9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.etsy.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.lacentrale.fr",
+                "www.pond5.com",
+                "pros.lacentrale.fr",
+                "www.dispano.fr",
+                "www.sncf-voyageurs.com",
+                "www.reglomobile.fr",
+                "www.bricoman.fr",
+                "fr.tripadvisor.ch",
+                "www.turbosquid.com",
+                "www.avendrealouer.fr",
+                "www.dansnoscoeurs.fr",
+                "www.leroymerlin.fr",
+                "www.garesetconnexions.sncf",
+                "www.celio.com",
+                "parade.com",
+                "www.feuvert.fr",
+                "www.allopneus.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/roboto\\/font-face\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 106,
+            "prevalence": 0.0107,
+            "cnames": [],
+            "responseHashes": [
+                "66599c34190f7a6a402b38664a30a9b564fc22510f51fa3c5f027fb91e7a0e51"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.etsy.com",
+                "www.expedia.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "www.allopneus.com",
+                "www.inmac-wstore.com",
+                "www.cultura.com",
+                "www.immoweb.be",
+                "www.dispano.fr",
+                "leroymerlin.fr",
+                "ra.co",
+                "www.tripadvisor.co.uk",
+                "www.dansnoscoeurs.fr",
+                "www.illicado.com",
+                "fr.tripadvisor.be",
+                "www.pneus-online.fr",
+                "www.viator.com",
+                "www.tripadvisor.ca",
+                "www.leboncoin.fr",
+                "www.leroymerlin.es"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/9795c862300ccbc5cf43b33bad2379104b65b636\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b2d3ef7659b01f5848b484fdfdf9732501580967de607a08262daf9f4d0a0b24"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "allopneus.com",
+                "www.allopneus.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/roboto\\/roboto\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 106,
+            "prevalence": 0.0107,
+            "cnames": [],
+            "responseHashes": [
+                "81d931a8c973b5bc8f9ded86a3440bd247a58e592b3897bf755c1a5d8390d763"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.etsy.com",
+                "www.expedia.com",
+                "www.marketwatch.com",
+                "www.tripadvisor.com",
+                "droit.cairn.info",
+                "www.reuters.com",
+                "www.agrizone.net",
+                "www.largus.fr",
+                "www.ter.sncf.com",
+                "fr.tripadvisor.be",
+                "www.sncf-voyageurs.com",
+                "www.tripadvisor.ca",
+                "www.immoweb.be",
+                "www.tgvinoui.sncf",
+                "communaute.leroymerlin.fr",
+                "fr.tripadvisor.ch",
+                "www.sncf.com",
+                "gopro.com",
+                "www.g2.com",
+                "www.intersport.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/96da2f8885ba92c9ca4d34bb763a3bc9e19017f0\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "ffbb088b408acec890267462519ebeb990b0e1cfd70f2f493979240464eeb5a3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cairn.info",
+                "shs.cairn.info",
+                "stm.cairn.info"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/4798d3525d82ce7ca942df2d3ad871665f7ca0e3\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f6e9add874be76f5091175313a64064dabfc10e1844e9b3b815d62d0d6425830"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mma.fr",
+                "www.mma.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/3b2252403733f1c121b735f144853af40c3e02a8\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bb1a0b2c277cd6c235d2e3fcc4ffbc91d6e129f4abf45e9be9643c326553176c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "feuvert.fr",
+                "www.feuvert.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/a9f0e9523bb464dc97737c4749c9335e29175c0c\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "0f4a12a29f8f3f4a64969a5b87b1eb19cebaab653928b7214727634172a47ec4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tripadvisor.be",
+                "fr.tripadvisor.ch",
+                "tripadvisor.fr",
+                "www.tripadvisor.ca",
+                "www.tripadvisor.co.uk",
+                "www.tripadvisor.com",
+                "www.tripadvisor.de",
+                "www.tripadvisor.fr",
+                "www.tripadvisor.in",
+                "www.tripadvisor.it",
+                "www.tripadvisor.nl"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/a0119e19d7f710c158729bc4153a6996e891b546\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "24174601be224eecd73c0fe27544f739b887327924f2c5f1a14ef8f8b0656f2d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leroymerlin.fr",
+                "www.leroymerlin.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/5efcecdb799ce97a35b39883c859ebc01b9320ed\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "cec4de6d8de4c60f046c555e9349365d566e8244b4c29a5b91666aae59ce4957"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "maisonsdumonde.com",
+                "www.maisonsdumonde.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/801cfd839314a9c6b445e8ff71063356654b0399\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ff908961c296a8ee318885a3a2bfe396c52be7bd7d0d4be77890b88c8e3d1c93"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "norauto.fr",
+                "www.norauto.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/f36e2794472c13efdb7e0f233e69de46716c22aa\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2094afdc2f94e71c24757b7a80753f34098c5d83c2e6e872194582d802b8304c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "largus.fr",
+                "www.largus.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/1ced0c5c3da65a3201797b6e51cff5fc7b3b01b0\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4c29ff1876d101b807daa9d811e9da432310a79e1b36828281e8abd150c79e29"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lacentrale.fr",
+                "www.lacentrale.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/tpl\\/device-check\\/index\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "f40a7b02a8a2d420aa9d4cb5b0b26a92468828984fdc4b0d1202de4e24f59859"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ra.co",
+                "shs.cairn.info",
+                "www.intermarche.com",
+                "www.leboncoin.fr",
+                "www.macif.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/7a5660851b4dfb85d4871c662959eec055affa49\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c5b3050004e664e12f56a901d8d2e69337418b77923249e738c39d63d2b65ea3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sncf-connect.com",
+                "www.sncf-connect.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/d359f8b537f1888bc71fe20b3d79eae6674be7ac\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "0b75d402dd9623e63c9e1c11ec2acc2fad194be208337eedc6c043ea08e9421c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fnac.com",
+                "www.fr.fnac.be",
+                "www.fr.fnac.ch"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/666a1676052daf96f5b58d25fe8b0d3477b2e3ed\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e27bd4b6e738d27fa665d7a3422c031b8e430c1b1686e0b701877f7534a2257b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupe-sncf.com",
+                "www.sncf.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/common\\/fonts\\/open-sans\\/open-sans-700\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "5c1f54ca8eef30134b982ad229a441645d3f83f0d77f6f215006f5d0db404154"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idealista.com",
+                "www.idealista.it",
+                "www.idealista.pt"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/b821f9bed23a241d0c5dc288477e19eff97ab9b9\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8cf0a9b6feb84a3ac7c1d2033410588a367faa51565ec114b4e969b786e3efc7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intermarche.com",
+                "www.intermarche.com"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/26e53713afb2da82d031f045066fa4b2a47b0733\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "506b343b00ff65c6d0ba0ae410bb77dcdc7f0e39eb0521533d7a309d91612fa2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leboncoin.fr",
+                "www.leboncoin.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/235aa062e6372588dbae00552abf36b8ff9c315e\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0b6b20c28dab14624330087736edff3056905d67efa6280c78a9f03b7f6b76c6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "macif.fr",
+                "www.macif.fr"
+            ]
+        },
+        {
+            "rule": "captcha-delivery\\.com\\/captcha\\/assets\\/set\\/f525eef4f03ab81983392564bc44fea01267b8cd\\/logo\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "286420daaf2f6e01b4292bce6e639506a600576a21400c41733ded187879e16b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefork.com",
+                "www.thefork.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00879,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.956140350877193
+        },
+        {
+            "domain": "leboncoin.fr",
+            "prevalence": 0.008771929824561403
+        },
+        {
+            "domain": "blablacar.com",
+            "prevalence": 0.008771929824561403
+        },
+        {
+            "domain": "datadome.co",
+            "prevalence": 0.008771929824561403
+        },
+        {
+            "domain": "groupe-sncf.com",
+            "prevalence": 0.008771929824561403
+        },
+        {
+            "domain": "sncf-voyageurs.com",
+            "prevalence": 0.008771929824561403
+        }
+    ],
+    "types": {
+        "Script": 111,
+        "Document": 121,
+        "XHR": 7,
+        "Stylesheet": 230,
+        "Font": 116,
+        "Image": 45
+    },
+    "nameservers": [
+        "ns-1456.awsdns-54.org",
+        "ns-1890.awsdns-44.co.uk",
+        "ns-257.awsdns-32.com",
+        "ns-730.awsdns-27.net"
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "domain": "ageverif.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000508,
+    "sites": 5,
+    "subdomains": [
+        "www",
+        "wstats"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ageverif\\.com\\/checker\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.localStorage": 5,
+                "Document.cookie getter": 5,
+                "Navigator.prototype.language": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000508,
+            "cnames": [],
+            "responseHashes": [
+                "f24f1645e345bc5a650fa9f987b2fe177e9936de6f1b2e3e0e30dd52786a8053",
+                "73b99b29e1876516b4d46caa9f4c1a3e57cccb06af34546e3e5ca152530493f0",
+                "eeb5343ca96666a1e9aee5c400cb14f741a325f23177b9dd661b09b9acde38d9",
+                "df8419a98fba4b12ddf153ee56f894b51edc3ef7e0200137a0431606a18170f1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "extremescatporn.com",
+                "tukif.porn",
+                "www.perverttube.com",
+                "www.porndig.com",
+                "www.xfreehd.com"
+            ]
+        },
+        {
+            "rule": "ageverif\\.com\\/api\\/add_stat",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wstats"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "extremescatporn.com",
+                "www.perverttube.com",
+                "www.xfreehd.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 5,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "damon.ns.cloudflare.com",
+        "nova.ns.cloudflare.com"
+    ]
+}

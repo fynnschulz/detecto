@@ -1,0 +1,104 @@
+{
+    "domain": "pixfuture.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "served-by",
+        "prebidserver"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "pixfuture\\.com\\/www\\/delivery\\/hb_v2\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "served-by"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "155b6aabe9d7b17d0156bd0269f0adb0767fd33f75a917d7d8e43912bbc87c05"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frankysweb.de",
+                "www.frankysweb.de"
+            ]
+        },
+        {
+            "rule": "pixfuture\\.com\\/openrtb2\\/auction",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prebidserver"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "86d93bc0a9ddca9887af13b01dee8aa6423382ecdb4c5ffa00d77dedfe474f09"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frankysweb.de",
+                "www.frankysweb.de"
+            ]
+        },
+        {
+            "rule": "pixfuture\\.com\\/www\\/headerbid\\/library\\/tracking\\/tracking\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "served-by"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frankysweb.de",
+                "www.frankysweb.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.75
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.25
+        }
+    ],
+    "types": {
+        "XHR": 4,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "gene.ns.cloudflare.com",
+        "zod.ns.cloudflare.com"
+    ]
+}

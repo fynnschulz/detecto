@@ -1,0 +1,121 @@
+{
+    "domain": "originplatform.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "www",
+        "bcn",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "originplatform\\.com\\/build\\/loader\\/loader\\.min\\.js",
+            "cookies": 0.00000684,
+            "fingerprinting": 2,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "45447b9888e02f23598fee855e1b2179d33abb7b6ccaf1b40a5a8a397f9241c1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ogSessionId": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000006840881105486387,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sherdog.com",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "originplatform\\.com\\/bcn\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bcn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6d4f24ff82fcd166f1c30c753c16bda3914a8f0ee98cdc7f7401f247f168d952"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "ogSessionId": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "sherdog.com",
+                "www.sherdog.com"
+            ]
+        },
+        {
+            "rule": "originplatform\\.com\\/uploads\\/7472\\/videos\\/teaser_tonight\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sherdog.com",
+                "www.sherdog.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00000684,
+    "topInitiators": [
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.8461538461538461
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.15384615384615385
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Image": 2,
+        "Media": 2
+    },
+    "nameservers": [
+        "tara.ns.cloudflare.com",
+        "piotr.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,164 @@
+{
+    "domain": "smartrmail.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000606,
+    "sites": 6,
+    "subdomains": [
+        "go",
+        "analytics",
+        "noproxy"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "smartrmail\\.com\\/pop_ups_v3\\/settings",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "go"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "d0d733e85af2019852bf6e2f19bc2a531e20983c06e7765098c8285115efc89b",
+                "66bfa7868813bf9e8586c37d9b40dbfd2aaa3755bc5f8aa5aedbbd7d6bdac4f8",
+                "513b5103798ae2bcd9062055c1a803fb41ba9b71ee003ec44ecd29363a43c3d4",
+                "81a816db0b58ee83ac19644301949f4cf8fb6283a7b794ca9845ca6711b361fd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bluethumb.com.au",
+                "www.alburyrcmodels.com.au",
+                "www.angkormusic.com.au",
+                "www.aussiestormshop.com.au",
+                "www.australianonlinecarparts.com.au",
+                "www.genuineedge.com.au"
+            ]
+        },
+        {
+            "rule": "smartrmail\\.com\\/scripts\\/pop_up_v3_script_neto_tag_live\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "go"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "733b21431f1519779913152cd39ee246bb78393868e1ee04b6dae129811dac38"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alburyrcmodels.com.au",
+                "www.angkormusic.com.au",
+                "www.aussiestormshop.com.au",
+                "www.australianonlinecarparts.com.au",
+                "www.genuineedge.com.au"
+            ]
+        },
+        {
+            "rule": "smartrmail\\.com\\/v1_neto\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Document.cookie getter": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "5da1ffc91304bdfed60c7d834f6522fc754053793ae54d83e14a76257ef7b535"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alburyrcmodels.com.au",
+                "www.angkormusic.com.au",
+                "www.aussiestormshop.com.au",
+                "www.australianonlinecarparts.com.au",
+                "www.genuineedge.com.au"
+            ]
+        },
+        {
+            "rule": "smartrmail\\.com\\/pop_ups_v3\\/increment_load",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "noproxy"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alburyrcmodels.com.au",
+                "www.australianonlinecarparts.com.au",
+                "www.genuineedge.com.au"
+            ]
+        },
+        {
+            "rule": "smartrmail\\.com\\/pop_ups_v3\\/increment_load",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "noproxy"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alburyrcmodels.com.au",
+                "www.australianonlinecarparts.com.au",
+                "www.genuineedge.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 9,
+        "Script": 10,
+        "Preflight": 3
+    },
+    "nameservers": [
+        "curt.ns.cloudflare.com",
+        "nelci.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "domain": "adextrem.com",
+    "owner": {
+        "name": "ORCHID MEDIA Limited",
+        "displayName": "ORCHID MEDIA"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "ads"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "adextrem\\.com\\/detect\\.php",
+            "cookies": 0.00000684,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6ab2b9bf505bf16efda449af810081478279b4b4151996c66cfccdbc8cd33175"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hentai-paradise.fr",
+                "x-manga.org"
+            ]
+        },
+        {
+            "rule": "adextrem\\.com\\/delivery\\/iframe\\.php",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "Date.prototype.getTimezoneOffset": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "49a29c33c4b457791e44dc05495f48e00d5368cbe25d14b4d392c442a7bf3e47"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "celibook.com",
+                "www.celibook.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Document": 2
+    },
+    "nameservers": [
+        "dns2.registrar-servers.com",
+        "dns1.registrar-servers.com"
+    ]
+}

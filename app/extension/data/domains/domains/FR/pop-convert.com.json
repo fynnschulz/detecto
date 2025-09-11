@@ -1,0 +1,168 @@
+{
+    "domain": "pop-convert.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "script",
+        "cdn.s3",
+        "cdn.micro",
+        "micro",
+        "cdn"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "pop-convert\\.com\\/new-micro\\/production\\.pc\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "script"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "window.sessionStorage": 4,
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "0817e12882bf456ef5bf8929a7e819782e0c630edde909178a684db93c6b4dec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saint-james.com",
+                "pranarom.fr",
+                "www.cycletyres.fr",
+                "www.lecyclo.com"
+            ]
+        },
+        {
+            "rule": "pop-convert\\.com\\/pcjs\\.production\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.s3"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Date.prototype.getTime": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "fad409629d5d4ee7b1a26d1732eba6ee052863149b47d5f4aad00a4ee9947406"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saint-james.com",
+                "pranarom.fr",
+                "www.cycletyres.fr",
+                "www.lecyclo.com"
+            ]
+        },
+        {
+            "rule": "pop-convert\\.com\\/pcjs_get_version",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.micro"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "c3fe51e997e7c894402dcf6840f1296648f01864a3816fb6279f085f9c3d15a8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saint-james.com",
+                "pranarom.fr",
+                "www.cycletyres.fr",
+                "www.lecyclo.com"
+            ]
+        },
+        {
+            "rule": "pop-convert\\.com\\/micro\\/api\\/micro_actions\\/create",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "micro"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "fb1bf528d8237aac3e9ead389ab246ba0068f61fe281610110937ef2b8adefce"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saint-james.com",
+                "pranarom.fr",
+                "www.cycletyres.fr",
+                "www.lecyclo.com"
+            ]
+        },
+        {
+            "rule": "pop-convert\\.com\\/micro\\/api\\/sites",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "920a466349346448a78c07864e06d673dcac7c46349878eff22e0f393c137067",
+                "73a8fc48a147119c06360af4ef61c2ea89dcecabc356d30c1d00b9e68bd6137a",
+                "a00930ff3dc75d9cfcb4305f8bd7823ec588931067a876be4850c3588c696e10"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "saint-james.com",
+                "pranarom.fr",
+                "www.cycletyres.fr",
+                "www.lecyclo.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 8,
+        "XHR": 4,
+        "Fetch": 8
+    },
+    "nameservers": [
+        "guy.ns.cloudflare.com",
+        "adele.ns.cloudflare.com"
+    ]
+}

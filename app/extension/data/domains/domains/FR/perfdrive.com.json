@@ -1,0 +1,222 @@
+{
+    "domain": "perfdrive.com",
+    "owner": {
+        "name": "Radware Ltd.",
+        "displayName": "Radware"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000707,
+    "sites": 7,
+    "subdomains": [
+        "captcha",
+        "cdn",
+        "cas.avalon",
+        "validate"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "perfdrive\\.com\\/captcha-public\\/css\\/shieldsquare_styles\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "2fcdc3b4f2aed79bbe5b2bb0b20ee2054efde2b66244387b69c6ca030635de31"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ants.gouv.fr",
+                "pitiesalpetriere.aphp.fr",
+                "www.usine-digitale.fr"
+            ]
+        },
+        {
+            "rule": "perfdrive\\.com\\/aperture\\/aperture\\.js",
+            "cookies": 0.000505,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 5,
+                "Date.prototype.getTime": 5,
+                "HTMLMediaElement.prototype.canPlayType": 5,
+                "Navigator.prototype.vendor": 5,
+                "Document.cookie setter": 5,
+                "Navigator.prototype.userAgent": 5,
+                "Navigator.prototype.appCodeName": 5,
+                "Navigator.prototype.cookieEnabled": 5,
+                "Navigator.prototype.platform": 5,
+                "Navigator.prototype.language": 5,
+                "Navigator.prototype.webdriver": 5,
+                "Navigator.prototype.maxTouchPoints": 5,
+                "Screen.prototype.colorDepth": 5,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5,
+                "Screen.prototype.availHeight": 5,
+                "Screen.prototype.availWidth": 5,
+                "window.innerHeight": 5,
+                "window.innerWidth": 5,
+                "Navigator.prototype.onLine": 5,
+                "window.outerWidth": 5,
+                "window.outerHeight": 5,
+                "Navigator.prototype.plugins": 5,
+                "Navigator.prototype.doNotTrack": 5,
+                "Navigator.prototype.hardwareConcurrency": 5,
+                "Navigator.prototype.mimeTypes": 5,
+                "Navigator.prototype.product": 5,
+                "Navigator.prototype.appVersion": 5,
+                "Navigator.prototype.productSub": 5,
+                "Navigator.prototype.vendorSub": 5,
+                "window.localStorage": 5,
+                "window.sessionStorage": 5,
+                "window.indexedDB": 5,
+                "Performance.prototype.memory": 5,
+                "window.screenTop": 5,
+                "window.screenLeft": 5,
+                "Screen.prototype.pixelDepth": 5,
+                "Date.prototype.getTimezoneOffset": 5,
+                "Screen.prototype.orientation": 5
+            },
+            "sites": 5,
+            "prevalence": 0.000505,
+            "cnames": [],
+            "responseHashes": [
+                "9fb91ff0e8c179aea40dbe6842b36fd201654f5647c21dcec41fd18be535d506"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__sstester": {
+                    "ttl": -1755371605,
+                    "length": 1,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 0.5
+                },
+                "__ssds": {
+                    "ttl": 15555603,
+                    "length": 1,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 0.5
+                },
+                "__ssuzjsr2": {
+                    "ttl": 15555604,
+                    "length": 9,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 0.5
+                },
+                "__uzmaj2": {
+                    "ttl": 15555604,
+                    "length": 36,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                },
+                "__uzmbj2": {
+                    "ttl": 15555604,
+                    "length": 10,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                },
+                "__uzmcj2": {
+                    "ttl": 15555604,
+                    "length": 12,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                },
+                "__uzmdj2": {
+                    "ttl": 15555604,
+                    "length": 10,
+                    "prevalence": 0.000201999798000202,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ants.gouv.fr",
+                "pitiesalpetriere.aphp.fr",
+                "www.aphp.fr",
+                "www.manutan.fr",
+                "www.usine-digitale.fr"
+            ]
+        },
+        {
+            "rule": "perfdrive\\.com\\/jsdata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cas.avalon"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "619ed6258e00ea7959c7ecc3613e0955dc0a328d9faf26705bc5844a857c4e26",
+                "7e743a14b3a26a584809b8ba75140895b5a24c8492402ab07296015754a8723c",
+                "7a97025d5c0b19a0a7316a135f5a46bb65c0b27adff36e6bba720722f56bf9c3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ants.gouv.fr",
+                "pitiesalpetriere.aphp.fr",
+                "www.aphp.fr",
+                "www.usine-digitale.fr"
+            ]
+        },
+        {
+            "rule": "perfdrive\\.com\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "validate"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aphp.fr",
+                "www.aphp.fr"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000707,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Stylesheet": 3,
+        "Script": 5,
+        "XHR": 4,
+        "Image": 2
+    },
+    "nameservers": [
+        "ns-1220.awsdns-24.org",
+        "ns-1846.awsdns-38.co.uk",
+        "ns-458.awsdns-57.com",
+        "ns-546.awsdns-04.net"
+    ]
+}

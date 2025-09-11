@@ -1,0 +1,85 @@
+{
+    "domain": "ageverif.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000404,
+    "sites": 4,
+    "subdomains": [
+        "www",
+        "wstats"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ageverif\\.com\\/checker\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "Navigator.prototype.language": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "89e43b9f848879d1d7d75af5dc7d502a61bf1b88a97cb0ca9492e4022b834b02",
+                "b9edac44002344e8be2176136fac7a367d7274979ecb4208305f784b04482ffd",
+                "aeef3d053d5cf4d57e3162976812465f782129f839b6139396e8d4796128bd4c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "extremescatporn.com",
+                "www.perverttube.com",
+                "www.porndig.com",
+                "www.xfreehd.com"
+            ]
+        },
+        {
+            "rule": "ageverif\\.com\\/api\\/add_stat",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wstats"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "extremescatporn.com",
+                "www.perverttube.com",
+                "www.xfreehd.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 3
+    },
+    "nameservers": [
+        "damon.ns.cloudflare.com",
+        "nova.ns.cloudflare.com"
+    ]
+}

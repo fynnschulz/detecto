@@ -1,0 +1,114 @@
+{
+    "domain": "acq.io",
+    "owner": {
+        "name": "Acquisio inc.",
+        "displayName": "Acquisio"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "t",
+        "js"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "acq\\.io\\/9\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "ATRK_a": 0.00002052264331645916
+            },
+            "exampleSites": [
+                "adelphi.edu",
+                "www.hmhco.com",
+                "www.pureinsurance.com"
+            ]
+        },
+        {
+            "rule": "acq\\.io\\/ATRK_6700B927_min\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "024fbb2b4bf216a844dc7ab1455f748ca5bb5fd539bce08789eae10784cac055"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ATRK_a": {
+                    "ttl": 392089927,
+                    "length": 34,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "ATRK_y": {
+                    "ttl": 1821,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "ATRK_t": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hmhco.com",
+                "www.hmhco.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000479,
+    "topInitiators": [
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Image": 3,
+        "Script": 2
+    },
+    "nameservers": [
+        "ns-899.awsdns-48.net",
+        "ns-1518.awsdns-61.org",
+        "ns-1661.awsdns-15.co.uk",
+        "ns-307.awsdns-38.com"
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "domain": "helply.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000137,
+    "sites": 2,
+    "subdomains": [
+        "app"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "helply\\.com\\/helply-agent\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.connection": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "442aa1285e155977ad99ec24d457c719d1823670e6da0c92fb28926a91675e98"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lingq.com",
+                "www.lingq.com"
+            ]
+        },
+        {
+            "rule": "helply\\.com\\/api\\/chatbot",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "6608ebb255d2f787376a12f91074c4844b8630cc3e5db33150688a21684e5cd7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lingq.com",
+                "www.lingq.com"
+            ]
+        },
+        {
+            "rule": "helply\\.com\\/helply-agent\\.css",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "99f4fec0f6fbc09e6e600d90e8aef063fe7b4ef11dc962644836bc99b27c9e73"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lingq.com",
+                "www.lingq.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "Fetch": 2,
+        "Stylesheet": 2
+    },
+    "nameservers": [
+        "ns-581.awsdns-08.net",
+        "ns-330.awsdns-41.com",
+        "ns-1598.awsdns-07.co.uk",
+        "ns-1242.awsdns-27.org"
+    ]
+}

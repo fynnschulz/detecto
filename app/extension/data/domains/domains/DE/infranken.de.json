@@ -1,0 +1,67 @@
+{
+    "domain": "infranken.de",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "dynamic"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "infranken\\.de\\/delivery\\/cmp\\.php",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dynamic"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "cfcc47c989488e45d3c69ecfab29f995647481e23431cd16b28277f119a44aee"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__cmpcc": {
+                    "ttl": 34128002,
+                    "length": 1,
+                    "prevalence": 0.00010089799212995662,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fraenkische-rezepte.de",
+                "www.fraenkische-rezepte.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2
+    },
+    "nameservers": [
+        "a.ns14.net",
+        "b.ns14.net",
+        "c.ns14.net",
+        "d.ns14.net"
+    ]
+}

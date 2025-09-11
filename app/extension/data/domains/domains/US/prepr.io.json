@@ -1,0 +1,142 @@
+{
+    "domain": "prepr.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000342,
+    "sites": 5,
+    "subdomains": [
+        "cdn.tracking",
+        "tracking"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "prepr\\.io\\/js\\/prepr_v2\\.min\\.js",
+            "cookies": 0.0000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.tracking"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "902baf50624df64457f99dd8853fadc134d88025b2071b7b192cc3b02f1cc0b6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__prepr_uid": {
+                    "ttl": 63072004,
+                    "length": 19,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 1
+                },
+                "__prepr_ed": {
+                    "ttl": null,
+                    "length": 4,
+                    "prevalence": 0.00002052264331645916,
+                    "uniqueness": 0.3333333333333333
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eo.nl",
+                "www.droomplekken.nl",
+                "www.eo.nl"
+            ]
+        },
+        {
+            "rule": "prepr\\.io\\/e942c3ac8072ceaa1208872391520f957920f7647fc26f1b51e025d58adfaf1a\\/experiments\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "335c237fa6e51e46a390e0b6c827c30ec43f44eb813f0e74c6b1ad244fc03fff"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eo.nl",
+                "www.eo.nl"
+            ]
+        },
+        {
+            "rule": "prepr\\.io\\/e942c3ac8072ceaa1208872391520f957920f7647fc26f1b51e025d58adfaf1a\\/experiments\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eo.nl",
+                "www.eo.nl"
+            ]
+        },
+        {
+            "rule": "prepr\\.io\\/pixel\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__prepr_uid": 0.000013681762210972774
+            },
+            "exampleSites": [
+                "eo.nl",
+                "www.eo.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 3,
+        "Fetch": 2,
+        "Preflight": 2,
+        "Ping": 2
+    },
+    "nameservers": [
+        "kurt.ns.cloudflare.com",
+        "blair.ns.cloudflare.com"
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "domain": "upcommerce.cloud",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "agems-api"
+    ],
+    "cnames": [
+        {
+            "original": "api.cassen-eils.de",
+            "resolved": "agems-api.upcommerce.cloud"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "upcommerce\\.cloud\\/api\\/trip",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "agems-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.cassen-eils.de",
+                    "resolved": "agems-api.upcommerce.cloud"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cassen-eils.de",
+                "www.cassen-eils.de"
+            ]
+        },
+        {
+            "rule": "upcommerce\\.cloud\\/api\\/trip",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "agems-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.cassen-eils.de",
+                    "resolved": "agems-api.upcommerce.cloud"
+                }
+            ],
+            "responseHashes": [
+                "7ce9bf3138fa26a6b3753c82847daefea3d6216dbcb3e38761dd8cb9dfa98656"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cassen-eils.de",
+                "www.cassen-eils.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Preflight": 2,
+        "XHR": 2
+    },
+    "nameservers": [
+        "ns3.upcommerce.de",
+        "ns1.upcommerce.de",
+        "ns2.upcommerce.de",
+        "ns4.upcommerce.de"
+    ]
+}

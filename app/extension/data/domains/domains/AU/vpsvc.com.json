@@ -1,0 +1,120 @@
+{
+    "domain": "vpsvc.com",
+    "owner": {
+        "name": "Cimpress Schweiz GmbH",
+        "displayName": "Cimpress Schweiz"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000101,
+    "sites": 1,
+    "subdomains": [
+        "campaign-callouts.prod.merch",
+        "pricing-context-service.personalization"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "vpsvc\\.com\\/api\\/v2\\/calloutsForUserContexts\\/vistaprint\\/en-au",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "campaign-callouts.prod.merch"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0075206ab7096f556b572fc5fcf436c59feeba4160707eb092c1dc0379d0cd3c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.com.au",
+                "www.vistaprint.com.au"
+            ]
+        },
+        {
+            "rule": "vpsvc\\.com\\/api\\/v2\\/calloutsForUserContexts\\/vistaprint\\/en-au",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "campaign-callouts.prod.merch"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.com.au",
+                "www.vistaprint.com.au"
+            ]
+        },
+        {
+            "rule": "vpsvc\\.com\\/v1\\/pricingContext\\/vistaprint\\/au\\/AX7aqVpHUFfLJB7vdAhW2w-baQkfSGhEZfVhpwe8rIfYA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pricing-context-service.personalization"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.com.au",
+                "www.vistaprint.com.au"
+            ]
+        },
+        {
+            "rule": "vpsvc\\.com\\/v1\\/pricingContext\\/vistaprint\\/au\\/AX7aqVpHUFfLJB7vdAhW2w-baQkfSGhEZfVhpwe8rIfYA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pricing-context-service.personalization"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vistaprint.com.au",
+                "www.vistaprint.com.au"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "XHR": 2,
+        "Preflight": 4,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "dara.ns.cloudflare.com",
+        "junade.ns.cloudflare.com"
+    ]
+}

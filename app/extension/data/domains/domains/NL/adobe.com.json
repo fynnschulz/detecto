@@ -1,0 +1,335 @@
+{
+    "domain": "adobe.com",
+    "owner": {
+        "name": "Adobe Inc.",
+        "displayName": "Adobe",
+        "privacyPolicy": "https://www.adobe.com/privacy/marketing-cloud.html",
+        "url": "http://adobe.com"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000707,
+    "sites": 7,
+    "subdomains": [
+        "cc-embed",
+        "www",
+        "entitlement.auth",
+        "sp.auth"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "adobe\\.com\\/sdk\\/v4\\/targets_config\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cc-embed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fc49df2655110f146aae02b9a37210c53d8e28a60f2f12cef9d8fd95787f9191"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "premierleague.com",
+                "fantasy.premierleague.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/images\\/shared\\/download_buttons\\/get_flash_player\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thaitechno.net",
+                "www.thaitechno.net"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnabler\\.js",
+            "cookies": 0.000404,
+            "fingerprinting": 1,
+            "subdomains": [
+                "entitlement.auth"
+            ],
+            "apis": {
+                "console.memory": 4,
+                "Document.cookie getter": 4,
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.vendor": 4,
+                "Navigator.prototype.platform": 4,
+                "Document.cookie setter": 4,
+                "Date.prototype.getTime": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "e69092da13a80a47c63779b414680735d87fe5f19987f15097245b3c17e6c41b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "client_type": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00040412204485754696,
+                    "uniqueness": 0.25
+                },
+                "client_version": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.00040412204485754696,
+                    "uniqueness": 0.25
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cnbc.com",
+                "www.espn.nl",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnablerProxy\\.html",
+            "cookies": 0.000404,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "1c7bfb5ab78ddcc649d39e28e0cd1ddf0bac2884517d99d84b49f87069758d12"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cnbc.com",
+                "www.espn.nl",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnablerProxy\\.js",
+            "cookies": 0.000404,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {
+                "console.memory": 4,
+                "window.localStorage": 4,
+                "Document.cookie getter": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "51731367fa6c750624eaa80fc488b9d17b99f625556b437872d30e57ad2d9856"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cnbc.com",
+                "www.espn.nl",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/register",
+            "cookies": 0.000404,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "103990689e8a87336e61d98b311d08650e416c90448e9848d6fef72a1d25ddc0",
+                "5461490be5ffa7d4a7f5188c4e45a5a95b5b0faeceb8cfadccc0903a922adf2a",
+                "256b8cd9e106514fa49272412a353205226cfafecdd1ed72dd6b389ed6d26cdb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cnbc.com",
+                "www.espn.nl",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/register",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cnbc.com",
+                "www.espn.nl",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/token",
+            "cookies": 0.000404,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "bc832832135d6571c3fd017c08e76693e9ce22d1cbea5534bfd88c3f82247a3c",
+                "1e7ba3606a86d01fc1701ff6296d5c399837316be355e7ed7c448b422ba33404",
+                "42ad18d528afe09f5e4c6e70e1b82c3717cc7686cc0ff253ce8b0f7774b7d288"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cnbc.com",
+                "www.espn.nl",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cnbc.com",
+                "www.espn.nl",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/adobe-services\\/config\\/ESPN",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\/adobe-services\\/config\\/ESPN",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "bfe5ce55e40f3396225b14d2fef5a71b6bca22448b29068dab9ad3a27e55231a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.nl",
+                "www.espn.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000404,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6571428571428571
+        },
+        {
+            "domain": "espn.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.14285714285714285
+        }
+    ],
+    "types": {
+        "Fetch": 2,
+        "Image": 2,
+        "Script": 8,
+        "Document": 4,
+        "XHR": 10,
+        "Preflight": 10
+    },
+    "nameservers": [
+        "a10-64.akam.net",
+        "a28-67.akam.net",
+        "a26-66.akam.net",
+        "a7-64.akam.net",
+        "a1-217.akam.net",
+        "a13-65.akam.net"
+    ]
+}

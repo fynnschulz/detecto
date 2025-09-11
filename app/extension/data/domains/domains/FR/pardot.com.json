@@ -1,0 +1,152 @@
+{
+    "domain": "pardot.com",
+    "owner": {
+        "name": "Salesforce.com, Inc.",
+        "displayName": "Salesforce.com",
+        "privacyPolicy": "https://www.salesforce.com/company/privacy/",
+        "url": "http://salesforce.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "pi",
+        "go"
+    ],
+    "cnames": [
+        {
+            "original": "form.adecco.fr",
+            "resolved": "go.pardot.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "pardot\\.com\\/pd\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pi",
+                "go"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "form.adecco.fr",
+                    "resolved": "go.pardot.com"
+                }
+            ],
+            "responseHashes": [
+                "41402adfc915ad6dfd6328c06c8038763d25fe603e63beba4a2638a2bbc03136"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "visitor_id285052": {
+                    "ttl": 315360011,
+                    "length": 10,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                },
+                "visitor_id285052-hash": {
+                    "ttl": 315360011,
+                    "length": 104,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                },
+                "visitor_id925403": {
+                    "ttl": 315360016,
+                    "length": 9,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                },
+                "visitor_id925403-hash": {
+                    "ttl": 315360016,
+                    "length": 104,
+                    "prevalence": 0.000100999899000101,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wondershare.fr",
+                "www.adecco.fr",
+                "www.perfectcorp.com"
+            ]
+        },
+        {
+            "rule": "pardot\\.com\\/analytics",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pi",
+                "go"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "form.adecco.fr",
+                    "resolved": "go.pardot.com"
+                }
+            ],
+            "responseHashes": [
+                "9d7743ec569656b8e8a1989c727fa6adb1f528878382e94b94ed924f74d815d2",
+                "0ed08f39e8e8357cb526f1d220abbf3de5e8c14dd75500be61f2ddc4223b2d4a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "srcSite": 0.000100999899000101,
+                "IR_gbd": 0.000100999899000101
+            },
+            "exampleSites": [
+                "wondershare.fr",
+                "www.adecco.fr",
+                "www.perfectcorp.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "pardot.com",
+            "prevalence": 0.3333333333333333
+        }
+    ],
+    "types": {
+        "Script": 6
+    },
+    "nameservers": [
+        "dns1.p06.nsone.net",
+        "dns2.p06.nsone.net",
+        "dns3.p06.nsone.net",
+        "dns4.p06.nsone.net",
+        "ns02.salesforce-dns.com",
+        "ns01.salesforce-dns.com",
+        "ns03.salesforce-dns.com",
+        "ns04.salesforce-dns.com"
+    ]
+}

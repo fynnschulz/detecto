@@ -1,0 +1,562 @@
+{
+    "domain": "apex.live",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "www",
+        "v2"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "apex\\.live\\/scripts\\/invitation\\.ashx",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c50f5bda0446f9a1a42938442f9a2e5f8ee3c29f22d6e2d3484f4abcbea8e636"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "apexchat_dropdown_invitation": {
+                    "ttl": null,
+                    "length": 4,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "livechat_is_page_refreshed": {
+                    "ttl": null,
+                    "length": 5,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "livechat_prechat_messagecounter": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "livechat_prechat_lastmessage": {
+                    "ttl": null,
+                    "length": 45,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "livechat_prechat_message_ids": {
+                    "ttl": null,
+                    "length": 15,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "livechat_v3_invitation_shown": {
+                    "ttl": 307,
+                    "length": 4,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "livechat_agent_alias_id": {
+                    "ttl": 3607,
+                    "length": 5,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "livechat_operator_id": {
+                    "ttl": 607,
+                    "length": 1,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "livechat_visitor_id": {
+                    "ttl": 21907,
+                    "length": 10,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "livechat_profile_id": {
+                    "ttl": 86407,
+                    "length": 6,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "livechat_visitLogged": {
+                    "ttl": 21907,
+                    "length": 4,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "livechat_invitation_traffic_sources": {
+                    "ttl": 15724808,
+                    "length": 140,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "apexchat_dompopup_chatwindow": {
+                    "ttl": null,
+                    "length": 9,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                },
+                "questionTypeId": {
+                    "ttl": null,
+                    "length": 7,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 1
+                },
+                "apexchat_prechat_invitation": {
+                    "ttl": null,
+                    "length": 4,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/api\\/invitations\\/options",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "133504c2fa064695f54e2fef1e89152dcf8e21036bd8cb156a95259a1290038a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/RdTheme\\/index\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a60f71c8f2b5c10e58a0f8178ddc7720fd09f1f51a50560bfaac60f2c5368183"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/RdTheme\\/prechat\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "664bba572c192f6a355253d96f6cbf9fc5e1292c5ccd6904a2df0a92b14dfb36"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/invitationHandler\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "68812d1967f8f3f8391dda90f45894b5893c1790dc03264abc0f2388dd2ab2ba"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/5899\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "29ab73a3ee952d0873a7fe3b5ffa4d1651e0670fb1bf4e170c6ef9b69a70b187"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/registerPreChat\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "33594ec486fa72c88e86ec440ab4cd9956a8f4393e50c1e6fd713f806b301012"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/5413\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "36989cf66a6e4867877f1ab16482cb0d98f4e015eb23e6bb330a8f5b6215c280"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/9099\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7b463eefe288f352f117e7b3d732b8822681c2b1ce88fc7c46e06e6e40fdc02a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/2322\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "96062422d0f2d88773c40eff9b23a7737abd227984b7e7fb72677af2d8f35b84"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/PreChatInvitation\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e48e148f1a1241d019126760ecda86862292f667933db81187c23b7ca592a4a6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/registerDOM\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "48dfcbfb85c53cd4100517e9e2ad2ee002f780d200aa5318737b1f96c7c57754"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/DOMChatWindow\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7d960fcbeb36a21f40e31205d80bb9340c9fe652f2ae8d989bbf3da33a6242da"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/questionTypeRendererExtension\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3bf3437c609ead765e4d76d7255671a756d00438f44e05667bf7842f05388001"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/questionTypeRenderer\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cf875364a4a1dd316ee33711a030993fb42c59b086f02feab22587641ca749b6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/questionTypeRendererFactory\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f9310c10991c60e6d7d294131b626e253a811df883a9c40b4275cc828939b9df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/4339\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "15333dd7846a8ec902048d8de9dfe57f621ac5801478455a4db8afb7bda979a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/mcListMessageRenderer\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2dbeec1fc338aa65dc4aab1fc3df18aa90df25d8741b40290e9219af31137265"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        },
+        {
+            "rule": "apex\\.live\\/contents\\/scripts\\/dist\\/dataDogHandler\\.chunk\\.1e7d0af3f9b234896bc7\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9589f45b9abea4eabb4f6da5ec402c12b0c3819a524f5979f49cc930c08a7312"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinicropispine.com",
+                "softwarefinder.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 32,
+        "Fetch": 2,
+        "Stylesheet": 4
+    },
+    "nameservers": [
+        "lara.ns.cloudflare.com",
+        "max.ns.cloudflare.com"
+    ]
+}

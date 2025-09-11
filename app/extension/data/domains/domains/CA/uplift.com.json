@@ -1,0 +1,140 @@
+{
+    "domain": "uplift.com",
+    "owner": {
+        "name": "Uplift Canada Services ULC",
+        "displayName": "Uplift"
+    },
+    "source": [
+        "DuckDuckGo-CA"
+    ],
+    "prevalence": 0.000406,
+    "sites": 4,
+    "subdomains": [
+        "tag",
+        "pm-mrkt"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "uplift\\.com\\/external\\/up\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.language": 2,
+                "Event.prototype.timeStamp": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "02c77183879947f4c8523a628c170d2a9dc8d9bd3b350648cd1cf8cf0b167926",
+                "65eae37ef33c795e24bfd6069457b7a2c9279769639dd986eb7186a0977ce504",
+                "e7d96f0911de643e4dd1c1a9613c4c97159278110f13ccea8cb7828c30a365bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_up": {
+                    "ttl": 63072008,
+                    "length": 25,
+                    "prevalence": 0.00020302507359658918,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flyflair.com",
+                "www.carnival.com",
+                "www.redtag.ca",
+                "www.selloffvacations.com"
+            ]
+        },
+        {
+            "rule": "uplift\\.com\\/marketing\\/v6\\/from",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pm-mrkt"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flyflair.com",
+                "www.redtag.ca"
+            ]
+        },
+        {
+            "rule": "uplift\\.com\\/marketing\\/v6\\/from",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pm-mrkt"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "660a186a6ba93065f14db48b876002789b05732797dea9f9df5a6d1243663efd",
+                "20389fa8e7ba6cde5329db32168510d7cbdcc0dbfa6ac1ac500163623b884f51"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flyflair.com",
+                "flights.flyflair.com",
+                "www.redtag.ca"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000203,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "optimizely.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "uplift-platform.com",
+            "prevalence": 0.2
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Preflight": 2,
+        "XHR": 3
+    },
+    "nameservers": [
+        "ns-1882.awsdns-43.co.uk",
+        "ns-863.awsdns-43.net",
+        "ns-282.awsdns-35.com",
+        "ns-1322.awsdns-37.org"
+    ]
+}

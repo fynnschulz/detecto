@@ -1,0 +1,133 @@
+{
+    "domain": "bc0a.com",
+    "owner": {
+        "name": "BrightEdge Technologies Inc.",
+        "displayName": "BrightEdge"
+    },
+    "source": [
+        "DuckDuckGo-NO"
+    ],
+    "prevalence": 0.000805,
+    "sites": 8,
+    "subdomains": [
+        "cdn",
+        "ixfd2-api",
+        "marvel-b2-cdn",
+        "marvel-processor"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "bc0a\\.com\\/autopilot\\/f00000000293912\\/autopilot_sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "276845f6cfdd1127e1a51d0a254bd5470f7dab64700f8d88363d5a9c9fc250aa"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "staypro.no",
+                "www.staypro.no"
+            ]
+        },
+        {
+            "rule": "bc0a\\.com\\/api\\/ixf\\/1\\.0\\.0\\/get_capsule\\/f00000000293912\\/388649678",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ixfd2-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d704f10ae7124c8d9394628a94c21a7cc772753a0d6e6c55366a9dc82745bc5b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "staypro.no",
+                "www.staypro.no"
+            ]
+        },
+        {
+            "rule": "bc0a\\.com\\/marvel\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "marvel-b2-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "190db2ea37186511e3cdfaeb6e37e68830c90647a9c18840f33ce00c03a05bd0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fortinet.com",
+                "www.silabs.com"
+            ]
+        },
+        {
+            "rule": "bc0a\\.com\\/snowcloud\\/v1\\/api\\/loadUrl",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "marvel-processor"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoopladigital.com",
+                "www.hoopladigital.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "XHR": 2,
+        "Image": 2
+    },
+    "nameservers": [
+        "pdns10.domaincontrol.com",
+        "pdns09.domaincontrol.com"
+    ]
+}

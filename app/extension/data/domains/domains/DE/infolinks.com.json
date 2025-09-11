@@ -1,0 +1,211 @@
+{
+    "domain": "infolinks.com",
+    "owner": {
+        "name": "Infolink Media LLC",
+        "displayName": "Infolink Media"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "resources",
+        "router",
+        "rt3028",
+        "rt3056"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "infolinks\\.com\\/js\\/infolinks_main\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "resources"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "7fc95536f982812d0dee4a6c7e408014f2df96b3237811b34d0ef5965664eab8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "addwiki.de",
+                "www.laweekly.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/js\\/2003\\.005-4\\.011\\/ice\\.js",
+            "cookies": 0.000303,
+            "fingerprinting": 2,
+            "subdomains": [
+                "resources"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.plugins": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "4c6b12207cc90416b68df6b1ac832afa4ea21c2fb95641cd1580b36a4bec607f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "logglytrackingsession": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.0003026939763898698,
+                    "uniqueness": 1
+                },
+                "gCStest": {
+                    "ttl": -808675356,
+                    "length": 8,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "addwiki.de",
+                "www.laweekly.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/usync\\/manage",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "router"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "addwiki.de",
+                "www.laweekly.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/usync\\/lcmanage",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "router"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "addwiki.de",
+                "www.laweekly.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/gsd",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "router"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "f9fb517d6679c01dd892160ae1ea496aaf4cb1fbff8e538b61fdbf3b35016f86",
+                "d86f88a5b89739d19fe6622269b30fce8f990fe4f8e061d8212aeaa611aaae40"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "addwiki.de",
+                "www.laweekly.com",
+                "www.wikifeet.com"
+            ]
+        },
+        {
+            "rule": "infolinks\\.com\\/action\\/doq\\.htm",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt3028",
+                "rt3056"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d2c9f938654c8d8d26131ab20008696c4e98048601cb1a1ff4ccd74c8d84f5d0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "laweekly.com",
+                "www.wikifeet.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 12,
+        "Document": 3,
+        "XHR": 2
+    },
+    "nameservers": [
+        "bob.ns.cloudflare.com",
+        "lisa.ns.cloudflare.com"
+    ]
+}

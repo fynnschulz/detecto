@@ -1,0 +1,242 @@
+{
+    "domain": "de.edgekey.net",
+    "owner": {
+        "name": "Akamai Technologies",
+        "displayName": "Akamai",
+        "privacyPolicy": "https://www.akamai.com/us/en/privacy-policies/",
+        "url": "http://akamai.com"
+    },
+    "source": [
+        "DuckDuckGo-FR"
+    ],
+    "prevalence": 0.00141,
+    "sites": 14,
+    "subdomains": [
+        "accounts.bahn",
+        "img.ui-portal",
+        "gtm.idealo",
+        "server.sgtm-legacy.kleinanzeigen",
+        "ssl.zdf"
+    ],
+    "cnames": [
+        {
+            "original": "accounts.bahn.de",
+            "resolved": "accounts.bahn.de.edgekey.net"
+        },
+        {
+            "original": "api.zdf.de",
+            "resolved": "ssl.zdf.de.edgekey.net"
+        },
+        {
+            "original": "gtm.idealo.de",
+            "resolved": "gtm.idealo.de.edgekey.net"
+        },
+        {
+            "original": "img.ui-portal.de",
+            "resolved": "img.ui-portal.de.edgekey.net"
+        },
+        {
+            "original": "server.sgtm-legacy.kleinanzeigen.de",
+            "resolved": "server.sgtm-legacy.kleinanzeigen.de.edgekey.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.bahn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "accounts.bahn.de",
+                    "resolved": "accounts.bahn.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bahn.de",
+                "www.bahn.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/pos-cdn\\/tracklib\\/4\\.3\\.0\\/tracklib\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "img.ui-portal"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "img.ui-portal.de",
+                    "resolved": "img.ui-portal.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "40a6f6526afea19db42dcf345249915ccacc710ee6c97091d5d6285b5f90ead3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "web.de",
+                "www.gmx.fr",
+                "www.mail.com"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/gtm\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gtm.idealo",
+                "server.sgtm-legacy.kleinanzeigen"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "gtm.idealo.de",
+                    "resolved": "gtm.idealo.de.edgekey.net"
+                },
+                {
+                    "original": "server.sgtm-legacy.kleinanzeigen.de",
+                    "resolved": "server.sgtm-legacy.kleinanzeigen.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "c923cd72b4bfc8a447093e2fc48ef75ec29d0d41b88b58eb28d6c89520737df6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idealo.de",
+                "www.kleinanzeigen.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server.sgtm-legacy.kleinanzeigen"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "server.sgtm-legacy.kleinanzeigen.de",
+                    "resolved": "server.sgtm-legacy.kleinanzeigen.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kleinanzeigen.de",
+                "www.kleinanzeigen.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl.zdf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.zdf.de",
+                    "resolved": "ssl.zdf.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "8b494a6399e04d1ece939ddab8764347e9d1133a42d9c71bac05b66b8666a2b3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdf.de",
+                "www.zdf.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl.zdf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.zdf.de",
+                    "resolved": "ssl.zdf.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdf.de",
+                "www.zdf.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000505,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.6774193548387096
+        },
+        {
+            "domain": "uicdn.com",
+            "prevalence": 0.12903225806451613
+        },
+        {
+            "domain": "hs-data.com",
+            "prevalence": 0.12903225806451613
+        },
+        {
+            "domain": "ui-portal.de",
+            "prevalence": 0.03225806451612903
+        },
+        {
+            "domain": "bildstatic.de",
+            "prevalence": 0.03225806451612903
+        }
+    ],
+    "types": {
+        "Document": 2,
+        "Script": 5,
+        "Fetch": 4,
+        "Preflight": 2
+    },
+    "nameservers": []
+}

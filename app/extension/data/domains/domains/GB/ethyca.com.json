@@ -1,0 +1,82 @@
+{
+    "domain": "ethyca.com",
+    "owner": {
+        "name": "Ethyca Inc",
+        "displayName": "Ethyca"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000302,
+    "sites": 3,
+    "subdomains": [
+        "wetransfer.fides-cdn",
+        "skillsoft-codecademy.fides-cdn",
+        "haven.fides-cdn"
+    ],
+    "cnames": [
+        {
+            "original": "privacy.wetransfer.com",
+            "resolved": "wetransfer.fides-cdn.ethyca.com"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ethyca\\.com\\/fides\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wetransfer.fides-cdn",
+                "skillsoft-codecademy.fides-cdn",
+                "haven.fides-cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "privacy.wetransfer.com",
+                    "resolved": "wetransfer.fides-cdn.ethyca.com"
+                }
+            ],
+            "responseHashes": [
+                "cd727d4a4d9ef7c325aa3aef9611f7b3bc5464e42e2831f9971356f79710a1ad",
+                "6be3e2d8fafa357a2c03c3396452c04dc776bf9593254050918efcec5c940411"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wetransfer.com",
+                "www.codecademy.com",
+                "www.haven.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        }
+    ],
+    "types": {
+        "Script": 3
+    },
+    "nameservers": [
+        "ns-736.awsdns-28.net",
+        "ns-1045.awsdns-02.org",
+        "ns-130.awsdns-16.com",
+        "ns-1866.awsdns-41.co.uk"
+    ]
+}

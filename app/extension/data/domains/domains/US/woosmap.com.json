@@ -1,0 +1,316 @@
+{
+    "domain": "woosmap.com",
+    "owner": {
+        "name": "Web Geo Services",
+        "displayName": "Web Geo Services"
+    },
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.000192,
+    "sites": 28,
+    "subdomains": [
+        "api",
+        "sdk"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "woosmap\\.com\\/geolocation\\/position\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "d0110f09a4479c954acaba5e3f6fd29c49c3e48c871027b335604e1993115a0f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "diy.com",
+                "www.diy.com",
+                "www.diy.ie",
+                "www.hunkemoller.de"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/localities\\/localities\\.2\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5
+            },
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "ad8110dfb7c6a7e2f7e62f95b1135985350f23d2ce57be3e5a816bca62b1b4f2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toolstation.com",
+                "www.carrefour.it",
+                "www.sephora.fr",
+                "www.sephora.de",
+                "www.toolstation.com"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/localities\\/style\\.2\\.0\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f96fa9ed7a9c2111534a987b5272315363f250aa5dc7b3fc9c61d7303022b9b0"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burgerking.fr",
+                "www.theworks.co.uk"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/localities\\/localitieswidget\\.2\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 7
+            },
+            "sites": 7,
+            "prevalence": 0.0000479,
+            "cnames": [],
+            "responseHashes": [
+                "f8248d669c1a2dcd9f9f33630c4d09196161c4d0e9904703a92bf224ade76ce5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burgerking.fr",
+                "www.cosentino.com",
+                "www.hunkemoller.de",
+                "www.intimissimi.com",
+                "www.spoticar.fr",
+                "www.tezenis.com",
+                "www.theworks.co.uk"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/locator\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000342,
+            "cnames": [],
+            "responseHashes": [
+                "920a0469c8c2cb514ad8d5872c245135847eab294fb663336cc5981ac6426096"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "burgerking.fr",
+                "www.harvester.co.uk",
+                "www.location.leclerc",
+                "www.millerandcarter.co.uk",
+                "www.theworks.co.uk"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/geolocation\\/position\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d0110f09a4479c954acaba5e3f6fd29c49c3e48c871027b335604e1993115a0f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "castorama.fr",
+                "www.diy.com"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/map\\/map\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.hardwareConcurrency": 3,
+                "URL.createObjectURL": 3,
+                "Navigator.prototype.languages": 1,
+                "window.devicePixelRatio": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "CanvasRenderingContext2D.prototype.getImageData": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "af0533327291dce97b5ef6d8ce91dfd4efd5fed933308883ac8f086f0af37db6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elcorteingles.pt",
+                "www.lahalle.com",
+                "www.nice.aeroport.fr"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/localities\\/localities\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "a3fb8c88c236709a06c4d16bc988b443429761ae93c5371715daf5230bebd8f8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "electrodepot.fr",
+                "www.harvester.co.uk",
+                "www.millerandcarter.co.uk"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/locator\\/1\\.4\\/locastore\\.nojquery\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1734849cfd6d301e52fa08768835c09c240c9fc56237e1bdbcf42de774e46c29"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "harvester.co.uk",
+                "www.millerandcarter.co.uk"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/project\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "0ccdfe7a0004e9e605b9c768cae30a1c6a9c3a06b55c06367472c36d49172038",
+                "f574384f66186b32704c4b8397a1c8b08a0ab34676402c41b35cd6734525bf82"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "harvester.co.uk",
+                "www.location.leclerc",
+                "www.millerandcarter.co.uk"
+            ]
+        },
+        {
+            "rule": "woosmap\\.com\\/stores\\/search\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "180147f741890517d2aa197bc7a460d242e26a0cac5a2cfb8fc038041e04edcc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "location.leclerc",
+                "www.location.leclerc"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9753086419753086
+        },
+        {
+            "domain": "noibu.com",
+            "prevalence": 0.024691358024691357
+        }
+    ],
+    "types": {
+        "XHR": 9,
+        "Script": 25,
+        "Stylesheet": 2,
+        "Fetch": 2
+    },
+    "nameservers": [
+        "chad.ns.cloudflare.com",
+        "jasmine.ns.cloudflare.com"
+    ]
+}

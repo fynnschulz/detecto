@@ -1,0 +1,722 @@
+{
+    "domain": "witglobal.net",
+    "owner": {
+        "name": "Würth IT GmbH",
+        "displayName": "Würth IT"
+    },
+    "source": [
+        "DuckDuckGo-CH"
+    ],
+    "prevalence": 0.000402,
+    "sites": 4,
+    "subdomains": [
+        "analytics",
+        "api-ebwd",
+        "media",
+        "www-eshop-01"
+    ],
+    "cnames": [
+        {
+            "original": "eshop.wuerth-ag.ch",
+            "resolved": "www-eshop-01.witglobal.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "witglobal\\.net\\/containers\\/181ed958-ab01-496b-a3a6-7dece9db60ed\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "Navigator.prototype.languages": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.doNotTrack": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5447e8a052fe0528f31163f5a65e08e04e26ca79fa94497da3113d3668bd9ded"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ppms_privacy_181ed958-ab01-496b-a3a6-7dece9db60ed": {
+                    "ttl": 31536008,
+                    "length": 322,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/caas-api\\/offers\\/campaigns\\/3126\\/DE",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-ebwd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4e1b254be86f4b8025d063d08d14abd94619125b6a0c063c6bc8fed433fec86d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "eshop.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/caas-api\\/offers\\/campaigns\\/3126\\/DE",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-ebwd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "eshop.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/ppms\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2,
+                "PerformanceTiming.prototype.navigationStart": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "009c869c8d5e5dcb79c86bfafebe25522ee98d7f251d8f3c910277c828171d5c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.181ed958-ab01-496b-a3a6-7dece9db60ed.5e1b": {
+                    "ttl": 33955209,
+                    "length": 52,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 1
+                },
+                "_pk_ses.181ed958-ab01-496b-a3a6-7dece9db60ed.5e1b": {
+                    "ttl": 1809,
+                    "length": 1,
+                    "prevalence": 0.00020096463022508038,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/ppms\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "eshop.wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/646609945\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "aa58d5ec46ff3a04f68c9af777b09634b54943aa35cd5fe59aae5ce94fc8ddaf"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/581823191\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a684261e716b11494a72935c4ea766d729b6f3c84c6692ebf6c59f9754637a5a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/553625480\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2084a26e3115a7b90cce00a8af4890b12011934a4b85d1569435bd2185b34a1b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/577938182\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e0f29625aad3172ddb3c472bd6cefa9aed504dcadb38b5f510c91e424d5720b9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/1837853\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "25356d9b7f8a670dbd37c2cf79dcb0b6ee801077dd4334054410a71692503df3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/3516440\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "52797c2a14c642caa554fcaec8f9a3750a7e3dc0c60e21414608a0b9af9f8dc6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/641936833\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4b3d01182c02394012c6ad4a1a2e9f2139f5060038f72b24020b53c09c59cab7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/644195074\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "290a4390b1e7c42eed8875830587b638384b4f8ac14acc6c64edb7ea95234d58"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/23319807\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1c553d6f6273bfda5d10722ac9db591c186653ea03a0cc8bc65a9b50460bce89"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/83407\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "556ba3fb7000d042871014e404578dc60d72585b5db166d79b194b70cc4681d0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/29864611\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b345471be56b64dbf1ae6d181e0360eb20c2c77baf7487e03715dbcc934e6ff7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/41653\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a391e4fde24d8756a57ceb8970431a69c2568ce600c71db6db9af08cf017832a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/21161841\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "159cbcb5108efb50ae0d3a67cb4b3c79cc68d7deccd5b2643b0575f1e3f2e132"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/source\\/eshop\\/stmedia\\/0100\\/images\\/std\\.lang\\.all\\/resolutions\\/category\\/348px\\/583019971\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "media"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a32eccf1dabb1d7a4f374d98dec4e248f186916f87f9cba619f0897080f737de"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/is-bin\\/INTERSHOP\\.enfinity\\/WFS\\/3126-B1-Site\\/de_DE\\/-\\/CHF\\/ViewApplicationFrame-AjaxRetrieveHeaderMegaDropdown",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www-eshop-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "eshop.wuerth-ag.ch",
+                    "resolved": "www-eshop-01.witglobal.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/is-bin\\/INTERSHOP\\.enfinity\\/WFS\\/3126-B1-Site\\/de_DE\\/-\\/CHF\\/ViewApplicationFrame-AjaxRetrieveRetrieveOnlineShopMenuItems",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www-eshop-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "eshop.wuerth-ag.ch",
+                    "resolved": "www-eshop-01.witglobal.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/is-bin\\/INTERSHOP\\.enfinity\\/WFS\\/3126-B1-Site\\/de_DE\\/-\\/CHF\\/ViewApplicationFrame-AjaxRetrieveHeaderMegaDropdown",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www-eshop-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "eshop.wuerth-ag.ch",
+                    "resolved": "www-eshop-01.witglobal.net"
+                }
+            ],
+            "responseHashes": [
+                "8102a89aadce6945dfc304d26b10dcd2c9907a55e11ed0338ca0dc72c52b691e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/is-bin\\/INTERSHOP\\.enfinity\\/WFS\\/3126-B1-Site\\/de_DE\\/-\\/CHF\\/ViewApplicationFrame-AjaxRetrieveRetrieveOnlineShopMenuItems",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www-eshop-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "eshop.wuerth-ag.ch",
+                    "resolved": "www-eshop-01.witglobal.net"
+                }
+            ],
+            "responseHashes": [
+                "eaeb5b0b8517b29275a32ccab1130cea740ba32cf48206a80576bca469555c17"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/is-bin\\/INTERSHOP\\.enfinity\\/WFS\\/3126-B1-Site\\/de_DE\\/-\\/CHF\\/ViewCurrentReq-AjaxRequisitionPreview",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www-eshop-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "eshop.wuerth-ag.ch",
+                    "resolved": "www-eshop-01.witglobal.net"
+                }
+            ],
+            "responseHashes": [
+                "9e1d6bf09734ab05c446b1b2270eeb8c1a980dc41b2f493c10d76b7a255bfe50"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/is-bin\\/INTERSHOP\\.enfinity\\/WFS\\/3126-B1-Site\\/de_DE\\/-\\/CHF\\/ViewSearchTermSuggestion-AjaxIsActive",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www-eshop-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "eshop.wuerth-ag.ch",
+                    "resolved": "www-eshop-01.witglobal.net"
+                }
+            ],
+            "responseHashes": [
+                "906cc9e8ba64ff61ff19f36cbe6c24602b4529dff2a97fff2865b49d98b8b6a8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/is-bin\\/INTERSHOP\\.enfinity\\/WFS\\/3126-B1-Site\\/de_DE\\/-\\/EUR\\/ViewJsonController-Start",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www-eshop-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "eshop.wuerth-ag.ch",
+                    "resolved": "www-eshop-01.witglobal.net"
+                }
+            ],
+            "responseHashes": [
+                "e29648e655d132e1bb9ca948b38dffab53080171a12cf11e2dc129ce80e96785"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        },
+        {
+            "rule": "witglobal\\.net\\/is-bin\\/intershop\\.static\\/WFS\\/3126-B1-Site\\/3126-B1\\/de_DE\\/images\\/Cookies_transparent_1\\.avif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www-eshop-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "eshop.wuerth-ag.ch",
+                    "resolved": "www-eshop-01.witglobal.net"
+                }
+            ],
+            "responseHashes": [
+                "28b2cdbf6cba6e59a7ff085d2336eb6ce9c6ddf7d909b06396d89dd82987a97f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wuerth-ag.ch",
+                "www.wuerth-ag.ch"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000402,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.9705882352941176
+        },
+        {
+            "domain": "witglobal.net",
+            "prevalence": 0.029411764705882353
+        }
+    ],
+    "types": {
+        "Script": 4,
+        "Fetch": 2,
+        "Preflight": 6,
+        "Ping": 3,
+        "Image": 30,
+        "XHR": 10
+    },
+    "nameservers": [
+        "ns2.xc-ns.de",
+        "ns5.xc-ns.de"
+    ]
+}

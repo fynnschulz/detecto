@@ -1,0 +1,174 @@
+{
+    "domain": "forgerock.io",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000479,
+    "sites": 7,
+    "subdomains": [
+        "openam-availity-use1.id",
+        "openam-beamsuntory-use1.id",
+        "openam-univofphoenix-usw2.id"
+    ],
+    "cnames": [
+        {
+            "original": "auth.makersmark.com",
+            "resolved": "openam-beamsuntory-use1.id.forgerock.io"
+        },
+        {
+            "original": "login-prod.availity.com",
+            "resolved": "openam-availity-use1.id.forgerock.io"
+        },
+        {
+            "original": "login.phoenix.edu",
+            "resolved": "openam-univofphoenix-usw2.id.forgerock.io"
+        }
+    ],
+    "fingerprinting": 0,
+    "resources": [
+        {
+            "rule": "forgerock\\.io\\/am\\/json\\/realms\\/root\\/realms\\/alpha\\/authenticate",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openam-availity-use1.id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "login-prod.availity.com",
+                    "resolved": "openam-availity-use1.id.forgerock.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "availity.com",
+                "essentials.availity.com"
+            ]
+        },
+        {
+            "rule": "forgerock\\.io\\/am\\/json\\/realms\\/root\\/realms\\/alpha\\/authenticate",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openam-availity-use1.id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "login-prod.availity.com",
+                    "resolved": "openam-availity-use1.id.forgerock.io"
+                }
+            ],
+            "responseHashes": [
+                "45dc6a5bb0f0ecdc0d4b867061a3c965adfadc6462835704abcb34d0f31d0065"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "availity.com",
+                "essentials.availity.com"
+            ]
+        },
+        {
+            "rule": "forgerock\\.io\\/am\\/oauth2\\/alpha\\/authorize",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openam-beamsuntory-use1.id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "auth.makersmark.com",
+                    "resolved": "openam-beamsuntory-use1.id.forgerock.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "makersmark.com",
+                "www.makersmark.com"
+            ]
+        },
+        {
+            "rule": "forgerock\\.io\\/am\\/json\\/realms\\/root\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openam-univofphoenix-usw2.id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "login.phoenix.edu",
+                    "resolved": "openam-univofphoenix-usw2.id.forgerock.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "phoenix.edu",
+                "www.phoenix.edu"
+            ]
+        },
+        {
+            "rule": "forgerock\\.io\\/am\\/json\\/realms\\/root\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "openam-univofphoenix-usw2.id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "login.phoenix.edu",
+                    "resolved": "openam-univofphoenix-usw2.id.forgerock.io"
+                }
+            ],
+            "responseHashes": [
+                "af5fd803088fcdc627e5cd97fb88d7fcbbb02a705f38fd48b1ab5f4ffca50ae8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "phoenix.edu",
+                "www.phoenix.edu"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000137,
+    "types": {
+        "Preflight": 4,
+        "Fetch": 4,
+        "Document": 2
+    },
+    "nameservers": [
+        "ns-cloud-a3.googledomains.com",
+        "ns-cloud-a2.googledomains.com",
+        "ns-cloud-a4.googledomains.com",
+        "ns-cloud-a1.googledomains.com"
+    ]
+}

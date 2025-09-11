@@ -1,0 +1,114 @@
+{
+    "domain": "stripe.network",
+    "owner": {
+        "name": "Stripe, Inc",
+        "displayName": "Stripe",
+        "privacyPolicy": "https://stripe.com/privacy",
+        "url": "http://stripe.com"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.000705,
+    "sites": 7,
+    "subdomains": [
+        "m"
+    ],
+    "cnames": [],
+    "fingerprinting": 3,
+    "resources": [
+        {
+            "rule": "stripe\\.network\\/inner\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "34a85e78b5402c253c2bc4cf64426c2b6b18601602e8a9a71568139fb3ee6599"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afors.com",
+                "r6.tracker.network",
+                "road.cc",
+                "www.avfc.co.uk",
+                "www.itfc.co.uk",
+                "www.meetup.com",
+                "www.wrexhamafc.co.uk"
+            ]
+        },
+        {
+            "rule": "stripe\\.network\\/out-4\\.5\\.44\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 6,
+                "Navigator.prototype.doNotTrack": 6,
+                "Navigator.prototype.languages": 6,
+                "Navigator.prototype.platform": 6,
+                "Navigator.prototype.plugins": 4,
+                "Screen.prototype.availWidth": 4,
+                "Screen.prototype.availHeight": 4,
+                "Screen.prototype.colorDepth": 4,
+                "window.devicePixelRatio": 4,
+                "Date.prototype.getTimezoneOffset": 6,
+                "window.sessionStorage": 5,
+                "window.localStorage": 4,
+                "CanvasRenderingContext2D.prototype.measureText": 5,
+                "Navigator.prototype.userAgent": 6,
+                "Navigator.prototype.mimeTypes": 6,
+                "HTMLCanvasElement.prototype.toDataURL": 4
+            },
+            "sites": 6,
+            "prevalence": 0.000604,
+            "cnames": [],
+            "responseHashes": [
+                "bd6e71e0a8f18b3dd4bbeb6fd673015fec896bd92e17c11f3dc8fe96a06de1f4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afors.com",
+                "r6.tracker.network",
+                "road.cc",
+                "www.avfc.co.uk",
+                "www.itfc.co.uk",
+                "www.meetup.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Online Payment",
+        "CDN",
+        "Embedded Content"
+    ],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "stripe.com",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Document": 7,
+        "Script": 6
+    },
+    "nameservers": [
+        "ns-1087.awsdns-07.org",
+        "ns-705.awsdns-24.net",
+        "ns-423.awsdns-52.com",
+        "ns-1882.awsdns-43.co.uk"
+    ]
+}

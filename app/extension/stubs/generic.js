@@ -12,7 +12,7 @@
 
   // Idempotenz & Stealth-Helpers
   if (window.__PROTECTO_GENERIC__) return;
-  window.__PROTECTO_GENERIC__ = true;
+  (function(){ try { Object.defineProperty(window, '__PROTECTO_GENERIC__', { value: true, writable:false, configurable:false, enumerable:false }); } catch { window.__PROTECTO_GENERIC__ = true; } })();
   function nativeFn(name){ return function(){ return `function ${name}() { [native code] }`; }; }
   function defGlobal(obj, key, value){
     try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
@@ -38,7 +38,7 @@
     try {
       if (!(name in window) || typeof window[name] === 'undefined') {
         const value = (typeof valueFactory === 'function') ? valueFactory() : valueFactory;
-        Object.defineProperty(window, name, { configurable: true, enumerable: false, writable: true, value });
+        Object.defineProperty(window, name, { configurable: false, enumerable: false, writable: false, value });
       }
     } catch { /* ignore */ }
   }
@@ -51,37 +51,40 @@
     try {
       const existing = Array.isArray(window.dataLayer) ? window.dataLayer.slice() : [];
       let buffer = existing.slice(-MAX_EVENTS);
+      const target = existing.slice(-MAX_EVENTS); // visible array content
 
       function dlPush() {
         try {
           for (let i = 0; i < arguments.length; i++) {
             if (buffer.length >= MAX_EVENTS) buffer.shift();
             buffer.push(arguments[i]);
+            if (target.length >= MAX_EVENTS) target.shift();
+            target.push(arguments[i]);
           }
-        } catch { /* ignore */ }
-        return buffer.length;
+        } catch {}
+        return target.length;
       }
 
-      const proxy = [];
-      proxy.push = dlPush;
-      try { proxy.push.toString = nativeFn('push'); } catch {}
-      try {
-        const desc = Object.getOwnPropertyDescriptor(proxy, 'push') || { value: proxy.push };
-        Object.defineProperty(proxy, 'push', { value: desc.value, writable:false, configurable:false, enumerable:false });
-      } catch {}
+      const handler = {
+        get(t, prop){
+          if (prop === 'push') return dlPush;
+          if (prop === '__dump') return () => buffer.slice();
+          return Reflect.get(t, prop);
+        },
+        set(t, prop, value){
+          if (prop === 'length') {
+            // Support dataLayer.length = 0 resets
+            t.length = 0;
+            buffer = [];
+            return true;
+          }
+          return Reflect.set(t, prop, value);
+        }
+      };
 
-      // Lesezugriff auf aktuellen Snapshot
-      Object.defineProperty(proxy, '__dump', {
-        configurable: false,
-        enumerable: false,
-        get: () => buffer.slice()
-      });
-      try {
-        Object.defineProperty(proxy, 'length', { get: () => buffer.length, enumerable:false, configurable:false });
-      } catch {}
-
+      const proxy = new Proxy(target, handler);
       safeGlobal('dataLayer', () => proxy);
-    } catch { /* ignore */ }
+    } catch {}
   }
 
   // ==== (Optional) Consent-Signal für Google Consent Mode ====================
@@ -91,9 +94,9 @@
       if (typeof window.gtag === 'function') {
         await jitter(10, 35);
         window.gtag('consent', 'update', {
-          ad_storage: 'granted',
-          analytics_storage: 'granted',
-          personalization_storage: 'granted',
+          ad_storage: 'denied',
+          analytics_storage: 'denied',
+          personalization_storage: 'denied',
           functionality_storage: 'granted',
           security_storage: 'granted'
         });
@@ -114,6 +117,7 @@
     gtag.q = q;
     try { gtag.toString = nativeFn('gtag'); } catch {}
     defGlobal(window, 'gtag', gtag);
+  }
 
   // Minimaler GA-Stub (nur wenn nicht vorhanden) – Queue + API-Fassade
   if (typeof window.ga !== 'function') {
@@ -134,7 +138,7 @@
   // Minimaler FBQ-Stub (nur wenn nicht vorhanden) – Queue + API-Fassade
   if (typeof window.fbq !== 'function') {
     const pre = [];
-    function fbq(){ pre.push([].slice.call(arguments)); return 'fbq-stub'; }
+    function fbq(){ pre.push([].slice.call(arguments)); return true; }
     fbq.callMethod = function(){ return; };
     fbq.push = function(){ return; };
     fbq.disablePushState = true;
@@ -153,15 +157,15 @@
 
   // Minimalobjekt für google_tag_manager – verhindert Fingerprinting-Fehler
   if (typeof window.google_tag_manager !== 'object') {
-    const gtm = new Proxy({}, {
+    const store = Object.create(null);
+    const gtm = new Proxy(store, {
       get(target, key){
         if (key === 'toString') return nativeFn('Object');
-        if (!(key in target)) target[key] = {};
+        if (!(key in target)) target[key] = Object.create(null);
         return target[key];
       }
     });
     defGlobal(window, 'google_tag_manager', gtm);
-  }
   }
 
   // _gaq / _paq – alte Tracker-Queues, nur No-Op push

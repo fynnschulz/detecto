@@ -1,0 +1,295 @@
+{
+    "domain": "ingage.tech",
+    "owner": {
+        "name": "Insticator",
+        "displayName": "Insticator"
+    },
+    "source": [
+        "DuckDuckGo-GB"
+    ],
+    "prevalence": 0.00302,
+    "sites": 30,
+    "subdomains": [
+        "usync",
+        "sync",
+        "ex",
+        "cs"
+    ],
+    "cnames": [],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "ingage\\.tech\\/",
+            "cookies": 0.000403,
+            "fingerprinting": 1,
+            "subdomains": [
+                "usync",
+                "sync"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 3,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 7,
+            "prevalence": 0.000705,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002",
+                "e331b119aaf370ba35f030f40af375dde3a8534c22872bde85e661bb83c29a5c",
+                "8133566f1b8ceb273943774137761d19c41e6f8b9b7ced2f3bd2f4eac5043b57"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "instUid": {
+                    "ttl": 7776026,
+                    "length": 36,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                },
+                "instPixels": {
+                    "ttl": 172826,
+                    "length": 260,
+                    "prevalence": 0.00020128824476650564,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boxrec.com",
+                "flashbak.com",
+                "onemileatatime.com",
+                "www.azlyrics.com",
+                "www.hardreset.info",
+                "www.myabandonware.com",
+                "www.owlstalk.co.uk"
+            ]
+        },
+        {
+            "rule": "ingage\\.tech\\/cdn-cgi\\/challenge-platform\\/scripts\\/jsd\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "usync"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boxrec.com",
+                "www.azlyrics.com",
+                "www.myabandonware.com"
+            ]
+        },
+        {
+            "rule": "ingage\\.tech\\/v1\\/openrtb",
+            "cookies": 0.00211,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ex"
+            ],
+            "apis": {},
+            "sites": 22,
+            "prevalence": 0.00221,
+            "cnames": [],
+            "responseHashes": [
+                "88368e5139dd1c664e2dce128ac4a586771bde9afa06242312f96ca6d9dce93d",
+                "93435ff51d02ced51d65398892c03b6a06a87ef103686d58ede972a2dcaa2263",
+                "6b8f58ca0607f057a94d384484aa5836bce7e5a125bdfe2d537bb2f333b2509d",
+                "b34f336656cb835b88f445f729220a5d9a93b7d05f1bbe8fe28331ac479ea526",
+                "ad9997618a7160465a3d59f81065741cdec62fdb7dd3de2ec07b585fed886fbc",
+                "6f4d47dfd166387a82ab717055b48e981c9a334082f7c270558baf356bd39d1e",
+                "7ff55bf8324c4af8cd7f704db5b4a80abc2def132b9a310ae8058ef54736bbdb",
+                "7a04c1b4a471ce1e3213eaf3a6f30c9a599f0d1f20dfb587e6a0a55abc7379e1",
+                "4a4304b140f4564d3c76037b8668eb34b4511b9b21a11eec227bcd2cfedcb278",
+                "8d231b2ec07e1bd3bdc49931d1ca3315556b3033ab54b92ad386a844afb7f707",
+                "8ac98b28273314a7a3a710ca13c917e9b023a5a056381e61dedd0da05212709b",
+                "2c4c5b59fef41d06ffb29b11e58f91fe3206323169e9198cdefa59da64c2dcd5",
+                "43197830a3353f2eb4bd6c5765162de1072b36b52f741d59c263cbb219dc17d0",
+                "71446209fa0a3ee7401795516b245757256e9d7204b0c99ab59c8b4ed3c08dce",
+                "da58bed0075481742a3e2a62ac87694be1bc5cf6a360e4d32b7ebdc8c009e7b8",
+                "3d4469467907d19fc6571250a47e2fd0042ce44ed04bc80022cb9c0081cdab0b",
+                "3dd566b01ca83b5aad0e9ffff20db59d46d8effbe3b85ec344af541202dfb17e",
+                "1a4efc433ae1f7740231d9da630aec5cfd1fe8a32b6fc5d910eb6b51cd18ca12"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "maryberryrecipes.co.uk",
+                "www.behindthename.com",
+                "sonichits.com",
+                "civfanatics.com",
+                "www.iplocation.net",
+                "www.planetminecraft.com",
+                "www.travelgay.com",
+                "www.atlasobscura.com",
+                "www.systemrequirementslab.com",
+                "www.comingsoon.net",
+                "www.powerpyx.com",
+                "wafflegame.net",
+                "geekymedics.com",
+                "www.pythontutorial.net",
+                "mydramalist.com",
+                "www.ispreview.co.uk",
+                "www.35mmc.com",
+                "forums.golfwrx.com",
+                "www.playstationtrophies.org",
+                "www.gosunoob.com"
+            ]
+        },
+        {
+            "rule": "ingage\\.tech\\/v1\\/openrtb",
+            "cookies": 0.00221,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ex"
+            ],
+            "apis": {},
+            "sites": 22,
+            "prevalence": 0.00221,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.behindthename.com",
+                "forums.golfwrx.com",
+                "www.sqlitetutorial.net",
+                "www.ispreview.co.uk",
+                "www.pythontutorial.net",
+                "www.websudoku.com",
+                "mydramalist.com",
+                "civfanatics.com",
+                "www.iplocation.net",
+                "www.35mmc.com",
+                "www.comingsoon.net",
+                "maryberryrecipes.co.uk",
+                "wafflegame.net",
+                "www.powerpyx.com",
+                "www.systemrequirementslab.com",
+                "www.planetminecraft.com",
+                "www.travelgay.com",
+                "www.atlasobscura.com",
+                "sonichits.com",
+                "geekymedics.com"
+            ]
+        },
+        {
+            "rule": "ingage\\.tech\\/",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "euconsent-v2": 0.00010064412238325282
+            },
+            "exampleSites": [
+                "101soundboards.com",
+                "www.azlyrics.com"
+            ]
+        },
+        {
+            "rule": "ingage\\.tech\\/v1\\/syncPage\\/unruly",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cs"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00101,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "35mmc.com",
+                "www.atlasobscura.com",
+                "www.azlyrics.com",
+                "www.comingsoon.net",
+                "www.iplocation.net",
+                "www.playstationtrophies.org",
+                "www.powerpyx.com",
+                "www.pythontutorial.net",
+                "www.sqlitetutorial.net",
+                "www.systemrequirementslab.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.00262,
+    "topInitiators": [
+        {
+            "domain": "vntsm.com",
+            "prevalence": 0.13559322033898305
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.11864406779661017
+        },
+        {
+            "domain": "buysellads.net",
+            "prevalence": 0.11864406779661017
+        },
+        {
+            "domain": "aditude.io",
+            "prevalence": 0.1016949152542373
+        },
+        {
+            "domain": "increaserev.com",
+            "prevalence": 0.0847457627118644
+        },
+        {
+            "domain": "adpushup.com",
+            "prevalence": 0.06779661016949153
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.06779661016949153
+        },
+        {
+            "domain": "evolvemediallc.com",
+            "prevalence": 0.06779661016949153
+        },
+        {
+            "domain": "nextmillmedia.com",
+            "prevalence": 0.05084745762711865
+        },
+        {
+            "domain": "d3lcz8vpax4lo2.cloudfront.net",
+            "prevalence": 0.03389830508474576
+        }
+    ],
+    "types": {
+        "Document": 17,
+        "Script": 3,
+        "Fetch": 22,
+        "Preflight": 22,
+        "Image": 2
+    },
+    "nameservers": [
+        "beau.ns.cloudflare.com",
+        "mona.ns.cloudflare.com"
+    ]
+}

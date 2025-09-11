@@ -1,0 +1,405 @@
+{
+    "domain": "spot.im",
+    "owner": {
+        "name": "OpenWeb Technologies Ltd.",
+        "displayName": "OpenWeb",
+        "privacyPolicy": "https://www.openweb.com",
+        "url": "http://openweb.com"
+    },
+    "source": [
+        "DuckDuckGo-NL"
+    ],
+    "prevalence": 0.000606,
+    "sites": 6,
+    "subdomains": [
+        "open-api",
+        "api-2-0",
+        "publisher-assets",
+        "static-cdn",
+        "direct-events-collector",
+        "pix",
+        "metrics-logger"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "spot\\.im\\/v1\\/messages-count",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "open-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "457cdb4d36417f498b1fcbd97213e0d7ad641b4784f99e3c823b23a384f06000",
+                "bb14e1ef8da29c352e69a2e25792396a06f46430077f62a0d61988051ba0739a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dotesports.com",
+                "www.gamepur.com",
+                "www.gameskinny.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/device-load",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "21a7596c13322dc2b7aa086b2525ae84054c36ab667229372cde19c912a85f80",
+                "edd6112592de86eefd25ac8d4267a1faea4cdf8c2e24cb048f498ec481d5bd37"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.thedailybeast.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/ad\\/event-tracking\\/pixel-ads-google-adsense\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "publisher-assets"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.thedailybeast.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/init",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0d625c645eb261b2890247bef4e8e4173d9c583f4cc1f9f17022dbefccf4051d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/ads\\/tags\\/v22\\.26\\.1\\/ads\\/ads\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 1,
+                "window.localStorage": 2,
+                "NavigatorUAData.prototype.platform": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6a1eb76da2d9eb90d1d50ff0b2a679252fc15304172b1e4cd9f5ded334c175d3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/api\\/v2\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-events-collector"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.thedailybeast.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/icons\\/sprites\\/sprite\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "937085b9310af935b47f756a6326f86351c9fa0066de9e313e8cd6623ca0f888"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/authenticate",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/authenticate",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b2d09cac2a1d094c201f3b3e4a3bd170fb52d1769d73b62d962508100dcf74f0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/realtime\\/read",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6cbc704fe4b91f40ed5165fe9a9918709fbade54fc937c5d4922c7caacf6af1c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/realtime\\/read",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lifehacker.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/api\\/v1\\/pixels",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pix"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thedailybeast.com",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/metric",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "metrics-logger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "voetbalzone.nl",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/count",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "55a58ffe01d42f990b0843f4266dcc73416ee4077c3c6ad79de42d793bfc9d85"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "voetbalzone.nl",
+                "www.voetbalzone.nl"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\.0\\.0\\/conversation\\/count",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-2-0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "voetbalzone.nl",
+                "www.voetbalzone.nl"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.6875
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3125
+        }
+    ],
+    "types": {
+        "Fetch": 21,
+        "Preflight": 8,
+        "Script": 2,
+        "XHR": 3,
+        "Ping": 2
+    },
+    "nameservers": [
+        "ns-1202.awsdns-22.org",
+        "ns-2018.awsdns-60.co.uk",
+        "ns-34.awsdns-04.com",
+        "ns-802.awsdns-36.net"
+    ]
+}

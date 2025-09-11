@@ -1,0 +1,129 @@
+{
+    "domain": "adlooxtracking.com",
+    "owner": {
+        "name": "Adloox SAS",
+        "displayName": "Adloox"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.000303,
+    "sites": 3,
+    "subdomains": [
+        "j",
+        "p",
+        "data00"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "adlooxtracking\\.com\\/ads\\/js\\/tfav_adl_160\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "j"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Screen.prototype.orientation": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.webdriver": 1,
+                "Navigator.prototype.vendor": 1,
+                "Navigator.prototype.languages": 1,
+                "Date.prototype.getTimezoneOffset": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0cf6e1b31c576eeeb587ae4fd0bbdcd3859f930bfbdf80e4eb97b71fc9ff49eb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sheknows.com",
+                "www.simplyrecipes.com"
+            ]
+        },
+        {
+            "rule": "adlooxtracking\\.com\\/q",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f252c2fa9922d08afe26ca902bcf41941924296aaee6329cddd7a83cc2df65f4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "moneymag.com.au",
+                "www.moneymag.com.au"
+            ]
+        },
+        {
+            "rule": "adlooxtracking\\.com\\/ads\\/ic5\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data00"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "f5ae4ffcd2ccec86bb700f620571c2f53474183f97a3879af125935dc2afd40e",
+                "6d2a1e3c70c4eb1bf5b1372d742dce9486c18f69a150825f946498f2318dd78b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.0001009387301907742
+            },
+            "exampleSites": [
+                "moneymag.com.au",
+                "www.moneymag.com.au",
+                "www.simplyrecipes.com"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.16666666666666666
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 5
+    },
+    "nameservers": [
+        "lia.ns.cloudflare.com",
+        "aaden.ns.cloudflare.com"
+    ]
+}

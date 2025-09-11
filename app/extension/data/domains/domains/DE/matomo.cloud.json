@@ -1,0 +1,292 @@
+{
+    "domain": "matomo.cloud",
+    "owner": {
+        "name": "Matomo",
+        "displayName": "Matomo"
+    },
+    "source": [
+        "DuckDuckGo-DE"
+    ],
+    "prevalence": 0.00242,
+    "sites": 24,
+    "subdomains": [
+        "nextcloud",
+        "tsaps",
+        "vaadin",
+        "epicompany",
+        "kruppverlag",
+        "cicero",
+        "daikin",
+        "erecht24",
+        "rtigroup",
+        "iso",
+        "kitzbueheler-alpen",
+        "klett-cotta",
+        "kvhh",
+        "lowbeats",
+        "interparking",
+        "openproject",
+        "malta1",
+        "svb",
+        "adtalsace",
+        "wertgarantie",
+        "yourjob",
+        "kfb",
+        "cdn"
+    ],
+    "cnames": [
+        {
+            "original": "service.e-recht24.de",
+            "resolved": "erecht24.matomo.cloud"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "matomo\\.cloud\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nextcloud",
+                "tsaps",
+                "vaadin",
+                "epicompany",
+                "kruppverlag",
+                "cicero",
+                "daikin",
+                "erecht24",
+                "rtigroup",
+                "iso",
+                "kitzbueheler-alpen",
+                "klett-cotta",
+                "kvhh",
+                "lowbeats",
+                "interparking",
+                "openproject",
+                "malta1",
+                "svb",
+                "adtalsace",
+                "wertgarantie",
+                "yourjob"
+            ],
+            "apis": {},
+            "sites": 21,
+            "prevalence": 0.00212,
+            "cnames": [
+                {
+                    "original": "service.e-recht24.de",
+                    "resolved": "erecht24.matomo.cloud"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "service.rlp.de",
+                "www.blick-aktuell.de",
+                "www.kitzbueheler-alpen.com",
+                "nextcloud.com",
+                "www.cicero.de",
+                "www.iso.org",
+                "www.visit.alsace",
+                "www.ergonbike.com",
+                "wero-wallet.eu",
+                "www.openproject.org",
+                "www.perspektiveausland.com",
+                "www.klett-cotta.de",
+                "vaadin.com",
+                "www.mein-contipark.de",
+                "www.e-recht24.de",
+                "www.lowbeats.de",
+                "www.daikin.de",
+                "www.svb.de",
+                "www.wirtrauern.de",
+                "www.kvhh.net"
+            ]
+        },
+        {
+            "rule": "matomo\\.cloud\\/matomo\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cicero",
+                "erecht24",
+                "openproject"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.vendor": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "window.name": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "service.e-recht24.de",
+                    "resolved": "erecht24.matomo.cloud"
+                }
+            ],
+            "responseHashes": [
+                "33296c335f53ce646cdfc72c1e0dee95e7177a2aa196d4e15d3b4f0595587430",
+                "08e31cbbff38aa042d5a87b88248657f935eb93ddc6b7008a2597e2609d50a30"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cicero.de",
+                "www.e-recht24.de",
+                "www.openproject.org"
+            ]
+        },
+        {
+            "rule": "matomo\\.cloud\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "erecht24",
+                "rtigroup",
+                "iso",
+                "svb",
+                "adtalsace",
+                "wertgarantie"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000605,
+            "cnames": [
+                {
+                    "original": "service.e-recht24.de",
+                    "resolved": "erecht24.matomo.cloud"
+                }
+            ],
+            "responseHashes": [
+                "f571ec3f7d6be8e6565348643314714e2e8a1369454f72941f300d57b353812e",
+                "a2d8ff7d727041ccf1c5c814780e452f396ed67da6efe47775e5d0bb8857f3b7",
+                "5055a82c1edbef2bcae206473e3c7569da284526cdb6a4044ffb9d597a60f8cf",
+                "0ed8eed79ed988e84f556abddad6fe00dbac4361d0c8a68ec0c40fb84af09ecd",
+                "b3bb13db635981e7b4644add66eec92e3a96d53e241dfcc1b093c4de6dcb79a4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e-recht24.de",
+                "www.ergonbike.com",
+                "www.iso.org",
+                "www.svb.de",
+                "www.visit.alsace",
+                "www.wertgarantie.de"
+            ]
+        },
+        {
+            "rule": "matomo\\.cloud\\/\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kfb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kreuzfahrtberater.de",
+                "www.kreuzfahrtberater.de"
+            ]
+        },
+        {
+            "rule": "matomo\\.cloud\\/wertgarantie\\.matomo\\.cloud\\/matomo\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.vendor": 2,
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8146fd3994d96700138e14a2491341e5bb9135bc0bf851d6af20cfd8438c91c5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.1.c977": {
+                    "ttl": 33955203,
+                    "length": 28,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 0.5
+                },
+                "_pk_ses.1.c977": {
+                    "ttl": 1803,
+                    "length": 1,
+                    "prevalence": 0.00020179598425991324,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wertgarantie.de",
+                "www.wertgarantie.de"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.000807,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.8275862068965517
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.13793103448275862
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.034482758620689655
+        }
+    ],
+    "types": {
+        "Ping": 23,
+        "Script": 11
+    },
+    "nameservers": [
+        "ns-1060.awsdns-04.org",
+        "ns-1933.awsdns-49.co.uk",
+        "ns-302.awsdns-37.com",
+        "ns-616.awsdns-13.net"
+    ]
+}

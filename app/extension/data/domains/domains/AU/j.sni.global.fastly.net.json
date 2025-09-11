@@ -1,0 +1,330 @@
+{
+    "domain": "j.sni.global.fastly.net",
+    "owner": {
+        "name": "Fastly, Inc.",
+        "displayName": "Fastly",
+        "privacyPolicy": "https://www.fastly.com/privacy",
+        "url": "http://fastly.com"
+    },
+    "source": [
+        "DuckDuckGo-AU"
+    ],
+    "prevalence": 0.00121,
+    "sites": 12,
+    "subdomains": [
+        "dualstack"
+    ],
+    "cnames": [
+        {
+            "original": "api.fox.com",
+            "resolved": "j.sni.global.fastly.net"
+        },
+        {
+            "original": "api.hackster.io",
+            "resolved": "dualstack.j.sni.global.fastly.net"
+        },
+        {
+            "original": "cdn.hercampus.com",
+            "resolved": "j.sni.global.fastly.net"
+        },
+        {
+            "original": "static.foxnews.com",
+            "resolved": "j.sni.global.fastly.net"
+        }
+    ],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/static\\/isa\\/core\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "static.foxnews.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "5d4a891e13db968652ad591ad84a0a914f1588fa8059b8274872617ff103802f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/static\\/orion\\/scripts\\/core\\/utils\\/geo\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "static.foxnews.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "79bfe733196987b6be90690cf30b0a1f483d6d24f1206b9a0277b1d5fe1cbd04",
+                "8945ed2945834751cf0671ef71ef3c77f8ba75602cc2cd190380094ec0acd133"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com",
+                "www.foxsports.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/static\\/isa\\/core-app\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "static.foxnews.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "8cd2ecb98bebc3657390bf57b025cfae734d4cf59bc8c18f8c6c9900b69af952"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/static\\/isa\\/app\\/lib\\/storage-api\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "static.foxnews.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/static\\/strike\\/scripts\\/libs\\/lodash\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "static.foxnews.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "66fdcc69ae455b434f49d9608de3c20d3e89b9edfff293788c6bb560cf706e59"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxsports.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/fs\\/product\\/curated\\/v1\\/sporting\\/keystone\\/detail\\/by_filters",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.fox.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxsports.com",
+                "www.foxsports.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/fs\\/product\\/curated\\/v1\\/sporting\\/keystone\\/detail\\/by_filters",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.fox.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "91c883cb592850be942a8dba7992e2fb68ab312acbeefdf4acdbda4174ba2fd5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxsports.com",
+                "www.foxsports.com"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/graphql\\/query",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dualstack"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.hackster.io",
+                    "resolved": "dualstack.j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hackster.io",
+                "www.hackster.io"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/graphql\\/query",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dualstack"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.hackster.io",
+                    "resolved": "dualstack.j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "274090d97be4a1e00d75ca550d7fe4cce2f14900ccb5ec2a60ec4c2bc454aa29"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hackster.io",
+                "www.hackster.io"
+            ]
+        },
+        {
+            "rule": "j\\.sni\\.global\\.fastly\\.net\\/SH6M70M3\\/as\\/3ffbhhxq69tp3hgt97w965\\/tloas_easter_eggs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "cdn.hercampus.com",
+                    "resolved": "j.sni.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "985c7998e842411f33e440afc653e72c0d093269a1e9e2fb4c5e824b2bfc8a97"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hercampus.com",
+                "www.hercampus.com"
+            ]
+        }
+    ],
+    "categories": [
+        "Ad Motivated Tracking",
+        "Advertising",
+        "Analytics",
+        "Third-Party Analytics Marketing",
+        "Action Pixels",
+        "CDN",
+        "Embedded Content",
+        "Session Replay"
+    ],
+    "performance": {},
+    "cookies": 0.000303,
+    "topInitiators": [
+        {
+            "domain": "webcontentassessor.global.ssl.fastly.net",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "fox.com",
+            "prevalence": 0.13636363636363635
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.13636363636363635
+        },
+        {
+            "domain": "hackster-cdn.online",
+            "prevalence": 0.13636363636363635
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.09090909090909091
+        }
+    ],
+    "types": {
+        "Script": 11,
+        "Preflight": 4,
+        "Fetch": 2,
+        "XHR": 2,
+        "Image": 2
+    },
+    "nameservers": []
+}

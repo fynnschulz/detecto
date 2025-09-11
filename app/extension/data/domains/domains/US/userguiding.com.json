@@ -1,0 +1,189 @@
+{
+    "domain": "userguiding.com",
+    "owner": {},
+    "source": [
+        "DuckDuckGo-US"
+    ],
+    "prevalence": 0.0000205,
+    "sites": 3,
+    "subdomains": [
+        "static",
+        "sdk",
+        "user"
+    ],
+    "cnames": [],
+    "fingerprinting": 2,
+    "resources": [
+        {
+            "rule": "userguiding\\.com\\/media\\/user-guiding-766728325ID-embedded\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Screen.prototype.availWidth": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b589520be680cd58be29749c61145f84c5af0793169f9166a75aad31a731be04"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ugeuid": {
+                    "ttl": 7952410,
+                    "length": 8,
+                    "prevalence": 0.000013681762210972774,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bonanza.com",
+                "www.bonanza.com"
+            ]
+        },
+        {
+            "rule": "userguiding\\.com\\/sdk-766728325ID\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e20439445677cfed607b92475154e8f352bffd652882316ece91b755e62e1741"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bonanza.com",
+                "www.bonanza.com"
+            ]
+        },
+        {
+            "rule": "userguiding\\.com\\/sdk\\/identify",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "user"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bonanza.com",
+                "www.bonanza.com",
+                "www.genisyscu.org"
+            ]
+        },
+        {
+            "rule": "userguiding\\.com\\/sdk\\/identify",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "user"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "ffa08a1c5cb20fe28645fcd8d66e625901dffa271ab2d57f67208139d15e6bf8",
+                "e3c5c3cbc2d40756379cec1987b751df62e4368e39896c91e852d59c68bdc503"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bonanza.com",
+                "www.bonanza.com",
+                "www.genisyscu.org"
+            ]
+        },
+        {
+            "rule": "userguiding\\.com\\/sdk\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "user"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "570c7d10cbb466534e518111724197936f9a6e235fce57e3bc61d84a572b7fe2",
+                "c0ff3abce83726a622a9de10efbed312d0913a5ec2851867a963232b287aa3d4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bonanza.com",
+                "www.bonanza.com",
+                "www.genisyscu.org"
+            ]
+        },
+        {
+            "rule": "userguiding\\.com\\/sdk\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "user"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bonanza.com",
+                "www.bonanza.com",
+                "www.genisyscu.org"
+            ]
+        }
+    ],
+    "categories": [],
+    "performance": {},
+    "cookies": 0.0000205,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
+    "types": {
+        "Script": 2,
+        "XHR": 8,
+        "Preflight": 6
+    },
+    "nameservers": [
+        "marek.ns.cloudflare.com",
+        "anna.ns.cloudflare.com"
+    ]
+}
