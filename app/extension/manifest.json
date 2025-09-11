@@ -26,7 +26,8 @@
   "permissions": [
     "storage",
     "declarativeNetRequest",
-    "declarativeNetRequestFeedback"
+    "declarativeNetRequestFeedback",
+    "declarativeNetRequestWithHostAccess"
   ],
 
   "host_permissions": [
@@ -36,10 +37,51 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "stubs/*.js",
+        "stubs/_taboola.js",
+        "stubs/adobe.js",
+        "stubs/amplitude.js",
+        "stubs/clarity.js",
+        "stubs/crazyegg.js",
+        "stubs/criteo_q.js",
+        "stubs/datadog-rum.js",
+        "stubs/fbq.js",
+        "stubs/fullstory.js",
+        "stubs/ga.js",
+        "stubs/generic.js",
+        "stubs/gtag.js",
+        "stubs/gtm.js",
+        "stubs/heap.js",
+        "stubs/hotjar.js",
+        "stubs/hubspot.js",
+        "stubs/intercom.js",
+        "stubs/lintrk.js",
+        "stubs/matomo.js",
+        "stubs/mixpanel.js",
+        "stubs/newrelic.js",
+        "stubs/optimizely.js",
+        "stubs/outbrain.js",
+        "stubs/pintrk.js",
+        "stubs/qp.js",
+        "stubs/quantcast.js",
+        "stubs/rdt.js",
+        "stubs/segment.js",
+        "stubs/sentry.js",
+        "stubs/snaptr.js",
+        "stubs/ttq.js",
+        "stubs/twq.js",
+        "stubs/uetq.js",
+        "stubs/vwo.js",
+        "stubs/yandex.js",
         "data/seeds.json"
       ],
       "matches": ["<all_urls>"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
     }
   ]
 }

@@ -1,7 +1,7 @@
 // app/extension/engine/model.js — ES Module
-// classify(url, type, initiatorHost) -> { isTracker: boolean, stub: "gtm"|"ga"|"fbq"|"generic"|null }
+// KI-basierte Entscheider- und Regelgenerator-Logik
 
-// ---- Config (tunable thresholds) ----
+// ---- Config (Schwellenwerte) ----
 const T_SCRIPT = 4;
 const T_BEACON = 3; // image|ping|xhr
 
@@ -13,12 +13,7 @@ const ALLOW_ETLD1 = [
   "recaptcha.net", "google.com", "gstatic.com"
 ];
 
-function etld1(h) { const p=(h||"").toLowerCase().split('.'); return p.slice(-2).join('.'); }
-function suffixMatch(host, etld) { return host===etld || host.endsWith('.'+etld); }
-function isAllowedHost(h){ if(!h) return false; const e=etld1(h); return ALLOW_ETLD1.some(d => e===d || suffixMatch(h,d)); }
-function hostOf(u){ try { return new URL(u).hostname.replace(/^www\./,'').toLowerCase(); } catch { return ''; } }
-
-// ---- Families (built-ins) ----
+// ---- Familien (built-ins) ----
 const FAMILY = {
   gtm: ["googletagmanager.com"],
   ga:  ["google-analytics.com", "analytics.google.com"],
@@ -38,24 +33,6 @@ const FAMILY = {
   ]
 };
 
-function familyOfHost(h){
-  const host=(h||'').toLowerCase();
-  if(!host) return null;
-  for(const f of FAMILY.gtm){ if(suffixMatch(host,f)) return 'gtm'; }
-  for(const f of FAMILY.ga){ if(suffixMatch(host,f)) return 'ga'; }
-  for(const f of FAMILY.fbq){ if(suffixMatch(host,f)) return 'fbq'; }
-  for(const f of FAMILY.genericSeeds){ if(suffixMatch(host,f)) return 'generic'; }
-  return null;
-}
-
-function stubFromUrlOrHost(url, host){
-  const u=(url||'').toLowerCase();
-  if(u.includes('gtm.js') || (host && host.includes('googletagmanager'))) return 'gtm';
-  if(u.includes('/gtag/') || u.includes('/analytics.js') || (host && (host.includes('google-analytics') || host==='analytics.google.com'))) return 'ga';
-  if(u.includes('fbevents.js') || (host && host.includes('facebook'))) return 'fbq';
-  return 'generic';
-}
-
 // ---- Path & Query hints (built-ins) ----
 const PATH_HINTS = [
   'gtm.js','/gtag/js','/analytics.js','/analytics.min.js','/ga.js',
@@ -65,91 +42,160 @@ const PATH_HINTS = [
 ];
 const STANDARD_QUERY_HINTS = ['gclid','fbclid','msclkid','yclid','dclid']; // plus utm_
 
-// ---- External seeds (merged at runtime) ----
+// ---- Externe Seeds (werden zur Laufzeit gemerged) ----
 let EXTERNAL = { domains: [], patterns: [], queryHints: [] };
 
-// Cached/derived structures for O(1) checks
-let SEED_HOSTS = new Set();     // exact host matches
-let SEED_ETLD1 = new Set();     // base-domain matches
-let PATH_HINTS_MERGED = [];     // merged & lowercased path hints
-let QUERY_HINTS = [];           // merged & lowercased query hints
+// ---- Caches für O(1)-Checks ----
+let SEED_HOSTS = new Set();     // exakte Hostmatches
+let SEED_ETLD1 = new Set();     // Basis-Domain Matches
+let PATH_HINTS_MERGED = [];     // gemergte & kleingeschriebene Pfad-Hints
+let QUERY_HINTS = [];           // gemergte & kleingeschriebene Query-Hints
 
-export function setExternalSeeds(seeds){
-  try{
-    if(!seeds || typeof seeds !== 'object') return;
-    EXTERNAL.domains    = Array.isArray(seeds.domains)    ? seeds.domains    : [];
-    EXTERNAL.patterns   = Array.isArray(seeds.patterns)   ? seeds.patterns   : [];
+// Hilfsfunktionen
+function etld1(host) {
+  try {
+    const parts = (host||"").toLowerCase().split('.');
+    if(parts.length < 2) return host.toLowerCase();
+    return parts.slice(-2).join('.');
+  } catch {
+    return "";
+  }
+}
+
+function suffixMatch(host, etld) {
+  return host === etld || host.endsWith('.' + etld);
+}
+
+function isAllowedHost(host) {
+  if (!host) return false;
+  const e = etld1(host);
+  return ALLOW_ETLD1.some(d => e === d || suffixMatch(host, d));
+}
+
+function hostOf(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '').toLowerCase();
+  } catch {
+    return '';
+  }
+}
+
+function familyOfHost(host) {
+  const h = (host||'').toLowerCase();
+  if (!h) return null;
+  for (const f of FAMILY.gtm) if (suffixMatch(h, f)) return 'gtm';
+  for (const f of FAMILY.ga) if (suffixMatch(h, f)) return 'ga';
+  for (const f of FAMILY.fbq) if (suffixMatch(h, f)) return 'fbq';
+  for (const f of FAMILY.genericSeeds) if (suffixMatch(h, f)) return 'generic';
+  return null;
+}
+
+function stubForFamily(fam) {
+  if (!fam) return null;
+  if (['gtm', 'ga', 'fbq', 'generic'].includes(fam)) return fam;
+  return 'generic';
+}
+
+function ensureStub(stub) {
+  if (!stub) return 'generic';
+  if (['gtm', 'ga', 'fbq', 'generic'].includes(stub)) return stub;
+  return 'generic';
+}
+
+// Setzt externe Seeds und baut Caches auf
+export function setExternalSeeds(seeds) {
+  try {
+    if (!seeds || typeof seeds !== 'object') return;
+    EXTERNAL.domains = Array.isArray(seeds.domains) ? seeds.domains : [];
+    EXTERNAL.patterns = Array.isArray(seeds.patterns) ? seeds.patterns : [];
     EXTERNAL.queryHints = Array.isArray(seeds.queryHints) ? seeds.queryHints : [];
 
-    // Build fast lookup sets
     SEED_HOSTS = new Set();
     SEED_ETLD1 = new Set();
-    for (const raw of EXTERNAL.domains){
+    for (const raw of EXTERNAL.domains) {
       const h = String(raw||'').toLowerCase().replace(/^www\./,'');
-      if(!h) continue;
+      if (!h) continue;
       SEED_HOSTS.add(h);
       SEED_ETLD1.add(etld1(h));
     }
 
-    // Merge path hints (built-in + external patterns), lowercased & de-duplicated
-    const ph = new Set(PATH_HINTS.map(p=>String(p).toLowerCase()));
+    const ph = new Set(PATH_HINTS.map(p => String(p).toLowerCase()));
     for (const p of (EXTERNAL.patterns||[])) ph.add(String(p).toLowerCase());
     PATH_HINTS_MERGED = Array.from(ph);
 
-    // Merge query hints (standard + external), lowercased & de-duplicated
-    const qh = new Set(STANDARD_QUERY_HINTS.map(q=>String(q).toLowerCase()));
+    const qh = new Set(STANDARD_QUERY_HINTS.map(q => String(q).toLowerCase()));
     for (const q of (EXTERNAL.queryHints||[])) qh.add(String(q).toLowerCase());
     QUERY_HINTS = Array.from(qh);
-  }catch{}
+  } catch {}
 }
 
-function urlHasSeedQueryHint(u){
-  const url = String(u||'').toLowerCase();
-  if(/([?&]utm_[^=&]+|[?&](gclid|fbclid|msclkid|yclid|dclid)=)/i.test(url)) return true;
-  for(const key of QUERY_HINTS){
-    if(key && url.includes(key+'=')) return true;
+// Prüft, ob URL Query-Parameter aus den Seeds oder Standard-Parametern enthält
+function urlHasSeedQueryHint(url) {
+  const u = String(url||'').toLowerCase();
+  if (/([?&]utm_[^=&]+|[?&](gclid|fbclid|msclkid|yclid|dclid)=)/i.test(u)) return true;
+  for (const key of QUERY_HINTS) {
+    if (key && u.includes(key + '=')) return true;
   }
   return false;
 }
 
-function isSeedTrackerHost(host){
-  if(!host) return false;
+// Prüft, ob Host in Seeds enthalten ist (exakt oder eTLD+1)
+function isSeedTrackerHost(host) {
+  if (!host) return false;
   if (SEED_HOSTS.has(host)) return true;
   return SEED_ETLD1.has(etld1(host));
 }
 
-export function classify(url, type, initiatorHost){
+// Entscheidet, ob URL/Request Tracker ist und liefert Stub zurück
+export function decide(url, type, initiatorHost) {
   const h = hostOf(url);
   const u = String(url||'').toLowerCase();
   const t = String(type||'').toLowerCase();
   const init = (initiatorHost||'').toLowerCase();
   const is3p = (init && h) ? etld1(init) !== etld1(h) : true;
 
-  // Never touch allowlisted eTLD+1
-  if(isAllowedHost(h)) return { isTracker:false, stub:null };
+  if (isAllowedHost(h)) return { isTracker: false, stub: null };
 
   let score = 0;
 
-  // +3: known tracker entity/domain (merged seeds)
   if (isSeedTrackerHost(h)) score += 3;
-
-  // +2: path pattern (merged, lowercased)
   if (PATH_HINTS_MERGED.some(p => u.includes(p))) score += 2;
-
-  // +1: query keys
-  if(urlHasSeedQueryHint(u)) score += 1;
-
-  // +1: resource type
-  if(["script","image","ping","xmlhttprequest"].includes(t)) score += 1;
-
-  // +1: third‑party
-  if(is3p) score += 1;
+  if (urlHasSeedQueryHint(u)) score += 1;
+  if (["script","image","ping","xmlhttprequest"].includes(t)) score += 1;
+  if (is3p) score += 1;
 
   const isJsLike = (t === 'script' || t === 'xmlhttprequest' || t === 'ping');
   const isTracker = (isJsLike && score >= T_SCRIPT) || (!isJsLike && score >= T_BEACON);
-  if(!isTracker) return { isTracker:false, stub:null };
+  if (!isTracker) return { isTracker: false, stub: null };
 
   const fam = familyOfHost(h);
-  const stub = fam || stubFromUrlOrHost(u,h) || 'generic';
-  return { isTracker:true, stub };
+  const stub = ensureStub(fam) || 'generic';
+  return { isTracker: true, stub };
+}
+
+// Generiert eine eindeutige ID für neue Regeln
+let _nextRuleId = 1;
+export function nextRuleId() {
+  return _nextRuleId++;
+}
+
+// Propose blocking rules für eine URL basierend auf der Entscheidung
+export function proposeRulesForUrl(url, type, initiatorHost) {
+  const decision = decide(url, type, initiatorHost);
+  if (!decision.isTracker) return [];
+
+  const h = hostOf(url);
+  const stub = decision.stub || 'generic';
+
+  // Beispiel-Regel: blockiere alle Requests an den Host
+  const rule = {
+    id: nextRuleId(),
+    action: 'block',
+    condition: {
+      urlFilter: `||${h}^`,
+      resourceTypes: [type || 'script']
+    },
+    stub
+  };
+  return [rule];
 }

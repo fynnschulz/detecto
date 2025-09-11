@@ -2,7 +2,7 @@
 // Stealth: Heuristik/KI → DNR Redirect (Stub-Datei) → Ziel sieht 200 OK
 // Learning-Cache: Hosts → Session/Dynamic Rules
 
-import { classify, setExternalSeeds } from './engine/model.js';
+import { classify, setExternalSeeds, decide, proposeRulesForUrl } from './engine/model.js';
 import { getLearned, remember, ensureDnrRule, stubToPath, restorePersistedRules } from './engine/learn.js';
 
 // ---------- Config ----------
@@ -48,6 +48,8 @@ async function loadSeedsIntoModel() {
     console.warn('[Protecto][Seeds] load failed', e);
   }
 }
+chrome.runtime.onInstalled.addListener(loadSeedsIntoModel);
+chrome.runtime.onStartup.addListener(loadSeedsIntoModel);
 
 // ---------- Heuristic Rules ----------
 function buildHeuristicRulesForDomain(domain) {
@@ -201,6 +203,8 @@ chrome.runtime.onStartup.addListener(async () => {
   try {
     await loadSeedsIntoModel();
     await restorePersistedRules();
+    await ensureBaselineDynamicRules();     // falls etwas fehlte
+    await ensureStartupSessionCatchalls();  // universelle Sofort-Abdeckung
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     if (tabs[0]) applySessionRulesForTab(tabs[0]);
   } catch {}
@@ -209,6 +213,7 @@ chrome.runtime.onInstalled.addListener(async () => {
   try {
     await loadSeedsIntoModel();
     await restorePersistedRules();
+    await ensureBaselineDynamicRules(); // persistenter First-Millisecond-Schutz
   } catch {}
 });
 
@@ -273,3 +278,249 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
   })();
   return true;
 });
+
+// ===== Baseline First-Millisecond Protection =====
+
+// Known stubs available in /stubs. If a requested stub is not in this set, we fall back to "generic".
+const KNOWN_STUBS = new Set([
+  "generic","gtm","ga","fbq",
+  "clarity","hotjar","yandex","matomo",
+  "criteo_q","_taboola","outbrain","quantcast",
+  "segment","mixpanel","amplitude","heap",
+  "fullstory","adobe","hubspot","intercom",
+  "newrelic","datadog-rum","sentry","optimizely","vwo",
+  "pintrk","snaptr","rdt","qp","ttq","twq","lintrk","uetq"
+]);
+
+function ensureStub(name){ return KNOWN_STUBS.has(String(name||"").trim()) ? name : "generic"; }
+
+// Eindeutige ID-Bereiche nur für Baseline:
+const BASELINE_RULE_IDS = {
+  dynamicStart: 40000, // persistente Dynamic Rules
+  sessionStart: 41000  // Session Catchalls
+};
+
+// Baseline-Domains → bevorzugter Stub
+const BASELINE_FAMILIES = [
+  // Google family
+  { host: "googletagmanager.com",     stub: "gtm",      types: ["script"] },
+  { host: "google-analytics.com",     stub: "ga",       types: ["script","xmlhttprequest"] },
+  { host: "analytics.google.com",     stub: "ga",       types: ["script"] },
+  { host: "doubleclick.net",          stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+  { host: "googlesyndication.com",    stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+  { host: "googleadservices.com",     stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+  { host: "googletagservices.com",    stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+  { host: "adservice.google.com",     stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+
+  // Meta / Facebook
+  { host: "connect.facebook.net",     stub: "fbq",      types: ["script"] },
+  { host: "facebook.com",             stub: "fbq",      types: ["image","xmlhttprequest","ping"] },
+
+  // Microsoft Clarity
+  { host: "clarity.ms",               stub: "clarity",  types: ["script","xmlhttprequest"] },
+
+  // Hotjar / Yandex / Matomo
+  { host: "static.hotjar.com",        stub: "hotjar",   types: ["script"] },
+  { host: "script.hotjar.com",        stub: "hotjar",   types: ["script"] },
+  { host: "mc.yandex.ru",             stub: "yandex",   types: ["script","image","xmlhttprequest","ping"] },
+  { host: "matomo.cloud",             stub: "matomo",   types: ["script","image","xmlhttprequest","ping"] },
+
+  // Ad-Tech verbreitet
+  { host: "criteo.net",               stub: "criteo_q", types: ["script","image","xmlhttprequest","ping"] },
+  { host: "taboola.com",              stub: "_taboola", types: ["script"] },
+  { host: "outbrain.com",             stub: "outbrain", types: ["script"] },
+  { host: "quantserve.com",           stub: "quantcast",types: ["script","image","xmlhttprequest","ping"] },
+  { host: "scorecardresearch.com",    stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+  { host: "moatads.com",              stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+  { host: "pubmatic.com",             stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+  { host: "rubiconproject.com",       stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+  { host: "adform.net",               stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+  { host: "adsrvr.org",               stub: "generic",  types: ["script","image","xmlhttprequest","ping"] },
+
+  // Social / Performance
+  { host: "tiktok.com",               stub: "ttq",      types: ["script","image","xmlhttprequest","ping"] },
+  { host: "snapchat.com",             stub: "snaptr",   types: ["script","image","xmlhttprequest","ping"] },
+  { host: "pinterest.com",            stub: "pintrk",   types: ["script","image","xmlhttprequest","ping"] },
+  { host: "twitter.com",              stub: "twq",      types: ["script","image","xmlhttprequest","ping"] },
+  { host: "linkedin.com",             stub: "lintrk",   types: ["image","ping","xmlhttprequest"] },
+  { host: "bing.com",                 stub: "uetq",     types: ["image","ping","xmlhttprequest"] },
+
+  // Product Analytics / RUM / Error tracking
+  { host: "segment.com",              stub: "segment",      types: ["script","xmlhttprequest"] },
+  { host: "mixpanel.com",             stub: "mixpanel",     types: ["script","xmlhttprequest"] },
+  { host: "amplitude.com",            stub: "amplitude",    types: ["script","xmlhttprequest"] },
+  { host: "heapanalytics.com",        stub: "heap",         types: ["script","xmlhttprequest"] },
+  { host: "fullstory.com",            stub: "fullstory",    types: ["script","xmlhttprequest"] },
+  { host: "adobedtm.com",             stub: "adobe",        types: ["script","xmlhttprequest"] },
+  { host: "hs-analytics.net",         stub: "hubspot",      types: ["script","xmlhttprequest"] },
+  { host: "intercom.io",              stub: "intercom",     types: ["script","xmlhttprequest"] },
+  { host: "nr-data.net",              stub: "newrelic",     types: ["script","xmlhttprequest","image","ping"] },
+  { host: "datadoghq-browser-agent.com", stub: "datadog-rum", types: ["script","xmlhttprequest"] },
+  { host: "sentry-cdn.com",           stub: "sentry",       types: ["script","xmlhttprequest"] },
+  { host: "optimizely.com",           stub: "optimizely",   types: ["script","xmlhttprequest"] },
+  { host: "visualwebsiteoptimizer.com", stub:"vwo",         types: ["script","xmlhttprequest"] },
+];
+
+// Typische Loader-/Tracking-Pfade → spezifischer Stub (wenn Script)
+const BASELINE_PATHS = [
+  { path: "/gtm.js",       stub: "gtm"     },
+  { path: "/analytics.js", stub: "ga"      },
+  { path: "/gtag/js",      stub: "ga"      },
+  { path: "/fbevents.js",  stub: "fbq"     },
+  // generische Tracker-Pfade → generic
+  { path: "/collect",      stub: "generic" },
+  { path: "/events",       stub: "generic" },
+  { path: "/event",        stub: "generic" },
+  { path: "/track",        stub: "generic" },
+  { path: "/tracking",     stub: "generic" },
+  { path: "/pixel",        stub: "generic" },
+  { path: "/beacon",       stub: "generic" },
+  { path: "/stats",        stub: "generic" },
+  { path: "/metrics",      stub: "generic" },
+  { path: "/measure",      stub: "generic" },
+  { path: "/log",          stub: "generic" },
+];
+
+// 1×1 GIF & leeres JSON
+const ONE_BY_ONE_GIF = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA";
+const EMPTY_JSON = "data:application/json,{}";
+
+// --- Build Dynamic Baseline Rules (persistieren) ---
+async function ensureBaselineDynamicRules() {
+  const existing = await chrome.declarativeNetRequest.getDynamicRules();
+  const have = new Set(existing.map(r => r.id));
+  const rules = [];
+  let id = BASELINE_RULE_IDS.dynamicStart;
+
+  // Domain-Familien
+  for (const f of BASELINE_FAMILIES) {
+    id++;
+    if (have.has(id)) continue;
+    const stub = ensureStub(f.stub);
+    rules.push({
+      id, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: `/stubs/${stub}.js` } },
+      condition: {
+        regexFilter: `^https?:\\/\\/([^\\/]*\\.)?${f.host.replace(/\./g,"\\.")}\\/.*`,
+        resourceTypes: f.types
+      }
+    });
+  }
+
+  // Loader-/Tracking-Pfade (script-spezifisch)
+  for (const p of BASELINE_PATHS) {
+    id++;
+    if (have.has(id)) continue;
+    const stub = ensureStub(p.stub);
+    rules.push({
+      id, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: `/stubs/${stub}.js` } },
+      condition: {
+        urlFilter: p.path,
+        resourceTypes: ["script"]
+      }
+    });
+  }
+
+  if (rules.length) {
+    await chrome.declarativeNetRequest.updateDynamicRules({
+      addRules: rules,
+      removeRuleIds: [] // nichts löschen
+    });
+  }
+}
+
+// --- Build Session Catchalls (bei jedem Startup frisch setzen) ---
+async function ensureStartupSessionCatchalls() {
+  const base = BASELINE_RULE_IDS.sessionStart;
+  const rules = [
+    // Universelle Beacon/Pixel → 1×1 GIF (image/ping/xhr)
+    {
+      id: base + 1, priority: 1,
+      action: { type: "redirect", redirect: { url: ONE_BY_ONE_GIF } },
+      condition: {
+        regexFilter: "https?:\\/\\/[^\\/]+\\/(collect|pixel|beacon|stats|metrics|track|tracking|measure|log)(\\?|\\/|$)",
+        resourceTypes: ["image","ping","xmlhttprequest"]
+      }
+    },
+    // Sicherheitsnetz für Script-Pfade (falls Domain-Familie nicht griff)
+    {
+      id: base + 2, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
+      condition: { urlFilter: "/pixel",   resourceTypes: ["script"] }
+    },
+    {
+      id: base + 3, priority: 1,
+      action: { type: "redirect", redirect: { extensionPath: "/stubs/generic.js" } },
+      condition: { urlFilter: "/collect", resourceTypes: ["script"] }
+    }
+  ];
+
+  await chrome.declarativeNetRequest.updateSessionRules({
+    removeRuleIds: rules.map(r => r.id),
+    addRules: rules
+  });
+}
+// === Live-KI: beobachtet Requests, setzt sofort Session-Rules, persistiert nach N Treffern ===
+
+// Zähler & Persistenz-Parameter
+const LEARN_KEY = "protecto_learned_counters";
+const LEARN_MIN_FOR_PERSIST = 3;
+
+function ruleKeyFromRule(r){
+  // robust: nutze regexFilter als Schlüssel, sonst ID
+  return r?.condition?.regexFilter || String(r?.id);
+}
+
+async function bumpLearnCounters(rules){
+  const st = await chrome.storage.local.get(LEARN_KEY);
+  const m = st[LEARN_KEY] || {};
+  for (const r of (rules||[])) {
+    const k = ruleKeyFromRule(r);
+    m[k] = (m[k] || 0) + 1;
+  }
+  await chrome.storage.local.set({ [LEARN_KEY]: m });
+  return m;
+}
+
+async function addSessionRules(rules){
+  if (!rules || !rules.length) return;
+  const ids = rules.map(r => r.id);
+  await chrome.declarativeNetRequest.updateSessionRules({ removeRuleIds: ids, addRules: rules });
+}
+
+async function addDynamicRules(rules){
+  if (!rules || !rules.length) return;
+  const ids = rules.map(r => r.id);
+  await chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: ids, addRules: rules });
+}
+
+// Non-blocking (MV3-konform): entscheidet & lernt, ohne den Request zu blockieren
+chrome.webRequest.onBeforeRequest.addListener(async (details) => {
+  const { url, type, initiator } = details;
+  if (!/^https?:/i.test(url)) return;
+
+  const initiatorHost = hostOf(initiator||"");
+  const reqHost = hostOf(url);
+  if (!initiatorHost || !reqHost) return;
+  if (initiatorHost === reqHost) return; // 1st-party eher ignorieren
+
+  // KI-Entscheid
+  const d = decide(url, String(type||"").toLowerCase(), initiatorHost);
+  if (!d.isTracker) return;
+
+  // Regeln vorschlagen → sofort als Session anwenden (wirken direkt)
+  const rules = await proposeRulesForUrl(url, type, initiatorHost);
+  if (!rules.length) return;
+
+  await addSessionRules(rules);
+
+  // Lernen & (ab stabil) persistieren
+  const counters = await bumpLearnCounters(rules);
+  for (const r of rules){
+    const k = ruleKeyFromRule(r);
+    if (counters[k] >= LEARN_MIN_FOR_PERSIST) {
+      await addDynamicRules([r]);
+    }
+  }
+}, { urls:["<all_urls>"] }, []); // ganz wichtig: KEIN "blocking"
