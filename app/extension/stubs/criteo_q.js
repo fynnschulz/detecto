@@ -182,34 +182,34 @@
   const api = invoke;
 
   Object.defineProperties(api, {
-    push:              { value: pushImpl,              writable:false, configurable:false, enumerable:false },
-    init:              { value: initImpl,              writable:false, configurable:false, enumerable:false },
-    setAccount:        { value: setAccountImpl,        writable:false, configurable:false, enumerable:false },
-    setSiteType:       { value: setSiteTypeImpl,       writable:false, configurable:false, enumerable:false },
-    setEmail:          { value: setEmailImpl,          writable:false, configurable:false, enumerable:false },
-    viewHome:          { value: viewHomeImpl,          writable:false, configurable:false, enumerable:false },
-    viewList:          { value: viewListImpl,          writable:false, configurable:false, enumerable:false },
-    viewItem:          { value: viewItemImpl,          writable:false, configurable:false, enumerable:false },
-    viewBasket:        { value: viewBasketImpl,        writable:false, configurable:false, enumerable:false },
-    trackTransaction:  { value: trackTransactionImpl,   writable:false, configurable:false, enumerable:false },
-    search:            { value: searchImpl,            writable:false, configurable:false, enumerable:false },
-    identify:          { value: identifyImpl,          writable:false, configurable:false, enumerable:false },
-    set:               { value: setImpl,               writable:false, configurable:false, enumerable:false },
-    consent:           { value: consentImpl,           writable:false, configurable:false, enumerable:false },
-    reset:             { value: resetImpl,             writable:false, configurable:false, enumerable:false },
-    ready:             { value: readyImpl,             writable:false, configurable:false, enumerable:false },
-    subscribe:         { value: subscribeImpl,         writable:false, configurable:false, enumerable:false },
-    unsubscribe:       { value: unsubscribeImpl,       writable:false, configurable:false, enumerable:false },
+    push:              { value: pushImpl,              writable:true, configurable:true, enumerable:false },
+    init:              { value: initImpl,              writable:true, configurable:true, enumerable:false },
+    setAccount:        { value: setAccountImpl,        writable:true, configurable:true, enumerable:false },
+    setSiteType:       { value: setSiteTypeImpl,       writable:true, configurable:true, enumerable:false },
+    setEmail:          { value: setEmailImpl,          writable:true, configurable:true, enumerable:false },
+    viewHome:          { value: viewHomeImpl,          writable:true, configurable:true, enumerable:false },
+    viewList:          { value: viewListImpl,          writable:true, configurable:true, enumerable:false },
+    viewItem:          { value: viewItemImpl,          writable:true, configurable:true, enumerable:false },
+    viewBasket:        { value: viewBasketImpl,        writable:true, configurable:true, enumerable:false },
+    trackTransaction:  { value: trackTransactionImpl,   writable:true, configurable:true, enumerable:false },
+    search:            { value: searchImpl,            writable:true, configurable:true, enumerable:false },
+    identify:          { value: identifyImpl,          writable:true, configurable:true, enumerable:false },
+    set:               { value: setImpl,               writable:true, configurable:true, enumerable:false },
+    consent:           { value: consentImpl,           writable:true, configurable:true, enumerable:false },
+    reset:             { value: resetImpl,             writable:true, configurable:true, enumerable:false },
+    ready:             { value: readyImpl,             writable:true, configurable:true, enumerable:false },
+    subscribe:         { value: subscribeImpl,         writable:true, configurable:true, enumerable:false },
+    unsubscribe:       { value: unsubscribeImpl,       writable:true, configurable:true, enumerable:false },
 
-    __PROTECTO_STUB__: { value: true,                 writable:false, configurable:false },
-    version:           { value: '1.0',               writable:false, configurable:false },
-    accountId:         { get: function(){ return _accountId; } },
-    pixels:            { get: function(){ return Array.from(_pixels); } },
-    user:              { get: function(){ return Object.assign({}, _user); } },
-    props:             { get: function(){ return Object.assign({}, _props); } },
-    consentState:      { get: function(){ return { ad_storage: _consent.ad_storage, analytics_storage: _consent.analytics_storage }; } },
-    q:                 { get: function(){ return _q.slice(); } },
-    queue:             { get: function(){ return _q.map(e=>e.a); } }
+    __PROTECTO_STUB__: { value: true,                 writable:true, configurable:true },
+    version:           { value: '1.0',               writable:true, configurable:true },
+    accountId:         { get: function(){ return _accountId; }, configurable:true },
+    pixels:            { get: function(){ return Array.from(_pixels); }, configurable:true },
+    user:              { get: function(){ return Object.assign({}, _user); }, configurable:true },
+    props:             { get: function(){ return Object.assign({}, _props); }, configurable:true },
+    consentState:      { get: function(){ return { ad_storage: _consent.ad_storage, analytics_storage: _consent.analytics_storage }; }, configurable:true },
+    q:                 { get: function(){ return _q.slice(); }, configurable:true },
+    queue:             { get: function(){ return _q.map(e=>e.a); }, configurable:true }
   });
 
   // Spoof native-like toString
@@ -222,13 +222,13 @@
   toNative(readyImpl); toNative(subscribeImpl); toNative(unsubscribeImpl);
 
   // Lock down the API surface
-  deepFreeze(api);
+  // deepFreeze(api);
 
   // Install stub globally
   Object.defineProperty(window, 'criteo_q', {
     value: api,
-    configurable: false,
-    writable: false,
+    configurable: true,
+    writable: true,
     enumerable: false
   });
 

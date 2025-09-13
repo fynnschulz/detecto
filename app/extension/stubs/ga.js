@@ -8,7 +8,7 @@
   window.__PROTECTO_GA__ = true;
   function nativeFn(name){ return function(){ return `function ${name}() { [native code] }`; }; }
   function defGlobal(obj, key, value){
-    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
+    try { Object.defineProperty(obj, key, { value, writable:true, configurable:true, enumerable:false }); }
     catch { obj[key] = value; }
   }
 
@@ -206,11 +206,10 @@
   } catch {}
 
   // Kompatibilität: ga.q als leeres Array bereitstellen (einige Themes checken das)
-  try { Object.defineProperty(window.ga, 'q', { value: [], writable: false, configurable: false, enumerable: false }); }
-  catch { window.ga.q = []; }
+  window.ga.q = [];
 
   if (!Array.isArray(window._gaq)) window._gaq = [];
-  try { Object.defineProperty(window._gaq, 'push', { value: function(){ return true; }, writable:false, configurable:false }); } catch { window._gaq.push = function(){ return true; }; }
+  window._gaq.push = function(){ return true; };
 
   // Legacy _gat compatibility (_getTracker)
   if (!window._gat) {
@@ -218,12 +217,7 @@
       _trackPageview: function(){ return true; },
       _trackEvent: function(){ return true; }
     };
-    try {
-      Object.defineProperty(window, '_gat', {
-        value: { _getTracker: function(){ return legacyTracker; } },
-        writable: false, configurable: false, enumerable: false
-      });
-    } catch { window._gat = { _getTracker: function(){ return legacyTracker; } }; }
+    window._gat = { _getTracker: function(){ return legacyTracker; } };
   }
 
   // Vorher gequeue’te Aufrufe (vom Bootstrap-Snippet) nachträglich abarbeiten

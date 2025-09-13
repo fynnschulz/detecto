@@ -18,19 +18,6 @@
     return fn;
   }
 
-  // --- Deep freeze utility ---
-  function deepFreeze(obj, seen) {
-    seen = seen || new WeakSet();
-    if (obj && typeof obj === "object" && !seen.has(obj)) {
-      seen.add(obj);
-      Object.getOwnPropertyNames(obj).forEach(function(name) {
-        try { deepFreeze(obj[name], seen); } catch {}
-      });
-      try { Object.freeze(obj); } catch {}
-    }
-    return obj;
-  }
-
   // --- Internal state ---
   const _VERSION = "2.0.0-pro-stub";
   const _calls = [];
@@ -77,7 +64,7 @@
       try {
         Object.defineProperty(window, "_linkedin_data_partner_ids", {
           value: _partnerIds,
-          writable: false, configurable: false, enumerable: false
+          writable: true, configurable: true, enumerable: false
         });
       } catch {
         window._linkedin_data_partner_ids = _partnerIds;
@@ -232,23 +219,11 @@
     lintrk.ready, lintrk.subscribe, lintrk.unsubscribe, lintrk.push
   ].forEach(spoofNative);
 
-  // --- Immutability ---
-  deepFreeze(lintrk);
-
   // --- Install global ---
-  Object.defineProperty(window, "lintrk", {
-    value: lintrk,
-    configurable: false,
-    writable: false,
-    enumerable: false
-  });
+  window.lintrk = lintrk;
 
   // --- LinkedIn partner IDs global spoof ---
   window._linkedin_data_partner_ids = _partnerIds;
-  try { Object.freeze(window._linkedin_data_partner_ids); } catch {}
-
-  // --- Defensive: freeze other stubs if present ---
-  try { if (window._linkedin_partner_id) Object.freeze(window._linkedin_partner_id); } catch {}
 
   // --- End of stub ---
 })();

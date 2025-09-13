@@ -12,10 +12,10 @@
 
   // Idempotenz & Stealth-Helpers
   if (window.__PROTECTO_GENERIC__) return;
-  (function(){ try { Object.defineProperty(window, '__PROTECTO_GENERIC__', { value: true, writable:false, configurable:false, enumerable:false }); } catch { window.__PROTECTO_GENERIC__ = true; } })();
+  (function(){ try { Object.defineProperty(window, '__PROTECTO_GENERIC__', { value: true, writable:true, configurable:true, enumerable:false }); } catch { window.__PROTECTO_GENERIC__ = true; } })();
   function nativeFn(name){ return function(){ return `function ${name}() { [native code] }`; }; }
   function defGlobal(obj, key, value){
-    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
+    try { Object.defineProperty(obj, key, { value, writable:true, configurable:true, enumerable:false }); }
     catch { obj[key] = value; }
   }
 
@@ -38,7 +38,7 @@
     try {
       if (!(name in window) || typeof window[name] === 'undefined') {
         const value = (typeof valueFactory === 'function') ? valueFactory() : valueFactory;
-        Object.defineProperty(window, name, { configurable: false, enumerable: false, writable: false, value });
+        Object.defineProperty(window, name, { configurable: true, enumerable: false, writable: true, value });
       }
     } catch { /* ignore */ }
   }
@@ -128,7 +128,7 @@
     ga.getByName = function(){ return null; };
     ga.require = noop;
     ga.remove  = noop;
-    try { Object.defineProperty(ga, 'q', { value: [], writable:false, configurable:false, enumerable:false }); }
+    try { Object.defineProperty(ga, 'q', { value: [], writable:true, configurable:true, enumerable:false }); }
     catch { ga.q = []; }
     defGlobal(window, 'ga', ga);
     // Echte Seiten erwarten oft dieses Flag/Name
@@ -150,7 +150,7 @@
       fbq.callMethod.toString = nativeFn('callMethod');
       fbq.push.toString = nativeFn('push');
     } catch {}
-    try { Object.defineProperty(fbq, 'queue', { value: pre, writable:false, configurable:false, enumerable:false }); } catch {}
+    try { Object.defineProperty(fbq, 'queue', { value: pre, writable:true, configurable:true, enumerable:false }); } catch {}
     defGlobal(window, 'fbq', fbq);
     defGlobal(window, '_fbq', fbq);
   }
@@ -172,12 +172,12 @@
   if (!Array.isArray(window._gaq)) {
     defGlobal(window, '_gaq', []);
   }
-  try { Object.defineProperty(window._gaq, 'push', { value: function(){ return true; }, writable:false, configurable:false }); } catch { window._gaq.push = function(){ return true; }; }
+  try { Object.defineProperty(window._gaq, 'push', { value: function(){ return true; }, writable:true, configurable:true }); } catch { window._gaq.push = function(){ return true; }; }
 
   if (!Array.isArray(window._paq)) {
     defGlobal(window, '_paq', []);
   }
-  try { Object.defineProperty(window._paq, 'push', { value: function(){ return true; }, writable:false, configurable:false }); } catch { window._paq.push = function(){ return true; }; }
+  try { Object.defineProperty(window._paq, 'push', { value: function(){ return true; }, writable:true, configurable:true }); } catch { window._paq.push = function(){ return true; }; }
 
   // Häufige Namespace-Objekte
   if (typeof window.adservice !== 'object') defGlobal(window, 'adservice', {});

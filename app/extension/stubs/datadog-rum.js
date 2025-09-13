@@ -1,5 +1,3 @@
-
-
 /**
  * Datadog RUM Stub (datadogRum)
  * Professional stub for Datadog RUM Browser SDK.
@@ -205,8 +203,8 @@
       fn.toString = function() { return 'function ' + k + '() { [native code stub] }'; };
       Object.defineProperty(api, k, {
         value: fn,
-        writable: false,
-        configurable: false,
+        writable: true,
+        configurable: true,
         enumerable: true
       });
     });
@@ -214,8 +212,8 @@
     api.__STUB_VERSION = RUM_VERSION;
     Object.defineProperty(api, 'toString', {
       value: api.toString,
-      writable: false,
-      configurable: false,
+      writable: true,
+      configurable: true,
       enumerable: false
     });
     // Defensive: catch all unknown properties
@@ -238,13 +236,12 @@
   }
 
   var datadogRum = makeStub();
-  deepFreeze(datadogRum);
 
   // Attach to global
   Object.defineProperty(global, 'datadogRum', {
     value: datadogRum,
-    writable: false,
-    configurable: false,
+    writable: true,
+    configurable: true,
     enumerable: true
   });
 

@@ -11,7 +11,6 @@
 
     function toNative(fn){ try{ fn.toString = NATIVE.bind(function(){ return NATIVE_STR; }); }catch{} return fn; }
     function named(name, fn){ try{ Object.defineProperty(fn, 'name', { value: name, configurable: true }); }catch{} return fn; }
-    function freezeDeep(obj){ try{ Object.freeze(obj); }catch{} return obj; }
 
     // -------- observed API surface in the wild --------
     //  * window.uetq: Array‑like queue with .push(...), plus helper methods (init, event, set, config, ready)
@@ -53,21 +52,21 @@
 
     // API auf der Array‑Instanz bereitstellen (übliches Muster bei Vendor‑Queues)
     Object.defineProperties(uetq, {
-      push:   { value: pushImpl,   writable: false, configurable: false, enumerable: false },
-      init:   { value: initImpl,   writable: false, configurable: false, enumerable: false },
-      event:  { value: eventImpl,  writable: false, configurable: false, enumerable: false },
-      set:    { value: setImpl,    writable: false, configurable: false, enumerable: false },
-      config: { value: configImpl, writable: false, configurable: false, enumerable: false },
-      ready:  { value: readyImpl,  writable: false, configurable: false, enumerable: false },
-      subscribe:   { value: subscribeImpl,   writable: false, configurable: false, enumerable: false },
-      unsubscribe: { value: unsubscribeImpl, writable: false, configurable: false, enumerable: false }
+      push:   { value: pushImpl,   writable: true, configurable: true, enumerable: false },
+      init:   { value: initImpl,   writable: true, configurable: true, enumerable: false },
+      event:  { value: eventImpl,  writable: true, configurable: true, enumerable: false },
+      set:    { value: setImpl,    writable: true, configurable: true, enumerable: false },
+      config: { value: configImpl, writable: true, configurable: true, enumerable: false },
+      ready:  { value: readyImpl,  writable: true, configurable: true, enumerable: false },
+      subscribe:   { value: subscribeImpl,   writable: true, configurable: true, enumerable: false },
+      unsubscribe: { value: unsubscribeImpl, writable: true, configurable: true, enumerable: false }
     });
 
     // Introspektions‑Flags, die oft geprüft werden
     Object.defineProperties(uetq, {
-      __PROTECTO_STUB__: { value: true,  writable: false, configurable: false },
-      loaded:            { value: true,  writable: false, configurable: false },
-      version:           { value: '1.0', writable: false, configurable: false },
+      __PROTECTO_STUB__: { value: true,  writable: true, configurable: true },
+      loaded:            { value: true,  writable: true, configurable: true },
+      version:           { value: '1.0', writable: true, configurable: true },
       // read‑only Zugriff auf die interne Queue
       q:                 { get: function(){ return _queue; } }
     });
@@ -76,30 +75,27 @@
     // Dadurch bestehen Integrationen, die window.uet statt uetq prüfen
     const uetWrapper = {};
     Object.defineProperties(uetWrapper, {
-      push: { value: pushImpl, writable: false, configurable: false, enumerable: false },
-      __PROTECTO_STUB__: { value: true, writable: false, configurable: false }
+      push: { value: pushImpl, writable: true, configurable: true, enumerable: false },
+      __PROTECTO_STUB__: { value: true, writable: true, configurable: true }
     });
 
     // native‑like toString für Funktionen
     toNative(uetq.push); toNative(uetq.init); toNative(uetq.event); toNative(uetq.set);
     toNative(uetq.config); toNative(uetq.ready); toNative(subscribeImpl); toNative(unsubscribeImpl);
 
-    // Deep‑freeze, um Monkey‑Patching zu vermeiden
-    freezeDeep(uetq); freezeDeep(uetWrapper);
-
-    // Globale Objekte setzen (nicht enumerierbar, nicht überschreibbar)
+    // Globale Objekte setzen (nicht enumerierbar, aber beschreibbar und konfigurierbar)
     Object.defineProperty(window, 'uetq', {
       value: uetq,
-      configurable: false,
-      writable: false,
+      configurable: true,
+      writable: true,
       enumerable: false
     });
     // Nur setzen, wenn nicht bereits vorhanden (fremde Implementierungen unangetastet lassen)
     if (!window.uet) {
       Object.defineProperty(window, 'uet', {
         value: uetWrapper,
-        configurable: false,
-        writable: false,
+        configurable: true,
+        writable: true,
         enumerable: false
       });
     }

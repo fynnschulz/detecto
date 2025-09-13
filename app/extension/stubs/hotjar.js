@@ -3,16 +3,16 @@
 
   // ===== Idempotenz + Stealth =====
   if (window.__PROTECTO_HOTJAR__) return;
-  try { Object.defineProperty(window, '__PROTECTO_HOTJAR__', { value: true, writable:false, configurable:false, enumerable:false }); } catch { window.__PROTECTO_HOTJAR__ = true; }
+  try { Object.defineProperty(window, '__PROTECTO_HOTJAR__', { value: true, writable:true, configurable:true, enumerable:false }); } catch { window.__PROTECTO_HOTJAR__ = true; }
 
   // ===== Helpers =====
   function nativeFn(name){ return function(){ return `function ${name}() { [native code] }`; }; }
   function ro(obj, key, value){
-    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
+    try { Object.defineProperty(obj, key, { value, writable:true, configurable:true, enumerable:false }); }
     catch { obj[key] = value; }
   }
   function roGetter(obj, key, getter){
-    try { Object.defineProperty(obj, key, { get:getter, configurable:false, enumerable:false }); } catch {}
+    try { Object.defineProperty(obj, key, { get:getter, configurable:true, enumerable:false }); } catch {}
   }
 
   const MAX_Q = 400;
@@ -116,13 +116,13 @@
   }
   // Seiten rufen oft _hjOnReady.push(fn) – wir führen fn sofort aus
   if (!Array.isArray(window._hjOnReady)) {
-    try { Object.defineProperty(window, '_hjOnReady', { value: [], writable:false, configurable:false, enumerable:false }); }
+    try { Object.defineProperty(window, '_hjOnReady', { value: [], writable:true, configurable:true, enumerable:false }); }
     catch { window._hjOnReady = []; }
   }
   try {
     Object.defineProperty(window._hjOnReady, 'push', {
       value: function(fn){ try { if (typeof fn === 'function') fn(); } catch {} return 1; },
-      writable:false, configurable:false, enumerable:false
+      writable:true, configurable:true, enumerable:false
     });
   } catch {}
 
@@ -154,7 +154,8 @@
   };
   try { hj.getData.toString = nativeFn('getData'); } catch {}
 
-  // Export (non-writable/non-configurable)
-  ro(window, 'hj', hj);
+  // Export (writable/configurable/extensible)
+  try { Object.defineProperty(window, 'hj', { value: hj, writable:true, configurable:true, enumerable:false }); }
+  catch { window.hj = hj; }
 
 })();

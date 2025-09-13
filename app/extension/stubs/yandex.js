@@ -35,8 +35,6 @@
   // ---------------------------------------------------------------------------
   // Utilities
   // ---------------------------------------------------------------------------
-  const freeze = (o)=>{ try { return Object.freeze(o); } catch { return o; } };
-  const seal   = (o)=>{ try { return Object.seal(o); } catch { return o; } };
   const defRO  = (obj,key,val)=>{ try{ Object.defineProperty(obj, key, { value: val, writable:false, enumerable:false, configurable:false }); }catch{ obj[key]=val; } };
   const clone  = (x)=>{ try{ return x && typeof x==='object' ? JSON.parse(JSON.stringify(x)) : x; }catch{ return x; } };
   const nativeToString = (name)=>`function ${name}() { [native code] }`;
@@ -93,7 +91,6 @@
       getClientID: function(cb){ ym(id, 'getClientID', cb); }
     };
     try { Object.defineProperty(api, 'toString', { value: ()=>"[object Object]", enumerable:false }); } catch {}
-    try { Object.freeze(api); } catch {}
     try { Object.defineProperty(W, name, { value: api, writable:false, enumerable:false, configurable:true }); } catch { W[name] = api; }
   }
 
@@ -120,7 +117,7 @@
           const url = String(rest[0] || (W.location && W.location.href) || '/');
           const p = rest[1] && typeof rest[1]==='object' ? clone(rest[1]) : undefined;
           if (c.hits.length > 1000) c.hits.shift();
-          c.hits.push(freeze({ url, params: p, ts: now() }));
+          c.hits.push({ url, params: p, ts: now() });
           log('hit', id, url, p);
           break;
         }
@@ -128,7 +125,7 @@
           const name = String(rest[0]||'').trim();
           const params = rest[1] && typeof rest[1]==='object' ? clone(rest[1]) : undefined;
           const cb = typeof rest[2] === 'function' ? rest[2] : null;
-          if (name) c.goals.push(freeze({ name, params, ts: now() }));
+          if (name) c.goals.push({ name, params, ts: now() });
           if (cb) nextTick(()=>{ try{ cb(); }catch{} });
           log('reachGoal', id, name, params);
           break;
@@ -181,8 +178,8 @@
     }catch(e){ log('error', e); }
   }
   try { ym.toString = ()=>nativeToString('ym'); } catch {}
-  defRO(ym, 'a', []);           // keep shape for scripts that inspect ym.a
-  defRO(ym, 'l', +new Date());  // like the real snippet assigns load timestamp
+  Object.defineProperty(ym, 'a', { value: [], writable: true, enumerable: false, configurable: true });
+  Object.defineProperty(ym, 'l', { value: +new Date(), writable: true, enumerable: false, configurable: true });
 
   // Publish global
   W.ym = ym;
@@ -195,8 +192,8 @@
   }
 
   // Debug surface (read‑only)
-  defRO(ym, '__PROTECTO_STUB__', true);
-  defRO(ym, '__getState', ()=>{
+  Object.defineProperty(ym, '__PROTECTO_STUB__', { value: true, writable: true, enumerable: false, configurable: true });
+  Object.defineProperty(ym, '__getState', { value: ()=>{
     const out = {};
     for (const k of Object.keys(counters)) {
       const c = counters[k];
@@ -211,10 +208,9 @@
       };
     }
     return out;
-  });
-  defRO(ym, '__clientId', clientId);
-  defRO(ym, '__sessionId', sessionId);
+  }, writable: true, enumerable: false, configurable: true });
+  Object.defineProperty(ym, '__clientId', { value: clientId, writable: true, enumerable: false, configurable: true });
+  Object.defineProperty(ym, '__sessionId', { value: sessionId, writable: true, enumerable: false, configurable: true });
 
-  try { seal(counters); } catch {}
   log('Yandex Metrica stub active');
 })();

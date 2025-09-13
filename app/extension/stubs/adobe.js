@@ -1,5 +1,3 @@
-
-
 /**
  * Protecto — Adobe Analytics / AppMeasurement & VisitorAPI Stub
  * Goal: Behave like real libraries enough that sites "think" AA is present,
@@ -29,8 +27,8 @@
   // ---------------------------------------------------------------------------
   // Minimal utility helpers
   // ---------------------------------------------------------------------------
-  const defineRO = (obj, key, val)=>{ try{ Object.defineProperty(obj, key, {value:val, writable:false, configurable:false, enumerable:false}); }catch{ obj[key]=val; } };
-  const freeze  = (o)=>{ try{ return Object.freeze(o); }catch{ return o; } };
+  const defineRO = (obj, key, val)=>{ try{ Object.defineProperty(obj, key, {value:val, writable:true, configurable:true, enumerable:false}); }catch{ obj[key]=val; } };
+  const freeze  = (o)=>{ return o; };
   const clone   = (x)=>{ try{ return x && typeof x==='object' ? JSON.parse(JSON.stringify(x)) : x; }catch{ return x; } };
   const nativeToString = (name)=>`function ${name}() { [native code] }`;
 
@@ -67,7 +65,7 @@
 
     // Make it look a bit native
     try{ v.getMarketingCloudVisitorID.toString = ()=>nativeToString('getMarketingCloudVisitorID'); }catch{}
-    return freeze(v);
+    return v;
   }
 
   if (!W.Visitor) {
@@ -102,16 +100,16 @@
     };
 
     // Pre-create prop1..75 and eVar1..250 accessors
-    for (let i=1;i<=75;i++) Object.defineProperty(_vars, 'prop'+i, { get(){return this.prop[i]||'';}, set(v){ this.prop[i]=String(v); }, enumerable:false});
-    for (let i=1;i<=250;i++) Object.defineProperty(_vars, 'eVar'+i, { get(){return this.eVar[i]||'';}, set(v){ this.eVar[i]=String(v); }, enumerable:false});
+    for (let i=1;i<=75;i++) Object.defineProperty(_vars, 'prop'+i, { get(){return this.prop[i]||'';}, set(v){ this.prop[i]=String(v); }, enumerable:false, configurable:true});
+    for (let i=1;i<=250;i++) Object.defineProperty(_vars, 'eVar'+i, { get(){return this.eVar[i]||'';}, set(v){ this.eVar[i]=String(v); }, enumerable:false, configurable:true});
 
     // Core track compiler (no network)
     function compileHit(kind){
-      return freeze({
+      return {
         kind, account:_cfg.account,
         vars: clone(_vars),
         ts: Date.now()
-      });
+      };
     }
 
     // Public instance object "s"
@@ -201,7 +199,7 @@
 
   // Common global alias: sites often assign `var s = s_gi('...');`
   if (!('s' in W)) {
-    try { Object.defineProperty(W, 's', { get(){ return _instances[Object.keys(_instances)[0]] || null; }, set(v){ /* ignore */ }, configurable:false }); }catch{}
+    try { W.s = _instances[Object.keys(_instances)[0]] || null; }catch{}
   }
 
   log('Adobe/AppMeasurement stub active');

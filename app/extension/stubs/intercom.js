@@ -1,5 +1,3 @@
-
-
 /**
  * Protecto — Intercom Web Stub (stealth)
  *
@@ -36,7 +34,7 @@
   if (typeof window !== 'object') return;
   const W = window;
   if (W.__PROTECTO_INTERCOM_STUB__) return; // already installed
-  Object.defineProperty(W, '__PROTECTO_INTERCOM_STUB__', { value: true, configurable: false });
+  W.__PROTECTO_INTERCOM_STUB__ = true;
 
   const DEBUG = !!W.__PROTECTO_DEBUG__;
   const log = (...a)=>{ try{ if (DEBUG) console.debug('[Protecto][Intercom]', ...a); }catch{} };
@@ -121,7 +119,7 @@
     const n = String(name||'').trim();
     const m = (metadata && typeof metadata==='object') ? metadata : undefined;
     if (!n) return;
-    const entry = freeze({ name: n, metadata: clone(m), ts: Date.now() });
+    const entry = { name: n, metadata: clone(m), ts: Date.now() };
     if (state.events.length > 1000) state.events.shift();
     state.events.push(entry);
     log('trackEvent', entry);
@@ -186,9 +184,9 @@
   try { IntercomFacade.toString = ()=>nativeToString('Intercom'); } catch {}
 
   // Attach helpers/mirrors similar to real Intercom facade shape
-  defRO(IntercomFacade, 'booted', ()=>state.booted);
-  defRO(IntercomFacade, 'getVisitorId', api_getVisitorId);
-  defRO(IntercomFacade, 'q', []); // keep shape
+  IntercomFacade.booted = ()=>state.booted;
+  IntercomFacade.getVisitorId = api_getVisitorId;
+  IntercomFacade.q = [];
 
   // Publish global
   W.Intercom = IntercomFacade;
@@ -207,10 +205,10 @@
   }
 
   // Debug surface (read‑only clone access)
-  defRO(IntercomFacade, '__PROTECTO_STUB__', true);
-  defRO(IntercomFacade, '__getState', ()=>clone(state));
+  IntercomFacade.__PROTECTO_STUB__ = true;
+  IntercomFacade.__getState = ()=>clone(state);
 
   // Lock down some surfaces
-  try{ seal(state); }catch{}
+  // try{ seal(state); }catch{}
   log('Intercom stub active');
 })();

@@ -163,20 +163,46 @@
   [
     'load','identify','resetIdentity','addUserProperties','addEventProperties','clearEventProperties','removeEventProperty','setEventProperties',
     'track','optOut','ready','getUserId','getDeviceId','getSessionId','getAppId','getEventProperties'
-  ].forEach(function(name){ try { Object.defineProperty(Heap[name], 'toString', { value: function(){ return nativeSig; } }); } catch(_){} });
-
-  // Expose internal state (read-only) for debugging
-  Object.defineProperties(Heap, {
-    __PROTECTO_STUB__: { value: true },
-    _buffer: { get: function(){ return state.buffer.slice(); } },
-    _userProps: { get: function(){ return Object.assign({}, state.userProps); } },
-    _eventProps: { get: function(){ return Object.assign({}, state.evStatic); } },
-    _config: { get: function(){ return Object.assign({}, state.config||{}); } }
+  ].forEach(function(name){ 
+    try { 
+      Object.defineProperty(Heap[name], 'toString', { value: function(){ return nativeSig; }, writable: true, configurable: true }); 
+    } catch(_){}
   });
 
-  // Install global
+  // Expose internal state (read-only) for debugging, but writable/configurable where possible
+  Object.defineProperties(Heap, {
+    __PROTECTO_STUB__: { value: true, writable: true, configurable: true },
+    _buffer: { 
+      get: function(){ return state.buffer.slice(); }, 
+      configurable: true 
+    },
+    _userProps: { 
+      get: function(){ return Object.assign({}, state.userProps); }, 
+      configurable: true 
+    },
+    _eventProps: { 
+      get: function(){ return Object.assign({}, state.evStatic); }, 
+      configurable: true 
+    },
+    _config: { 
+      get: function(){ return Object.assign({}, state.config||{}); }, 
+      configurable: true 
+    }
+  });
+
+  // Install global, ensuring writable and extensible window.heap
   var pre = Array.isArray(window.heap) ? window.heap.slice() : null; // classic snippet queue
-  window.heap = Heap;
+  try {
+    Object.defineProperty(window, 'heap', {
+      value: Heap,
+      writable: true,
+      configurable: true,
+      enumerable: true
+    });
+  } catch (_) {
+    // fallback if defineProperty fails
+    window.heap = Heap;
+  }
 
   // Drain pre-queued calls like ["load", APP_ID]
   if (pre) {

@@ -11,7 +11,6 @@
 
     function toNative(fn){ try{ fn.toString = NATIVE_TO_STRING.bind(function(){ return NATIVE_STR; }); }catch{} return fn; }
     function named(name, fn){ try{ Object.defineProperty(fn, 'name', { value: name, configurable: true }); }catch{} return fn; }
-    function deepFreeze(o){ try{ Object.freeze(o); }catch{} return o; }
 
     // ===== Pre‑existing bootstrap queue (if any) =====
     const preQ = (window.snaptr && Array.isArray(window.snaptr.queue)) ? window.snaptr.queue.slice() : [];
@@ -112,27 +111,27 @@
     const api = invoke; // function
 
     Object.defineProperties(api, {
-      push:   { value: pushImpl,   writable:false, configurable:false, enumerable:false },
-      init:   { value: initImpl,   writable:false, configurable:false, enumerable:false },
-      track:  { value: trackImpl,  writable:false, configurable:false, enumerable:false },
-      identify:{value: identifyImpl,writable:false, configurable:false, enumerable:false },
-      set:    { value: setImpl,    writable:false, configurable:false, enumerable:false },
-      consent:{ value: consentImpl,writable:false, configurable:false, enumerable:false },
-      page:   { value: pageImpl,   writable:false, configurable:false, enumerable:false },
-      reset:  { value: resetImpl,  writable:false, configurable:false, enumerable:false },
-      ready:  { value: readyImpl,  writable:false, configurable:false, enumerable:false },
-      subscribe:   { value: subscribeImpl,   writable:false, configurable:false, enumerable:false },
-      unsubscribe: { value: unsubscribeImpl, writable:false, configurable:false, enumerable:false },
+      push:   { value: pushImpl,   writable:true, configurable:true, enumerable:false },
+      init:   { value: initImpl,   writable:true, configurable:true, enumerable:false },
+      track:  { value: trackImpl,  writable:true, configurable:true, enumerable:false },
+      identify:{value: identifyImpl,writable:true, configurable:true, enumerable:false },
+      set:    { value: setImpl,    writable:true, configurable:true, enumerable:false },
+      consent:{ value: consentImpl,writable:true, configurable:true, enumerable:false },
+      page:   { value: pageImpl,   writable:true, configurable:true, enumerable:false },
+      reset:  { value: resetImpl,  writable:true, configurable:true, enumerable:false },
+      ready:  { value: readyImpl,  writable:true, configurable:true, enumerable:false },
+      subscribe:   { value: subscribeImpl,   writable:true, configurable:true, enumerable:false },
+      unsubscribe: { value: unsubscribeImpl, writable:true, configurable:true, enumerable:false },
 
-      __PROTECTO_STUB__: { value: true,  writable:false, configurable:false },
-      version:           { value: '1.1', writable:false, configurable:false },
-      loaded:            { value: true,  writable:false, configurable:false },
-      pixels:            { get: function(){ return Array.from(_pixels); } },
-      userId:            { get: function(){ return _userId; } },
-      props:             { get: function(){ return Object.assign({}, _props); } },
-      consentState:      { get: function(){ return { ad_storage:_consent.ad_storage, analytics_storage:_consent.analytics_storage }; } },
-      q:                 { get: function(){ return _q.slice(); } },
-      queue:             { get: function(){ return _q.map(e=>e.a); } }
+      __PROTECTO_STUB__: { value: true,  writable:true, configurable:true },
+      version:           { value: '1.1', writable:true, configurable:true },
+      loaded:            { value: true,  writable:true, configurable:true },
+      pixels:            { get: function(){ return Array.from(_pixels); }, configurable:true },
+      userId:            { get: function(){ return _userId; }, configurable:true },
+      props:             { get: function(){ return Object.assign({}, _props); }, configurable:true },
+      consentState:      { get: function(){ return { ad_storage:_consent.ad_storage, analytics_storage:_consent.analytics_storage }; }, configurable:true },
+      q:                 { get: function(){ return _q.slice(); }, configurable:true },
+      queue:             { get: function(){ return _q.map(e=>e.a); }, configurable:true }
     });
 
     // Spoof native‑like toString for function and methods
@@ -140,16 +139,8 @@
     toNative(identifyImpl); toNative(setImpl); toNative(consentImpl); toNative(pageImpl);
     toNative(resetImpl); toNative(readyImpl); toNative(subscribeImpl); toNative(unsubscribeImpl);
 
-    // Lock down the API surface
-    deepFreeze(api);
-
-    // Install global, non‑writable snaptr
-    Object.defineProperty(window, 'snaptr', {
-      value: api,
-      configurable: false,
-      writable: false,
-      enumerable: false
-    });
+    // Install global, writable snaptr
+    window.snaptr = api;
 
     // Flush pre‑queue
     if (preQ && preQ.length) {

@@ -1,5 +1,3 @@
-
-
 // Pinterest Tag Stub – pintrk (pro‑level, stealth, MV3‑friendly)
 // Emulates the public API so sites think the SDK is present and loaded.
 (function(){
@@ -13,7 +11,6 @@
 
     function toNative(fn){ try{ fn.toString = NATIVE_TO_STRING.bind(function(){ return NATIVE_STR; }); }catch{} return fn; }
     function named(name, fn){ try{ Object.defineProperty(fn, 'name', { value: name, configurable: true }); }catch{} return fn; }
-    function deepFreeze(o){ try { Object.freeze(o); } catch{} return o; }
 
     // Adopt pre-existing queue if a bootstrap shim ran before us
     const preQ = (window.pintrk && Array.isArray(window.pintrk.queue)) ? window.pintrk.queue.slice() : [];
@@ -100,43 +97,34 @@
     // ===== Assemble global function object =====
     const api = invoke; // function
 
-    Object.defineProperties(api, {
-      push:   { value: pushImpl,   writable: false, configurable: false, enumerable: false },
-      load:   { value: loadImpl,   writable: false, configurable: false, enumerable: false },
-      page:   { value: pageImpl,   writable: false, configurable: false, enumerable: false },
-      track:  { value: trackImpl,  writable: false, configurable: false, enumerable: false },
-      identify:{ value: identifyImpl,writable: false, configurable: false, enumerable: false },
-      set:    { value: setImpl,    writable: false, configurable: false, enumerable: false },
-      ready:  { value: readyImpl,  writable: false, configurable: false, enumerable: false },
-      consent:{ value: consentImpl,writable: false, configurable: false, enumerable: false },
-      subscribe:   { value: subscribeImpl,   writable: false, configurable: false, enumerable: false },
-      unsubscribe: { value: unsubscribeImpl, writable: false, configurable: false, enumerable: false },
+    api.push = pushImpl;
+    api.load = loadImpl;
+    api.page = pageImpl;
+    api.track = trackImpl;
+    api.identify = identifyImpl;
+    api.set = setImpl;
+    api.ready = readyImpl;
+    api.consent = consentImpl;
+    api.subscribe = subscribeImpl;
+    api.unsubscribe = unsubscribeImpl;
 
-      __PROTECTO_STUB__: { value: true,  writable: false, configurable: false },
-      version:           { value: '1.2', writable: false, configurable: false },
-      loaded:            { value: true,  writable: false, configurable: false },
-      tagId:             { get: function(){ return _tagId; } },
-      userId:            { get: function(){ return _userId; } },
-      props:             { get: function(){ return Object.assign({}, _props); } },
-      q:                 { get: function(){ return _q.slice(); } },
-      queue:             { get: function(){ return _q.map(e=>e.a); } }
-    });
+    api.__PROTECTO_STUB__ = true;
+    api.version = '1.2';
+    api.loaded = true;
+
+    Object.defineProperty(api, 'tagId', { get: function(){ return _tagId; } });
+    Object.defineProperty(api, 'userId', { get: function(){ return _userId; } });
+    Object.defineProperty(api, 'props', { get: function(){ return Object.assign({}, _props); } });
+    Object.defineProperty(api, 'q', { get: function(){ return _q.slice(); } });
+    Object.defineProperty(api, 'queue', { get: function(){ return _q.map(e=>e.a); } });
 
     // Spoof native‑like toString for function and methods
     toNative(api); toNative(pushImpl); toNative(loadImpl); toNative(pageImpl);
     toNative(trackImpl); toNative(identifyImpl); toNative(setImpl);
     toNative(readyImpl); toNative(consentImpl); toNative(subscribeImpl); toNative(unsubscribeImpl);
 
-    // Lock down
-    deepFreeze(api);
-
-    // Install global non‑writable pintrk
-    Object.defineProperty(window, 'pintrk', {
-      value: api,
-      configurable: false,
-      writable: false,
-      enumerable: false
-    });
+    // Install global pintrk
+    window.pintrk = api;
 
     // Flush any pre‑queued calls captured by a bootstrapper
     if (preQ && preQ.length) {

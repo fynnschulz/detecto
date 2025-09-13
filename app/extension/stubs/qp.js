@@ -17,7 +17,6 @@
 
     function toNative(fn){ try{ fn.toString = NATIVE_TO_STRING.bind(function(){ return NATIVE_STR; }); }catch{} return fn; }
     function named(name, fn){ try{ Object.defineProperty(fn, 'name', { value: name, configurable: true }); }catch{} return fn; }
-    function deepFreeze(obj){ try{ Object.freeze(obj); }catch{} return obj; }
 
     // ===== Adopt any pre‑existing bootstrap queue =====
     // Quora snippet often defines a function shim that queues calls before SDK loads.
@@ -122,31 +121,30 @@
     // ===== Assemble global function object =====
     const api = invoke; // function
 
-    Object.defineProperties(api, {
-      push:   { value: pushImpl,   writable:false, configurable:false, enumerable:false },
-      init:   { value: initImpl,   writable:false, configurable:false, enumerable:false },
-      track:  { value: trackImpl,  writable:false, configurable:false, enumerable:false },
-      send:   { value: sendImpl,   writable:false, configurable:false, enumerable:false },
-      sendEvent: { value: sendEventImpl, writable:false, configurable:false, enumerable:false },
-      page:   { value: pageImpl,   writable:false, configurable:false, enumerable:false },
-      identify:{value: identifyImpl,writable:false, configurable:false, enumerable:false },
-      set:    { value: setImpl,    writable:false, configurable:false, enumerable:false },
-      consent:{ value: consentImpl,writable:false, configurable:false, enumerable:false },
-      reset:  { value: resetImpl,  writable:false, configurable:false, enumerable:false },
-      ready:  { value: readyImpl,  writable:false, configurable:false, enumerable:false },
-      subscribe:   { value: subscribeImpl,   writable:false, configurable:false, enumerable:false },
-      unsubscribe: { value: unsubscribeImpl, writable:false, configurable:false, enumerable:false },
+    api.push = pushImpl;
+    api.init = initImpl;
+    api.track = trackImpl;
+    api.send = sendImpl;
+    api.sendEvent = sendEventImpl;
+    api.page = pageImpl;
+    api.identify = identifyImpl;
+    api.set = setImpl;
+    api.consent = consentImpl;
+    api.reset = resetImpl;
+    api.ready = readyImpl;
+    api.subscribe = subscribeImpl;
+    api.unsubscribe = unsubscribeImpl;
 
-      __PROTECTO_STUB__: { value: true,  writable:false, configurable:false },
-      version:           { value: '1.0', writable:false, configurable:false },
-      loadedAt:          { value: _loadedTs, writable:false, configurable:false },
-      pixels:            { get: function(){ return Array.from(_pixels); } },
-      user:              { get: function(){ return Object.assign({}, _user); } },
-      props:             { get: function(){ return Object.assign({}, _props); } },
-      consentState:      { get: function(){ return { ad_storage:_consent.ad_storage, analytics_storage:_consent.analytics_storage }; } },
-      q:                 { get: function(){ return _q.slice(); } },
-      queue:             { get: function(){ return _q.map(e=>e.a); } }
-    });
+    api.__PROTECTO_STUB__ = true;
+    api.version = '1.0';
+    api.loadedAt = _loadedTs;
+
+    Object.defineProperty(api, 'pixels', { get: function(){ return Array.from(_pixels); } });
+    Object.defineProperty(api, 'user', { get: function(){ return Object.assign({}, _user); } });
+    Object.defineProperty(api, 'props', { get: function(){ return Object.assign({}, _props); } });
+    Object.defineProperty(api, 'consentState', { get: function(){ return { ad_storage:_consent.ad_storage, analytics_storage:_consent.analytics_storage }; } });
+    Object.defineProperty(api, 'q', { get: function(){ return _q.slice(); } });
+    Object.defineProperty(api, 'queue', { get: function(){ return _q.map(e=>e.a); } });
 
     // Spoof native‑like toString for function and all methods
     toNative(api); toNative(pushImpl); toNative(initImpl); toNative(trackImpl);
@@ -154,16 +152,8 @@
     toNative(identifyImpl); toNative(setImpl); toNative(consentImpl);
     toNative(resetImpl); toNative(readyImpl); toNative(subscribeImpl); toNative(unsubscribeImpl);
 
-    // Lock down the API surface
-    deepFreeze(api);
-
     // Install global, non‑writable qp
-    Object.defineProperty(window, 'qp', {
-      value: api,
-      configurable: false,
-      writable: false,
-      enumerable: false
-    });
+    window.qp = api;
 
     // Flush pre‑existing queue
     if (preQ && preQ.length) {

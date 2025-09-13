@@ -54,10 +54,10 @@
   }
   function log(...a){ if (DEBUG) console.debug("[Protecto-fbq-stub]",...a); }
 
-  function defGlobal(obj, key, value){
-    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
-    catch { obj[key] = value; }
-  }
+  // function defGlobal(obj, key, value){
+  //   try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
+  //   catch { obj[key] = value; }
+  // }
 
   function recordEvent(name, params){
     try {
@@ -205,28 +205,27 @@
   // Alias like the original: _fbq points to fbq (a function), with a compatible surface
   window.fbq = FBQ;
   window._fbq = window.fbq;
-  try { Object.defineProperty(window._fbq, 'disablePushState', { value: true, writable:false, configurable:false, enumerable:false }); } catch {}
+  try { Object.defineProperty(window._fbq, 'disablePushState', { value: true, writable:true, configurable:true, enumerable:false }); } catch { window._fbq.disablePushState = true; }
   // Provide a stable queue reference for integrations that inspect _fbq.queue
-  try { Object.defineProperty(window._fbq, 'queue', { value: state.queue, writable:false, configurable:false, enumerable:false }); } catch {}
+  try { Object.defineProperty(window._fbq, 'queue', { value: state.queue, writable:true, configurable:true, enumerable:false }); } catch { window._fbq.queue = state.queue; }
   // Some scripts call _fbq.push(...); provide a harmless no-op
-  try { Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:false, configurable:false, enumerable:false }); } catch {}
+  try { Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:true, configurable:true, enumerable:false }); } catch { window._fbq.push = function(){ return true; }; }
 
   // Stealth: native-like toString & non-enumerable globals
   try { FBQ.toString = nativeFn('fbq'); } catch {}
   try { FBQ.push.toString = nativeFn('push'); } catch {}
   try { FBQ.callMethod.toString = nativeFn('callMethod'); } catch {}
   try { FBQ.getState.toString = nativeFn('getState'); } catch {}
-  defGlobal(window, 'fbq', FBQ);
 
   // Ensure _fbq exists as array-queue for theme bootstraps
   if (!Array.isArray(window._fbq)) window._fbq = [];
   try {
-    Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:false, configurable:false, enumerable:false });
+    Object.defineProperty(window._fbq, 'push', { value: function(){ return true; }, writable:true, configurable:true, enumerable:false });
   } catch { window._fbq.push = function(){ return true; }; }
 
   // Prevent fbq.queue from being overwritten
   try {
-    Object.defineProperty(FBQ, 'queue', { value: state.queue, writable:false, configurable:false, enumerable:false });
+    Object.defineProperty(FBQ, 'queue', { value: state.queue, writable:true, configurable:true, enumerable:false });
   } catch {}
 
   // Vorbestehende Queue-Aufrufe (vom Bootstrapping) nachträglich abarbeiten

@@ -33,20 +33,6 @@
     return 'function ' + name + '() { [native code] }';
   }
 
-  function defineRO(obj, key, value) {
-    Object.defineProperty(obj, key, { value: value, writable: false, enumerable: false, configurable: false });
-  }
-
-  function deepFreeze(obj, depth) {
-    if (!obj || typeof obj !== 'object') return obj;
-    if (depth <= 0) return obj;
-    Object.freeze(obj);
-    Object.getOwnPropertyNames(obj).forEach(function (k) {
-      try { deepFreeze(obj[k], depth - 1); } catch (_) {}
-    });
-    return obj;
-  }
-
   function cloneJSON(x) {
     try { return x == null ? x : JSON.parse(JSON.stringify(x)); } catch (_) { return x; }
   }
@@ -89,7 +75,7 @@
   //   OBREvents.push({ event:'widgetDataReturned', widgetId:['AR_1'], func: cb })
   var pre = window.OBREvents;
   var OBREventsFacade = [];
-  defineRO(window, 'OBREvents', OBREventsFacade);
+  window.OBREvents = OBREventsFacade;
   OBREventsFacade.push = function push(item) {
     try {
       if (!item || typeof item !== 'object') return 0;
@@ -101,7 +87,7 @@
     } catch (_) {}
     return EventBus._handlers ? (EventBus._handlers.length || 1) : 1;
   };
-  defineRO(OBREventsFacade.push, 'toString', function () { return nativeToString('push'); });
+  OBREventsFacade.push.toString = function () { return nativeToString('push'); };
 
   if (Array.isArray(pre) && pre.length) {
     pre.slice().forEach(function (x) { try { OBREventsFacade.push(x); } catch (_) {} });
@@ -163,22 +149,21 @@
   }
 
   // public OBR surface (subset)
-  defineRO(OBR, 'refresh', refresh);
-  defineRO(OBR, 'markContainers', markContainers);
-  defineRO(OBR, 'getState', getState);
-  defineRO(OBR, 'on', EventBus.on);
-  defineRO(OBR, 'off', EventBus.off);
-  defineRO(OBR, 'toString', function () { return '[object OBR]'; });
+  OBR.refresh = refresh;
+  OBR.markContainers = markContainers;
+  OBR.getState = getState;
+  OBR.on = EventBus.on;
+  OBR.off = EventBus.off;
+  OBR.toString = function () { return '[object OBR]'; };
   // Native-like method strings
-  defineRO(OBR.refresh, 'toString', function () { return nativeToString('refresh'); });
-  defineRO(OBR.markContainers, 'toString', function () { return nativeToString('markContainers'); });
-  defineRO(OBR.getState, 'toString', function () { return nativeToString('getState'); });
-  defineRO(OBR.on, 'toString', function () { return nativeToString('on'); });
-  defineRO(OBR.off, 'toString', function () { return nativeToString('off'); });
+  OBR.refresh.toString = function () { return nativeToString('refresh'); };
+  OBR.markContainers.toString = function () { return nativeToString('markContainers'); };
+  OBR.getState.toString = function () { return nativeToString('getState'); };
+  OBR.on.toString = function () { return nativeToString('on'); };
+  OBR.off.toString = function () { return nativeToString('off'); };
 
   // Attach globally (read-only)
-  defineRO(window, 'OBR', OBR);
-  deepFreeze(OBR, 2);
+  window.OBR = OBR;
 
   // Perform an initial async pass similar to the real script
   nextTick(function () {
@@ -232,13 +217,13 @@
     } catch (_) {}
     return obApi;
   }
-  defineRO(obApi, 'toString', function () { return nativeToString('obApi'); });
-  defineRO(obApi, 'version', _obState.version);
-  defineRO(obApi, 'queue', _obState.q);
+  obApi.toString = function () { return nativeToString('obApi'); };
+  obApi.version = _obState.version;
+  obApi.queue = _obState.q;
 
   // Pre-queue takeover if page declared window._obApiQ or obApi before load
   var pq = window._obApiQ;
-  defineRO(window, 'obApi', obApi);
+  window.obApi = obApi;
   if (Array.isArray(pq) && pq.length) {
     pq.slice().forEach(function (entry) {
       try {
@@ -258,8 +243,5 @@
   } catch (_) {}
 
   /* ---------- Final harden ---------- */
-  deepFreeze(window.OBREvents, 1);
-  deepFreeze(_state, 1);
-  deepFreeze(_obState, 1);
   dlog('stub ready');
 })();

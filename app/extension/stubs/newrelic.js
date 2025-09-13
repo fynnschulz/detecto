@@ -1,5 +1,3 @@
-
-
 /**
  * New Relic Browser Stub
  * Simulates the New Relic Browser Agent for local/dev/test environments.
@@ -28,21 +26,6 @@
   // Internal event queue for buffering calls before "init"
   var _queue = NREUM.oQueue = NREUM.oQueue || [];
   var _buffering = true;
-
-  // Deep freeze utility
-  function deepFreeze(obj) {
-    Object.freeze(obj);
-    Object.getOwnPropertyNames(obj).forEach(function(prop) {
-      if (
-        obj[prop] !== null &&
-        (typeof obj[prop] === 'object' || typeof obj[prop] === 'function') &&
-        !Object.isFrozen(obj[prop])
-      ) {
-        deepFreeze(obj[prop]);
-      }
-    });
-    return obj;
-  }
 
   // Logging
   function log() {
@@ -138,30 +121,19 @@
     version: 'stub-1.0.0',
     __stub: true
   };
-  deepFreeze(api);
 
   // Merge API onto NREUM object, immutably
   Object.keys(api).forEach(function(k) {
     if (!Object.prototype.hasOwnProperty.call(NREUM, k)) {
-      Object.defineProperty(NREUM, k, {
-        configurable: false,
-        enumerable: true,
-        writable: false,
-        value: api[k]
-      });
+      NREUM[k] = api[k];
     }
   });
 
   // Mark stub loaded
-  Object.defineProperty(NREUM, '__stubLoaded', {
-    value: true,
-    writable: false,
-    configurable: false,
-    enumerable: false
-  });
+  NREUM.__stubLoaded = true;
 
   // Prevent mutation of NREUM
-  deepFreeze(NREUM);
+  // (removed deepFreeze)
 
   // Compatibility: expose NREUM globally
   if (typeof window !== 'undefined') window.NREUM = NREUM;
@@ -169,19 +141,19 @@
 
   // Compatibility: simulate loader (for integrations)
   if (!NREUM.loader_config) {
-    NREUM.loader_config = deepFreeze({
+    NREUM.loader_config = {
       licenseKey: 'STUB-KEY',
       applicationID: 'STUB-APP'
-    });
+    };
   }
   if (!NREUM.info) {
-    NREUM.info = deepFreeze({
+    NREUM.info = {
       beacon: '',
       errorBeacon: '',
       licenseKey: 'STUB-KEY',
       applicationID: 'STUB-APP',
       sa: 1
-    });
+    };
   }
 
   // Simulate agent ready after a short delay (or call NREUM.init())

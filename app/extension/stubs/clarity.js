@@ -135,32 +135,36 @@
     if (preBootstrapQ && preBootstrapQ.length) pushQ(preBootstrapQ);
   } catch {}
 
-  // Queue-Kompatibilität + Marker wie beim Original
-  try { Object.defineProperty(clarity, 'q', { value: state.q, writable:false, configurable:false, enumerable:false }); } catch { clarity.q = state.q; }
-  try { Object.defineProperty(clarity, 'v', { value: '0.7', writable:false, configurable:false, enumerable:false }); } catch { clarity.v = '0.7'; }
-  try { Object.defineProperty(clarity, 't', { value: +new Date(), writable:false, configurable:false, enumerable:false }); } catch { clarity.t = +new Date(); }
-  try { Object.defineProperty(clarity, 'loaded', { value: true, writable:false, configurable:false, enumerable:false }); } catch { clarity.loaded = true; }
+  // Queue-Kompatibilität + Marker wie beim Original, but all soft/writable
+  clarity.q = state.q;
+  clarity.v = '0.7';
+  clarity.t = +new Date();
+  clarity.loaded = true;
+  Object.defineProperty(clarity, 'sid', {
+    get: () => state.sessionId,
+    enumerable: false,
+    configurable: true // allow redefinition
+  });
+  Object.defineProperty(clarity, 'uid', {
+    get: () => state.userId,
+    enumerable: false,
+    configurable: true // allow redefinition
+  });
 
-  try { Object.defineProperty(clarity, 'sid', { get: ()=>state.sessionId, enumerable:false, configurable:false }); } catch {}
-  try { Object.defineProperty(clarity, 'uid', { get: ()=>state.userId,    enumerable:false, configurable:false }); } catch {}
+  // Native-like Fingerprints (assigned directly, not read-only)
+  clarity.toString          = nativeFn('clarity');
+  clarity.set.toString      = nativeFn('set');
+  clarity.identify.toString = nativeFn('identify');
+  clarity.event.toString    = nativeFn('event');
+  clarity.consent.toString  = nativeFn('consent');
+  clarity.track.toString    = nativeFn('track');
+  clarity.upload.toString   = nativeFn('upload');
+  clarity.stop.toString     = nativeFn('stop');
+  clarity.start.toString    = nativeFn('start');
+  clarity.upgrade = clarity.upgrade || function() { return clarity('upgrade'); };
+  clarity.upgrade.toString  = nativeFn('upgrade');
 
-  // Native-like Fingerprints
-  try {
-    clarity.toString         = nativeFn('clarity');
-    clarity.set.toString     = nativeFn('set');
-    clarity.identify.toString= nativeFn('identify');
-    clarity.event.toString   = nativeFn('event');
-    clarity.consent.toString = nativeFn('consent');
-    clarity.track.toString   = nativeFn('track');
-    clarity.upload.toString  = nativeFn('upload');
-    clarity.stop.toString    = nativeFn('stop');
-    clarity.start.toString   = nativeFn('start');
-    clarity.upgrade.toString = nativeFn('upgrade');
-    clarity.stop.toString    = nativeFn('stop');
-    clarity.start.toString   = nativeFn('start');
-  } catch {}
-
-  // Read-only Export
-  defGlobal(window, 'clarity', clarity);
+  // Soft Export: assign directly, allow extensibility
+  window.clarity = clarity;
 
 })();

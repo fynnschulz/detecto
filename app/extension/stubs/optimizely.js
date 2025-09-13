@@ -30,10 +30,6 @@
     try { Object.defineProperty(fn, 'toString', { value: function(){ return 'function ' + name + '() { [native code] }'; } }); } catch(_){}
     return fn;
   }
-  function defineRO(obj, key, val) {
-    try { Object.defineProperty(obj, key, { value: val, writable: false, enumerable: false, configurable: false }); }
-    catch(_) { try { obj[key] = val; } catch(__){} }
-  }
   function now(){ return Date.now ? Date.now() : +new Date(); }
   function isObj(x){ return x && typeof x === 'object' && !Array.isArray(x); }
   function deepClone(v, d){
@@ -248,19 +244,28 @@
     }
 
     // push interface ------------------------------------------------------------
-    function push(){ for (var i=0;i<arguments.length;i++) route(arguments[i]); return api.length; }
-    nativeLike('push', push);
+    // Create an array-based stub
+    var api = [];
+    // Override push so that it routes commands, and appends to the array
+    Object.defineProperty(api, 'push', {
+      value: nativeLike('push', function(){
+        for (var i=0;i<arguments.length;i++) {
+          route(arguments[i]);
+          Array.prototype.push.call(api, arguments[i]);
+        }
+        return api.length;
+      }),
+      writable: true,
+      configurable: true,
+      enumerable: false
+    });
 
-    // Öffentliches Objekt (callable Array‑like) --------------------------------
-    var api = function(){ return push.apply(api, arguments); };
-
-    // Event‑APIs
+    // Provide a callable interface (optional: if needed, can use Proxy, but for now, just array)
+    // Mix in API methods
     api.on = nativeLike('on', function(name, fn){ em.on(name, fn); return api; });
     api.off = nativeLike('off', function(name, fn){ em.off(name, fn); return api; });
     api.once = nativeLike('once', function(name, fn){ em.once(name, fn); return api; });
     api.emit = nativeLike('emit', function(){ return em.emit.apply(em, arguments); });
-
-    // Core methods
     api.ready = ready;
     api.activate = activateCmd;
     api.track = trackCmd;
@@ -275,17 +280,17 @@
     api.consent = consent;
 
     // Metadaten / Flags
-    defineRO(api, '__isStub', true);
-    defineRO(api, '__metrics', metrics);
-    defineRO(api, '__state', state);
-    defineRO(api, '__store', store);
-    defineRO(api, 'length', 0);
+    api.__isStub = true;
+    api.__metrics = metrics;
+    api.__state = state;
+    api.__store = store;
+    // Don't overwrite 'length', use native array length
 
     // Plausibles JSON
-    try { defineRO(api, 'toJSON', nativeLike('toJSON', function(){ return { id: state.id, session: state.session, version: version() }; })); } catch(_){}
+    try { api.toJSON = nativeLike('toJSON', function(){ return { id: state.id, session: state.session, version: version() }; }); } catch(_){}
 
-    // native‑like callable
-    try { Object.defineProperty(api, 'toString', { value: function(){ return '[object Optimizely]'; } }); } catch(_) {}
+    // native‑like toString
+    api.toString = function(){ return '[object Optimizely]'; };
 
     // Async Ready (wie echte SDKs)
     setTimeout(function(){ api.ready(); }, 0);
@@ -298,10 +303,10 @@
   var api = createAPI();
 
   // "Array‑like" shape beibehalten – viele Seiten prüfen optmizely.length
-  try { Object.defineProperty(api, 'length', { get: function(){ return api.__metrics ? api.__metrics.commandsProcessed : 0; } }); } catch(_) {}
+  // Now using the native array length; do not override 'length' property.
 
   // Export
-  try { Object.defineProperty(window, 'optimizely', { value: api, writable: false }); } catch(_) { window.optimizely = api; }
+  window.optimizely = api;
 
   // Vorhandene Queue abarbeiten
   if (Array.isArray(existing) && existing.length) {
@@ -319,7 +324,7 @@
   api.reset = nativeLike('reset', function(){ api.__state.variationMap = {}; api.__store.del('opt_consent'); api.emit('reset'); return true; });
 
   // Markiere Stub‑Installation im Window für Debugtools (nicht enumerable)
-  defineRO(window, '__PROTECTO_OPTIMIZELY_STUB__', true);
+  window.__PROTECTO_OPTIMIZELY_STUB__ = true;
 
   // Optional: Silent log
   try { if (api.__state.config.debug) console.debug('[optimizely stub] ready'); } catch(_){}

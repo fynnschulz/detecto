@@ -1,5 +1,3 @@
-
-
 // Sentry Browser SDK Professional Stub
 // Copyright (c) 2024. This is a stub implementation for environments where Sentry is not available.
 // This file simulates the global Sentry object and its key methods, including pre-init queueing,
@@ -12,21 +10,6 @@
   if (window.Sentry && !window.Sentry.__STUB__) {
     // Adopt pre-existing Sentry, do not overwrite.
     return;
-  }
-
-  // Utility: Deep freeze
-  function deepFreeze(obj) {
-    Object.freeze(obj);
-    Object.getOwnPropertyNames(obj).forEach(function(prop) {
-      if (
-        obj[prop] !== null &&
-        (typeof obj[prop] === "object" || typeof obj[prop] === "function") &&
-        !Object.isFrozen(obj[prop])
-      ) {
-        deepFreeze(obj[prop]);
-      }
-    });
-    return obj;
   }
 
   // Utility: Debug logger
@@ -52,15 +35,19 @@
     context: Object.create(null),
   };
 
-  // Immutability helpers
-  function cloneAndFreeze(obj) {
-    return deepFreeze(JSON.parse(JSON.stringify(obj)));
+  // Simple clone helper (no freezing)
+  function clone(obj) {
+    try {
+      return JSON.parse(JSON.stringify(obj));
+    } catch {
+      return obj;
+    }
   }
 
   // Minimal DSN client stub
   class StubClient {
     constructor(options) {
-      this.options = cloneAndFreeze(options || {});
+      this.options = clone(options || {});
       this._dsn = options && options.dsn ? options.dsn : null;
       debug.log("StubClient created with options:", this.options);
     }
@@ -105,14 +92,14 @@
   // Scope management
   function withScope(callback) {
     debug.log("withScope called");
-    const previousScope = cloneAndFreeze(_scope);
-    const tempScope = JSON.parse(JSON.stringify(_scope));
+    const previousScope = clone(_scope);
+    const tempScope = clone(_scope);
     try {
       callback({
-        setUser: user => { tempScope.user = cloneAndFreeze(user); },
+        setUser: user => { tempScope.user = clone(user); },
         setTag: (key, value) => { tempScope.tags[key] = value; },
         setExtra: (key, value) => { tempScope.extras[key] = value; },
-        setContext: (key, ctx) => { tempScope.context[key] = cloneAndFreeze(ctx); },
+        setContext: (key, ctx) => { tempScope.context[key] = clone(ctx); },
       });
     } catch (e) {
       debug.log("Error in withScope callback:", e);
@@ -124,16 +111,16 @@
   function configureScope(callback) {
     debug.log("configureScope called");
     callback({
-      setUser: user => { _scope.user = cloneAndFreeze(user); },
+      setUser: user => { _scope.user = clone(user); },
       setTag: (key, value) => { _scope.tags[key] = value; },
       setExtra: (key, value) => { _scope.extras[key] = value; },
-      setContext: (key, ctx) => { _scope.context[key] = cloneAndFreeze(ctx); },
+      setContext: (key, ctx) => { _scope.context[key] = clone(ctx); },
     });
   }
 
   function setUser(user) {
     debug.log("setUser:", user);
-    _scope.user = cloneAndFreeze(user);
+    _scope.user = clone(user);
   }
   function setTag(key, value) {
     debug.log("setTag:", key, value);
@@ -145,7 +132,7 @@
   }
   function setContext(key, ctx) {
     debug.log("setContext:", key, ctx);
-    _scope.context[key] = cloneAndFreeze(ctx);
+    _scope.context[key] = clone(ctx);
   }
 
   // Pre-init queueing wrapper
@@ -204,22 +191,14 @@
     },
     // Debug utilities
     __debug__: debug,
-    // Immutability
+    // Get current scope (non-frozen)
     getScope: function() {
-      return cloneAndFreeze(_scope);
+      return clone(_scope);
     },
     // Prevent multiple loads
     __preventMultipleLoads: true,
   };
 
-  // Freeze critical objects
-  deepFreeze(Sentry);
-
-  // Attach to window
-  Object.defineProperty(window, "Sentry", {
-    value: Sentry,
-    writable: false,
-    configurable: false,
-    enumerable: true,
-  });
+  // Attach to window as a normal writable property
+  window.Sentry = Sentry;
 })();

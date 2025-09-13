@@ -3,17 +3,10 @@
 
   // ===== Idempotenz + Stealth =====
   if (window.__PROTECTO_MATOMO__) return;
-  try { Object.defineProperty(window, '__PROTECTO_MATOMO__', { value: true, writable:false, configurable:false, enumerable:false }); } catch { window.__PROTECTO_MATOMO__ = true; }
+  window.__PROTECTO_MATOMO__ = true;
 
   // ===== Helpers =====
   function nativeFn(name){ return function(){ return `function ${name}() { [native code] }`; }; }
-  function ro(obj, key, value){
-    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
-    catch { obj[key] = value; }
-  }
-  function roGetter(obj, key, getter){
-    try { Object.defineProperty(obj, key, { get:getter, configurable:false, enumerable:false }); } catch {}
-  }
 
   const MAX_Q = 400;
   const state = {
@@ -160,9 +153,9 @@
     return { getTracker, getAsyncTrackers };
   })();
 
-  // Expose namespaces (read-only)
-  ro(window, 'Piwik', Piwik);
-  ro(window, 'Matomo', Piwik);
+  // Expose namespaces
+  window.Piwik = Piwik;
+  window.Matomo = Piwik;
 
   // ===== _paq bootstrap queue =====
   // Adopt any existing array as bootstrap
@@ -225,10 +218,9 @@
   }
 
   // Initialize _paq export (array with special push)
-  try { Object.defineProperty(_paq, 'push', { value: function(){ return paqPush.apply(null, arguments); }, writable:false, configurable:false, enumerable:false }); }
-  catch { _paq.push = function(){ return paqPush.apply(null, arguments); }; }
+  _paq.push = function(){ return paqPush.apply(null, arguments); };
 
-  ro(window, '_paq', _paq);
+  window._paq = _paq;
 
   // Drain bootstrap queue
   try {

@@ -1,5 +1,3 @@
-
-
 (function(){
   'use strict';
 
@@ -34,16 +32,6 @@
       return o;
     }
   }
-  function freezeDeep(obj){
-    try {
-      Object.freeze(obj);
-      Object.getOwnPropertyNames(obj).forEach(function(name){
-        var val = obj[name];
-        if (val && typeof val === 'object' && !Object.isFrozen(val)) freezeDeep(val);
-      });
-    } catch(_) {}
-    return obj;
-  }
 
   // Generate a pseudo placement id for realism
   function uid(){ return 'tb_'+Math.random().toString(36).slice(2)+Date.now().toString(36); }
@@ -51,7 +39,7 @@
   // ------------------------------------------------------------
   // Internal state
   // ------------------------------------------------------------
-  var state = freezeDeep({
+  var state = {
     placements: [],        // last declared placements
     page: {                // page context flags (mimic Taboola params)
       article: false, video: false, photo: false,
@@ -62,7 +50,7 @@
     account: null,
     target_type: 'mix',
     lastFlushAt: 0
-  });
+  };
 
   // ------------------------------------------------------------
   // Core queue & facade
@@ -108,7 +96,7 @@
         target_type: o.target_type || state.target_type,
         timestamp: Date.now()
       };
-      try { state.placements.push(placement); } catch(_){ /* frozen, ignore */ }
+      try { state.placements.push(placement); } catch(_){ /* ignore */ }
       emit('placement', placement);
     }
 
@@ -163,10 +151,10 @@
     var i = state.subscribers.indexOf(listener); if (i>=0) state.subscribers.splice(i,1);
   };
 
-  // Read-only props
+  // Read-only props (without freezing)
   Object.defineProperties(taboolaFacade, {
-    __PROTECTO_STUB__: { value: true },
-    version:           { value: VERSION },
+    __PROTECTO_STUB__: { value: true, writable: false },
+    version:           { value: VERSION, writable: false },
     q:                 { get: function(){ return _q; } },
     queue:             { get: function(){ return _q; } },
     placements:        { get: function(){ return state.placements.slice(); } },
@@ -197,11 +185,6 @@
       } catch(e){ log('pre-queue err', e); }
     }, 0);
   }
-
-  // Safety: freeze facade surface
-  try {
-    Object.defineProperty(window, '_taboola', { writable: false, configurable: false });
-  } catch(_){}
 
   log('stub installed', VERSION);
 })();

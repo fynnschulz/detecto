@@ -41,6 +41,14 @@
     }
   }
 
+  function defineSoft(obj, key, value) {
+    try {
+      Object.defineProperty(obj, key, { value: value, writable: true, enumerable: false, configurable: true });
+    } catch (_) {
+      obj[key] = value;
+    }
+  }
+
   // Simple UID
   var _uidSeq = 1;
   function uid(prefix) {
@@ -314,8 +322,8 @@
   // teils auch: window._vwo or window._vwoq
   var existing = global.VWO;
   global.VWO = api;
-  try { defineRO(global, '_vwo', api); } catch(_) { global._vwo = api; }
-  try { defineRO(global, '_vwoq', api); } catch(_) { global._vwoq = api; }
+  try { defineSoft(global, '_vwo', api); } catch(_) { global._vwo = api; }
+  try { defineSoft(global, '_vwoq', api); } catch(_) { global._vwoq = api; }
 
   // Process preexisting queue safely
   if (Array.isArray(existing) && existing.length) {
@@ -328,7 +336,7 @@
   // Emulate minimal document.vwoVersion readouts
   try {
     if (typeof document !== 'undefined') {
-      if (!document.vwoVersion) document.vwoVersion = api.version();
+      if (!document.vwoVersion) defineSoft(document, 'vwoVersion', api.version());
     }
   } catch(_){}
 
@@ -367,6 +375,6 @@
   api.reset = nativeLike(function(){ api.__state.variations = {}; api.__store.del('vwo_consent'); api.emit('reset'); return true; });
 
   // Ensure JSON stringify looks plausible
-  try { defineRO(api, 'toJSON', nativeLike(function(){ return { id: api.__state.id, version: api.version() }; })); } catch(_){}
+  try { defineSoft(api, 'toJSON', nativeLike(function(){ return { id: api.__state.id, version: api.version() }; })); } catch(_){}
 
 })(typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this));

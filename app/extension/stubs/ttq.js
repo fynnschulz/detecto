@@ -19,18 +19,6 @@
     return fn;
   }
 
-  // --- Deep freeze utility ---
-  function deepFreeze(obj) {
-    if (obj && typeof obj === "object" && !Object.isFrozen(obj)) {
-      Object.freeze(obj);
-      Object.getOwnPropertyNames(obj).forEach(function(prop) {
-        if (typeof obj[prop] === "object" && obj[prop] !== null) {
-          deepFreeze(obj[prop]);
-        }
-      });
-    }
-    return obj;
-  }
 
   // --- Internal state ---
   const _queue = [];
@@ -131,15 +119,30 @@
     return undefined;
   }
 
-  // --- Getters for version, timestamp, ids, queue ---
+  // --- Properties for version, timestamp, ids, queue (writable, extensible) ---
   Object.defineProperties(ttq, {
-    version: { get: () => _version, enumerable: true },
-    createdAt: { get: () => _createdAt, enumerable: true },
-    pixelId: { get: () => _pixelId, enumerable: true },
-    userId: { get: () => _userId, enumerable: true },
-    props: { get: () => Object.assign({}, _props), enumerable: true },
-    queue: { get: () => _queue.slice(), enumerable: true },
-    length: { get: () => _queue.length, enumerable: true }
+    version: { value: _version, writable: true, enumerable: true, configurable: true },
+    createdAt: { value: _createdAt, writable: true, enumerable: true, configurable: true },
+    pixelId: { 
+      get: function() { return _pixelId; }, 
+      enumerable: true, configurable: true 
+    },
+    userId: { 
+      get: function() { return _userId; }, 
+      enumerable: true, configurable: true 
+    },
+    props: { 
+      get: function() { return Object.assign({}, _props); }, 
+      enumerable: true, configurable: true 
+    },
+    queue: { 
+      get: function() { return _queue.slice(); }, 
+      enumerable: true, configurable: true 
+    },
+    length: { 
+      get: function() { return _queue.length; }, 
+      enumerable: true, configurable: true 
+    }
   });
 
   // --- API surface ---
@@ -173,13 +176,9 @@
     "ready","instance","subscribe","unsubscribe","push"
   ].forEach(function(k){ toNative(ttq[k]); });
 
-  // --- Deep freeze the API for safety ---
-  try { deepFreeze(ttq); } catch(e){}
 
-  // --- Expose as window.ttq ---
-  Object.defineProperty(window, "ttq", {
-    value: ttq, configurable: false, writable: false, enumerable: false
-  });
+  // --- Expose as window.ttq (soft, extensible, writable) ---
+  window.ttq = ttq;
 
   // --- Optionally, flush any pre-stub queue (ttq.q) ---
   if (Array.isArray(window.ttq.q)) {

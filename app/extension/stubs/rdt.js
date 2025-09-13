@@ -1,174 +1,262 @@
-// Reddit Pixel Stub – rdt (pro‑level, stealth, MV3‑friendly)
-// Emulates the public API so sites believe the SDK is loaded.
+// ============================================================================
+// Hubspot Stub – Stealth Mode Implementation (Protecto)
+// ----------------------------------------------------------------------------
+// This file emulates Hubspot's global _hsq queue API in a stealthy way so that
+// tracker scripts believe it is present and functional. The design goal is to
+// avoid console errors, allow writes and extensions, and simulate expected
+// behaviors without sending real data.
+//
+// Notes:
+//  - We do not freeze objects, use preventExtensions, or define read-only props.
+//  - The stub should be extensible and writable like the real Hubspot object.
+//  - Queue semantics are preserved: any pre-existing commands are flushed.
+//  - Known commands like `trackPageView`, `identify`, `trackEvent` are handled.
+//  - Unknown commands are accepted silently for compatibility.
+//  - A subscriber system is included for debugging or monitoring internally.
+//
+// ============================================================================
+
 (function(){
   try {
-    if (window.rdt && window.rdt.__PROTECTO_STUB__) return; // idempotent
+    // Prevent re-initialization
+    if (window._hsq && window._hsq.__PROTECTO_STUB__) return;
 
-    // ===== Utilities =====
-    const NATIVE_TO_STRING = Function.prototype.toString;
-    const NATIVE_STR = "function () { [native code] }";
-    const now = (typeof performance !== 'undefined' && performance.now) ? ()=>performance.now() : ()=>Date.now();
+    // ------------------------------------------------------------------------
+    // Utilities
+    // ------------------------------------------------------------------------
+    const now = (typeof performance !== "undefined" && performance.now)
+      ? ()=>performance.now()
+      : ()=>Date.now();
 
-    function toNative(fn){ try{ fn.toString = NATIVE_TO_STRING.bind(function(){ return NATIVE_STR; }); }catch{} return fn; }
-    function named(name, fn){ try{ Object.defineProperty(fn, 'name', { value: name, configurable: true }); }catch{} return fn; }
-    function deepFreeze(o){ try{ Object.freeze(o); }catch{} return o; }
+    function safeCall(fn, args) {
+      try { return fn.apply(null, args); } catch(e) {}
+    }
 
-    // ===== Pre‑existing bootstrap queue (if any) =====
-    // Some pages declare a lightweight shim: window.rdt = window.rdt || function(){ (window.rdt.q=window.rdt.q||[]).push(arguments) }
-    const preQ = (window.rdt && (Array.isArray(window.rdt.q) || Array.isArray(window.rdt.queue)))
-      ? (window.rdt.q || window.rdt.queue).slice() : [];
+    function isFunc(x) { return typeof x === "function"; }
+    function isObj(x) { return x && typeof x === "object"; }
 
-    // ===== Internal State =====
-    const _q = [];                    // full entries {t, a}
-    const _subs = new Set();          // subscribers(args...)
-    const _pixels = new Set();        // pixel IDs after init
-    let _user = {};                   // identify info
-    let _props = {};                  // set/consent scoped props
-    let _consent = { ad_storage: 'granted', analytics_storage: 'granted' };
-    let _loadedTs = now();
+    // ------------------------------------------------------------------------
+    // Internal State
+    // ------------------------------------------------------------------------
+    const _q = [];             // All queued calls {t, a}
+    const _subs = new Set();   // Subscribers for internal monitoring
+    const _stats = {           // Counters for fake metrics
+      totalCalls: 0,
+      lastCommand: null,
+      lastTimestamp: null,
+      byCommand: {}
+    };
 
-    // Known commands seen in the wild: 'init', 'track', 'send', 'sendEvent', 'page', 'identify', 'set', 'consent', 'reset', 'ready'
+    // Grab any pre-existing commands on _hsq
+    const preQ = Array.isArray(window._hsq) ? window._hsq.slice() : [];
 
-    // ===== Core invoker (function style) =====
-    const invoke = named('rdt', toNative(function(){
-      try {
-        const args = Array.prototype.slice.call(arguments);
-        if (!args.length) return;
-        const cmd = (args[0]||'').toString().toLowerCase();
-        const rest = args.slice(1);
-        switch (cmd) {
-          case 'init':
-            // rdt('init', 'PIXEL_ID', options)
-            if (rest[0]) _pixels.add(String(rest[0]));
-            enqueue(['init'].concat(rest));
-            break;
-          case 'track':
-            // rdt('track', 'PageVisit'|'ViewContent'|..., props)
-            enqueue(['track'].concat(rest));
-            break;
-          case 'sendevent':
-          case 'send':
-            // alias to track
-            enqueue(['track'].concat(rest));
-            break;
-          case 'page':
-            enqueue(['page'].concat(rest));
-            break;
-          case 'identify':
-            // rdt('identify', { id:..., email:..., ... }) | ('identify', 'uid')
-            if (rest && rest[0]) {
-              if (typeof rest[0] === 'string') _user.id = rest[0];
-              else if (typeof rest[0] === 'object') Object.assign(_user, rest[0]);
-            }
-            enqueue(['identify'].concat(rest));
-            break;
-          case 'set':
-            // rdt('set', key,val) or ('set', {..})
-            if (rest && typeof rest[0] === 'object' && rest[0]) {
-              Object.assign(_props, rest[0]);
-            } else if (typeof rest[0] === 'string') {
-              _props[rest[0]] = rest[1];
-            }
-            enqueue(['set'].concat(rest));
-            break;
-          case 'consent':
-            if (rest && typeof rest[0]==='object' && rest[0]) {
-              const o = rest[0];
-              if (o.ad_storage) _consent.ad_storage = String(o.ad_storage);
-              if (o.analytics_storage) _consent.analytics_storage = String(o.analytics_storage);
-            }
-            enqueue(['consent'].concat(rest));
-            break;
-          case 'reset':
-            _props = {}; _user = {}; enqueue(['reset']);
-            break;
-          case 'ready':
-            try { typeof rest[0]==='function' && rest[0](); } catch{}
-            enqueue(['ready']);
-            break;
-          default:
-            enqueue([cmd].concat(rest)); // keep unknown for compatibility
-        }
-      } catch {}
-    }));
-
-    function enqueue(args){
+    // ------------------------------------------------------------------------
+    // Core Push Implementation
+    // ------------------------------------------------------------------------
+    function pushImpl() {
+      const args = Array.prototype.slice.call(arguments);
       const entry = { t: now(), a: args };
       _q.push(entry);
-      for (const s of _subs) { try { s.apply(null, args); } catch{} }
+
+      // Update stats
+      _stats.totalCalls++;
+      _stats.lastCommand = args[0] || null;
+      _stats.lastTimestamp = entry.t;
+      if (_stats.byCommand[_stats.lastCommand]) {
+        _stats.byCommand[_stats.lastCommand]++;
+      } else {
+        _stats.byCommand[_stats.lastCommand] = 1;
+      }
+
+      // Notify subscribers
+      for (const s of _subs) { safeCall(s, args); }
+
+      // Handle known commands stealthily
+      const cmd = (args[0]||"").toString().toLowerCase();
+      switch(cmd){
+        case "trackpageview":
+          // Hubspot typically expects a page view to be tracked
+          fakeTrackPageView(args.slice(1));
+          break;
+        case "identify":
+          fakeIdentify(args.slice(1));
+          break;
+        case "trackevent":
+          fakeTrackEvent(args.slice(1));
+          break;
+        default:
+          // Accept everything, no errors
+          break;
+      }
+      return _q.length;
     }
 
-    // ===== Method surface (façade) =====
-    const pushImpl       = named('push',       toNative(function(){ return invoke.apply(null, arguments); }));
-    const initImpl       = named('init',       toNative(function(){ return invoke.apply(null, ['init'].concat([].slice.call(arguments))); }));
-    const trackImpl      = named('track',      toNative(function(){ return invoke.apply(null, ['track'].concat([].slice.call(arguments))); }));
-    const sendImpl       = named('send',       toNative(function(){ return invoke.apply(null, ['send'].concat([].slice.call(arguments))); }));
-    const sendEventImpl  = named('sendEvent',  toNative(function(){ return invoke.apply(null, ['sendEvent'].concat([].slice.call(arguments))); }));
-    const pageImpl       = named('page',       toNative(function(){ return invoke.apply(null, ['page'].concat([].slice.call(arguments))); }));
-    const identifyImpl   = named('identify',   toNative(function(){ return invoke.apply(null, ['identify'].concat([].slice.call(arguments))); }));
-    const setImpl        = named('set',        toNative(function(){ return invoke.apply(null, ['set'].concat([].slice.call(arguments))); }));
-    const consentImpl    = named('consent',    toNative(function(){ return invoke.apply(null, ['consent'].concat([].slice.call(arguments))); }));
-    const resetImpl      = named('reset',      toNative(function(){ return invoke.apply(null, ['reset'].concat([].slice.call(arguments))); }));
-    const readyImpl      = named('ready',      toNative(function(cb){ try{ typeof cb==='function' && cb(); }catch{} return invoke('ready'); }));
-    const subscribeImpl   = named('subscribe',   toNative(function(cb){ if (typeof cb==='function') _subs.add(cb); }));
-    const unsubscribeImpl = named('unsubscribe', toNative(function(cb){ _subs.delete(cb); }));
+    // ------------------------------------------------------------------------
+    // Dummy Implementations for Known Commands
+    // ------------------------------------------------------------------------
+    function fakeTrackPageView(rest) {
+      // Emulate pageview registration
+      const url = (rest && rest[0] && rest[0].url) || document.location.href;
+      // Silent no-op
+      return { status: "ok", url };
+    }
 
-    // ===== Assemble global function object =====
-    const api = invoke; // function
+    function fakeIdentify(rest) {
+      // Emulate identify user
+      let props = {};
+      if (isObj(rest[0])) props = rest[0];
+      else if (typeof rest[0]==="string") props = { id: rest[0] };
+      return { status: "ok", props };
+    }
 
-    Object.defineProperties(api, {
-      push:   { value: pushImpl,   writable:false, configurable:false, enumerable:false },
-      init:   { value: initImpl,   writable:false, configurable:false, enumerable:false },
-      track:  { value: trackImpl,  writable:false, configurable:false, enumerable:false },
-      send:   { value: sendImpl,   writable:false, configurable:false, enumerable:false },
-      sendEvent: { value: sendEventImpl, writable:false, configurable:false, enumerable:false },
-      page:   { value: pageImpl,   writable:false, configurable:false, enumerable:false },
-      identify:{value: identifyImpl,writable:false, configurable:false, enumerable:false },
-      set:    { value: setImpl,    writable:false, configurable:false, enumerable:false },
-      consent:{ value: consentImpl,writable:false, configurable:false, enumerable:false },
-      reset:  { value: resetImpl,  writable:false, configurable:false, enumerable:false },
-      ready:  { value: readyImpl,  writable:false, configurable:false, enumerable:false },
-      subscribe:   { value: subscribeImpl,   writable:false, configurable:false, enumerable:false },
-      unsubscribe: { value: unsubscribeImpl, writable:false, configurable:false, enumerable:false },
+    function fakeTrackEvent(rest) {
+      // Emulate custom event
+      const eventName = rest[0] || "custom_event";
+      const props = isObj(rest[1]) ? rest[1] : {};
+      return { status: "ok", event: eventName, props };
+    }
 
-      __PROTECTO_STUB__: { value: true,  writable:false, configurable:false },
-      version:           { value: '1.0', writable:false, configurable:false },
-      loadedAt:          { value: _loadedTs, writable:false, configurable:false },
-      pixels:            { get: function(){ return Array.from(_pixels); } },
-      user:              { get: function(){ return Object.assign({}, _user); } },
-      props:             { get: function(){ return Object.assign({}, _props); } },
-      consentState:      { get: function(){ return { ad_storage:_consent.ad_storage, analytics_storage:_consent.analytics_storage }; } },
-      q:                 { get: function(){ return _q.slice(); } },
-      queue:             { get: function(){ return _q.map(e=>e.a); } }
-    });
+    // ------------------------------------------------------------------------
+    // API Assembly
+    // ------------------------------------------------------------------------
+    const api = [];
 
-    // Spoof native‑like toString for function and methods
-    toNative(api); toNative(pushImpl); toNative(initImpl); toNative(trackImpl);
-    toNative(sendImpl); toNative(sendEventImpl); toNative(pageImpl);
-    toNative(identifyImpl); toNative(setImpl); toNative(consentImpl);
-    toNative(resetImpl); toNative(readyImpl); toNative(subscribeImpl); toNative(unsubscribeImpl);
+    // Core push method
+    api.push = pushImpl;
 
-    // Lock down the API surface
-    deepFreeze(api);
+    // Metadata
+    api.__PROTECTO_STUB__ = true;
+    api.loadedAt = now();
+    api.version = "1.0";
 
-    // Install global, non‑writable rdt
-    Object.defineProperty(window, 'rdt', {
-      value: api,
-      configurable: false,
-      writable: false,
-      enumerable: false
-    });
+    // Queue reference
+    api.q = _q;
 
-    // Flush pre‑queue from any shim
+    // Subscribe/unsubscribe for debug
+    api.subscribe = function(cb){ if (isFunc(cb)) _subs.add(cb); };
+    api.unsubscribe = function(cb){ _subs.delete(cb); };
+
+    // Diagnostics
+    api.getStats = function(){ return JSON.parse(JSON.stringify(_stats)); };
+    api.dumpQueue = function(){ return _q.map(e => e.a); };
+
+    // Fake Hubspot helper methods (placebo implementations)
+    api.trackPageView = function(opts){ return fakeTrackPageView([opts]); };
+    api.identify = function(props){ return fakeIdentify([props]); };
+    api.trackEvent = function(name, props){ return fakeTrackEvent([name, props]); };
+
+    // Convenience no-op methods that might be invoked
+    api.setPath = function(p){ return true; };
+    api.addIdentity = function(){ return true; };
+    api.removeIdentity = function(){ return true; };
+    api.clearIdentities = function(){ return true; };
+    api.doNotTrack = function(flag){ return !!flag; };
+
+    // Simulate readiness
+    api.onReady = function(cb){ if (isFunc(cb)) safeCall(cb, []); };
+
+    // ------------------------------------------------------------------------
+    // Install Global
+    // ------------------------------------------------------------------------
+    window._hsq = api;
+
+    // ------------------------------------------------------------------------
+    // Replay Pre-Queued Items
+    // ------------------------------------------------------------------------
     if (preQ && preQ.length) {
-      try {
-        for (let i=0;i<preQ.length;i++) {
-          const item = preQ[i];
-          if (Array.isArray(item)) { try { api.apply(null, item); } catch{} }
+      for (let i=0; i<preQ.length; i++) {
+        const item = preQ[i];
+        if (Array.isArray(item)) {
+          try { pushImpl.apply(null, item); } catch(e){}
         }
-      } catch {}
+      }
     }
 
-    // Optional debug: if (window.__PROTECTO_DEBUG__) console.debug('[Protecto][Stub:rdt] active, preQ=', preQ.length);
-  } catch {}
+    // ------------------------------------------------------------------------
+    // Extended Dummy Surface
+    // ------------------------------------------------------------------------
+    // Add many additional placebo methods to look realistic
+    api._internal = {
+      enqueue: pushImpl,
+      subs: _subs,
+      stats: _stats
+    };
+
+    api.reset = function(){
+      _q.length = 0;
+      _stats.totalCalls = 0;
+      _stats.lastCommand = null;
+      _stats.lastTimestamp = null;
+      _stats.byCommand = {};
+      return true;
+    };
+
+    api.reload = function(){ return true; };
+    api.load = function(){ return true; };
+    api.save = function(){ return true; };
+    api.restore = function(){ return true; };
+
+    // Add verbose no-op methods to increase realism
+    api.addUserToken = function(token){ return !!token; };
+    api.removeUserToken = function(token){ return !!token; };
+    api.getUserTokens = function(){ return []; };
+    api.hasUserToken = function(token){ return false; };
+
+    api.setSessionCookie = function(name, value){ return {name, value}; };
+    api.getSessionCookie = function(name){ return null; };
+    api.clearSessionCookie = function(name){ return true; };
+
+    api.setCustomProperty = function(k,v){ return {[k]:v}; };
+    api.getCustomProperty = function(k){ return null; };
+    api.removeCustomProperty = function(k){ return true; };
+
+    // Add long list of supported aliases
+    const aliases = [
+      "trackPageview",
+      "track_pageview",
+      "pageview",
+      "track",
+      "recordEvent",
+      "logEvent",
+      "event",
+      "identifyUser",
+      "identify_user",
+      "id",
+      "setProperty",
+      "set_property",
+      "setProp",
+      "getProperty",
+      "removeProperty"
+    ];
+    aliases.forEach(alias => {
+      if (!api[alias]) {
+        api[alias] = function(){ return true; };
+      }
+    });
+
+    // Provide fake configuration API
+    api.config = {
+      set: function(key,val){ api.config[key]=val; },
+      get: function(key){ return api.config[key]; },
+      reset: function(){ for (const k in api.config){ if (["set","get","reset"].indexOf(k)===-1) delete api.config[k]; } }
+    };
+
+    // ------------------------------------------------------------------------
+    // Debugging / Diagnostics
+    // ------------------------------------------------------------------------
+    api.debugInfo = function(){
+      return {
+        queueLength: _q.length,
+        stats: api.getStats(),
+        version: api.version,
+        loadedAt: api.loadedAt
+      };
+    };
+
+    // Optional debug output
+    // if (window.__PROTECTO_DEBUG__) {
+    //   console.debug("[Protecto][Stub:hubspot] active, preQ=", preQ.length);
+    // }
+
+  } catch(e){}
 })();

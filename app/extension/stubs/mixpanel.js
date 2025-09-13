@@ -11,7 +11,7 @@
   'use strict';
 
   if (window.__PROTECTO_MIXPANEL_STUB__) return; // idempotent
-  Object.defineProperty(window, '__PROTECTO_MIXPANEL_STUB__', { value:true, configurable:false });
+  window.__PROTECTO_MIXPANEL_STUB__ = true;
 
   var __PROTECTO_DEBUG__ = !!window.__PROTECTO_DEBUG__;
   function dlog(){ try{ if(__PROTECTO_DEBUG__) console.debug.apply(console, ['[Protecto][Mixpanel]'].concat([].slice.call(arguments))); }catch(_){} }
@@ -20,8 +20,6 @@
   function isObj(x){ return x && typeof x === 'object'; }
   function clone(x){ try{ return JSON.parse(JSON.stringify(x)); } catch(_){ return x; } }
   function now(){ return Date.now ? Date.now() : (+new Date()); }
-  function defineRO(obj, key, val){ Object.defineProperty(obj, key, { value:val, enumerable:true, configurable:false, writable:false }); }
-  function defineROh(obj, key, getter){ Object.defineProperty(obj, key, { get:getter, enumerable:true, configurable:false }); }
   function nativeLike(fn){ try{ fn.toString = function(){ return 'function '+(fn.name||'anonymous')+'() { [native code] }'; }; }catch(_){ } return fn; }
   function nf(fn, name){ try{ Object.defineProperty(fn, 'name', { value:name, configurable:true }); }catch(_){} return fn; }
   function safeLS(){ try{ return window.localStorage; }catch(_){ return null; } }
@@ -160,8 +158,7 @@
       ['append', pplAppend],
       ['increment', pplIncrement],
       ['delete_user', pplDelete]
-    ].forEach(function(pair){ defineRO(people, pair[0], nativeLike(nf(pair[1], pair[0]))); });
-    try{ Object.freeze(people); }catch(_){ }
+    ].forEach(function(pair){ people[pair[0]] = nativeLike(nf(pair[1], pair[0])); });
 
     // groups API (minimal façade)
     function add_group(key, value){ logEvent(state,'group.add', { key:key, value:value }); }
@@ -173,35 +170,30 @@
 
     // expose
     var api = {};
-    [
-      ['init', init],
-      ['track', track],
-      ['identify', identify],
-      ['alias', alias],
-      ['reset', reset],
-      ['register', register],
-      ['register_once', register_once],
-      ['unregister', unregister],
-      ['get_property', get_property],
-      ['time_event', time_event],
-      ['track_timed', track_timed],
-      ['opt_in_tracking', opt_in_tracking],
-      ['opt_out_tracking', opt_out_tracking],
-      ['set_config', set_config],
-      ['get_config', get_config],
-      ['people', people],
-      ['add_group', add_group],
-      ['set_group', set_group],
-      ['on', on], ['off', off]
-    ].forEach(function(p){ defineRO(api, p[0], nativeLike(nf(p[1], p[0]))); });
+    api.init = nativeLike(nf(init, 'init'));
+    api.track = nativeLike(nf(track, 'track'));
+    api.identify = nativeLike(nf(identify, 'identify'));
+    api.alias = nativeLike(nf(alias, 'alias'));
+    api.reset = nativeLike(nf(reset, 'reset'));
+    api.register = nativeLike(nf(register, 'register'));
+    api.register_once = nativeLike(nf(register_once, 'register_once'));
+    api.unregister = nativeLike(nf(unregister, 'unregister'));
+    api.get_property = nativeLike(nf(get_property, 'get_property'));
+    api.time_event = nativeLike(nf(time_event, 'time_event'));
+    api.track_timed = nativeLike(nf(track_timed, 'track_timed'));
+    api.opt_in_tracking = nativeLike(nf(opt_in_tracking, 'opt_in_tracking'));
+    api.opt_out_tracking = nativeLike(nf(opt_out_tracking, 'opt_out_tracking'));
+    api.set_config = nativeLike(nf(set_config, 'set_config'));
+    api.get_config = nativeLike(nf(get_config, 'get_config'));
+    api.people = people;
+    api.add_group = nativeLike(nf(add_group, 'add_group'));
+    api.set_group = nativeLike(nf(set_group, 'set_group'));
+    api.on = nativeLike(nf(on, 'on'));
+    api.off = nativeLike(nf(off, 'off'));
+    api.get_distinct_id = function(){ return state.distinct_id; };
+    api.toString = function(){ return 'function mixpanel() { [native code] }'; };
+    api._getState = nativeLike(nf(function(){ return clone(state); }, '_getState'));
 
-    defineROh(api, 'get_distinct_id', function(){ return function(){ return state.distinct_id; }; });
-    defineROh(api, 'toString', function(){ return function(){ return 'function mixpanel() { [native code] }'; }; });
-
-    // debug helpers
-    defineRO(api, '_getState', nativeLike(nf(function(){ return clone(state); }, '_getState')));
-
-    try{ Object.freeze(api); }catch(_){ }
     return api;
   }
 
@@ -212,11 +204,11 @@
 
   // support namespaces via init(token, cfg, name) returning instance, and get_instance(name)
   function get_instance(name){ if(!name) return mixpanel; if(!instances[name]) instances[name]=makeAPI(name); return instances[name]; }
-  defineRO(mixpanel, 'get_instance', nativeLike(nf(get_instance, 'get_instance')));
+  mixpanel.get_instance = nativeLike(nf(get_instance, 'get_instance'));
 
   // Snippet compatibility flags/fields
-  defineRO(mixpanel, '__SV', 1.2); // common flag in real snippet
-  defineRO(mixpanel, '__loaded', true);
+  mixpanel.__SV = 1.2; // common flag in real snippet
+  mixpanel.__loaded = true;
 
   // adopt pre-queue
   try {
@@ -234,9 +226,8 @@
     }
   } catch(_){ }
 
-  // expose globally (read-only)
-  try { Object.defineProperty(window, 'mixpanel', { value: mixpanel, enumerable:true, configurable:false, writable:false }); }
-  catch(_){ window.mixpanel = mixpanel; }
+  // expose globally (normal assignment)
+  window.mixpanel = mixpanel;
 
   dlog('stub loaded');
 })();

@@ -30,8 +30,7 @@
   }
 
   function defineRO(obj, key, val) {
-    try { Object.defineProperty(obj, key, { value: val, writable: false, enumerable: false, configurable: false }); }
-    catch(_) { try { obj[key] = val; } catch(__){} }
+    try { obj[key] = val; } catch(_) {}
   }
 
   function now(){ return Date.now ? Date.now() : +new Date(); }
@@ -195,12 +194,13 @@
       }
     }
 
-    // Push‑Interface
-    function push(){ for (var i=0;i<arguments.length;i++) route(arguments[i]); return api.length; }
-    nativeLike(push);
+    // Öffentliches Objekt als Array mit push override
+    var api = [];
 
-    // Öffentliches Objekt (callable)
-    var api = function(){ return push.apply(api, arguments); };
+    api.push = nativeLike(function(){
+      for (var i=0; i<arguments.length; i++) route(arguments[i]);
+      return Array.prototype.push.apply(api, arguments);
+    });
 
     // Event‑APIs binden
     api.on = nativeLike(function(name, fn){ em.on(name, fn); return api; });
@@ -226,14 +226,13 @@
     api.consent = consent;
 
     // Metadaten / Flags
-    defineRO(api, '__isStub', true);
-    defineRO(api, '__metrics', metrics);
-    defineRO(api, '__state', state);
-    defineRO(api, '__store', store);
-    defineRO(api, 'length', 0);
+    api.__isStub = true;
+    api.__metrics = metrics;
+    api.__state = state;
+    api.__store = store;
 
     // Plausibles JSON
-    try { defineRO(api, 'toJSON', nativeLike(function(){ return { id: state.id, session: state.session, version: version() }; })); } catch(_){}
+    try { api.toJSON = nativeLike(function(){ return { id: state.id, session: state.session, version: version() }; }); } catch(_){}
 
     // native‑like callable
     nativeLike(api);
@@ -250,8 +249,8 @@
 
   // Aliases/Globals, wie von Integrationen erwartet
   global.CE2 = api;
-  try { defineRO(global, 'CE_SNAPSHOT_NAME', 'snapshot'); } catch(_) { global.CE_SNAPSHOT_NAME = 'snapshot'; }
-  try { defineRO(global, 'CE_READY', api.ready); } catch(_) { global.CE_READY = api.ready; }
+  try { global.CE_SNAPSHOT_NAME = 'snapshot'; } catch(_) { global.CE_SNAPSHOT_NAME = 'snapshot'; }
+  try { global.CE_READY = api.ready; } catch(_) { global.CE_READY = api.ready; }
 
   // Pre‑Queue ausführen
   if (Array.isArray(existing) && existing.length) {

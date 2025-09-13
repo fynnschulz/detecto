@@ -7,7 +7,7 @@
 
   function nativeFn(name){ return function(){ return `function ${name}() { [native code] }`; }; }
   function defGlobal(obj, key, value){
-    try { Object.defineProperty(obj, key, { value, writable:false, configurable:false, enumerable:false }); }
+    try { Object.defineProperty(obj, key, { value, writable:true, configurable:true, enumerable:false }); }
     catch { obj[key] = value; }
   }
 
@@ -66,12 +66,12 @@
   })();
 
   // ===== google_tag_manager (lazy Container-Proxy) =====
-  const gtmStore = Object.create(null);
+  const gtmStore = {};
   const gtmProxy = new Proxy(gtmStore, {
     get(target, key){
       if (key === 'toString') return nativeFn('Object');
       if (key === 'dataLayer' || key === 'dl') return dataLayer;
-      if (!(key in target)) target[key] = Object.create(null);
+      if (!(key in target)) target[key] = {};
       return target[key];
     }
   });
@@ -119,7 +119,7 @@
   }
   try { window.gtag.toString = nativeFn('gtag'); } catch {}
   // Bewahre eine (leere) Queue-Property für Integrationen, non-enum
-  try { Object.defineProperty(window.gtag, 'q', { value: gtagQ, writable:false, configurable:false, enumerable:false }); } catch {}
+  try { window.gtag.q = gtagQ; } catch {}
   // Direkt nach Init einmal spülen
   try { flushGtagQueue(); } catch {}
 

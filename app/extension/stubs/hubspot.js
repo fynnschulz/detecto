@@ -1,5 +1,3 @@
-
-
 /**
  * Protecto — HubSpot Tracking Stub (hs.js / _hsq)
  *
@@ -62,7 +60,7 @@
   // ---------------------------------------------------------------------------
   // Command handlers (no-ops that store state)
   // ---------------------------------------------------------------------------
-  const handlers = freeze({
+  const handlers = {
     identify(payload){
       const p = (payload && typeof payload==='object') ? payload : {};
       _state.identity = {
@@ -79,7 +77,7 @@
     },
     trackEvent(payload){
       const evt = (payload && typeof payload==='object') ? payload : { };
-      const entry = freeze({ type:'event', ts: Date.now(), data: clone(evt) });
+      const entry = { type:'event', ts: Date.now(), data: clone(evt) };
       _state.events.push(entry);
       log('trackEvent', entry);
     },
@@ -98,16 +96,16 @@
       log('consent', clone(_state.consent));
     },
     onReady(fn){ if (typeof fn === 'function') nextTick(()=>{ try{ fn(); }catch{} }); }
-  });
+  };
 
   // Extra aliases some sites use (be liberal in what we accept)
-  const aliasMap = freeze({
+  const aliasMap = {
     page: 'trackPageView',
     event: 'trackEvent',
     setCanonicalURL: 'setCanonicalUrl',
     setUrl: 'setRequestUrl',
     ready: 'onReady'
-  });
+  };
 
   function resolveCmd(cmd){
     if (handlers[cmd]) return cmd;
@@ -139,15 +137,12 @@
   hsq.push = push;
   try { hsq.push.toString = ()=>nativeToString('push'); } catch{}
 
-  // Read-only mirrors
-  defRO(hsq, 'state', new Proxy({}, { get:(_,k)=> clone(_state[k]) }));
-  defRO(hsq, 'version', _state.version);
-  defRO(hsq, '__PROTECTO_STUB__', true);
-  defRO(hsq, '__getState', ()=>clone(_state));
-  defRO(hsq, '__drainQueue', ()=>{ /* compatibility no-op */ });
-
-  // Seal / freeze so pages can’t tamper easily
-  try { Object.seal(hsq); } catch {}
+  // Read-only mirrors as normal properties (not frozen or sealed)
+  hsq.state = new Proxy({}, { get:(_,k)=> clone(_state[k]) });
+  hsq.version = _state.version;
+  hsq.__PROTECTO_STUB__ = true;
+  hsq.__getState = ()=>clone(_state);
+  hsq.__drainQueue = ()=>{ /* compatibility no-op */ };
 
   // Publish global and drain any pre-queued commands
   W._hsq = hsq;

@@ -39,7 +39,7 @@
   idProto.postInsert = function(k,v){ this._ops.push(addOp('postInsert',k,v)); return this; };
   idProto.remove = function(k,v){ this._ops.push(addOp('remove',k,v)); return this; };
   idProto.clearAll = function(){ this._ops.push({op:'clearAll'}); return this; };
-  Object.defineProperty(Identify.prototype, 'toString', { value: function(){ return 'function Identify() { [native code] }'; } });
+  Identify.prototype.toString = function(){ return 'function Identify() { [native code] }'; };
 
   // Minimal Revenue object
   function Revenue(){ this._props = {}; }
@@ -49,7 +49,7 @@
   rProto.setQuantity = function(v){ this._props.quantity = Number(v)||1; return this; };
   rProto.setRevenueType = function(v){ this._props.revenueType = String(v||''); return this; };
   rProto.setEventProperties = function(v){ this._props.properties = safeClone(v)||{}; return this; };
-  Object.defineProperty(Revenue.prototype, 'toString', { value: function(){ return 'function Revenue() { [native code] }'; } });
+  Revenue.prototype.toString = function(){ return 'function Revenue() { [native code] }'; };
 
   // Instance factory (Amplitude supports getInstance())
   function createClient(name){
@@ -191,19 +191,17 @@
     client.ready = function(cb){ if (typeof cb==='function') state.readyCbs.push(cb); if (state.inited) setTimeout(()=>client.init(),0); return client; };
 
     // Expose internals for debugging
-    Object.defineProperties(client, {
-      __PROTECTO_STUB__: { value:true },
-      _buffer: { get(){ return state.buffer.slice(); } },
-      _userProps: { get(){ return Object.assign({}, state.userProps); } },
-      _groups: { get(){ return Object.assign({}, state.groups); } },
-    });
+    client.__PROTECTO_STUB__ = true;
+    Object.defineProperty(client, '_buffer', { get(){ return state.buffer.slice(); } });
+    Object.defineProperty(client, '_userProps', { get(){ return Object.assign({}, state.userProps); } });
+    Object.defineProperty(client, '_groups', { get(){ return Object.assign({}, state.groups); } });
 
     // method toString spoofing (native-like)
     const nativeSig = 'function () { [native code] }';
     [
       'init','isNewSession','setUserId','getUserId','setDeviceId','getDeviceId','setSessionId','getSessionId',
       'setOptOut','setUserProperties','clearUserProperties','group','setGroup','identify','groupIdentify','logEvent','track','logRevenueV2','revenue','flush','reset','getInstance','ready'
-    ].forEach(name=>{ try { Object.defineProperty(client[name], 'toString', { value: ()=>nativeSig }); } catch{} });
+    ].forEach(name=>{ try { client[name].toString = ()=>nativeSig; } catch{} });
 
     return client;
   }
@@ -214,7 +212,7 @@
 
   // Legacy static constructors
   amp.Identify = Identify; amp.Revenue = Revenue; amp.getInstance = ()=>amp;
-  Object.defineProperty(amp, 'toString', { value: function(){ return 'function amplitude() { [native code] }'; } });
+  amp.toString = function(){ return 'function amplitude() { [native code] }'; };
 
   window.amplitude = amp;
   window.amplitude.__PROTECTO_STUB__ = true;

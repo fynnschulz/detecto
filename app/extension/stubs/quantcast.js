@@ -1,5 +1,3 @@
-
-
 /*
  * Quantcast / Quantserve (Q Pixel) – High‑fidelity Stub
  * Goals:
@@ -16,7 +14,7 @@
   "use strict";
 
   if (window.__quantcastStubLoaded) return; // idempotent
-  Object.defineProperty(window, "__quantcastStubLoaded", { value:true, configurable:false });
+  window.__quantcastStubLoaded = true;
 
   var __PROTECTO_DEBUG__ = !!window.__PROTECTO_DEBUG__;
   function dlog(){ try{ if(__PROTECTO_DEBUG__) console.debug.apply(console, ["[Protecto][Quantcast]"].concat([].slice.call(arguments))); }catch(_){} }
@@ -24,14 +22,13 @@
   // ---- tiny utils ----
   function isObj(x){ return x && typeof x === "object"; }
   function clone(v){ try{ return JSON.parse(JSON.stringify(v)); } catch(_){ return v; } }
-  function defineRO(obj, key, val){ Object.defineProperty(obj, key, { value:val, enumerable:true, configurable:false, writable:false }); }
   function asArray(a){ return Array.isArray(a) ? a : (a==null ? [] : [a]); }
   function now(){ return Date.now ? Date.now() : (+new Date()); }
   function nf(fn, name){ try{ Object.defineProperty(fn, "name", { value:name, configurable:true }); }catch(_){} return fn; }
   function nativeLike(fn){ try{ fn.toString = function(){ return "function " + (fn.name||"quant") + "() { [native code] }"; }; }catch(_){} return fn; }
 
   // ---- internal state ----
-  var __state = Object.seal({
+  var __state = {
     account: null,         // qacct (p-XXXXX)
     consent: { tcf: null },
     site: { type:null },
@@ -39,7 +36,7 @@
     readyCbs: [],
     seenLimit: 0,
     maxKeep: 500
-  });
+  };
 
   // ---- core ingest ----
   function ingest(ev){
@@ -67,17 +64,36 @@
   // ---- public queue window._qevents ----
   var pre = window._qevents;
   var _qevents = [];
-  defineRO(window, "_qevents", _qevents);
+  window._qevents = _qevents;
 
-  // define push that ingests entries and mimics array semantics
-  var pushImpl = nativeLike(nf(function(){
+  _qevents.push = nativeLike(nf(function(){
     for (var i=0;i<arguments.length;i++) ingest(arguments[i]);
-    return _qevents.length; // match Array.push contract
+    return Array.prototype.push.apply(_qevents, arguments);
   }, "push"));
 
-  // read‑only methods on array facade
-  defineRO(_qevents, "push", pushImpl);
-  ["pop","shift","unshift","splice","sort","reverse"].forEach(function(m){ defineRO(_qevents, m, nativeLike(nf(function(){ return 0; }, m))); });
+  _qevents.pop = nativeLike(nf(function(){
+    return Array.prototype.pop.apply(_qevents, arguments);
+  }, "pop"));
+
+  _qevents.shift = nativeLike(nf(function(){
+    return Array.prototype.shift.apply(_qevents, arguments);
+  }, "shift"));
+
+  _qevents.unshift = nativeLike(nf(function(){
+    return Array.prototype.unshift.apply(_qevents, arguments);
+  }, "unshift"));
+
+  _qevents.splice = nativeLike(nf(function(){
+    return Array.prototype.splice.apply(_qevents, arguments);
+  }, "splice"));
+
+  _qevents.sort = nativeLike(nf(function(){
+    return Array.prototype.sort.apply(_qevents, arguments);
+  }, "sort"));
+
+  _qevents.reverse = nativeLike(nf(function(){
+    return Array.prototype.reverse.apply(_qevents, arguments);
+  }, "reverse"));
 
   // adopt pre‑queue
   try{
@@ -131,25 +147,20 @@
 
   api.getEvents = nativeLike(nf(function(){ return clone(__state.events); }, "getEvents"));
 
+  window.__qc = api;
+
   // Provide a noop quantserve() symbol some integrations check for
-  var quantserve = nativeLike(nf(function(){ dlog("quantserve() noop"); }, "quantserve"));
+  function quantserve() { dlog("quantserve() noop"); }
+  quantserve = nativeLike(nf(quantserve, "quantserve"));
+  window.quantserve = quantserve;
 
-  // Expose globals in a realistic way
-  Object.freeze(__state);
-  defineRO(window, "__qc", Object.freeze(api));
-  defineRO(window, "quantserve", quantserve);
-
-  // also expose minimal __qc.qhash or helpers sometimes probed
-  defineRO(window.__qc, "hash", nativeLike(nf(function(s){
+  // also expose minimal __qc.hash or helpers sometimes probed
+  api.hash = nativeLike(nf(function(s){
     // very light non-crypto hash for compatibility probes only
     try{ s = String(s||""); }catch(_) { s = ""; }
     var h=0; for(var i=0;i<s.length;i++){ h=((h<<5)-h)+s.charCodeAt(i); h|=0; }
     return (h>>>0).toString(16);
-  }, "hash")));
-
-  // ensure properties look non‑writable
-  try{ Object.freeze(window._qevents); }catch(_){ }
-  try{ Object.freeze(window.__qc); }catch(_){ }
+  }, "hash"));
 
   dlog("stub loaded; account=", __state.account);
 })();

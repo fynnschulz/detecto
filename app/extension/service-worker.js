@@ -1,8 +1,30 @@
+// --- Helper: redirectRule ---
+// Cleanup: alte block-Regeln entfernen, bevor neue gesetzt werden
+chrome.declarativeNetRequest.getDynamicRules((rules) => {
+  if (rules.length > 0) {
+    const allIds = rules.map(r => r.id);
+    chrome.declarativeNetRequest.updateDynamicRules({
+      removeRuleIds: allIds,
+      addRules: [] // wir fügen später neue hinzu
+    }, () => {
+      console.log("[Protecto][CLEANUP] Alte Regeln entfernt:", allIds);
+    });
+  }
+});
+function redirectRule(id, urlFilter, stub = "generic.js") {
+  if (!stub.endsWith(".js")) stub += ".js";
+  return {
+    id,
+    priority: 1,
+    action: { type: "redirect", redirect: { extensionPath: `/stubs/${stub}` } },
+    condition: { urlFilter, resourceTypes: ["script","xmlhttprequest","image","ping"] }
+  };
+}
 // app/extension/service-worker.js — MV3 ES Module
 // Stealth: Heuristik/KI → DNR Redirect (Stub-Datei) → Ziel sieht 200 OK
 // Learning-Cache: Hosts → Session/Dynamic Rules
 
-import { classify, setExternalSeeds, decide, proposeRulesForUrl, nextRuleId } from './engine/model.js';
+import { setExternalSeeds, decide, proposeRulesForUrl, nextRuleId } from './engine/model.js';
 import { getLearned, remember, ensureDnrRule, stubToPath, restorePersistedRules } from './engine/learn.js';
 
 // ---------- Config ----------
@@ -44,14 +66,16 @@ async function getEffectivePolicy(domain) {
 // ---------- Seeds Loader ----------
 async function loadSeedsIntoModel() {
   try {
-    const url = chrome.runtime.getURL('data/seeds.json');
+    const url = chrome.runtime.getURL('seeds.json');
     const seeds = await fetch(url).then(r => r.json());
     if (typeof setExternalSeeds === 'function') {
       setExternalSeeds(seeds);
-      console.info('[Protecto][Seeds] Loaded families:', Object.keys(seeds.families).length);
+      const families = seeds?.families || {};
+      console.info('[Protecto][Seeds] Loaded families:', Object.keys(families).length);
     } else if (self && typeof self.setExternalSeeds === 'function') {
       self.setExternalSeeds(seeds);
-      console.info('[Protecto][Seeds] Loaded families:', Object.keys(seeds.families).length);
+      const families = seeds?.families || {};
+      console.info('[Protecto][Seeds] Loaded families:', Object.keys(families).length);
     }
   } catch (e) {
     console.warn('[Protecto][Seeds] load failed', e);
@@ -106,11 +130,7 @@ function buildHeuristicRulesForDomain(domain) {
     '/metrics','/stats','/log','/pagead/','/ads/','/adservice'
   ];
   for (const pf of patterns) {
-    rules.push({
-      id: id(cursor++), priority: 1,
-      condition: { initiatorDomains: init, urlFilter: pf, resourceTypes: sanitizeResourceTypes(RT_JS) },
-      action: { type: 'redirect', redirect: { extensionPath: '/stubs/generic.js' } }
-    });
+    rules.push(redirectRule(id(cursor++), pf, "generic.js"));
   }
 
   const ONE_BY_ONE_GIF = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEA';
@@ -214,8 +234,10 @@ chrome.runtime.onStartup.addListener(async () => {
     await restorePersistedRules();
     await ensureBaselineDynamicRules();     // falls etwas fehlte
     await ensureStartupSessionCatchalls();  // universelle Sofort-Abdeckung
-    const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
-    if (tabs[0]) applySessionRulesForTab(tabs[0]);
+    const tabs = await chrome.tabs.query({});
+    for (const tab of tabs) {
+      if (tab?.url) applySessionRulesForTab(tab);
+    }
   } catch {}
 });
 chrome.runtime.onInstalled.addListener(async () => {
@@ -227,26 +249,6 @@ chrome.runtime.onInstalled.addListener(async () => {
 });
 
 // ---------- Lernen über DNR-Feedback ----------
-if (chrome.declarativeNetRequest?.onRuleMatchedDebug) {
-  try {
-    chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(async (info) => {
-      try {
-        const req = info?.request;
-        if (!req?.url) return;
-        const initiator = hostOf(req.initiator || '');
-        const reqHost = hostOf(req.url);
-        if (!initiator || !reqHost || initiator === reqHost) return;
-
-        const t = String(req.resourceType || '').toLowerCase();
-        const res = classify(req.url, t, initiator) || {};
-        const stub = res.stub || 'generic';
-
-        await remember(reqHost, stub);
-        await ensureDnrRule(reqHost, stub, LEARN_MIN_SEEN_FOR_DNR);
-      } catch {}
-    });
-  } catch {}
-}
 
 // ---------- Popup IPC ----------
 chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
@@ -500,8 +502,24 @@ async function addSessionRules(rules){
       r.id = await nextRuleId();
     }
   }
-  const ids = rules.map(r => r.id);
-  await chrome.declarativeNetRequest.updateSessionRules({ removeRuleIds: ids, addRules: rules });
+  // Only allow these properties: id, priority, action, condition
+  const allowedFields = ['id', 'priority', 'action', 'condition'];
+  const sanitizedRules = rules.map(rule => {
+    const sanitized = {};
+    for (const key of allowedFields) {
+      if (key in rule) sanitized[key] = rule[key];
+    }
+    // Fix invalid redirect keys
+    if (sanitized.action?.type === 'redirect' && sanitized.action.redirect?.extensionPath) {
+      let p = sanitized.action.redirect.extensionPath;
+      if (!p.startsWith('/stubs/')) p = '/stubs/' + p.replace(/^\/+/, '');
+      if (!p.endsWith('.js')) p = p + '.js';
+      sanitized.action.redirect.extensionPath = p;
+    }
+    return sanitized;
+  });
+  const ids = sanitizedRules.map(r => r.id);
+  await chrome.declarativeNetRequest.updateSessionRules({ removeRuleIds: ids, addRules: sanitizedRules });
 }
 
 async function addDynamicRules(rules){
@@ -514,43 +532,46 @@ async function addDynamicRules(rules){
   }
 }
 
-// Non-blocking (MV3-konform): entscheidet & lernt, ohne den Request zu blockieren
-chrome.webRequest.onBeforeRequest.addListener(async (details) => {
-  const { url, type, initiator } = details;
-  if (!/^https?:/i.test(url)) return;
+// Non-blocking (MV3-konform): entscheidet & lernt, ohne den Request zu blockieren via DNR debug events
+if (chrome.declarativeNetRequest?.onRuleMatchedDebug) {
+  chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(async (info) => {
+    try {
+      console.info("[Protecto][DEBUG] Matched rule for", info.request?.url, "type:", info.request?.resourceType);
+      const { request } = info;
+      const url = request?.url || "";
+      if (!/^https?:/i.test(url)) return;
+      const initiatorHost = hostOf(request.initiator||"");
+      const reqHost = hostOf(url);
+      if (!initiatorHost || !reqHost || initiatorHost === reqHost) return;
 
-  const initiatorHost = hostOf(initiator||"");
-  const reqHost = hostOf(url);
-  if (!initiatorHost || !reqHost) return;
-  if (initiatorHost === reqHost) return; // 1st-party eher ignorieren
+      const d = decide(url, String(request.resourceType||"").toLowerCase(), initiatorHost);
+      console.info("[Protecto][AI] Decision:", d);
+      if (!d.isTracker) return;
 
-  // KI-Entscheid
-  const d = decide(url, String(type||"").toLowerCase(), initiatorHost);
-  if (!d.isTracker) return;
+      const rules = await proposeRulesForUrl(url, request.resourceType, initiatorHost);
+      console.info("[Protecto][AI] Proposed rules:", rules);
+      if (!rules.length) return;
 
-  // Regeln vorschlagen → sofort als Session anwenden (wirken direkt)
-  const rules = await proposeRulesForUrl(url, type, initiatorHost);
-  if (!rules.length) return;
-
-  // Ensure each rule has a unique ID using nextRuleId
-  for (let r of rules) {
-    if (typeof r.id === "undefined" || r.id === null) {
-      r.id = await nextRuleId();
-    }
-  }
-
-  await addSessionRules(rules);
-
-  // Lernen & (ab stabil) persistieren
-  const counters = await bumpLearnCounters(rules);
-  for (const r of rules){
-    const k = ruleKeyFromRule(r);
-    if (counters[k] >= LEARN_MIN_FOR_PERSIST) {
-      // Ensure unique id for dynamic rules as well
-      if (typeof r.id === "undefined" || r.id === null) {
-        r.id = await nextRuleId();
+      for (let r of rules) {
+        if (typeof r.id === "undefined" || r.id === null) {
+          r.id = await nextRuleId();
+        }
       }
-      await addDynamicRules([r]);
+      await addSessionRules(rules);
+      console.info("[Protecto][AI] Session rule added:", rules);
+
+      const counters = await bumpLearnCounters(rules);
+      for (const r of rules){
+        const k = ruleKeyFromRule(r);
+        if (counters[k] >= LEARN_MIN_FOR_PERSIST) {
+          if (typeof r.id === "undefined" || r.id === null) {
+            r.id = await nextRuleId();
+          }
+          await addDynamicRules([r]);
+        }
+      }
+    } catch(e) {
+      console.warn("[Protecto][Learn] onRuleMatchedDebug error", e);
     }
-  }
-}, { urls:["<all_urls>"] }, []); // ganz wichtig: KEIN "blocking"
+  });
+}

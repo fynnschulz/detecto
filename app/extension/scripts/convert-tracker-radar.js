@@ -8,10 +8,10 @@
 //
 // Usage (mit Defaults):
 //   node app/extension/scripts/convert-tracker-radar.js \
-//     app/extension/data/domains \
-//     app/extension/data/seeds.json \
-//     --disconnect-dir app/extension/data/disconnect \
-//     --easyprivacy app/extension/data/easyprivacy/easyprivacy.txt
+//     app/resources/data/domains \
+//     app/resources/data/seeds.json \
+//     --disconnect-dir app/resources/data/disconnect \
+//     --easyprivacy app/resources/data/easyprivacy/easyprivacy.txt
 //
 // Falls die Default-Pfade stimmen, reichen die ersten beiden Argumente.
 const fs = require('fs');
@@ -100,24 +100,27 @@ const ingestDuck = (dir) => {
 
 // ---------- 2) Disconnect ----------
 const ingestDisconnect = (dir) => {
-  if (!dir) return { ents: 0, doms: 0 };
+  if (!dir) return { ents: 0, doms: 0, families: {} };
   const entsPath = path.join(dir, 'entities.json');
   const servPath = path.join(dir, 'services.json');
-  if (!fs.existsSync(entsPath) || !fs.existsSync(servPath)) return { ents: 0, doms: 0 };
+  if (!fs.existsSync(entsPath) || !fs.existsSync(servPath)) return { ents: 0, doms: 0, families: {} };
 
   let ents = 0, doms = 0;
+  const families = {};
 
   try {
     const entsJson = JSON.parse(fs.readFileSync(entsPath, 'utf8'));
     if (entsJson && entsJson.entities && typeof entsJson.entities === 'object') {
-      for (const [, obj] of Object.entries(entsJson.entities)) {
+      for (const [entityName, obj] of Object.entries(entsJson.entities)) {
         ents++;
+        const familyDomains = new Set();
         if (Array.isArray(obj.properties)) {
-          for (const d of obj.properties) { add(domainsSet, saneDomain(d)); doms++; }
+          for (const d of obj.properties) { add(domainsSet, saneDomain(d)); doms++; familyDomains.add(saneDomain(d)); }
         }
         if (Array.isArray(obj.resources)) {
-          for (const d of obj.resources) { add(domainsSet, saneDomain(d)); doms++; }
+          for (const d of obj.resources) { add(domainsSet, saneDomain(d)); doms++; familyDomains.add(saneDomain(d)); }
         }
+        families[entityName] = Array.from(familyDomains).sort();
       }
     }
   } catch { /* ignore */ }
@@ -142,7 +145,7 @@ const ingestDisconnect = (dir) => {
     }
   } catch { /* ignore */ }
 
-  return { ents, doms };
+  return { ents, doms, families };
 };
 
 // ---------- 3) EasyPrivacy ----------
@@ -217,6 +220,7 @@ const seeds = {
   domains: Array.from(domainsSet).sort(),
   patterns: Array.from(patternsSet).sort(),
   queryHints: Array.from(queryHintsSet).sort(),
+  families: disc.families || {}, // include families map from Disconnect
 };
 
 // Write

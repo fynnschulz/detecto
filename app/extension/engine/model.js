@@ -154,6 +154,10 @@ export function decide(url, type, initiatorHost) {
   const init = (initiatorHost||'').toLowerCase();
   const is3p = (init && h) ? etld1(init) !== etld1(h) : true;
 
+  if (isAllowedHost(h)) {
+    return { isTracker: false, reason: "allowlist", stub: null };
+  }
+
   if (isAllowedHost(h)) return { isTracker: false, stub: null };
 
   let score = 0;

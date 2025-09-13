@@ -22,9 +22,9 @@
     // Utility helpers
     const now = () => Date.now();
     const randHex = (n=16)=> Array.from({length:n},()=>Math.floor(Math.random()*16).toString(16)).join('');
-    const deepFreeze = (obj)=>{ try{ Object.freeze(obj); Object.getOwnPropertyNames(obj).forEach(p=>{
-      const v = obj[p]; if (v && typeof v==='object' && !Object.isFrozen(v)) deepFreeze(v);
-    }); }catch{} return obj; };
+    // const deepFreeze = (obj)=>{ try{ Object.freeze(obj); Object.getOwnPropertyNames(obj).forEach(p=>{
+    //   const v = obj[p]; if (v && typeof v==='object' && !Object.isFrozen(v)) deepFreeze(v);
+    // }); }catch{} return obj; };
     const clone = (v)=>{ try{ return JSON.parse(JSON.stringify(v)); }catch{ return v; } };
     const safeCall = (fn, args=[])=>{ try{ return fn.apply(null,args); }catch(e){ if(__DBG__) console.debug('[FS stub] call error', e); }};
 
@@ -56,7 +56,7 @@
 
     // Queue serialization for telemetry
     function record(event, payload){
-      const item = deepFreeze({ ts: now(), event, payload: clone(payload) });
+      const item = { ts: now(), event, payload: clone(payload) };
       if (state.queue.length > 1000) state.queue.shift();
       state.queue.push(item);
       log('event', event, payload);
@@ -160,23 +160,23 @@
 
     // Attach methods (v1 compatibility)
     Object.defineProperties(FS, {
-      __PROTECTO_STUB__: { value: true },
-      identify: { value: identify },
-      setUserVars: { value: setUserVars },
-      event: { value: event },
-      log: { value: logApi },
-      consent: { value: consent },
-      shutdown: { value: shutdown },
-      restart: { value: restart },
-      anonymize: { value: anonymize },
-      clearUserCookie: { value: clearUserCookie },
-      setVars: { value: setVars },
-      getCurrentSessionURL: { value: getCurrentSessionURL },
-      getSession: { value: ()=>({ id: state.session.id, url: state.session.url }) },
+      __PROTECTO_STUB__: { value: true, writable: true, configurable: true },
+      identify: { value: identify, writable: true, configurable: true },
+      setUserVars: { value: setUserVars, writable: true, configurable: true },
+      event: { value: event, writable: true, configurable: true },
+      log: { value: logApi, writable: true, configurable: true },
+      consent: { value: consent, writable: true, configurable: true },
+      shutdown: { value: shutdown, writable: true, configurable: true },
+      restart: { value: restart, writable: true, configurable: true },
+      anonymize: { value: anonymize, writable: true, configurable: true },
+      clearUserCookie: { value: clearUserCookie, writable: true, configurable: true },
+      setVars: { value: setVars, writable: true, configurable: true },
+      getCurrentSessionURL: { value: getCurrentSessionURL, writable: true, configurable: true },
+      getSession: { value: ()=>({ id: state.session.id, url: state.session.url }), writable: true, configurable: true },
       // Introspection helpers
-      __getState: { value: ()=>clone(state) },
-      __drainQueue: { value: ()=>clone(state.queue) },
-      toString: { value: ()=> 'function FS() { [native code] }' }
+      __getState: { value: ()=>clone(state), writable: true, configurable: true },
+      __drainQueue: { value: ()=>clone(state.queue), writable: true, configurable: true },
+      toString: { value: ()=> 'function FS() { [native code] }', writable: true, configurable: true }
     });
 
     // Also expose namespace alias if site changed it
@@ -185,7 +185,7 @@
     window.FS = FS;
 
     // Make main object non-extensible and readonly-ish
-    try{ Object.seal(FS); }catch{}
+    // try{ Object.seal(FS); }catch{}
 
     // If there was a pre-queue array (e.g., window.FS = window.FS || []), drain it
     try {

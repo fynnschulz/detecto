@@ -10,7 +10,6 @@
 
     function toNative(fn){ try{ fn.toString = NATIVE.bind(function(){ return NATIVE_STR; }); }catch{} return fn; }
     function named(name, fn){ try{ Object.defineProperty(fn, 'name', { value: name, configurable: true }); }catch{} return fn; }
-    function deepFreeze(obj){ try { Object.freeze(obj); } catch {} return obj; }
 
     // ---------- expected API surface ----------
     // • window.twq is a function(queue‑style) with .push → twq('init', id), twq('track', 'PageView', props)
@@ -81,18 +80,18 @@
 
     // Flags & readonly views
     Object.defineProperties(twq, {
-      push:   { value: pushImpl,   writable: false, configurable: false, enumerable: false },
-      init:   { value: initImpl,   writable: false, configurable: false, enumerable: false },
-      track:  { value: trackImpl,  writable: false, configurable: false, enumerable: false },
-      identify:{ value: identifyImpl,writable: false, configurable: false, enumerable: false },
-      set:    { value: setImpl,    writable: false, configurable: false, enumerable: false },
-      ready:  { value: readyImpl,  writable: false, configurable: false, enumerable: false },
-      subscribe:   { value: subscribeImpl,   writable: false, configurable: false, enumerable: false },
-      unsubscribe: { value: unsubscribeImpl, writable: false, configurable: false, enumerable: false },
+      push:   { value: pushImpl,   writable: true, configurable: true, enumerable: false },
+      init:   { value: initImpl,   writable: true, configurable: true, enumerable: false },
+      track:  { value: trackImpl,  writable: true, configurable: true, enumerable: false },
+      identify:{ value: identifyImpl,writable: true, configurable: true, enumerable: false },
+      set:    { value: setImpl,    writable: true, configurable: true, enumerable: false },
+      ready:  { value: readyImpl,  writable: true, configurable: true, enumerable: false },
+      subscribe:   { value: subscribeImpl,   writable: true, configurable: true, enumerable: false },
+      unsubscribe: { value: unsubscribeImpl, writable: true, configurable: true, enumerable: false },
 
-      __PROTECTO_STUB__: { value: true,  writable: false, configurable: false },
-      version:           { value: '1.1', writable: false, configurable: false },
-      loaded:            { value: true,  writable: false, configurable: false },
+      __PROTECTO_STUB__: { value: true,  writable: true, configurable: true },
+      version:           { value: '1.1', writable: true, configurable: true },
+      loaded:            { value: true,  writable: true, configurable: true },
       pixelId:           { get: function(){ return _pixelId; } },
       q:                 { get: function(){ return _queue.slice(); } },
       queue:             { get: function(){ return _queue.map(e=>e.a); } }
@@ -103,14 +102,11 @@
     toNative(identifyImpl); toNative(setImpl); toNative(readyImpl);
     toNative(subscribeImpl); toNative(unsubscribeImpl);
 
-    // Deep freeze to prevent tampering
-    deepFreeze(twq);
-
-    // Install global (non‑enumerable, non‑writable)
+    // Install global (non‑enumerable, writable, configurable)
     Object.defineProperty(window, 'twq', {
       value: twq,
-      configurable: false,
-      writable: false,
+      configurable: true,
+      writable: true,
       enumerable: false
     });
 
