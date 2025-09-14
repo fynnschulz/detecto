@@ -21,6 +21,7 @@ function buildQueries(p: Payload): string[] {
 export async function POST(req: Request) {
   try {
     const body = (await req.json()) as Payload & { query?: string }
+    console.log("[OSINT][DEBUG] Raw request body:", body)
     // Add safe defaults in case body is nullish
     const safe: Payload = {
       emails: body?.emails || [],
@@ -28,16 +29,19 @@ export async function POST(req: Request) {
       phones: body?.phones || [],
       extraQueries: body?.extraQueries || []
     };
+    console.log("[OSINT][DEBUG] Safe payload constructed:", safe)
     if (body?.query) {
-      console.log("Incoming free query:", body.query)
+      console.log("[OSINT][DEBUG] Incoming free query:", body.query)
       safe.extraQueries = [...(safe.extraQueries || []), body.query]
     }
     const queries = buildQueries(safe)
-    console.log("Built queries for connectors:", queries)
+    console.log("[OSINT][DEBUG] Built queries for connectors:", queries)
+    console.log("[OSINT][DEBUG] Number of queries built:", queries.length)
     if (!queries.length) {
       return NextResponse.json({ hits: [] }, { status: 200 })
     }
     const hits: Hit[] = await runConnectors(queries)
+    console.log("[OSINT][DEBUG] Number of hits returned from connectors:", hits.length)
     return NextResponse.json({ hits }, { status: 200 })
   } catch (e: any) {
     console.error("Error in search route:", e)
