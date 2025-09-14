@@ -103,6 +103,17 @@ export default function WebsiteScanPage() {
 
       const data = await res.json();
 
+      // New: handle "blocked" status from backend
+      if (data.status === "blocked") {
+        setScore(data.score ?? 30);
+        setJudgementText(
+          data.message ||
+            "Scan nicht möglich: Die Seite blockiert Bots. Dies deutet oft auf eine geringe Transparenz hin."
+        );
+        setShowScale(true);
+        return;
+      }
+
       // Score robust aus unterschiedlichen möglichen Feldern lesen
       const nextScore =
         typeof data?.score === "number"

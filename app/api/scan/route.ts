@@ -38,9 +38,15 @@ function getHeader(headers: Headers, name: string): string | null {
 }
 
 // Standardized blocked response
-function blockedResponse() {
+function blockedResponse(message?: string) {
   return NextResponse.json(
-    { error: "Der Scan wurde von der Zielseite blockiert.\nGrund: Bot-/Zugriffsschutz\nTipp: Versuche es später erneut oder scanne eine andere Seite." },
+    {
+      status: "blocked",
+      score: 30,
+      message:
+        message ||
+        "Der Scan wurde von der Zielseite blockiert. Grund: Bot-/Zugriffsschutz. Tipp: Versuche es später erneut oder scanne eine andere Seite."
+    },
     { status: 400 }
   );
 }
@@ -462,7 +468,9 @@ export async function POST(req: NextRequest) {
     // Add cookie analysis
     headMeta.cookies = summarizeCookies(headRes.headers, url.startsWith("https://"));
     if (!headOk) {
-      return blockedResponse();
+      return blockedResponse(
+        "Der Scan wurde von der Zielseite blockiert (HEAD-Anfrage fehlgeschlagen oder blockiert). Grund: Bot-/Zugriffsschutz. Tipp: Versuche es später erneut oder scanne eine andere Seite."
+      );
     }
   } catch (err) {
     // continue – we'll still try a GET
@@ -531,7 +539,9 @@ export async function POST(req: NextRequest) {
 
   // If we have neither usable HEAD nor HTML content, treat as blocked
   if (!headOk && (!html || html.length === 0)) {
-    return blockedResponse();
+    return blockedResponse(
+      "Der Scan konnte weder per HEAD noch per HTML durchgeführt werden. Die Zielseite blockiert Anfragen oder ist nicht erreichbar."
+    );
   }
 
   if (!process.env.OPENAI_API_KEY) {
@@ -547,7 +557,9 @@ export async function POST(req: NextRequest) {
   );
 
   if (score === null) {
-    return blockedResponse();
+    return blockedResponse(
+      "Die Bewertung konnte nicht durchgeführt werden (Score nicht bestimmbar). Möglicherweise wurde die Seite blockiert oder der Inhalt war nicht auswertbar."
+    );
   }
 
   // Compute recommendations based on score
