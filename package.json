@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "npm run seeds:build && next build && npm run copy:stubs && npm run copy:seeds",
-    "copy:stubs": "cp -r app/extension/stubs .next/extension/stubs",
-    "copy:seeds": "cp -r app/resources/data/seeds.json .next/extension/data/seeds.json",
+    "copy:stubs": "mkdir -p .next/extension/stubs && cp -r app/extension/stubs/* .next/extension/stubs/",
+    "copy:seeds": "mkdir -p .next/extension/data && cp app/resources/data/seeds.json .next/extension/data/seeds.json",
     "seeds:build": "node app/extension/scripts/convert-tracker-radar.js app/resources/data/domains app/resources/data/seeds.json --disconnect-dir app/resources/data/disconnect --easyprivacy app/resources/data/easyprivacy/easyprivacy.txt",
     "seeds:check": "node -e \"const s=require('./app/resources/data/seeds.json');console.log('domains',s.domains.length,'patterns',s.patterns.length,'hints',s.queryHints.length)\"",
     "start": "next start",
