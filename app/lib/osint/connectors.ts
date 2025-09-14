@@ -221,15 +221,7 @@ function guessType(url: string): Hit['source_type'] {
 export async function googleSearch(query: string, extraParams: Record<string, string | number> = {}): Promise<Hit[]> {
   const key = process.env.GOOGLE_SEARCH_KEY || process.env.GOOGLE_SEARCH_API_KEY || process.env.GOOGLE_API_KEY
   const cx  = process.env.GOOGLE_SEARCH_CX || process.env.GOOGLE_CSE_ID
-
-  console.log("[GoogleSearch] Key present?", !!key)
-  console.log("[GoogleSearch] CX:", cx)
-  console.log("[GoogleSearch] Query:", query)
-
-  if (!key || !cx) {
-    console.warn("[GoogleSearch] Missing key or cx")
-    return []
-  }
+  if (!key || !cx) return []
 
   const defaults = buildCseParams()
   const params = new URLSearchParams({
@@ -242,13 +234,8 @@ export async function googleSearch(query: string, extraParams: Record<string, st
 
   const url = `${GOOGLE_API}?${params.toString()}`
   const r = await fetch(url, { next: { revalidate: 0 }, cache: 'no-store' })
-  if (!r.ok) {
-    const rawError = await r.text()
-    console.error("[GoogleSearch] HTTP Error", r.status, rawError)
-    return []
-  }
+  if (!r.ok) return []
   const data = await r.json()
-  console.log("[GoogleSearch] Response items:", data.items?.length || 0)
   const items = data.items || []
   return items.map((it: any) => ({
     source: 'google' as const,

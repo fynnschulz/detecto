@@ -20,7 +20,7 @@ function buildQueries(p: Payload): string[] {
 
 export async function POST(req: Request) {
   try {
-    const body = (await req.json()) as Payload
+    const body = (await req.json()) as Payload & { query?: string }
     // Add safe defaults in case body is nullish
     const safe: Payload = {
       emails: body?.emails || [],
@@ -28,13 +28,19 @@ export async function POST(req: Request) {
       phones: body?.phones || [],
       extraQueries: body?.extraQueries || []
     };
+    if (body?.query) {
+      console.log("Incoming free query:", body.query)
+      safe.extraQueries = [...(safe.extraQueries || []), body.query]
+    }
     const queries = buildQueries(safe)
+    console.log("Built queries for connectors:", queries)
     if (!queries.length) {
       return NextResponse.json({ hits: [] }, { status: 200 })
     }
     const hits: Hit[] = await runConnectors(queries)
     return NextResponse.json({ hits }, { status: 200 })
   } catch (e: any) {
+    console.error("Error in search route:", e)
     return NextResponse.json({ error: e?.message || 'Fehler' }, { status: 500 })
   }
 }
