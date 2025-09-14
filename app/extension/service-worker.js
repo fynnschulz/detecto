@@ -1,5 +1,6 @@
 // --- Helper: redirectRule ---
 // Cleanup: alte block-Regeln entfernen, bevor neue gesetzt werden
+// (Manifest V3: DNR API only, no webRequest)
 chrome.declarativeNetRequest.getDynamicRules((rules) => {
   if (rules.length > 0) {
     const allIds = rules.map(r => r.id);
@@ -234,6 +235,7 @@ chrome.runtime.onStartup.addListener(async () => {
     await restorePersistedRules();
     await ensureBaselineDynamicRules();     // falls etwas fehlte
     await ensureStartupSessionCatchalls();  // universelle Sofort-Abdeckung
+    await addRedirectRules();               // zusätzliche Baseline-Pfad-Redirects
     const tabs = await chrome.tabs.query({});
     for (const tab of tabs) {
       if (tab?.url) applySessionRulesForTab(tab);
@@ -441,6 +443,43 @@ async function ensureBaselineDynamicRules() {
   }
 }
 
+// --- Extra Redirects aus BASELINE_PATHS ---
+async function addRedirectRules() {
+  try {
+    const existing = await chrome.declarativeNetRequest.getDynamicRules();
+    const have = new Set(existing.map(r => r.id));
+    let id = 5000; // eigener Bereich für diese Regeln
+    const rules = [];
+
+    for (const p of BASELINE_PATHS) {
+      id++;
+      if (have.has(id)) continue;
+      rules.push({
+        id,
+        priority: 1,
+        action: {
+          type: "redirect",
+          redirect: { extensionPath: `/stubs/${p.stub}.js` }
+        },
+        condition: {
+          urlFilter: p.path,
+          resourceTypes: ["script", "xmlhttprequest", "image", "ping"]
+        }
+      });
+    }
+
+    if (rules.length) {
+      await chrome.declarativeNetRequest.updateDynamicRules({
+        addRules: rules,
+        removeRuleIds: []
+      });
+      console.info("[Protecto][Baseline] Extra redirect rules hinzugefügt:", rules.length);
+    }
+  } catch (e) {
+    console.warn("[Protecto][Baseline] addRedirectRules Fehler", e);
+  }
+}
+
 // --- Build Session Catchalls (bei jedem Startup frisch setzen) ---
 async function ensureStartupSessionCatchalls() {
   const base = BASELINE_RULE_IDS.sessionStart;
@@ -533,6 +572,7 @@ async function addDynamicRules(rules){
 }
 
 // Non-blocking (MV3-konform): entscheidet & lernt, ohne den Request zu blockieren via DNR debug events
+// Only use chrome.declarativeNetRequest.onRuleMatchedDebug for debug and redirect stats (Manifest V3)
 if (chrome.declarativeNetRequest?.onRuleMatchedDebug) {
   chrome.declarativeNetRequest.onRuleMatchedDebug.addListener(async (info) => {
     try {
@@ -574,4 +614,85 @@ if (chrome.declarativeNetRequest?.onRuleMatchedDebug) {
       console.warn("[Protecto][Learn] onRuleMatchedDebug error", e);
     }
   });
+
+  // Debug Logging für BASELINE_PATHS (MV3-konform via DNR)
+  chrome.declarativeNetRequest.onRuleMatchedDebug.addListener((info) => {
+    try {
+      const url = info.request?.url || "";
+      const match = BASELINE_PATHS.find(p => url.includes(p.path));
+      if (match) {
+        console.debug("[Protecto][DEBUG] Redirect trigger:", url, "→ stub:", match.stub);
+      }
+    } catch (e) {
+      console.warn("[Protecto][DEBUG] Error in BASELINE_PATHS logging", e);
+    }
+  });
+
+}
+
+// --- Protecto Redirect Stats (erweiterter Block) ---
+let redirectStats = { total: 0, last: [] };
+
+// Redirect Logging & persist to storage
+function logRedirect(url) {
+  redirectStats.total++;
+  redirectStats.last.unshift(url);
+  if (redirectStats.last.length > 20) redirectStats.last.pop();
+
+  // Sofort in Storage sichern
+  chrome.storage.local.set({ protecto_counts: redirectStats }, () => {
+    if (chrome.runtime.lastError) {
+      console.warn("[Protecto][STATS] Storage update error:", chrome.runtime.lastError);
+    } else {
+      console.debug("[Protecto][STATS] Persisted:", redirectStats);
+    }
+  });
+
+  console.debug("[Protecto][STATS] Redirect:", url, "Gesamt:", redirectStats.total);
+}
+
+
+
+// Debug-Hook für BASELINE_PATHS + Logging (MV3-konform)
+if (chrome.declarativeNetRequest?.onRuleMatchedDebug) {
+  chrome.declarativeNetRequest.onRuleMatchedDebug.addListener((info) => {
+    try {
+      const url = info.request?.url || "";
+      const match = BASELINE_PATHS.find(p => url.includes(p.path));
+      if (match) {
+        console.debug("[Protecto][DEBUG] Redirect trigger:", url, "→ stub:", match.stub);
+      }
+      // Zähle Redirects MV3-konform: nur noch via onRuleMatchedDebug
+      if (info && info.request && info.request.url) {
+        logRedirect(info.request.url);
+      }
+    } catch (e) {
+      console.warn("[Protecto][DEBUG] Error in redirect logging", e);
+    }
+  });
+}
+
+// API für Popup / Content Scripts
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+  if (msg === "getRedirectStats" || msg?.type === "getRedirectStatsExtended") {
+    chrome.storage.local.get("protecto_counts", ({ protecto_counts = { total: 0, last: [] } }) => {
+      sendResponse({ ok: true, ...protecto_counts });
+    });
+    return true;
+  }
+});
+
+// --- Immediate redirect for BASELINE_PATHS via webRequest (for environments/extensions that support it) ---
+if (chrome.webRequest?.onBeforeRequest) {
+  chrome.webRequest.onBeforeRequest.addListener(
+    (details) => {
+      const match = BASELINE_PATHS.find(p => details.url.includes(p.path));
+      if (match) {
+        logRedirect(details.url);
+        return { redirectUrl: chrome.runtime.getURL(`/stubs/${match.stub}.js`) };
+      }
+    },
+    { urls: ["<all_urls>"] },
+    ["blocking"]
+  );
 }

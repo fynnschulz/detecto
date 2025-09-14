@@ -173,10 +173,40 @@
       renderReasons(reasons);
     });
 
-    const { protecto_counts = { today: 0, total: 0 } } = await chrome.storage.local.get('protecto_counts');
-    redirectsTodayEl.textContent = protecto_counts.today || 0;
-    redirectsTotalEl.textContent = protecto_counts.total || 0;
+    chrome.runtime.sendMessage({ type: 'getRedirectStats' }, (res) => {
+      if (res && typeof res.today === 'number' && typeof res.total === 'number') {
+        redirectsTodayEl.textContent = res.today;
+        redirectsTotalEl.textContent = res.total;
+        console.debug("[Protecto][Popup] Redirect-Stats empfangen:", res);
+      } else {
+        console.warn("[Protecto][Popup] Redirect-Stats nicht verfügbar vom Background:", res);
+        chrome.storage.local.get('protecto_counts', (storeRes) => {
+          const counts = storeRes.protecto_counts || { today: 0, total: 0 };
+          redirectsTodayEl.textContent = counts.today || 0;
+          redirectsTotalEl.textContent = counts.total || 0;
+          console.debug("[Protecto][Popup] Redirect-Stats Fallback aus storage.local:", counts);
+        });
+      }
+    });
   }
 
   document.addEventListener('DOMContentLoaded', init);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const counterEl = document.getElementById("redirectCount");
+
+    chrome.runtime.sendMessage("getRedirectStats", (res) => {
+      if (chrome.runtime.lastError) {
+        console.warn("[Protecto][Popup] Error:", chrome.runtime.lastError);
+        counterEl.textContent = "–";
+        return;
+      }
+
+      if (res?.ok) {
+        counterEl.textContent = res.total;
+      } else {
+        counterEl.textContent = "0";
+      }
+    });
+  });
 })();

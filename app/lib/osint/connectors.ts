@@ -34,20 +34,32 @@ const STOPWORDS_DE = new Set([
 ])
 
 const SYNONYMS_DE: Record<string, string[]> = {
-  kaufen: ['shop', 'bestellen', 'preis', 'preisvergleich', 'angebot', 'deal', 'online kaufen'],
-  günstig: ['billig', 'preiswert', 'rabatt', 'angebot', 'sale', 'deal'],
-  webseite: ['seite', 'shop', 'anbieter', 'händler'],
-  'png': ['bild'],
-  'png zu pdf': ['png in pdf', 'bild in pdf', 'convert png to pdf', 'png pdf converter']
+  kaufen: ['shop', 'bestellen', 'preis', 'preisvergleich', 'angebot', 'deal', 'online kaufen', 'einkaufen', 'kauf'],
+  günstig: ['billig', 'preiswert', 'rabatt', 'angebot', 'sale', 'deal', 'preisnachlass'],
+  webseite: ['seite', 'shop', 'anbieter', 'händler', 'plattform', 'webpage'],
+  'png': ['bild', 'grafik', 'bilddatei'],
+  'png zu pdf': ['png in pdf', 'bild in pdf', 'convert png to pdf', 'png pdf converter', 'png umwandeln pdf']
 }
 
 const ECOM_SITES_HINTS = [
   'shop', 'store', 'official', 'offiziell', 'preis', 'preisvergleich', 'vergleich',
-  'angebot', 'deal', 'kaufen', 'bestellen'
+  'angebot', 'deal', 'kaufen', 'bestellen', 'einkaufen'
+]
+
+const EXCLUDE_SITES = [
+  'pinterest.*', 'facebook.*', 'quora.*', 'gutefrage.*'
 ]
 
 function addTitleUrlHints(core: string): string[] {
   return [core, `intitle:${core}`, `inurl:${core}`]
+}
+
+function addSiteTldFilters(tlds: string[]): string[] {
+  return tlds.map(tld => `site:${tld}`)
+}
+
+function addExcludeSitesFilter(): string {
+  return EXCLUDE_SITES.map(site => `-site:${site}`).join(' ')
 }
 
 function tokenize(text: string): string[] {
@@ -72,6 +84,27 @@ function expandSynonyms(words: string[]): string[] {
   return Array.from(out)
 }
 
+function mixSynonyms(words: string[]): string[] {
+  // Generate variants by replacing some words with their synonyms
+  const variants = new Set<string>()
+  function helper(idx: number, current: string[]) {
+    if (idx === words.length) {
+      variants.add(current.join(' '))
+      return
+    }
+    const word = words[idx]
+    const syns = SYNONYMS_DE[word] || []
+    // Include original word
+    helper(idx + 1, [...current, word])
+    // Include synonyms individually
+    for (const syn of syns) {
+      helper(idx + 1, [...current, syn])
+    }
+  }
+  helper(0, [])
+  return Array.from(variants)
+}
+
 function detectIntent(tokens: string[]) {
   const joined = tokens.join(' ')
   const hasBuy = tokens.includes('kaufen') || tokens.includes('bestellen') || tokens.includes('preis') || tokens.includes('preisvergleich')
@@ -86,40 +119,84 @@ export function buildQueryVariants(rawQuery: string, locale: LocalePrefs = DE_PR
   const expanded = expandSynonyms(noStops)
   const { hasBuy, hasCheap, isConvert } = detectIntent(expanded)
 
-  const coreA = expanded.join(' ')
-
-  const quotedBrand = /[a-z]{2,}\s+[a-z]{2,}/i.test(rawQuery) ? `"${rawQuery.trim()}"` : ''
-  const buyHints = hasBuy || hasCheap ? ECOM_SITES_HINTS.slice(0, 3).join(' OR ') : ''
+  const excludeFilter = addExcludeSitesFilter()
   const tldFilters = locale.siteTLDs.map(tld => `site:${tld}`).join(' OR ')
 
-  const base: SearchVariant[] = []
+  const variants: SearchVariant[] = []
 
-  base.push({ q: coreA, boost: 1 })
+  // Core expanded query string
+  const coreA = expanded.join(' ')
 
-  if (quotedBrand) base.push({ q: `${coreA} ${quotedBrand}`, boost: 1.1 })
+  // Quoted multi-word original query for exact phrase boost
+  const quotedBrand = /\b[a-z]{2,}\s+[a-z]{2,}\b/i.test(rawQuery) ? `"${rawQuery.trim()}"` : ''
 
-  addTitleUrlHints(coreA).forEach(v => base.push({ q: v, boost: 0.95 }))
+  // Base variant with exclude sites filter appended
+  variants.push({ q: `${coreA} ${excludeFilter}`.trim(), boost: 1 })
 
-  if (hasBuy || hasCheap) {
-    base.push({ q: `${coreA} (${buyHints})`, boost: 1.15 })
-    base.push({ q: `${coreA} kaufen preis`, boost: 1.15 })
-    base.push({ q: `${coreA} shop`, boost: 1.05 })
-    base.push({ q: `${coreA} preisvergleich`, boost: 1.05 })
+  // Boost exact quoted phrase if present
+  if (quotedBrand) {
+    variants.push({ q: `${coreA} ${quotedBrand} ${excludeFilter}`.trim(), boost: 1.3 })
   }
 
-  if (isConvert) {
-    base.push({ q: `png pdf converter`, boost: 1.1 })
-    base.push({ q: `"png to pdf" OR "png in pdf"`, boost: 1.0 })
-  }
-
-  base.push({ q: `${coreA} (${tldFilters})`, boost: 1.0 })
-
-  const seen = new Set<string>()
-  return base.filter(v => {
-    if (seen.has(v.q)) return false
-    seen.add(v.q)
-    return true
+  // Add title and url hints with exclude filter
+  addTitleUrlHints(coreA).forEach(v => {
+    variants.push({ q: `${v} ${excludeFilter}`.trim(), boost: 0.95 })
   })
+
+  // Add site TLD filters combined with core query and exclude filter
+  variants.push({ q: `${coreA} (${tldFilters}) ${excludeFilter}`.trim(), boost: 1.0 })
+
+  // Add buy/cheap related hints and synonyms with boosts
+  if (hasBuy || hasCheap) {
+    const buyHints = ECOM_SITES_HINTS.join(' OR ')
+    variants.push({ q: `${coreA} (${buyHints}) ${excludeFilter}`, boost: 1.2 })
+    variants.push({ q: `${coreA} kaufen preis ${excludeFilter}`, boost: 1.15 })
+    variants.push({ q: `${coreA} shop ${excludeFilter}`, boost: 1.1 })
+    variants.push({ q: `${coreA} preisvergleich ${excludeFilter}`, boost: 1.1 })
+    variants.push({ q: `${coreA} bestellen ${excludeFilter}`, boost: 1.1 })
+  }
+
+  // Add convert related queries with boosts
+  if (isConvert) {
+    variants.push({ q: `png pdf converter ${excludeFilter}`, boost: 1.1 })
+    variants.push({ q: `"png to pdf" OR "png in pdf" ${excludeFilter}`, boost: 1.0 })
+  }
+
+  // Add freshness filter variants (e.g. past year)
+  variants.push({ q: `${coreA} after:2023-01-01 ${excludeFilter}`, boost: 1.05 })
+  if (quotedBrand) {
+    variants.push({ q: `${quotedBrand} after:2023-01-01 ${excludeFilter}`, boost: 1.2 })
+  }
+
+  // Add variants mixing synonyms into the main query
+  const mixedSynVariants = mixSynonyms(noStops)
+  mixedSynVariants.forEach(variant => {
+    if (variant.trim() && variant !== coreA) {
+      variants.push({ q: `${variant} ${excludeFilter}`, boost: 0.9 })
+      if (hasBuy || hasCheap) {
+        variants.push({ q: `${variant} kaufen preis ${excludeFilter}`, boost: 1.1 })
+      }
+    }
+  })
+
+  // Deduplicate variants by query string, keep highest boost
+  const seen = new Map<string, number>()
+  const deduped: SearchVariant[] = []
+  for (const v of variants) {
+    const q = v.q.trim()
+    if (!seen.has(q) || (seen.get(q) ?? 0) < (v.boost ?? 1)) {
+      seen.set(q, v.boost ?? 1)
+    }
+  }
+  for (const [q, boost] of seen.entries()) {
+    deduped.push({ q, boost })
+  }
+
+  // Sort by boost descending
+  deduped.sort((a, b) => (b.boost ?? 1) - (a.boost ?? 1))
+
+  // Limit variants to a reasonable number (e.g. 20)
+  return deduped.slice(0, 20)
 }
 
 export function buildCseParams(locale: LocalePrefs = DE_PREFS) {

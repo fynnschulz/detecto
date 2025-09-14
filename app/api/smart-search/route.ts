@@ -2,6 +2,35 @@ import { htmlToText } from "html-to-text";
 import { NextRequest, NextResponse } from "next/server";
 import { buildQueryVariants } from "@/app/lib/osint/connectors";
 
+async function filterValidHits(hits: any[]): Promise<any[]> {
+  const invalidTexts = ["not found", "expired", "parking"];
+  const filteredHits: any[] = [];
+
+  for (const hit of hits) {
+    const url = hit.url || hit.link || hit.href || "";
+    if (!url || !(url.startsWith("http://") || url.startsWith("https://"))) {
+      continue;
+    }
+    try {
+      const res = await fetch(url, { method: "HEAD" });
+      if (!res.ok) {
+        continue;
+      }
+      const text = (hit.title || hit.description || "").toLowerCase();
+      if (invalidTexts.some(invalid => text.includes(invalid))) {
+        continue;
+      }
+      filteredHits.push(hit);
+      if (filteredHits.length >= 12) {
+        break;
+      }
+    } catch {
+      continue;
+    }
+  }
+  return filteredHits;
+}
+
 function getBaseUrl() {
   if (process.env.VERCEL_URL) {
     return `https://${process.env.VERCEL_URL}`;
@@ -40,6 +69,8 @@ export async function POST(req: NextRequest) {
       webHits = [];
     }
   }
+
+  webHits = await filterValidHits(webHits);
 
   // 3) Falls Query wie URL aussieht, HTML einlesen und auf 3000 Zeichen kürzen
   let htmlText = "";
@@ -153,7 +184,7 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "gpt-4-turbo",
+        model: "gpt-5-turbo",
         messages: [{ role: "user", content: prompt }],
         temperature: 0,
       }),
@@ -186,7 +217,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    return NextResponse.json({ alternatives, usedVariants: extraQueries.slice(0, 8) });
+    return NextResponse.json({ alternatives, usedVariants: extraQueries.slice(0, 8), webHits });
   } catch (error) {
     console.error("Fehler bei smart-search:", error);
     return NextResponse.json({ error: "Fehler beim Verarbeiten der Anfrage." }, { status: 500 });
