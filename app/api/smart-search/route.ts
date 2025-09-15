@@ -54,25 +54,26 @@ export async function POST(req: NextRequest) {
 
   console.log("DEBUG - Extra Queries:", extraQueries);
 
-  // 2) OSINT-Suche (Google CSE + GitHub) anstoßen
-  const baseUrl = getBaseUrl();
-  const osintRes = await fetch(`${baseUrl}/api/osint/search`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ extraQueries }),
-    cache: "no-store",
-  });
-
+  // 2) OSINT-Suche (Google Custom Search API) anstoßen
   let webHits: any[] = [];
-  if (osintRes.ok) {
-    try {
-      const data = await osintRes.json();
-      console.log("DEBUG - OSINT API Response:", JSON.stringify(data, null, 2));
-      console.log("DEBUG - OSINT Data Raw:", data);
-      webHits = Array.isArray(data?.hits) ? data.hits.slice(0, 20) : [];
-    } catch {
-      webHits = [];
+  try {
+    const googleRes = await fetch(
+      `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&key=${process.env.GOOGLE_SEARCH_API_KEY}&cx=${process.env.GOOGLE_SEARCH_CX}`
+    );
+
+    if (googleRes.ok) {
+      const googleData = await googleRes.json();
+      webHits = Array.isArray(googleData.items)
+        ? googleData.items.map((item: any) => ({
+            title: item.title,
+            url: item.link,
+            description: item.snippet,
+          }))
+        : [];
     }
+  } catch (e) {
+    console.error("Google Search API Fehler:", e);
+    webHits = [];
   }
 
   webHits = await filterValidHits(webHits);
