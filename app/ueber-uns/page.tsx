@@ -52,7 +52,7 @@ export default function UeberUnsPage() {
         <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
           <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg">
             <img
-              src="/liam.jpg" // <-- Name of Liam's image file in public folder
+              src="/Liam-Banaszak.jpeg" // <-- Name of Liam's image file in public folder
               alt="Liam Tom Banaszak"
               className="w-full h-full object-cover"
             />
