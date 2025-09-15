@@ -25,7 +25,7 @@ export default function UeberUnsPage() {
         <h2 className="text-2xl font-bold mt-10">Über den Gründer</h2>
 
         <p className="text-gray-300 text-lg leading-relaxed">
-          Detecto wurde von <strong>Fynn - Luca Schulz</strong> ins Leben gerufen. Als Gründer und Inhaber von Detecto verbindet er technisches Verständnis mit gesellschaftlicher Verantwortung.
+          Detecto wurde von <strong>Fynn - Luca Schulz</strong> ins Leben gerufen. Als Gründer und Inhaber von Detecto-ai verbindet er technisches Verständnis mit gesellschaftlicher Verantwortung.
         </p>
 
         <blockquote className="text-gray-400 italic border-l-4 border-gray-700 pl-4 mt-6">
@@ -33,7 +33,16 @@ export default function UeberUnsPage() {
         </blockquote>
 
         <p className="text-gray-300 text-lg leading-relaxed mt-6">
-          Fynn entwickelt Detecto mit dem klaren Ziel, digitale Aufklärung und Datenschutz in den Alltag zu bringen – einfach, verständlich und kostenlos zugänglich für alle.
+          Fynn entwickelt Detecto-ai mit dem klaren Ziel, digitale Aufklärung und Datenschutz in den Alltag zu bringen – einfach, verständlich und zugänglich für alle.
+        </p>
+
+        <h2 className="text-2xl font-bold mt-10">Über den Cofounder</h2>
+
+        <p className="text-gray-300 text-lg leading-relaxed">
+          Als Verantwortlicher für Marketing und Vertrieb ist <strong>Liam Tom Banaszak</strong> die treibende Kraft hinter der strategischen Positionierung und Sichtbarkeit von Detecto-ai. 
+          Mit einem ausgeprägten Gespür für Zielgruppen und Märkte entwickelt er Ansätze, die unsere Ideen nicht nur bekannt machen, sondern nachhaltig etablieren. 
+          Seine fließenden Sprachkenntnisse in Deutsch, Englisch und Französisch ermöglichen es ihm, internationale Kontakte zu knüpfen und neue Potenziale zu erschließen. 
+          Damit trägt er entscheidend dazu bei, die Vision des Projekts erfolgreich in die Welt zu tragen.
         </p>
 
         <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
