@@ -40,8 +40,16 @@ export async function POST(req: Request) {
     if (!queries.length) {
       return NextResponse.json({ hits: [] }, { status: 200 })
     }
-    const hits: Hit[] = await runConnectors(queries)
-    console.log("[OSINT][DEBUG] Number of hits returned from connectors:", hits.length)
+    let hits: Hit[] = []
+    try {
+      hits = await runConnectors(queries)
+      console.log("[OSINT][DEBUG] Raw response from connectors (Google etc.):", hits)
+      console.log("[OSINT][DEBUG] Number of hits returned from connectors:", hits.length)
+      console.log("[OSINT][DEBUG] Hits JSON stringified:", JSON.stringify(hits))
+    } catch (connectorError) {
+      console.error("[OSINT][ERROR] Error fetching or parsing connector responses:", connectorError)
+      return NextResponse.json({ error: 'Connector fetch or parse error' }, { status: 500 })
+    }
     return NextResponse.json({ hits }, { status: 200 })
   } catch (e: any) {
     console.error("Error in search route:", e)
