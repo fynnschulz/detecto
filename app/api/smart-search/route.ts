@@ -40,6 +40,7 @@ function getBaseUrl() {
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
+  console.log("DEBUG - Eingehender Body:", body);
   const { query } = body || {};
 
   if (!query || typeof query !== "string" || query.trim().length < 2) {
@@ -67,6 +68,7 @@ export async function POST(req: NextRequest) {
     try {
       const data = await osintRes.json();
       console.log("DEBUG - OSINT API Response:", JSON.stringify(data, null, 2));
+      console.log("DEBUG - OSINT Data Raw:", data);
       webHits = Array.isArray(data?.hits) ? data.hits.slice(0, 20) : [];
     } catch {
       webHits = [];
@@ -220,6 +222,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
+    console.log("DEBUG - Final Response:", { alternatives, usedVariants: extraQueries.slice(0, 8), webHits });
     return NextResponse.json({ alternatives, usedVariants: extraQueries.slice(0, 8), webHits });
   } catch (error) {
     console.error("Fehler bei smart-search:", error);
