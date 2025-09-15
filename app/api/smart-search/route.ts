@@ -51,6 +51,8 @@ export async function POST(req: NextRequest) {
   // Query immer an erster Stelle lassen
   const extraQueries = Array.from(new Set([query, ...variants]));
 
+  console.log("DEBUG - Extra Queries:", extraQueries);
+
   // 2) OSINT-Suche (Google CSE + GitHub) anstoßen
   const baseUrl = getBaseUrl();
   const osintRes = await fetch(`${baseUrl}/api/osint/search`, {
@@ -64,6 +66,7 @@ export async function POST(req: NextRequest) {
   if (osintRes.ok) {
     try {
       const data = await osintRes.json();
+      console.log("DEBUG - OSINT API Response:", JSON.stringify(data, null, 2));
       webHits = Array.isArray(data?.hits) ? data.hits.slice(0, 20) : [];
     } catch {
       webHits = [];
