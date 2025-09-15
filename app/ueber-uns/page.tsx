@@ -49,6 +49,19 @@ export default function UeberUnsPage() {
             <p className="text-gray-400 text-sm mt-1">Gründer & Inhaber von Detecto</p>
           </div>
         </div>
+        <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
+          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg">
+            <img
+              src="/liam.jpg" // <-- Name of Liam's image file in public folder
+              alt="Liam Tom Banaszak"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="text-center md:text-left">
+            <p className="text-xl font-extrabold tracking-wide">LIAM TOM BANASZAK</p>
+            <p className="text-gray-400 text-sm mt-1">Cofounder von Detecto-ai</p>
+          </div>
+        </div>
       </div>
     </div>
   );
