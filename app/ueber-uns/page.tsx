@@ -46,7 +46,7 @@ export default function UeberUnsPage() {
           </div>
           <div className="text-center md:text-left">
             <p className="text-xl font-extrabold tracking-wide">FYNN - LUCA SCHULZ</p>
-            <p className="text-gray-400 text-sm mt-1">Gründer & Inhaber von Detecto</p>
+            <p className="text-gray-400 text-sm mt-1">Gründer & Inhaber von Detecto-ai</p>
           </div>
         </div>
         <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
